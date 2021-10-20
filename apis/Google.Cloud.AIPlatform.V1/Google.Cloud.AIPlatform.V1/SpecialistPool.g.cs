@@ -27,23 +27,24 @@ namespace Google.Cloud.AIPlatform.V1 {
             "CjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zcGVjaWFsaXN0X3Bvb2wu",
             "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBp",
             "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIqwCCg5TcGVjaWFs",
+            "b3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIs4CCg5TcGVjaWFs",
             "aXN0UG9vbBIRCgRuYW1lGAEgASgJQgPgQQISGQoMZGlzcGxheV9uYW1lGAIg",
             "ASgJQgPgQQISJgoZc3BlY2lhbGlzdF9tYW5hZ2Vyc19jb3VudBgDIAEoBUID",
             "4EEDEiEKGXNwZWNpYWxpc3RfbWFuYWdlcl9lbWFpbHMYBCADKAkSJwoacGVu",
-            "ZGluZ19kYXRhX2xhYmVsaW5nX2pvYnMYBSADKAlCA+BBAzp46kF1CihhaXBs",
-            "YXRmb3JtLmdvb2dsZWFwaXMuY29tL1NwZWNpYWxpc3RQb29sEklwcm9qZWN0",
-            "cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vc3BlY2lhbGlzdFBv",
-            "b2xzL3tzcGVjaWFsaXN0X3Bvb2x9QtcBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCE1NwZWNpYWxpc3RQb29sUHJvdG9QAVpEZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3Jt",
-            "L3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoC",
-            "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
-            "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
+            "ZGluZ19kYXRhX2xhYmVsaW5nX2pvYnMYBSADKAlCA+BBAxIgChhzcGVjaWFs",
+            "aXN0X3dvcmtlcl9lbWFpbHMYByADKAk6eOpBdQooYWlwbGF0Zm9ybS5nb29n",
+            "bGVhcGlzLmNvbS9TcGVjaWFsaXN0UG9vbBJJcHJvamVjdHMve3Byb2plY3R9",
+            "L2xvY2F0aW9ucy97bG9jYXRpb259L3NwZWNpYWxpc3RQb29scy97c3BlY2lh",
+            "bGlzdF9wb29sfULXAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "QhNTcGVjaWFsaXN0UG9vbFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dl",
+            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRm",
+            "b3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xv",
+            "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
+            "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpecialistPool), global::Google.Cloud.AIPlatform.V1.SpecialistPool.Parser, new[]{ "Name", "DisplayName", "SpecialistManagersCount", "SpecialistManagerEmails", "PendingDataLabelingJobs" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpecialistPool), global::Google.Cloud.AIPlatform.V1.SpecialistPool.Parser, new[]{ "Name", "DisplayName", "SpecialistManagersCount", "SpecialistManagerEmails", "PendingDataLabelingJobs", "SpecialistWorkerEmails" }, null, null, null, null)
           }));
     }
     #endregion
@@ -92,6 +93,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       specialistManagersCount_ = other.specialistManagersCount_;
       specialistManagerEmails_ = other.specialistManagerEmails_.Clone();
       pendingDataLabelingJobs_ = other.pendingDataLabelingJobs_.Clone();
+      specialistWorkerEmails_ = other.specialistWorkerEmails_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -171,6 +173,19 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return pendingDataLabelingJobs_; }
     }
 
+    /// <summary>Field number for the "specialist_worker_emails" field.</summary>
+    public const int SpecialistWorkerEmailsFieldNumber = 7;
+    private static readonly pb::FieldCodec<string> _repeated_specialistWorkerEmails_codec
+        = pb::FieldCodec.ForString(58);
+    private readonly pbc::RepeatedField<string> specialistWorkerEmails_ = new pbc::RepeatedField<string>();
+    /// <summary>
+    /// The email addresses of workers in the SpecialistPool.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public pbc::RepeatedField<string> SpecialistWorkerEmails {
+      get { return specialistWorkerEmails_; }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as SpecialistPool);
@@ -189,6 +204,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (SpecialistManagersCount != other.SpecialistManagersCount) return false;
       if(!specialistManagerEmails_.Equals(other.specialistManagerEmails_)) return false;
       if(!pendingDataLabelingJobs_.Equals(other.pendingDataLabelingJobs_)) return false;
+      if(!specialistWorkerEmails_.Equals(other.specialistWorkerEmails_)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -200,6 +216,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (SpecialistManagersCount != 0) hash ^= SpecialistManagersCount.GetHashCode();
       hash ^= specialistManagerEmails_.GetHashCode();
       hash ^= pendingDataLabelingJobs_.GetHashCode();
+      hash ^= specialistWorkerEmails_.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -230,6 +247,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       specialistManagerEmails_.WriteTo(output, _repeated_specialistManagerEmails_codec);
       pendingDataLabelingJobs_.WriteTo(output, _repeated_pendingDataLabelingJobs_codec);
+      specialistWorkerEmails_.WriteTo(output, _repeated_specialistWorkerEmails_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -253,6 +271,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       specialistManagerEmails_.WriteTo(ref output, _repeated_specialistManagerEmails_codec);
       pendingDataLabelingJobs_.WriteTo(ref output, _repeated_pendingDataLabelingJobs_codec);
+      specialistWorkerEmails_.WriteTo(ref output, _repeated_specialistWorkerEmails_codec);
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -273,6 +292,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       size += specialistManagerEmails_.CalculateSize(_repeated_specialistManagerEmails_codec);
       size += pendingDataLabelingJobs_.CalculateSize(_repeated_pendingDataLabelingJobs_codec);
+      size += specialistWorkerEmails_.CalculateSize(_repeated_specialistWorkerEmails_codec);
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -295,6 +315,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       specialistManagerEmails_.Add(other.specialistManagerEmails_);
       pendingDataLabelingJobs_.Add(other.pendingDataLabelingJobs_);
+      specialistWorkerEmails_.Add(other.specialistWorkerEmails_);
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -329,6 +350,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             pendingDataLabelingJobs_.AddEntriesFrom(input, _repeated_pendingDataLabelingJobs_codec);
             break;
           }
+          case 58: {
+            specialistWorkerEmails_.AddEntriesFrom(input, _repeated_specialistWorkerEmails_codec);
+            break;
+          }
         }
       }
     #endif
@@ -361,6 +386,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 42: {
             pendingDataLabelingJobs_.AddEntriesFrom(ref input, _repeated_pendingDataLabelingJobs_codec);
+            break;
+          }
+          case 58: {
+            specialistWorkerEmails_.AddEntriesFrom(ref input, _repeated_specialistWorkerEmails_codec);
             break;
           }
         }

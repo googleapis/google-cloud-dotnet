@@ -34,9 +34,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZXN0EjwKCGVuZHBvaW50GAEgASgJQirgQQL6QSQKImFpcGxhdGZvcm0uZ29v",
             "Z2xlYXBpcy5jb20vRW5kcG9pbnQSLgoJaW5zdGFuY2VzGAIgAygLMhYuZ29v",
             "Z2xlLnByb3RvYnVmLlZhbHVlQgPgQQISKgoKcGFyYW1ldGVycxgDIAEoCzIW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZSJZCg9QcmVkaWN0UmVzcG9uc2USKwoL",
-            "cHJlZGljdGlvbnMYASADKAsyFi5nb29nbGUucHJvdG9idWYuVmFsdWUSGQoR",
-            "ZGVwbG95ZWRfbW9kZWxfaWQYAiABKAkiegoRUmF3UHJlZGljdFJlcXVlc3QS",
+            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZSKyAQoPUHJlZGljdFJlc3BvbnNlEisK",
+            "C3ByZWRpY3Rpb25zGAEgAygLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlEhkK",
+            "EWRlcGxveWVkX21vZGVsX2lkGAIgASgJEjYKBW1vZGVsGAMgASgJQifgQQP6",
+            "QSEKH2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSHwoSbW9kZWxf",
+            "ZGlzcGxheV9uYW1lGAQgASgJQgPgQQMiegoRUmF3UHJlZGljdFJlcXVlc3QS",
             "PAoIZW5kcG9pbnQYASABKAlCKuBBAvpBJAoiYWlwbGF0Zm9ybS5nb29nbGVh",
             "cGlzLmNvbS9FbmRwb2ludBInCglodHRwX2JvZHkYAiABKAsyFC5nb29nbGUu",
             "YXBpLkh0dHBCb2R5Ip0CCg5FeHBsYWluUmVxdWVzdBI8CghlbmRwb2ludBgB",
@@ -74,7 +76,7 @@ namespace Google.Cloud.AIPlatform.V1 {
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.HttpbodyReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictRequest), global::Google.Cloud.AIPlatform.V1.PredictRequest.Parser, new[]{ "Endpoint", "Instances", "Parameters" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictResponse), global::Google.Cloud.AIPlatform.V1.PredictResponse.Parser, new[]{ "Predictions", "DeployedModelId" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredictResponse), global::Google.Cloud.AIPlatform.V1.PredictResponse.Parser, new[]{ "Predictions", "DeployedModelId", "Model", "ModelDisplayName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.RawPredictRequest), global::Google.Cloud.AIPlatform.V1.RawPredictRequest.Parser, new[]{ "Endpoint", "HttpBody" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplainRequest), global::Google.Cloud.AIPlatform.V1.ExplainRequest.Parser, new[]{ "Endpoint", "Instances", "Parameters", "ExplanationSpecOverride", "DeployedModelId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplainResponse), global::Google.Cloud.AIPlatform.V1.ExplainResponse.Parser, new[]{ "Explanations", "DeployedModelId", "Predictions" }, null, null, null, null)
@@ -385,6 +387,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public PredictResponse(PredictResponse other) : this() {
       predictions_ = other.predictions_.Clone();
       deployedModelId_ = other.deployedModelId_;
+      model_ = other.model_;
+      modelDisplayName_ = other.modelDisplayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -424,6 +428,36 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "model" field.</summary>
+    public const int ModelFieldNumber = 3;
+    private string model_ = "";
+    /// <summary>
+    /// Output only. The resource name of the Model which is deployed as the DeployedModel that
+    /// this prediction hits.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Model {
+      get { return model_; }
+      set {
+        model_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "model_display_name" field.</summary>
+    public const int ModelDisplayNameFieldNumber = 4;
+    private string modelDisplayName_ = "";
+    /// <summary>
+    /// Output only. The [display name][google.cloud.aiplatform.v1.Model.display_name] of the Model which is deployed as
+    /// the DeployedModel that this prediction hits.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ModelDisplayName {
+      get { return modelDisplayName_; }
+      set {
+        modelDisplayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PredictResponse);
@@ -439,6 +473,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if(!predictions_.Equals(other.predictions_)) return false;
       if (DeployedModelId != other.DeployedModelId) return false;
+      if (Model != other.Model) return false;
+      if (ModelDisplayName != other.ModelDisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -447,6 +483,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       hash ^= predictions_.GetHashCode();
       if (DeployedModelId.Length != 0) hash ^= DeployedModelId.GetHashCode();
+      if (Model.Length != 0) hash ^= Model.GetHashCode();
+      if (ModelDisplayName.Length != 0) hash ^= ModelDisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -468,6 +506,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(DeployedModelId);
       }
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      if (ModelDisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ModelDisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -482,6 +528,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteString(DeployedModelId);
       }
+      if (Model.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Model);
+      }
+      if (ModelDisplayName.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ModelDisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -494,6 +548,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       size += predictions_.CalculateSize(_repeated_predictions_codec);
       if (DeployedModelId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(DeployedModelId);
+      }
+      if (Model.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Model);
+      }
+      if (ModelDisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelDisplayName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -509,6 +569,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       predictions_.Add(other.predictions_);
       if (other.DeployedModelId.Length != 0) {
         DeployedModelId = other.DeployedModelId;
+      }
+      if (other.Model.Length != 0) {
+        Model = other.Model;
+      }
+      if (other.ModelDisplayName.Length != 0) {
+        ModelDisplayName = other.ModelDisplayName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -532,6 +598,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             DeployedModelId = input.ReadString();
             break;
           }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+          case 34: {
+            ModelDisplayName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -552,6 +626,14 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 18: {
             DeployedModelId = input.ReadString();
+            break;
+          }
+          case 26: {
+            Model = input.ReadString();
+            break;
+          }
+          case 34: {
+            ModelDisplayName = input.ReadString();
             break;
           }
         }

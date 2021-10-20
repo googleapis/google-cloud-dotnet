@@ -238,7 +238,8 @@ namespace Google.Cloud.AIPlatform.V1 {
 
       /// <summary>
       /// Deletes a Model.
-      /// Note: Model can only be deleted if there are no DeployedModels created
+      ///
+      /// Model can only be deleted if there are no [DeployedModels][] created
       /// from it.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -535,7 +536,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       /// <summary>
       /// Deletes a Model.
-      /// Note: Model can only be deleted if there are no DeployedModels created
+      ///
+      /// Model can only be deleted if there are no [DeployedModels][] created
       /// from it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -550,7 +552,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       /// <summary>
       /// Deletes a Model.
-      /// Note: Model can only be deleted if there are no DeployedModels created
+      ///
+      /// Model can only be deleted if there are no [DeployedModels][] created
       /// from it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -563,7 +566,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       /// <summary>
       /// Deletes a Model.
-      /// Note: Model can only be deleted if there are no DeployedModels created
+      ///
+      /// Model can only be deleted if there are no [DeployedModels][] created
       /// from it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -578,7 +582,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       /// <summary>
       /// Deletes a Model.
-      /// Note: Model can only be deleted if there are no DeployedModels created
+      ///
+      /// Model can only be deleted if there are no [DeployedModels][] created
       /// from it.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>

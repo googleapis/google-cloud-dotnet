@@ -49,6 +49,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "pending_data_labeling_jobsd91cc38b",
                 },
+                SpecialistWorkerEmails =
+                {
+                    "specialist_worker_emailsac41cb4d",
+                },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
@@ -78,6 +82,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PendingDataLabelingJobs =
                 {
                     "pending_data_labeling_jobsd91cc38b",
+                },
+                SpecialistWorkerEmails =
+                {
+                    "specialist_worker_emailsac41cb4d",
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SpecialistPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -111,6 +119,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "pending_data_labeling_jobsd91cc38b",
                 },
+                SpecialistWorkerEmails =
+                {
+                    "specialist_worker_emailsac41cb4d",
+                },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
@@ -140,6 +152,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PendingDataLabelingJobs =
                 {
                     "pending_data_labeling_jobsd91cc38b",
+                },
+                SpecialistWorkerEmails =
+                {
+                    "specialist_worker_emailsac41cb4d",
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SpecialistPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -173,6 +189,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 {
                     "pending_data_labeling_jobsd91cc38b",
                 },
+                SpecialistWorkerEmails =
+                {
+                    "specialist_worker_emailsac41cb4d",
+                },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SpecialistPoolServiceClient client = new SpecialistPoolServiceClientImpl(mockGrpcClient.Object, null);
@@ -202,6 +222,10 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 PendingDataLabelingJobs =
                 {
                     "pending_data_labeling_jobsd91cc38b",
+                },
+                SpecialistWorkerEmails =
+                {
+                    "specialist_worker_emailsac41cb4d",
                 },
             };
             mockGrpcClient.Setup(x => x.GetSpecialistPoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SpecialistPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));

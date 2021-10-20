@@ -954,6 +954,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobs(request);
@@ -1003,6 +1004,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListPipelineJobsResponse, PipelineJob> response = pipelineServiceClient.ListPipelineJobsAsync(request);

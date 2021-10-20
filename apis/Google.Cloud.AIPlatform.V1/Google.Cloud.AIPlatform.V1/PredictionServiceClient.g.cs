@@ -490,7 +490,15 @@ namespace Google.Cloud.AIPlatform.V1
             PredictAsync(endpoint, instances, parameters, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -499,7 +507,15 @@ namespace Google.Cloud.AIPlatform.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -508,7 +524,15 @@ namespace Google.Cloud.AIPlatform.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -517,7 +541,15 @@ namespace Google.Cloud.AIPlatform.V1
             RawPredictAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -549,7 +581,15 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -581,7 +621,15 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -609,7 +657,15 @@ namespace Google.Cloud.AIPlatform.V1
             RawPredictAsync(endpoint, httpBody, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -641,7 +697,15 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -673,7 +737,15 @@ namespace Google.Cloud.AIPlatform.V1
             }, callSettings);
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="endpoint">
         /// Required. The name of the Endpoint requested to serve the prediction.
@@ -1127,7 +1199,15 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1139,7 +1219,15 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
-        /// Perform an online prediction with arbitrary http payload.
+        /// Perform an online prediction with an arbitrary HTTP payload.
+        /// 
+        /// The response includes the following HTTP headers:
+        /// 
+        /// * `X-Vertex-AI-Endpoint-Id`: ID of the [Endpoint][google.cloud.aiplatform.v1.Endpoint] that served this
+        /// prediction.
+        /// 
+        /// * `X-Vertex-AI-Deployed-Model-Id`: ID of the Endpoint's [DeployedModel][google.cloud.aiplatform.v1.DeployedModel]
+        /// that served this prediction.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

@@ -34,7 +34,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZXBsb3ltZW50X21vbml0b3Jpbmdfam9iLnByb3RvGjFnb29nbGUvY2xvdWQv",
             "YWlwbGF0Zm9ybS92MS9tb2RlbF9tb25pdG9yaW5nLnByb3RvGh9nb29nbGUv",
             "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvIpoGCghFbmRwb2ludBIRCgRuYW1lGAEgASgJQgPgQQMSGQoM",
+            "b25zLnByb3RvItAGCghFbmRwb2ludBIRCgRuYW1lGAEgASgJQgPgQQMSGQoM",
             "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3JpcHRpb24YAyABKAkS",
             "RwoPZGVwbG95ZWRfbW9kZWxzGAQgAygLMikuZ29vZ2xlLmNsb3VkLmFpcGxh",
             "dGZvcm0udjEuRGVwbG95ZWRNb2RlbEID4EEDEk0KDXRyYWZmaWNfc3BsaXQY",
@@ -45,35 +45,41 @@ namespace Google.Cloud.AIPlatform.V1 {
             "LlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkMKD2VuY3J5cHRpb25fc3BlYxgK",
             "IAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5cHRpb25T",
-            "cGVjEmcKH21vZGVsX2RlcGxveW1lbnRfbW9uaXRvcmluZ19qb2IYDiABKAlC",
-            "PuBBA/pBOAo2YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9Nb2RlbERlcGxv",
-            "eW1lbnRNb25pdG9yaW5nSm9iGjMKEVRyYWZmaWNTcGxpdEVudHJ5EgsKA2tl",
-            "eRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEaLQoLTGFiZWxzRW50cnkSCwoD",
-            "a2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpl6kFiCiJhaXBsYXRmb3Jt",
-            "Lmdvb2dsZWFwaXMuY29tL0VuZHBvaW50Ejxwcm9qZWN0cy97cHJvamVjdH0v",
-            "bG9jYXRpb25zL3tsb2NhdGlvbn0vZW5kcG9pbnRzL3tlbmRwb2ludH0i/AMK",
-            "DURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNlcxgHIAEoCzIu",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRlZFJlc291cmNl",
-            "c0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNIABIPCgJpZBgB",
-            "IAEoCUID4EEDEjYKBW1vZGVsGAIgASgJQifgQQL6QSEKH2FpcGxhdGZvcm0u",
-            "Z29vZ2xlYXBpcy5jb20vTW9kZWwSFAoMZGlzcGxheV9uYW1lGAMgASgJEjQK",
-            "C2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
-            "cEID4EEDEkUKEGV4cGxhbmF0aW9uX3NwZWMYCSABKAsyKy5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5FeHBsYW5hdGlvblNwZWMSFwoPc2VydmljZV9h",
-            "Y2NvdW50GAsgASgJEiEKGWRpc2FibGVfY29udGFpbmVyX2xvZ2dpbmcYDyAB",
-            "KAgSHQoVZW5hYmxlX2FjY2Vzc19sb2dnaW5nGA0gASgIQhYKFHByZWRpY3Rp",
-            "b25fcmVzb3VyY2VzQtEBCh5jb20uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djFCDUVuZHBvaW50UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2q",
-            "AhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxB",
-            "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
-            "BnByb3RvMw=="));
+            "cGVjEjQKB25ldHdvcmsYDSABKAlCI/pBIAoeY29tcHV0ZS5nb29nbGVhcGlz",
+            "LmNvbS9OZXR3b3JrEmcKH21vZGVsX2RlcGxveW1lbnRfbW9uaXRvcmluZ19q",
+            "b2IYDiABKAlCPuBBA/pBOAo2YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9N",
+            "b2RlbERlcGxveW1lbnRNb25pdG9yaW5nSm9iGjMKEVRyYWZmaWNTcGxpdEVu",
+            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEaLQoLTGFiZWxz",
+            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpl6kFiCiJh",
+            "aXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VuZHBvaW50Ejxwcm9qZWN0cy97",
+            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZW5kcG9pbnRzL3tlbmRw",
+            "b2ludH0iygQKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNl",
+            "cxgHIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRl",
+            "ZFJlc291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNI",
+            "ABIPCgJpZBgBIAEoCUID4EEDEjYKBW1vZGVsGAIgASgJQifgQQL6QSEKH2Fp",
+            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSFAoMZGlzcGxheV9uYW1l",
+            "GAMgASgJEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
+            "LlRpbWVzdGFtcEID4EEDEkUKEGV4cGxhbmF0aW9uX3NwZWMYCSABKAsyKy5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBsYW5hdGlvblNwZWMSFwoP",
+            "c2VydmljZV9hY2NvdW50GAsgASgJEiEKGWRpc2FibGVfY29udGFpbmVyX2xv",
+            "Z2dpbmcYDyABKAgSHQoVZW5hYmxlX2FjY2Vzc19sb2dnaW5nGA0gASgIEkwK",
+            "EXByaXZhdGVfZW5kcG9pbnRzGA4gASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxh",
+            "dGZvcm0udjEuUHJpdmF0ZUVuZHBvaW50c0ID4EEDQhYKFHByZWRpY3Rpb25f",
+            "cmVzb3VyY2VzIm4KEFByaXZhdGVFbmRwb2ludHMSHQoQcHJlZGljdF9odHRw",
+            "X3VyaRgBIAEoCUID4EEDEh0KEGV4cGxhaW5faHR0cF91cmkYAiABKAlCA+BB",
+            "AxIcCg9oZWFsdGhfaHR0cF91cmkYAyABKAlCA+BBA0LRAQoeY29tLmdvb2ds",
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxQg1FbmRwb2ludFByb3RvUAFaRGdvb2ds",
+            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0",
+            "Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
+            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
+            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "ModelDeploymentMonitoringJob" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "Id", "Model", "DisplayName", "CreateTime", "ExplanationSpec", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging" }, new[]{ "PredictionResources" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "ModelDeploymentMonitoringJob" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "Id", "Model", "DisplayName", "CreateTime", "ExplanationSpec", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints" }, new[]{ "PredictionResources" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri" }, null, null, null, null)
           }));
     }
     #endregion
@@ -123,6 +129,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      network_ = other.network_;
       modelDeploymentMonitoringJob_ = other.modelDeploymentMonitoringJob_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -289,6 +296,30 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "network" field.</summary>
+    public const int NetworkFieldNumber = 13;
+    private string network_ = "";
+    /// <summary>
+    /// The full name of the Google Compute Engine
+    /// [network](https://cloud.google.com//compute/docs/networks-and-firewalls#networks)
+    /// to which the Endpoint should be peered.
+    ///
+    /// Private services access must already be configured for the network. If left
+    /// unspecified, the Endpoint is not peered with any network.
+    ///
+    /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
+    /// `projects/{project}/global/networks/{network}`.
+    /// Where `{project}` is a project number, as in `12345`, and `{network}` is
+    /// network name.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Network {
+      get { return network_; }
+      set {
+        network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "model_deployment_monitoring_job" field.</summary>
     public const int ModelDeploymentMonitoringJobFieldNumber = 14;
     private string modelDeploymentMonitoringJob_ = "";
@@ -329,6 +360,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (Network != other.Network) return false;
       if (ModelDeploymentMonitoringJob != other.ModelDeploymentMonitoringJob) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -346,6 +378,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      if (Network.Length != 0) hash ^= Network.GetHashCode();
       if (ModelDeploymentMonitoringJob.Length != 0) hash ^= ModelDeploymentMonitoringJob.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -394,6 +427,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(EncryptionSpec);
       }
+      if (Network.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Network);
+      }
       if (ModelDeploymentMonitoringJob.Length != 0) {
         output.WriteRawTag(114);
         output.WriteString(ModelDeploymentMonitoringJob);
@@ -438,6 +475,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(EncryptionSpec);
       }
+      if (Network.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Network);
+      }
       if (ModelDeploymentMonitoringJob.Length != 0) {
         output.WriteRawTag(114);
         output.WriteString(ModelDeploymentMonitoringJob);
@@ -474,6 +515,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (encryptionSpec_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      if (Network.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
       }
       if (ModelDeploymentMonitoringJob.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelDeploymentMonitoringJob);
@@ -521,6 +565,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
         }
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      if (other.Network.Length != 0) {
+        Network = other.Network;
       }
       if (other.ModelDeploymentMonitoringJob.Length != 0) {
         ModelDeploymentMonitoringJob = other.ModelDeploymentMonitoringJob;
@@ -586,6 +633,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
             }
             input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 106: {
+            Network = input.ReadString();
             break;
           }
           case 114: {
@@ -655,6 +706,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 106: {
+            Network = input.ReadString();
+            break;
+          }
           case 114: {
             ModelDeploymentMonitoringJob = input.ReadString();
             break;
@@ -706,6 +761,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceAccount_ = other.serviceAccount_;
       disableContainerLogging_ = other.disableContainerLogging_;
       enableAccessLogging_ = other.enableAccessLogging_;
+      privateEndpoints_ = other.privateEndpoints_ != null ? other.privateEndpoints_.Clone() : null;
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
           DedicatedResources = other.DedicatedResources.Clone();
@@ -892,6 +948,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "private_endpoints" field.</summary>
+    public const int PrivateEndpointsFieldNumber = 14;
+    private global::Google.Cloud.AIPlatform.V1.PrivateEndpoints privateEndpoints_;
+    /// <summary>
+    /// Output only. Provide paths for users to send predict/explain/health requests directly to
+    /// the deployed model services running on Cloud via private services access.
+    /// This field is populated if [network][google.cloud.aiplatform.v1.Endpoint.network] is configured.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public global::Google.Cloud.AIPlatform.V1.PrivateEndpoints PrivateEndpoints {
+      get { return privateEndpoints_; }
+      set {
+        privateEndpoints_ = value;
+      }
+    }
+
     private object predictionResources_;
     /// <summary>Enum of possible cases for the "prediction_resources" oneof.</summary>
     public enum PredictionResourcesOneofCase {
@@ -934,6 +1006,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccount != other.ServiceAccount) return false;
       if (DisableContainerLogging != other.DisableContainerLogging) return false;
       if (EnableAccessLogging != other.EnableAccessLogging) return false;
+      if (!object.Equals(PrivateEndpoints, other.PrivateEndpoints)) return false;
       if (PredictionResourcesCase != other.PredictionResourcesCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -951,6 +1024,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (ServiceAccount.Length != 0) hash ^= ServiceAccount.GetHashCode();
       if (DisableContainerLogging != false) hash ^= DisableContainerLogging.GetHashCode();
       if (EnableAccessLogging != false) hash ^= EnableAccessLogging.GetHashCode();
+      if (privateEndpoints_ != null) hash ^= PrivateEndpoints.GetHashCode();
       hash ^= (int) predictionResourcesCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1004,6 +1078,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(104);
         output.WriteBool(EnableAccessLogging);
       }
+      if (privateEndpoints_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(PrivateEndpoints);
+      }
       if (DisableContainerLogging != false) {
         output.WriteRawTag(120);
         output.WriteBool(DisableContainerLogging);
@@ -1053,6 +1131,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(104);
         output.WriteBool(EnableAccessLogging);
       }
+      if (privateEndpoints_ != null) {
+        output.WriteRawTag(114);
+        output.WriteMessage(PrivateEndpoints);
+      }
       if (DisableContainerLogging != false) {
         output.WriteRawTag(120);
         output.WriteBool(DisableContainerLogging);
@@ -1096,6 +1178,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (EnableAccessLogging != false) {
         size += 1 + 1;
       }
+      if (privateEndpoints_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(PrivateEndpoints);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -1136,6 +1221,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.EnableAccessLogging != false) {
         EnableAccessLogging = other.EnableAccessLogging;
+      }
+      if (other.privateEndpoints_ != null) {
+        if (privateEndpoints_ == null) {
+          PrivateEndpoints = new global::Google.Cloud.AIPlatform.V1.PrivateEndpoints();
+        }
+        PrivateEndpoints.MergeFrom(other.PrivateEndpoints);
       }
       switch (other.PredictionResourcesCase) {
         case PredictionResourcesOneofCase.DedicatedResources:
@@ -1218,6 +1309,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             EnableAccessLogging = input.ReadBool();
             break;
           }
+          case 114: {
+            if (privateEndpoints_ == null) {
+              PrivateEndpoints = new global::Google.Cloud.AIPlatform.V1.PrivateEndpoints();
+            }
+            input.ReadMessage(PrivateEndpoints);
+            break;
+          }
           case 120: {
             DisableContainerLogging = input.ReadBool();
             break;
@@ -1288,8 +1386,272 @@ namespace Google.Cloud.AIPlatform.V1 {
             EnableAccessLogging = input.ReadBool();
             break;
           }
+          case 114: {
+            if (privateEndpoints_ == null) {
+              PrivateEndpoints = new global::Google.Cloud.AIPlatform.V1.PrivateEndpoints();
+            }
+            input.ReadMessage(PrivateEndpoints);
+            break;
+          }
           case 120: {
             DisableContainerLogging = input.ReadBool();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// PrivateEndpoints is used to provide paths for users to send
+  /// requests via private services access.
+  /// </summary>
+  public sealed partial class PrivateEndpoints : pb::IMessage<PrivateEndpoints>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<PrivateEndpoints> _parser = new pb::MessageParser<PrivateEndpoints>(() => new PrivateEndpoints());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pb::MessageParser<PrivateEndpoints> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.EndpointReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateEndpoints() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateEndpoints(PrivateEndpoints other) : this() {
+      predictHttpUri_ = other.predictHttpUri_;
+      explainHttpUri_ = other.explainHttpUri_;
+      healthHttpUri_ = other.healthHttpUri_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public PrivateEndpoints Clone() {
+      return new PrivateEndpoints(this);
+    }
+
+    /// <summary>Field number for the "predict_http_uri" field.</summary>
+    public const int PredictHttpUriFieldNumber = 1;
+    private string predictHttpUri_ = "";
+    /// <summary>
+    /// Output only. Http(s) path to send prediction requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string PredictHttpUri {
+      get { return predictHttpUri_; }
+      set {
+        predictHttpUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "explain_http_uri" field.</summary>
+    public const int ExplainHttpUriFieldNumber = 2;
+    private string explainHttpUri_ = "";
+    /// <summary>
+    /// Output only. Http(s) path to send explain requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ExplainHttpUri {
+      get { return explainHttpUri_; }
+      set {
+        explainHttpUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "health_http_uri" field.</summary>
+    public const int HealthHttpUriFieldNumber = 3;
+    private string healthHttpUri_ = "";
+    /// <summary>
+    /// Output only. Http(s) path to send health check requests.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string HealthHttpUri {
+      get { return healthHttpUri_; }
+      set {
+        healthHttpUri_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override bool Equals(object other) {
+      return Equals(other as PrivateEndpoints);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool Equals(PrivateEndpoints other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (PredictHttpUri != other.PredictHttpUri) return false;
+      if (ExplainHttpUri != other.ExplainHttpUri) return false;
+      if (HealthHttpUri != other.HealthHttpUri) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (PredictHttpUri.Length != 0) hash ^= PredictHttpUri.GetHashCode();
+      if (ExplainHttpUri.Length != 0) hash ^= ExplainHttpUri.GetHashCode();
+      if (HealthHttpUri.Length != 0) hash ^= HealthHttpUri.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (PredictHttpUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PredictHttpUri);
+      }
+      if (ExplainHttpUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ExplainHttpUri);
+      }
+      if (HealthHttpUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(HealthHttpUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (PredictHttpUri.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(PredictHttpUri);
+      }
+      if (ExplainHttpUri.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(ExplainHttpUri);
+      }
+      if (HealthHttpUri.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(HealthHttpUri);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public int CalculateSize() {
+      int size = 0;
+      if (PredictHttpUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(PredictHttpUri);
+      }
+      if (ExplainHttpUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ExplainHttpUri);
+      }
+      if (HealthHttpUri.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(HealthHttpUri);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(PrivateEndpoints other) {
+      if (other == null) {
+        return;
+      }
+      if (other.PredictHttpUri.Length != 0) {
+        PredictHttpUri = other.PredictHttpUri;
+      }
+      if (other.ExplainHttpUri.Length != 0) {
+        ExplainHttpUri = other.ExplainHttpUri;
+      }
+      if (other.HealthHttpUri.Length != 0) {
+        HealthHttpUri = other.HealthHttpUri;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            PredictHttpUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            ExplainHttpUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            HealthHttpUri = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            PredictHttpUri = input.ReadString();
+            break;
+          }
+          case 18: {
+            ExplainHttpUri = input.ReadString();
+            break;
+          }
+          case 26: {
+            HealthHttpUri = input.ReadString();
             break;
           }
         }

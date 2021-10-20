@@ -2775,6 +2775,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2828,6 +2829,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2883,6 +2885,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2936,6 +2939,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2991,6 +2995,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3044,6 +3049,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3098,6 +3104,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3150,6 +3157,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3204,6 +3212,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3256,6 +3265,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3310,6 +3320,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3362,6 +3373,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 SamplePredictInstance = new wkt::Value(),
                 StatsAnomaliesBaseDirectory = new GcsDestination(),
                 EncryptionSpec = new EncryptionSpec(),
+                EnableMonitoringPipelineLogs = true,
                 Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetModelDeploymentMonitoringJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ModelDeploymentMonitoringJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));

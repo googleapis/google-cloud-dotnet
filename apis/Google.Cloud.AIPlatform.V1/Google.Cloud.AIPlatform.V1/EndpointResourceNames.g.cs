@@ -262,6 +262,15 @@ namespace Google.Cloud.AIPlatform.V1
         }
 
         /// <summary>
+        /// <see cref="NetworkName"/>-typed view over the <see cref="Network"/> resource name property.
+        /// </summary>
+        public NetworkName NetworkAsNetworkName
+        {
+            get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
+            set => Network = value?.ToString() ?? "";
+        }
+
+        /// <summary>
         /// <see cref="ModelDeploymentMonitoringJobName"/>-typed view over the
         /// <see cref="ModelDeploymentMonitoringJob"/> resource name property.
         /// </summary>

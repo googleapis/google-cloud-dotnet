@@ -64,6 +64,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -109,6 +110,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -156,6 +158,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -201,6 +204,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -248,6 +252,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.GetEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -293,6 +298,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.GetEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -341,6 +347,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -387,6 +394,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -435,6 +443,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -481,6 +490,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 EncryptionSpec = new EncryptionSpec(),
+                NetworkAsNetworkName = NetworkName.FromProjectNetwork("[PROJECT]", "[NETWORK]"),
                 ModelDeploymentMonitoringJobAsModelDeploymentMonitoringJobName = ModelDeploymentMonitoringJobName.FromProjectLocationModelDeploymentMonitoringJob("[PROJECT]", "[LOCATION]", "[MODEL_DEPLOYMENT_MONITORING_JOB]"),
             };
             mockGrpcClient.Setup(x => x.UpdateEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Endpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));

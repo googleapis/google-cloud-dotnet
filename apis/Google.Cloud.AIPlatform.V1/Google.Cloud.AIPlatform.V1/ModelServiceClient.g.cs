@@ -871,7 +871,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -882,7 +883,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -893,7 +895,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -930,7 +933,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="name">
@@ -947,7 +951,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="name">
@@ -964,7 +969,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="name">
@@ -978,7 +984,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="name">
@@ -995,7 +1002,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="name">
@@ -1012,7 +1020,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="name">
@@ -1090,7 +1099,6 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
-        /// Format: `projects/{project}/locations/{location}/models/{model}`
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1111,7 +1119,6 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
-        /// Format: `projects/{project}/locations/{location}/models/{model}`
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1132,7 +1139,6 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
-        /// Format: `projects/{project}/locations/{location}/models/{model}`
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1149,7 +1155,6 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
-        /// Format: `projects/{project}/locations/{location}/models/{model}`
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1170,7 +1175,6 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
-        /// Format: `projects/{project}/locations/{location}/models/{model}`
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1191,7 +1195,6 @@ namespace Google.Cloud.AIPlatform.V1
         /// </summary>
         /// <param name="name">
         /// Required. The resource name of the Model to export.
-        /// Format: `projects/{project}/locations/{location}/models/{model}`
         /// </param>
         /// <param name="outputConfig">
         /// Required. The desired output location and configuration.
@@ -1899,7 +1902,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1913,7 +1917,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         /// <summary>
         /// Deletes a Model.
-        /// Note: Model can only be deleted if there are no DeployedModels created
+        /// 
+        /// Model can only be deleted if there are no [DeployedModels][] created
         /// from it.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

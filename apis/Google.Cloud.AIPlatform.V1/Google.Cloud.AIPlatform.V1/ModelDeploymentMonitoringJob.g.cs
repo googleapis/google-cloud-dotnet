@@ -36,7 +36,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cm90b2J1Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVj",
             "dC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29v",
             "Z2xlL3JwYy9zdGF0dXMucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8igA4KHE1vZGVsRGVwbG95bWVudE1vbml0b3JpbmdKb2ISEQoEbmFt",
+            "cHJvdG8iqQ4KHE1vZGVsRGVwbG95bWVudE1vbml0b3JpbmdKb2ISEQoEbmFt",
             "ZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEjwKCGVu",
             "ZHBvaW50GAMgASgJQirgQQL6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
             "b20vRW5kcG9pbnQSOAoFc3RhdGUYBCABKA4yJC5nb29nbGUuY2xvdWQuYWlw",
@@ -67,56 +67,57 @@ namespace Google.Cloud.AIPlatform.V1 {
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSUgoec3RhdHNfYW5vbWFsaWVzX2Jh",
             "c2VfZGlyZWN0b3J5GBQgASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
             "djEuR2NzRGVzdGluYXRpb24SQwoPZW5jcnlwdGlvbl9zcGVjGBUgASgLMiou",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMSJgoF",
-            "ZXJyb3IYFyABKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID4EEDGi0KC0xhYmVs",
-            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAEiawoXTW9u",
-            "aXRvcmluZ1NjaGVkdWxlU3RhdGUSKQolTU9OSVRPUklOR19TQ0hFRFVMRV9T",
-            "VEFURV9VTlNQRUNJRklFRBAAEgsKB1BFTkRJTkcQARILCgdPRkZMSU5FEAIS",
-            "CwoHUlVOTklORxADOqUB6kGhAQo2YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNv",
-            "bS9Nb2RlbERlcGxveW1lbnRNb25pdG9yaW5nSm9iEmdwcm9qZWN0cy97cHJv",
-            "amVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vbW9kZWxEZXBsb3ltZW50TW9u",
-            "aXRvcmluZ0pvYnMve21vZGVsX2RlcGxveW1lbnRfbW9uaXRvcmluZ19qb2J9",
-            "IogDCiZNb2RlbERlcGxveW1lbnRNb25pdG9yaW5nQmlnUXVlcnlUYWJsZRJg",
-            "Cgpsb2dfc291cmNlGAEgASgOMkwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
-            "djEuTW9kZWxEZXBsb3ltZW50TW9uaXRvcmluZ0JpZ1F1ZXJ5VGFibGUuTG9n",
-            "U291cmNlElwKCGxvZ190eXBlGAIgASgOMkouZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuTW9kZWxEZXBsb3ltZW50TW9uaXRvcmluZ0JpZ1F1ZXJ5VGFi",
-            "bGUuTG9nVHlwZRIbChNiaWdxdWVyeV90YWJsZV9wYXRoGAMgASgJIkIKCUxv",
-            "Z1NvdXJjZRIaChZMT0dfU09VUkNFX1VOU1BFQ0lGSUVEEAASDAoIVFJBSU5J",
-            "TkcQARILCgdTRVJWSU5HEAIiPQoHTG9nVHlwZRIYChRMT0dfVFlQRV9VTlNQ",
-            "RUNJRklFRBAAEgsKB1BSRURJQ1QQARILCgdFWFBMQUlOEAIimwEKKE1vZGVs",
-            "RGVwbG95bWVudE1vbml0b3JpbmdPYmplY3RpdmVDb25maWcSGQoRZGVwbG95",
-            "ZWRfbW9kZWxfaWQYASABKAkSVAoQb2JqZWN0aXZlX2NvbmZpZxgCIAEoCzI6",
-            "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmluZ09i",
-            "amVjdGl2ZUNvbmZpZyJjCidNb2RlbERlcGxveW1lbnRNb25pdG9yaW5nU2No",
-            "ZWR1bGVDb25maWcSOAoQbW9uaXRvcl9pbnRlcnZhbBgBIAEoCzIZLmdvb2ds",
-            "ZS5wcm90b2J1Zi5EdXJhdGlvbkID4EECIqwECh1Nb2RlbE1vbml0b3JpbmdT",
-            "dGF0c0Fub21hbGllcxJVCglvYmplY3RpdmUYASABKA4yQi5nb29nbGUuY2xv",
-            "dWQuYWlwbGF0Zm9ybS52MS5Nb2RlbERlcGxveW1lbnRNb25pdG9yaW5nT2Jq",
-            "ZWN0aXZlVHlwZRIZChFkZXBsb3llZF9tb2RlbF9pZBgCIAEoCRIVCg1hbm9t",
-            "YWx5X2NvdW50GAMgASgFEm4KDWZlYXR1cmVfc3RhdHMYBCADKAsyVy5nb29n",
-            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbE1vbml0b3JpbmdTdGF0c0Fu",
-            "b21hbGllcy5GZWF0dXJlSGlzdG9yaWNTdGF0c0Fub21hbGllcxqRAgodRmVh",
-            "dHVyZUhpc3RvcmljU3RhdHNBbm9tYWxpZXMSHAoUZmVhdHVyZV9kaXNwbGF5",
-            "X25hbWUYASABKAkSPgoJdGhyZXNob2xkGAMgASgLMisuZ29vZ2xlLmNsb3Vk",
-            "LmFpcGxhdGZvcm0udjEuVGhyZXNob2xkQ29uZmlnEkcKDnRyYWluaW5nX3N0",
-            "YXRzGAQgASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVy",
-            "ZVN0YXRzQW5vbWFseRJJChBwcmVkaWN0aW9uX3N0YXRzGAUgAygLMi8uZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZVN0YXRzQW5vbWFseSrO",
-            "AQomTW9kZWxEZXBsb3ltZW50TW9uaXRvcmluZ09iamVjdGl2ZVR5cGUSOgo2",
-            "TU9ERUxfREVQTE9ZTUVOVF9NT05JVE9SSU5HX09CSkVDVElWRV9UWVBFX1VO",
-            "U1BFQ0lGSUVEEAASFAoQUkFXX0ZFQVRVUkVfU0tFVxABEhUKEVJBV19GRUFU",
-            "VVJFX0RSSUZUEAISHAoYRkVBVFVSRV9BVFRSSUJVVElPTl9TS0VXEAMSHQoZ",
-            "RkVBVFVSRV9BVFRSSUJVVElPTl9EUklGVBAEQuUBCh5jb20uZ29vZ2xlLmNs",
-            "b3VkLmFpcGxhdGZvcm0udjFCIU1vZGVsRGVwbG95bWVudE1vbml0b3JpbmdK",
-            "b2JQcm90b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
-            "cGlzL2Nsb3VkL2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5D",
-            "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
-            "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5jcnlwdGlvblNwZWMSJwof",
+            "ZW5hYmxlX21vbml0b3JpbmdfcGlwZWxpbmVfbG9ncxgWIAEoCBImCgVlcnJv",
+            "chgXIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzQgPgQQMaLQoLTGFiZWxzRW50",
+            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ASJrChdNb25pdG9y",
+            "aW5nU2NoZWR1bGVTdGF0ZRIpCiVNT05JVE9SSU5HX1NDSEVEVUxFX1NUQVRF",
+            "X1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgsKB09GRkxJTkUQAhILCgdS",
+            "VU5OSU5HEAM6pQHqQaEBCjZhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01v",
+            "ZGVsRGVwbG95bWVudE1vbml0b3JpbmdKb2ISZ3Byb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbERlcGxveW1lbnRNb25pdG9y",
+            "aW5nSm9icy97bW9kZWxfZGVwbG95bWVudF9tb25pdG9yaW5nX2pvYn0iiAMK",
+            "Jk1vZGVsRGVwbG95bWVudE1vbml0b3JpbmdCaWdRdWVyeVRhYmxlEmAKCmxv",
+            "Z19zb3VyY2UYASABKA4yTC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5N",
+            "b2RlbERlcGxveW1lbnRNb25pdG9yaW5nQmlnUXVlcnlUYWJsZS5Mb2dTb3Vy",
+            "Y2USXAoIbG9nX3R5cGUYAiABKA4ySi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5Nb2RlbERlcGxveW1lbnRNb25pdG9yaW5nQmlnUXVlcnlUYWJsZS5M",
+            "b2dUeXBlEhsKE2JpZ3F1ZXJ5X3RhYmxlX3BhdGgYAyABKAkiQgoJTG9nU291",
+            "cmNlEhoKFkxPR19TT1VSQ0VfVU5TUEVDSUZJRUQQABIMCghUUkFJTklORxAB",
+            "EgsKB1NFUlZJTkcQAiI9CgdMb2dUeXBlEhgKFExPR19UWVBFX1VOU1BFQ0lG",
+            "SUVEEAASCwoHUFJFRElDVBABEgsKB0VYUExBSU4QAiKbAQooTW9kZWxEZXBs",
+            "b3ltZW50TW9uaXRvcmluZ09iamVjdGl2ZUNvbmZpZxIZChFkZXBsb3llZF9t",
+            "b2RlbF9pZBgBIAEoCRJUChBvYmplY3RpdmVfY29uZmlnGAIgASgLMjouZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxNb25pdG9yaW5nT2JqZWN0",
+            "aXZlQ29uZmlnImMKJ01vZGVsRGVwbG95bWVudE1vbml0b3JpbmdTY2hlZHVs",
+            "ZUNvbmZpZxI4ChBtb25pdG9yX2ludGVydmFsGAEgASgLMhkuZ29vZ2xlLnBy",
+            "b3RvYnVmLkR1cmF0aW9uQgPgQQIirAQKHU1vZGVsTW9uaXRvcmluZ1N0YXRz",
+            "QW5vbWFsaWVzElUKCW9iamVjdGl2ZRgBIAEoDjJCLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLk1vZGVsRGVwbG95bWVudE1vbml0b3JpbmdPYmplY3Rp",
+            "dmVUeXBlEhkKEWRlcGxveWVkX21vZGVsX2lkGAIgASgJEhUKDWFub21hbHlf",
+            "Y291bnQYAyABKAUSbgoNZmVhdHVyZV9zdGF0cxgEIAMoCzJXLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLk1vZGVsTW9uaXRvcmluZ1N0YXRzQW5vbWFs",
+            "aWVzLkZlYXR1cmVIaXN0b3JpY1N0YXRzQW5vbWFsaWVzGpECCh1GZWF0dXJl",
+            "SGlzdG9yaWNTdGF0c0Fub21hbGllcxIcChRmZWF0dXJlX2Rpc3BsYXlfbmFt",
+            "ZRgBIAEoCRI+Cgl0aHJlc2hvbGQYAyABKAsyKy5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5UaHJlc2hvbGRDb25maWcSRwoOdHJhaW5pbmdfc3RhdHMY",
+            "BCABKAsyLy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlU3Rh",
+            "dHNBbm9tYWx5EkkKEHByZWRpY3Rpb25fc3RhdHMYBSADKAsyLy5nb29nbGUu",
+            "Y2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0dXJlU3RhdHNBbm9tYWx5Ks4BCiZN",
+            "b2RlbERlcGxveW1lbnRNb25pdG9yaW5nT2JqZWN0aXZlVHlwZRI6CjZNT0RF",
+            "TF9ERVBMT1lNRU5UX01PTklUT1JJTkdfT0JKRUNUSVZFX1RZUEVfVU5TUEVD",
+            "SUZJRUQQABIUChBSQVdfRkVBVFVSRV9TS0VXEAESFQoRUkFXX0ZFQVRVUkVf",
+            "RFJJRlQQAhIcChhGRUFUVVJFX0FUVFJJQlVUSU9OX1NLRVcQAxIdChlGRUFU",
+            "VVJFX0FUVFJJQlVUSU9OX0RSSUZUEARC5QEKHmNvbS5nb29nbGUuY2xvdWQu",
+            "YWlwbGF0Zm9ybS52MUIhTW9kZWxEZXBsb3ltZW50TW9uaXRvcmluZ0pvYlBy",
+            "b3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "Y2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3Vk",
+            "LkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoC",
+            "HUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob.Parser, new[]{ "Name", "DisplayName", "Endpoint", "State", "ScheduleState", "ModelDeploymentMonitoringObjectiveConfigs", "ModelDeploymentMonitoringScheduleConfig", "LoggingSamplingStrategy", "ModelMonitoringAlertConfig", "PredictInstanceSchemaUri", "SamplePredictInstance", "AnalysisInstanceSchemaUri", "BigqueryTables", "LogTtl", "Labels", "CreateTime", "UpdateTime", "NextScheduleTime", "StatsAnomaliesBaseDirectory", "EncryptionSpec", "Error" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob.Types.MonitoringScheduleState) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob.Parser, new[]{ "Name", "DisplayName", "Endpoint", "State", "ScheduleState", "ModelDeploymentMonitoringObjectiveConfigs", "ModelDeploymentMonitoringScheduleConfig", "LoggingSamplingStrategy", "ModelMonitoringAlertConfig", "PredictInstanceSchemaUri", "SamplePredictInstance", "AnalysisInstanceSchemaUri", "BigqueryTables", "LogTtl", "Labels", "CreateTime", "UpdateTime", "NextScheduleTime", "StatsAnomaliesBaseDirectory", "EncryptionSpec", "EnableMonitoringPipelineLogs", "Error" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob.Types.MonitoringScheduleState) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Parser, new[]{ "LogSource", "LogType", "BigqueryTablePath" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Types.LogSource), typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Types.LogType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveConfig), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveConfig.Parser, new[]{ "DeployedModelId", "ObjectiveConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringScheduleConfig), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringScheduleConfig.Parser, new[]{ "MonitorInterval" }, null, null, null, null),
@@ -214,6 +215,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       nextScheduleTime_ = other.nextScheduleTime_ != null ? other.nextScheduleTime_.Clone() : null;
       statsAnomaliesBaseDirectory_ = other.statsAnomaliesBaseDirectory_ != null ? other.statsAnomaliesBaseDirectory_.Clone() : null;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
+      enableMonitoringPipelineLogs_ = other.enableMonitoringPipelineLogs_;
       error_ = other.error_ != null ? other.error_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -541,6 +543,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "enable_monitoring_pipeline_logs" field.</summary>
+    public const int EnableMonitoringPipelineLogsFieldNumber = 22;
+    private bool enableMonitoringPipelineLogs_;
+    /// <summary>
+    /// If true, the scheduled monitoring pipeline status logs are sent to
+    /// Google Cloud Logging. Please note the logs incur cost, which are subject to
+    /// [Cloud Logging pricing](https://cloud.google.com/logging#pricing).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public bool EnableMonitoringPipelineLogs {
+      get { return enableMonitoringPipelineLogs_; }
+      set {
+        enableMonitoringPipelineLogs_ = value;
+      }
+    }
+
     /// <summary>Field number for the "error" field.</summary>
     public const int ErrorFieldNumber = 23;
     private global::Google.Rpc.Status error_;
@@ -589,6 +607,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(NextScheduleTime, other.NextScheduleTime)) return false;
       if (!object.Equals(StatsAnomaliesBaseDirectory, other.StatsAnomaliesBaseDirectory)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
+      if (EnableMonitoringPipelineLogs != other.EnableMonitoringPipelineLogs) return false;
       if (!object.Equals(Error, other.Error)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -616,6 +635,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (nextScheduleTime_ != null) hash ^= NextScheduleTime.GetHashCode();
       if (statsAnomaliesBaseDirectory_ != null) hash ^= StatsAnomaliesBaseDirectory.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
+      if (EnableMonitoringPipelineLogs != false) hash ^= EnableMonitoringPipelineLogs.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -704,6 +724,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(EncryptionSpec);
       }
+      if (EnableMonitoringPipelineLogs != false) {
+        output.WriteRawTag(176, 1);
+        output.WriteBool(EnableMonitoringPipelineLogs);
+      }
       if (error_ != null) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(Error);
@@ -788,6 +812,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(170, 1);
         output.WriteMessage(EncryptionSpec);
       }
+      if (EnableMonitoringPipelineLogs != false) {
+        output.WriteRawTag(176, 1);
+        output.WriteBool(EnableMonitoringPipelineLogs);
+      }
       if (error_ != null) {
         output.WriteRawTag(186, 1);
         output.WriteMessage(Error);
@@ -854,6 +882,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (encryptionSpec_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(EncryptionSpec);
+      }
+      if (EnableMonitoringPipelineLogs != false) {
+        size += 2 + 1;
       }
       if (error_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Error);
@@ -952,6 +983,9 @@ namespace Google.Cloud.AIPlatform.V1 {
           EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
         }
         EncryptionSpec.MergeFrom(other.EncryptionSpec);
+      }
+      if (other.EnableMonitoringPipelineLogs != false) {
+        EnableMonitoringPipelineLogs = other.EnableMonitoringPipelineLogs;
       }
       if (other.error_ != null) {
         if (error_ == null) {
@@ -1083,6 +1117,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(EncryptionSpec);
             break;
           }
+          case 176: {
+            EnableMonitoringPipelineLogs = input.ReadBool();
+            break;
+          }
           case 186: {
             if (error_ == null) {
               Error = new global::Google.Rpc.Status();
@@ -1212,6 +1250,10 @@ namespace Google.Cloud.AIPlatform.V1 {
               EncryptionSpec = new global::Google.Cloud.AIPlatform.V1.EncryptionSpec();
             }
             input.ReadMessage(EncryptionSpec);
+            break;
+          }
+          case 176: {
+            EnableMonitoringPipelineLogs = input.ReadBool();
             break;
           }
           case 186: {

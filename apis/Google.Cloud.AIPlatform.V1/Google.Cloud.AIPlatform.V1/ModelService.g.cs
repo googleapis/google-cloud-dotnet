@@ -2016,7 +2016,6 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string name_ = "";
     /// <summary>
     /// Required. The resource name of the Model to export.
-    /// Format: `projects/{project}/locations/{location}/models/{model}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public string Name {
