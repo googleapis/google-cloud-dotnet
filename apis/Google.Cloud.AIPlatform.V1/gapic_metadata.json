@@ -125,6 +125,156 @@
         }
       }
     },
+    "FeaturestoreOnlineServingService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeaturestoreOnlineServingServiceClient",
+          "rpcs": {
+            "ReadFeatureValues": {
+              "methods": [
+                "ReadFeatureValues",
+                "ReadFeatureValuesAsync"
+              ]
+            },
+            "StreamingReadFeatureValues": {
+              "methods": [
+                "StreamingReadFeatureValues",
+                "StreamingReadFeatureValuesAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "FeaturestoreService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "FeaturestoreServiceClient",
+          "rpcs": {
+            "BatchCreateFeatures": {
+              "methods": [
+                "BatchCreateFeatures",
+                "BatchCreateFeaturesAsync"
+              ]
+            },
+            "BatchReadFeatureValues": {
+              "methods": [
+                "BatchReadFeatureValues",
+                "BatchReadFeatureValuesAsync"
+              ]
+            },
+            "CreateEntityType": {
+              "methods": [
+                "CreateEntityType",
+                "CreateEntityTypeAsync"
+              ]
+            },
+            "CreateFeature": {
+              "methods": [
+                "CreateFeature",
+                "CreateFeatureAsync"
+              ]
+            },
+            "CreateFeaturestore": {
+              "methods": [
+                "CreateFeaturestore",
+                "CreateFeaturestoreAsync"
+              ]
+            },
+            "DeleteEntityType": {
+              "methods": [
+                "DeleteEntityType",
+                "DeleteEntityTypeAsync"
+              ]
+            },
+            "DeleteFeature": {
+              "methods": [
+                "DeleteFeature",
+                "DeleteFeatureAsync"
+              ]
+            },
+            "DeleteFeaturestore": {
+              "methods": [
+                "DeleteFeaturestore",
+                "DeleteFeaturestoreAsync"
+              ]
+            },
+            "ExportFeatureValues": {
+              "methods": [
+                "ExportFeatureValues",
+                "ExportFeatureValuesAsync"
+              ]
+            },
+            "GetEntityType": {
+              "methods": [
+                "GetEntityType",
+                "GetEntityTypeAsync"
+              ]
+            },
+            "GetFeature": {
+              "methods": [
+                "GetFeature",
+                "GetFeatureAsync"
+              ]
+            },
+            "GetFeaturestore": {
+              "methods": [
+                "GetFeaturestore",
+                "GetFeaturestoreAsync"
+              ]
+            },
+            "ImportFeatureValues": {
+              "methods": [
+                "ImportFeatureValues",
+                "ImportFeatureValuesAsync"
+              ]
+            },
+            "ListEntityTypes": {
+              "methods": [
+                "ListEntityTypes",
+                "ListEntityTypesAsync"
+              ]
+            },
+            "ListFeatures": {
+              "methods": [
+                "ListFeatures",
+                "ListFeaturesAsync"
+              ]
+            },
+            "ListFeaturestores": {
+              "methods": [
+                "ListFeaturestores",
+                "ListFeaturestoresAsync"
+              ]
+            },
+            "SearchFeatures": {
+              "methods": [
+                "SearchFeatures",
+                "SearchFeaturesAsync"
+              ]
+            },
+            "UpdateEntityType": {
+              "methods": [
+                "UpdateEntityType",
+                "UpdateEntityTypeAsync"
+              ]
+            },
+            "UpdateFeature": {
+              "methods": [
+                "UpdateFeature",
+                "UpdateFeatureAsync"
+              ]
+            },
+            "UpdateFeaturestore": {
+              "methods": [
+                "UpdateFeaturestore",
+                "UpdateFeaturestoreAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "IndexEndpointService": {
       "clients": {
         "grpc": {
@@ -386,6 +536,201 @@
               "methods": [
                 "UpdateModelDeploymentMonitoringJob",
                 "UpdateModelDeploymentMonitoringJobAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "MetadataService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "MetadataServiceClient",
+          "rpcs": {
+            "AddContextArtifactsAndExecutions": {
+              "methods": [
+                "AddContextArtifactsAndExecutions",
+                "AddContextArtifactsAndExecutionsAsync"
+              ]
+            },
+            "AddContextChildren": {
+              "methods": [
+                "AddContextChildren",
+                "AddContextChildrenAsync"
+              ]
+            },
+            "AddExecutionEvents": {
+              "methods": [
+                "AddExecutionEvents",
+                "AddExecutionEventsAsync"
+              ]
+            },
+            "CreateArtifact": {
+              "methods": [
+                "CreateArtifact",
+                "CreateArtifactAsync"
+              ]
+            },
+            "CreateContext": {
+              "methods": [
+                "CreateContext",
+                "CreateContextAsync"
+              ]
+            },
+            "CreateExecution": {
+              "methods": [
+                "CreateExecution",
+                "CreateExecutionAsync"
+              ]
+            },
+            "CreateMetadataSchema": {
+              "methods": [
+                "CreateMetadataSchema",
+                "CreateMetadataSchemaAsync"
+              ]
+            },
+            "CreateMetadataStore": {
+              "methods": [
+                "CreateMetadataStore",
+                "CreateMetadataStoreAsync"
+              ]
+            },
+            "DeleteArtifact": {
+              "methods": [
+                "DeleteArtifact",
+                "DeleteArtifactAsync"
+              ]
+            },
+            "DeleteContext": {
+              "methods": [
+                "DeleteContext",
+                "DeleteContextAsync"
+              ]
+            },
+            "DeleteExecution": {
+              "methods": [
+                "DeleteExecution",
+                "DeleteExecutionAsync"
+              ]
+            },
+            "DeleteMetadataStore": {
+              "methods": [
+                "DeleteMetadataStore",
+                "DeleteMetadataStoreAsync"
+              ]
+            },
+            "GetArtifact": {
+              "methods": [
+                "GetArtifact",
+                "GetArtifactAsync"
+              ]
+            },
+            "GetContext": {
+              "methods": [
+                "GetContext",
+                "GetContextAsync"
+              ]
+            },
+            "GetExecution": {
+              "methods": [
+                "GetExecution",
+                "GetExecutionAsync"
+              ]
+            },
+            "GetMetadataSchema": {
+              "methods": [
+                "GetMetadataSchema",
+                "GetMetadataSchemaAsync"
+              ]
+            },
+            "GetMetadataStore": {
+              "methods": [
+                "GetMetadataStore",
+                "GetMetadataStoreAsync"
+              ]
+            },
+            "ListArtifacts": {
+              "methods": [
+                "ListArtifacts",
+                "ListArtifactsAsync"
+              ]
+            },
+            "ListContexts": {
+              "methods": [
+                "ListContexts",
+                "ListContextsAsync"
+              ]
+            },
+            "ListExecutions": {
+              "methods": [
+                "ListExecutions",
+                "ListExecutionsAsync"
+              ]
+            },
+            "ListMetadataSchemas": {
+              "methods": [
+                "ListMetadataSchemas",
+                "ListMetadataSchemasAsync"
+              ]
+            },
+            "ListMetadataStores": {
+              "methods": [
+                "ListMetadataStores",
+                "ListMetadataStoresAsync"
+              ]
+            },
+            "PurgeArtifacts": {
+              "methods": [
+                "PurgeArtifacts",
+                "PurgeArtifactsAsync"
+              ]
+            },
+            "PurgeContexts": {
+              "methods": [
+                "PurgeContexts",
+                "PurgeContextsAsync"
+              ]
+            },
+            "PurgeExecutions": {
+              "methods": [
+                "PurgeExecutions",
+                "PurgeExecutionsAsync"
+              ]
+            },
+            "QueryArtifactLineageSubgraph": {
+              "methods": [
+                "QueryArtifactLineageSubgraph",
+                "QueryArtifactLineageSubgraphAsync"
+              ]
+            },
+            "QueryContextLineageSubgraph": {
+              "methods": [
+                "QueryContextLineageSubgraph",
+                "QueryContextLineageSubgraphAsync"
+              ]
+            },
+            "QueryExecutionInputsAndOutputs": {
+              "methods": [
+                "QueryExecutionInputsAndOutputs",
+                "QueryExecutionInputsAndOutputsAsync"
+              ]
+            },
+            "UpdateArtifact": {
+              "methods": [
+                "UpdateArtifact",
+                "UpdateArtifactAsync"
+              ]
+            },
+            "UpdateContext": {
+              "methods": [
+                "UpdateContext",
+                "UpdateContextAsync"
+              ]
+            },
+            "UpdateExecution": {
+              "methods": [
+                "UpdateExecution",
+                "UpdateExecutionAsync"
               ]
             }
           }
