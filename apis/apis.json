@@ -1077,12 +1077,28 @@
       "protoPath": "google/cloud/documentai/v1beta3"
     },
     {
+      "id": "Google.Cloud.Domains.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Domains",
+      "productUrl": "https://cloud.google.com/domains/",
+      "description": "Recommended Google client library to access the Google Cloud Domains API v1, which enables management and configuration of domain names.",
+      "tags": [
+        "domains"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/domains/v1"
+    },
+    {
       "id": "Google.Cloud.Domains.V1Beta1",
       "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Cloud Domains",
       "productUrl": "https://cloud.google.com/domains/",
-      "description": "Enables management and configuration of domain names.",
+      "description": "Recommended Google client library to access the Google Cloud Domains API v1beta1, which enables management and configuration of domain names.",
       "tags": [
         "domains"
       ],
