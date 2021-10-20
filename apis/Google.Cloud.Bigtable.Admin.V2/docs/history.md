@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.6.0, released 2021-10-20
+
+- [Commit f594b06](https://github.com/googleapis/google-cloud-dotnet/commit/f594b06): feat: Add create_time to Instance
+
 # Version 2.5.0, released 2021-09-23
 
 - [Commit b3c1df4](https://github.com/googleapis/google-cloud-dotnet/commit/b3c1df4): feat: Publish new fields to support cluster group routing for Cloud Bigtable
