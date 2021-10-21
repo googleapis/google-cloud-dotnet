@@ -173,7 +173,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 }
                 catch (Exception e)
                 {
-                    return new Exception($"Error in test {TestMethod}", e);
+                    return new Exception($"Error in test {TestMethod} with testId {TestId}", e);
                 }
             }
         }
