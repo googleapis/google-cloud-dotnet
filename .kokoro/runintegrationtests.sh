@@ -31,6 +31,8 @@ df -h
 # Non-coverage run doesn't need any extra flags
 script_flags=
 report_flags="--upload_commit $KOKORO_GITHUB_COMMIT --upload_build $KOKORO_BUILD_NUMBER"
+# Specify RUN_FOR_APIS when manually triggering Kokoro to run tests only on a set of APIs.
+apis="$RUN_FOR_APIS"
 
 # If we have any previous coverage runs, remove them, regardless
 # of whether we're about to create any.
@@ -48,7 +50,7 @@ then
 fi
 
 # Build the libraries and run unit tests, optionally with coverage.
-./build.sh $script_flags
+./build.sh $script_flags $apis
 
 echo "Available disk space after running build.sh"
 df -h
@@ -67,7 +69,7 @@ echo "Available disk space after removing coverage for unit tests"
 df -h
 
 # Allow each integration test 3 chances to pass.
-./runintegrationtests.sh $script_flags || true
+./runintegrationtests.sh $script_flags $apis || true
 ./runintegrationtests.sh $script_flags --retry || true
 ./runintegrationtests.sh $script_flags --retry
 
