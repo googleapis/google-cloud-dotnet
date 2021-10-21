@@ -44,6 +44,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         {
             public static IHostBuilder CreateHostBuilder() =>
                 new HostBuilder()
+                    .ConfigureLogging(builder => builder.ClearProviders())
                     .ConfigureServices(services =>
                     {
                         services.AddGoogleDiagnostics(ProjectId, Service, Version);
@@ -54,6 +55,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         {
             public static IHostBuilder CreateHostBuilder() =>
                 new HostBuilder()
+                    .ConfigureLogging(builder => builder.ClearProviders())
                     .ConfigureServices(services =>
                     {
                         // We don't care much about which options we are setting.
@@ -69,6 +71,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         {
             public static IHostBuilder CreateHostBuilder() =>
                 new HostBuilder()
+                    .ConfigureLogging(builder => builder.ClearProviders())
                     .ConfigureServices(services =>
                     {
                         // We don't care much about which options we are setting.

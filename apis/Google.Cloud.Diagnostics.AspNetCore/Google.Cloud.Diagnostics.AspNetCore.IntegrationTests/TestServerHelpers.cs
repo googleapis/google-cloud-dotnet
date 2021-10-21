@@ -46,6 +46,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Host.CreateDefaultBuilder()
                 .ConfigureWebHostDefaults(webBuilder => 
                 {
+                    webBuilder.ConfigureLogging(builder => builder.ClearProviders());
                     webBuilder.UseTestServer().UseStartup<TStartup>();
                     configure?.Invoke(webBuilder);
                 });
