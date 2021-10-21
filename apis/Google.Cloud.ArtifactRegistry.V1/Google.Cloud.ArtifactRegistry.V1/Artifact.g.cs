@@ -64,9 +64,9 @@ namespace Google.Cloud.ArtifactRegistry.V1 {
   /// DockerImage represents a docker artifact.
   /// The following fields are returned as untyped metadata in the Version
   /// resource, using camelcase keys (i.e. metadata.imageSizeBytes):
-  ///   - imageSizeBytes
-  ///   - mediaType
-  ///   - buildTime
+  /// * imageSizeBytes
+  /// * mediaType
+  /// * buildTime
   /// </summary>
   public sealed partial class DockerImage : pb::IMessage<DockerImage>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
