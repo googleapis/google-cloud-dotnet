@@ -12,11 +12,11 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
-using Google.Api;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -70,22 +70,34 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         {
             var testId = IdGenerator.FromDateTime();
             var startTime = DateTime.UtcNow;
-            var resource = new MonitoredResource
-            {
-                Type = "global",
-                Labels =
-                {
-                    { "project_id", TestEnvironment.GetTestProjectId() },
-                    { "module_id", EntryData.Service },
-                    { "version_id", EntryData.Version },
-                    { "build_id", "some-build-id" }
-                }
-            };
-            // We won't be able to detect the right monitored resource, so specify it explicitly.
-            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder.ConfigureServices(
-                services => services.AddGoogleDiagnosticsForAspNetCore(
-                    TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version,
-                    loggingOptions: LoggingOptions.Create(monitoredResource: resource))));
+
+            var hostBuilder = GetHostBuilder(webHostBuilder =>
+                webHostBuilder.ConfigureServices(services =>
+                    services.AddGoogleDiagnosticsForAspNetCore(
+                        TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version)));
+
+            using var server = GetTestServer(hostBuilder);
+            using var client = server.CreateClient();
+            await TestTrace(testId, startTime, client);
+            await TestLogging(testId, startTime, client);
+            await TestErrorReporting(testId, client);
+        }
+
+        [Fact]
+        public async Task UseGoogleDiagnostics_ValidateDependencyInjection()
+        {
+            var testId = IdGenerator.FromDateTime();
+            var startTime = DateTime.UtcNow;
+
+            var hostBuilder = GetHostBuilder(webHostBuilder =>
+                webHostBuilder
+                    .UseDefaultServiceProvider(options => options.ValidateScopes = true)
+                    .ConfigureServices(services =>
+                        services.AddGoogleDiagnosticsForAspNetCore(
+                            TestEnvironment.GetTestProjectId(), EntryData.Service, EntryData.Version,
+                            traceOptions: TraceOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
+                            loggingOptions: LoggingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
+                            errorReportingOptions: ErrorReportingOptions.CreateInstance(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)))));
 
             using var server = GetTestServer(hostBuilder);
             using var client = server.CreateClient();
@@ -106,10 +118,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 { "version_id", EntryData.Version }
             };
 
-            var hostBuilder = GetHostBuilder(webHostBuilder => webHostBuilder
-                .ConfigureServices((ctx, services) => services.AddGoogleDiagnosticsForAspNetCore(
-                    ctx.Configuration["project_id"], ctx.Configuration["module_id"], ctx.Configuration["version_id"]))
-                .ConfigureAppConfiguration((hostContext, configBuilder) => configBuilder.AddInMemoryCollection(configurationData)));
+            var hostBuilder = GetHostBuilder(webHostBuilder =>
+                webHostBuilder
+                    .ConfigureServices((ctx, services) =>
+                        services.AddGoogleDiagnosticsForAspNetCore(
+                            ctx.Configuration["project_id"], ctx.Configuration["module_id"], ctx.Configuration["version_id"]))
+                    .ConfigureAppConfiguration((hostContext, configBuilder) => configBuilder.AddInMemoryCollection(configurationData)));
 
             using var server = GetTestServer(hostBuilder);
             using var client = server.CreateClient();

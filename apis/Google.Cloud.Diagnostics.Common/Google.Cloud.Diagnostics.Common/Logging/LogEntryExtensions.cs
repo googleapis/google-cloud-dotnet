@@ -36,7 +36,7 @@ namespace Google.Cloud.Diagnostics.Common
             // This means that the Google Trace component of the diagnostics library
             // has been initialized.
             // Else attempt to use an external trace context.
-            var context = ContextTracerManager.GetCurrentTraceContext() ?? serviceProvider?.GetService<ITraceContext>();
+            var context = ContextTracerManager.GetCurrentTraceContext() ?? serviceProvider.SafeGetTraceContext();
             if (context is ITraceContext && context.TraceId is string)
             {
                 entry.Trace = traceTarget.GetFullTraceName(context.TraceId);
@@ -51,6 +51,18 @@ namespace Google.Cloud.Diagnostics.Common
             return entry;
 
             static string SpanIdToHex(ulong? spanId) => spanId is null ? null : $"{spanId:x16}";
+        }
+
+        private static ITraceContext SafeGetTraceContext(this IServiceProvider serviceProvider)
+        {
+            try
+            {
+                return serviceProvider?.GetService<ITraceContext>();
+            }
+            catch (InvalidOperationException ex) when (ex.Message.Contains("Google.Cloud.Diagnostics.Common.ITraceContext"))
+            {
+                return null;
+            }
         }
     }
 }
