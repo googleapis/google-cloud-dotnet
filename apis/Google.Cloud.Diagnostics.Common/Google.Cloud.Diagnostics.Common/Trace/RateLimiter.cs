@@ -112,6 +112,12 @@ namespace Google.Cloud.Diagnostics.Common
         /// Reset the rate limiter instance to null.  This will allow a new QPS rate limit to
         /// be set.  For testing use only.
         /// </summary>
-        internal static void Reset() => _instance = null;
+        internal static void Reset()
+        {
+            lock (_instanceMutex)
+            {
+                _instance = null;
+            }
+        }
     }
 }
