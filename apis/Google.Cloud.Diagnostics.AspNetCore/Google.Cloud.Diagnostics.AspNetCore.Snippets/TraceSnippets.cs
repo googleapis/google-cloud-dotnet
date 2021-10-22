@@ -47,17 +47,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.Snippets
 
         public TraceSnippetsTests()
         {
+            // The rate limiter instance is static and only set once.  If we do not reset it at the
+            // beginning of each tests the qps will not change.  This is dependent on the tests not
+            // running in parallel.
+            RateLimiter.Reset();
+
             _testId = IdGenerator.FromDateTime();
 
             _server = GetTestServer<TraceTestApplication.Startup>();
             _client = _server.CreateClient();
 
             _startTime = DateTimeOffset.UtcNow;
-
-            // The rate limiter instance is static and only set once.  If we do not reset it at the
-            // beginning of each tests the qps will not change.  This is dependent on the tests not
-            // running in parallel.
-            RateLimiter.Reset();
         }
 
         [Fact]

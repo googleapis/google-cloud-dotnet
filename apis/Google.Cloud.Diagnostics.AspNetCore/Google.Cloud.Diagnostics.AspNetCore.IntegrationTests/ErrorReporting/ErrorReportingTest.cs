@@ -50,17 +50,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public ErrorReportingTest(LogValidatingFixture fixture)
         {
+            // The rate limiter instance is static and only set once.  If we do not reset it at the
+            // beginning of each test the qps will not change.  This is dependent on the tests not
+            // running in parallel, which they don't.
+            RateLimiter.Reset();
+
             _testId = IdGenerator.FromDateTime();
 
             _server = GetTestServer<ErrorReportingTestApplication>();
             _client = _server.CreateClient();
 
             _fixture = fixture;
-
-            // The rate limiter instance is static and only set once.  If we do not reset it at the
-            // beginning of each test the qps will not change.  This is dependent on the tests not
-            // running in parallel, which they don't.
-            RateLimiter.Reset();
         }
 
         private void AssertTraceContext(LogEntry entry)
