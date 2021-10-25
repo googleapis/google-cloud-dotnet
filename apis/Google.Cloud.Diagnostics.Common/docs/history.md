@@ -1,5 +1,25 @@
 # Version history
 
+# Version 4.3.0-beta08, released 2021-10-25
+
+Version 4.3.0-beta07 was not released because of CI errors.
+This version also contains the changes described for the unreleased version 4.3.0-beta07.
+
+- [Commit 99307c0](https://github.com/googleapis/google-cloud-dotnet/commit/99307c0):
+  - tests: Always reset the trace rate limiter before registering Diagnostics services.
+  - Else, services are registered with the existing trace rate limiter which migh make tests flaky.
+  - This is probably part of the reason of some long standing test flakiness in tracing.
+  - Note that this only affects tests, as on production code rate limiting is determined by configuration options.
+- [Commit f77f48b](https://github.com/googleapis/google-cloud-dotnet/commit/f77f48b):
+  - fix: Skip DI scope validation for the trace context provider.
+  - Logging may happen outside a scope, i.e. a web server starting where each request is a scope.
+  - The trace context provider is by defintion scoped.
+  - When logging outside a scope we simply don't add trace information to the log entry.
+  - As extra info:
+  - Scope validation is only enabled by default on a development environment.
+  - Diagnostics, by default, ignores logging exceptions.
+  - To reproduce the issue this commit fixes both scope validation and Diagnostis exception propagation needed to be enabled.
+
 # Version 4.3.0-beta07, released 2021-10-20
 
 - [Commit 6e34e22](https://github.com/googleapis/google-cloud-dotnet/commit/6e34e22): refactor: Fully standardize error reporting options.
