@@ -1,4 +1,5 @@
 .vs
+.vscode
 *.pyc
 *.user
 obj
