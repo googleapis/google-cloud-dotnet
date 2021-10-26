@@ -191,6 +191,7 @@
     {
       "id": "Google.Cloud.Asset.V1",
       "generator": "micro",
+      "autoGenerator": "OwlBot",
       "protoPath": "google/cloud/asset/v1",
       "productName": "Google Cloud Asset Inventory",
       "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
