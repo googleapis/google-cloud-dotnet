@@ -45,7 +45,7 @@ namespace Google.Cloud.Tools.ReleaseManager
             ExpectedArguments = string.Join(" ", argNames.Select(arg => $"<{arg}>"));
         }
 
-        public void Execute(string[] args)
+        public virtual void Execute(string[] args)
         {
             if (args.Length != _expectedArgCount)
             {

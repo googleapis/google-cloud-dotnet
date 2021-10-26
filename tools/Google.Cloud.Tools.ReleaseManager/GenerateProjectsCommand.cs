@@ -156,6 +156,11 @@ namespace Google.Cloud.Tools.ReleaseManager
 
             foreach (var api in catalog.Apis)
             {
+                if (args.Length > 0 && !args.Contains(api.Id)) {
+                    // User requested projects to be generated for specific apis
+                    // and this api wasn't on the list.
+                    continue;
+                }
                 var path = Path.Combine(root, "apis", api.Id);
                 GenerateProjects(path, api, apiNames);
                 GenerateSolutionFiles(path, api);
@@ -164,6 +169,12 @@ namespace Google.Cloud.Tools.ReleaseManager
                 GenerateOwlBotConfiguration(path, api);
                 GenerateMetadataFile(path, api);
             }
+        }
+
+        public override void Execute(string[] args) {
+            // Skip the argument length check because this command accepts any
+            // number of arguments.
+            ExecuteImpl(args);
         }
 
         /// <summary>
