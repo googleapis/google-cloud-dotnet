@@ -141,5 +141,39 @@ namespace Google.Cloud.Spanner.Data.Tests
                     () => new SpannerParameter { SpannerDbType = spannerType.WithSize(size) });
             }
         }
+
+        public static IEnumerable<object[]> AllSpannerTypes()
+        {
+            yield return new object[] { SpannerDbType.Bytes };
+            yield return new object[] { SpannerDbType.String };
+            yield return new object[] { SpannerDbType.Bool };
+            yield return new object[] { SpannerDbType.Date };
+            yield return new object[] { SpannerDbType.Float64 };
+            yield return new object[] { SpannerDbType.Int64 };
+            yield return new object[] { SpannerDbType.Numeric };
+            yield return new object[] { SpannerDbType.Timestamp };
+            yield return new object[] { SpannerDbType.Json };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bytes) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.String) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Bool) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Date) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Float64) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Int64) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Numeric) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Timestamp) };
+            yield return new object[] { SpannerDbType.ArrayOf(SpannerDbType.Json) };
+        }
+
+        [Theory]
+        [MemberData(nameof(AllSpannerTypes))]
+        public void SetDefaultSize(SpannerDbType spannerType)
+        {
+            var param = new SpannerParameter { SpannerDbType = spannerType };
+            // The default size should be 0 for all types.
+            Assert.Equal(0, param.Size);
+            // Setting the size to the same (default) value should be allowed for all types.
+            param.Size = 0;
+            Assert.Equal(0, param.Size);
+        }
     }
 }

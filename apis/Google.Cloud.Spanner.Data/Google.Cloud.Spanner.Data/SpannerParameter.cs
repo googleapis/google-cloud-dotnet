@@ -63,7 +63,8 @@ namespace Google.Cloud.Spanner.Data
         public override int Size
         {
             get => SpannerDbType.Size.GetValueOrDefault();
-            set => SpannerDbType = SpannerDbType.WithSize(value);
+            // Only change the size if the given size is different from the current value.
+            set => SpannerDbType = SpannerDbType.Size.GetValueOrDefault() == value ? SpannerDbType : SpannerDbType.WithSize(value);
         }
 
         /// <inheritdoc />
