@@ -660,7 +660,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
-                Name = "name1c9368b0",
+                ChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
@@ -688,7 +688,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
-                Name = "name1c9368b0",
+                ChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
@@ -718,7 +718,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
-                Name = "name1c9368b0",
+                ChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
@@ -746,7 +746,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
-                Name = "name1c9368b0",
+                ChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
@@ -777,7 +777,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
-                Name = "name1c9368b0",
+                ChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
@@ -806,7 +806,7 @@ namespace Google.Cloud.Channel.V1.Tests
             };
             ChannelPartnerLink expectedResponse = new ChannelPartnerLink
             {
-                Name = "name1c9368b0",
+                ChannelPartnerLinkName = ChannelPartnerLinkName.FromAccountChannelPartnerLink("[ACCOUNT]", "[CHANNEL_PARTNER_LINK]"),
                 ResellerCloudIdentityId = "reseller_cloud_identity_id1b90ae2b",
                 LinkState = ChannelPartnerLinkState.Revoked,
                 InviteLinkUri = "invite_link_urie81ac099",
