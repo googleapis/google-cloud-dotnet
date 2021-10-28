@@ -251,7 +251,7 @@ generate_proto() {
   mkdir -p apis/$1/$1
   $PROTOC \
     --csharp_out=apis/$1/$1 \
-    --csharp_opt=base_namespace=$1 \
+    --csharp_opt=base_namespace=$1,file_extension=.g.cs \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
     $(find $API_SRC_DIR -name '*.proto') \
@@ -265,7 +265,7 @@ generate_protogrpc() {
   API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
   $PROTOC \
     --csharp_out=apis/$1/$1 \
-    --csharp_opt=file_extension=.g.cs \
+    --csharp_opt=base_namespace=$1,file_extension=.g.cs \
     --grpc_out=apis/$1/$1 \
     --grpc_opt=file_suffix=Grpc.g.cs \
     -I $GOOGLEAPIS \
