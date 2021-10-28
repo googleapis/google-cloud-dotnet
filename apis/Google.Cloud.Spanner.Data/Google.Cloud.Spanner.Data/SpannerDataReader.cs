@@ -24,6 +24,7 @@ using System.Data;
 using System.Data.Common;
 using System.Threading;
 using System.Threading.Tasks;
+using TypeCode = Google.Cloud.Spanner.V1.TypeCode;
 
 namespace Google.Cloud.Spanner.Data
 {
@@ -147,8 +148,35 @@ namespace Google.Cloud.Spanner.Data
         public override byte GetByte(int i) => GetFieldValue<byte>(i);
 
         /// <inheritdoc />
-        public override long GetBytes(int i, long fieldOffset, byte[] buffer, int bufferoffset, int length) => throw
-            new NotSupportedException("Spanner does not support conversion to byte arrays.");
+        public override long GetBytes(int ordinal, long fieldOffset, byte[] buffer, int bufferOffset, int length)
+        {
+            GaxPreconditions.CheckArgument(GetSpannerFieldType(ordinal).TypeCode == TypeCode.Bytes, nameof(ordinal), "Spanner only supports conversion to byte arrays for columns of type BYTES.");
+            GaxPreconditions.CheckArgumentRange(bufferOffset, nameof(bufferOffset), 0, buffer?.Length ?? 0);
+            GaxPreconditions.CheckArgumentRange(length, nameof(length), 0, buffer?.Length ?? int.MaxValue);
+            if (buffer != null)
+            {
+                GaxPreconditions.CheckArgumentRange(bufferOffset + length, nameof(length), 0, buffer.Length);
+            }
+
+            var bytes = IsDBNull(ordinal) ? null : GetFieldValue<byte[]>(ordinal);
+            if (buffer == null)
+            {
+                // Return the length of the value if `buffer` is null:
+                // https://docs.microsoft.com/en-us/dotnet/api/system.data.idatarecord.getbytes?view=netstandard-2.1#remarks
+                return bytes?.Length ?? 0;
+            }
+            var copyLength = Math.Min(length, (bytes?.Length ?? 0) - (int)fieldOffset);
+            if (copyLength < 0)
+            {
+                throw new ArgumentOutOfRangeException(
+                    nameof(fieldOffset), "Field offset exceeds the length of the field data");
+            }
+            if (bytes != null)
+            {
+                Array.Copy(bytes, (int) fieldOffset, buffer, bufferOffset, copyLength);
+            }
+            return copyLength;
+        }
 
         /// <inheritdoc />
         public override char GetChar(int i) => GetFieldValue<char>(i);

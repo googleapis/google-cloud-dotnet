@@ -127,6 +127,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     < double.Epsilon);
                 Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                 Assert.Equal(new byte[] { 4, 5, 6 }, reader.GetFieldValue<byte[]>(reader.GetOrdinal("BytesValue")));
+                long length = reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, null, 0, int.MaxValue);
+                Assert.Equal(3L, length);
+                var buffer = new byte[length];
+                Assert.Equal(3, reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, buffer, 0, (int) length));
                 Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
                 Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
