@@ -303,19 +303,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<OracleProfile> _parser = new pb::MessageParser<OracleProfile>(() => new OracleProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OracleProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleProfile() {
       OnConstruction();
     }
@@ -323,6 +327,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleProfile(OracleProfile other) : this() {
       hostname_ = other.hostname_;
       port_ = other.port_;
@@ -334,6 +339,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleProfile Clone() {
       return new OracleProfile(this);
     }
@@ -345,6 +351,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Hostname for the Oracle connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Hostname {
       get { return hostname_; }
       set {
@@ -359,6 +366,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Port for the Oracle connection, default value is 1521.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Port {
       get { return port_; }
       set {
@@ -373,6 +381,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Username for the Oracle connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
       get { return username_; }
       set {
@@ -387,6 +396,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Password for the Oracle connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
       get { return password_; }
       set {
@@ -401,6 +411,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Database for the Oracle connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatabaseService {
       get { return databaseService_; }
       set {
@@ -417,16 +428,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Connection string attributes
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> ConnectionAttributes {
       get { return connectionAttributes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OracleProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OracleProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -444,6 +458,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
@@ -459,11 +474,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -497,6 +514,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Hostname.Length != 0) {
         output.WriteRawTag(10);
@@ -526,6 +544,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Hostname.Length != 0) {
@@ -551,6 +570,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OracleProfile other) {
       if (other == null) {
         return;
@@ -575,6 +595,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -616,6 +637,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -665,19 +687,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<MysqlProfile> _parser = new pb::MessageParser<MysqlProfile>(() => new MysqlProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MysqlProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlProfile() {
       OnConstruction();
     }
@@ -685,6 +711,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlProfile(MysqlProfile other) : this() {
       hostname_ = other.hostname_;
       port_ = other.port_;
@@ -695,6 +722,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlProfile Clone() {
       return new MysqlProfile(this);
     }
@@ -706,6 +734,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Hostname for the MySQL connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Hostname {
       get { return hostname_; }
       set {
@@ -720,6 +749,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Port for the MySQL connection, default value is 3306.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Port {
       get { return port_; }
       set {
@@ -734,6 +764,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Username for the MySQL connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
       get { return username_; }
       set {
@@ -748,6 +779,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Input only. Password for the MySQL connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
       get { return password_; }
       set {
@@ -762,6 +794,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// SSL configuration for the MySQL connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.MysqlSslConfig SslConfig {
       get { return sslConfig_; }
       set {
@@ -770,11 +803,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MysqlProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MysqlProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -791,6 +826,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
@@ -805,11 +841,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -842,6 +880,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Hostname.Length != 0) {
         output.WriteRawTag(10);
@@ -870,6 +909,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Hostname.Length != 0) {
@@ -894,6 +934,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MysqlProfile other) {
       if (other == null) {
         return;
@@ -920,6 +961,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -960,6 +1002,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1008,19 +1051,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<GcsProfile> _parser = new pb::MessageParser<GcsProfile>(() => new GcsProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GcsProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsProfile() {
       OnConstruction();
     }
@@ -1028,6 +1075,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsProfile(GcsProfile other) : this() {
       bucketName_ = other.bucketName_;
       rootPath_ = other.rootPath_;
@@ -1035,6 +1083,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsProfile Clone() {
       return new GcsProfile(this);
     }
@@ -1047,6 +1096,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BucketName {
       get { return bucketName_; }
       set {
@@ -1061,6 +1111,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The root path inside the Cloud Storage bucket.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RootPath {
       get { return rootPath_; }
       set {
@@ -1069,11 +1120,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GcsProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GcsProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1087,6 +1140,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (BucketName.Length != 0) hash ^= BucketName.GetHashCode();
@@ -1098,11 +1152,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1123,6 +1179,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BucketName.Length != 0) {
         output.WriteRawTag(10);
@@ -1139,6 +1196,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (BucketName.Length != 0) {
@@ -1154,6 +1212,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GcsProfile other) {
       if (other == null) {
         return;
@@ -1168,6 +1227,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1193,6 +1253,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1226,19 +1287,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<NoConnectivitySettings> _parser = new pb::MessageParser<NoConnectivitySettings>(() => new NoConnectivitySettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NoConnectivitySettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NoConnectivitySettings() {
       OnConstruction();
     }
@@ -1246,21 +1311,25 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NoConnectivitySettings(NoConnectivitySettings other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NoConnectivitySettings Clone() {
       return new NoConnectivitySettings(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NoConnectivitySettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NoConnectivitySettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1272,6 +1341,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -1281,11 +1351,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1298,6 +1370,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1306,6 +1379,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -1315,6 +1389,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NoConnectivitySettings other) {
       if (other == null) {
         return;
@@ -1323,6 +1398,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1340,6 +1416,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1365,19 +1442,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<StaticServiceIpConnectivity> _parser = new pb::MessageParser<StaticServiceIpConnectivity>(() => new StaticServiceIpConnectivity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StaticServiceIpConnectivity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StaticServiceIpConnectivity() {
       OnConstruction();
     }
@@ -1385,21 +1466,25 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StaticServiceIpConnectivity(StaticServiceIpConnectivity other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StaticServiceIpConnectivity Clone() {
       return new StaticServiceIpConnectivity(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StaticServiceIpConnectivity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StaticServiceIpConnectivity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1411,6 +1496,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -1420,11 +1506,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1437,6 +1525,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1445,6 +1534,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -1454,6 +1544,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StaticServiceIpConnectivity other) {
       if (other == null) {
         return;
@@ -1462,6 +1553,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1479,6 +1571,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1504,19 +1597,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<ForwardSshTunnelConnectivity> _parser = new pb::MessageParser<ForwardSshTunnelConnectivity>(() => new ForwardSshTunnelConnectivity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ForwardSshTunnelConnectivity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ForwardSshTunnelConnectivity() {
       OnConstruction();
     }
@@ -1524,6 +1621,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ForwardSshTunnelConnectivity(ForwardSshTunnelConnectivity other) : this() {
       hostname_ = other.hostname_;
       username_ = other.username_;
@@ -1541,6 +1639,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ForwardSshTunnelConnectivity Clone() {
       return new ForwardSshTunnelConnectivity(this);
     }
@@ -1552,6 +1651,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Hostname for the SSH tunnel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Hostname {
       get { return hostname_; }
       set {
@@ -1566,6 +1666,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Username for the SSH tunnel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
       get { return username_; }
       set {
@@ -1580,6 +1681,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Port for the SSH tunnel, default value is 22.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Port {
       get { return port_; }
       set {
@@ -1593,6 +1695,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Input only. SSH password.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
       get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.Password ? (string) authenticationMethod_ : ""; }
       set {
@@ -1607,6 +1710,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Input only. SSH private key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrivateKey {
       get { return authenticationMethodCase_ == AuthenticationMethodOneofCase.PrivateKey ? (string) authenticationMethod_ : ""; }
       set {
@@ -1624,22 +1728,26 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
     private AuthenticationMethodOneofCase authenticationMethodCase_ = AuthenticationMethodOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuthenticationMethodOneofCase AuthenticationMethodCase {
       get { return authenticationMethodCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAuthenticationMethod() {
       authenticationMethodCase_ = AuthenticationMethodOneofCase.None;
       authenticationMethod_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ForwardSshTunnelConnectivity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ForwardSshTunnelConnectivity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1657,6 +1765,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
@@ -1672,11 +1781,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1709,6 +1820,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Hostname.Length != 0) {
         output.WriteRawTag(10);
@@ -1737,6 +1849,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Hostname.Length != 0) {
@@ -1761,6 +1874,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ForwardSshTunnelConnectivity other) {
       if (other == null) {
         return;
@@ -1787,6 +1901,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1824,6 +1939,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1870,19 +1986,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<VpcPeeringConfig> _parser = new pb::MessageParser<VpcPeeringConfig>(() => new VpcPeeringConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VpcPeeringConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VpcPeeringConfig() {
       OnConstruction();
     }
@@ -1890,6 +2010,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VpcPeeringConfig(VpcPeeringConfig other) : this() {
       vpcName_ = other.vpcName_;
       subnet_ = other.subnet_;
@@ -1897,6 +2018,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VpcPeeringConfig Clone() {
       return new VpcPeeringConfig(this);
     }
@@ -1908,6 +2030,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. fully qualified name of the VPC Datastream will peer to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VpcName {
       get { return vpcName_; }
       set {
@@ -1922,6 +2045,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. A free subnet for peering. (CIDR of /29)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Subnet {
       get { return subnet_; }
       set {
@@ -1930,11 +2054,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VpcPeeringConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VpcPeeringConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1948,6 +2074,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (VpcName.Length != 0) hash ^= VpcName.GetHashCode();
@@ -1959,11 +2086,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1984,6 +2113,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (VpcName.Length != 0) {
         output.WriteRawTag(10);
@@ -2000,6 +2130,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (VpcName.Length != 0) {
@@ -2015,6 +2146,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VpcPeeringConfig other) {
       if (other == null) {
         return;
@@ -2029,6 +2161,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2054,6 +2187,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2088,19 +2222,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<PrivateConnection> _parser = new pb::MessageParser<PrivateConnection>(() => new PrivateConnection());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PrivateConnection> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateConnection() {
       OnConstruction();
     }
@@ -2108,6 +2246,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateConnection(PrivateConnection other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -2121,6 +2260,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateConnection Clone() {
       return new PrivateConnection(this);
     }
@@ -2132,6 +2272,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The resource's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2146,6 +2287,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The create time of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -2160,6 +2302,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The update time of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -2176,6 +2319,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -2187,6 +2331,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Display name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -2201,6 +2346,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The state of the Private Connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.PrivateConnection.Types.State State {
       get { return state_; }
       set {
@@ -2215,6 +2361,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. In case of error, the details of the error in a user-friendly format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.Error Error {
       get { return error_; }
       set {
@@ -2229,6 +2376,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// VPC Peering Config
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.VpcPeeringConfig VpcPeeringConfig {
       get { return vpcPeeringConfig_; }
       set {
@@ -2237,11 +2385,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PrivateConnection);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PrivateConnection other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2261,6 +2411,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2278,11 +2429,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2324,6 +2477,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2361,6 +2515,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2392,6 +2547,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PrivateConnection other) {
       if (other == null) {
         return;
@@ -2434,6 +2590,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2495,6 +2652,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2554,6 +2712,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PrivateConnection message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Private Connection state.
@@ -2590,19 +2749,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<PrivateConnectivity> _parser = new pb::MessageParser<PrivateConnectivity>(() => new PrivateConnectivity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PrivateConnectivity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateConnectivity() {
       OnConstruction();
     }
@@ -2610,12 +2773,14 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateConnectivity(PrivateConnectivity other) : this() {
       privateConnectionName_ = other.privateConnectionName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateConnectivity Clone() {
       return new PrivateConnectivity(this);
     }
@@ -2624,6 +2789,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     public const int PrivateConnectionNameFieldNumber = 1;
     private string privateConnectionName_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrivateConnectionName {
       get { return privateConnectionName_; }
       set {
@@ -2632,11 +2798,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PrivateConnectivity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PrivateConnectivity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2649,6 +2817,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PrivateConnectionName.Length != 0) hash ^= PrivateConnectionName.GetHashCode();
@@ -2659,11 +2828,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2680,6 +2851,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PrivateConnectionName.Length != 0) {
         output.WriteRawTag(10);
@@ -2692,6 +2864,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PrivateConnectionName.Length != 0) {
@@ -2704,6 +2877,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PrivateConnectivity other) {
       if (other == null) {
         return;
@@ -2715,6 +2889,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2736,6 +2911,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2766,19 +2942,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<Route> _parser = new pb::MessageParser<Route>(() => new Route());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Route> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Route() {
       OnConstruction();
     }
@@ -2786,6 +2966,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Route(Route other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -2798,6 +2979,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Route Clone() {
       return new Route(this);
     }
@@ -2809,6 +2991,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The resource's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2823,6 +3006,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The create time of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -2837,6 +3021,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The update time of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -2853,6 +3038,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -2864,6 +3050,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Display name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -2878,6 +3065,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Destination address for connection
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationAddress {
       get { return destinationAddress_; }
       set {
@@ -2892,6 +3080,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Destination port for connection
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DestinationPort {
       get { return destinationPort_; }
       set {
@@ -2900,11 +3089,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Route);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Route other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2923,6 +3114,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2939,11 +3131,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2981,6 +3175,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3014,6 +3209,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3042,6 +3238,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Route other) {
       if (other == null) {
         return;
@@ -3075,6 +3272,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3126,6 +3324,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3185,19 +3384,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<MysqlSslConfig> _parser = new pb::MessageParser<MysqlSslConfig>(() => new MysqlSslConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MysqlSslConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlSslConfig() {
       OnConstruction();
     }
@@ -3205,6 +3408,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlSslConfig(MysqlSslConfig other) : this() {
       clientKey_ = other.clientKey_;
       clientKeySet_ = other.clientKeySet_;
@@ -3216,6 +3420,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlSslConfig Clone() {
       return new MysqlSslConfig(this);
     }
@@ -3229,6 +3434,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// 'ca_certificate' fields are mandatory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClientKey {
       get { return clientKey_; }
       set {
@@ -3243,6 +3449,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. Indicates whether the client_key field is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ClientKeySet {
       get { return clientKeySet_; }
       set {
@@ -3259,6 +3466,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// then the 'client_key' and the 'ca_certificate' fields are mandatory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClientCertificate {
       get { return clientCertificate_; }
       set {
@@ -3273,6 +3481,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. Indicates whether the client_certificate field is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ClientCertificateSet {
       get { return clientCertificateSet_; }
       set {
@@ -3288,6 +3497,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// server's certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CaCertificate {
       get { return caCertificate_; }
       set {
@@ -3302,6 +3512,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. Indicates whether the ca_certificate field is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CaCertificateSet {
       get { return caCertificateSet_; }
       set {
@@ -3310,11 +3521,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MysqlSslConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MysqlSslConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3332,6 +3545,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ClientKey.Length != 0) hash ^= ClientKey.GetHashCode();
@@ -3347,11 +3561,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3388,6 +3604,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ClientKey.Length != 0) {
         output.WriteRawTag(90);
@@ -3420,6 +3637,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ClientKey.Length != 0) {
@@ -3447,6 +3665,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MysqlSslConfig other) {
       if (other == null) {
         return;
@@ -3473,6 +3692,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3514,6 +3734,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3560,19 +3781,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<ConnectionProfile> _parser = new pb::MessageParser<ConnectionProfile>(() => new ConnectionProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConnectionProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionProfile() {
       OnConstruction();
     }
@@ -3580,6 +3805,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionProfile(ConnectionProfile other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -3617,6 +3843,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionProfile Clone() {
       return new ConnectionProfile(this);
     }
@@ -3628,6 +3855,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The resource's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -3642,6 +3870,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The create time of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -3656,6 +3885,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The update time of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -3672,6 +3902,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -3683,6 +3914,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Display name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -3696,6 +3928,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Oracle ConnectionProfile configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.OracleProfile OracleProfile {
       get { return profileCase_ == ProfileOneofCase.OracleProfile ? (global::Google.Cloud.Datastream.V1Alpha1.OracleProfile) profile_ : null; }
       set {
@@ -3710,6 +3943,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Cloud Storage ConnectionProfile configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.GcsProfile GcsProfile {
       get { return profileCase_ == ProfileOneofCase.GcsProfile ? (global::Google.Cloud.Datastream.V1Alpha1.GcsProfile) profile_ : null; }
       set {
@@ -3724,6 +3958,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// MySQL ConnectionProfile configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.MysqlProfile MysqlProfile {
       get { return profileCase_ == ProfileOneofCase.MysqlProfile ? (global::Google.Cloud.Datastream.V1Alpha1.MysqlProfile) profile_ : null; }
       set {
@@ -3738,6 +3973,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// No connectivity option chosen.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.NoConnectivitySettings NoConnectivity {
       get { return connectivityCase_ == ConnectivityOneofCase.NoConnectivity ? (global::Google.Cloud.Datastream.V1Alpha1.NoConnectivitySettings) connectivity_ : null; }
       set {
@@ -3752,6 +3988,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Static Service IP connectivity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.StaticServiceIpConnectivity StaticServiceIpConnectivity {
       get { return connectivityCase_ == ConnectivityOneofCase.StaticServiceIpConnectivity ? (global::Google.Cloud.Datastream.V1Alpha1.StaticServiceIpConnectivity) connectivity_ : null; }
       set {
@@ -3766,6 +4003,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Forward SSH tunnel connectivity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.ForwardSshTunnelConnectivity ForwardSshConnectivity {
       get { return connectivityCase_ == ConnectivityOneofCase.ForwardSshConnectivity ? (global::Google.Cloud.Datastream.V1Alpha1.ForwardSshTunnelConnectivity) connectivity_ : null; }
       set {
@@ -3780,6 +4018,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Private connectivity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.PrivateConnectivity PrivateConnectivity {
       get { return connectivityCase_ == ConnectivityOneofCase.PrivateConnectivity ? (global::Google.Cloud.Datastream.V1Alpha1.PrivateConnectivity) connectivity_ : null; }
       set {
@@ -3798,11 +4037,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
     private ProfileOneofCase profileCase_ = ProfileOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ProfileOneofCase ProfileCase {
       get { return profileCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearProfile() {
       profileCase_ = ProfileOneofCase.None;
       profile_ = null;
@@ -3819,22 +4060,26 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
     private ConnectivityOneofCase connectivityCase_ = ConnectivityOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectivityOneofCase ConnectivityCase {
       get { return connectivityCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearConnectivity() {
       connectivityCase_ = ConnectivityOneofCase.None;
       connectivity_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConnectionProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConnectionProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3860,6 +4105,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3883,11 +4129,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3945,6 +4193,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3998,6 +4247,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4041,6 +4291,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConnectionProfile other) {
       if (other == null) {
         return;
@@ -4116,6 +4367,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4222,6 +4474,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4336,19 +4589,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<OracleColumn> _parser = new pb::MessageParser<OracleColumn>(() => new OracleColumn());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OracleColumn> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleColumn() {
       OnConstruction();
     }
@@ -4356,6 +4613,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleColumn(OracleColumn other) : this() {
       columnName_ = other.columnName_;
       dataType_ = other.dataType_;
@@ -4370,6 +4628,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleColumn Clone() {
       return new OracleColumn(this);
     }
@@ -4381,6 +4640,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ColumnName {
       get { return columnName_; }
       set {
@@ -4395,6 +4655,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The Oracle data type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DataType {
       get { return dataType_; }
       set {
@@ -4409,6 +4670,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Length {
       get { return length_; }
       set {
@@ -4423,6 +4685,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column precision.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Precision {
       get { return precision_; }
       set {
@@ -4437,6 +4700,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column scale.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Scale {
       get { return scale_; }
       set {
@@ -4451,6 +4715,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column encoding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Encoding {
       get { return encoding_; }
       set {
@@ -4465,6 +4730,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Whether or not the column represents a primary key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PrimaryKey {
       get { return primaryKey_; }
       set {
@@ -4479,6 +4745,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Whether or not the column can accept a null value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Nullable {
       get { return nullable_; }
       set {
@@ -4493,6 +4760,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The ordinal position of the column in the table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int OrdinalPosition {
       get { return ordinalPosition_; }
       set {
@@ -4501,11 +4769,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OracleColumn);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OracleColumn other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4526,6 +4796,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -4544,11 +4815,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4597,6 +4870,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ColumnName.Length != 0) {
         output.WriteRawTag(10);
@@ -4641,6 +4915,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ColumnName.Length != 0) {
@@ -4677,6 +4952,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OracleColumn other) {
       if (other == null) {
         return;
@@ -4712,6 +4988,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4765,6 +5042,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4826,19 +5104,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<OracleTable> _parser = new pb::MessageParser<OracleTable>(() => new OracleTable());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OracleTable> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleTable() {
       OnConstruction();
     }
@@ -4846,6 +5128,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleTable(OracleTable other) : this() {
       tableName_ = other.tableName_;
       oracleColumns_ = other.oracleColumns_.Clone();
@@ -4853,6 +5136,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleTable Clone() {
       return new OracleTable(this);
     }
@@ -4864,6 +5148,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Table name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TableName {
       get { return tableName_; }
       set {
@@ -4882,16 +5167,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// everything.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.OracleColumn> OracleColumns {
       get { return oracleColumns_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OracleTable);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OracleTable other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4905,6 +5193,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
@@ -4916,11 +5205,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4938,6 +5229,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TableName.Length != 0) {
         output.WriteRawTag(10);
@@ -4951,6 +5243,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TableName.Length != 0) {
@@ -4964,6 +5257,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OracleTable other) {
       if (other == null) {
         return;
@@ -4976,6 +5270,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5001,6 +5296,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5034,19 +5330,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<OracleSchema> _parser = new pb::MessageParser<OracleSchema>(() => new OracleSchema());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OracleSchema> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleSchema() {
       OnConstruction();
     }
@@ -5054,6 +5354,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleSchema(OracleSchema other) : this() {
       schemaName_ = other.schemaName_;
       oracleTables_ = other.oracleTables_.Clone();
@@ -5061,6 +5362,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleSchema Clone() {
       return new OracleSchema(this);
     }
@@ -5072,6 +5374,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Schema name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SchemaName {
       get { return schemaName_; }
       set {
@@ -5088,16 +5391,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Tables in the schema.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.OracleTable> OracleTables {
       get { return oracleTables_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OracleSchema);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OracleSchema other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5111,6 +5417,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SchemaName.Length != 0) hash ^= SchemaName.GetHashCode();
@@ -5122,11 +5429,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5144,6 +5453,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SchemaName.Length != 0) {
         output.WriteRawTag(10);
@@ -5157,6 +5467,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SchemaName.Length != 0) {
@@ -5170,6 +5481,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OracleSchema other) {
       if (other == null) {
         return;
@@ -5182,6 +5494,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5207,6 +5520,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5240,19 +5554,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<OracleRdbms> _parser = new pb::MessageParser<OracleRdbms>(() => new OracleRdbms());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OracleRdbms> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleRdbms() {
       OnConstruction();
     }
@@ -5260,12 +5578,14 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleRdbms(OracleRdbms other) : this() {
       oracleSchemas_ = other.oracleSchemas_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleRdbms Clone() {
       return new OracleRdbms(this);
     }
@@ -5279,16 +5599,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Oracle schemas/databases in the database server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.OracleSchema> OracleSchemas {
       get { return oracleSchemas_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OracleRdbms);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OracleRdbms other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5301,6 +5624,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= oracleSchemas_.GetHashCode();
@@ -5311,11 +5635,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5329,6 +5655,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       oracleSchemas_.WriteTo(ref output, _repeated_oracleSchemas_codec);
       if (_unknownFields != null) {
@@ -5338,6 +5665,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += oracleSchemas_.CalculateSize(_repeated_oracleSchemas_codec);
@@ -5348,6 +5676,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OracleRdbms other) {
       if (other == null) {
         return;
@@ -5357,6 +5686,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5378,6 +5708,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5407,19 +5738,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<OracleSourceConfig> _parser = new pb::MessageParser<OracleSourceConfig>(() => new OracleSourceConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OracleSourceConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleSourceConfig() {
       OnConstruction();
     }
@@ -5427,6 +5762,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleSourceConfig(OracleSourceConfig other) : this() {
       allowlist_ = other.allowlist_ != null ? other.allowlist_.Clone() : null;
       rejectlist_ = other.rejectlist_ != null ? other.rejectlist_.Clone() : null;
@@ -5434,6 +5770,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OracleSourceConfig Clone() {
       return new OracleSourceConfig(this);
     }
@@ -5445,6 +5782,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Oracle objects to include in the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.OracleRdbms Allowlist {
       get { return allowlist_; }
       set {
@@ -5459,6 +5797,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Oracle objects to exclude from the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.OracleRdbms Rejectlist {
       get { return rejectlist_; }
       set {
@@ -5467,11 +5806,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OracleSourceConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OracleSourceConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5485,6 +5826,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (allowlist_ != null) hash ^= Allowlist.GetHashCode();
@@ -5496,11 +5838,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5521,6 +5865,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (allowlist_ != null) {
         output.WriteRawTag(10);
@@ -5537,6 +5882,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (allowlist_ != null) {
@@ -5552,6 +5898,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OracleSourceConfig other) {
       if (other == null) {
         return;
@@ -5572,6 +5919,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5603,6 +5951,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5642,19 +5991,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<MysqlColumn> _parser = new pb::MessageParser<MysqlColumn>(() => new MysqlColumn());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MysqlColumn> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlColumn() {
       OnConstruction();
     }
@@ -5662,6 +6015,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlColumn(MysqlColumn other) : this() {
       columnName_ = other.columnName_;
       dataType_ = other.dataType_;
@@ -5674,6 +6028,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlColumn Clone() {
       return new MysqlColumn(this);
     }
@@ -5685,6 +6040,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ColumnName {
       get { return columnName_; }
       set {
@@ -5700,6 +6056,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// https://dev.mysql.com/doc/refman/8.0/en/data-types.html
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DataType {
       get { return dataType_; }
       set {
@@ -5714,6 +6071,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Length {
       get { return length_; }
       set {
@@ -5728,6 +6086,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Column collation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Collation {
       get { return collation_; }
       set {
@@ -5742,6 +6101,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Whether or not the column represents a primary key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PrimaryKey {
       get { return primaryKey_; }
       set {
@@ -5756,6 +6116,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Whether or not the column can accept a null value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Nullable {
       get { return nullable_; }
       set {
@@ -5770,6 +6131,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The ordinal position of the column in the table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int OrdinalPosition {
       get { return ordinalPosition_; }
       set {
@@ -5778,11 +6140,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MysqlColumn);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MysqlColumn other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5801,6 +6165,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -5817,11 +6182,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5862,6 +6229,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ColumnName.Length != 0) {
         output.WriteRawTag(10);
@@ -5898,6 +6266,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ColumnName.Length != 0) {
@@ -5928,6 +6297,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MysqlColumn other) {
       if (other == null) {
         return;
@@ -5957,6 +6327,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6002,6 +6373,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6055,19 +6427,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<MysqlTable> _parser = new pb::MessageParser<MysqlTable>(() => new MysqlTable());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MysqlTable> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlTable() {
       OnConstruction();
     }
@@ -6075,6 +6451,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlTable(MysqlTable other) : this() {
       tableName_ = other.tableName_;
       mysqlColumns_ = other.mysqlColumns_.Clone();
@@ -6082,6 +6459,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlTable Clone() {
       return new MysqlTable(this);
     }
@@ -6093,6 +6471,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Table name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TableName {
       get { return tableName_; }
       set {
@@ -6111,16 +6490,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// everything.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.MysqlColumn> MysqlColumns {
       get { return mysqlColumns_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MysqlTable);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MysqlTable other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6134,6 +6516,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TableName.Length != 0) hash ^= TableName.GetHashCode();
@@ -6145,11 +6528,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6167,6 +6552,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TableName.Length != 0) {
         output.WriteRawTag(10);
@@ -6180,6 +6566,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TableName.Length != 0) {
@@ -6193,6 +6580,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MysqlTable other) {
       if (other == null) {
         return;
@@ -6205,6 +6593,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6230,6 +6619,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6263,19 +6653,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<MysqlDatabase> _parser = new pb::MessageParser<MysqlDatabase>(() => new MysqlDatabase());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MysqlDatabase> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlDatabase() {
       OnConstruction();
     }
@@ -6283,6 +6677,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlDatabase(MysqlDatabase other) : this() {
       databaseName_ = other.databaseName_;
       mysqlTables_ = other.mysqlTables_.Clone();
@@ -6290,6 +6685,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlDatabase Clone() {
       return new MysqlDatabase(this);
     }
@@ -6301,6 +6697,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Database name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatabaseName {
       get { return databaseName_; }
       set {
@@ -6317,16 +6714,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Tables in the database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.MysqlTable> MysqlTables {
       get { return mysqlTables_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MysqlDatabase);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MysqlDatabase other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6340,6 +6740,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DatabaseName.Length != 0) hash ^= DatabaseName.GetHashCode();
@@ -6351,11 +6752,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6373,6 +6776,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DatabaseName.Length != 0) {
         output.WriteRawTag(10);
@@ -6386,6 +6790,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DatabaseName.Length != 0) {
@@ -6399,6 +6804,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MysqlDatabase other) {
       if (other == null) {
         return;
@@ -6411,6 +6817,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6436,6 +6843,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6469,19 +6877,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<MysqlRdbms> _parser = new pb::MessageParser<MysqlRdbms>(() => new MysqlRdbms());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MysqlRdbms> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlRdbms() {
       OnConstruction();
     }
@@ -6489,12 +6901,14 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlRdbms(MysqlRdbms other) : this() {
       mysqlDatabases_ = other.mysqlDatabases_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlRdbms Clone() {
       return new MysqlRdbms(this);
     }
@@ -6508,16 +6922,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Mysql databases on the server
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.MysqlDatabase> MysqlDatabases {
       get { return mysqlDatabases_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MysqlRdbms);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MysqlRdbms other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6530,6 +6947,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= mysqlDatabases_.GetHashCode();
@@ -6540,11 +6958,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6558,6 +6978,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       mysqlDatabases_.WriteTo(ref output, _repeated_mysqlDatabases_codec);
       if (_unknownFields != null) {
@@ -6567,6 +6988,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += mysqlDatabases_.CalculateSize(_repeated_mysqlDatabases_codec);
@@ -6577,6 +6999,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MysqlRdbms other) {
       if (other == null) {
         return;
@@ -6586,6 +7009,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6607,6 +7031,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6636,19 +7061,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<MysqlSourceConfig> _parser = new pb::MessageParser<MysqlSourceConfig>(() => new MysqlSourceConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MysqlSourceConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlSourceConfig() {
       OnConstruction();
     }
@@ -6656,6 +7085,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlSourceConfig(MysqlSourceConfig other) : this() {
       allowlist_ = other.allowlist_ != null ? other.allowlist_.Clone() : null;
       rejectlist_ = other.rejectlist_ != null ? other.rejectlist_.Clone() : null;
@@ -6663,6 +7093,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MysqlSourceConfig Clone() {
       return new MysqlSourceConfig(this);
     }
@@ -6674,6 +7105,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// MySQL objects to retrieve from the source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.MysqlRdbms Allowlist {
       get { return allowlist_; }
       set {
@@ -6688,6 +7120,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// MySQL objects to exclude from the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.MysqlRdbms Rejectlist {
       get { return rejectlist_; }
       set {
@@ -6696,11 +7129,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MysqlSourceConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MysqlSourceConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6714,6 +7149,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (allowlist_ != null) hash ^= Allowlist.GetHashCode();
@@ -6725,11 +7161,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6750,6 +7188,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (allowlist_ != null) {
         output.WriteRawTag(10);
@@ -6766,6 +7205,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (allowlist_ != null) {
@@ -6781,6 +7221,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MysqlSourceConfig other) {
       if (other == null) {
         return;
@@ -6801,6 +7242,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6832,6 +7274,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6871,19 +7314,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<SourceConfig> _parser = new pb::MessageParser<SourceConfig>(() => new SourceConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SourceConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceConfig() {
       OnConstruction();
     }
@@ -6891,6 +7338,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceConfig(SourceConfig other) : this() {
       sourceConnectionProfileName_ = other.sourceConnectionProfileName_;
       switch (other.SourceStreamConfigCase) {
@@ -6906,6 +7354,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceConfig Clone() {
       return new SourceConfig(this);
     }
@@ -6917,6 +7366,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Source connection profile identifier.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceConnectionProfileName {
       get { return sourceConnectionProfileName_; }
       set {
@@ -6930,6 +7380,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Oracle data source configuration
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.OracleSourceConfig OracleSourceConfig {
       get { return sourceStreamConfigCase_ == SourceStreamConfigOneofCase.OracleSourceConfig ? (global::Google.Cloud.Datastream.V1Alpha1.OracleSourceConfig) sourceStreamConfig_ : null; }
       set {
@@ -6944,6 +7395,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// MySQL data source configuration
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.MysqlSourceConfig MysqlSourceConfig {
       get { return sourceStreamConfigCase_ == SourceStreamConfigOneofCase.MysqlSourceConfig ? (global::Google.Cloud.Datastream.V1Alpha1.MysqlSourceConfig) sourceStreamConfig_ : null; }
       set {
@@ -6961,22 +7413,26 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
     private SourceStreamConfigOneofCase sourceStreamConfigCase_ = SourceStreamConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceStreamConfigOneofCase SourceStreamConfigCase {
       get { return sourceStreamConfigCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSourceStreamConfig() {
       sourceStreamConfigCase_ = SourceStreamConfigOneofCase.None;
       sourceStreamConfig_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SourceConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SourceConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6992,6 +7448,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SourceConnectionProfileName.Length != 0) hash ^= SourceConnectionProfileName.GetHashCode();
@@ -7005,11 +7462,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7034,6 +7493,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SourceConnectionProfileName.Length != 0) {
         output.WriteRawTag(10);
@@ -7054,6 +7514,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SourceConnectionProfileName.Length != 0) {
@@ -7072,6 +7533,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SourceConfig other) {
       if (other == null) {
         return;
@@ -7098,6 +7560,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7137,6 +7600,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7184,19 +7648,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<AvroFileFormat> _parser = new pb::MessageParser<AvroFileFormat>(() => new AvroFileFormat());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AvroFileFormat> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AvroFileFormat() {
       OnConstruction();
     }
@@ -7204,21 +7672,25 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AvroFileFormat(AvroFileFormat other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AvroFileFormat Clone() {
       return new AvroFileFormat(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AvroFileFormat);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AvroFileFormat other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7230,6 +7702,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -7239,11 +7712,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7256,6 +7731,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -7264,6 +7740,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -7273,6 +7750,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AvroFileFormat other) {
       if (other == null) {
         return;
@@ -7281,6 +7759,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7298,6 +7777,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7323,19 +7803,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<JsonFileFormat> _parser = new pb::MessageParser<JsonFileFormat>(() => new JsonFileFormat());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<JsonFileFormat> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JsonFileFormat() {
       OnConstruction();
     }
@@ -7343,6 +7827,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JsonFileFormat(JsonFileFormat other) : this() {
       schemaFileFormat_ = other.schemaFileFormat_;
       compression_ = other.compression_;
@@ -7350,6 +7835,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JsonFileFormat Clone() {
       return new JsonFileFormat(this);
     }
@@ -7361,6 +7847,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The schema file format along JSON data files.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.SchemaFileFormat SchemaFileFormat {
       get { return schemaFileFormat_; }
       set {
@@ -7375,6 +7862,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Compression of the loaded JSON file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.JsonFileFormat.Types.JsonCompression Compression {
       get { return compression_; }
       set {
@@ -7383,11 +7871,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as JsonFileFormat);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(JsonFileFormat other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7401,6 +7891,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SchemaFileFormat != global::Google.Cloud.Datastream.V1Alpha1.SchemaFileFormat.Unspecified) hash ^= SchemaFileFormat.GetHashCode();
@@ -7412,11 +7903,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7437,6 +7930,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SchemaFileFormat != global::Google.Cloud.Datastream.V1Alpha1.SchemaFileFormat.Unspecified) {
         output.WriteRawTag(8);
@@ -7453,6 +7947,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SchemaFileFormat != global::Google.Cloud.Datastream.V1Alpha1.SchemaFileFormat.Unspecified) {
@@ -7468,6 +7963,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(JsonFileFormat other) {
       if (other == null) {
         return;
@@ -7482,6 +7978,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7507,6 +8004,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7530,6 +8028,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #region Nested types
     /// <summary>Container for nested types declared in the JsonFileFormat message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Json file compression.
@@ -7565,19 +8064,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<GcsDestinationConfig> _parser = new pb::MessageParser<GcsDestinationConfig>(() => new GcsDestinationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GcsDestinationConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsDestinationConfig() {
       OnConstruction();
     }
@@ -7585,6 +8088,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsDestinationConfig(GcsDestinationConfig other) : this() {
       path_ = other.path_;
       gcsFileFormat_ = other.gcsFileFormat_;
@@ -7603,6 +8107,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsDestinationConfig Clone() {
       return new GcsDestinationConfig(this);
     }
@@ -7614,6 +8119,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Path inside the Cloud Storage bucket to write data to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Path {
       get { return path_; }
       set {
@@ -7630,6 +8136,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.GcsFileFormat GcsFileFormat {
       get { return gcsFileFormat_; }
       set {
@@ -7644,6 +8151,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The maximum file size to be saved in the bucket.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int FileRotationMb {
       get { return fileRotationMb_; }
       set {
@@ -7659,6 +8167,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// closed and a new file is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration FileRotationInterval {
       get { return fileRotationInterval_; }
       set {
@@ -7672,6 +8181,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// AVRO file format configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.AvroFileFormat AvroFileFormat {
       get { return fileFormatCase_ == FileFormatOneofCase.AvroFileFormat ? (global::Google.Cloud.Datastream.V1Alpha1.AvroFileFormat) fileFormat_ : null; }
       set {
@@ -7686,6 +8196,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// JSON file format configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.JsonFileFormat JsonFileFormat {
       get { return fileFormatCase_ == FileFormatOneofCase.JsonFileFormat ? (global::Google.Cloud.Datastream.V1Alpha1.JsonFileFormat) fileFormat_ : null; }
       set {
@@ -7703,22 +8214,26 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
     private FileFormatOneofCase fileFormatCase_ = FileFormatOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FileFormatOneofCase FileFormatCase {
       get { return fileFormatCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearFileFormat() {
       fileFormatCase_ = FileFormatOneofCase.None;
       fileFormat_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GcsDestinationConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GcsDestinationConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7737,6 +8252,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Path.Length != 0) hash ^= Path.GetHashCode();
@@ -7753,11 +8269,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7794,6 +8312,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Path.Length != 0) {
         output.WriteRawTag(10);
@@ -7826,6 +8345,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Path.Length != 0) {
@@ -7853,6 +8373,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GcsDestinationConfig other) {
       if (other == null) {
         return;
@@ -7891,6 +8412,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7945,6 +8467,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8007,19 +8530,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<DestinationConfig> _parser = new pb::MessageParser<DestinationConfig>(() => new DestinationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DestinationConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DestinationConfig() {
       OnConstruction();
     }
@@ -8027,6 +8554,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DestinationConfig(DestinationConfig other) : this() {
       destinationConnectionProfileName_ = other.destinationConnectionProfileName_;
       switch (other.DestinationStreamConfigCase) {
@@ -8039,6 +8567,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DestinationConfig Clone() {
       return new DestinationConfig(this);
     }
@@ -8050,6 +8579,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Destination connection profile identifier.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationConnectionProfileName {
       get { return destinationConnectionProfileName_; }
       set {
@@ -8060,6 +8590,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// <summary>Field number for the "gcs_destination_config" field.</summary>
     public const int GcsDestinationConfigFieldNumber = 100;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.GcsDestinationConfig GcsDestinationConfig {
       get { return destinationStreamConfigCase_ == DestinationStreamConfigOneofCase.GcsDestinationConfig ? (global::Google.Cloud.Datastream.V1Alpha1.GcsDestinationConfig) destinationStreamConfig_ : null; }
       set {
@@ -8076,22 +8607,26 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
     private DestinationStreamConfigOneofCase destinationStreamConfigCase_ = DestinationStreamConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DestinationStreamConfigOneofCase DestinationStreamConfigCase {
       get { return destinationStreamConfigCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDestinationStreamConfig() {
       destinationStreamConfigCase_ = DestinationStreamConfigOneofCase.None;
       destinationStreamConfig_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DestinationConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DestinationConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8106,6 +8641,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DestinationConnectionProfileName.Length != 0) hash ^= DestinationConnectionProfileName.GetHashCode();
@@ -8118,11 +8654,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8143,6 +8681,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DestinationConnectionProfileName.Length != 0) {
         output.WriteRawTag(10);
@@ -8159,6 +8698,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DestinationConnectionProfileName.Length != 0) {
@@ -8174,6 +8714,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DestinationConfig other) {
       if (other == null) {
         return;
@@ -8194,6 +8735,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8224,6 +8766,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8259,19 +8802,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<Stream> _parser = new pb::MessageParser<Stream>(() => new Stream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Stream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stream() {
       OnConstruction();
     }
@@ -8279,6 +8826,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stream(Stream other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -8302,6 +8850,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Stream Clone() {
       return new Stream(this);
     }
@@ -8313,6 +8862,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The stream's name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -8327,6 +8877,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The creation time of the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -8341,6 +8892,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. The last update time of the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -8357,6 +8909,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -8368,6 +8921,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Display name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -8382,6 +8936,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Source connection profile configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.SourceConfig SourceConfig {
       get { return sourceConfig_; }
       set {
@@ -8396,6 +8951,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Required. Destination connection profile configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.DestinationConfig DestinationConfig {
       get { return destinationConfig_; }
       set {
@@ -8410,6 +8966,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The state of the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.Stream.Types.State State {
       get { return state_; }
       set {
@@ -8424,6 +8981,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// configuration. Specific objects can be excluded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.Stream.Types.BackfillAllStrategy BackfillAll {
       get { return backfillStrategyCase_ == BackfillStrategyOneofCase.BackfillAll ? (global::Google.Cloud.Datastream.V1Alpha1.Stream.Types.BackfillAllStrategy) backfillStrategy_ : null; }
       set {
@@ -8438,6 +8996,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Do not automatically backfill any objects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.Stream.Types.BackfillNoneStrategy BackfillNone {
       get { return backfillStrategyCase_ == BackfillStrategyOneofCase.BackfillNone ? (global::Google.Cloud.Datastream.V1Alpha1.Stream.Types.BackfillNoneStrategy) backfillStrategy_ : null; }
       set {
@@ -8455,6 +9014,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Output only. Errors on the Stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.Error> Errors {
       get { return errors_; }
     }
@@ -8468,22 +9028,26 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
     private BackfillStrategyOneofCase backfillStrategyCase_ = BackfillStrategyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BackfillStrategyOneofCase BackfillStrategyCase {
       get { return backfillStrategyCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearBackfillStrategy() {
       backfillStrategyCase_ = BackfillStrategyOneofCase.None;
       backfillStrategy_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Stream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Stream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8507,6 +9071,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -8528,11 +9093,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8583,6 +9150,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -8629,6 +9197,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -8667,6 +9236,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Stream other) {
       if (other == null) {
         return;
@@ -8725,6 +9295,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8808,6 +9379,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8889,6 +9461,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Stream message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Stream state.
@@ -8948,19 +9521,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         private static readonly pb::MessageParser<BackfillAllStrategy> _parser = new pb::MessageParser<BackfillAllStrategy>(() => new BackfillAllStrategy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<BackfillAllStrategy> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Datastream.V1Alpha1.Stream.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BackfillAllStrategy() {
           OnConstruction();
         }
@@ -8968,6 +9545,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BackfillAllStrategy(BackfillAllStrategy other) : this() {
           switch (other.ExcludedObjectsCase) {
             case ExcludedObjectsOneofCase.OracleExcludedObjects:
@@ -8982,6 +9560,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BackfillAllStrategy Clone() {
           return new BackfillAllStrategy(this);
         }
@@ -8992,6 +9571,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         /// Oracle data source objects to avoid backfilling.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Datastream.V1Alpha1.OracleRdbms OracleExcludedObjects {
           get { return excludedObjectsCase_ == ExcludedObjectsOneofCase.OracleExcludedObjects ? (global::Google.Cloud.Datastream.V1Alpha1.OracleRdbms) excludedObjects_ : null; }
           set {
@@ -9006,6 +9586,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         /// MySQL data source objects to avoid backfilling.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Datastream.V1Alpha1.MysqlRdbms MysqlExcludedObjects {
           get { return excludedObjectsCase_ == ExcludedObjectsOneofCase.MysqlExcludedObjects ? (global::Google.Cloud.Datastream.V1Alpha1.MysqlRdbms) excludedObjects_ : null; }
           set {
@@ -9023,22 +9604,26 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
         private ExcludedObjectsOneofCase excludedObjectsCase_ = ExcludedObjectsOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExcludedObjectsOneofCase ExcludedObjectsCase {
           get { return excludedObjectsCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearExcludedObjects() {
           excludedObjectsCase_ = ExcludedObjectsOneofCase.None;
           excludedObjects_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as BackfillAllStrategy);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(BackfillAllStrategy other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -9053,6 +9638,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (excludedObjectsCase_ == ExcludedObjectsOneofCase.OracleExcludedObjects) hash ^= OracleExcludedObjects.GetHashCode();
@@ -9065,11 +9651,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -9090,6 +9678,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (excludedObjectsCase_ == ExcludedObjectsOneofCase.OracleExcludedObjects) {
             output.WriteRawTag(10);
@@ -9106,6 +9695,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (excludedObjectsCase_ == ExcludedObjectsOneofCase.OracleExcludedObjects) {
@@ -9121,6 +9711,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(BackfillAllStrategy other) {
           if (other == null) {
             return;
@@ -9144,6 +9735,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -9179,6 +9771,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -9222,19 +9815,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         private static readonly pb::MessageParser<BackfillNoneStrategy> _parser = new pb::MessageParser<BackfillNoneStrategy>(() => new BackfillNoneStrategy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<BackfillNoneStrategy> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Datastream.V1Alpha1.Stream.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BackfillNoneStrategy() {
           OnConstruction();
         }
@@ -9242,21 +9839,25 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BackfillNoneStrategy(BackfillNoneStrategy other) : this() {
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public BackfillNoneStrategy Clone() {
           return new BackfillNoneStrategy(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as BackfillNoneStrategy);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(BackfillNoneStrategy other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -9268,6 +9869,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (_unknownFields != null) {
@@ -9277,11 +9879,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -9294,6 +9898,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -9302,6 +9907,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (_unknownFields != null) {
@@ -9311,6 +9917,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(BackfillNoneStrategy other) {
           if (other == null) {
             return;
@@ -9319,6 +9926,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -9336,6 +9944,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -9366,19 +9975,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<Error> _parser = new pb::MessageParser<Error>(() => new Error());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Error> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Error() {
       OnConstruction();
     }
@@ -9386,6 +9999,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Error(Error other) : this() {
       reason_ = other.reason_;
       errorUuid_ = other.errorUuid_;
@@ -9396,6 +10010,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Error Clone() {
       return new Error(this);
     }
@@ -9407,6 +10022,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// A title that explains the reason for the error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Reason {
       get { return reason_; }
       set {
@@ -9422,6 +10038,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// allowing it to be traced throughout the system in logs and API responses.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ErrorUuid {
       get { return errorUuid_; }
       set {
@@ -9436,6 +10053,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// A message containing more information about the error that occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -9450,6 +10068,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The time when the error occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ErrorTime {
       get { return errorTime_; }
       set {
@@ -9466,16 +10085,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Additional information about the error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Details {
       get { return details_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Error);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Error other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9492,6 +10114,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Reason.Length != 0) hash ^= Reason.GetHashCode();
@@ -9506,11 +10129,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9540,6 +10165,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Reason.Length != 0) {
         output.WriteRawTag(10);
@@ -9565,6 +10191,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Reason.Length != 0) {
@@ -9587,6 +10214,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Error other) {
       if (other == null) {
         return;
@@ -9611,6 +10239,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9651,6 +10280,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9699,19 +10329,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<ValidationResult> _parser = new pb::MessageParser<ValidationResult>(() => new ValidationResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ValidationResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationResult() {
       OnConstruction();
     }
@@ -9719,12 +10353,14 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationResult(ValidationResult other) : this() {
       validations_ = other.validations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationResult Clone() {
       return new ValidationResult(this);
     }
@@ -9739,16 +10375,19 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// validations).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.Validation> Validations {
       get { return validations_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ValidationResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ValidationResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9761,6 +10400,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= validations_.GetHashCode();
@@ -9771,11 +10411,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9789,6 +10431,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       validations_.WriteTo(ref output, _repeated_validations_codec);
       if (_unknownFields != null) {
@@ -9798,6 +10441,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += validations_.CalculateSize(_repeated_validations_codec);
@@ -9808,6 +10452,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ValidationResult other) {
       if (other == null) {
         return;
@@ -9817,6 +10462,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9838,6 +10484,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9864,19 +10511,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<Validation> _parser = new pb::MessageParser<Validation>(() => new Validation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Validation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Validation() {
       OnConstruction();
     }
@@ -9884,6 +10535,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Validation(Validation other) : this() {
       description_ = other.description_;
       status_ = other.status_;
@@ -9893,6 +10545,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Validation Clone() {
       return new Validation(this);
     }
@@ -9904,6 +10557,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// A short description of the validation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -9918,6 +10572,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Validation execution status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.Validation.Types.Status Status {
       get { return status_; }
       set {
@@ -9934,6 +10589,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Messages reflecting the validation results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Datastream.V1Alpha1.ValidationMessage> Message {
       get { return message_; }
     }
@@ -9945,6 +10601,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// A custom code identifying this validation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Code {
       get { return code_; }
       set {
@@ -9953,11 +10610,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Validation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Validation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9973,6 +10632,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -9986,11 +10646,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10016,6 +10678,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Description.Length != 0) {
         output.WriteRawTag(10);
@@ -10037,6 +10700,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Description.Length != 0) {
@@ -10056,6 +10720,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Validation other) {
       if (other == null) {
         return;
@@ -10074,6 +10739,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10107,6 +10773,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10138,6 +10805,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Validation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Validation execution status.
@@ -10177,19 +10845,23 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     private static readonly pb::MessageParser<ValidationMessage> _parser = new pb::MessageParser<ValidationMessage>(() => new ValidationMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ValidationMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastream.V1Alpha1.DatastreamResourcesReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationMessage() {
       OnConstruction();
     }
@@ -10197,6 +10869,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationMessage(ValidationMessage other) : this() {
       message_ = other.message_;
       level_ = other.level_;
@@ -10206,6 +10879,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationMessage Clone() {
       return new ValidationMessage(this);
     }
@@ -10217,6 +10891,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// The result of the validation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -10231,6 +10906,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Message severity level (warning or error).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastream.V1Alpha1.ValidationMessage.Types.Level Level {
       get { return level_; }
       set {
@@ -10247,6 +10923,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// Additional metadata related to the result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -10258,6 +10935,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     /// A custom code identifying this specific message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Code {
       get { return code_; }
       set {
@@ -10266,11 +10944,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ValidationMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ValidationMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10286,6 +10966,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Message.Length != 0) hash ^= Message.GetHashCode();
@@ -10299,11 +10980,13 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10329,6 +11012,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Message.Length != 0) {
         output.WriteRawTag(10);
@@ -10350,6 +11034,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Message.Length != 0) {
@@ -10369,6 +11054,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ValidationMessage other) {
       if (other == null) {
         return;
@@ -10387,6 +11073,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10420,6 +11107,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10451,6 +11139,7 @@ namespace Google.Cloud.Datastream.V1Alpha1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ValidationMessage message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Validation message level.

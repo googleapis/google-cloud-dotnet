@@ -91,19 +91,23 @@ namespace Google.Cloud.ServiceControl.V1 {
     private static readonly pb::MessageParser<AllocateQuotaRequest> _parser = new pb::MessageParser<AllocateQuotaRequest>(() => new AllocateQuotaRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AllocateQuotaRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ServiceControl.V1.QuotaControllerReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllocateQuotaRequest() {
       OnConstruction();
     }
@@ -111,6 +115,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllocateQuotaRequest(AllocateQuotaRequest other) : this() {
       serviceName_ = other.serviceName_;
       allocateOperation_ = other.allocateOperation_ != null ? other.allocateOperation_.Clone() : null;
@@ -119,6 +124,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllocateQuotaRequest Clone() {
       return new AllocateQuotaRequest(this);
     }
@@ -133,6 +139,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// See [google.api.Service][google.api.Service] for the definition of a service name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceName {
       get { return serviceName_; }
       set {
@@ -147,6 +154,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Operation that describes the quota allocation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ServiceControl.V1.QuotaOperation AllocateOperation {
       get { return allocateOperation_; }
       set {
@@ -163,6 +171,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// one will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceConfigId {
       get { return serviceConfigId_; }
       set {
@@ -171,11 +180,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AllocateQuotaRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AllocateQuotaRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -190,6 +201,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ServiceName.Length != 0) hash ^= ServiceName.GetHashCode();
@@ -202,11 +214,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -231,6 +245,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ServiceName.Length != 0) {
         output.WriteRawTag(10);
@@ -251,6 +266,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ServiceName.Length != 0) {
@@ -269,6 +285,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AllocateQuotaRequest other) {
       if (other == null) {
         return;
@@ -289,6 +306,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -321,6 +339,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -361,19 +380,23 @@ namespace Google.Cloud.ServiceControl.V1 {
     private static readonly pb::MessageParser<QuotaOperation> _parser = new pb::MessageParser<QuotaOperation>(() => new QuotaOperation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<QuotaOperation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ServiceControl.V1.QuotaControllerReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaOperation() {
       OnConstruction();
     }
@@ -381,6 +404,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaOperation(QuotaOperation other) : this() {
       operationId_ = other.operationId_;
       methodName_ = other.methodName_;
@@ -392,6 +416,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaOperation Clone() {
       return new QuotaOperation(this);
     }
@@ -411,6 +436,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Unix time in nanos + UUID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OperationId {
       get { return operationId_; }
       set {
@@ -434,6 +460,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     ///     google.example.library.v1.LibraryService.CreateShelf
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MethodName {
       get { return methodName_; }
       set {
@@ -453,6 +480,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     ///   api_key:&lt;api_key>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConsumerId {
       get { return consumerId_; }
       set {
@@ -469,6 +497,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Labels describing the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -493,6 +522,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// This field is mutually exclusive with method_name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ServiceControl.V1.MetricValueSet> QuotaMetrics {
       get { return quotaMetrics_; }
     }
@@ -504,6 +534,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Quota mode for this operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ServiceControl.V1.QuotaOperation.Types.QuotaMode QuotaMode {
       get { return quotaMode_; }
       set {
@@ -512,11 +543,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as QuotaOperation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(QuotaOperation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -534,6 +567,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (OperationId.Length != 0) hash ^= OperationId.GetHashCode();
@@ -549,11 +583,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -584,6 +620,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OperationId.Length != 0) {
         output.WriteRawTag(10);
@@ -610,6 +647,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (OperationId.Length != 0) {
@@ -633,6 +671,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(QuotaOperation other) {
       if (other == null) {
         return;
@@ -655,6 +694,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -696,6 +736,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -735,6 +776,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the QuotaOperation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Supported quota modes.
@@ -804,19 +846,23 @@ namespace Google.Cloud.ServiceControl.V1 {
     private static readonly pb::MessageParser<AllocateQuotaResponse> _parser = new pb::MessageParser<AllocateQuotaResponse>(() => new AllocateQuotaResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AllocateQuotaResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ServiceControl.V1.QuotaControllerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllocateQuotaResponse() {
       OnConstruction();
     }
@@ -824,6 +870,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllocateQuotaResponse(AllocateQuotaResponse other) : this() {
       operationId_ = other.operationId_;
       allocateErrors_ = other.allocateErrors_.Clone();
@@ -833,6 +880,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllocateQuotaResponse Clone() {
       return new AllocateQuotaResponse(this);
     }
@@ -845,6 +893,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// logging and diagnostics purposes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OperationId {
       get { return operationId_; }
       set {
@@ -861,6 +910,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Indicates the decision of the allocate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ServiceControl.V1.QuotaError> AllocateErrors {
       get { return allocateErrors_; }
     }
@@ -883,6 +933,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     ///   "serviceruntime.googleapis.com/quota/exceeded"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ServiceControl.V1.MetricValueSet> QuotaMetrics {
       get { return quotaMetrics_; }
     }
@@ -894,6 +945,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// ID of the actual config used to process the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceConfigId {
       get { return serviceConfigId_; }
       set {
@@ -902,11 +954,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AllocateQuotaResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AllocateQuotaResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -922,6 +976,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (OperationId.Length != 0) hash ^= OperationId.GetHashCode();
@@ -935,11 +990,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -962,6 +1019,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OperationId.Length != 0) {
         output.WriteRawTag(10);
@@ -980,6 +1038,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (OperationId.Length != 0) {
@@ -997,6 +1056,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AllocateQuotaResponse other) {
       if (other == null) {
         return;
@@ -1013,6 +1073,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1046,6 +1107,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1087,19 +1149,23 @@ namespace Google.Cloud.ServiceControl.V1 {
     private static readonly pb::MessageParser<QuotaError> _parser = new pb::MessageParser<QuotaError>(() => new QuotaError());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<QuotaError> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ServiceControl.V1.QuotaControllerReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaError() {
       OnConstruction();
     }
@@ -1107,6 +1173,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaError(QuotaError other) : this() {
       code_ = other.code_;
       subject_ = other.subject_;
@@ -1116,6 +1183,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QuotaError Clone() {
       return new QuotaError(this);
     }
@@ -1127,6 +1195,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Error code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ServiceControl.V1.QuotaError.Types.Code Code {
       get { return code_; }
       set {
@@ -1143,6 +1212,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// "project:&lt;Google developer project id>".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Subject {
       get { return subject_; }
       set {
@@ -1157,6 +1227,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Free-form text that provides details on the cause of the error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -1172,6 +1243,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// If available, `status.code` will be non zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Status {
       get { return status_; }
       set {
@@ -1180,11 +1252,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as QuotaError);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(QuotaError other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1200,6 +1274,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != global::Google.Cloud.ServiceControl.V1.QuotaError.Types.Code.Unspecified) hash ^= Code.GetHashCode();
@@ -1213,11 +1288,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1246,6 +1323,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != global::Google.Cloud.ServiceControl.V1.QuotaError.Types.Code.Unspecified) {
         output.WriteRawTag(8);
@@ -1270,6 +1348,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != global::Google.Cloud.ServiceControl.V1.QuotaError.Types.Code.Unspecified) {
@@ -1291,6 +1370,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(QuotaError other) {
       if (other == null) {
         return;
@@ -1314,6 +1394,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1350,6 +1431,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1384,6 +1466,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the QuotaError message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Error codes related to project config validations are deprecated since the

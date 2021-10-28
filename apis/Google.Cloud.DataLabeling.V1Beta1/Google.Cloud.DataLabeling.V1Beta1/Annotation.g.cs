@@ -274,19 +274,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<Annotation> _parser = new pb::MessageParser<Annotation>(() => new Annotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Annotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Annotation() {
       OnConstruction();
     }
@@ -294,6 +298,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Annotation(Annotation other) : this() {
       name_ = other.name_;
       annotationSource_ = other.annotationSource_;
@@ -304,6 +309,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Annotation Clone() {
       return new Annotation(this);
     }
@@ -317,6 +323,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// projects/{project_id}/datasets/{dataset_id}/annotatedDatasets/{annotated_dataset}/examples/{example_id}/annotations/{annotation_id}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -331,6 +338,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Output only. The source of the annotation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSource AnnotationSource {
       get { return annotationSource_; }
       set {
@@ -346,6 +354,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// bounding box values are stored here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationValue AnnotationValue {
       get { return annotationValue_; }
       set {
@@ -361,6 +370,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// for labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationMetadata AnnotationMetadata {
       get { return annotationMetadata_; }
       set {
@@ -375,6 +385,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Output only. Sentiment for this annotation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSentiment AnnotationSentiment {
       get { return annotationSentiment_; }
       set {
@@ -383,11 +394,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Annotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Annotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -404,6 +417,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -418,11 +432,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -455,6 +471,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -483,6 +500,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -507,6 +525,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Annotation other) {
       if (other == null) {
         return;
@@ -536,6 +555,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -579,6 +599,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -630,19 +651,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<AnnotationValue> _parser = new pb::MessageParser<AnnotationValue>(() => new AnnotationValue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnnotationValue> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationValue() {
       OnConstruction();
     }
@@ -650,6 +675,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationValue(AnnotationValue other) : this() {
       switch (other.ValueTypeCase) {
         case ValueTypeOneofCase.ImageClassificationAnnotation:
@@ -685,6 +711,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationValue Clone() {
       return new AnnotationValue(this);
     }
@@ -695,6 +722,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Annotation value for image classification case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.ImageClassificationAnnotation ImageClassificationAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.ImageClassificationAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.ImageClassificationAnnotation) valueType_ : null; }
       set {
@@ -710,6 +738,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// and polygon cases.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.ImageBoundingPolyAnnotation ImageBoundingPolyAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.ImageBoundingPolyAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.ImageBoundingPolyAnnotation) valueType_ : null; }
       set {
@@ -727,6 +756,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The line segments can cross each other.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.ImagePolylineAnnotation ImagePolylineAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.ImagePolylineAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.ImagePolylineAnnotation) valueType_ : null; }
       set {
@@ -741,6 +771,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Annotation value for image segmentation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.ImageSegmentationAnnotation ImageSegmentationAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.ImageSegmentationAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.ImageSegmentationAnnotation) valueType_ : null; }
       set {
@@ -755,6 +786,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Annotation value for text classification case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.TextClassificationAnnotation TextClassificationAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.TextClassificationAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.TextClassificationAnnotation) valueType_ : null; }
       set {
@@ -769,6 +801,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Annotation value for text entity extraction case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.TextEntityExtractionAnnotation TextEntityExtractionAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.TextEntityExtractionAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.TextEntityExtractionAnnotation) valueType_ : null; }
       set {
@@ -783,6 +816,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Annotation value for video classification case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.VideoClassificationAnnotation VideoClassificationAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.VideoClassificationAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.VideoClassificationAnnotation) valueType_ : null; }
       set {
@@ -797,6 +831,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Annotation value for video object detection and tracking case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.VideoObjectTrackingAnnotation VideoObjectTrackingAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.VideoObjectTrackingAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.VideoObjectTrackingAnnotation) valueType_ : null; }
       set {
@@ -811,6 +846,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Annotation value for video event case.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.VideoEventAnnotation VideoEventAnnotation {
       get { return valueTypeCase_ == ValueTypeOneofCase.VideoEventAnnotation ? (global::Google.Cloud.DataLabeling.V1Beta1.VideoEventAnnotation) valueType_ : null; }
       set {
@@ -835,22 +871,26 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
     private ValueTypeOneofCase valueTypeCase_ = ValueTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueTypeOneofCase ValueTypeCase {
       get { return valueTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearValueType() {
       valueTypeCase_ = ValueTypeOneofCase.None;
       valueType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnnotationValue);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnnotationValue other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -872,6 +912,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (valueTypeCase_ == ValueTypeOneofCase.ImageClassificationAnnotation) hash ^= ImageClassificationAnnotation.GetHashCode();
@@ -891,11 +932,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -944,6 +987,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (valueTypeCase_ == ValueTypeOneofCase.ImageClassificationAnnotation) {
         output.WriteRawTag(10);
@@ -988,6 +1032,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (valueTypeCase_ == ValueTypeOneofCase.ImageClassificationAnnotation) {
@@ -1024,6 +1069,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnnotationValue other) {
       if (other == null) {
         return;
@@ -1089,6 +1135,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1187,6 +1234,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1293,19 +1341,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<ImageClassificationAnnotation> _parser = new pb::MessageParser<ImageClassificationAnnotation>(() => new ImageClassificationAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageClassificationAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageClassificationAnnotation() {
       OnConstruction();
     }
@@ -1313,12 +1365,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageClassificationAnnotation(ImageClassificationAnnotation other) : this() {
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageClassificationAnnotation Clone() {
       return new ImageClassificationAnnotation(this);
     }
@@ -1330,6 +1384,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -1338,11 +1393,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImageClassificationAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImageClassificationAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1355,6 +1412,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (annotationSpec_ != null) hash ^= AnnotationSpec.GetHashCode();
@@ -1365,11 +1423,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1386,6 +1446,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (annotationSpec_ != null) {
         output.WriteRawTag(10);
@@ -1398,6 +1459,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (annotationSpec_ != null) {
@@ -1410,6 +1472,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImageClassificationAnnotation other) {
       if (other == null) {
         return;
@@ -1424,6 +1487,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1448,6 +1512,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1481,19 +1546,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<Vertex> _parser = new pb::MessageParser<Vertex>(() => new Vertex());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Vertex> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Vertex() {
       OnConstruction();
     }
@@ -1501,6 +1570,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Vertex(Vertex other) : this() {
       x_ = other.x_;
       y_ = other.y_;
@@ -1508,6 +1578,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Vertex Clone() {
       return new Vertex(this);
     }
@@ -1519,6 +1590,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// X coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int X {
       get { return x_; }
       set {
@@ -1533,6 +1605,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Y {
       get { return y_; }
       set {
@@ -1541,11 +1614,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Vertex);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Vertex other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1559,6 +1634,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0) hash ^= X.GetHashCode();
@@ -1570,11 +1646,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1595,6 +1673,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (X != 0) {
         output.WriteRawTag(8);
@@ -1611,6 +1690,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (X != 0) {
@@ -1626,6 +1706,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Vertex other) {
       if (other == null) {
         return;
@@ -1640,6 +1721,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1665,6 +1747,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1700,19 +1783,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<NormalizedVertex> _parser = new pb::MessageParser<NormalizedVertex>(() => new NormalizedVertex());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NormalizedVertex> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedVertex() {
       OnConstruction();
     }
@@ -1720,6 +1807,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedVertex(NormalizedVertex other) : this() {
       x_ = other.x_;
       y_ = other.y_;
@@ -1727,6 +1815,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedVertex Clone() {
       return new NormalizedVertex(this);
     }
@@ -1738,6 +1827,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// X coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float X {
       get { return x_; }
       set {
@@ -1752,6 +1842,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Y {
       get { return y_; }
       set {
@@ -1760,11 +1851,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NormalizedVertex);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NormalizedVertex other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1778,6 +1871,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
@@ -1789,11 +1883,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1814,6 +1910,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (X != 0F) {
         output.WriteRawTag(13);
@@ -1830,6 +1927,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (X != 0F) {
@@ -1845,6 +1943,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NormalizedVertex other) {
       if (other == null) {
         return;
@@ -1859,6 +1958,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1884,6 +1984,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1917,19 +2018,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<BoundingPoly> _parser = new pb::MessageParser<BoundingPoly>(() => new BoundingPoly());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BoundingPoly> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundingPoly() {
       OnConstruction();
     }
@@ -1937,12 +2042,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundingPoly(BoundingPoly other) : this() {
       vertices_ = other.vertices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundingPoly Clone() {
       return new BoundingPoly(this);
     }
@@ -1956,16 +2063,19 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The bounding polygon vertices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataLabeling.V1Beta1.Vertex> Vertices {
       get { return vertices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BoundingPoly);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BoundingPoly other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1978,6 +2088,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= vertices_.GetHashCode();
@@ -1988,11 +2099,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2006,6 +2119,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       vertices_.WriteTo(ref output, _repeated_vertices_codec);
       if (_unknownFields != null) {
@@ -2015,6 +2129,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += vertices_.CalculateSize(_repeated_vertices_codec);
@@ -2025,6 +2140,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BoundingPoly other) {
       if (other == null) {
         return;
@@ -2034,6 +2150,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2055,6 +2172,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2084,19 +2202,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<NormalizedBoundingPoly> _parser = new pb::MessageParser<NormalizedBoundingPoly>(() => new NormalizedBoundingPoly());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NormalizedBoundingPoly> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingPoly() {
       OnConstruction();
     }
@@ -2104,12 +2226,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingPoly(NormalizedBoundingPoly other) : this() {
       normalizedVertices_ = other.normalizedVertices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingPoly Clone() {
       return new NormalizedBoundingPoly(this);
     }
@@ -2123,16 +2247,19 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The bounding polygon normalized vertices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataLabeling.V1Beta1.NormalizedVertex> NormalizedVertices {
       get { return normalizedVertices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NormalizedBoundingPoly);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NormalizedBoundingPoly other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2145,6 +2272,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= normalizedVertices_.GetHashCode();
@@ -2155,11 +2283,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2173,6 +2303,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       normalizedVertices_.WriteTo(ref output, _repeated_normalizedVertices_codec);
       if (_unknownFields != null) {
@@ -2182,6 +2313,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += normalizedVertices_.CalculateSize(_repeated_normalizedVertices_codec);
@@ -2192,6 +2324,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NormalizedBoundingPoly other) {
       if (other == null) {
         return;
@@ -2201,6 +2334,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2222,6 +2356,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2252,19 +2387,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<ImageBoundingPolyAnnotation> _parser = new pb::MessageParser<ImageBoundingPolyAnnotation>(() => new ImageBoundingPolyAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageBoundingPolyAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageBoundingPolyAnnotation() {
       OnConstruction();
     }
@@ -2272,6 +2411,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageBoundingPolyAnnotation(ImageBoundingPolyAnnotation other) : this() {
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
       switch (other.BoundedAreaCase) {
@@ -2287,6 +2427,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageBoundingPolyAnnotation Clone() {
       return new ImageBoundingPolyAnnotation(this);
     }
@@ -2294,6 +2435,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// <summary>Field number for the "bounding_poly" field.</summary>
     public const int BoundingPolyFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.BoundingPoly BoundingPoly {
       get { return boundedAreaCase_ == BoundedAreaOneofCase.BoundingPoly ? (global::Google.Cloud.DataLabeling.V1Beta1.BoundingPoly) boundedArea_ : null; }
       set {
@@ -2305,6 +2447,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// <summary>Field number for the "normalized_bounding_poly" field.</summary>
     public const int NormalizedBoundingPolyFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.NormalizedBoundingPoly NormalizedBoundingPoly {
       get { return boundedAreaCase_ == BoundedAreaOneofCase.NormalizedBoundingPoly ? (global::Google.Cloud.DataLabeling.V1Beta1.NormalizedBoundingPoly) boundedArea_ : null; }
       set {
@@ -2320,6 +2463,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of object in this bounding polygon.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -2336,22 +2480,26 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
     private BoundedAreaOneofCase boundedAreaCase_ = BoundedAreaOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundedAreaOneofCase BoundedAreaCase {
       get { return boundedAreaCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearBoundedArea() {
       boundedAreaCase_ = BoundedAreaOneofCase.None;
       boundedArea_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImageBoundingPolyAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImageBoundingPolyAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2367,6 +2515,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (boundedAreaCase_ == BoundedAreaOneofCase.BoundingPoly) hash ^= BoundingPoly.GetHashCode();
@@ -2380,11 +2529,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2409,6 +2560,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (annotationSpec_ != null) {
         output.WriteRawTag(10);
@@ -2429,6 +2581,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (boundedAreaCase_ == BoundedAreaOneofCase.BoundingPoly) {
@@ -2447,6 +2600,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImageBoundingPolyAnnotation other) {
       if (other == null) {
         return;
@@ -2476,6 +2630,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2518,6 +2673,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2568,19 +2724,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<Polyline> _parser = new pb::MessageParser<Polyline>(() => new Polyline());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Polyline> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Polyline() {
       OnConstruction();
     }
@@ -2588,12 +2748,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Polyline(Polyline other) : this() {
       vertices_ = other.vertices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Polyline Clone() {
       return new Polyline(this);
     }
@@ -2607,16 +2769,19 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The polyline vertices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataLabeling.V1Beta1.Vertex> Vertices {
       get { return vertices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Polyline);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Polyline other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2629,6 +2794,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= vertices_.GetHashCode();
@@ -2639,11 +2805,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2657,6 +2825,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       vertices_.WriteTo(ref output, _repeated_vertices_codec);
       if (_unknownFields != null) {
@@ -2666,6 +2835,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += vertices_.CalculateSize(_repeated_vertices_codec);
@@ -2676,6 +2846,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Polyline other) {
       if (other == null) {
         return;
@@ -2685,6 +2856,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2706,6 +2878,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2735,19 +2908,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<NormalizedPolyline> _parser = new pb::MessageParser<NormalizedPolyline>(() => new NormalizedPolyline());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NormalizedPolyline> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedPolyline() {
       OnConstruction();
     }
@@ -2755,12 +2932,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedPolyline(NormalizedPolyline other) : this() {
       normalizedVertices_ = other.normalizedVertices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedPolyline Clone() {
       return new NormalizedPolyline(this);
     }
@@ -2774,16 +2953,19 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The normalized polyline vertices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataLabeling.V1Beta1.NormalizedVertex> NormalizedVertices {
       get { return normalizedVertices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NormalizedPolyline);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NormalizedPolyline other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2796,6 +2978,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= normalizedVertices_.GetHashCode();
@@ -2806,11 +2989,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2824,6 +3009,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       normalizedVertices_.WriteTo(ref output, _repeated_normalizedVertices_codec);
       if (_unknownFields != null) {
@@ -2833,6 +3019,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += normalizedVertices_.CalculateSize(_repeated_normalizedVertices_codec);
@@ -2843,6 +3030,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NormalizedPolyline other) {
       if (other == null) {
         return;
@@ -2852,6 +3040,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2873,6 +3062,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2902,19 +3092,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<ImagePolylineAnnotation> _parser = new pb::MessageParser<ImagePolylineAnnotation>(() => new ImagePolylineAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImagePolylineAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImagePolylineAnnotation() {
       OnConstruction();
     }
@@ -2922,6 +3116,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImagePolylineAnnotation(ImagePolylineAnnotation other) : this() {
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
       switch (other.PolyCase) {
@@ -2937,6 +3132,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImagePolylineAnnotation Clone() {
       return new ImagePolylineAnnotation(this);
     }
@@ -2944,6 +3140,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// <summary>Field number for the "polyline" field.</summary>
     public const int PolylineFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.Polyline Polyline {
       get { return polyCase_ == PolyOneofCase.Polyline ? (global::Google.Cloud.DataLabeling.V1Beta1.Polyline) poly_ : null; }
       set {
@@ -2955,6 +3152,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// <summary>Field number for the "normalized_polyline" field.</summary>
     public const int NormalizedPolylineFieldNumber = 3;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.NormalizedPolyline NormalizedPolyline {
       get { return polyCase_ == PolyOneofCase.NormalizedPolyline ? (global::Google.Cloud.DataLabeling.V1Beta1.NormalizedPolyline) poly_ : null; }
       set {
@@ -2970,6 +3168,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of this polyline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -2986,22 +3185,26 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
     private PolyOneofCase polyCase_ = PolyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolyOneofCase PolyCase {
       get { return polyCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPoly() {
       polyCase_ = PolyOneofCase.None;
       poly_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImagePolylineAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImagePolylineAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3017,6 +3220,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (polyCase_ == PolyOneofCase.Polyline) hash ^= Polyline.GetHashCode();
@@ -3030,11 +3234,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3059,6 +3265,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (annotationSpec_ != null) {
         output.WriteRawTag(10);
@@ -3079,6 +3286,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (polyCase_ == PolyOneofCase.Polyline) {
@@ -3097,6 +3305,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImagePolylineAnnotation other) {
       if (other == null) {
         return;
@@ -3126,6 +3335,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3168,6 +3378,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3218,19 +3429,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<ImageSegmentationAnnotation> _parser = new pb::MessageParser<ImageSegmentationAnnotation>(() => new ImageSegmentationAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageSegmentationAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageSegmentationAnnotation() {
       OnConstruction();
     }
@@ -3238,6 +3453,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageSegmentationAnnotation(ImageSegmentationAnnotation other) : this() {
       annotationColors_ = other.annotationColors_.Clone();
       mimeType_ = other.mimeType_;
@@ -3246,6 +3462,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageSegmentationAnnotation Clone() {
       return new ImageSegmentationAnnotation(this);
     }
@@ -3261,6 +3478,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// AnnotationSpec.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec> AnnotationColors {
       get { return annotationColors_; }
     }
@@ -3272,6 +3490,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Image format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MimeType {
       get { return mimeType_; }
       set {
@@ -3286,6 +3505,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// A byte string of a full image's color map.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ImageBytes {
       get { return imageBytes_; }
       set {
@@ -3294,11 +3514,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImageSegmentationAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImageSegmentationAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3313,6 +3535,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= AnnotationColors.GetHashCode();
@@ -3325,11 +3548,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3351,6 +3576,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       annotationColors_.WriteTo(ref output, _map_annotationColors_codec);
       if (MimeType.Length != 0) {
@@ -3368,6 +3594,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += annotationColors_.CalculateSize(_map_annotationColors_codec);
@@ -3384,6 +3611,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImageSegmentationAnnotation other) {
       if (other == null) {
         return;
@@ -3399,6 +3627,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3428,6 +3657,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3465,19 +3695,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<TextClassificationAnnotation> _parser = new pb::MessageParser<TextClassificationAnnotation>(() => new TextClassificationAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextClassificationAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextClassificationAnnotation() {
       OnConstruction();
     }
@@ -3485,12 +3719,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextClassificationAnnotation(TextClassificationAnnotation other) : this() {
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextClassificationAnnotation Clone() {
       return new TextClassificationAnnotation(this);
     }
@@ -3502,6 +3738,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -3510,11 +3747,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextClassificationAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextClassificationAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3527,6 +3766,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (annotationSpec_ != null) hash ^= AnnotationSpec.GetHashCode();
@@ -3537,11 +3777,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3558,6 +3800,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (annotationSpec_ != null) {
         output.WriteRawTag(10);
@@ -3570,6 +3813,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (annotationSpec_ != null) {
@@ -3582,6 +3826,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextClassificationAnnotation other) {
       if (other == null) {
         return;
@@ -3596,6 +3841,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3620,6 +3866,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3652,19 +3899,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<TextEntityExtractionAnnotation> _parser = new pb::MessageParser<TextEntityExtractionAnnotation>(() => new TextEntityExtractionAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextEntityExtractionAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextEntityExtractionAnnotation() {
       OnConstruction();
     }
@@ -3672,6 +3923,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextEntityExtractionAnnotation(TextEntityExtractionAnnotation other) : this() {
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
       sequentialSegment_ = other.sequentialSegment_ != null ? other.sequentialSegment_.Clone() : null;
@@ -3679,6 +3931,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextEntityExtractionAnnotation Clone() {
       return new TextEntityExtractionAnnotation(this);
     }
@@ -3690,6 +3943,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of the text entities.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -3704,6 +3958,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Position of the entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.SequentialSegment SequentialSegment {
       get { return sequentialSegment_; }
       set {
@@ -3712,11 +3967,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextEntityExtractionAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextEntityExtractionAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3730,6 +3987,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (annotationSpec_ != null) hash ^= AnnotationSpec.GetHashCode();
@@ -3741,11 +3999,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3766,6 +4026,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (annotationSpec_ != null) {
         output.WriteRawTag(10);
@@ -3782,6 +4043,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (annotationSpec_ != null) {
@@ -3797,6 +4059,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextEntityExtractionAnnotation other) {
       if (other == null) {
         return;
@@ -3817,6 +4080,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3848,6 +4112,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3887,19 +4152,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<SequentialSegment> _parser = new pb::MessageParser<SequentialSegment>(() => new SequentialSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SequentialSegment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SequentialSegment() {
       OnConstruction();
     }
@@ -3907,6 +4176,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SequentialSegment(SequentialSegment other) : this() {
       start_ = other.start_;
       end_ = other.end_;
@@ -3914,6 +4184,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SequentialSegment Clone() {
       return new SequentialSegment(this);
     }
@@ -3925,6 +4196,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Start position (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Start {
       get { return start_; }
       set {
@@ -3939,6 +4211,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// End position (exclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int End {
       get { return end_; }
       set {
@@ -3947,11 +4220,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SequentialSegment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SequentialSegment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3965,6 +4240,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Start != 0) hash ^= Start.GetHashCode();
@@ -3976,11 +4252,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4001,6 +4279,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Start != 0) {
         output.WriteRawTag(8);
@@ -4017,6 +4296,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Start != 0) {
@@ -4032,6 +4312,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SequentialSegment other) {
       if (other == null) {
         return;
@@ -4046,6 +4327,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4071,6 +4353,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4104,19 +4387,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<TimeSegment> _parser = new pb::MessageParser<TimeSegment>(() => new TimeSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimeSegment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSegment() {
       OnConstruction();
     }
@@ -4124,6 +4411,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSegment(TimeSegment other) : this() {
       startTimeOffset_ = other.startTimeOffset_ != null ? other.startTimeOffset_.Clone() : null;
       endTimeOffset_ = other.endTimeOffset_ != null ? other.endTimeOffset_.Clone() : null;
@@ -4131,6 +4419,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSegment Clone() {
       return new TimeSegment(this);
     }
@@ -4143,6 +4432,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// the example start.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
       get { return startTimeOffset_; }
       set {
@@ -4158,6 +4448,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// example start.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration EndTimeOffset {
       get { return endTimeOffset_; }
       set {
@@ -4166,11 +4457,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimeSegment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimeSegment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4184,6 +4477,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startTimeOffset_ != null) hash ^= StartTimeOffset.GetHashCode();
@@ -4195,11 +4489,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4220,6 +4516,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startTimeOffset_ != null) {
         output.WriteRawTag(10);
@@ -4236,6 +4533,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startTimeOffset_ != null) {
@@ -4251,6 +4549,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimeSegment other) {
       if (other == null) {
         return;
@@ -4271,6 +4570,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4302,6 +4602,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4341,19 +4642,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<VideoClassificationAnnotation> _parser = new pb::MessageParser<VideoClassificationAnnotation>(() => new VideoClassificationAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoClassificationAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoClassificationAnnotation() {
       OnConstruction();
     }
@@ -4361,6 +4666,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoClassificationAnnotation(VideoClassificationAnnotation other) : this() {
       timeSegment_ = other.timeSegment_ != null ? other.timeSegment_.Clone() : null;
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
@@ -4368,6 +4674,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoClassificationAnnotation Clone() {
       return new VideoClassificationAnnotation(this);
     }
@@ -4379,6 +4686,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The time segment of the video to which the annotation applies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.TimeSegment TimeSegment {
       get { return timeSegment_; }
       set {
@@ -4393,6 +4701,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of the segment specified by time_segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -4401,11 +4710,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoClassificationAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoClassificationAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4419,6 +4730,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (timeSegment_ != null) hash ^= TimeSegment.GetHashCode();
@@ -4430,11 +4742,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4455,6 +4769,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (timeSegment_ != null) {
         output.WriteRawTag(10);
@@ -4471,6 +4786,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (timeSegment_ != null) {
@@ -4486,6 +4802,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoClassificationAnnotation other) {
       if (other == null) {
         return;
@@ -4506,6 +4823,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4537,6 +4855,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4576,19 +4895,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<ObjectTrackingFrame> _parser = new pb::MessageParser<ObjectTrackingFrame>(() => new ObjectTrackingFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ObjectTrackingFrame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingFrame() {
       OnConstruction();
     }
@@ -4596,6 +4919,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingFrame(ObjectTrackingFrame other) : this() {
       timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
       switch (other.BoundedAreaCase) {
@@ -4611,6 +4935,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingFrame Clone() {
       return new ObjectTrackingFrame(this);
     }
@@ -4618,6 +4943,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// <summary>Field number for the "bounding_poly" field.</summary>
     public const int BoundingPolyFieldNumber = 1;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.BoundingPoly BoundingPoly {
       get { return boundedAreaCase_ == BoundedAreaOneofCase.BoundingPoly ? (global::Google.Cloud.DataLabeling.V1Beta1.BoundingPoly) boundedArea_ : null; }
       set {
@@ -4629,6 +4955,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// <summary>Field number for the "normalized_bounding_poly" field.</summary>
     public const int NormalizedBoundingPolyFieldNumber = 2;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.NormalizedBoundingPoly NormalizedBoundingPoly {
       get { return boundedAreaCase_ == BoundedAreaOneofCase.NormalizedBoundingPoly ? (global::Google.Cloud.DataLabeling.V1Beta1.NormalizedBoundingPoly) boundedArea_ : null; }
       set {
@@ -4644,6 +4971,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The time offset of this frame relative to the beginning of the video.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
       get { return timeOffset_; }
       set {
@@ -4660,22 +4988,26 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
     private BoundedAreaOneofCase boundedAreaCase_ = BoundedAreaOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundedAreaOneofCase BoundedAreaCase {
       get { return boundedAreaCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearBoundedArea() {
       boundedAreaCase_ = BoundedAreaOneofCase.None;
       boundedArea_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ObjectTrackingFrame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ObjectTrackingFrame other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4691,6 +5023,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (boundedAreaCase_ == BoundedAreaOneofCase.BoundingPoly) hash ^= BoundingPoly.GetHashCode();
@@ -4704,11 +5037,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4733,6 +5068,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (boundedAreaCase_ == BoundedAreaOneofCase.BoundingPoly) {
         output.WriteRawTag(10);
@@ -4753,6 +5089,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (boundedAreaCase_ == BoundedAreaOneofCase.BoundingPoly) {
@@ -4771,6 +5108,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ObjectTrackingFrame other) {
       if (other == null) {
         return;
@@ -4800,6 +5138,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4842,6 +5181,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4892,19 +5232,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<VideoObjectTrackingAnnotation> _parser = new pb::MessageParser<VideoObjectTrackingAnnotation>(() => new VideoObjectTrackingAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoObjectTrackingAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingAnnotation() {
       OnConstruction();
     }
@@ -4912,6 +5256,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingAnnotation(VideoObjectTrackingAnnotation other) : this() {
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
       timeSegment_ = other.timeSegment_ != null ? other.timeSegment_.Clone() : null;
@@ -4920,6 +5265,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingAnnotation Clone() {
       return new VideoObjectTrackingAnnotation(this);
     }
@@ -4931,6 +5277,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of the object tracked in this annotation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -4945,6 +5292,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The time segment of the video to which object tracking applies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.TimeSegment TimeSegment {
       get { return timeSegment_; }
       set {
@@ -4961,16 +5309,19 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The list of frames where this object track appears.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataLabeling.V1Beta1.ObjectTrackingFrame> ObjectTrackingFrames {
       get { return objectTrackingFrames_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoObjectTrackingAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoObjectTrackingAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4985,6 +5336,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (annotationSpec_ != null) hash ^= AnnotationSpec.GetHashCode();
@@ -4997,11 +5349,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5023,6 +5377,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (annotationSpec_ != null) {
         output.WriteRawTag(10);
@@ -5040,6 +5395,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (annotationSpec_ != null) {
@@ -5056,6 +5412,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoObjectTrackingAnnotation other) {
       if (other == null) {
         return;
@@ -5077,6 +5434,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5112,6 +5470,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5155,19 +5514,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<VideoEventAnnotation> _parser = new pb::MessageParser<VideoEventAnnotation>(() => new VideoEventAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoEventAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoEventAnnotation() {
       OnConstruction();
     }
@@ -5175,6 +5538,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoEventAnnotation(VideoEventAnnotation other) : this() {
       annotationSpec_ = other.annotationSpec_ != null ? other.annotationSpec_.Clone() : null;
       timeSegment_ = other.timeSegment_ != null ? other.timeSegment_.Clone() : null;
@@ -5182,6 +5546,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoEventAnnotation Clone() {
       return new VideoEventAnnotation(this);
     }
@@ -5193,6 +5558,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Label of the event in this annotation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.AnnotationSpec AnnotationSpec {
       get { return annotationSpec_; }
       set {
@@ -5207,6 +5573,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The time segment of the video to which the annotation applies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.TimeSegment TimeSegment {
       get { return timeSegment_; }
       set {
@@ -5215,11 +5582,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoEventAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoEventAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5233,6 +5602,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (annotationSpec_ != null) hash ^= AnnotationSpec.GetHashCode();
@@ -5244,11 +5614,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5269,6 +5641,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (annotationSpec_ != null) {
         output.WriteRawTag(10);
@@ -5285,6 +5658,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (annotationSpec_ != null) {
@@ -5300,6 +5674,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoEventAnnotation other) {
       if (other == null) {
         return;
@@ -5320,6 +5695,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5351,6 +5727,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5390,19 +5767,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<AnnotationMetadata> _parser = new pb::MessageParser<AnnotationMetadata>(() => new AnnotationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnnotationMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationMetadata() {
       OnConstruction();
     }
@@ -5410,12 +5791,14 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationMetadata(AnnotationMetadata other) : this() {
       operatorMetadata_ = other.operatorMetadata_ != null ? other.operatorMetadata_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotationMetadata Clone() {
       return new AnnotationMetadata(this);
     }
@@ -5427,6 +5810,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Metadata related to human labeling.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataLabeling.V1Beta1.OperatorMetadata OperatorMetadata {
       get { return operatorMetadata_; }
       set {
@@ -5435,11 +5819,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnnotationMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnnotationMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5452,6 +5838,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (operatorMetadata_ != null) hash ^= OperatorMetadata.GetHashCode();
@@ -5462,11 +5849,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5483,6 +5872,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (operatorMetadata_ != null) {
         output.WriteRawTag(18);
@@ -5495,6 +5885,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (operatorMetadata_ != null) {
@@ -5507,6 +5898,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnnotationMetadata other) {
       if (other == null) {
         return;
@@ -5521,6 +5913,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5545,6 +5938,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5577,19 +5971,23 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     private static readonly pb::MessageParser<OperatorMetadata> _parser = new pb::MessageParser<OperatorMetadata>(() => new OperatorMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OperatorMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataLabeling.V1Beta1.AnnotationReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperatorMetadata() {
       OnConstruction();
     }
@@ -5597,6 +5995,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperatorMetadata(OperatorMetadata other) : this() {
       score_ = other.score_;
       totalVotes_ = other.totalVotes_;
@@ -5606,6 +6005,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperatorMetadata Clone() {
       return new OperatorMetadata(this);
     }
@@ -5619,6 +6019,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// confidence score will be 0.67 (2/3).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Score {
       get { return score_; }
       set {
@@ -5633,6 +6034,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The total number of contributors that answer this question.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TotalVotes {
       get { return totalVotes_; }
       set {
@@ -5647,6 +6049,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// The total number of contributors that choose this label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int LabelVotes {
       get { return labelVotes_; }
       set {
@@ -5663,16 +6066,19 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     /// Comments from contributors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Comments {
       get { return comments_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OperatorMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OperatorMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5688,6 +6094,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Score != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Score);
@@ -5701,11 +6108,13 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5731,6 +6140,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Score != 0F) {
         output.WriteRawTag(13);
@@ -5752,6 +6162,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Score != 0F) {
@@ -5771,6 +6182,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OperatorMetadata other) {
       if (other == null) {
         return;
@@ -5789,6 +6201,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5822,6 +6235,7 @@ namespace Google.Cloud.DataLabeling.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

@@ -67,19 +67,23 @@ namespace Google.Cloud.Talent.V4 {
     private static readonly pb::MessageParser<Company> _parser = new pb::MessageParser<Company>(() => new Company());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Company> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Talent.V4.CompanyReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Company() {
       OnConstruction();
     }
@@ -87,6 +91,7 @@ namespace Google.Cloud.Talent.V4 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Company(Company other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -105,6 +110,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Company Clone() {
       return new Company(this);
     }
@@ -123,6 +129,7 @@ namespace Google.Cloud.Talent.V4 {
     /// example, "projects/foo/tenants/bar/companies/baz".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -137,6 +144,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Required. The display name of the company, for example, "Google LLC".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -154,6 +162,7 @@ namespace Google.Cloud.Talent.V4 {
     /// The maximum number of allowed characters is 255.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ExternalId {
       get { return externalId_; }
       set {
@@ -168,6 +177,7 @@ namespace Google.Cloud.Talent.V4 {
     /// The employer's company size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.CompanySize Size {
       get { return size_; }
       set {
@@ -185,6 +195,7 @@ namespace Google.Cloud.Talent.V4 {
     /// location wherever possible in [DerivedInfo.headquarters_location][google.cloud.talent.v4.Company.DerivedInfo.headquarters_location].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string HeadquartersAddress {
       get { return headquartersAddress_; }
       set {
@@ -202,6 +213,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Defaults to false if not provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HiringAgency {
       get { return hiringAgency_; }
       set {
@@ -220,6 +232,7 @@ namespace Google.Cloud.Talent.V4 {
     /// The maximum number of allowed characters is 500.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EeoText {
       get { return eeoText_; }
       set {
@@ -237,6 +250,7 @@ namespace Google.Cloud.Talent.V4 {
     /// The maximum number of allowed characters is 255.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WebsiteUri {
       get { return websiteUri_; }
       set {
@@ -252,6 +266,7 @@ namespace Google.Cloud.Talent.V4 {
     /// site, for example, "https://careers.google.com".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CareerSiteUri {
       get { return careerSiteUri_; }
       set {
@@ -266,6 +281,7 @@ namespace Google.Cloud.Talent.V4 {
     /// A URI that hosts the employer's company logo.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageUri {
       get { return imageUri_; }
       set {
@@ -287,6 +303,7 @@ namespace Google.Cloud.Talent.V4 {
     /// and those keyword queries must be surrounded by quotes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> KeywordSearchableJobCustomAttributes {
       get { return keywordSearchableJobCustomAttributes_; }
     }
@@ -298,6 +315,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Output only. Derived details about the company.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.Company.Types.DerivedInfo DerivedInfo {
       get { return derivedInfo_; }
       set {
@@ -314,6 +332,7 @@ namespace Google.Cloud.Talent.V4 {
     /// abusive, or spammy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Suspended {
       get { return suspended_; }
       set {
@@ -322,11 +341,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Company);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Company other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -351,6 +372,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -373,11 +395,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -439,6 +463,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -496,6 +521,7 @@ namespace Google.Cloud.Talent.V4 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -542,6 +568,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Company other) {
       if (other == null) {
         return;
@@ -590,6 +617,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -662,6 +690,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -732,6 +761,7 @@ namespace Google.Cloud.Talent.V4 {
     #region Nested types
     /// <summary>Container for nested types declared in the Company message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Derived details about the company.
@@ -744,19 +774,23 @@ namespace Google.Cloud.Talent.V4 {
         private static readonly pb::MessageParser<DerivedInfo> _parser = new pb::MessageParser<DerivedInfo>(() => new DerivedInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DerivedInfo> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Talent.V4.Company.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DerivedInfo() {
           OnConstruction();
         }
@@ -764,12 +798,14 @@ namespace Google.Cloud.Talent.V4 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DerivedInfo(DerivedInfo other) : this() {
           headquartersLocation_ = other.headquartersLocation_ != null ? other.headquartersLocation_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DerivedInfo Clone() {
           return new DerivedInfo(this);
         }
@@ -782,6 +818,7 @@ namespace Google.Cloud.Talent.V4 {
         /// [Company.headquarters_address][google.cloud.talent.v4.Company.headquarters_address] if provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Talent.V4.Location HeadquartersLocation {
           get { return headquartersLocation_; }
           set {
@@ -790,11 +827,13 @@ namespace Google.Cloud.Talent.V4 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as DerivedInfo);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(DerivedInfo other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -807,6 +846,7 @@ namespace Google.Cloud.Talent.V4 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (headquartersLocation_ != null) hash ^= HeadquartersLocation.GetHashCode();
@@ -817,11 +857,13 @@ namespace Google.Cloud.Talent.V4 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -838,6 +880,7 @@ namespace Google.Cloud.Talent.V4 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (headquartersLocation_ != null) {
             output.WriteRawTag(10);
@@ -850,6 +893,7 @@ namespace Google.Cloud.Talent.V4 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (headquartersLocation_ != null) {
@@ -862,6 +906,7 @@ namespace Google.Cloud.Talent.V4 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(DerivedInfo other) {
           if (other == null) {
             return;
@@ -876,6 +921,7 @@ namespace Google.Cloud.Talent.V4 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -900,6 +946,7 @@ namespace Google.Cloud.Talent.V4 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

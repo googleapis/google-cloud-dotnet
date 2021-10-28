@@ -74,19 +74,23 @@ namespace Google.Apps.Script.Type.Calendar {
     private static readonly pb::MessageParser<CalendarAddOnManifest> _parser = new pb::MessageParser<CalendarAddOnManifest>(() => new CalendarAddOnManifest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CalendarAddOnManifest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Calendar.CalendarAddonManifestReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CalendarAddOnManifest() {
       OnConstruction();
     }
@@ -94,6 +98,7 @@ namespace Google.Apps.Script.Type.Calendar {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CalendarAddOnManifest(CalendarAddOnManifest other) : this() {
       homepageTrigger_ = other.homepageTrigger_ != null ? other.homepageTrigger_.Clone() : null;
       conferenceSolution_ = other.conferenceSolution_.Clone();
@@ -105,6 +110,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CalendarAddOnManifest Clone() {
       return new CalendarAddOnManifest(this);
     }
@@ -122,6 +128,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// `addOns.common.homepageTrigger`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.HomepageExtensionPoint HomepageTrigger {
       get { return homepageTrigger_; }
       set {
@@ -138,6 +145,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// Defines conference solutions provided by this add-on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Apps.Script.Type.Calendar.ConferenceSolution> ConferenceSolution {
       get { return conferenceSolution_; }
     }
@@ -149,6 +157,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// An endpoint to execute that creates a URL to the add-on's settings page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreateSettingsUrlFunction {
       get { return createSettingsUrlFunction_; }
       set {
@@ -163,6 +172,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// An endpoint to trigger when an event is opened (viewed/edited).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Calendar.CalendarExtensionPoint EventOpenTrigger {
       get { return eventOpenTrigger_; }
       set {
@@ -177,6 +187,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// An endpoint to trigger when the open event is updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Calendar.CalendarExtensionPoint EventUpdateTrigger {
       get { return eventUpdateTrigger_; }
       set {
@@ -191,6 +202,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// Define the level of data access when an event addon is triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Calendar.CalendarAddOnManifest.Types.EventAccess CurrentEventAccess {
       get { return currentEventAccess_; }
       set {
@@ -199,11 +211,13 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CalendarAddOnManifest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CalendarAddOnManifest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -221,6 +235,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (homepageTrigger_ != null) hash ^= HomepageTrigger.GetHashCode();
@@ -236,11 +251,13 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -274,6 +291,7 @@ namespace Google.Apps.Script.Type.Calendar {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       conferenceSolution_.WriteTo(ref output, _repeated_conferenceSolution_codec);
       if (CreateSettingsUrlFunction.Length != 0) {
@@ -303,6 +321,7 @@ namespace Google.Apps.Script.Type.Calendar {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (homepageTrigger_ != null) {
@@ -328,6 +347,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CalendarAddOnManifest other) {
       if (other == null) {
         return;
@@ -361,6 +381,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -411,6 +432,7 @@ namespace Google.Apps.Script.Type.Calendar {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -459,6 +481,7 @@ namespace Google.Apps.Script.Type.Calendar {
     #region Nested types
     /// <summary>Container for nested types declared in the CalendarAddOnManifest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// An enum defining the level of data access event triggers require.
@@ -508,19 +531,23 @@ namespace Google.Apps.Script.Type.Calendar {
     private static readonly pb::MessageParser<ConferenceSolution> _parser = new pb::MessageParser<ConferenceSolution>(() => new ConferenceSolution());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConferenceSolution> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Calendar.CalendarAddonManifestReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConferenceSolution() {
       OnConstruction();
     }
@@ -528,6 +555,7 @@ namespace Google.Apps.Script.Type.Calendar {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConferenceSolution(ConferenceSolution other) : this() {
       onCreateFunction_ = other.onCreateFunction_;
       id_ = other.id_;
@@ -537,6 +565,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConferenceSolution Clone() {
       return new ConferenceSolution(this);
     }
@@ -548,6 +577,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// Required. The endpoint to call when ConferenceData should be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OnCreateFunction {
       get { return onCreateFunction_; }
       set {
@@ -566,6 +596,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// display name of an add-on, the ID should not be changed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -580,6 +611,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// Required. The display name of the ConferenceSolution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -594,6 +626,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// Required. The URL for the logo image of the ConferenceSolution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LogoUrl {
       get { return logoUrl_; }
       set {
@@ -602,11 +635,13 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConferenceSolution);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConferenceSolution other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -622,6 +657,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (OnCreateFunction.Length != 0) hash ^= OnCreateFunction.GetHashCode();
@@ -635,11 +671,13 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -668,6 +706,7 @@ namespace Google.Apps.Script.Type.Calendar {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OnCreateFunction.Length != 0) {
         output.WriteRawTag(10);
@@ -692,6 +731,7 @@ namespace Google.Apps.Script.Type.Calendar {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (OnCreateFunction.Length != 0) {
@@ -713,6 +753,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConferenceSolution other) {
       if (other == null) {
         return;
@@ -733,6 +774,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -766,6 +808,7 @@ namespace Google.Apps.Script.Type.Calendar {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -807,19 +850,23 @@ namespace Google.Apps.Script.Type.Calendar {
     private static readonly pb::MessageParser<CalendarExtensionPoint> _parser = new pb::MessageParser<CalendarExtensionPoint>(() => new CalendarExtensionPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CalendarExtensionPoint> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Calendar.CalendarAddonManifestReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CalendarExtensionPoint() {
       OnConstruction();
     }
@@ -827,12 +874,14 @@ namespace Google.Apps.Script.Type.Calendar {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CalendarExtensionPoint(CalendarExtensionPoint other) : this() {
       runFunction_ = other.runFunction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CalendarExtensionPoint Clone() {
       return new CalendarExtensionPoint(this);
     }
@@ -845,6 +894,7 @@ namespace Google.Apps.Script.Type.Calendar {
     /// activated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
       get { return runFunction_; }
       set {
@@ -853,11 +903,13 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CalendarExtensionPoint);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CalendarExtensionPoint other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -870,6 +922,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (RunFunction.Length != 0) hash ^= RunFunction.GetHashCode();
@@ -880,11 +933,13 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -901,6 +956,7 @@ namespace Google.Apps.Script.Type.Calendar {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RunFunction.Length != 0) {
         output.WriteRawTag(10);
@@ -913,6 +969,7 @@ namespace Google.Apps.Script.Type.Calendar {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (RunFunction.Length != 0) {
@@ -925,6 +982,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CalendarExtensionPoint other) {
       if (other == null) {
         return;
@@ -936,6 +994,7 @@ namespace Google.Apps.Script.Type.Calendar {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -957,6 +1016,7 @@ namespace Google.Apps.Script.Type.Calendar {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

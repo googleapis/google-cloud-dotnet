@@ -169,19 +169,23 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     private static readonly pb::MessageParser<EmailPreferences> _parser = new pb::MessageParser<EmailPreferences>(() => new EmailPreferences());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EmailPreferences> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EmailPreferences() {
       OnConstruction();
     }
@@ -189,12 +193,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EmailPreferences(EmailPreferences other) : this() {
       enableFailureEmail_ = other.enableFailureEmail_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EmailPreferences Clone() {
       return new EmailPreferences(this);
     }
@@ -206,6 +212,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// If true, email notifications will be sent on transfer run failures.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableFailureEmail {
       get { return enableFailureEmail_; }
       set {
@@ -214,11 +221,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EmailPreferences);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EmailPreferences other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -231,6 +240,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (EnableFailureEmail != false) hash ^= EnableFailureEmail.GetHashCode();
@@ -241,11 +251,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -262,6 +274,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EnableFailureEmail != false) {
         output.WriteRawTag(8);
@@ -274,6 +287,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (EnableFailureEmail != false) {
@@ -286,6 +300,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EmailPreferences other) {
       if (other == null) {
         return;
@@ -297,6 +312,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -318,6 +334,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -347,19 +364,23 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     private static readonly pb::MessageParser<ScheduleOptions> _parser = new pb::MessageParser<ScheduleOptions>(() => new ScheduleOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ScheduleOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ScheduleOptions() {
       OnConstruction();
     }
@@ -367,6 +388,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ScheduleOptions(ScheduleOptions other) : this() {
       disableAutoScheduling_ = other.disableAutoScheduling_;
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
@@ -375,6 +397,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ScheduleOptions Clone() {
       return new ScheduleOptions(this);
     }
@@ -389,6 +412,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// TransferConfig.schedule field will be ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableAutoScheduling {
       get { return disableAutoScheduling_; }
       set {
@@ -407,6 +431,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// limited by this option.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -424,6 +449,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// limited by this option.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -432,11 +458,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ScheduleOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ScheduleOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -451,6 +479,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DisableAutoScheduling != false) hash ^= DisableAutoScheduling.GetHashCode();
@@ -463,11 +492,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -492,6 +523,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startTime_ != null) {
         output.WriteRawTag(10);
@@ -512,6 +544,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DisableAutoScheduling != false) {
@@ -530,6 +563,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ScheduleOptions other) {
       if (other == null) {
         return;
@@ -553,6 +587,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -588,6 +623,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -636,19 +672,23 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     private static readonly pb::MessageParser<TransferConfig> _parser = new pb::MessageParser<TransferConfig>(() => new TransferConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferConfig() {
       OnConstruction();
     }
@@ -656,6 +696,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferConfig(TransferConfig other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -682,6 +723,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferConfig Clone() {
       return new TransferConfig(this);
     }
@@ -698,6 +740,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -711,6 +754,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// The BigQuery target dataset id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationDatasetId {
       get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId ? (string) destination_ : ""; }
       set {
@@ -726,6 +770,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// User specified display name for the data transfer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -740,6 +785,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Data source id. Cannot be changed once data transfer is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DataSourceId {
       get { return dataSourceId_; }
       set {
@@ -757,6 +803,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Struct Params {
       get { return params_; }
       set {
@@ -782,6 +829,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// NOTE: the granularity should be at least 8 hours, or less frequent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Schedule {
       get { return schedule_; }
       set {
@@ -796,6 +844,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Options customizing the data transfer schedule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataTransfer.V1.ScheduleOptions ScheduleOptions {
       get { return scheduleOptions_; }
       set {
@@ -815,6 +864,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// to use the default value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DataRefreshWindowDays {
       get { return dataRefreshWindowDays_; }
       set {
@@ -830,6 +880,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// for a given transfer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Disabled {
       get { return disabled_; }
       set {
@@ -844,6 +895,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Output only. Data transfer modification time. Ignored by server on input.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -858,6 +910,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Output only. Next time when data transfer will run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp NextRunTime {
       get { return nextRunTime_; }
       set {
@@ -872,6 +925,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Output only. State of the most recently updated transfer run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState State {
       get { return state_; }
       set {
@@ -886,6 +940,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Deprecated. Unique ID of the user on whose behalf transfer is done.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
       get { return userId_; }
       set {
@@ -900,6 +955,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Output only. Region in which BigQuery dataset is located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DatasetRegion {
       get { return datasetRegion_; }
       set {
@@ -918,6 +974,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// `projects/{project}/topics/{topic}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NotificationPubsubTopic {
       get { return notificationPubsubTopic_; }
       set {
@@ -933,6 +990,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// to the email address of the user who owns this transfer config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences EmailPreferences {
       get { return emailPreferences_; }
       set {
@@ -948,22 +1006,26 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
     private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DestinationOneofCase DestinationCase {
       get { return destinationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDestination() {
       destinationCase_ = DestinationOneofCase.None;
       destination_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -992,6 +1054,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1018,11 +1081,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1099,6 +1164,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1171,6 +1237,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1228,6 +1295,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferConfig other) {
       if (other == null) {
         return;
@@ -1302,6 +1370,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1398,6 +1467,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1502,19 +1572,23 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     private static readonly pb::MessageParser<TransferRun> _parser = new pb::MessageParser<TransferRun>(() => new TransferRun());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferRun> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferRun() {
       OnConstruction();
     }
@@ -1522,6 +1596,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferRun(TransferRun other) : this() {
       name_ = other.name_;
       scheduleTime_ = other.scheduleTime_ != null ? other.scheduleTime_.Clone() : null;
@@ -1547,6 +1622,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferRun Clone() {
       return new TransferRun(this);
     }
@@ -1561,6 +1637,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// The name is ignored when creating a transfer run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1575,6 +1652,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Minimum time after which a transfer run can be started.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduleTime {
       get { return scheduleTime_; }
       set {
@@ -1590,6 +1668,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// ingested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp RunTime {
       get { return runTime_; }
       set {
@@ -1604,6 +1683,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Status of the transfer run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status ErrorStatus {
       get { return errorStatus_; }
       set {
@@ -1619,6 +1699,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Parameter ignored by server for input requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -1634,6 +1715,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Parameter ignored by server for input requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -1648,6 +1730,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Output only. Last time the data transfer run state was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -1665,6 +1748,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// https://cloud.google.com/bigquery-transfer/docs/cloud-storage-transfer#bq
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Struct Params {
       get { return params_; }
       set {
@@ -1678,6 +1762,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Output only. The BigQuery target dataset id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationDatasetId {
       get { return destinationCase_ == DestinationOneofCase.DestinationDatasetId ? (string) destination_ : ""; }
       set {
@@ -1693,6 +1778,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Output only. Data source id.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DataSourceId {
       get { return dataSourceId_; }
       set {
@@ -1707,6 +1793,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Data transfer run state. Ignored for input requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataTransfer.V1.TransferState State {
       get { return state_; }
       set {
@@ -1721,6 +1808,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Deprecated. Unique ID of the user on whose behalf transfer is done.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UserId {
       get { return userId_; }
       set {
@@ -1739,6 +1827,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// current load, so `schedule_time` doesn't always match this.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Schedule {
       get { return schedule_; }
       set {
@@ -1757,6 +1846,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// `projects/{project}/topics/{topic}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NotificationPubsubTopic {
       get { return notificationPubsubTopic_; }
       set {
@@ -1773,6 +1863,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// this run was derived from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataTransfer.V1.EmailPreferences EmailPreferences {
       get { return emailPreferences_; }
       set {
@@ -1788,22 +1879,26 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
     private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DestinationOneofCase DestinationCase {
       get { return destinationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDestination() {
       destinationCase_ = DestinationOneofCase.None;
       destination_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferRun);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferRun other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1831,6 +1926,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1856,11 +1952,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1933,6 +2031,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2001,6 +2100,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2055,6 +2155,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferRun other) {
       if (other == null) {
         return;
@@ -2135,6 +2236,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2236,6 +2338,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2345,19 +2448,23 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     private static readonly pb::MessageParser<TransferMessage> _parser = new pb::MessageParser<TransferMessage>(() => new TransferMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.DataTransfer.V1.TransferReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferMessage() {
       OnConstruction();
     }
@@ -2365,6 +2472,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferMessage(TransferMessage other) : this() {
       messageTime_ = other.messageTime_ != null ? other.messageTime_.Clone() : null;
       severity_ = other.severity_;
@@ -2373,6 +2481,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferMessage Clone() {
       return new TransferMessage(this);
     }
@@ -2384,6 +2493,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Time when message was logged.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp MessageTime {
       get { return messageTime_; }
       set {
@@ -2398,6 +2508,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Message severity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.DataTransfer.V1.TransferMessage.Types.MessageSeverity Severity {
       get { return severity_; }
       set {
@@ -2412,6 +2523,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     /// Message text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MessageText {
       get { return messageText_; }
       set {
@@ -2420,11 +2532,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2439,6 +2553,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (messageTime_ != null) hash ^= MessageTime.GetHashCode();
@@ -2451,11 +2566,13 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2480,6 +2597,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (messageTime_ != null) {
         output.WriteRawTag(10);
@@ -2500,6 +2618,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (messageTime_ != null) {
@@ -2518,6 +2637,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferMessage other) {
       if (other == null) {
         return;
@@ -2538,6 +2658,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2570,6 +2691,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2600,6 +2722,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the TransferMessage message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Represents data transfer user facing message severity.

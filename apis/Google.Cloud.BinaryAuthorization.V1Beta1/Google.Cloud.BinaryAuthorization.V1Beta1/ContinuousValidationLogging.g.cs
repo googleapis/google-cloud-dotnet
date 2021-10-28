@@ -81,19 +81,23 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private static readonly pb::MessageParser<ContinuousValidationEvent> _parser = new pb::MessageParser<ContinuousValidationEvent>(() => new ContinuousValidationEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ContinuousValidationEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationLoggingReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContinuousValidationEvent() {
       OnConstruction();
     }
@@ -101,6 +105,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContinuousValidationEvent(ContinuousValidationEvent other) : this() {
       switch (other.EventTypeCase) {
         case EventTypeOneofCase.PodEvent:
@@ -115,6 +120,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContinuousValidationEvent Clone() {
       return new ContinuousValidationEvent(this);
     }
@@ -125,6 +131,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     /// Pod event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent PodEvent {
       get { return eventTypeCase_ == EventTypeOneofCase.PodEvent ? (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent) eventType_ : null; }
       set {
@@ -139,6 +146,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     /// Unsupported policy event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent UnsupportedPolicyEvent {
       get { return eventTypeCase_ == EventTypeOneofCase.UnsupportedPolicyEvent ? (global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.UnsupportedPolicyEvent) eventType_ : null; }
       set {
@@ -156,22 +164,26 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     }
     private EventTypeOneofCase eventTypeCase_ = EventTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EventTypeOneofCase EventTypeCase {
       get { return eventTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEventType() {
       eventTypeCase_ = EventTypeOneofCase.None;
       eventType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ContinuousValidationEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ContinuousValidationEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -186,6 +198,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (eventTypeCase_ == EventTypeOneofCase.PodEvent) hash ^= PodEvent.GetHashCode();
@@ -198,11 +211,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -223,6 +238,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (eventTypeCase_ == EventTypeOneofCase.PodEvent) {
         output.WriteRawTag(10);
@@ -239,6 +255,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (eventTypeCase_ == EventTypeOneofCase.PodEvent) {
@@ -254,6 +271,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ContinuousValidationEvent other) {
       if (other == null) {
         return;
@@ -277,6 +295,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -312,6 +331,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -345,6 +365,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ContinuousValidationEvent message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// An auditing event for one Pod.
@@ -357,19 +378,23 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         private static readonly pb::MessageParser<ContinuousValidationPodEvent> _parser = new pb::MessageParser<ContinuousValidationPodEvent>(() => new ContinuousValidationPodEvent());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ContinuousValidationPodEvent> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContinuousValidationPodEvent() {
           OnConstruction();
         }
@@ -377,6 +402,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContinuousValidationPodEvent(ContinuousValidationPodEvent other) : this() {
           pod_ = other.pod_;
           deployTime_ = other.deployTime_ != null ? other.deployTime_.Clone() : null;
@@ -387,6 +413,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContinuousValidationPodEvent Clone() {
           return new ContinuousValidationPodEvent(this);
         }
@@ -398,6 +425,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// The name of the Pod.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Pod {
           get { return pod_; }
           set {
@@ -412,6 +440,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// Deploy time of the Pod from k8s.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp DeployTime {
           get { return deployTime_; }
           set {
@@ -426,6 +455,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// Termination time of the Pod from k8s, or nothing if still running.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
           get { return endTime_; }
           set {
@@ -440,6 +470,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// Auditing verdict for this Pod.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.PolicyConformanceVerdict Verdict {
           get { return verdict_; }
           set {
@@ -456,16 +487,19 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// List of images with auditing details.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails> Images {
           get { return images_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ContinuousValidationPodEvent);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ContinuousValidationPodEvent other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -482,6 +516,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Pod.Length != 0) hash ^= Pod.GetHashCode();
@@ -496,11 +531,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -530,6 +567,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Pod.Length != 0) {
             output.WriteRawTag(10);
@@ -555,6 +593,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Pod.Length != 0) {
@@ -577,6 +616,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ContinuousValidationPodEvent other) {
           if (other == null) {
             return;
@@ -604,6 +644,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -647,6 +688,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -688,6 +730,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         #region Nested types
         /// <summary>Container for nested types declared in the ContinuousValidationPodEvent message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Audit time policy conformance verdict.
@@ -714,19 +757,23 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             private static readonly pb::MessageParser<ImageDetails> _parser = new pb::MessageParser<ImageDetails>(() => new ImageDetails());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<ImageDetails> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ImageDetails() {
               OnConstruction();
             }
@@ -734,6 +781,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ImageDetails(ImageDetails other) : this() {
               image_ = other.image_;
               result_ = other.result_;
@@ -742,6 +790,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ImageDetails Clone() {
               return new ImageDetails(this);
             }
@@ -753,6 +802,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             /// The name of the image.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Image {
               get { return image_; }
               set {
@@ -767,6 +817,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             /// The result of the audit for this image.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Types.ContinuousValidationPodEvent.Types.ImageDetails.Types.AuditResult Result {
               get { return result_; }
               set {
@@ -781,6 +832,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             /// Description of the above result.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Description {
               get { return description_; }
               set {
@@ -789,11 +841,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as ImageDetails);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(ImageDetails other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -808,6 +862,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Image.Length != 0) hash ^= Image.GetHashCode();
@@ -820,11 +875,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -849,6 +906,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Image.Length != 0) {
                 output.WriteRawTag(10);
@@ -869,6 +927,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Image.Length != 0) {
@@ -887,6 +946,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(ImageDetails other) {
               if (other == null) {
                 return;
@@ -904,6 +964,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -933,6 +994,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -960,6 +1022,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             #region Nested types
             /// <summary>Container for nested types declared in the ImageDetails message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Result of the audit.
@@ -1000,19 +1063,23 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         private static readonly pb::MessageParser<UnsupportedPolicyEvent> _parser = new pb::MessageParser<UnsupportedPolicyEvent>(() => new UnsupportedPolicyEvent());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<UnsupportedPolicyEvent> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.BinaryAuthorization.V1Beta1.ContinuousValidationEvent.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public UnsupportedPolicyEvent() {
           OnConstruction();
         }
@@ -1020,12 +1087,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public UnsupportedPolicyEvent(UnsupportedPolicyEvent other) : this() {
           description_ = other.description_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public UnsupportedPolicyEvent Clone() {
           return new UnsupportedPolicyEvent(this);
         }
@@ -1037,6 +1106,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         /// A description of the unsupported policy.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Description {
           get { return description_; }
           set {
@@ -1045,11 +1115,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as UnsupportedPolicyEvent);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(UnsupportedPolicyEvent other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1062,6 +1134,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Description.Length != 0) hash ^= Description.GetHashCode();
@@ -1072,11 +1145,13 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1093,6 +1168,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Description.Length != 0) {
             output.WriteRawTag(10);
@@ -1105,6 +1181,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Description.Length != 0) {
@@ -1117,6 +1194,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(UnsupportedPolicyEvent other) {
           if (other == null) {
             return;
@@ -1128,6 +1206,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1149,6 +1228,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

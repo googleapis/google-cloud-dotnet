@@ -104,19 +104,23 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     private static readonly pb::MessageParser<Instance> _parser = new pb::MessageParser<Instance>(() => new Instance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Instance> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Notebooks.V1Beta1.InstanceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Instance() {
       OnConstruction();
     }
@@ -124,6 +128,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Instance(Instance other) : this() {
       name_ = other.name_;
       postStartupScript_ = other.postStartupScript_;
@@ -163,6 +168,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Instance Clone() {
       return new Instance(this);
     }
@@ -175,6 +181,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// `projects/{project_id}/locations/{location}/instances/{instance_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -188,6 +195,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Use a Compute Engine VM image to start the notebook instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Notebooks.V1Beta1.VmImage VmImage {
       get { return environmentCase_ == EnvironmentOneofCase.VmImage ? (global::Google.Cloud.Notebooks.V1Beta1.VmImage) environment_ : null; }
       set {
@@ -202,6 +210,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Use a container image to start the notebook instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Notebooks.V1Beta1.ContainerImage ContainerImage {
       get { return environmentCase_ == EnvironmentOneofCase.ContainerImage ? (global::Google.Cloud.Notebooks.V1Beta1.ContainerImage) environment_ : null; }
       set {
@@ -219,6 +228,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Cloud Storage path (`gs://path-to-file/file-name`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PostStartupScript {
       get { return postStartupScript_; }
       set {
@@ -234,6 +244,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// notebook.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProxyUri {
       get { return proxyUri_; }
       set {
@@ -255,6 +266,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> InstanceOwners {
       get { return instanceOwners_; }
     }
@@ -273,6 +285,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceAccount {
       get { return serviceAccount_; }
       set {
@@ -289,6 +302,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MachineType {
       get { return machineType_; }
       set {
@@ -306,6 +320,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// have selected](https://cloud.google.com/compute/docs/gpus/#gpus-list).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorConfig AcceleratorConfig {
       get { return acceleratorConfig_; }
       set {
@@ -320,6 +335,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Output only. The state of this instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.State State {
       get { return state_; }
       set {
@@ -337,6 +353,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Only applicable to instances with GPUs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InstallGpuDriver {
       get { return installGpuDriver_; }
       set {
@@ -352,6 +369,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// If not specified, we'll automatically choose from official GPU drivers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomGpuDriverPath {
       get { return customGpuDriverPath_; }
       set {
@@ -367,6 +385,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// to standard persistent disk (`PD_STANDARD`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType BootDiskType {
       get { return bootDiskType_; }
       set {
@@ -383,6 +402,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// is 100&amp;nbsp;GB. If not specified, this defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BootDiskSizeGb {
       get { return bootDiskSizeGb_; }
       set {
@@ -398,6 +418,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// to standard persistent disk (`PD_STANDARD`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskType DataDiskType {
       get { return dataDiskType_; }
       set {
@@ -415,6 +436,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// this defaults to 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long DataDiskSizeGb {
       get { return dataDiskSizeGb_; }
       set {
@@ -430,6 +452,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool NoRemoveDataDisk {
       get { return noRemoveDataDisk_; }
       set {
@@ -445,6 +468,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// defaults to GMEK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.DiskEncryption DiskEncryption {
       get { return diskEncryption_; }
       set {
@@ -464,6 +488,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// https://cloud.google.com/kms/docs/quickstart).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string KmsKey {
       get { return kmsKey_; }
       set {
@@ -478,6 +503,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// If true, no public IP will be assigned to this instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool NoPublicIp {
       get { return noPublicIp_; }
       set {
@@ -492,6 +518,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// If true, the notebook instance will not register with the proxy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool NoProxyAccess {
       get { return noProxyAccess_; }
       set {
@@ -508,6 +535,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// `projects/{project_id}/global/networks/{network_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Network {
       get { return network_; }
       set {
@@ -524,6 +552,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// `projects/{project_id}/regions/{region}/subnetworks/{subnetwork_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Subnet {
       get { return subnet_; }
       set {
@@ -541,6 +570,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// These can be later modified by the setLabels method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -554,6 +584,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Custom metadata to apply to this instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -565,6 +596,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Output only. Instance creation time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -579,6 +611,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     /// Output only. Instance update time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -595,22 +628,26 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     }
     private EnvironmentOneofCase environmentCase_ = EnvironmentOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnvironmentOneofCase EnvironmentCase {
       get { return environmentCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEnvironment() {
       environmentCase_ = EnvironmentOneofCase.None;
       environment_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Instance);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Instance other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -650,6 +687,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -687,11 +725,13 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -803,6 +843,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -910,6 +951,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -994,6 +1036,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Instance other) {
       if (other == null) {
         return;
@@ -1095,6 +1138,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1239,6 +1283,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1381,6 +1426,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Instance message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Definition of the types of hardware accelerators that can be used on this
@@ -1534,19 +1580,23 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         private static readonly pb::MessageParser<AcceleratorConfig> _parser = new pb::MessageParser<AcceleratorConfig>(() => new AcceleratorConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AcceleratorConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Notebooks.V1Beta1.Instance.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AcceleratorConfig() {
           OnConstruction();
         }
@@ -1554,6 +1604,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AcceleratorConfig(AcceleratorConfig other) : this() {
           type_ = other.type_;
           coreCount_ = other.coreCount_;
@@ -1561,6 +1612,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AcceleratorConfig Clone() {
           return new AcceleratorConfig(this);
         }
@@ -1572,6 +1624,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// Type of this accelerator.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType Type {
           get { return type_; }
           set {
@@ -1586,6 +1639,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         /// Count of cores of this accelerator.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long CoreCount {
           get { return coreCount_; }
           set {
@@ -1594,11 +1648,13 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AcceleratorConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AcceleratorConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1612,6 +1668,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Type != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType.Unspecified) hash ^= Type.GetHashCode();
@@ -1623,11 +1680,13 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1648,6 +1707,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Type != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType.Unspecified) {
             output.WriteRawTag(8);
@@ -1664,6 +1724,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Type != global::Google.Cloud.Notebooks.V1Beta1.Instance.Types.AcceleratorType.Unspecified) {
@@ -1679,6 +1740,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AcceleratorConfig other) {
           if (other == null) {
             return;
@@ -1693,6 +1755,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1718,6 +1781,7 @@ namespace Google.Cloud.Notebooks.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

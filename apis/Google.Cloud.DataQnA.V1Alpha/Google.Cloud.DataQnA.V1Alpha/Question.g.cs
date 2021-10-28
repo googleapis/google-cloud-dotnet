@@ -167,19 +167,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<Question> _parser = new pb::MessageParser<Question>(() => new Question());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Question> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Question() {
       OnConstruction();
     }
@@ -187,6 +191,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Question(Question other) : this() {
       name_ = other.name_;
       scopes_ = other.scopes_.Clone();
@@ -202,6 +207,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Question Clone() {
       return new Question(this);
     }
@@ -214,6 +220,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Example: `projects/foo/locations/bar/questions/123`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -236,6 +243,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// `//bigquery.googleapis.com/projects/test-project/datasets/foo/tables/bar`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Scopes {
       get { return scopes_; }
     }
@@ -247,6 +255,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Required. Immutable. The query in natural language.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Query {
       get { return query_; }
       set {
@@ -265,6 +274,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// more than one annotation with the same data source reference.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> DataSourceAnnotations {
       get { return dataSourceAnnotations_; }
     }
@@ -282,6 +292,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// present the error to the user so the user can rephrase the question.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.InterpretError InterpretError {
       get { return interpretError_; }
       set {
@@ -298,6 +309,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// A list of interpretations for this question.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataQnA.V1Alpha.Interpretation> Interpretations {
       get { return interpretations_; }
     }
@@ -309,6 +321,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Time when the question was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -323,6 +336,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Output only. The e-mail address of the user that created this question.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserEmail {
       get { return userEmail_; }
       set {
@@ -337,6 +351,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Input only. Immutable. Flags to request additional information for debugging purposes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.DebugFlags DebugFlags {
       get { return debugFlags_; }
       set {
@@ -354,6 +369,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// inside the debug message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Any DebugInfo {
       get { return debugInfo_; }
       set {
@@ -362,11 +378,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Question);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Question other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -388,6 +406,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -407,11 +426,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -455,6 +476,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -494,6 +516,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -527,6 +550,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Question other) {
       if (other == null) {
         return;
@@ -571,6 +595,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -640,6 +665,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -717,19 +743,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<InterpretError> _parser = new pb::MessageParser<InterpretError>(() => new InterpretError());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InterpretError> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterpretError() {
       OnConstruction();
     }
@@ -737,6 +767,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterpretError(InterpretError other) : this() {
       message_ = other.message_;
       code_ = other.code_;
@@ -745,6 +776,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterpretError Clone() {
       return new InterpretError(this);
     }
@@ -756,6 +788,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Error message explaining why this question could not be interpreted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -770,6 +803,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// The code for the error category why the interpretation failed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Types.InterpretErrorCode Code {
       get { return code_; }
       set {
@@ -784,6 +818,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Details on interpretation failure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Types.InterpretErrorDetails Details {
       get { return details_; }
       set {
@@ -792,11 +827,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InterpretError);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InterpretError other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -811,6 +848,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Message.Length != 0) hash ^= Message.GetHashCode();
@@ -823,11 +861,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -852,6 +892,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Message.Length != 0) {
         output.WriteRawTag(10);
@@ -872,6 +913,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Message.Length != 0) {
@@ -890,6 +932,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InterpretError other) {
       if (other == null) {
         return;
@@ -910,6 +953,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -942,6 +986,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -972,6 +1017,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the InterpretError message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The interpret error code provides an error category why the interpretation
@@ -1010,19 +1056,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         private static readonly pb::MessageParser<InterpretErrorDetails> _parser = new pb::MessageParser<InterpretErrorDetails>(() => new InterpretErrorDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<InterpretErrorDetails> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretErrorDetails() {
           OnConstruction();
         }
@@ -1030,6 +1080,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretErrorDetails(InterpretErrorDetails other) : this() {
           unsupportedDetails_ = other.unsupportedDetails_ != null ? other.unsupportedDetails_.Clone() : null;
           incompleteQueryDetails_ = other.incompleteQueryDetails_ != null ? other.incompleteQueryDetails_.Clone() : null;
@@ -1038,6 +1089,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretErrorDetails Clone() {
           return new InterpretErrorDetails(this);
         }
@@ -1049,6 +1101,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// Populated if parts of the query are unsupported.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Types.InterpretUnsupportedDetails UnsupportedDetails {
           get { return unsupportedDetails_; }
           set {
@@ -1063,6 +1116,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// Populated if the query is incomplete.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Types.InterpretIncompleteQueryDetails IncompleteQueryDetails {
           get { return incompleteQueryDetails_; }
           set {
@@ -1077,6 +1131,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// Populated if the query was too ambiguous.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Types.InterpretAmbiguityDetails AmbiguityDetails {
           get { return ambiguityDetails_; }
           set {
@@ -1085,11 +1140,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as InterpretErrorDetails);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(InterpretErrorDetails other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1104,6 +1161,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (unsupportedDetails_ != null) hash ^= UnsupportedDetails.GetHashCode();
@@ -1116,11 +1174,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1145,6 +1205,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (unsupportedDetails_ != null) {
             output.WriteRawTag(10);
@@ -1165,6 +1226,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (unsupportedDetails_ != null) {
@@ -1183,6 +1245,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(InterpretErrorDetails other) {
           if (other == null) {
             return;
@@ -1209,6 +1272,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1247,6 +1311,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1293,19 +1358,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         private static readonly pb::MessageParser<InterpretUnsupportedDetails> _parser = new pb::MessageParser<InterpretUnsupportedDetails>(() => new InterpretUnsupportedDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<InterpretUnsupportedDetails> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretUnsupportedDetails() {
           OnConstruction();
         }
@@ -1313,6 +1382,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretUnsupportedDetails(InterpretUnsupportedDetails other) : this() {
           operators_ = other.operators_.Clone();
           intent_ = other.intent_.Clone();
@@ -1320,6 +1390,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretUnsupportedDetails Clone() {
           return new InterpretUnsupportedDetails(this);
         }
@@ -1333,6 +1404,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// Unsupported operators. For example: median.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Operators {
           get { return operators_; }
         }
@@ -1346,16 +1418,19 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// Unsupported intents.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Intent {
           get { return intent_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as InterpretUnsupportedDetails);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(InterpretUnsupportedDetails other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1369,6 +1444,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= operators_.GetHashCode();
@@ -1380,11 +1456,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1399,6 +1477,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           operators_.WriteTo(ref output, _repeated_operators_codec);
           intent_.WriteTo(ref output, _repeated_intent_codec);
@@ -1409,6 +1488,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += operators_.CalculateSize(_repeated_operators_codec);
@@ -1420,6 +1500,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(InterpretUnsupportedDetails other) {
           if (other == null) {
             return;
@@ -1430,6 +1511,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1455,6 +1537,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1488,19 +1571,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         private static readonly pb::MessageParser<InterpretIncompleteQueryDetails> _parser = new pb::MessageParser<InterpretIncompleteQueryDetails>(() => new InterpretIncompleteQueryDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<InterpretIncompleteQueryDetails> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretIncompleteQueryDetails() {
           OnConstruction();
         }
@@ -1508,12 +1595,14 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretIncompleteQueryDetails(InterpretIncompleteQueryDetails other) : this() {
           entities_ = other.entities_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretIncompleteQueryDetails Clone() {
           return new InterpretIncompleteQueryDetails(this);
         }
@@ -1527,16 +1616,19 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// List of missing interpret entities.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.DataQnA.V1Alpha.InterpretEntity> Entities {
           get { return entities_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as InterpretIncompleteQueryDetails);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(InterpretIncompleteQueryDetails other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1549,6 +1641,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= entities_.GetHashCode();
@@ -1559,11 +1652,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1577,6 +1672,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           entities_.WriteTo(ref output, _repeated_entities_codec);
           if (_unknownFields != null) {
@@ -1586,6 +1682,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += entities_.CalculateSize(_repeated_entities_codec);
@@ -1596,6 +1693,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(InterpretIncompleteQueryDetails other) {
           if (other == null) {
             return;
@@ -1605,6 +1703,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1627,6 +1726,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1658,19 +1758,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         private static readonly pb::MessageParser<InterpretAmbiguityDetails> _parser = new pb::MessageParser<InterpretAmbiguityDetails>(() => new InterpretAmbiguityDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<InterpretAmbiguityDetails> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.DataQnA.V1Alpha.InterpretError.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretAmbiguityDetails() {
           OnConstruction();
         }
@@ -1678,21 +1782,25 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretAmbiguityDetails(InterpretAmbiguityDetails other) : this() {
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public InterpretAmbiguityDetails Clone() {
           return new InterpretAmbiguityDetails(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as InterpretAmbiguityDetails);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(InterpretAmbiguityDetails other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1704,6 +1812,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (_unknownFields != null) {
@@ -1713,11 +1822,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1730,6 +1841,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -1738,6 +1850,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (_unknownFields != null) {
@@ -1747,6 +1860,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(InterpretAmbiguityDetails other) {
           if (other == null) {
             return;
@@ -1755,6 +1869,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1772,6 +1887,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1802,19 +1918,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<ExecutionInfo> _parser = new pb::MessageParser<ExecutionInfo>(() => new ExecutionInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExecutionInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecutionInfo() {
       OnConstruction();
     }
@@ -1822,6 +1942,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecutionInfo(ExecutionInfo other) : this() {
       jobCreationStatus_ = other.jobCreationStatus_ != null ? other.jobCreationStatus_.Clone() : null;
       jobExecutionState_ = other.jobExecutionState_;
@@ -1831,6 +1952,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecutionInfo Clone() {
       return new ExecutionInfo(this);
     }
@@ -1842,6 +1964,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Status returned by the backend when the job was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status JobCreationStatus {
       get { return jobCreationStatus_; }
       set {
@@ -1856,6 +1979,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Status of the job execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.ExecutionInfo.Types.JobExecutionState JobExecutionState {
       get { return jobExecutionState_; }
       set {
@@ -1870,6 +1994,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Time when the execution was triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1886,6 +2011,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// they can handle it when this field is not populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.BigQueryJob BigqueryJob {
       get { return bigqueryJob_; }
       set {
@@ -1894,11 +2020,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExecutionInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExecutionInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1914,6 +2042,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (jobCreationStatus_ != null) hash ^= JobCreationStatus.GetHashCode();
@@ -1927,11 +2056,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1960,6 +2091,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (jobCreationStatus_ != null) {
         output.WriteRawTag(10);
@@ -1984,6 +2116,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (jobCreationStatus_ != null) {
@@ -2005,6 +2138,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExecutionInfo other) {
       if (other == null) {
         return;
@@ -2034,6 +2168,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2076,6 +2211,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2116,6 +2252,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the ExecutionInfo message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Enum of possible job execution statuses.
@@ -2161,19 +2298,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<BigQueryJob> _parser = new pb::MessageParser<BigQueryJob>(() => new BigQueryJob());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BigQueryJob> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryJob() {
       OnConstruction();
     }
@@ -2181,6 +2322,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryJob(BigQueryJob other) : this() {
       jobId_ = other.jobId_;
       projectId_ = other.projectId_;
@@ -2189,6 +2331,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryJob Clone() {
       return new BigQueryJob(this);
     }
@@ -2200,6 +2343,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// The job ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JobId {
       get { return jobId_; }
       set {
@@ -2214,6 +2358,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// The project ID of the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -2228,6 +2373,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// The location where the job is running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Location {
       get { return location_; }
       set {
@@ -2236,11 +2382,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BigQueryJob);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BigQueryJob other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2255,6 +2403,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (JobId.Length != 0) hash ^= JobId.GetHashCode();
@@ -2267,11 +2416,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2296,6 +2447,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JobId.Length != 0) {
         output.WriteRawTag(10);
@@ -2316,6 +2468,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (JobId.Length != 0) {
@@ -2334,6 +2487,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BigQueryJob other) {
       if (other == null) {
         return;
@@ -2351,6 +2505,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2380,6 +2535,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2417,19 +2573,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<Interpretation> _parser = new pb::MessageParser<Interpretation>(() => new Interpretation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Interpretation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Interpretation() {
       OnConstruction();
     }
@@ -2437,6 +2597,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Interpretation(Interpretation other) : this() {
       dataSources_ = other.dataSources_.Clone();
       confidence_ = other.confidence_;
@@ -2449,6 +2610,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Interpretation Clone() {
       return new Interpretation(this);
     }
@@ -2462,6 +2624,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// List of data sources used in the current understanding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> DataSources {
       get { return dataSources_; }
     }
@@ -2475,6 +2638,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// considered a low confidence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Confidence {
       get { return confidence_; }
       set {
@@ -2492,6 +2656,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     ///  dialog if this is non-empty, even if this is the only interpretation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> UnusedPhrases {
       get { return unusedPhrases_; }
     }
@@ -2503,6 +2668,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Human readable representation of the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.HumanReadable HumanReadable {
       get { return humanReadable_; }
       set {
@@ -2518,6 +2684,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// visualize the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.InterpretationStructure InterpretationStructure {
       get { return interpretationStructure_; }
       set {
@@ -2532,6 +2699,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Representation of the data query to be sent to the backend.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.DataQuery DataQuery {
       get { return dataQuery_; }
       set {
@@ -2547,6 +2715,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// of an interpretation was requested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.ExecutionInfo ExecutionInfo {
       get { return executionInfo_; }
       set {
@@ -2555,11 +2724,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Interpretation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Interpretation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2578,6 +2749,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= dataSources_.GetHashCode();
@@ -2594,11 +2766,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2633,6 +2807,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       dataSources_.WriteTo(ref output, _repeated_dataSources_codec);
       if (Confidence != 0D) {
@@ -2663,6 +2838,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += dataSources_.CalculateSize(_repeated_dataSources_codec);
@@ -2689,6 +2865,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Interpretation other) {
       if (other == null) {
         return;
@@ -2726,6 +2903,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2783,6 +2961,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2853,19 +3032,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<DataQuery> _parser = new pb::MessageParser<DataQuery>(() => new DataQuery());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DataQuery> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataQuery() {
       OnConstruction();
     }
@@ -2873,12 +3056,14 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataQuery(DataQuery other) : this() {
       sql_ = other.sql_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataQuery Clone() {
       return new DataQuery(this);
     }
@@ -2890,6 +3075,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// The generated SQL query to be sent to the backend.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sql {
       get { return sql_; }
       set {
@@ -2898,11 +3084,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DataQuery);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DataQuery other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2915,6 +3103,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Sql.Length != 0) hash ^= Sql.GetHashCode();
@@ -2925,11 +3114,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2946,6 +3137,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Sql.Length != 0) {
         output.WriteRawTag(10);
@@ -2958,6 +3150,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Sql.Length != 0) {
@@ -2970,6 +3163,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DataQuery other) {
       if (other == null) {
         return;
@@ -2981,6 +3175,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3002,6 +3197,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3031,19 +3227,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<HumanReadable> _parser = new pb::MessageParser<HumanReadable>(() => new HumanReadable());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HumanReadable> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HumanReadable() {
       OnConstruction();
     }
@@ -3051,6 +3251,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HumanReadable(HumanReadable other) : this() {
       generatedInterpretation_ = other.generatedInterpretation_ != null ? other.generatedInterpretation_.Clone() : null;
       originalQuestion_ = other.originalQuestion_ != null ? other.originalQuestion_.Clone() : null;
@@ -3058,6 +3259,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HumanReadable Clone() {
       return new HumanReadable(this);
     }
@@ -3069,6 +3271,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Generated query explaining the interpretation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.AnnotatedString GeneratedInterpretation {
       get { return generatedInterpretation_; }
       set {
@@ -3083,6 +3286,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Annotations on the original query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataQnA.V1Alpha.AnnotatedString OriginalQuestion {
       get { return originalQuestion_; }
       set {
@@ -3091,11 +3295,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HumanReadable);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HumanReadable other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3109,6 +3315,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (generatedInterpretation_ != null) hash ^= GeneratedInterpretation.GetHashCode();
@@ -3120,11 +3327,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3145,6 +3354,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (generatedInterpretation_ != null) {
         output.WriteRawTag(10);
@@ -3161,6 +3371,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (generatedInterpretation_ != null) {
@@ -3176,6 +3387,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HumanReadable other) {
       if (other == null) {
         return;
@@ -3196,6 +3408,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3227,6 +3440,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3267,19 +3481,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<InterpretationStructure> _parser = new pb::MessageParser<InterpretationStructure>(() => new InterpretationStructure());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InterpretationStructure> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterpretationStructure() {
       OnConstruction();
     }
@@ -3287,6 +3505,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterpretationStructure(InterpretationStructure other) : this() {
       visualizationTypes_ = other.visualizationTypes_.Clone();
       columnInfo_ = other.columnInfo_.Clone();
@@ -3294,6 +3513,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InterpretationStructure Clone() {
       return new InterpretationStructure(this);
     }
@@ -3308,6 +3528,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// order has no relevance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataQnA.V1Alpha.InterpretationStructure.Types.VisualizationType> VisualizationTypes {
       get { return visualizationTypes_; }
     }
@@ -3322,16 +3543,19 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// returned by the backend.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataQnA.V1Alpha.InterpretationStructure.Types.ColumnInfo> ColumnInfo {
       get { return columnInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InterpretationStructure);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InterpretationStructure other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3345,6 +3569,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= visualizationTypes_.GetHashCode();
@@ -3356,11 +3581,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3375,6 +3602,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       visualizationTypes_.WriteTo(ref output, _repeated_visualizationTypes_codec);
       columnInfo_.WriteTo(ref output, _repeated_columnInfo_codec);
@@ -3385,6 +3613,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += visualizationTypes_.CalculateSize(_repeated_visualizationTypes_codec);
@@ -3396,6 +3625,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InterpretationStructure other) {
       if (other == null) {
         return;
@@ -3406,6 +3636,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3432,6 +3663,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3456,6 +3688,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the InterpretationStructure message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Enumeration of visualzation types to use for query response data.
@@ -3540,19 +3773,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         private static readonly pb::MessageParser<ColumnInfo> _parser = new pb::MessageParser<ColumnInfo>(() => new ColumnInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ColumnInfo> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.DataQnA.V1Alpha.InterpretationStructure.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ColumnInfo() {
           OnConstruction();
         }
@@ -3560,6 +3797,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ColumnInfo(ColumnInfo other) : this() {
           outputAlias_ = other.outputAlias_;
           displayName_ = other.displayName_;
@@ -3567,6 +3805,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ColumnInfo Clone() {
           return new ColumnInfo(this);
         }
@@ -3579,6 +3818,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// field name in the schema provided in the query response in BigQuery.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string OutputAlias {
           get { return outputAlias_; }
           set {
@@ -3593,6 +3833,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         /// Human readable name of the output column.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DisplayName {
           get { return displayName_; }
           set {
@@ -3601,11 +3842,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ColumnInfo);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ColumnInfo other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3619,6 +3862,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (OutputAlias.Length != 0) hash ^= OutputAlias.GetHashCode();
@@ -3630,11 +3874,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3655,6 +3901,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (OutputAlias.Length != 0) {
             output.WriteRawTag(10);
@@ -3671,6 +3918,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (OutputAlias.Length != 0) {
@@ -3686,6 +3934,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ColumnInfo other) {
           if (other == null) {
             return;
@@ -3700,6 +3949,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3725,6 +3975,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3763,19 +4014,23 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     private static readonly pb::MessageParser<DebugFlags> _parser = new pb::MessageParser<DebugFlags>(() => new DebugFlags());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DebugFlags> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataQnA.V1Alpha.QuestionReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DebugFlags() {
       OnConstruction();
     }
@@ -3783,6 +4038,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DebugFlags(DebugFlags other) : this() {
       includeVaQuery_ = other.includeVaQuery_;
       includeNestedVaQuery_ = other.includeNestedVaQuery_;
@@ -3800,6 +4056,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DebugFlags Clone() {
       return new DebugFlags(this);
     }
@@ -3811,6 +4068,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Whether to include the original VAQuery.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeVaQuery {
       get { return includeVaQuery_; }
       set {
@@ -3825,6 +4083,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Whether to include the original nested VAQuery.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeNestedVaQuery {
       get { return includeNestedVaQuery_; }
       set {
@@ -3840,6 +4099,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// by Analyza.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeHumanInterpretation {
       get { return includeHumanInterpretation_; }
       set {
@@ -3854,6 +4114,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Whether to include the Aqua debug response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeAquaDebugResponse {
       get { return includeAquaDebugResponse_; }
       set {
@@ -3872,6 +4133,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// time is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TimeOverride {
       get { return timeOverride_; }
       set {
@@ -3886,6 +4148,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Set to true if request is initiated by an internal Google user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsInternalGoogleUser {
       get { return isInternalGoogleUser_; }
       set {
@@ -3901,6 +4164,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// true, cache won't be queried and updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IgnoreCache {
       get { return ignoreCache_; }
       set {
@@ -3916,6 +4180,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// EntityIndex for SearchEntities.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeSearchEntitiesRpc {
       get { return includeSearchEntitiesRpc_; }
       set {
@@ -3931,6 +4196,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Annotations service for ListColumnAnnotations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeListColumnAnnotationsRpc {
       get { return includeListColumnAnnotationsRpc_; }
       set {
@@ -3945,6 +4211,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Whether to include the entity list passed to Analyza.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeVirtualAnalystEntities {
       get { return includeVirtualAnalystEntities_; }
       set {
@@ -3959,6 +4226,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Whether to include the table list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeTableList {
       get { return includeTableList_; }
       set {
@@ -3973,6 +4241,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     /// Whether to include the domain list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeDomainList {
       get { return includeDomainList_; }
       set {
@@ -3981,11 +4250,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DebugFlags);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DebugFlags other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4009,6 +4280,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (IncludeVaQuery != false) hash ^= IncludeVaQuery.GetHashCode();
@@ -4030,11 +4302,13 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4095,6 +4369,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IncludeVaQuery != false) {
         output.WriteRawTag(8);
@@ -4151,6 +4426,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (IncludeVaQuery != false) {
@@ -4196,6 +4472,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DebugFlags other) {
       if (other == null) {
         return;
@@ -4240,6 +4517,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4305,6 +4583,7 @@ namespace Google.Cloud.DataQnA.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

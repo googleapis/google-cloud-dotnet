@@ -64,19 +64,23 @@ namespace Google.Cloud.ServiceControl.V1 {
     private static readonly pb::MessageParser<HttpRequest> _parser = new pb::MessageParser<HttpRequest>(() => new HttpRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HttpRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ServiceControl.V1.HttpRequestReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpRequest() {
       OnConstruction();
     }
@@ -84,6 +88,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpRequest(HttpRequest other) : this() {
       requestMethod_ = other.requestMethod_;
       requestUrl_ = other.requestUrl_;
@@ -104,6 +109,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpRequest Clone() {
       return new HttpRequest(this);
     }
@@ -115,6 +121,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// The request method. Examples: `"GET"`, `"HEAD"`, `"PUT"`, `"POST"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestMethod {
       get { return requestMethod_; }
       set {
@@ -131,6 +138,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Example: `"http://example.com/some/info?color=red"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestUrl {
       get { return requestUrl_; }
       set {
@@ -146,6 +154,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// headers and the request body.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long RequestSize {
       get { return requestSize_; }
       set {
@@ -161,6 +170,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Examples: 200, 404.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Status {
       get { return status_; }
       set {
@@ -176,6 +186,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// including the response headers and the response body.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ResponseSize {
       get { return responseSize_; }
       set {
@@ -192,6 +203,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// CLR 1.0.3705)"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserAgent {
       get { return userAgent_; }
       set {
@@ -207,6 +219,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// request. Examples: `"192.168.1.1"`, `"FE80::0202:B3FF:FE1E:8329"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RemoteIp {
       get { return remoteIp_; }
       set {
@@ -222,6 +235,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// sent to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServerIp {
       get { return serverIp_; }
       set {
@@ -238,6 +252,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Definitions](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Referer {
       get { return referer_; }
       set {
@@ -253,6 +268,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// received until the response was sent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Latency {
       get { return latency_; }
       set {
@@ -267,6 +283,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Whether or not a cache lookup was attempted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CacheLookup {
       get { return cacheLookup_; }
       set {
@@ -282,6 +299,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// (with or without validation).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CacheHit {
       get { return cacheHit_; }
       set {
@@ -298,6 +316,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// True.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CacheValidatedWithOriginServer {
       get { return cacheValidatedWithOriginServer_; }
       set {
@@ -313,6 +332,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// cache fill was attempted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long CacheFillBytes {
       get { return cacheFillBytes_; }
       set {
@@ -327,6 +347,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Protocol used for the request. Examples: "HTTP/1.1", "HTTP/2", "websocket"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Protocol {
       get { return protocol_; }
       set {
@@ -335,11 +356,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HttpRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HttpRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -366,6 +389,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (RequestMethod.Length != 0) hash ^= RequestMethod.GetHashCode();
@@ -390,11 +414,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -467,6 +493,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RequestMethod.Length != 0) {
         output.WriteRawTag(10);
@@ -535,6 +562,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (RequestMethod.Length != 0) {
@@ -589,6 +617,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HttpRequest other) {
       if (other == null) {
         return;
@@ -645,6 +674,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -725,6 +755,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

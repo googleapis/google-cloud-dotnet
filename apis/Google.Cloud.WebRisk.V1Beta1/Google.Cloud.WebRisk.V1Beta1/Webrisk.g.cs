@@ -176,19 +176,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<ComputeThreatListDiffRequest> _parser = new pb::MessageParser<ComputeThreatListDiffRequest>(() => new ComputeThreatListDiffRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ComputeThreatListDiffRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComputeThreatListDiffRequest() {
       OnConstruction();
     }
@@ -196,6 +200,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComputeThreatListDiffRequest(ComputeThreatListDiffRequest other) : this() {
       threatType_ = other.threatType_;
       versionToken_ = other.versionToken_;
@@ -204,6 +209,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComputeThreatListDiffRequest Clone() {
       return new ComputeThreatListDiffRequest(this);
     }
@@ -215,6 +221,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// The ThreatList to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.ThreatType ThreatType {
       get { return threatType_; }
       set {
@@ -230,6 +237,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// client version that was received from the last successful diff).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString VersionToken {
       get { return versionToken_; }
       set {
@@ -244,6 +252,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// Required. The constraints associated with this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Types.Constraints Constraints {
       get { return constraints_; }
       set {
@@ -252,11 +261,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ComputeThreatListDiffRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ComputeThreatListDiffRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -271,6 +282,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) hash ^= ThreatType.GetHashCode();
@@ -283,11 +295,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -312,6 +326,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) {
         output.WriteRawTag(8);
@@ -332,6 +347,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ThreatType != global::Google.Cloud.WebRisk.V1Beta1.ThreatType.Unspecified) {
@@ -350,6 +366,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ComputeThreatListDiffRequest other) {
       if (other == null) {
         return;
@@ -370,6 +387,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -402,6 +420,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -432,6 +451,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ComputeThreatListDiffRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The constraints for this diff.
@@ -444,19 +464,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         private static readonly pb::MessageParser<Constraints> _parser = new pb::MessageParser<Constraints>(() => new Constraints());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Constraints> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffRequest.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Constraints() {
           OnConstruction();
         }
@@ -464,6 +488,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Constraints(Constraints other) : this() {
           maxDiffEntries_ = other.maxDiffEntries_;
           maxDatabaseEntries_ = other.maxDatabaseEntries_;
@@ -472,6 +497,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Constraints Clone() {
           return new Constraints(this);
         }
@@ -485,6 +511,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// 2**20.  If zero, no diff size limit is set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int MaxDiffEntries {
           get { return maxDiffEntries_; }
           set {
@@ -501,6 +528,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// 2**20. If zero, no database size limit is set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int MaxDatabaseEntries {
           get { return maxDatabaseEntries_; }
           set {
@@ -517,16 +545,19 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// The compression types supported by the client.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1Beta1.CompressionType> SupportedCompressions {
           get { return supportedCompressions_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Constraints);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Constraints other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -541,6 +572,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (MaxDiffEntries != 0) hash ^= MaxDiffEntries.GetHashCode();
@@ -553,11 +585,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -579,6 +613,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (MaxDiffEntries != 0) {
             output.WriteRawTag(8);
@@ -596,6 +631,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (MaxDiffEntries != 0) {
@@ -612,6 +648,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Constraints other) {
           if (other == null) {
             return;
@@ -627,6 +664,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -657,6 +695,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -697,19 +736,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<ComputeThreatListDiffResponse> _parser = new pb::MessageParser<ComputeThreatListDiffResponse>(() => new ComputeThreatListDiffResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ComputeThreatListDiffResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComputeThreatListDiffResponse() {
       OnConstruction();
     }
@@ -717,6 +760,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComputeThreatListDiffResponse(ComputeThreatListDiffResponse other) : this() {
       responseType_ = other.responseType_;
       additions_ = other.additions_ != null ? other.additions_.Clone() : null;
@@ -728,6 +772,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComputeThreatListDiffResponse Clone() {
       return new ComputeThreatListDiffResponse(this);
     }
@@ -740,6 +785,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// client when the response is received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType ResponseType {
       get { return responseType_; }
       set {
@@ -754,6 +800,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// A set of entries to add to a local threat type's list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryAdditions Additions {
       get { return additions_; }
       set {
@@ -769,6 +816,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// This field may be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.ThreatEntryRemovals Removals {
       get { return removals_; }
       set {
@@ -783,6 +831,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// The new opaque client version token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString NewVersionToken {
       get { return newVersionToken_; }
       set {
@@ -800,6 +849,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// disregard this diff and retry later.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.Checksum Checksum {
       get { return checksum_; }
       set {
@@ -817,6 +867,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// If this field is not set clients may update as soon as they want.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp RecommendedNextDiff {
       get { return recommendedNextDiff_; }
       set {
@@ -825,11 +876,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ComputeThreatListDiffResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ComputeThreatListDiffResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -847,6 +900,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ResponseType != global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified) hash ^= ResponseType.GetHashCode();
@@ -862,11 +916,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -903,6 +959,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (recommendedNextDiff_ != null) {
         output.WriteRawTag(18);
@@ -935,6 +992,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ResponseType != global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Types.ResponseType.Unspecified) {
@@ -962,6 +1020,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ComputeThreatListDiffResponse other) {
       if (other == null) {
         return;
@@ -1000,6 +1059,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1053,6 +1113,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1104,6 +1165,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ComputeThreatListDiffResponse message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The type of response sent to the client.
@@ -1136,19 +1198,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         private static readonly pb::MessageParser<Checksum> _parser = new pb::MessageParser<Checksum>(() => new Checksum());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Checksum> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.WebRisk.V1Beta1.ComputeThreatListDiffResponse.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Checksum() {
           OnConstruction();
         }
@@ -1156,12 +1222,14 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Checksum(Checksum other) : this() {
           sha256_ = other.sha256_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Checksum Clone() {
           return new Checksum(this);
         }
@@ -1174,6 +1242,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// hashes present in the database.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pb::ByteString Sha256 {
           get { return sha256_; }
           set {
@@ -1182,11 +1251,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Checksum);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Checksum other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1199,6 +1270,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Sha256.Length != 0) hash ^= Sha256.GetHashCode();
@@ -1209,11 +1281,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1230,6 +1304,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Sha256.Length != 0) {
             output.WriteRawTag(10);
@@ -1242,6 +1317,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Sha256.Length != 0) {
@@ -1254,6 +1330,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Checksum other) {
           if (other == null) {
             return;
@@ -1265,6 +1342,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1286,6 +1364,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1320,19 +1399,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<SearchUrisRequest> _parser = new pb::MessageParser<SearchUrisRequest>(() => new SearchUrisRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SearchUrisRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchUrisRequest() {
       OnConstruction();
     }
@@ -1340,6 +1423,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchUrisRequest(SearchUrisRequest other) : this() {
       uri_ = other.uri_;
       threatTypes_ = other.threatTypes_.Clone();
@@ -1347,6 +1431,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchUrisRequest Clone() {
       return new SearchUrisRequest(this);
     }
@@ -1358,6 +1443,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// Required. The URI to be checked for matches.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
       get { return uri_; }
       set {
@@ -1374,16 +1460,19 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// Required. The ThreatLists to search in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1Beta1.ThreatType> ThreatTypes {
       get { return threatTypes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SearchUrisRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SearchUrisRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1397,6 +1486,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
@@ -1408,11 +1498,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1430,6 +1522,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Uri.Length != 0) {
         output.WriteRawTag(10);
@@ -1443,6 +1536,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Uri.Length != 0) {
@@ -1456,6 +1550,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SearchUrisRequest other) {
       if (other == null) {
         return;
@@ -1468,6 +1563,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1494,6 +1590,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1525,19 +1622,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<SearchUrisResponse> _parser = new pb::MessageParser<SearchUrisResponse>(() => new SearchUrisResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SearchUrisResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchUrisResponse() {
       OnConstruction();
     }
@@ -1545,12 +1646,14 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchUrisResponse(SearchUrisResponse other) : this() {
       threat_ = other.threat_ != null ? other.threat_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchUrisResponse Clone() {
       return new SearchUrisResponse(this);
     }
@@ -1562,6 +1665,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// The threat list matches. This may be empty if the URI is on no list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Types.ThreatUri Threat {
       get { return threat_; }
       set {
@@ -1570,11 +1674,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SearchUrisResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SearchUrisResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1587,6 +1693,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (threat_ != null) hash ^= Threat.GetHashCode();
@@ -1597,11 +1704,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1618,6 +1727,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (threat_ != null) {
         output.WriteRawTag(10);
@@ -1630,6 +1740,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (threat_ != null) {
@@ -1642,6 +1753,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SearchUrisResponse other) {
       if (other == null) {
         return;
@@ -1656,6 +1768,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1680,6 +1793,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1702,6 +1816,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the SearchUrisResponse message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Contains threat information on a matching uri.
@@ -1714,19 +1829,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         private static readonly pb::MessageParser<ThreatUri> _parser = new pb::MessageParser<ThreatUri>(() => new ThreatUri());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ThreatUri> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.WebRisk.V1Beta1.SearchUrisResponse.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ThreatUri() {
           OnConstruction();
         }
@@ -1734,6 +1853,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ThreatUri(ThreatUri other) : this() {
           threatTypes_ = other.threatTypes_.Clone();
           expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
@@ -1741,6 +1861,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ThreatUri Clone() {
           return new ThreatUri(this);
         }
@@ -1754,6 +1875,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// The ThreatList this threat belongs to.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1Beta1.ThreatType> ThreatTypes {
           get { return threatTypes_; }
         }
@@ -1766,6 +1888,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// response past this timestamp to avoid false positives.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
           get { return expireTime_; }
           set {
@@ -1774,11 +1897,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ThreatUri);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ThreatUri other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1792,6 +1917,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= threatTypes_.GetHashCode();
@@ -1803,11 +1929,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1825,6 +1953,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           threatTypes_.WriteTo(ref output, _repeated_threatTypes_codec);
           if (expireTime_ != null) {
@@ -1838,6 +1967,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += threatTypes_.CalculateSize(_repeated_threatTypes_codec);
@@ -1851,6 +1981,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ThreatUri other) {
           if (other == null) {
             return;
@@ -1866,6 +1997,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1895,6 +2027,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1937,19 +2070,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<SearchHashesRequest> _parser = new pb::MessageParser<SearchHashesRequest>(() => new SearchHashesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SearchHashesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchHashesRequest() {
       OnConstruction();
     }
@@ -1957,6 +2094,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchHashesRequest(SearchHashesRequest other) : this() {
       hashPrefix_ = other.hashPrefix_;
       threatTypes_ = other.threatTypes_.Clone();
@@ -1964,6 +2102,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchHashesRequest Clone() {
       return new SearchHashesRequest(this);
     }
@@ -1976,6 +2115,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// hash. For JSON requests, this field is base64-encoded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString HashPrefix {
       get { return hashPrefix_; }
       set {
@@ -1992,16 +2132,19 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// Required. The ThreatLists to search in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1Beta1.ThreatType> ThreatTypes {
       get { return threatTypes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SearchHashesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SearchHashesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2015,6 +2158,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (HashPrefix.Length != 0) hash ^= HashPrefix.GetHashCode();
@@ -2026,11 +2170,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2048,6 +2194,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HashPrefix.Length != 0) {
         output.WriteRawTag(10);
@@ -2061,6 +2208,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (HashPrefix.Length != 0) {
@@ -2074,6 +2222,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SearchHashesRequest other) {
       if (other == null) {
         return;
@@ -2086,6 +2235,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2112,6 +2262,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2143,19 +2294,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<SearchHashesResponse> _parser = new pb::MessageParser<SearchHashesResponse>(() => new SearchHashesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SearchHashesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchHashesResponse() {
       OnConstruction();
     }
@@ -2163,6 +2318,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchHashesResponse(SearchHashesResponse other) : this() {
       threats_ = other.threats_.Clone();
       negativeExpireTime_ = other.negativeExpireTime_ != null ? other.negativeExpireTime_.Clone() : null;
@@ -2170,6 +2326,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchHashesResponse Clone() {
       return new SearchHashesResponse(this);
     }
@@ -2184,6 +2341,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// The hash will be populated in the key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Types.ThreatHash> Threats {
       get { return threats_; }
     }
@@ -2196,6 +2354,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// cache the response until.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp NegativeExpireTime {
       get { return negativeExpireTime_; }
       set {
@@ -2204,11 +2363,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SearchHashesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SearchHashesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2222,6 +2383,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= threats_.GetHashCode();
@@ -2233,11 +2395,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2255,6 +2419,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       threats_.WriteTo(ref output, _repeated_threats_codec);
       if (negativeExpireTime_ != null) {
@@ -2268,6 +2433,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += threats_.CalculateSize(_repeated_threats_codec);
@@ -2281,6 +2447,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SearchHashesResponse other) {
       if (other == null) {
         return;
@@ -2296,6 +2463,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2324,6 +2492,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2350,6 +2519,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the SearchHashesResponse message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Contains threat information on a matching hash.
@@ -2362,19 +2532,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         private static readonly pb::MessageParser<ThreatHash> _parser = new pb::MessageParser<ThreatHash>(() => new ThreatHash());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ThreatHash> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.WebRisk.V1Beta1.SearchHashesResponse.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ThreatHash() {
           OnConstruction();
         }
@@ -2382,6 +2556,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ThreatHash(ThreatHash other) : this() {
           threatTypes_ = other.threatTypes_.Clone();
           hash_ = other.hash_;
@@ -2390,6 +2565,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ThreatHash Clone() {
           return new ThreatHash(this);
         }
@@ -2404,6 +2580,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// This must contain at least one entry.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1Beta1.ThreatType> ThreatTypes {
           get { return threatTypes_; }
         }
@@ -2416,6 +2593,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// requests, hashes are base64-encoded.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pb::ByteString Hash {
           get { return hash_; }
           set {
@@ -2431,6 +2609,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         /// response past this timestamp to avoid false positives.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
           get { return expireTime_; }
           set {
@@ -2439,11 +2618,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ThreatHash);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ThreatHash other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2458,6 +2639,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= threatTypes_.GetHashCode();
@@ -2470,11 +2652,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2496,6 +2680,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           threatTypes_.WriteTo(ref output, _repeated_threatTypes_codec);
           if (Hash.Length != 0) {
@@ -2513,6 +2698,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += threatTypes_.CalculateSize(_repeated_threatTypes_codec);
@@ -2529,6 +2715,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ThreatHash other) {
           if (other == null) {
             return;
@@ -2547,6 +2734,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2580,6 +2768,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2627,19 +2816,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<ThreatEntryAdditions> _parser = new pb::MessageParser<ThreatEntryAdditions>(() => new ThreatEntryAdditions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ThreatEntryAdditions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThreatEntryAdditions() {
       OnConstruction();
     }
@@ -2647,6 +2840,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThreatEntryAdditions(ThreatEntryAdditions other) : this() {
       rawHashes_ = other.rawHashes_.Clone();
       riceHashes_ = other.riceHashes_ != null ? other.riceHashes_.Clone() : null;
@@ -2654,6 +2848,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThreatEntryAdditions Clone() {
       return new ThreatEntryAdditions(this);
     }
@@ -2668,6 +2863,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// Repeated to allow returning sets of hashes with different prefix sizes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.WebRisk.V1Beta1.RawHashes> RawHashes {
       get { return rawHashes_; }
     }
@@ -2681,6 +2877,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// ascending order, then delta encoded and stored as encoded_data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding RiceHashes {
       get { return riceHashes_; }
       set {
@@ -2689,11 +2886,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ThreatEntryAdditions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ThreatEntryAdditions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2707,6 +2906,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= rawHashes_.GetHashCode();
@@ -2718,11 +2918,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2740,6 +2942,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       rawHashes_.WriteTo(ref output, _repeated_rawHashes_codec);
       if (riceHashes_ != null) {
@@ -2753,6 +2956,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += rawHashes_.CalculateSize(_repeated_rawHashes_codec);
@@ -2766,6 +2970,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ThreatEntryAdditions other) {
       if (other == null) {
         return;
@@ -2781,6 +2986,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2809,6 +3015,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2845,19 +3052,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<ThreatEntryRemovals> _parser = new pb::MessageParser<ThreatEntryRemovals>(() => new ThreatEntryRemovals());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ThreatEntryRemovals> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThreatEntryRemovals() {
       OnConstruction();
     }
@@ -2865,6 +3076,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThreatEntryRemovals(ThreatEntryRemovals other) : this() {
       rawIndices_ = other.rawIndices_ != null ? other.rawIndices_.Clone() : null;
       riceIndices_ = other.riceIndices_ != null ? other.riceIndices_.Clone() : null;
@@ -2872,6 +3084,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThreatEntryRemovals Clone() {
       return new ThreatEntryRemovals(this);
     }
@@ -2883,6 +3096,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// The raw removal indices for a local list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.RawIndices RawIndices {
       get { return rawIndices_; }
       set {
@@ -2900,6 +3114,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// and stored as encoded_data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.WebRisk.V1Beta1.RiceDeltaEncoding RiceIndices {
       get { return riceIndices_; }
       set {
@@ -2908,11 +3123,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ThreatEntryRemovals);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ThreatEntryRemovals other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2926,6 +3143,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (rawIndices_ != null) hash ^= RawIndices.GetHashCode();
@@ -2937,11 +3155,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2962,6 +3182,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rawIndices_ != null) {
         output.WriteRawTag(10);
@@ -2978,6 +3199,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (rawIndices_ != null) {
@@ -2993,6 +3215,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ThreatEntryRemovals other) {
       if (other == null) {
         return;
@@ -3013,6 +3236,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3044,6 +3268,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3083,19 +3308,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<RawIndices> _parser = new pb::MessageParser<RawIndices>(() => new RawIndices());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RawIndices> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RawIndices() {
       OnConstruction();
     }
@@ -3103,12 +3332,14 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RawIndices(RawIndices other) : this() {
       indices_ = other.indices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RawIndices Clone() {
       return new RawIndices(this);
     }
@@ -3122,16 +3353,19 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// The indices to remove from a lexicographically-sorted local list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> Indices {
       get { return indices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RawIndices);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RawIndices other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3144,6 +3378,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= indices_.GetHashCode();
@@ -3154,11 +3389,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3172,6 +3409,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       indices_.WriteTo(ref output, _repeated_indices_codec);
       if (_unknownFields != null) {
@@ -3181,6 +3419,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += indices_.CalculateSize(_repeated_indices_codec);
@@ -3191,6 +3430,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RawIndices other) {
       if (other == null) {
         return;
@@ -3200,6 +3440,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3222,6 +3463,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3259,19 +3501,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<RawHashes> _parser = new pb::MessageParser<RawHashes>(() => new RawHashes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RawHashes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RawHashes() {
       OnConstruction();
     }
@@ -3279,6 +3525,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RawHashes(RawHashes other) : this() {
       prefixSize_ = other.prefixSize_;
       rawHashes_ = other.rawHashes_;
@@ -3286,6 +3533,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RawHashes Clone() {
       return new RawHashes(this);
     }
@@ -3298,6 +3546,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// anywhere from 4 (shortest prefix) to 32 (full SHA256 hash).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PrefixSize {
       get { return prefixSize_; }
       set {
@@ -3314,6 +3563,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// base64-encoded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString RawHashes_ {
       get { return rawHashes_; }
       set {
@@ -3322,11 +3572,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RawHashes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RawHashes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3340,6 +3592,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PrefixSize != 0) hash ^= PrefixSize.GetHashCode();
@@ -3351,11 +3604,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3376,6 +3631,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PrefixSize != 0) {
         output.WriteRawTag(8);
@@ -3392,6 +3648,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PrefixSize != 0) {
@@ -3407,6 +3664,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RawHashes other) {
       if (other == null) {
         return;
@@ -3421,6 +3679,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3446,6 +3705,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3480,19 +3740,23 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     private static readonly pb::MessageParser<RiceDeltaEncoding> _parser = new pb::MessageParser<RiceDeltaEncoding>(() => new RiceDeltaEncoding());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RiceDeltaEncoding> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.WebRisk.V1Beta1.WebriskReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RiceDeltaEncoding() {
       OnConstruction();
     }
@@ -3500,6 +3764,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RiceDeltaEncoding(RiceDeltaEncoding other) : this() {
       firstValue_ = other.firstValue_;
       riceParameter_ = other.riceParameter_;
@@ -3509,6 +3774,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RiceDeltaEncoding Clone() {
       return new RiceDeltaEncoding(this);
     }
@@ -3522,6 +3788,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// missing, assume zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long FirstValue {
       get { return firstValue_; }
       set {
@@ -3537,6 +3804,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// is missing (that is, zero) if `num_entries` is zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RiceParameter {
       get { return riceParameter_; }
       set {
@@ -3553,6 +3821,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// stored in `first_value`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int EntryCount {
       get { return entryCount_; }
       set {
@@ -3567,6 +3836,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     /// The encoded deltas that are encoded using the Golomb-Rice coder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EncodedData {
       get { return encodedData_; }
       set {
@@ -3575,11 +3845,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RiceDeltaEncoding);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RiceDeltaEncoding other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3595,6 +3867,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (FirstValue != 0L) hash ^= FirstValue.GetHashCode();
@@ -3608,11 +3881,13 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3641,6 +3916,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FirstValue != 0L) {
         output.WriteRawTag(8);
@@ -3665,6 +3941,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (FirstValue != 0L) {
@@ -3686,6 +3963,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RiceDeltaEncoding other) {
       if (other == null) {
         return;
@@ -3706,6 +3984,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3739,6 +4018,7 @@ namespace Google.Cloud.WebRisk.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

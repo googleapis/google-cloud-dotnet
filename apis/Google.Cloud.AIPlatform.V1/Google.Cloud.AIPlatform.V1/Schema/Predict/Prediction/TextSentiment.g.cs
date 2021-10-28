@@ -58,19 +58,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     private static readonly pb::MessageParser<TextSentimentPredictionResult> _parser = new pb::MessageParser<TextSentimentPredictionResult>(() => new TextSentimentPredictionResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextSentimentPredictionResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.TextSentimentReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextSentimentPredictionResult() {
       OnConstruction();
     }
@@ -78,12 +82,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextSentimentPredictionResult(TextSentimentPredictionResult other) : this() {
       sentiment_ = other.sentiment_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextSentimentPredictionResult Clone() {
       return new TextSentimentPredictionResult(this);
     }
@@ -99,6 +105,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// an integer value between 1 (inclusive) and 10 (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Sentiment {
       get { return sentiment_; }
       set {
@@ -107,11 +114,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextSentimentPredictionResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextSentimentPredictionResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -124,6 +133,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Sentiment != 0) hash ^= Sentiment.GetHashCode();
@@ -134,11 +144,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -155,6 +167,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Sentiment != 0) {
         output.WriteRawTag(8);
@@ -167,6 +180,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Sentiment != 0) {
@@ -179,6 +193,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextSentimentPredictionResult other) {
       if (other == null) {
         return;
@@ -190,6 +205,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -211,6 +227,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

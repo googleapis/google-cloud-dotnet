@@ -402,19 +402,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<AnnotateVideoRequest> _parser = new pb::MessageParser<AnnotateVideoRequest>(() => new AnnotateVideoRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnnotateVideoRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoRequest() {
       OnConstruction();
     }
@@ -422,6 +426,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoRequest(AnnotateVideoRequest other) : this() {
       inputUri_ = other.inputUri_;
       inputContent_ = other.inputContent_;
@@ -433,6 +438,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoRequest Clone() {
       return new AnnotateVideoRequest(this);
     }
@@ -454,6 +460,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// in the request as `input_content`. If set, `input_content` must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InputUri {
       get { return inputUri_; }
       set {
@@ -470,6 +477,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// If set, `input_uri` must be unset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString InputContent {
       get { return inputContent_; }
       set {
@@ -486,6 +494,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Required. Requested video annotation features.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Feature> Features {
       get { return features_; }
     }
@@ -497,6 +506,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Additional video context and/or feature-specific parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoContext VideoContext {
       get { return videoContext_; }
       set {
@@ -517,6 +527,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// URIs](https://cloud.google.com/storage/docs/request-endpoints).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OutputUri {
       get { return outputUri_; }
       set {
@@ -534,6 +545,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LocationId {
       get { return locationId_; }
       set {
@@ -542,11 +554,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnnotateVideoRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnnotateVideoRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -564,6 +578,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (InputUri.Length != 0) hash ^= InputUri.GetHashCode();
@@ -579,11 +594,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -617,6 +634,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (InputUri.Length != 0) {
         output.WriteRawTag(10);
@@ -646,6 +664,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (InputUri.Length != 0) {
@@ -671,6 +690,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnnotateVideoRequest other) {
       if (other == null) {
         return;
@@ -698,6 +718,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -743,6 +764,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -796,19 +818,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<VideoContext> _parser = new pb::MessageParser<VideoContext>(() => new VideoContext());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoContext> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoContext() {
       OnConstruction();
     }
@@ -816,6 +842,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoContext(VideoContext other) : this() {
       segments_ = other.segments_.Clone();
       labelDetectionConfig_ = other.labelDetectionConfig_ != null ? other.labelDetectionConfig_.Clone() : null;
@@ -830,6 +857,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoContext Clone() {
       return new VideoContext(this);
     }
@@ -845,6 +873,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// treated as a single segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.VideoSegment> Segments {
       get { return segments_; }
     }
@@ -856,6 +885,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for LABEL_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.LabelDetectionConfig LabelDetectionConfig {
       get { return labelDetectionConfig_; }
       set {
@@ -870,6 +900,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for SHOT_CHANGE_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.ShotChangeDetectionConfig ShotChangeDetectionConfig {
       get { return shotChangeDetectionConfig_; }
       set {
@@ -884,6 +915,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for EXPLICIT_CONTENT_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.ExplicitContentDetectionConfig ExplicitContentDetectionConfig {
       get { return explicitContentDetectionConfig_; }
       set {
@@ -898,6 +930,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for FACE_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.FaceDetectionConfig FaceDetectionConfig {
       get { return faceDetectionConfig_; }
       set {
@@ -912,6 +945,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for SPEECH_TRANSCRIPTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.SpeechTranscriptionConfig SpeechTranscriptionConfig {
       get { return speechTranscriptionConfig_; }
       set {
@@ -926,6 +960,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for TEXT_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.TextDetectionConfig TextDetectionConfig {
       get { return textDetectionConfig_; }
       set {
@@ -940,6 +975,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for PERSON_DETECTION.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.PersonDetectionConfig PersonDetectionConfig {
       get { return personDetectionConfig_; }
       set {
@@ -954,6 +990,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Config for OBJECT_TRACKING.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingConfig ObjectTrackingConfig {
       get { return objectTrackingConfig_; }
       set {
@@ -962,11 +999,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoContext);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoContext other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -987,6 +1026,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= segments_.GetHashCode();
@@ -1005,11 +1045,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1055,6 +1097,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       segments_.WriteTo(ref output, _repeated_segments_codec);
       if (labelDetectionConfig_ != null) {
@@ -1096,6 +1139,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += segments_.CalculateSize(_repeated_segments_codec);
@@ -1130,6 +1174,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoContext other) {
       if (other == null) {
         return;
@@ -1187,6 +1232,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1264,6 +1310,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1349,19 +1396,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<LabelDetectionConfig> _parser = new pb::MessageParser<LabelDetectionConfig>(() => new LabelDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LabelDetectionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelDetectionConfig() {
       OnConstruction();
     }
@@ -1369,6 +1420,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelDetectionConfig(LabelDetectionConfig other) : this() {
       labelDetectionMode_ = other.labelDetectionMode_;
       stationaryCamera_ = other.stationaryCamera_;
@@ -1379,6 +1431,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelDetectionConfig Clone() {
       return new LabelDetectionConfig(this);
     }
@@ -1392,6 +1445,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// If unspecified, defaults to `SHOT_MODE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode LabelDetectionMode {
       get { return labelDetectionMode_; }
       set {
@@ -1408,6 +1462,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// objects. Should be used with `SHOT_AND_FRAME_MODE` enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool StationaryCamera {
       get { return stationaryCamera_; }
       set {
@@ -1424,6 +1479,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// "builtin/latest".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -1443,6 +1499,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// the default threshold everytime when we release a new model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float FrameConfidenceThreshold {
       get { return frameConfidenceThreshold_; }
       set {
@@ -1462,6 +1519,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// the default threshold everytime when we release a new model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float VideoConfidenceThreshold {
       get { return videoConfidenceThreshold_; }
       set {
@@ -1470,11 +1528,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LabelDetectionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LabelDetectionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1491,6 +1551,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) hash ^= LabelDetectionMode.GetHashCode();
@@ -1505,11 +1566,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1542,6 +1605,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) {
         output.WriteRawTag(8);
@@ -1570,6 +1634,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (LabelDetectionMode != global::Google.Cloud.VideoIntelligence.V1.LabelDetectionMode.Unspecified) {
@@ -1594,6 +1659,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LabelDetectionConfig other) {
       if (other == null) {
         return;
@@ -1617,6 +1683,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1654,6 +1721,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1699,19 +1767,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<ShotChangeDetectionConfig> _parser = new pb::MessageParser<ShotChangeDetectionConfig>(() => new ShotChangeDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ShotChangeDetectionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ShotChangeDetectionConfig() {
       OnConstruction();
     }
@@ -1719,12 +1791,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ShotChangeDetectionConfig(ShotChangeDetectionConfig other) : this() {
       model_ = other.model_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ShotChangeDetectionConfig Clone() {
       return new ShotChangeDetectionConfig(this);
     }
@@ -1738,6 +1812,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// "builtin/latest".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -1746,11 +1821,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ShotChangeDetectionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ShotChangeDetectionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1763,6 +1840,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -1773,11 +1851,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1794,6 +1874,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Model.Length != 0) {
         output.WriteRawTag(10);
@@ -1806,6 +1887,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Model.Length != 0) {
@@ -1818,6 +1900,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ShotChangeDetectionConfig other) {
       if (other == null) {
         return;
@@ -1829,6 +1912,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1850,6 +1934,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1879,19 +1964,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<ObjectTrackingConfig> _parser = new pb::MessageParser<ObjectTrackingConfig>(() => new ObjectTrackingConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ObjectTrackingConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingConfig() {
       OnConstruction();
     }
@@ -1899,12 +1988,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingConfig(ObjectTrackingConfig other) : this() {
       model_ = other.model_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingConfig Clone() {
       return new ObjectTrackingConfig(this);
     }
@@ -1918,6 +2009,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// "builtin/latest".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -1926,11 +2018,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ObjectTrackingConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ObjectTrackingConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1943,6 +2037,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -1953,11 +2048,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1974,6 +2071,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Model.Length != 0) {
         output.WriteRawTag(10);
@@ -1986,6 +2084,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Model.Length != 0) {
@@ -1998,6 +2097,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ObjectTrackingConfig other) {
       if (other == null) {
         return;
@@ -2009,6 +2109,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2030,6 +2131,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2059,19 +2161,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<FaceDetectionConfig> _parser = new pb::MessageParser<FaceDetectionConfig>(() => new FaceDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FaceDetectionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceDetectionConfig() {
       OnConstruction();
     }
@@ -2079,6 +2185,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceDetectionConfig(FaceDetectionConfig other) : this() {
       model_ = other.model_;
       includeBoundingBoxes_ = other.includeBoundingBoxes_;
@@ -2087,6 +2194,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceDetectionConfig Clone() {
       return new FaceDetectionConfig(this);
     }
@@ -2100,6 +2208,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// "builtin/latest".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -2114,6 +2223,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Whether bounding boxes are included in the face annotation output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeBoundingBoxes {
       get { return includeBoundingBoxes_; }
       set {
@@ -2129,6 +2239,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// mouth_open etc. Ignored if 'include_bounding_boxes' is set to false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeAttributes {
       get { return includeAttributes_; }
       set {
@@ -2137,11 +2248,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FaceDetectionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FaceDetectionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2156,6 +2269,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -2168,11 +2282,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2197,6 +2313,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Model.Length != 0) {
         output.WriteRawTag(10);
@@ -2217,6 +2334,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Model.Length != 0) {
@@ -2235,6 +2353,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FaceDetectionConfig other) {
       if (other == null) {
         return;
@@ -2252,6 +2371,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2281,6 +2401,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2318,19 +2439,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<PersonDetectionConfig> _parser = new pb::MessageParser<PersonDetectionConfig>(() => new PersonDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PersonDetectionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersonDetectionConfig() {
       OnConstruction();
     }
@@ -2338,6 +2463,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersonDetectionConfig(PersonDetectionConfig other) : this() {
       includeBoundingBoxes_ = other.includeBoundingBoxes_;
       includePoseLandmarks_ = other.includePoseLandmarks_;
@@ -2346,6 +2472,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersonDetectionConfig Clone() {
       return new PersonDetectionConfig(this);
     }
@@ -2358,6 +2485,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeBoundingBoxes {
       get { return includeBoundingBoxes_; }
       set {
@@ -2373,6 +2501,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// 'include_bounding_boxes' is set to false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludePoseLandmarks {
       get { return includePoseLandmarks_; }
       set {
@@ -2390,6 +2519,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Ignored if 'include_bounding_boxes' is set to false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeAttributes {
       get { return includeAttributes_; }
       set {
@@ -2398,11 +2528,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PersonDetectionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PersonDetectionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2417,6 +2549,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (IncludeBoundingBoxes != false) hash ^= IncludeBoundingBoxes.GetHashCode();
@@ -2429,11 +2562,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2458,6 +2593,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IncludeBoundingBoxes != false) {
         output.WriteRawTag(8);
@@ -2478,6 +2614,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (IncludeBoundingBoxes != false) {
@@ -2496,6 +2633,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PersonDetectionConfig other) {
       if (other == null) {
         return;
@@ -2513,6 +2651,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2542,6 +2681,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2579,19 +2719,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<ExplicitContentDetectionConfig> _parser = new pb::MessageParser<ExplicitContentDetectionConfig>(() => new ExplicitContentDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExplicitContentDetectionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentDetectionConfig() {
       OnConstruction();
     }
@@ -2599,12 +2743,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentDetectionConfig(ExplicitContentDetectionConfig other) : this() {
       model_ = other.model_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentDetectionConfig Clone() {
       return new ExplicitContentDetectionConfig(this);
     }
@@ -2618,6 +2764,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// "builtin/latest".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -2626,11 +2773,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExplicitContentDetectionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExplicitContentDetectionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2643,6 +2792,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -2653,11 +2803,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2674,6 +2826,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Model.Length != 0) {
         output.WriteRawTag(10);
@@ -2686,6 +2839,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Model.Length != 0) {
@@ -2698,6 +2852,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExplicitContentDetectionConfig other) {
       if (other == null) {
         return;
@@ -2709,6 +2864,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2730,6 +2886,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2759,19 +2916,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<TextDetectionConfig> _parser = new pb::MessageParser<TextDetectionConfig>(() => new TextDetectionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextDetectionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextDetectionConfig() {
       OnConstruction();
     }
@@ -2779,6 +2940,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextDetectionConfig(TextDetectionConfig other) : this() {
       languageHints_ = other.languageHints_.Clone();
       model_ = other.model_;
@@ -2786,6 +2948,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextDetectionConfig Clone() {
       return new TextDetectionConfig(this);
     }
@@ -2803,6 +2966,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Automatic language detection is performed if no hint is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> LanguageHints {
       get { return languageHints_; }
     }
@@ -2816,6 +2980,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// "builtin/latest".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -2824,11 +2989,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextDetectionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextDetectionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2842,6 +3009,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= languageHints_.GetHashCode();
@@ -2853,11 +3021,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2875,6 +3045,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       languageHints_.WriteTo(ref output, _repeated_languageHints_codec);
       if (Model.Length != 0) {
@@ -2888,6 +3059,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += languageHints_.CalculateSize(_repeated_languageHints_codec);
@@ -2901,6 +3073,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextDetectionConfig other) {
       if (other == null) {
         return;
@@ -2913,6 +3086,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2938,6 +3112,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2971,19 +3146,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<VideoSegment> _parser = new pb::MessageParser<VideoSegment>(() => new VideoSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoSegment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoSegment() {
       OnConstruction();
     }
@@ -2991,6 +3170,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoSegment(VideoSegment other) : this() {
       startTimeOffset_ = other.startTimeOffset_ != null ? other.startTimeOffset_.Clone() : null;
       endTimeOffset_ = other.endTimeOffset_ != null ? other.endTimeOffset_.Clone() : null;
@@ -2998,6 +3178,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoSegment Clone() {
       return new VideoSegment(this);
     }
@@ -3010,6 +3191,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// corresponding to the start of the segment (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
       get { return startTimeOffset_; }
       set {
@@ -3025,6 +3207,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// corresponding to the end of the segment (inclusive).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration EndTimeOffset {
       get { return endTimeOffset_; }
       set {
@@ -3033,11 +3216,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoSegment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoSegment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3051,6 +3236,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startTimeOffset_ != null) hash ^= StartTimeOffset.GetHashCode();
@@ -3062,11 +3248,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3087,6 +3275,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startTimeOffset_ != null) {
         output.WriteRawTag(10);
@@ -3103,6 +3292,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startTimeOffset_ != null) {
@@ -3118,6 +3308,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoSegment other) {
       if (other == null) {
         return;
@@ -3138,6 +3329,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3169,6 +3361,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3208,19 +3401,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<LabelSegment> _parser = new pb::MessageParser<LabelSegment>(() => new LabelSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LabelSegment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelSegment() {
       OnConstruction();
     }
@@ -3228,6 +3425,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelSegment(LabelSegment other) : this() {
       segment_ = other.segment_ != null ? other.segment_.Clone() : null;
       confidence_ = other.confidence_;
@@ -3235,6 +3433,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelSegment Clone() {
       return new LabelSegment(this);
     }
@@ -3246,6 +3445,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Video segment where a label was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
       get { return segment_; }
       set {
@@ -3260,6 +3460,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Confidence that the label is accurate. Range: [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -3268,11 +3469,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LabelSegment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LabelSegment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3286,6 +3489,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (segment_ != null) hash ^= Segment.GetHashCode();
@@ -3297,11 +3501,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3322,6 +3528,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (segment_ != null) {
         output.WriteRawTag(10);
@@ -3338,6 +3545,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (segment_ != null) {
@@ -3353,6 +3561,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LabelSegment other) {
       if (other == null) {
         return;
@@ -3370,6 +3579,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3398,6 +3608,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3434,19 +3645,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<LabelFrame> _parser = new pb::MessageParser<LabelFrame>(() => new LabelFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LabelFrame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelFrame() {
       OnConstruction();
     }
@@ -3454,6 +3669,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelFrame(LabelFrame other) : this() {
       timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
       confidence_ = other.confidence_;
@@ -3461,6 +3677,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelFrame Clone() {
       return new LabelFrame(this);
     }
@@ -3473,6 +3690,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// video frame for this location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
       get { return timeOffset_; }
       set {
@@ -3487,6 +3705,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Confidence that the label is accurate. Range: [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -3495,11 +3714,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LabelFrame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LabelFrame other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3513,6 +3734,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (timeOffset_ != null) hash ^= TimeOffset.GetHashCode();
@@ -3524,11 +3746,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3549,6 +3773,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (timeOffset_ != null) {
         output.WriteRawTag(10);
@@ -3565,6 +3790,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (timeOffset_ != null) {
@@ -3580,6 +3806,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LabelFrame other) {
       if (other == null) {
         return;
@@ -3597,6 +3824,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3625,6 +3853,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3661,19 +3890,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<Entity> _parser = new pb::MessageParser<Entity>(() => new Entity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Entity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entity() {
       OnConstruction();
     }
@@ -3681,6 +3914,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entity(Entity other) : this() {
       entityId_ = other.entityId_;
       description_ = other.description_;
@@ -3689,6 +3923,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Entity Clone() {
       return new Entity(this);
     }
@@ -3702,6 +3937,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// API](https://developers.google.com/knowledge-graph/).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EntityId {
       get { return entityId_; }
       set {
@@ -3716,6 +3952,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Textual description, e.g., `Fixed-gear bicycle`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -3730,6 +3967,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Language code for `description` in BCP-47 format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -3738,11 +3976,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Entity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Entity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3757,6 +3997,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (EntityId.Length != 0) hash ^= EntityId.GetHashCode();
@@ -3769,11 +4010,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3798,6 +4041,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EntityId.Length != 0) {
         output.WriteRawTag(10);
@@ -3818,6 +4062,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (EntityId.Length != 0) {
@@ -3836,6 +4081,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Entity other) {
       if (other == null) {
         return;
@@ -3853,6 +4099,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3882,6 +4129,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3919,19 +4167,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<LabelAnnotation> _parser = new pb::MessageParser<LabelAnnotation>(() => new LabelAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LabelAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelAnnotation() {
       OnConstruction();
     }
@@ -3939,6 +4191,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelAnnotation(LabelAnnotation other) : this() {
       entity_ = other.entity_ != null ? other.entity_.Clone() : null;
       categoryEntities_ = other.categoryEntities_.Clone();
@@ -3949,6 +4202,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelAnnotation Clone() {
       return new LabelAnnotation(this);
     }
@@ -3960,6 +4214,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Detected entity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.Entity Entity {
       get { return entity_; }
       set {
@@ -3979,6 +4234,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// also be a `pet`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Entity> CategoryEntities {
       get { return categoryEntities_; }
     }
@@ -3992,6 +4248,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// All video segments where a label was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelSegment> Segments {
       get { return segments_; }
     }
@@ -4005,6 +4262,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// All video frames where a label was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelFrame> Frames {
       get { return frames_; }
     }
@@ -4016,6 +4274,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Feature version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -4024,11 +4283,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LabelAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LabelAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4045,6 +4306,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (entity_ != null) hash ^= Entity.GetHashCode();
@@ -4059,11 +4321,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4087,6 +4351,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (entity_ != null) {
         output.WriteRawTag(10);
@@ -4106,6 +4371,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (entity_ != null) {
@@ -4124,6 +4390,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LabelAnnotation other) {
       if (other == null) {
         return;
@@ -4144,6 +4411,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4184,6 +4452,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4232,19 +4501,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<ExplicitContentFrame> _parser = new pb::MessageParser<ExplicitContentFrame>(() => new ExplicitContentFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExplicitContentFrame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentFrame() {
       OnConstruction();
     }
@@ -4252,6 +4525,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentFrame(ExplicitContentFrame other) : this() {
       timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
       pornographyLikelihood_ = other.pornographyLikelihood_;
@@ -4259,6 +4533,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentFrame Clone() {
       return new ExplicitContentFrame(this);
     }
@@ -4271,6 +4546,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// video frame for this location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
       get { return timeOffset_; }
       set {
@@ -4285,6 +4561,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Likelihood of the pornography content..
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.Likelihood PornographyLikelihood {
       get { return pornographyLikelihood_; }
       set {
@@ -4293,11 +4570,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExplicitContentFrame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExplicitContentFrame other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4311,6 +4590,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (timeOffset_ != null) hash ^= TimeOffset.GetHashCode();
@@ -4322,11 +4602,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4347,6 +4629,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (timeOffset_ != null) {
         output.WriteRawTag(10);
@@ -4363,6 +4646,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (timeOffset_ != null) {
@@ -4378,6 +4662,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExplicitContentFrame other) {
       if (other == null) {
         return;
@@ -4395,6 +4680,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4423,6 +4709,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4461,19 +4748,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<ExplicitContentAnnotation> _parser = new pb::MessageParser<ExplicitContentAnnotation>(() => new ExplicitContentAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExplicitContentAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentAnnotation() {
       OnConstruction();
     }
@@ -4481,6 +4772,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentAnnotation(ExplicitContentAnnotation other) : this() {
       frames_ = other.frames_.Clone();
       version_ = other.version_;
@@ -4488,6 +4780,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExplicitContentAnnotation Clone() {
       return new ExplicitContentAnnotation(this);
     }
@@ -4501,6 +4794,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// All video frames where explicit content was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.ExplicitContentFrame> Frames {
       get { return frames_; }
     }
@@ -4512,6 +4806,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Feature version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -4520,11 +4815,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExplicitContentAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExplicitContentAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4538,6 +4835,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= frames_.GetHashCode();
@@ -4549,11 +4847,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4571,6 +4871,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       frames_.WriteTo(ref output, _repeated_frames_codec);
       if (Version.Length != 0) {
@@ -4584,6 +4885,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += frames_.CalculateSize(_repeated_frames_codec);
@@ -4597,6 +4899,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExplicitContentAnnotation other) {
       if (other == null) {
         return;
@@ -4609,6 +4912,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4634,6 +4938,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4669,19 +4974,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<NormalizedBoundingBox> _parser = new pb::MessageParser<NormalizedBoundingBox>(() => new NormalizedBoundingBox());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NormalizedBoundingBox> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingBox() {
       OnConstruction();
     }
@@ -4689,6 +4998,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingBox(NormalizedBoundingBox other) : this() {
       left_ = other.left_;
       top_ = other.top_;
@@ -4698,6 +5008,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingBox Clone() {
       return new NormalizedBoundingBox(this);
     }
@@ -4709,6 +5020,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Left X coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Left {
       get { return left_; }
       set {
@@ -4723,6 +5035,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Top Y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Top {
       get { return top_; }
       set {
@@ -4737,6 +5050,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Right X coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Right {
       get { return right_; }
       set {
@@ -4751,6 +5065,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Bottom Y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Bottom {
       get { return bottom_; }
       set {
@@ -4759,11 +5074,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NormalizedBoundingBox);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NormalizedBoundingBox other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4779,6 +5096,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Left != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Left);
@@ -4792,11 +5110,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4825,6 +5145,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Left != 0F) {
         output.WriteRawTag(13);
@@ -4849,6 +5170,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Left != 0F) {
@@ -4870,6 +5192,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NormalizedBoundingBox other) {
       if (other == null) {
         return;
@@ -4890,6 +5213,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4923,6 +5247,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4964,19 +5289,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<FaceDetectionAnnotation> _parser = new pb::MessageParser<FaceDetectionAnnotation>(() => new FaceDetectionAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FaceDetectionAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceDetectionAnnotation() {
       OnConstruction();
     }
@@ -4984,6 +5313,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceDetectionAnnotation(FaceDetectionAnnotation other) : this() {
       tracks_ = other.tracks_.Clone();
       thumbnail_ = other.thumbnail_;
@@ -4992,6 +5322,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceDetectionAnnotation Clone() {
       return new FaceDetectionAnnotation(this);
     }
@@ -5005,6 +5336,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The face tracks with attributes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Track> Tracks {
       get { return tracks_; }
     }
@@ -5016,6 +5348,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The thumbnail of a person's face.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Thumbnail {
       get { return thumbnail_; }
       set {
@@ -5030,6 +5363,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Feature version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -5038,11 +5372,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FaceDetectionAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FaceDetectionAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5057,6 +5393,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= tracks_.GetHashCode();
@@ -5069,11 +5406,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5095,6 +5434,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       tracks_.WriteTo(ref output, _repeated_tracks_codec);
       if (Thumbnail.Length != 0) {
@@ -5112,6 +5452,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += tracks_.CalculateSize(_repeated_tracks_codec);
@@ -5128,6 +5469,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FaceDetectionAnnotation other) {
       if (other == null) {
         return;
@@ -5143,6 +5485,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5172,6 +5515,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5209,19 +5553,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<PersonDetectionAnnotation> _parser = new pb::MessageParser<PersonDetectionAnnotation>(() => new PersonDetectionAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PersonDetectionAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersonDetectionAnnotation() {
       OnConstruction();
     }
@@ -5229,6 +5577,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersonDetectionAnnotation(PersonDetectionAnnotation other) : this() {
       tracks_ = other.tracks_.Clone();
       version_ = other.version_;
@@ -5236,6 +5585,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersonDetectionAnnotation Clone() {
       return new PersonDetectionAnnotation(this);
     }
@@ -5249,6 +5599,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The detected tracks of a person.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Track> Tracks {
       get { return tracks_; }
     }
@@ -5260,6 +5611,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Feature version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -5268,11 +5620,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PersonDetectionAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PersonDetectionAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5286,6 +5640,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= tracks_.GetHashCode();
@@ -5297,11 +5652,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5319,6 +5676,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       tracks_.WriteTo(ref output, _repeated_tracks_codec);
       if (Version.Length != 0) {
@@ -5332,6 +5690,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += tracks_.CalculateSize(_repeated_tracks_codec);
@@ -5345,6 +5704,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PersonDetectionAnnotation other) {
       if (other == null) {
         return;
@@ -5357,6 +5717,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5382,6 +5743,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5415,19 +5777,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<FaceSegment> _parser = new pb::MessageParser<FaceSegment>(() => new FaceSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FaceSegment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceSegment() {
       OnConstruction();
     }
@@ -5435,12 +5801,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceSegment(FaceSegment other) : this() {
       segment_ = other.segment_ != null ? other.segment_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceSegment Clone() {
       return new FaceSegment(this);
     }
@@ -5452,6 +5820,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Video segment where a face was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
       get { return segment_; }
       set {
@@ -5460,11 +5829,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FaceSegment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FaceSegment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5477,6 +5848,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (segment_ != null) hash ^= Segment.GetHashCode();
@@ -5487,11 +5859,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5508,6 +5882,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (segment_ != null) {
         output.WriteRawTag(10);
@@ -5520,6 +5895,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (segment_ != null) {
@@ -5532,6 +5908,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FaceSegment other) {
       if (other == null) {
         return;
@@ -5546,6 +5923,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5570,6 +5948,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5603,19 +5982,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<FaceFrame> _parser = new pb::MessageParser<FaceFrame>(() => new FaceFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FaceFrame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceFrame() {
       OnConstruction();
     }
@@ -5623,6 +6006,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceFrame(FaceFrame other) : this() {
       normalizedBoundingBoxes_ = other.normalizedBoundingBoxes_.Clone();
       timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
@@ -5630,6 +6014,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceFrame Clone() {
       return new FaceFrame(this);
     }
@@ -5645,6 +6030,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// locations within the current frame.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox> NormalizedBoundingBoxes {
       get { return normalizedBoundingBoxes_; }
     }
@@ -5657,6 +6043,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// corresponding to the video frame for this location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
       get { return timeOffset_; }
       set {
@@ -5665,11 +6052,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FaceFrame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FaceFrame other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5683,6 +6072,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= normalizedBoundingBoxes_.GetHashCode();
@@ -5694,11 +6084,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5716,6 +6108,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       normalizedBoundingBoxes_.WriteTo(ref output, _repeated_normalizedBoundingBoxes_codec);
       if (timeOffset_ != null) {
@@ -5729,6 +6122,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += normalizedBoundingBoxes_.CalculateSize(_repeated_normalizedBoundingBoxes_codec);
@@ -5742,6 +6136,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FaceFrame other) {
       if (other == null) {
         return;
@@ -5757,6 +6152,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5785,6 +6181,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5822,19 +6219,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<FaceAnnotation> _parser = new pb::MessageParser<FaceAnnotation>(() => new FaceAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FaceAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceAnnotation() {
       OnConstruction();
     }
@@ -5842,6 +6243,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceAnnotation(FaceAnnotation other) : this() {
       thumbnail_ = other.thumbnail_;
       segments_ = other.segments_.Clone();
@@ -5850,6 +6252,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FaceAnnotation Clone() {
       return new FaceAnnotation(this);
     }
@@ -5861,6 +6264,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Thumbnail of a representative face view (in JPEG format).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Thumbnail {
       get { return thumbnail_; }
       set {
@@ -5877,6 +6281,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// All video segments where a face was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceSegment> Segments {
       get { return segments_; }
     }
@@ -5891,16 +6296,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceFrame> Frames {
       get { return frames_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FaceAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FaceAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5915,6 +6323,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Thumbnail.Length != 0) hash ^= Thumbnail.GetHashCode();
@@ -5927,11 +6336,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5950,6 +6361,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Thumbnail.Length != 0) {
         output.WriteRawTag(10);
@@ -5964,6 +6376,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Thumbnail.Length != 0) {
@@ -5978,6 +6391,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FaceAnnotation other) {
       if (other == null) {
         return;
@@ -5991,6 +6405,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6020,6 +6435,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6059,19 +6475,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<TimestampedObject> _parser = new pb::MessageParser<TimestampedObject>(() => new TimestampedObject());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimestampedObject> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimestampedObject() {
       OnConstruction();
     }
@@ -6079,6 +6499,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimestampedObject(TimestampedObject other) : this() {
       normalizedBoundingBox_ = other.normalizedBoundingBox_ != null ? other.normalizedBoundingBox_.Clone() : null;
       timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
@@ -6088,6 +6509,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimestampedObject Clone() {
       return new TimestampedObject(this);
     }
@@ -6099,6 +6521,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Normalized Bounding box in a frame, where the object is located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox NormalizedBoundingBox {
       get { return normalizedBoundingBox_; }
       set {
@@ -6114,6 +6537,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// corresponding to the video frame for this object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
       get { return timeOffset_; }
       set {
@@ -6130,6 +6554,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Optional. The attributes of the object in the bounding box.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.DetectedAttribute> Attributes {
       get { return attributes_; }
     }
@@ -6143,16 +6568,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Optional. The detected landmarks.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.DetectedLandmark> Landmarks {
       get { return landmarks_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimestampedObject);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimestampedObject other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6168,6 +6596,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (normalizedBoundingBox_ != null) hash ^= NormalizedBoundingBox.GetHashCode();
@@ -6181,11 +6610,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6208,6 +6639,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (normalizedBoundingBox_ != null) {
         output.WriteRawTag(10);
@@ -6226,6 +6658,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (normalizedBoundingBox_ != null) {
@@ -6243,6 +6676,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimestampedObject other) {
       if (other == null) {
         return;
@@ -6265,6 +6699,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6304,6 +6739,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6351,19 +6787,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<Track> _parser = new pb::MessageParser<Track>(() => new Track());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Track> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Track() {
       OnConstruction();
     }
@@ -6371,6 +6811,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Track(Track other) : this() {
       segment_ = other.segment_ != null ? other.segment_.Clone() : null;
       timestampedObjects_ = other.timestampedObjects_.Clone();
@@ -6380,6 +6821,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Track Clone() {
       return new Track(this);
     }
@@ -6391,6 +6833,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Video segment of a track.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
       get { return segment_; }
       set {
@@ -6407,6 +6850,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The object with timestamp and attributes per frame in the track.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.TimestampedObject> TimestampedObjects {
       get { return timestampedObjects_; }
     }
@@ -6420,6 +6864,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Optional. Attributes in the track level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.DetectedAttribute> Attributes {
       get { return attributes_; }
     }
@@ -6431,6 +6876,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Optional. The confidence score of the tracked object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -6439,11 +6885,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Track);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Track other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6459,6 +6907,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (segment_ != null) hash ^= Segment.GetHashCode();
@@ -6472,11 +6921,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6499,6 +6950,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (segment_ != null) {
         output.WriteRawTag(10);
@@ -6517,6 +6969,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (segment_ != null) {
@@ -6534,6 +6987,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Track other) {
       if (other == null) {
         return;
@@ -6553,6 +7007,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6589,6 +7044,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6633,19 +7089,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<DetectedAttribute> _parser = new pb::MessageParser<DetectedAttribute>(() => new DetectedAttribute());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DetectedAttribute> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetectedAttribute() {
       OnConstruction();
     }
@@ -6653,6 +7113,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetectedAttribute(DetectedAttribute other) : this() {
       name_ = other.name_;
       confidence_ = other.confidence_;
@@ -6661,6 +7122,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetectedAttribute Clone() {
       return new DetectedAttribute(this);
     }
@@ -6673,6 +7135,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// A full list of supported type names will be provided in the document.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -6687,6 +7150,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Detected attribute confidence. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -6702,6 +7166,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// can be "black", "blonde", etc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
       get { return value_; }
       set {
@@ -6710,11 +7175,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DetectedAttribute);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DetectedAttribute other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6729,6 +7196,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -6741,11 +7209,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6770,6 +7240,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -6790,6 +7261,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -6808,6 +7280,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DetectedAttribute other) {
       if (other == null) {
         return;
@@ -6825,6 +7298,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6854,6 +7328,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6892,19 +7367,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<DetectedLandmark> _parser = new pb::MessageParser<DetectedLandmark>(() => new DetectedLandmark());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DetectedLandmark> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetectedLandmark() {
       OnConstruction();
     }
@@ -6912,6 +7391,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetectedLandmark(DetectedLandmark other) : this() {
       name_ = other.name_;
       point_ = other.point_ != null ? other.point_.Clone() : null;
@@ -6920,6 +7400,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetectedLandmark Clone() {
       return new DetectedLandmark(this);
     }
@@ -6931,6 +7412,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The name of this landmark, for example, left_hand, right_shoulder.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -6946,6 +7428,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// coordindate system. The normalized coordinates have the range from 0 to 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.NormalizedVertex Point {
       get { return point_; }
       set {
@@ -6960,6 +7443,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The confidence score of the detected landmark. Range [0, 1].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -6968,11 +7452,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DetectedLandmark);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DetectedLandmark other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6987,6 +7473,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -6999,11 +7486,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7028,6 +7517,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -7048,6 +7538,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -7066,6 +7557,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DetectedLandmark other) {
       if (other == null) {
         return;
@@ -7086,6 +7578,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7118,6 +7611,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7158,19 +7652,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<VideoAnnotationResults> _parser = new pb::MessageParser<VideoAnnotationResults>(() => new VideoAnnotationResults());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoAnnotationResults> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoAnnotationResults() {
       OnConstruction();
     }
@@ -7178,6 +7676,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoAnnotationResults(VideoAnnotationResults other) : this() {
       inputUri_ = other.inputUri_;
       segment_ = other.segment_ != null ? other.segment_.Clone() : null;
@@ -7200,6 +7699,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoAnnotationResults Clone() {
       return new VideoAnnotationResults(this);
     }
@@ -7212,6 +7712,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// [Cloud Storage](https://cloud.google.com/storage/).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InputUri {
       get { return inputUri_; }
       set {
@@ -7226,6 +7727,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Video segment on which the annotation is run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
       get { return segment_; }
       set {
@@ -7243,6 +7745,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// There is exactly one element for each unique label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation> SegmentLabelAnnotations {
       get { return segmentLabelAnnotations_; }
     }
@@ -7261,6 +7764,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// "builtin/latest" in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation> SegmentPresenceLabelAnnotations {
       get { return segmentPresenceLabelAnnotations_; }
     }
@@ -7275,6 +7779,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// There is exactly one element for each unique label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation> ShotLabelAnnotations {
       get { return shotLabelAnnotations_; }
     }
@@ -7292,6 +7797,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// sets `LabelDetectionConfig.model` to "builtin/latest" in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation> ShotPresenceLabelAnnotations {
       get { return shotPresenceLabelAnnotations_; }
     }
@@ -7306,6 +7812,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// There is exactly one element for each unique label.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LabelAnnotation> FrameLabelAnnotations {
       get { return frameLabelAnnotations_; }
     }
@@ -7320,6 +7827,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceAnnotation> FaceAnnotations {
       get { return faceAnnotations_; }
     }
@@ -7333,6 +7841,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Face detection annotations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.FaceDetectionAnnotation> FaceDetectionAnnotations {
       get { return faceDetectionAnnotations_; }
     }
@@ -7346,6 +7855,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Shot annotations. Each shot is represented as a video segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.VideoSegment> ShotAnnotations {
       get { return shotAnnotations_; }
     }
@@ -7357,6 +7867,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Explicit content annotation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.ExplicitContentAnnotation ExplicitAnnotation {
       get { return explicitAnnotation_; }
       set {
@@ -7373,6 +7884,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Speech transcription.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.SpeechTranscription> SpeechTranscriptions {
       get { return speechTranscriptions_; }
     }
@@ -7388,6 +7900,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// frame information associated with it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.TextAnnotation> TextAnnotations {
       get { return textAnnotations_; }
     }
@@ -7401,6 +7914,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Annotations for list of objects detected and tracked in video.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingAnnotation> ObjectAnnotations {
       get { return objectAnnotations_; }
     }
@@ -7414,6 +7928,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Annotations for list of logos detected, tracked and recognized in video.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.LogoRecognitionAnnotation> LogoRecognitionAnnotations {
       get { return logoRecognitionAnnotations_; }
     }
@@ -7427,6 +7942,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Person detection annotations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.PersonDetectionAnnotation> PersonDetectionAnnotations {
       get { return personDetectionAnnotations_; }
     }
@@ -7439,6 +7955,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// some videos may succeed and some may fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -7447,11 +7964,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoAnnotationResults);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoAnnotationResults other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7480,6 +7999,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (InputUri.Length != 0) hash ^= InputUri.GetHashCode();
@@ -7506,11 +8026,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7552,6 +8074,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (InputUri.Length != 0) {
         output.WriteRawTag(10);
@@ -7589,6 +8112,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (InputUri.Length != 0) {
@@ -7623,6 +8147,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoAnnotationResults other) {
       if (other == null) {
         return;
@@ -7665,6 +8190,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7759,6 +8285,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7863,19 +8390,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<AnnotateVideoResponse> _parser = new pb::MessageParser<AnnotateVideoResponse>(() => new AnnotateVideoResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnnotateVideoResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoResponse() {
       OnConstruction();
     }
@@ -7883,12 +8414,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoResponse(AnnotateVideoResponse other) : this() {
       annotationResults_ = other.annotationResults_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoResponse Clone() {
       return new AnnotateVideoResponse(this);
     }
@@ -7902,16 +8435,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Annotation results for all videos specified in `AnnotateVideoRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationResults> AnnotationResults {
       get { return annotationResults_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnnotateVideoResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnnotateVideoResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7924,6 +8460,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= annotationResults_.GetHashCode();
@@ -7934,11 +8471,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7952,6 +8491,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       annotationResults_.WriteTo(ref output, _repeated_annotationResults_codec);
       if (_unknownFields != null) {
@@ -7961,6 +8501,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += annotationResults_.CalculateSize(_repeated_annotationResults_codec);
@@ -7971,6 +8512,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnnotateVideoResponse other) {
       if (other == null) {
         return;
@@ -7980,6 +8522,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8001,6 +8544,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8030,19 +8574,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<VideoAnnotationProgress> _parser = new pb::MessageParser<VideoAnnotationProgress>(() => new VideoAnnotationProgress());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoAnnotationProgress> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoAnnotationProgress() {
       OnConstruction();
     }
@@ -8050,6 +8598,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoAnnotationProgress(VideoAnnotationProgress other) : this() {
       inputUri_ = other.inputUri_;
       progressPercent_ = other.progressPercent_;
@@ -8061,6 +8610,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoAnnotationProgress Clone() {
       return new VideoAnnotationProgress(this);
     }
@@ -8073,6 +8623,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// [Cloud Storage](https://cloud.google.com/storage/).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InputUri {
       get { return inputUri_; }
       set {
@@ -8088,6 +8639,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// 100 when fully processed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ProgressPercent {
       get { return progressPercent_; }
       set {
@@ -8102,6 +8654,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Time when the request was received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -8116,6 +8669,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Time of the most recent update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -8131,6 +8685,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// one feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.Feature Feature {
       get { return feature_; }
       set {
@@ -8146,6 +8701,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// one segment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
       get { return segment_; }
       set {
@@ -8154,11 +8710,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoAnnotationProgress);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoAnnotationProgress other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8176,6 +8734,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (InputUri.Length != 0) hash ^= InputUri.GetHashCode();
@@ -8191,11 +8750,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8232,6 +8793,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (InputUri.Length != 0) {
         output.WriteRawTag(10);
@@ -8264,6 +8826,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (InputUri.Length != 0) {
@@ -8291,6 +8854,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoAnnotationProgress other) {
       if (other == null) {
         return;
@@ -8326,6 +8890,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8376,6 +8941,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8436,19 +9002,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<AnnotateVideoProgress> _parser = new pb::MessageParser<AnnotateVideoProgress>(() => new AnnotateVideoProgress());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AnnotateVideoProgress> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoProgress() {
       OnConstruction();
     }
@@ -8456,12 +9026,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoProgress(AnnotateVideoProgress other) : this() {
       annotationProgress_ = other.annotationProgress_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AnnotateVideoProgress Clone() {
       return new AnnotateVideoProgress(this);
     }
@@ -8475,16 +9047,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Progress metadata for all videos specified in `AnnotateVideoRequest`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.VideoAnnotationProgress> AnnotationProgress {
       get { return annotationProgress_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AnnotateVideoProgress);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AnnotateVideoProgress other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8497,6 +9072,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= annotationProgress_.GetHashCode();
@@ -8507,11 +9083,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8525,6 +9103,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       annotationProgress_.WriteTo(ref output, _repeated_annotationProgress_codec);
       if (_unknownFields != null) {
@@ -8534,6 +9113,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += annotationProgress_.CalculateSize(_repeated_annotationProgress_codec);
@@ -8544,6 +9124,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AnnotateVideoProgress other) {
       if (other == null) {
         return;
@@ -8553,6 +9134,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8574,6 +9156,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8603,19 +9186,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<SpeechTranscriptionConfig> _parser = new pb::MessageParser<SpeechTranscriptionConfig>(() => new SpeechTranscriptionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SpeechTranscriptionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechTranscriptionConfig() {
       OnConstruction();
     }
@@ -8623,6 +9210,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechTranscriptionConfig(SpeechTranscriptionConfig other) : this() {
       languageCode_ = other.languageCode_;
       maxAlternatives_ = other.maxAlternatives_;
@@ -8637,6 +9225,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechTranscriptionConfig Clone() {
       return new SpeechTranscriptionConfig(this);
     }
@@ -8652,6 +9241,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// for a list of the currently supported language codes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -8670,6 +9260,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// return a maximum of one. If omitted, will return a maximum of one.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxAlternatives {
       get { return maxAlternatives_; }
       set {
@@ -8687,6 +9278,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// won't be filtered out.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool FilterProfanity {
       get { return filterProfanity_; }
       set {
@@ -8703,6 +9295,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Optional. A means to provide context to assist the speech recognition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.SpeechContext> SpeechContexts {
       get { return speechContexts_; }
     }
@@ -8719,6 +9312,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// future this may be exclusively available as a premium feature."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableAutomaticPunctuation {
       get { return enableAutomaticPunctuation_; }
       set {
@@ -8736,6 +9330,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// tracks, specify up to two tracks. Default: track 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<int> AudioTracks {
       get { return audioTracks_; }
     }
@@ -8753,6 +9348,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// identify the speakers in the conversation over time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableSpeakerDiarization {
       get { return enableSpeakerDiarization_; }
       set {
@@ -8769,6 +9365,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// enable_speaker_diarization is set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DiarizationSpeakerCount {
       get { return diarizationSpeakerCount_; }
       set {
@@ -8785,6 +9382,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// information is returned. The default is `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableWordConfidence {
       get { return enableWordConfidence_; }
       set {
@@ -8793,11 +9391,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SpeechTranscriptionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SpeechTranscriptionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8818,6 +9418,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
@@ -8836,11 +9437,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8883,6 +9486,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(10);
@@ -8921,6 +9525,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (LanguageCode.Length != 0) {
@@ -8953,6 +9558,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SpeechTranscriptionConfig other) {
       if (other == null) {
         return;
@@ -8984,6 +9590,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9038,6 +9645,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9101,19 +9709,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<SpeechContext> _parser = new pb::MessageParser<SpeechContext>(() => new SpeechContext());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SpeechContext> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechContext() {
       OnConstruction();
     }
@@ -9121,12 +9733,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechContext(SpeechContext other) : this() {
       phrases_ = other.phrases_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechContext Clone() {
       return new SpeechContext(this);
     }
@@ -9145,16 +9759,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// [usage limits](https://cloud.google.com/speech/limits#content).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Phrases {
       get { return phrases_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SpeechContext);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SpeechContext other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9167,6 +9784,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= phrases_.GetHashCode();
@@ -9177,11 +9795,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9195,6 +9815,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       phrases_.WriteTo(ref output, _repeated_phrases_codec);
       if (_unknownFields != null) {
@@ -9204,6 +9825,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += phrases_.CalculateSize(_repeated_phrases_codec);
@@ -9214,6 +9836,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SpeechContext other) {
       if (other == null) {
         return;
@@ -9223,6 +9846,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9244,6 +9868,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9273,19 +9898,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<SpeechTranscription> _parser = new pb::MessageParser<SpeechTranscription>(() => new SpeechTranscription());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SpeechTranscription> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechTranscription() {
       OnConstruction();
     }
@@ -9293,6 +9922,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechTranscription(SpeechTranscription other) : this() {
       alternatives_ = other.alternatives_.Clone();
       languageCode_ = other.languageCode_;
@@ -9300,6 +9930,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechTranscription Clone() {
       return new SpeechTranscription(this);
     }
@@ -9316,6 +9947,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// ranked by the recognizer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.SpeechRecognitionAlternative> Alternatives {
       get { return alternatives_; }
     }
@@ -9329,6 +9961,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// detected to have the most likelihood of being spoken in the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -9337,11 +9970,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SpeechTranscription);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SpeechTranscription other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9355,6 +9990,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= alternatives_.GetHashCode();
@@ -9366,11 +10002,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9388,6 +10026,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       alternatives_.WriteTo(ref output, _repeated_alternatives_codec);
       if (LanguageCode.Length != 0) {
@@ -9401,6 +10040,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += alternatives_.CalculateSize(_repeated_alternatives_codec);
@@ -9414,6 +10054,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SpeechTranscription other) {
       if (other == null) {
         return;
@@ -9426,6 +10067,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9451,6 +10093,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9484,19 +10127,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<SpeechRecognitionAlternative> _parser = new pb::MessageParser<SpeechRecognitionAlternative>(() => new SpeechRecognitionAlternative());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SpeechRecognitionAlternative> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechRecognitionAlternative() {
       OnConstruction();
     }
@@ -9504,6 +10151,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechRecognitionAlternative(SpeechRecognitionAlternative other) : this() {
       transcript_ = other.transcript_;
       confidence_ = other.confidence_;
@@ -9512,6 +10160,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpeechRecognitionAlternative Clone() {
       return new SpeechRecognitionAlternative(this);
     }
@@ -9523,6 +10172,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Transcript text representing the words that the user spoke.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Transcript {
       get { return transcript_; }
       set {
@@ -9542,6 +10192,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The default of 0.0 is a sentinel value indicating `confidence` was not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -9560,16 +10211,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// the words from the beginning of the audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.WordInfo> Words {
       get { return words_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SpeechRecognitionAlternative);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SpeechRecognitionAlternative other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9584,6 +10238,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Transcript.Length != 0) hash ^= Transcript.GetHashCode();
@@ -9596,11 +10251,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9622,6 +10279,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Transcript.Length != 0) {
         output.WriteRawTag(10);
@@ -9639,6 +10297,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Transcript.Length != 0) {
@@ -9655,6 +10314,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SpeechRecognitionAlternative other) {
       if (other == null) {
         return;
@@ -9670,6 +10330,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9699,6 +10360,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9738,19 +10400,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<WordInfo> _parser = new pb::MessageParser<WordInfo>(() => new WordInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WordInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WordInfo() {
       OnConstruction();
     }
@@ -9758,6 +10424,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WordInfo(WordInfo other) : this() {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
@@ -9768,6 +10435,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WordInfo Clone() {
       return new WordInfo(this);
     }
@@ -9782,6 +10450,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// experimental feature and the accuracy of the time offset can vary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration StartTime {
       get { return startTime_; }
       set {
@@ -9799,6 +10468,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// experimental feature and the accuracy of the time offset can vary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration EndTime {
       get { return endTime_; }
       set {
@@ -9813,6 +10483,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The word corresponding to this set of information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Word {
       get { return word_; }
       set {
@@ -9832,6 +10503,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The default of 0.0 is a sentinel value indicating `confidence` was not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -9849,6 +10521,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// and is only set if speaker diarization is enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SpeakerTag {
       get { return speakerTag_; }
       set {
@@ -9857,11 +10530,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WordInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WordInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9878,6 +10553,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
@@ -9892,11 +10568,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9929,6 +10607,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startTime_ != null) {
         output.WriteRawTag(10);
@@ -9957,6 +10636,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startTime_ != null) {
@@ -9981,6 +10661,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WordInfo other) {
       if (other == null) {
         return;
@@ -10010,6 +10691,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10053,6 +10735,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10106,19 +10789,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<NormalizedVertex> _parser = new pb::MessageParser<NormalizedVertex>(() => new NormalizedVertex());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NormalizedVertex> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedVertex() {
       OnConstruction();
     }
@@ -10126,6 +10813,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedVertex(NormalizedVertex other) : this() {
       x_ = other.x_;
       y_ = other.y_;
@@ -10133,6 +10821,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedVertex Clone() {
       return new NormalizedVertex(this);
     }
@@ -10144,6 +10833,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// X coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float X {
       get { return x_; }
       set {
@@ -10158,6 +10848,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Y coordinate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Y {
       get { return y_; }
       set {
@@ -10166,11 +10857,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NormalizedVertex);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NormalizedVertex other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10184,6 +10877,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (X != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(X);
@@ -10195,11 +10889,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10220,6 +10916,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (X != 0F) {
         output.WriteRawTag(13);
@@ -10236,6 +10933,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (X != 0F) {
@@ -10251,6 +10949,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NormalizedVertex other) {
       if (other == null) {
         return;
@@ -10265,6 +10964,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10290,6 +10990,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10339,19 +11040,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<NormalizedBoundingPoly> _parser = new pb::MessageParser<NormalizedBoundingPoly>(() => new NormalizedBoundingPoly());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NormalizedBoundingPoly> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingPoly() {
       OnConstruction();
     }
@@ -10359,12 +11064,14 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingPoly(NormalizedBoundingPoly other) : this() {
       vertices_ = other.vertices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NormalizedBoundingPoly Clone() {
       return new NormalizedBoundingPoly(this);
     }
@@ -10378,16 +11085,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Normalized vertices of the bounding polygon.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.NormalizedVertex> Vertices {
       get { return vertices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NormalizedBoundingPoly);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NormalizedBoundingPoly other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10400,6 +11110,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= vertices_.GetHashCode();
@@ -10410,11 +11121,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10428,6 +11141,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       vertices_.WriteTo(ref output, _repeated_vertices_codec);
       if (_unknownFields != null) {
@@ -10437,6 +11151,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += vertices_.CalculateSize(_repeated_vertices_codec);
@@ -10447,6 +11162,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NormalizedBoundingPoly other) {
       if (other == null) {
         return;
@@ -10456,6 +11172,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10477,6 +11194,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10506,19 +11224,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<TextSegment> _parser = new pb::MessageParser<TextSegment>(() => new TextSegment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextSegment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextSegment() {
       OnConstruction();
     }
@@ -10526,6 +11248,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextSegment(TextSegment other) : this() {
       segment_ = other.segment_ != null ? other.segment_.Clone() : null;
       confidence_ = other.confidence_;
@@ -10534,6 +11257,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextSegment Clone() {
       return new TextSegment(this);
     }
@@ -10545,6 +11269,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Video segment where a text snippet was detected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
       get { return segment_; }
       set {
@@ -10560,6 +11285,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// over all frames where OCR detected text appears.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -10576,16 +11302,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Information related to the frames where OCR detected text appears.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.TextFrame> Frames {
       get { return frames_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextSegment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextSegment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10600,6 +11329,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (segment_ != null) hash ^= Segment.GetHashCode();
@@ -10612,11 +11342,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10638,6 +11370,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (segment_ != null) {
         output.WriteRawTag(10);
@@ -10655,6 +11388,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (segment_ != null) {
@@ -10671,6 +11405,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextSegment other) {
       if (other == null) {
         return;
@@ -10689,6 +11424,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10721,6 +11457,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10763,19 +11500,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<TextFrame> _parser = new pb::MessageParser<TextFrame>(() => new TextFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextFrame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextFrame() {
       OnConstruction();
     }
@@ -10783,6 +11524,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextFrame(TextFrame other) : this() {
       rotatedBoundingBox_ = other.rotatedBoundingBox_ != null ? other.rotatedBoundingBox_.Clone() : null;
       timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
@@ -10790,6 +11532,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextFrame Clone() {
       return new TextFrame(this);
     }
@@ -10801,6 +11544,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Bounding polygon of the detected text for this frame.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingPoly RotatedBoundingBox {
       get { return rotatedBoundingBox_; }
       set {
@@ -10815,6 +11559,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Timestamp of this frame.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
       get { return timeOffset_; }
       set {
@@ -10823,11 +11568,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextFrame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextFrame other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10841,6 +11588,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (rotatedBoundingBox_ != null) hash ^= RotatedBoundingBox.GetHashCode();
@@ -10852,11 +11600,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10877,6 +11627,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rotatedBoundingBox_ != null) {
         output.WriteRawTag(10);
@@ -10893,6 +11644,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (rotatedBoundingBox_ != null) {
@@ -10908,6 +11660,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextFrame other) {
       if (other == null) {
         return;
@@ -10928,6 +11681,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10959,6 +11713,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11000,19 +11755,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<TextAnnotation> _parser = new pb::MessageParser<TextAnnotation>(() => new TextAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextAnnotation() {
       OnConstruction();
     }
@@ -11020,6 +11779,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextAnnotation(TextAnnotation other) : this() {
       text_ = other.text_;
       segments_ = other.segments_.Clone();
@@ -11028,6 +11788,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextAnnotation Clone() {
       return new TextAnnotation(this);
     }
@@ -11039,6 +11800,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The detected text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
       get { return text_; }
       set {
@@ -11055,6 +11817,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// All video segments where OCR detected text appears.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.TextSegment> Segments {
       get { return segments_; }
     }
@@ -11066,6 +11829,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Feature version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -11074,11 +11838,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11093,6 +11859,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -11105,11 +11872,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11131,6 +11900,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Text.Length != 0) {
         output.WriteRawTag(10);
@@ -11148,6 +11918,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Text.Length != 0) {
@@ -11164,6 +11935,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextAnnotation other) {
       if (other == null) {
         return;
@@ -11179,6 +11951,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11208,6 +11981,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11246,19 +12020,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<ObjectTrackingFrame> _parser = new pb::MessageParser<ObjectTrackingFrame>(() => new ObjectTrackingFrame());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ObjectTrackingFrame> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingFrame() {
       OnConstruction();
     }
@@ -11266,6 +12044,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingFrame(ObjectTrackingFrame other) : this() {
       normalizedBoundingBox_ = other.normalizedBoundingBox_ != null ? other.normalizedBoundingBox_.Clone() : null;
       timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
@@ -11273,6 +12052,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingFrame Clone() {
       return new ObjectTrackingFrame(this);
     }
@@ -11284,6 +12064,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The normalized bounding box location of this object track for the frame.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.NormalizedBoundingBox NormalizedBoundingBox {
       get { return normalizedBoundingBox_; }
       set {
@@ -11298,6 +12079,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// The timestamp of the frame in microseconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
       get { return timeOffset_; }
       set {
@@ -11306,11 +12088,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ObjectTrackingFrame);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ObjectTrackingFrame other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11324,6 +12108,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (normalizedBoundingBox_ != null) hash ^= NormalizedBoundingBox.GetHashCode();
@@ -11335,11 +12120,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11360,6 +12147,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (normalizedBoundingBox_ != null) {
         output.WriteRawTag(10);
@@ -11376,6 +12164,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (normalizedBoundingBox_ != null) {
@@ -11391,6 +12180,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ObjectTrackingFrame other) {
       if (other == null) {
         return;
@@ -11411,6 +12201,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11442,6 +12233,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11481,19 +12273,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<ObjectTrackingAnnotation> _parser = new pb::MessageParser<ObjectTrackingAnnotation>(() => new ObjectTrackingAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ObjectTrackingAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingAnnotation() {
       OnConstruction();
     }
@@ -11501,6 +12297,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingAnnotation(ObjectTrackingAnnotation other) : this() {
       entity_ = other.entity_ != null ? other.entity_.Clone() : null;
       confidence_ = other.confidence_;
@@ -11519,6 +12316,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectTrackingAnnotation Clone() {
       return new ObjectTrackingAnnotation(this);
     }
@@ -11530,6 +12328,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Each object track corresponds to one video segment where it appears.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.VideoSegment Segment {
       get { return trackInfoCase_ == TrackInfoOneofCase.Segment ? (global::Google.Cloud.VideoIntelligence.V1.VideoSegment) trackInfo_ : null; }
       set {
@@ -11549,6 +12348,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// ObjectTrackAnnotation of the same track_id over time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TrackId {
       get { return trackInfoCase_ == TrackInfoOneofCase.TrackId ? (long) trackInfo_ : 0L; }
       set {
@@ -11564,6 +12364,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Entity to specify the object category that this track is labeled as.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.Entity Entity {
       get { return entity_; }
       set {
@@ -11578,6 +12379,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Object category's labeling confidence of this track.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Confidence {
       get { return confidence_; }
       set {
@@ -11597,6 +12399,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Streaming mode: it can only be one ObjectTrackingFrame message in frames.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.ObjectTrackingFrame> Frames {
       get { return frames_; }
     }
@@ -11608,6 +12411,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// Feature version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -11624,22 +12428,26 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
     private TrackInfoOneofCase trackInfoCase_ = TrackInfoOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrackInfoOneofCase TrackInfoCase {
       get { return trackInfoCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTrackInfo() {
       trackInfoCase_ = TrackInfoOneofCase.None;
       trackInfo_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ObjectTrackingAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ObjectTrackingAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11658,6 +12466,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (trackInfoCase_ == TrackInfoOneofCase.Segment) hash ^= Segment.GetHashCode();
@@ -11674,11 +12483,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11712,6 +12523,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (entity_ != null) {
         output.WriteRawTag(10);
@@ -11741,6 +12553,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (trackInfoCase_ == TrackInfoOneofCase.Segment) {
@@ -11766,6 +12579,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ObjectTrackingAnnotation other) {
       if (other == null) {
         return;
@@ -11799,6 +12613,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11848,6 +12663,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11905,19 +12721,23 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     private static readonly pb::MessageParser<LogoRecognitionAnnotation> _parser = new pb::MessageParser<LogoRecognitionAnnotation>(() => new LogoRecognitionAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LogoRecognitionAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.VideoIntelligence.V1.VideoIntelligenceReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogoRecognitionAnnotation() {
       OnConstruction();
     }
@@ -11925,6 +12745,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogoRecognitionAnnotation(LogoRecognitionAnnotation other) : this() {
       entity_ = other.entity_ != null ? other.entity_.Clone() : null;
       tracks_ = other.tracks_.Clone();
@@ -11933,6 +12754,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogoRecognitionAnnotation Clone() {
       return new LogoRecognitionAnnotation(this);
     }
@@ -11945,6 +12767,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// tracks within this LogoRecognitionAnnotation are recognized as.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.VideoIntelligence.V1.Entity Entity {
       get { return entity_; }
       set {
@@ -11962,6 +12785,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// to one logo instance appearing in consecutive frames.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.Track> Tracks {
       get { return tracks_; }
     }
@@ -11976,16 +12800,19 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     /// multiple instances of the same logo class appearing in one VideoSegment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.VideoIntelligence.V1.VideoSegment> Segments {
       get { return segments_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LogoRecognitionAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LogoRecognitionAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12000,6 +12827,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (entity_ != null) hash ^= Entity.GetHashCode();
@@ -12012,11 +12840,13 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12035,6 +12865,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (entity_ != null) {
         output.WriteRawTag(10);
@@ -12049,6 +12880,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (entity_ != null) {
@@ -12063,6 +12895,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LogoRecognitionAnnotation other) {
       if (other == null) {
         return;
@@ -12079,6 +12912,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12111,6 +12945,7 @@ namespace Google.Cloud.VideoIntelligence.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

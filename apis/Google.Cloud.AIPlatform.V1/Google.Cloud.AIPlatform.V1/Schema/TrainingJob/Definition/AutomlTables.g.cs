@@ -126,19 +126,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     private static readonly pb::MessageParser<AutoMlTables> _parser = new pb::MessageParser<AutoMlTables>(() => new AutoMlTables());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AutoMlTables> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutomlTablesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTables() {
       OnConstruction();
     }
@@ -146,6 +150,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTables(AutoMlTables other) : this() {
       inputs_ = other.inputs_ != null ? other.inputs_.Clone() : null;
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
@@ -153,6 +158,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTables Clone() {
       return new AutoMlTables(this);
     }
@@ -164,6 +170,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// The input parameters of this TrainingJob.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs Inputs {
       get { return inputs_; }
       set {
@@ -178,6 +185,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// The metadata information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesMetadata Metadata {
       get { return metadata_; }
       set {
@@ -186,11 +194,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AutoMlTables);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AutoMlTables other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -204,6 +214,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (inputs_ != null) hash ^= Inputs.GetHashCode();
@@ -215,11 +226,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -240,6 +253,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (inputs_ != null) {
         output.WriteRawTag(10);
@@ -256,6 +270,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (inputs_ != null) {
@@ -271,6 +286,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AutoMlTables other) {
       if (other == null) {
         return;
@@ -291,6 +307,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -322,6 +339,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -358,19 +376,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     private static readonly pb::MessageParser<AutoMlTablesInputs> _parser = new pb::MessageParser<AutoMlTablesInputs>(() => new AutoMlTablesInputs());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AutoMlTablesInputs> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutomlTablesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTablesInputs() {
       OnConstruction();
     }
@@ -378,6 +400,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTablesInputs(AutoMlTablesInputs other) : this() {
       predictionType_ = other.predictionType_;
       targetColumn_ = other.targetColumn_;
@@ -401,6 +424,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTablesInputs Clone() {
       return new AutoMlTablesInputs(this);
     }
@@ -412,6 +436,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// Must be between 0 and 1, inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float OptimizationObjectiveRecallValue {
       get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
       set {
@@ -427,6 +452,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// Must be between 0 and 1, inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float OptimizationObjectivePrecisionValue {
       get { return additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectivePrecisionValue ? (float) additionalOptimizationObjectiveConfig_ : 0F; }
       set {
@@ -448,6 +474,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     ///                  point number, even if stored as e.g. strings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PredictionType {
       get { return predictionType_; }
       set {
@@ -462,6 +489,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// The column name of the target column that the model is to predict.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TargetColumn {
       get { return targetColumn_; }
       set {
@@ -481,6 +509,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// be flattened using "." as the delimiter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation> Transformations {
       get { return transformations_; }
     }
@@ -515,6 +544,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     ///   "minimize-rmsle" - Minimize root-mean-squared log error (RMSLE).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OptimizationObjective {
       get { return optimizationObjective_; }
       set {
@@ -542,6 +572,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// inclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TrainBudgetMilliNodeHours {
       get { return trainBudgetMilliNodeHours_; }
       set {
@@ -558,6 +589,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// Tables might stop training before the entire training budget has been used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableEarlyStopping {
       get { return disableEarlyStopping_; }
       set {
@@ -577,6 +609,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// of 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WeightColumnName {
       get { return weightColumnName_; }
       set {
@@ -592,6 +625,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// this configuration is absent, then the export is not performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.ExportEvaluatedDataItemsConfig ExportEvaluatedDataItemsConfig {
       get { return exportEvaluatedDataItemsConfig_; }
       set {
@@ -608,6 +642,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// Additional experiment flags for the Tables training pipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> AdditionalExperiments {
       get { return additionalExperiments_; }
     }
@@ -621,22 +656,26 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
     private AdditionalOptimizationObjectiveConfigOneofCase additionalOptimizationObjectiveConfigCase_ = AdditionalOptimizationObjectiveConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdditionalOptimizationObjectiveConfigOneofCase AdditionalOptimizationObjectiveConfigCase {
       get { return additionalOptimizationObjectiveConfigCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAdditionalOptimizationObjectiveConfig() {
       additionalOptimizationObjectiveConfigCase_ = AdditionalOptimizationObjectiveConfigOneofCase.None;
       additionalOptimizationObjectiveConfig_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AutoMlTablesInputs);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AutoMlTablesInputs other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -660,6 +699,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(OptimizationObjectiveRecallValue);
@@ -681,11 +721,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -736,6 +778,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PredictionType.Length != 0) {
         output.WriteRawTag(10);
@@ -782,6 +825,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (additionalOptimizationObjectiveConfigCase_ == AdditionalOptimizationObjectiveConfigOneofCase.OptimizationObjectiveRecallValue) {
@@ -820,6 +864,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AutoMlTablesInputs other) {
       if (other == null) {
         return;
@@ -863,6 +908,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -927,6 +973,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -989,6 +1036,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #region Nested types
     /// <summary>Container for nested types declared in the AutoMlTablesInputs message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public sealed partial class Transformation : pb::IMessage<Transformation>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -998,19 +1046,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         private static readonly pb::MessageParser<Transformation> _parser = new pb::MessageParser<Transformation>(() => new Transformation());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Transformation> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Transformation() {
           OnConstruction();
         }
@@ -1018,6 +1070,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Transformation(Transformation other) : this() {
           switch (other.TransformationDetailCase) {
             case TransformationDetailOneofCase.Auto:
@@ -1050,6 +1103,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Transformation Clone() {
           return new Transformation(this);
         }
@@ -1057,6 +1111,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "auto" field.</summary>
         public const int AutoFieldNumber = 1;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.AutoTransformation Auto {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.Auto ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.AutoTransformation) transformationDetail_ : null; }
           set {
@@ -1068,6 +1123,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "numeric" field.</summary>
         public const int NumericFieldNumber = 2;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.NumericTransformation Numeric {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.Numeric ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.NumericTransformation) transformationDetail_ : null; }
           set {
@@ -1079,6 +1135,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "categorical" field.</summary>
         public const int CategoricalFieldNumber = 3;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.CategoricalTransformation Categorical {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.Categorical ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.CategoricalTransformation) transformationDetail_ : null; }
           set {
@@ -1090,6 +1147,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "timestamp" field.</summary>
         public const int TimestampFieldNumber = 4;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TimestampTransformation Timestamp {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.Timestamp ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TimestampTransformation) transformationDetail_ : null; }
           set {
@@ -1101,6 +1159,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "text" field.</summary>
         public const int TextFieldNumber = 5;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TextTransformation Text {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.Text ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TextTransformation) transformationDetail_ : null; }
           set {
@@ -1112,6 +1171,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "repeated_numeric" field.</summary>
         public const int RepeatedNumericFieldNumber = 6;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.NumericArrayTransformation RepeatedNumeric {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.RepeatedNumeric ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.NumericArrayTransformation) transformationDetail_ : null; }
           set {
@@ -1123,6 +1183,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "repeated_categorical" field.</summary>
         public const int RepeatedCategoricalFieldNumber = 7;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.CategoricalArrayTransformation RepeatedCategorical {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.RepeatedCategorical ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.CategoricalArrayTransformation) transformationDetail_ : null; }
           set {
@@ -1134,6 +1195,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         /// <summary>Field number for the "repeated_text" field.</summary>
         public const int RepeatedTextFieldNumber = 8;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TextArrayTransformation RepeatedText {
           get { return transformationDetailCase_ == TransformationDetailOneofCase.RepeatedText ? (global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Types.TextArrayTransformation) transformationDetail_ : null; }
           set {
@@ -1157,22 +1219,26 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         }
         private TransformationDetailOneofCase transformationDetailCase_ = TransformationDetailOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TransformationDetailOneofCase TransformationDetailCase {
           get { return transformationDetailCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearTransformationDetail() {
           transformationDetailCase_ = TransformationDetailOneofCase.None;
           transformationDetail_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Transformation);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Transformation other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1193,6 +1259,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (transformationDetailCase_ == TransformationDetailOneofCase.Auto) hash ^= Auto.GetHashCode();
@@ -1211,11 +1278,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1260,6 +1329,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (transformationDetailCase_ == TransformationDetailOneofCase.Auto) {
             output.WriteRawTag(10);
@@ -1300,6 +1370,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (transformationDetailCase_ == TransformationDetailOneofCase.Auto) {
@@ -1333,6 +1404,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Transformation other) {
           if (other == null) {
             return;
@@ -1392,6 +1464,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1481,6 +1554,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1568,6 +1642,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
         #region Nested types
         /// <summary>Container for nested types declared in the Transformation message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Training pipeline will infer the proper transformation based on the
@@ -1581,19 +1656,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<AutoTransformation> _parser = new pb::MessageParser<AutoTransformation>(() => new AutoTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<AutoTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public AutoTransformation() {
               OnConstruction();
             }
@@ -1601,12 +1680,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public AutoTransformation(AutoTransformation other) : this() {
               columnName_ = other.columnName_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public AutoTransformation Clone() {
               return new AutoTransformation(this);
             }
@@ -1615,6 +1696,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -1623,11 +1705,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as AutoTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(AutoTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -1640,6 +1724,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -1650,11 +1735,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -1671,6 +1758,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -1683,6 +1771,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -1695,6 +1784,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(AutoTransformation other) {
               if (other == null) {
                 return;
@@ -1706,6 +1796,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -1727,6 +1818,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -1765,19 +1857,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<NumericTransformation> _parser = new pb::MessageParser<NumericTransformation>(() => new NumericTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<NumericTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[1]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public NumericTransformation() {
               OnConstruction();
             }
@@ -1785,6 +1881,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public NumericTransformation(NumericTransformation other) : this() {
               columnName_ = other.columnName_;
               invalidValuesAllowed_ = other.invalidValuesAllowed_;
@@ -1792,6 +1889,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public NumericTransformation Clone() {
               return new NumericTransformation(this);
             }
@@ -1800,6 +1898,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -1817,6 +1916,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             /// trainining data.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool InvalidValuesAllowed {
               get { return invalidValuesAllowed_; }
               set {
@@ -1825,11 +1925,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as NumericTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(NumericTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -1843,6 +1945,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -1854,11 +1957,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -1879,6 +1984,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -1895,6 +2001,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -1910,6 +2017,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(NumericTransformation other) {
               if (other == null) {
                 return;
@@ -1924,6 +2032,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -1949,6 +2058,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -1990,19 +2100,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<CategoricalTransformation> _parser = new pb::MessageParser<CategoricalTransformation>(() => new CategoricalTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<CategoricalTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[2]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CategoricalTransformation() {
               OnConstruction();
             }
@@ -2010,12 +2124,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CategoricalTransformation(CategoricalTransformation other) : this() {
               columnName_ = other.columnName_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CategoricalTransformation Clone() {
               return new CategoricalTransformation(this);
             }
@@ -2024,6 +2140,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -2032,11 +2149,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as CategoricalTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(CategoricalTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -2049,6 +2168,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -2059,11 +2179,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -2080,6 +2202,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -2092,6 +2215,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -2104,6 +2228,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(CategoricalTransformation other) {
               if (other == null) {
                 return;
@@ -2115,6 +2240,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -2136,6 +2262,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -2171,19 +2298,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<TimestampTransformation> _parser = new pb::MessageParser<TimestampTransformation>(() => new TimestampTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<TimestampTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[3]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TimestampTransformation() {
               OnConstruction();
             }
@@ -2191,6 +2322,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TimestampTransformation(TimestampTransformation other) : this() {
               columnName_ = other.columnName_;
               timeFormat_ = other.timeFormat_;
@@ -2199,6 +2331,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TimestampTransformation Clone() {
               return new TimestampTransformation(this);
             }
@@ -2207,6 +2340,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -2231,6 +2365,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             /// `time-offset` = `"Z"` (e.g. 1985-04-12T23:20:50.52Z)
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string TimeFormat {
               get { return timeFormat_; }
               set {
@@ -2248,6 +2383,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             /// trainining data.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool InvalidValuesAllowed {
               get { return invalidValuesAllowed_; }
               set {
@@ -2256,11 +2392,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as TimestampTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(TimestampTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -2275,6 +2413,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -2287,11 +2426,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -2316,6 +2457,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -2336,6 +2478,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -2354,6 +2497,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(TimestampTransformation other) {
               if (other == null) {
                 return;
@@ -2371,6 +2515,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -2400,6 +2545,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -2447,19 +2593,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<TextTransformation> _parser = new pb::MessageParser<TextTransformation>(() => new TextTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<TextTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[4]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TextTransformation() {
               OnConstruction();
             }
@@ -2467,12 +2617,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TextTransformation(TextTransformation other) : this() {
               columnName_ = other.columnName_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TextTransformation Clone() {
               return new TextTransformation(this);
             }
@@ -2481,6 +2633,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -2489,11 +2642,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as TextTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(TextTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -2506,6 +2661,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -2516,11 +2672,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -2537,6 +2695,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -2549,6 +2708,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -2561,6 +2721,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(TextTransformation other) {
               if (other == null) {
                 return;
@@ -2572,6 +2733,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -2593,6 +2755,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -2626,19 +2789,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<NumericArrayTransformation> _parser = new pb::MessageParser<NumericArrayTransformation>(() => new NumericArrayTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<NumericArrayTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[5]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public NumericArrayTransformation() {
               OnConstruction();
             }
@@ -2646,6 +2813,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public NumericArrayTransformation(NumericArrayTransformation other) : this() {
               columnName_ = other.columnName_;
               invalidValuesAllowed_ = other.invalidValuesAllowed_;
@@ -2653,6 +2821,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public NumericArrayTransformation Clone() {
               return new NumericArrayTransformation(this);
             }
@@ -2661,6 +2830,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -2678,6 +2848,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             /// trainining data.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool InvalidValuesAllowed {
               get { return invalidValuesAllowed_; }
               set {
@@ -2686,11 +2857,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as NumericArrayTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(NumericArrayTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -2704,6 +2877,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -2715,11 +2889,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -2740,6 +2916,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -2756,6 +2933,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -2771,6 +2949,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(NumericArrayTransformation other) {
               if (other == null) {
                 return;
@@ -2785,6 +2964,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -2810,6 +2990,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -2850,19 +3031,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<CategoricalArrayTransformation> _parser = new pb::MessageParser<CategoricalArrayTransformation>(() => new CategoricalArrayTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<CategoricalArrayTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[6]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CategoricalArrayTransformation() {
               OnConstruction();
             }
@@ -2870,12 +3055,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CategoricalArrayTransformation(CategoricalArrayTransformation other) : this() {
               columnName_ = other.columnName_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CategoricalArrayTransformation Clone() {
               return new CategoricalArrayTransformation(this);
             }
@@ -2884,6 +3071,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -2892,11 +3080,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as CategoricalArrayTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(CategoricalArrayTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -2909,6 +3099,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -2919,11 +3110,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -2940,6 +3133,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -2952,6 +3146,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -2964,6 +3159,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(CategoricalArrayTransformation other) {
               if (other == null) {
                 return;
@@ -2975,6 +3171,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -2996,6 +3193,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -3031,19 +3229,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             private static readonly pb::MessageParser<TextArrayTransformation> _parser = new pb::MessageParser<TextArrayTransformation>(() => new TextArrayTransformation());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<TextArrayTransformation> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlTablesInputs.Types.Transformation.Descriptor.NestedTypes[7]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TextArrayTransformation() {
               OnConstruction();
             }
@@ -3051,12 +3253,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TextArrayTransformation(TextArrayTransformation other) : this() {
               columnName_ = other.columnName_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TextArrayTransformation Clone() {
               return new TextArrayTransformation(this);
             }
@@ -3065,6 +3269,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             public const int ColumnNameFieldNumber = 1;
             private string columnName_ = "";
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ColumnName {
               get { return columnName_; }
               set {
@@ -3073,11 +3278,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as TextArrayTransformation);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(TextArrayTransformation other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -3090,6 +3297,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ColumnName.Length != 0) hash ^= ColumnName.GetHashCode();
@@ -3100,11 +3308,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -3121,6 +3331,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ColumnName.Length != 0) {
                 output.WriteRawTag(10);
@@ -3133,6 +3344,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ColumnName.Length != 0) {
@@ -3145,6 +3357,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(TextArrayTransformation other) {
               if (other == null) {
                 return;
@@ -3156,6 +3369,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -3177,6 +3391,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -3216,19 +3431,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     private static readonly pb::MessageParser<AutoMlTablesMetadata> _parser = new pb::MessageParser<AutoMlTablesMetadata>(() => new AutoMlTablesMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AutoMlTablesMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutomlTablesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTablesMetadata() {
       OnConstruction();
     }
@@ -3236,12 +3455,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTablesMetadata(AutoMlTablesMetadata other) : this() {
       trainCostMilliNodeHours_ = other.trainCostMilliNodeHours_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlTablesMetadata Clone() {
       return new AutoMlTablesMetadata(this);
     }
@@ -3255,6 +3476,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// to not exceed the train budget.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TrainCostMilliNodeHours {
       get { return trainCostMilliNodeHours_; }
       set {
@@ -3263,11 +3485,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AutoMlTablesMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AutoMlTablesMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3280,6 +3504,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TrainCostMilliNodeHours != 0L) hash ^= TrainCostMilliNodeHours.GetHashCode();
@@ -3290,11 +3515,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3311,6 +3538,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TrainCostMilliNodeHours != 0L) {
         output.WriteRawTag(8);
@@ -3323,6 +3551,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TrainCostMilliNodeHours != 0L) {
@@ -3335,6 +3564,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AutoMlTablesMetadata other) {
       if (other == null) {
         return;
@@ -3346,6 +3576,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3367,6 +3598,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

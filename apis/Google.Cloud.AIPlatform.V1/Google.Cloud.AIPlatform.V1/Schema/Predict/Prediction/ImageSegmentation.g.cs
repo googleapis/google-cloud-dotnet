@@ -59,19 +59,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     private static readonly pb::MessageParser<ImageSegmentationPredictionResult> _parser = new pb::MessageParser<ImageSegmentationPredictionResult>(() => new ImageSegmentationPredictionResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageSegmentationPredictionResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.ImageSegmentationReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageSegmentationPredictionResult() {
       OnConstruction();
     }
@@ -79,6 +83,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageSegmentationPredictionResult(ImageSegmentationPredictionResult other) : this() {
       categoryMask_ = other.categoryMask_;
       confidenceMask_ = other.confidenceMask_;
@@ -86,6 +91,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageSegmentationPredictionResult Clone() {
       return new ImageSegmentationPredictionResult(this);
     }
@@ -102,6 +108,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// the confidence threshold, the pixel will be marked as background.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CategoryMask {
       get { return categoryMask_; }
       set {
@@ -120,6 +127,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// white means complete confidence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConfidenceMask {
       get { return confidenceMask_; }
       set {
@@ -128,11 +136,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImageSegmentationPredictionResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImageSegmentationPredictionResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -146,6 +156,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CategoryMask.Length != 0) hash ^= CategoryMask.GetHashCode();
@@ -157,11 +168,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -182,6 +195,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CategoryMask.Length != 0) {
         output.WriteRawTag(10);
@@ -198,6 +212,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CategoryMask.Length != 0) {
@@ -213,6 +228,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImageSegmentationPredictionResult other) {
       if (other == null) {
         return;
@@ -227,6 +243,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -252,6 +269,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

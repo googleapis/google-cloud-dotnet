@@ -86,19 +86,23 @@ namespace Google.Cloud.Logging.V2 {
     private static readonly pb::MessageParser<LogEntry> _parser = new pb::MessageParser<LogEntry>(() => new LogEntry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LogEntry> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntry() {
       OnConstruction();
     }
@@ -106,6 +110,7 @@ namespace Google.Cloud.Logging.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntry(LogEntry other) : this() {
       logName_ = other.logName_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
@@ -136,6 +141,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntry Clone() {
       return new LogEntry(this);
     }
@@ -168,6 +174,7 @@ namespace Google.Cloud.Logging.V2 {
     /// any results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LogName {
       get { return logName_; }
       set {
@@ -186,6 +193,7 @@ namespace Google.Cloud.Logging.V2 {
     /// the error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Api.MonitoredResource Resource {
       get { return resource_; }
       set {
@@ -206,6 +214,7 @@ namespace Google.Cloud.Logging.V2 {
     ///   "type.googleapis.com/google.appengine.logging.v1.RequestLog"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Any ProtoPayload {
       get { return payloadCase_ == PayloadOneofCase.ProtoPayload ? (global::Google.Protobuf.WellKnownTypes.Any) payload_ : null; }
       set {
@@ -220,6 +229,7 @@ namespace Google.Cloud.Logging.V2 {
     /// The log entry payload, represented as a Unicode string (UTF-8).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TextPayload {
       get { return payloadCase_ == PayloadOneofCase.TextPayload ? (string) payload_ : ""; }
       set {
@@ -235,6 +245,7 @@ namespace Google.Cloud.Logging.V2 {
     /// expressed as a JSON object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Struct JsonPayload {
       get { return payloadCase_ == PayloadOneofCase.JsonPayload ? (global::Google.Protobuf.WellKnownTypes.Struct) payload_ : null; }
       set {
@@ -260,6 +271,7 @@ namespace Google.Cloud.Logging.V2 {
     /// those time boundaries aren't ingested by Logging.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
       get { return timestamp_; }
       set {
@@ -274,6 +286,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Output only. The time the log entry was received by Logging.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ReceiveTimestamp {
       get { return receiveTimestamp_; }
       set {
@@ -288,6 +301,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Optional. The severity of the log entry. The default value is `LogSeverity.DEFAULT`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Logging.Type.LogSeverity Severity {
       get { return severity_; }
       set {
@@ -312,6 +326,7 @@ namespace Google.Cloud.Logging.V2 {
     /// the same `log_name` and `timestamp` values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InsertId {
       get { return insertId_; }
       set {
@@ -327,6 +342,7 @@ namespace Google.Cloud.Logging.V2 {
     /// applicable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Logging.Type.HttpRequest HttpRequest {
       get { return httpRequest_; }
       set {
@@ -344,6 +360,7 @@ namespace Google.Cloud.Logging.V2 {
     /// information about the log entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -356,6 +373,7 @@ namespace Google.Cloud.Logging.V2 {
     /// applicable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Logging.V2.LogEntryOperation Operation {
       get { return operation_; }
       set {
@@ -373,6 +391,7 @@ namespace Google.Cloud.Logging.V2 {
     /// `projects/my-projectid/traces/06796866738c859f2f19b7cfb3214824`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Trace {
       get { return trace_; }
       set {
@@ -391,6 +410,7 @@ namespace Google.Cloud.Logging.V2 {
     /// `000000000000004a`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SpanId {
       get { return spanId_; }
       set {
@@ -411,6 +431,7 @@ namespace Google.Cloud.Logging.V2 {
     /// request correlation identifier. The default is False.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool TraceSampled {
       get { return traceSampled_; }
       set {
@@ -425,6 +446,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Optional. Source code location information associated with the log entry, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Logging.V2.LogEntrySourceLocation SourceLocation {
       get { return sourceLocation_; }
       set {
@@ -442,22 +464,26 @@ namespace Google.Cloud.Logging.V2 {
     }
     private PayloadOneofCase payloadCase_ = PayloadOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PayloadOneofCase PayloadCase {
       get { return payloadCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPayload() {
       payloadCase_ = PayloadOneofCase.None;
       payload_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LogEntry);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LogEntry other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -486,6 +512,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (LogName.Length != 0) hash ^= LogName.GetHashCode();
@@ -512,11 +539,13 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -590,6 +619,7 @@ namespace Google.Cloud.Logging.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (payloadCase_ == PayloadOneofCase.ProtoPayload) {
         output.WriteRawTag(18);
@@ -659,6 +689,7 @@ namespace Google.Cloud.Logging.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (LogName.Length != 0) {
@@ -714,6 +745,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LogEntry other) {
       if (other == null) {
         return;
@@ -795,6 +827,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -904,6 +937,7 @@ namespace Google.Cloud.Logging.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1022,19 +1056,23 @@ namespace Google.Cloud.Logging.V2 {
     private static readonly pb::MessageParser<LogEntryOperation> _parser = new pb::MessageParser<LogEntryOperation>(() => new LogEntryOperation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LogEntryOperation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntryOperation() {
       OnConstruction();
     }
@@ -1042,6 +1080,7 @@ namespace Google.Cloud.Logging.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntryOperation(LogEntryOperation other) : this() {
       id_ = other.id_;
       producer_ = other.producer_;
@@ -1051,6 +1090,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntryOperation Clone() {
       return new LogEntryOperation(this);
     }
@@ -1063,6 +1103,7 @@ namespace Google.Cloud.Logging.V2 {
     /// identifier are assumed to be part of the same operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -1079,6 +1120,7 @@ namespace Google.Cloud.Logging.V2 {
     /// `"MyDivision.MyBigCompany.com"`, `"github.com/MyProject/MyApplication"`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Producer {
       get { return producer_; }
       set {
@@ -1093,6 +1135,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Optional. Set this to True if this is the first log entry in the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool First {
       get { return first_; }
       set {
@@ -1107,6 +1150,7 @@ namespace Google.Cloud.Logging.V2 {
     /// Optional. Set this to True if this is the last log entry in the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Last {
       get { return last_; }
       set {
@@ -1115,11 +1159,13 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LogEntryOperation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LogEntryOperation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1135,6 +1181,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -1148,11 +1195,13 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1181,6 +1230,7 @@ namespace Google.Cloud.Logging.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -1205,6 +1255,7 @@ namespace Google.Cloud.Logging.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -1226,6 +1277,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LogEntryOperation other) {
       if (other == null) {
         return;
@@ -1246,6 +1298,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1279,6 +1332,7 @@ namespace Google.Cloud.Logging.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1321,19 +1375,23 @@ namespace Google.Cloud.Logging.V2 {
     private static readonly pb::MessageParser<LogEntrySourceLocation> _parser = new pb::MessageParser<LogEntrySourceLocation>(() => new LogEntrySourceLocation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LogEntrySourceLocation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Logging.V2.LogEntryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntrySourceLocation() {
       OnConstruction();
     }
@@ -1341,6 +1399,7 @@ namespace Google.Cloud.Logging.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntrySourceLocation(LogEntrySourceLocation other) : this() {
       file_ = other.file_;
       line_ = other.line_;
@@ -1349,6 +1408,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LogEntrySourceLocation Clone() {
       return new LogEntrySourceLocation(this);
     }
@@ -1361,6 +1421,7 @@ namespace Google.Cloud.Logging.V2 {
     /// might be a simple name or a fully-qualified name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string File {
       get { return file_; }
       set {
@@ -1376,6 +1437,7 @@ namespace Google.Cloud.Logging.V2 {
     /// available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Line {
       get { return line_; }
       set {
@@ -1395,6 +1457,7 @@ namespace Google.Cloud.Logging.V2 {
     /// (Python).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Function {
       get { return function_; }
       set {
@@ -1403,11 +1466,13 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LogEntrySourceLocation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LogEntrySourceLocation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1422,6 +1487,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (File.Length != 0) hash ^= File.GetHashCode();
@@ -1434,11 +1500,13 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1463,6 +1531,7 @@ namespace Google.Cloud.Logging.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (File.Length != 0) {
         output.WriteRawTag(10);
@@ -1483,6 +1552,7 @@ namespace Google.Cloud.Logging.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (File.Length != 0) {
@@ -1501,6 +1571,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LogEntrySourceLocation other) {
       if (other == null) {
         return;
@@ -1518,6 +1589,7 @@ namespace Google.Cloud.Logging.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1547,6 +1619,7 @@ namespace Google.Cloud.Logging.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

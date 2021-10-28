@@ -60,19 +60,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     private static readonly pb::MessageParser<VideoObjectTrackingPredictionParams> _parser = new pb::MessageParser<VideoObjectTrackingPredictionParams>(() => new VideoObjectTrackingPredictionParams());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoObjectTrackingPredictionParams> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.Predict.Params.VideoObjectTrackingReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingPredictionParams() {
       OnConstruction();
     }
@@ -80,6 +84,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingPredictionParams(VideoObjectTrackingPredictionParams other) : this() {
       confidenceThreshold_ = other.confidenceThreshold_;
       maxPredictions_ = other.maxPredictions_;
@@ -88,6 +93,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingPredictionParams Clone() {
       return new VideoObjectTrackingPredictionParams(this);
     }
@@ -100,6 +106,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     /// Default value is 0.0
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float ConfidenceThreshold {
       get { return confidenceThreshold_; }
       set {
@@ -116,6 +123,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     /// Model may return fewer predictions per frame. Default value is 50.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxPredictions {
       get { return maxPredictions_; }
       set {
@@ -131,6 +139,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     /// value of video frame size are returned. Default value is 0.0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float MinBoundingBoxSize {
       get { return minBoundingBoxSize_; }
       set {
@@ -139,11 +148,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoObjectTrackingPredictionParams);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoObjectTrackingPredictionParams other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -158,6 +169,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ConfidenceThreshold != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ConfidenceThreshold);
@@ -170,11 +182,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -199,6 +213,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ConfidenceThreshold != 0F) {
         output.WriteRawTag(13);
@@ -219,6 +234,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ConfidenceThreshold != 0F) {
@@ -237,6 +253,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoObjectTrackingPredictionParams other) {
       if (other == null) {
         return;
@@ -254,6 +271,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -283,6 +301,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Params {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

@@ -143,19 +143,23 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     private static readonly pb::MessageParser<MigrationStateEvent> _parser = new pb::MessageParser<MigrationStateEvent>(() => new MigrationStateEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MigrationStateEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastore.Admin.V1.MigrationReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationStateEvent() {
       OnConstruction();
     }
@@ -163,12 +167,14 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationStateEvent(MigrationStateEvent other) : this() {
       state_ = other.state_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationStateEvent Clone() {
       return new MigrationStateEvent(this);
     }
@@ -180,6 +186,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     /// The new state of the migration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastore.Admin.V1.MigrationState State {
       get { return state_; }
       set {
@@ -188,11 +195,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MigrationStateEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MigrationStateEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -205,6 +214,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (State != global::Google.Cloud.Datastore.Admin.V1.MigrationState.Unspecified) hash ^= State.GetHashCode();
@@ -215,11 +225,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -236,6 +248,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (State != global::Google.Cloud.Datastore.Admin.V1.MigrationState.Unspecified) {
         output.WriteRawTag(8);
@@ -248,6 +261,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (State != global::Google.Cloud.Datastore.Admin.V1.MigrationState.Unspecified) {
@@ -260,6 +274,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MigrationStateEvent other) {
       if (other == null) {
         return;
@@ -271,6 +286,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -292,6 +308,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -323,19 +340,23 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     private static readonly pb::MessageParser<MigrationProgressEvent> _parser = new pb::MessageParser<MigrationProgressEvent>(() => new MigrationProgressEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MigrationProgressEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Datastore.Admin.V1.MigrationReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationProgressEvent() {
       OnConstruction();
     }
@@ -343,6 +364,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationProgressEvent(MigrationProgressEvent other) : this() {
       step_ = other.step_;
       switch (other.StepDetailsCase) {
@@ -358,6 +380,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationProgressEvent Clone() {
       return new MigrationProgressEvent(this);
     }
@@ -372,6 +395,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     /// has been reverted back to the initial pre-migration state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastore.Admin.V1.MigrationStep Step {
       get { return step_; }
       set {
@@ -385,6 +409,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     /// Details for the `PREPARE` step.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails PrepareStepDetails {
       get { return stepDetailsCase_ == StepDetailsOneofCase.PrepareStepDetails ? (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.PrepareStepDetails) stepDetails_ : null; }
       set {
@@ -399,6 +424,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     /// Details for the `REDIRECT_WRITES` step.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails RedirectWritesStepDetails {
       get { return stepDetailsCase_ == StepDetailsOneofCase.RedirectWritesStepDetails ? (global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.RedirectWritesStepDetails) stepDetails_ : null; }
       set {
@@ -416,22 +442,26 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
     private StepDetailsOneofCase stepDetailsCase_ = StepDetailsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StepDetailsOneofCase StepDetailsCase {
       get { return stepDetailsCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearStepDetails() {
       stepDetailsCase_ = StepDetailsOneofCase.None;
       stepDetails_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MigrationProgressEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MigrationProgressEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -447,6 +477,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Step != global::Google.Cloud.Datastore.Admin.V1.MigrationStep.Unspecified) hash ^= Step.GetHashCode();
@@ -460,11 +491,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -489,6 +522,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Step != global::Google.Cloud.Datastore.Admin.V1.MigrationStep.Unspecified) {
         output.WriteRawTag(8);
@@ -509,6 +543,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Step != global::Google.Cloud.Datastore.Admin.V1.MigrationStep.Unspecified) {
@@ -527,6 +562,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MigrationProgressEvent other) {
       if (other == null) {
         return;
@@ -553,6 +589,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -592,6 +629,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -629,6 +667,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the MigrationProgressEvent message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Concurrency modes for transactions in Cloud Firestore.
@@ -659,19 +698,23 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         private static readonly pb::MessageParser<PrepareStepDetails> _parser = new pb::MessageParser<PrepareStepDetails>(() => new PrepareStepDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<PrepareStepDetails> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PrepareStepDetails() {
           OnConstruction();
         }
@@ -679,12 +722,14 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PrepareStepDetails(PrepareStepDetails other) : this() {
           concurrencyMode_ = other.concurrencyMode_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PrepareStepDetails Clone() {
           return new PrepareStepDetails(this);
         }
@@ -697,6 +742,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         /// `REDIRECT_WRITES` step.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode ConcurrencyMode {
           get { return concurrencyMode_; }
           set {
@@ -705,11 +751,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as PrepareStepDetails);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(PrepareStepDetails other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -722,6 +770,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
@@ -732,11 +781,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -753,6 +804,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
             output.WriteRawTag(8);
@@ -765,6 +817,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
@@ -777,6 +830,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(PrepareStepDetails other) {
           if (other == null) {
             return;
@@ -788,6 +842,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -809,6 +864,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -838,19 +894,23 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         private static readonly pb::MessageParser<RedirectWritesStepDetails> _parser = new pb::MessageParser<RedirectWritesStepDetails>(() => new RedirectWritesStepDetails());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<RedirectWritesStepDetails> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RedirectWritesStepDetails() {
           OnConstruction();
         }
@@ -858,12 +918,14 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RedirectWritesStepDetails(RedirectWritesStepDetails other) : this() {
           concurrencyMode_ = other.concurrencyMode_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RedirectWritesStepDetails Clone() {
           return new RedirectWritesStepDetails(this);
         }
@@ -875,6 +937,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         /// Ths concurrency mode for this database.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode ConcurrencyMode {
           get { return concurrencyMode_; }
           set {
@@ -883,11 +946,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as RedirectWritesStepDetails);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(RedirectWritesStepDetails other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -900,6 +965,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) hash ^= ConcurrencyMode.GetHashCode();
@@ -910,11 +976,13 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -931,6 +999,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
             output.WriteRawTag(8);
@@ -943,6 +1012,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (ConcurrencyMode != global::Google.Cloud.Datastore.Admin.V1.MigrationProgressEvent.Types.ConcurrencyMode.Unspecified) {
@@ -955,6 +1025,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(RedirectWritesStepDetails other) {
           if (other == null) {
             return;
@@ -966,6 +1037,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -987,6 +1059,7 @@ namespace Google.Cloud.Datastore.Admin.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

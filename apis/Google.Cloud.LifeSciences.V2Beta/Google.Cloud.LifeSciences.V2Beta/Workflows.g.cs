@@ -206,19 +206,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<RunPipelineRequest> _parser = new pb::MessageParser<RunPipelineRequest>(() => new RunPipelineRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RunPipelineRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunPipelineRequest() {
       OnConstruction();
     }
@@ -226,6 +230,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunPipelineRequest(RunPipelineRequest other) : this() {
       parent_ = other.parent_;
       pipeline_ = other.pipeline_ != null ? other.pipeline_.Clone() : null;
@@ -235,6 +240,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunPipelineRequest Clone() {
       return new RunPipelineRequest(this);
     }
@@ -246,6 +252,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The project and location that this request should be executed against.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -260,6 +267,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Required. The description of the pipeline to run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.Pipeline Pipeline {
       get { return pipeline_; }
       set {
@@ -281,6 +289,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// see the appropriate resource message (for example, `VirtualMachine`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -295,6 +304,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// the specified topic or notifications will not be sent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubSubTopic {
       get { return pubSubTopic_; }
       set {
@@ -303,11 +313,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RunPipelineRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RunPipelineRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -323,6 +335,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -336,11 +349,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -366,6 +381,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pipeline_ != null) {
         output.WriteRawTag(10);
@@ -387,6 +403,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -406,6 +423,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RunPipelineRequest other) {
       if (other == null) {
         return;
@@ -427,6 +445,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -463,6 +482,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -508,19 +528,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<RunPipelineResponse> _parser = new pb::MessageParser<RunPipelineResponse>(() => new RunPipelineResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RunPipelineResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunPipelineResponse() {
       OnConstruction();
     }
@@ -528,21 +552,25 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunPipelineResponse(RunPipelineResponse other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunPipelineResponse Clone() {
       return new RunPipelineResponse(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RunPipelineResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RunPipelineResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -554,6 +582,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -563,11 +592,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -580,6 +611,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -588,6 +620,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -597,6 +630,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RunPipelineResponse other) {
       if (other == null) {
         return;
@@ -605,6 +639,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -622,6 +657,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -647,19 +683,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Pipeline> _parser = new pb::MessageParser<Pipeline>(() => new Pipeline());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Pipeline> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pipeline() {
       OnConstruction();
     }
@@ -667,6 +707,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pipeline(Pipeline other) : this() {
       actions_ = other.actions_.Clone();
       resources_ = other.resources_ != null ? other.resources_.Clone() : null;
@@ -676,6 +717,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Pipeline Clone() {
       return new Pipeline(this);
     }
@@ -689,6 +731,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The list of actions to execute, in the order they are specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.LifeSciences.V2Beta.Action> Actions {
       get { return actions_; }
     }
@@ -700,6 +743,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The resources required for execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.Resources Resources {
       get { return resources_; }
       set {
@@ -718,6 +762,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// (though they can overwrite it with a different value).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Environment {
       get { return environment_; }
     }
@@ -734,6 +779,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// If unspecified, it will default to 7 days.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Timeout {
       get { return timeout_; }
       set {
@@ -742,11 +788,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Pipeline);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Pipeline other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -762,6 +810,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= actions_.GetHashCode();
@@ -775,11 +824,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -802,6 +853,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       actions_.WriteTo(ref output, _repeated_actions_codec);
       if (resources_ != null) {
@@ -820,6 +872,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += actions_.CalculateSize(_repeated_actions_codec);
@@ -837,6 +890,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Pipeline other) {
       if (other == null) {
         return;
@@ -859,6 +913,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -898,6 +953,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -945,19 +1001,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Action> _parser = new pb::MessageParser<Action>(() => new Action());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Action> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Action() {
       OnConstruction();
     }
@@ -965,6 +1025,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Action(Action other) : this() {
       containerName_ = other.containerName_;
       imageUri_ = other.imageUri_;
@@ -989,6 +1050,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Action Clone() {
       return new Action(this);
     }
@@ -1003,6 +1065,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// and cannot start with a hyphen.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ContainerName {
       get { return containerName_; }
       set {
@@ -1030,6 +1093,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// [google.cloud.lifesciences.v2beta.Action.credentials][google.cloud.lifesciences.v2beta.Action.credentials] field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageUri {
       get { return imageUri_; }
       set {
@@ -1049,6 +1113,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// inside the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Commands {
       get { return commands_; }
     }
@@ -1060,6 +1125,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// If specified, overrides the `ENTRYPOINT` specified in the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Entrypoint {
       get { return entrypoint_; }
       set {
@@ -1091,6 +1157,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// authors to determine whether an individual action has succeeded or failed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Environment {
       get { return environment_; }
     }
@@ -1104,6 +1171,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// unspecified, a separate isolated namespace is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PidNamespace {
       get { return pidNamespace_; }
       set {
@@ -1126,6 +1194,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// the `ContainerStartedEvent` in the operation metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<int, int> PortMappings {
       get { return portMappings_; }
     }
@@ -1155,6 +1224,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// &lt;/ul>
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.LifeSciences.V2Beta.Mount> Mounts {
       get { return mounts_; }
     }
@@ -1171,6 +1241,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// They are returned in the operation metadata, but are otherwise ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -1187,6 +1258,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// `username` and `password` keys.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.Secret Credentials {
       get { return credentials_; }
       set {
@@ -1204,6 +1276,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// on the rules defined by the `ALWAYS_RUN` and `IGNORE_EXIT_STATUS` flags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Timeout {
       get { return timeout_; }
       set {
@@ -1219,6 +1292,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// allows execution of other actions to continue instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IgnoreExitStatus {
       get { return ignoreExitStatus_; }
       set {
@@ -1235,6 +1309,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// other actions (or to provide debugging support tools like SSH servers).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool RunInBackground {
       get { return runInBackground_; }
       set {
@@ -1253,6 +1328,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AlwaysRun {
       get { return alwaysRun_; }
       set {
@@ -1273,6 +1349,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// for containers you trust.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableFuse {
       get { return enableFuse_; }
       set {
@@ -1289,6 +1366,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// in the operation metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PublishExposedPorts {
       get { return publishExposedPorts_; }
       set {
@@ -1308,6 +1386,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// just before the action is executed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableImagePrefetch {
       get { return disableImagePrefetch_; }
       set {
@@ -1324,6 +1403,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// flag disables this functionality.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableStandardErrorCapture {
       get { return disableStandardErrorCapture_; }
       set {
@@ -1338,6 +1418,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Prevents the container from accessing the external network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BlockExternalNetwork {
       get { return blockExternalNetwork_; }
       set {
@@ -1346,11 +1427,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Action);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Action other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1381,6 +1464,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ContainerName.Length != 0) hash ^= ContainerName.GetHashCode();
@@ -1409,11 +1493,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1487,6 +1573,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ContainerName.Length != 0) {
         output.WriteRawTag(10);
@@ -1556,6 +1643,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ContainerName.Length != 0) {
@@ -1612,6 +1700,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Action other) {
       if (other == null) {
         return;
@@ -1673,6 +1762,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1772,6 +1862,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1880,19 +1971,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Secret> _parser = new pb::MessageParser<Secret>(() => new Secret());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Secret> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secret() {
       OnConstruction();
     }
@@ -1900,6 +1995,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secret(Secret other) : this() {
       keyName_ = other.keyName_;
       cipherText_ = other.cipherText_;
@@ -1907,6 +2003,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secret Clone() {
       return new Secret(this);
     }
@@ -1920,6 +2017,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// authentication scopes to invoke the `decrypt` method on the specified key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string KeyName {
       get { return keyName_; }
       set {
@@ -1935,6 +2033,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// is intentionally unaudited.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CipherText {
       get { return cipherText_; }
       set {
@@ -1943,11 +2042,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Secret);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Secret other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1961,6 +2062,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (KeyName.Length != 0) hash ^= KeyName.GetHashCode();
@@ -1972,11 +2074,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1997,6 +2101,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (KeyName.Length != 0) {
         output.WriteRawTag(10);
@@ -2013,6 +2118,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (KeyName.Length != 0) {
@@ -2028,6 +2134,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Secret other) {
       if (other == null) {
         return;
@@ -2042,6 +2149,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2067,6 +2175,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2100,19 +2209,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Mount> _parser = new pb::MessageParser<Mount>(() => new Mount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Mount> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mount() {
       OnConstruction();
     }
@@ -2120,6 +2233,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mount(Mount other) : this() {
       disk_ = other.disk_;
       path_ = other.path_;
@@ -2128,6 +2242,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mount Clone() {
       return new Mount(this);
     }
@@ -2139,6 +2254,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The name of the disk to mount, as specified in the resources section.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Disk {
       get { return disk_; }
       set {
@@ -2153,6 +2269,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The path to mount the disk inside the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Path {
       get { return path_; }
       set {
@@ -2167,6 +2284,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// If true, the disk is mounted read-only inside the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ReadOnly {
       get { return readOnly_; }
       set {
@@ -2175,11 +2293,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Mount);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Mount other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2194,6 +2314,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Disk.Length != 0) hash ^= Disk.GetHashCode();
@@ -2206,11 +2327,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2235,6 +2358,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Disk.Length != 0) {
         output.WriteRawTag(10);
@@ -2255,6 +2379,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Disk.Length != 0) {
@@ -2273,6 +2398,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Mount other) {
       if (other == null) {
         return;
@@ -2290,6 +2416,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2319,6 +2446,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2358,19 +2486,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Resources> _parser = new pb::MessageParser<Resources>(() => new Resources());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Resources> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Resources() {
       OnConstruction();
     }
@@ -2378,6 +2510,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Resources(Resources other) : this() {
       regions_ = other.regions_.Clone();
       zones_ = other.zones_.Clone();
@@ -2386,6 +2519,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Resources Clone() {
       return new Resources(this);
     }
@@ -2400,6 +2534,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// must not be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Regions {
       get { return regions_; }
     }
@@ -2414,6 +2549,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// must not be set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Zones {
       get { return zones_; }
     }
@@ -2425,6 +2561,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The virtual machine specification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.VirtualMachine VirtualMachine {
       get { return virtualMachine_; }
       set {
@@ -2433,11 +2570,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Resources);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Resources other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2452,6 +2591,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= regions_.GetHashCode();
@@ -2464,11 +2604,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2487,6 +2629,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       regions_.WriteTo(ref output, _repeated_regions_codec);
       zones_.WriteTo(ref output, _repeated_zones_codec);
@@ -2501,6 +2644,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += regions_.CalculateSize(_repeated_regions_codec);
@@ -2515,6 +2659,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Resources other) {
       if (other == null) {
         return;
@@ -2531,6 +2676,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2563,6 +2709,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2603,19 +2750,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<VirtualMachine> _parser = new pb::MessageParser<VirtualMachine>(() => new VirtualMachine());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VirtualMachine> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VirtualMachine() {
       OnConstruction();
     }
@@ -2623,6 +2774,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VirtualMachine(VirtualMachine other) : this() {
       machineType_ = other.machineType_;
       preemptible_ = other.preemptible_;
@@ -2642,6 +2794,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VirtualMachine Clone() {
       return new VirtualMachine(this);
     }
@@ -2659,6 +2812,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// for more specifications on creating a custom machine type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MachineType {
       get { return machineType_; }
       set {
@@ -2673,6 +2827,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// If true, allocate a preemptible VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Preemptible {
       get { return preemptible_; }
       set {
@@ -2697,6 +2852,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// to attached disk resources shortly after VM creation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -2712,6 +2868,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Specify either the `volumes[]` field or the `disks[]` field, but not both.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.LifeSciences.V2Beta.Disk> Disks {
       get { return disks_; }
     }
@@ -2723,6 +2880,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The VM network configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.Network Network {
       get { return network_; }
       set {
@@ -2739,6 +2897,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The list of accelerators to attach to the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.LifeSciences.V2Beta.Accelerator> Accelerators {
       get { return accelerators_; }
     }
@@ -2751,6 +2910,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// any permissions other than those required by the pipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.ServiceAccount ServiceAccount {
       get { return serviceAccount_; }
       set {
@@ -2768,6 +2928,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// default value is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int BootDiskSizeGb {
       get { return bootDiskSizeGb_; }
       set {
@@ -2789,6 +2950,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// https://cloud.google.com/compute/docs/instances/specify-min-cpu-platform.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CpuPlatform {
       get { return cpuPlatform_; }
       set {
@@ -2815,6 +2977,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// use the value `projects/cos-cloud/global/images/family/cos-beta`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BootImage {
       get { return bootImage_; }
       set {
@@ -2833,6 +2996,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NvidiaDriverVersion {
       get { return nvidiaDriverVersion_; }
       set {
@@ -2847,6 +3011,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Whether Stackdriver monitoring should be enabled on the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableStackdriverMonitoring {
       get { return enableStackdriverMonitoring_; }
       set {
@@ -2871,6 +3036,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Only a single image is supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> DockerCacheImages {
       get { return dockerCacheImages_; }
     }
@@ -2886,16 +3052,19 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Specify either the `volumes[]` field or the `disks[]` field, but not both.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.LifeSciences.V2Beta.Volume> Volumes {
       get { return volumes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VirtualMachine);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VirtualMachine other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2921,6 +3090,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
@@ -2944,11 +3114,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3002,6 +3174,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MachineType.Length != 0) {
         output.WriteRawTag(10);
@@ -3051,6 +3224,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MachineType.Length != 0) {
@@ -3092,6 +3266,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VirtualMachine other) {
       if (other == null) {
         return;
@@ -3138,6 +3313,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3217,6 +3393,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3304,19 +3481,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<ServiceAccount> _parser = new pb::MessageParser<ServiceAccount>(() => new ServiceAccount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ServiceAccount> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServiceAccount() {
       OnConstruction();
     }
@@ -3324,6 +3505,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServiceAccount(ServiceAccount other) : this() {
       email_ = other.email_;
       scopes_ = other.scopes_.Clone();
@@ -3331,6 +3513,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServiceAccount Clone() {
       return new ServiceAccount(this);
     }
@@ -3343,6 +3526,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Compute Engine service account for the project will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Email {
       get { return email_; }
       set {
@@ -3360,16 +3544,19 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// addition to the cloud-platform API scope that will be added by default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Scopes {
       get { return scopes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ServiceAccount);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ServiceAccount other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3383,6 +3570,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Email.Length != 0) hash ^= Email.GetHashCode();
@@ -3394,11 +3582,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3416,6 +3606,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Email.Length != 0) {
         output.WriteRawTag(10);
@@ -3429,6 +3620,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Email.Length != 0) {
@@ -3442,6 +3634,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ServiceAccount other) {
       if (other == null) {
         return;
@@ -3454,6 +3647,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3479,6 +3673,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3512,19 +3707,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Accelerator> _parser = new pb::MessageParser<Accelerator>(() => new Accelerator());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Accelerator> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Accelerator() {
       OnConstruction();
     }
@@ -3532,6 +3731,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Accelerator(Accelerator other) : this() {
       type_ = other.type_;
       count_ = other.count_;
@@ -3539,6 +3739,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Accelerator Clone() {
       return new Accelerator(this);
     }
@@ -3557,6 +3758,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// startup time by a few minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Type {
       get { return type_; }
       set {
@@ -3571,6 +3773,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// How many accelerators of this type to attach.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Count {
       get { return count_; }
       set {
@@ -3579,11 +3782,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Accelerator);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Accelerator other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3597,6 +3802,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Type.Length != 0) hash ^= Type.GetHashCode();
@@ -3608,11 +3814,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3633,6 +3841,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type.Length != 0) {
         output.WriteRawTag(10);
@@ -3649,6 +3858,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Type.Length != 0) {
@@ -3664,6 +3874,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Accelerator other) {
       if (other == null) {
         return;
@@ -3678,6 +3889,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3703,6 +3915,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3736,19 +3949,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Network> _parser = new pb::MessageParser<Network>(() => new Network());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Network> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Network() {
       OnConstruction();
     }
@@ -3756,6 +3973,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Network(Network other) : this() {
       network_ = other.network_;
       usePrivateAddress_ = other.usePrivateAddress_;
@@ -3764,6 +3982,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Network Clone() {
       return new Network(this);
     }
@@ -3779,6 +3998,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// If unspecified, the global default network is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Network_ {
       get { return network_; }
       set {
@@ -3798,6 +4018,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UsePrivateAddress {
       get { return usePrivateAddress_; }
       set {
@@ -3820,6 +4041,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// that the virtual machine has been allocated in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Subnetwork {
       get { return subnetwork_; }
       set {
@@ -3828,11 +4050,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Network);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Network other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3847,6 +4071,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Network_.Length != 0) hash ^= Network_.GetHashCode();
@@ -3859,11 +4084,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3888,6 +4115,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Network_.Length != 0) {
         output.WriteRawTag(10);
@@ -3908,6 +4136,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Network_.Length != 0) {
@@ -3926,6 +4155,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Network other) {
       if (other == null) {
         return;
@@ -3943,6 +4173,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3972,6 +4203,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4015,19 +4247,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Disk> _parser = new pb::MessageParser<Disk>(() => new Disk());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Disk> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Disk() {
       OnConstruction();
     }
@@ -4035,6 +4271,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Disk(Disk other) : this() {
       name_ = other.name_;
       sizeGb_ = other.sizeGb_;
@@ -4044,6 +4281,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Disk Clone() {
       return new Disk(this);
     }
@@ -4057,6 +4295,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// characters and hyphens and cannot start with a hyphen.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -4077,6 +4316,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// attached to a single instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SizeGb {
       get { return sizeGb_; }
       set {
@@ -4091,6 +4331,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The Compute Engine disk type. If unspecified, `pd-standard` is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Type {
       get { return type_; }
       set {
@@ -4105,6 +4346,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// An optional image to put on the disk before attaching it to the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceImage {
       get { return sourceImage_; }
       set {
@@ -4113,11 +4355,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Disk);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Disk other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4133,6 +4377,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -4146,11 +4391,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4179,6 +4426,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -4203,6 +4451,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4224,6 +4473,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Disk other) {
       if (other == null) {
         return;
@@ -4244,6 +4494,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4277,6 +4528,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4321,19 +4573,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Volume> _parser = new pb::MessageParser<Volume>(() => new Volume());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Volume> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Volume() {
       OnConstruction();
     }
@@ -4341,6 +4597,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Volume(Volume other) : this() {
       volume_ = other.volume_;
       switch (other.StorageCase) {
@@ -4359,6 +4616,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Volume Clone() {
       return new Volume(this);
     }
@@ -4373,6 +4631,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// start with a hyphen.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Volume_ {
       get { return volume_; }
       set {
@@ -4386,6 +4645,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Configuration for a persistent disk.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.PersistentDisk PersistentDisk {
       get { return storageCase_ == StorageOneofCase.PersistentDisk ? (global::Google.Cloud.LifeSciences.V2Beta.PersistentDisk) storage_ : null; }
       set {
@@ -4400,6 +4660,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Configuration for a existing disk.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.ExistingDisk ExistingDisk {
       get { return storageCase_ == StorageOneofCase.ExistingDisk ? (global::Google.Cloud.LifeSciences.V2Beta.ExistingDisk) storage_ : null; }
       set {
@@ -4414,6 +4675,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Configuration for an NFS mount.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.NFSMount NfsMount {
       get { return storageCase_ == StorageOneofCase.NfsMount ? (global::Google.Cloud.LifeSciences.V2Beta.NFSMount) storage_ : null; }
       set {
@@ -4432,22 +4694,26 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
     private StorageOneofCase storageCase_ = StorageOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StorageOneofCase StorageCase {
       get { return storageCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearStorage() {
       storageCase_ = StorageOneofCase.None;
       storage_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Volume);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Volume other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4464,6 +4730,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Volume_.Length != 0) hash ^= Volume_.GetHashCode();
@@ -4478,11 +4745,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4511,6 +4780,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Volume_.Length != 0) {
         output.WriteRawTag(10);
@@ -4535,6 +4805,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Volume_.Length != 0) {
@@ -4556,6 +4827,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Volume other) {
       if (other == null) {
         return;
@@ -4588,6 +4860,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4636,6 +4909,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4695,19 +4969,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<PersistentDisk> _parser = new pb::MessageParser<PersistentDisk>(() => new PersistentDisk());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PersistentDisk> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersistentDisk() {
       OnConstruction();
     }
@@ -4715,6 +4993,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersistentDisk(PersistentDisk other) : this() {
       sizeGb_ = other.sizeGb_;
       type_ = other.type_;
@@ -4723,6 +5002,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PersistentDisk Clone() {
       return new PersistentDisk(this);
     }
@@ -4740,6 +5020,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// attached to a single instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SizeGb {
       get { return sizeGb_; }
       set {
@@ -4754,6 +5035,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The Compute Engine disk type. If unspecified, `pd-standard` is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Type {
       get { return type_; }
       set {
@@ -4768,6 +5050,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// An image to put on the disk before attaching it to the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceImage {
       get { return sourceImage_; }
       set {
@@ -4776,11 +5059,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PersistentDisk);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PersistentDisk other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4795,6 +5080,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SizeGb != 0) hash ^= SizeGb.GetHashCode();
@@ -4807,11 +5093,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4836,6 +5124,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SizeGb != 0) {
         output.WriteRawTag(8);
@@ -4856,6 +5145,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SizeGb != 0) {
@@ -4874,6 +5164,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PersistentDisk other) {
       if (other == null) {
         return;
@@ -4891,6 +5182,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4920,6 +5212,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4957,19 +5250,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<ExistingDisk> _parser = new pb::MessageParser<ExistingDisk>(() => new ExistingDisk());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExistingDisk> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExistingDisk() {
       OnConstruction();
     }
@@ -4977,12 +5274,14 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExistingDisk(ExistingDisk other) : this() {
       disk_ = other.disk_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExistingDisk Clone() {
       return new ExistingDisk(this);
     }
@@ -5003,6 +5302,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// cannot be shared.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Disk {
       get { return disk_; }
       set {
@@ -5011,11 +5311,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExistingDisk);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExistingDisk other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5028,6 +5330,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Disk.Length != 0) hash ^= Disk.GetHashCode();
@@ -5038,11 +5341,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5059,6 +5364,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Disk.Length != 0) {
         output.WriteRawTag(10);
@@ -5071,6 +5377,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Disk.Length != 0) {
@@ -5083,6 +5390,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExistingDisk other) {
       if (other == null) {
         return;
@@ -5094,6 +5402,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5115,6 +5424,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5144,19 +5454,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<NFSMount> _parser = new pb::MessageParser<NFSMount>(() => new NFSMount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NFSMount> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NFSMount() {
       OnConstruction();
     }
@@ -5164,12 +5478,14 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NFSMount(NFSMount other) : this() {
       target_ = other.target_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NFSMount Clone() {
       return new NFSMount(this);
     }
@@ -5181,6 +5497,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// A target NFS mount. The target must be specified as `address:/mount".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Target {
       get { return target_; }
       set {
@@ -5189,11 +5506,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NFSMount);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NFSMount other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5206,6 +5525,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Target.Length != 0) hash ^= Target.GetHashCode();
@@ -5216,11 +5536,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5237,6 +5559,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Target.Length != 0) {
         output.WriteRawTag(10);
@@ -5249,6 +5572,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Target.Length != 0) {
@@ -5261,6 +5585,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NFSMount other) {
       if (other == null) {
         return;
@@ -5272,6 +5597,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5293,6 +5619,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5323,19 +5650,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Metadata> _parser = new pb::MessageParser<Metadata>(() => new Metadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Metadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Metadata() {
       OnConstruction();
     }
@@ -5343,6 +5674,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Metadata(Metadata other) : this() {
       pipeline_ = other.pipeline_ != null ? other.pipeline_.Clone() : null;
       labels_ = other.labels_.Clone();
@@ -5355,6 +5687,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Metadata Clone() {
       return new Metadata(this);
     }
@@ -5366,6 +5699,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The pipeline this operation represents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.Pipeline Pipeline {
       get { return pipeline_; }
       set {
@@ -5382,6 +5716,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The user-defined labels associated with this operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -5396,6 +5731,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.LifeSciences.V2Beta.Event> Events {
       get { return events_; }
     }
@@ -5407,6 +5743,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The time at which the operation was created by the API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -5421,6 +5758,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The first time at which resources were allocated to execute the pipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -5435,6 +5773,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The time at which execution was completed and resources were cleaned up.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -5450,6 +5789,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// changes are sent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubSubTopic {
       get { return pubSubTopic_; }
       set {
@@ -5458,11 +5798,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Metadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Metadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5481,6 +5823,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (pipeline_ != null) hash ^= Pipeline.GetHashCode();
@@ -5497,11 +5840,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5536,6 +5881,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pipeline_ != null) {
         output.WriteRawTag(10);
@@ -5566,6 +5912,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (pipeline_ != null) {
@@ -5592,6 +5939,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Metadata other) {
       if (other == null) {
         return;
@@ -5629,6 +5977,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5686,6 +6035,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5751,19 +6101,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<Event> _parser = new pb::MessageParser<Event>(() => new Event());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Event> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Event() {
       OnConstruction();
     }
@@ -5771,6 +6125,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Event(Event other) : this() {
       timestamp_ = other.timestamp_ != null ? other.timestamp_.Clone() : null;
       description_ = other.description_;
@@ -5811,6 +6166,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Event Clone() {
       return new Event(this);
     }
@@ -5822,6 +6178,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The time at which the event occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp Timestamp {
       get { return timestamp_; }
       set {
@@ -5838,6 +6195,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// information in the `details` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -5851,6 +6209,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.DelayedEvent][google.cloud.lifesciences.v2beta.DelayedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.DelayedEvent Delayed {
       get { return detailsCase_ == DetailsOneofCase.Delayed ? (global::Google.Cloud.LifeSciences.V2Beta.DelayedEvent) details_ : null; }
       set {
@@ -5865,6 +6224,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.WorkerAssignedEvent][google.cloud.lifesciences.v2beta.WorkerAssignedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.WorkerAssignedEvent WorkerAssigned {
       get { return detailsCase_ == DetailsOneofCase.WorkerAssigned ? (global::Google.Cloud.LifeSciences.V2Beta.WorkerAssignedEvent) details_ : null; }
       set {
@@ -5879,6 +6239,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.WorkerReleasedEvent][google.cloud.lifesciences.v2beta.WorkerReleasedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.WorkerReleasedEvent WorkerReleased {
       get { return detailsCase_ == DetailsOneofCase.WorkerReleased ? (global::Google.Cloud.LifeSciences.V2Beta.WorkerReleasedEvent) details_ : null; }
       set {
@@ -5893,6 +6254,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.PullStartedEvent][google.cloud.lifesciences.v2beta.PullStartedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.PullStartedEvent PullStarted {
       get { return detailsCase_ == DetailsOneofCase.PullStarted ? (global::Google.Cloud.LifeSciences.V2Beta.PullStartedEvent) details_ : null; }
       set {
@@ -5907,6 +6269,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.PullStoppedEvent][google.cloud.lifesciences.v2beta.PullStoppedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.PullStoppedEvent PullStopped {
       get { return detailsCase_ == DetailsOneofCase.PullStopped ? (global::Google.Cloud.LifeSciences.V2Beta.PullStoppedEvent) details_ : null; }
       set {
@@ -5921,6 +6284,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.ContainerStartedEvent][google.cloud.lifesciences.v2beta.ContainerStartedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.ContainerStartedEvent ContainerStarted {
       get { return detailsCase_ == DetailsOneofCase.ContainerStarted ? (global::Google.Cloud.LifeSciences.V2Beta.ContainerStartedEvent) details_ : null; }
       set {
@@ -5935,6 +6299,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.ContainerStoppedEvent][google.cloud.lifesciences.v2beta.ContainerStoppedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.ContainerStoppedEvent ContainerStopped {
       get { return detailsCase_ == DetailsOneofCase.ContainerStopped ? (global::Google.Cloud.LifeSciences.V2Beta.ContainerStoppedEvent) details_ : null; }
       set {
@@ -5949,6 +6314,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.ContainerKilledEvent][google.cloud.lifesciences.v2beta.ContainerKilledEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.ContainerKilledEvent ContainerKilled {
       get { return detailsCase_ == DetailsOneofCase.ContainerKilled ? (global::Google.Cloud.LifeSciences.V2Beta.ContainerKilledEvent) details_ : null; }
       set {
@@ -5963,6 +6329,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.UnexpectedExitStatusEvent][google.cloud.lifesciences.v2beta.UnexpectedExitStatusEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.UnexpectedExitStatusEvent UnexpectedExitStatus {
       get { return detailsCase_ == DetailsOneofCase.UnexpectedExitStatus ? (global::Google.Cloud.LifeSciences.V2Beta.UnexpectedExitStatusEvent) details_ : null; }
       set {
@@ -5977,6 +6344,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// See [google.cloud.lifesciences.v2beta.FailedEvent][google.cloud.lifesciences.v2beta.FailedEvent].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.LifeSciences.V2Beta.FailedEvent Failed {
       get { return detailsCase_ == DetailsOneofCase.Failed ? (global::Google.Cloud.LifeSciences.V2Beta.FailedEvent) details_ : null; }
       set {
@@ -6002,22 +6370,26 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
     private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetailsOneofCase DetailsCase {
       get { return detailsCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDetails() {
       detailsCase_ = DetailsOneofCase.None;
       details_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Event);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Event other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6042,6 +6414,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (timestamp_ != null) hash ^= Timestamp.GetHashCode();
@@ -6064,11 +6437,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6129,6 +6504,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (timestamp_ != null) {
         output.WriteRawTag(10);
@@ -6185,6 +6561,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (timestamp_ != null) {
@@ -6230,6 +6607,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Event other) {
       if (other == null) {
         return;
@@ -6310,6 +6688,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6428,6 +6807,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6555,19 +6935,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<DelayedEvent> _parser = new pb::MessageParser<DelayedEvent>(() => new DelayedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DelayedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DelayedEvent() {
       OnConstruction();
     }
@@ -6575,6 +6959,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DelayedEvent(DelayedEvent other) : this() {
       cause_ = other.cause_;
       metrics_ = other.metrics_.Clone();
@@ -6582,6 +6967,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DelayedEvent Clone() {
       return new DelayedEvent(this);
     }
@@ -6595,6 +6981,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// Compute Engine).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Cause {
       get { return cause_; }
       set {
@@ -6614,16 +7001,19 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// known, a single `UNKNOWN` metric will be present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Metrics {
       get { return metrics_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DelayedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DelayedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6637,6 +7027,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Cause.Length != 0) hash ^= Cause.GetHashCode();
@@ -6648,11 +7039,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6670,6 +7063,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Cause.Length != 0) {
         output.WriteRawTag(10);
@@ -6683,6 +7077,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Cause.Length != 0) {
@@ -6696,6 +7091,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DelayedEvent other) {
       if (other == null) {
         return;
@@ -6708,6 +7104,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6733,6 +7130,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6767,19 +7165,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<WorkerAssignedEvent> _parser = new pb::MessageParser<WorkerAssignedEvent>(() => new WorkerAssignedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkerAssignedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerAssignedEvent() {
       OnConstruction();
     }
@@ -6787,6 +7189,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerAssignedEvent(WorkerAssignedEvent other) : this() {
       zone_ = other.zone_;
       instance_ = other.instance_;
@@ -6795,6 +7198,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerAssignedEvent Clone() {
       return new WorkerAssignedEvent(this);
     }
@@ -6806,6 +7210,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The zone the worker is running in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Zone {
       get { return zone_; }
       set {
@@ -6820,6 +7225,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The worker's instance name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Instance {
       get { return instance_; }
       set {
@@ -6834,6 +7240,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The machine type that was assigned for the worker.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MachineType {
       get { return machineType_; }
       set {
@@ -6842,11 +7249,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkerAssignedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkerAssignedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6861,6 +7270,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
@@ -6873,11 +7283,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6902,6 +7314,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Zone.Length != 0) {
         output.WriteRawTag(10);
@@ -6922,6 +7335,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Zone.Length != 0) {
@@ -6940,6 +7354,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkerAssignedEvent other) {
       if (other == null) {
         return;
@@ -6957,6 +7372,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6986,6 +7402,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7024,19 +7441,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<WorkerReleasedEvent> _parser = new pb::MessageParser<WorkerReleasedEvent>(() => new WorkerReleasedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkerReleasedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerReleasedEvent() {
       OnConstruction();
     }
@@ -7044,6 +7465,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerReleasedEvent(WorkerReleasedEvent other) : this() {
       zone_ = other.zone_;
       instance_ = other.instance_;
@@ -7051,6 +7473,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerReleasedEvent Clone() {
       return new WorkerReleasedEvent(this);
     }
@@ -7062,6 +7485,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The zone the worker was running in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Zone {
       get { return zone_; }
       set {
@@ -7076,6 +7500,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The worker's instance name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Instance {
       get { return instance_; }
       set {
@@ -7084,11 +7509,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkerReleasedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkerReleasedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7102,6 +7529,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
@@ -7113,11 +7541,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7138,6 +7568,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Zone.Length != 0) {
         output.WriteRawTag(10);
@@ -7154,6 +7585,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Zone.Length != 0) {
@@ -7169,6 +7601,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkerReleasedEvent other) {
       if (other == null) {
         return;
@@ -7183,6 +7616,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7208,6 +7642,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7241,19 +7676,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<PullStartedEvent> _parser = new pb::MessageParser<PullStartedEvent>(() => new PullStartedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PullStartedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullStartedEvent() {
       OnConstruction();
     }
@@ -7261,12 +7700,14 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullStartedEvent(PullStartedEvent other) : this() {
       imageUri_ = other.imageUri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullStartedEvent Clone() {
       return new PullStartedEvent(this);
     }
@@ -7278,6 +7719,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The URI of the image that was pulled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageUri {
       get { return imageUri_; }
       set {
@@ -7286,11 +7728,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PullStartedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PullStartedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7303,6 +7747,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImageUri.Length != 0) hash ^= ImageUri.GetHashCode();
@@ -7313,11 +7758,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7334,6 +7781,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImageUri.Length != 0) {
         output.WriteRawTag(10);
@@ -7346,6 +7794,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImageUri.Length != 0) {
@@ -7358,6 +7807,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PullStartedEvent other) {
       if (other == null) {
         return;
@@ -7369,6 +7819,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7390,6 +7841,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7419,19 +7871,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<PullStoppedEvent> _parser = new pb::MessageParser<PullStoppedEvent>(() => new PullStoppedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PullStoppedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullStoppedEvent() {
       OnConstruction();
     }
@@ -7439,12 +7895,14 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullStoppedEvent(PullStoppedEvent other) : this() {
       imageUri_ = other.imageUri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullStoppedEvent Clone() {
       return new PullStoppedEvent(this);
     }
@@ -7456,6 +7914,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The URI of the image that was pulled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageUri {
       get { return imageUri_; }
       set {
@@ -7464,11 +7923,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PullStoppedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PullStoppedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7481,6 +7942,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImageUri.Length != 0) hash ^= ImageUri.GetHashCode();
@@ -7491,11 +7953,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7512,6 +7976,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImageUri.Length != 0) {
         output.WriteRawTag(10);
@@ -7524,6 +7989,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImageUri.Length != 0) {
@@ -7536,6 +8002,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PullStoppedEvent other) {
       if (other == null) {
         return;
@@ -7547,6 +8014,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7568,6 +8036,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7597,19 +8066,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<ContainerStartedEvent> _parser = new pb::MessageParser<ContainerStartedEvent>(() => new ContainerStartedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ContainerStartedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerStartedEvent() {
       OnConstruction();
     }
@@ -7617,6 +8090,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerStartedEvent(ContainerStartedEvent other) : this() {
       actionId_ = other.actionId_;
       portMappings_ = other.portMappings_.Clone();
@@ -7625,6 +8099,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerStartedEvent Clone() {
       return new ContainerStartedEvent(this);
     }
@@ -7636,6 +8111,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The numeric ID of the action that started this container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ActionId {
       get { return actionId_; }
       set {
@@ -7654,6 +8130,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// as well as any specified in the `Action` definition.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<int, int> PortMappings {
       get { return portMappings_; }
     }
@@ -7668,6 +8145,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// if port mappings exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IpAddress {
       get { return ipAddress_; }
       set {
@@ -7676,11 +8154,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ContainerStartedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ContainerStartedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7695,6 +8175,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ActionId != 0) hash ^= ActionId.GetHashCode();
@@ -7707,11 +8188,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7733,6 +8216,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ActionId != 0) {
         output.WriteRawTag(8);
@@ -7750,6 +8234,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ActionId != 0) {
@@ -7766,6 +8251,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ContainerStartedEvent other) {
       if (other == null) {
         return;
@@ -7781,6 +8267,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7810,6 +8297,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7847,19 +8335,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<ContainerStoppedEvent> _parser = new pb::MessageParser<ContainerStoppedEvent>(() => new ContainerStoppedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ContainerStoppedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerStoppedEvent() {
       OnConstruction();
     }
@@ -7867,6 +8359,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerStoppedEvent(ContainerStoppedEvent other) : this() {
       actionId_ = other.actionId_;
       exitStatus_ = other.exitStatus_;
@@ -7875,6 +8368,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerStoppedEvent Clone() {
       return new ContainerStoppedEvent(this);
     }
@@ -7886,6 +8380,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The numeric ID of the action that started this container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ActionId {
       get { return actionId_; }
       set {
@@ -7900,6 +8395,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The exit status of the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ExitStatus {
       get { return exitStatus_; }
       set {
@@ -7921,6 +8417,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// each action, and can be copied off the machine as described elsewhere.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Stderr {
       get { return stderr_; }
       set {
@@ -7929,11 +8426,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ContainerStoppedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ContainerStoppedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7948,6 +8447,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ActionId != 0) hash ^= ActionId.GetHashCode();
@@ -7960,11 +8460,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7989,6 +8491,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ActionId != 0) {
         output.WriteRawTag(8);
@@ -8009,6 +8512,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ActionId != 0) {
@@ -8027,6 +8531,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ContainerStoppedEvent other) {
       if (other == null) {
         return;
@@ -8044,6 +8549,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8073,6 +8579,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8113,19 +8620,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<UnexpectedExitStatusEvent> _parser = new pb::MessageParser<UnexpectedExitStatusEvent>(() => new UnexpectedExitStatusEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UnexpectedExitStatusEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnexpectedExitStatusEvent() {
       OnConstruction();
     }
@@ -8133,6 +8644,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnexpectedExitStatusEvent(UnexpectedExitStatusEvent other) : this() {
       actionId_ = other.actionId_;
       exitStatus_ = other.exitStatus_;
@@ -8140,6 +8652,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnexpectedExitStatusEvent Clone() {
       return new UnexpectedExitStatusEvent(this);
     }
@@ -8151,6 +8664,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The numeric ID of the action that started the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ActionId {
       get { return actionId_; }
       set {
@@ -8165,6 +8679,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The exit status of the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ExitStatus {
       get { return exitStatus_; }
       set {
@@ -8173,11 +8688,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UnexpectedExitStatusEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UnexpectedExitStatusEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8191,6 +8708,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ActionId != 0) hash ^= ActionId.GetHashCode();
@@ -8202,11 +8720,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8227,6 +8747,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ActionId != 0) {
         output.WriteRawTag(8);
@@ -8243,6 +8764,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ActionId != 0) {
@@ -8258,6 +8780,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UnexpectedExitStatusEvent other) {
       if (other == null) {
         return;
@@ -8272,6 +8795,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8297,6 +8821,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8332,19 +8857,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<ContainerKilledEvent> _parser = new pb::MessageParser<ContainerKilledEvent>(() => new ContainerKilledEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ContainerKilledEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerKilledEvent() {
       OnConstruction();
     }
@@ -8352,12 +8881,14 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerKilledEvent(ContainerKilledEvent other) : this() {
       actionId_ = other.actionId_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContainerKilledEvent Clone() {
       return new ContainerKilledEvent(this);
     }
@@ -8369,6 +8900,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The numeric ID of the action that started the container.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ActionId {
       get { return actionId_; }
       set {
@@ -8377,11 +8909,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ContainerKilledEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ContainerKilledEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8394,6 +8928,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ActionId != 0) hash ^= ActionId.GetHashCode();
@@ -8404,11 +8939,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8425,6 +8962,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ActionId != 0) {
         output.WriteRawTag(8);
@@ -8437,6 +8975,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ActionId != 0) {
@@ -8449,6 +8988,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ContainerKilledEvent other) {
       if (other == null) {
         return;
@@ -8460,6 +9000,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8481,6 +9022,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8511,19 +9053,23 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     private static readonly pb::MessageParser<FailedEvent> _parser = new pb::MessageParser<FailedEvent>(() => new FailedEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FailedEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.LifeSciences.V2Beta.WorkflowsReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FailedEvent() {
       OnConstruction();
     }
@@ -8531,6 +9077,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FailedEvent(FailedEvent other) : this() {
       code_ = other.code_;
       cause_ = other.cause_;
@@ -8538,6 +9085,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FailedEvent Clone() {
       return new FailedEvent(this);
     }
@@ -8549,6 +9097,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The Google standard error code that best describes this failure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Code Code {
       get { return code_; }
       set {
@@ -8563,6 +9112,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     /// The human-readable description of the cause of the failure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Cause {
       get { return cause_; }
       set {
@@ -8571,11 +9121,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FailedEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FailedEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8589,6 +9141,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code != global::Google.Rpc.Code.Ok) hash ^= Code.GetHashCode();
@@ -8600,11 +9153,13 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8625,6 +9180,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code != global::Google.Rpc.Code.Ok) {
         output.WriteRawTag(8);
@@ -8641,6 +9197,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code != global::Google.Rpc.Code.Ok) {
@@ -8656,6 +9213,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FailedEvent other) {
       if (other == null) {
         return;
@@ -8670,6 +9228,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8695,6 +9254,7 @@ namespace Google.Cloud.LifeSciences.V2Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

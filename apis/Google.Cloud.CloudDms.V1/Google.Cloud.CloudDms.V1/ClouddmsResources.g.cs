@@ -251,19 +251,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<SslConfig> _parser = new pb::MessageParser<SslConfig>(() => new SslConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SslConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SslConfig() {
       OnConstruction();
     }
@@ -271,6 +275,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SslConfig(SslConfig other) : this() {
       type_ = other.type_;
       clientKey_ = other.clientKey_;
@@ -280,6 +285,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SslConfig Clone() {
       return new SslConfig(this);
     }
@@ -292,6 +298,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// 'ca_certificate'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.SslConfig.Types.SslType Type {
       get { return type_; }
       set {
@@ -308,6 +315,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// field is mandatory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClientKey {
       get { return clientKey_; }
       set {
@@ -324,6 +332,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// the 'client_key' field is mandatory.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClientCertificate {
       get { return clientCertificate_; }
       set {
@@ -340,6 +349,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// it's connecting to the right host.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CaCertificate {
       get { return caCertificate_; }
       set {
@@ -348,11 +358,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SslConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SslConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -368,6 +380,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::Google.Cloud.CloudDms.V1.SslConfig.Types.SslType.Unspecified) hash ^= Type.GetHashCode();
@@ -381,11 +394,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -414,6 +429,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type != global::Google.Cloud.CloudDms.V1.SslConfig.Types.SslType.Unspecified) {
         output.WriteRawTag(8);
@@ -438,6 +454,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Type != global::Google.Cloud.CloudDms.V1.SslConfig.Types.SslType.Unspecified) {
@@ -459,6 +476,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SslConfig other) {
       if (other == null) {
         return;
@@ -479,6 +497,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -512,6 +531,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -543,6 +563,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the SslConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies The kind of ssl configuration used.
@@ -579,19 +600,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<MySqlConnectionProfile> _parser = new pb::MessageParser<MySqlConnectionProfile>(() => new MySqlConnectionProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MySqlConnectionProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MySqlConnectionProfile() {
       OnConstruction();
     }
@@ -599,6 +624,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MySqlConnectionProfile(MySqlConnectionProfile other) : this() {
       host_ = other.host_;
       port_ = other.port_;
@@ -611,6 +637,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MySqlConnectionProfile Clone() {
       return new MySqlConnectionProfile(this);
     }
@@ -622,6 +649,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Required. The IP or hostname of the source MySQL database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Host {
       get { return host_; }
       set {
@@ -636,6 +664,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Required. The network port of the source MySQL database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Port {
       get { return port_; }
       set {
@@ -651,6 +680,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// database. The value is encrypted when stored in Database Migration Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
       get { return username_; }
       set {
@@ -667,6 +697,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// value is encrypted when stored in Database Migration Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
       get { return password_; }
       set {
@@ -681,6 +712,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. Indicates If this connection profile password is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PasswordSet {
       get { return passwordSet_; }
       set {
@@ -695,6 +727,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// SSL configuration for the destination to connect to the source database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.SslConfig Ssl {
       get { return ssl_; }
       set {
@@ -710,6 +743,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// provide the Cloud SQL instance ID of the source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudSqlId {
       get { return cloudSqlId_; }
       set {
@@ -718,11 +752,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MySqlConnectionProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MySqlConnectionProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -741,6 +777,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Host.Length != 0) hash ^= Host.GetHashCode();
@@ -757,11 +794,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -802,6 +841,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Host.Length != 0) {
         output.WriteRawTag(10);
@@ -838,6 +878,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Host.Length != 0) {
@@ -868,6 +909,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MySqlConnectionProfile other) {
       if (other == null) {
         return;
@@ -900,6 +942,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -948,6 +991,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1005,19 +1049,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<PostgreSqlConnectionProfile> _parser = new pb::MessageParser<PostgreSqlConnectionProfile>(() => new PostgreSqlConnectionProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PostgreSqlConnectionProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PostgreSqlConnectionProfile() {
       OnConstruction();
     }
@@ -1025,6 +1073,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PostgreSqlConnectionProfile(PostgreSqlConnectionProfile other) : this() {
       host_ = other.host_;
       port_ = other.port_;
@@ -1037,6 +1086,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PostgreSqlConnectionProfile Clone() {
       return new PostgreSqlConnectionProfile(this);
     }
@@ -1048,6 +1098,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Required. The IP or hostname of the source PostgreSQL database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Host {
       get { return host_; }
       set {
@@ -1062,6 +1113,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Required. The network port of the source PostgreSQL database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Port {
       get { return port_; }
       set {
@@ -1077,6 +1129,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// database. The value is encrypted when stored in Database Migration Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
       get { return username_; }
       set {
@@ -1093,6 +1146,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// value is encrypted when stored in Database Migration Service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Password {
       get { return password_; }
       set {
@@ -1107,6 +1161,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. Indicates If this connection profile password is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PasswordSet {
       get { return passwordSet_; }
       set {
@@ -1121,6 +1176,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// SSL configuration for the destination to connect to the source database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.SslConfig Ssl {
       get { return ssl_; }
       set {
@@ -1136,6 +1192,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// provide the Cloud SQL instance ID of the source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudSqlId {
       get { return cloudSqlId_; }
       set {
@@ -1144,11 +1201,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PostgreSqlConnectionProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PostgreSqlConnectionProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1167,6 +1226,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Host.Length != 0) hash ^= Host.GetHashCode();
@@ -1183,11 +1243,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1228,6 +1290,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Host.Length != 0) {
         output.WriteRawTag(10);
@@ -1264,6 +1327,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Host.Length != 0) {
@@ -1294,6 +1358,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PostgreSqlConnectionProfile other) {
       if (other == null) {
         return;
@@ -1326,6 +1391,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1374,6 +1440,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1431,19 +1498,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<CloudSqlConnectionProfile> _parser = new pb::MessageParser<CloudSqlConnectionProfile>(() => new CloudSqlConnectionProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CloudSqlConnectionProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlConnectionProfile() {
       OnConstruction();
     }
@@ -1451,6 +1522,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlConnectionProfile(CloudSqlConnectionProfile other) : this() {
       cloudSqlId_ = other.cloudSqlId_;
       settings_ = other.settings_ != null ? other.settings_.Clone() : null;
@@ -1460,6 +1532,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlConnectionProfile Clone() {
       return new CloudSqlConnectionProfile(this);
     }
@@ -1471,6 +1544,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. The Cloud SQL instance ID that this connection profile is associated with.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudSqlId {
       get { return cloudSqlId_; }
       set {
@@ -1485,6 +1559,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Immutable. Metadata used to create the destination Cloud SQL database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.CloudSqlSettings Settings {
       get { return settings_; }
       set {
@@ -1499,6 +1574,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. The Cloud SQL database instance's private IP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrivateIp {
       get { return privateIp_; }
       set {
@@ -1513,6 +1589,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. The Cloud SQL database instance's public IP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PublicIp {
       get { return publicIp_; }
       set {
@@ -1521,11 +1598,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CloudSqlConnectionProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CloudSqlConnectionProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1541,6 +1620,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CloudSqlId.Length != 0) hash ^= CloudSqlId.GetHashCode();
@@ -1554,11 +1634,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1587,6 +1669,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CloudSqlId.Length != 0) {
         output.WriteRawTag(10);
@@ -1611,6 +1694,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CloudSqlId.Length != 0) {
@@ -1632,6 +1716,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CloudSqlConnectionProfile other) {
       if (other == null) {
         return;
@@ -1655,6 +1740,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1691,6 +1777,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1735,19 +1822,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<SqlAclEntry> _parser = new pb::MessageParser<SqlAclEntry>(() => new SqlAclEntry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SqlAclEntry> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SqlAclEntry() {
       OnConstruction();
     }
@@ -1755,6 +1846,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SqlAclEntry(SqlAclEntry other) : this() {
       value_ = other.value_;
       label_ = other.label_;
@@ -1771,6 +1863,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SqlAclEntry Clone() {
       return new SqlAclEntry(this);
     }
@@ -1782,6 +1875,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The allowlisted value for the access control list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Value {
       get { return value_; }
       set {
@@ -1797,6 +1891,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// `2012-11-15T16:19:00.094Z`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
       get { return expirationCase_ == ExpirationOneofCase.ExpireTime ? (global::Google.Protobuf.WellKnownTypes.Timestamp) expiration_ : null; }
       set {
@@ -1811,6 +1906,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Input only. The time-to-leave of this access control entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Ttl {
       get { return expirationCase_ == ExpirationOneofCase.Ttl ? (global::Google.Protobuf.WellKnownTypes.Duration) expiration_ : null; }
       set {
@@ -1826,6 +1922,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// A label to identify this entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Label {
       get { return label_; }
       set {
@@ -1842,22 +1939,26 @@ namespace Google.Cloud.CloudDms.V1 {
     }
     private ExpirationOneofCase expirationCase_ = ExpirationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExpirationOneofCase ExpirationCase {
       get { return expirationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearExpiration() {
       expirationCase_ = ExpirationOneofCase.None;
       expiration_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SqlAclEntry);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SqlAclEntry other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1874,6 +1975,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Value.Length != 0) hash ^= Value.GetHashCode();
@@ -1888,11 +1990,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1921,6 +2025,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Value.Length != 0) {
         output.WriteRawTag(10);
@@ -1945,6 +2050,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Value.Length != 0) {
@@ -1966,6 +2072,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SqlAclEntry other) {
       if (other == null) {
         return;
@@ -1995,6 +2102,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2038,6 +2146,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2089,19 +2198,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<SqlIpConfig> _parser = new pb::MessageParser<SqlIpConfig>(() => new SqlIpConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SqlIpConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SqlIpConfig() {
       OnConstruction();
     }
@@ -2109,6 +2222,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SqlIpConfig(SqlIpConfig other) : this() {
       EnableIpv4 = other.EnableIpv4;
       privateNetwork_ = other.privateNetwork_;
@@ -2118,6 +2232,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SqlIpConfig Clone() {
       return new SqlIpConfig(this);
     }
@@ -2130,6 +2245,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Whether the instance should be assigned an IPv4 address or not.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? EnableIpv4 {
       get { return enableIpv4_; }
       set {
@@ -2148,6 +2264,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// be updated, but it cannot be removed after it is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrivateNetwork {
       get { return privateNetwork_; }
       set {
@@ -2163,6 +2280,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Whether SSL connections over IP should be enforced or not.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? RequireSsl {
       get { return requireSsl_; }
       set {
@@ -2183,16 +2301,19 @@ namespace Google.Cloud.CloudDms.V1 {
     /// 'slash' notation (e.g. `192.168.100.0/24`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudDms.V1.SqlAclEntry> AuthorizedNetworks {
       get { return authorizedNetworks_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SqlIpConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SqlIpConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2208,6 +2329,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (enableIpv4_ != null) hash ^= EnableIpv4.GetHashCode();
@@ -2221,11 +2343,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2249,6 +2373,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (enableIpv4_ != null) {
         _single_enableIpv4_codec.WriteTagAndValue(ref output, EnableIpv4);
@@ -2268,6 +2393,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (enableIpv4_ != null) {
@@ -2287,6 +2413,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SqlIpConfig other) {
       if (other == null) {
         return;
@@ -2309,6 +2436,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2348,6 +2476,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2395,19 +2524,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<CloudSqlSettings> _parser = new pb::MessageParser<CloudSqlSettings>(() => new CloudSqlSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CloudSqlSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlSettings() {
       OnConstruction();
     }
@@ -2415,6 +2548,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlSettings(CloudSqlSettings other) : this() {
       databaseVersion_ = other.databaseVersion_;
       userLabels_ = other.userLabels_.Clone();
@@ -2435,6 +2569,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlSettings Clone() {
       return new CloudSqlSettings(this);
     }
@@ -2446,6 +2581,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The database engine type and version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion DatabaseVersion {
       get { return databaseVersion_; }
       set {
@@ -2466,6 +2602,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: `{ "name": "wrench", "mass": "18kg", "count": "3" }`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> UserLabels {
       get { return userLabels_; }
     }
@@ -2482,6 +2619,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Settings](https://cloud.google.com/sql/docs/mysql/instance-settings).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Tier {
       get { return tier_; }
       set {
@@ -2498,6 +2636,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The default value is 0, which specifies that there is no limit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long? StorageAutoResizeLimit {
       get { return storageAutoResizeLimit_; }
       set {
@@ -2520,6 +2659,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// connection request arrives.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlActivationPolicy ActivationPolicy {
       get { return activationPolicy_; }
       set {
@@ -2536,6 +2676,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The IPv4 address cannot be disabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.SqlIpConfig IpConfig {
       get { return ipConfig_; }
       set {
@@ -2555,6 +2696,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// continues to add storage until it reaches the maximum of 30 TB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? AutoStorageIncrease {
       get { return autoStorageIncrease_; }
       set {
@@ -2574,6 +2716,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: { "name": "wrench", "mass": "1.3kg", "count": "3" }.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> DatabaseFlags {
       get { return databaseFlags_; }
     }
@@ -2585,6 +2728,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The type of storage: `PD_SSD` (default) or `PD_HDD`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDataDiskType DataDiskType {
       get { return dataDiskType_; }
       set {
@@ -2601,6 +2745,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The minimum (and default) size is 10GB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long? DataDiskSizeGb {
       get { return dataDiskSizeGb_; }
       set {
@@ -2617,6 +2762,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// located.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Zone {
       get { return zone_; }
       set {
@@ -2633,6 +2779,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// `projects/my_project_name/locations/us-central1/connectionProfiles/connection_profile_ID`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceId {
       get { return sourceId_; }
       set {
@@ -2647,6 +2794,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Input only. Initial root password.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RootPassword {
       get { return rootPassword_; }
       set {
@@ -2661,6 +2809,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. Indicates If this connection profile root password is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool RootPasswordSet {
       get { return rootPasswordSet_; }
       set {
@@ -2675,6 +2824,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The Cloud SQL default instance level collation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Collation {
       get { return collation_; }
       set {
@@ -2683,11 +2833,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CloudSqlSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CloudSqlSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2714,6 +2866,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DatabaseVersion != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion.Unspecified) hash ^= DatabaseVersion.GetHashCode();
@@ -2738,11 +2891,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2806,6 +2961,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DatabaseVersion != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion.Unspecified) {
         output.WriteRawTag(8);
@@ -2865,6 +3021,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DatabaseVersion != global::Google.Cloud.CloudDms.V1.CloudSqlSettings.Types.SqlDatabaseVersion.Unspecified) {
@@ -2915,6 +3072,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CloudSqlSettings other) {
       if (other == null) {
         return;
@@ -2973,6 +3131,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3062,6 +3221,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3149,6 +3309,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the CloudSqlSettings message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies when the instance should be activated.
@@ -3247,19 +3408,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<StaticIpConnectivity> _parser = new pb::MessageParser<StaticIpConnectivity>(() => new StaticIpConnectivity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StaticIpConnectivity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StaticIpConnectivity() {
       OnConstruction();
     }
@@ -3267,21 +3432,25 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StaticIpConnectivity(StaticIpConnectivity other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StaticIpConnectivity Clone() {
       return new StaticIpConnectivity(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StaticIpConnectivity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StaticIpConnectivity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3293,6 +3462,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -3302,11 +3472,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3319,6 +3491,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -3327,6 +3500,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -3336,6 +3510,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StaticIpConnectivity other) {
       if (other == null) {
         return;
@@ -3344,6 +3519,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3361,6 +3537,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3391,19 +3568,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<ReverseSshConnectivity> _parser = new pb::MessageParser<ReverseSshConnectivity>(() => new ReverseSshConnectivity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReverseSshConnectivity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReverseSshConnectivity() {
       OnConstruction();
     }
@@ -3411,6 +3592,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReverseSshConnectivity(ReverseSshConnectivity other) : this() {
       vmIp_ = other.vmIp_;
       vmPort_ = other.vmPort_;
@@ -3420,6 +3602,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReverseSshConnectivity Clone() {
       return new ReverseSshConnectivity(this);
     }
@@ -3432,6 +3615,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// for the SSH tunnel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VmIp {
       get { return vmIp_; }
       set {
@@ -3447,6 +3631,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// bastion server for the SSH tunnel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int VmPort {
       get { return vmPort_; }
       set {
@@ -3462,6 +3647,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// for the SSH tunnel.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Vm {
       get { return vm_; }
       set {
@@ -3476,6 +3662,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The name of the VPC to peer with the Cloud SQL private network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Vpc {
       get { return vpc_; }
       set {
@@ -3484,11 +3671,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ReverseSshConnectivity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ReverseSshConnectivity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3504,6 +3693,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (VmIp.Length != 0) hash ^= VmIp.GetHashCode();
@@ -3517,11 +3707,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3550,6 +3742,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (VmIp.Length != 0) {
         output.WriteRawTag(10);
@@ -3574,6 +3767,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (VmIp.Length != 0) {
@@ -3595,6 +3789,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReverseSshConnectivity other) {
       if (other == null) {
         return;
@@ -3615,6 +3810,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3648,6 +3844,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3691,19 +3888,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<VpcPeeringConnectivity> _parser = new pb::MessageParser<VpcPeeringConnectivity>(() => new VpcPeeringConnectivity());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VpcPeeringConnectivity> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VpcPeeringConnectivity() {
       OnConstruction();
     }
@@ -3711,12 +3912,14 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VpcPeeringConnectivity(VpcPeeringConnectivity other) : this() {
       vpc_ = other.vpc_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VpcPeeringConnectivity Clone() {
       return new VpcPeeringConnectivity(this);
     }
@@ -3728,6 +3931,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The name of the VPC network to peer with the Cloud SQL private network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Vpc {
       get { return vpc_; }
       set {
@@ -3736,11 +3940,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VpcPeeringConnectivity);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VpcPeeringConnectivity other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3753,6 +3959,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Vpc.Length != 0) hash ^= Vpc.GetHashCode();
@@ -3763,11 +3970,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3784,6 +3993,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Vpc.Length != 0) {
         output.WriteRawTag(10);
@@ -3796,6 +4006,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Vpc.Length != 0) {
@@ -3808,6 +4019,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VpcPeeringConnectivity other) {
       if (other == null) {
         return;
@@ -3819,6 +4031,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3840,6 +4053,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3869,19 +4083,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<DatabaseType> _parser = new pb::MessageParser<DatabaseType>(() => new DatabaseType());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DatabaseType> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DatabaseType() {
       OnConstruction();
     }
@@ -3889,6 +4107,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DatabaseType(DatabaseType other) : this() {
       provider_ = other.provider_;
       engine_ = other.engine_;
@@ -3896,6 +4115,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DatabaseType Clone() {
       return new DatabaseType(this);
     }
@@ -3907,6 +4127,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The database provider.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.DatabaseProvider Provider {
       get { return provider_; }
       set {
@@ -3921,6 +4142,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The database engine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.DatabaseEngine Engine {
       get { return engine_; }
       set {
@@ -3929,11 +4151,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DatabaseType);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DatabaseType other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3947,6 +4171,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Provider != global::Google.Cloud.CloudDms.V1.DatabaseProvider.Unspecified) hash ^= Provider.GetHashCode();
@@ -3958,11 +4183,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3983,6 +4210,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Provider != global::Google.Cloud.CloudDms.V1.DatabaseProvider.Unspecified) {
         output.WriteRawTag(8);
@@ -3999,6 +4227,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Provider != global::Google.Cloud.CloudDms.V1.DatabaseProvider.Unspecified) {
@@ -4014,6 +4243,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DatabaseType other) {
       if (other == null) {
         return;
@@ -4028,6 +4258,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4053,6 +4284,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4086,19 +4318,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<MigrationJob> _parser = new pb::MessageParser<MigrationJob>(() => new MigrationJob());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MigrationJob> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationJob() {
       OnConstruction();
     }
@@ -4106,6 +4342,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationJob(MigrationJob other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -4139,6 +4376,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationJob Clone() {
       return new MigrationJob(this);
     }
@@ -4151,6 +4389,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// projects/{project}/locations/{location}/instances/{instance}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -4167,6 +4406,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: "2014-10-02T15:01:23.045123456Z".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -4183,6 +4423,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: "2014-10-02T15:01:23.045123456Z".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -4203,6 +4444,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -4214,6 +4456,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The migration job display name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -4228,6 +4471,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The current migration job state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.MigrationJob.Types.State State {
       get { return state_; }
       set {
@@ -4242,6 +4486,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. The current migration job phase.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Phase Phase {
       get { return phase_; }
       set {
@@ -4256,6 +4501,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Required. The migration job type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.MigrationJob.Types.Type Type {
       get { return type_; }
       set {
@@ -4271,6 +4517,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// in the format: (gs://[BUCKET_NAME]/[OBJECT_NAME]).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DumpPath {
       get { return dumpPath_; }
       set {
@@ -4285,6 +4532,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Required. The resource name (URI) of the source connection profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Source {
       get { return source_; }
       set {
@@ -4299,6 +4547,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Required. The resource name (URI) of the destination connection profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Destination {
       get { return destination_; }
       set {
@@ -4313,6 +4562,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// tunnel connectivity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.ReverseSshConnectivity ReverseSshConnectivity {
       get { return connectivityCase_ == ConnectivityOneofCase.ReverseSshConnectivity ? (global::Google.Cloud.CloudDms.V1.ReverseSshConnectivity) connectivity_ : null; }
       set {
@@ -4327,6 +4577,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The details of the VPC network that the source database is located in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.VpcPeeringConnectivity VpcPeeringConnectivity {
       get { return connectivityCase_ == ConnectivityOneofCase.VpcPeeringConnectivity ? (global::Google.Cloud.CloudDms.V1.VpcPeeringConnectivity) connectivity_ : null; }
       set {
@@ -4341,6 +4592,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// static ip connectivity data (default, no additional details needed).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.StaticIpConnectivity StaticIpConnectivity {
       get { return connectivityCase_ == ConnectivityOneofCase.StaticIpConnectivity ? (global::Google.Cloud.CloudDms.V1.StaticIpConnectivity) connectivity_ : null; }
       set {
@@ -4357,6 +4609,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// with up to nine fractional digits, terminated by 's'. Example: "3.5s".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Duration {
       get { return duration_; }
       set {
@@ -4371,6 +4624,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. The error details in case of state FAILED.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -4385,6 +4639,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The database engine type and provider of the source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.DatabaseType SourceDatabase {
       get { return sourceDatabase_; }
       set {
@@ -4399,6 +4654,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The database engine type and provider of the destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.DatabaseType DestinationDatabase {
       get { return destinationDatabase_; }
       set {
@@ -4413,6 +4669,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. If the migration job is completed, the time when it was completed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -4430,22 +4687,26 @@ namespace Google.Cloud.CloudDms.V1 {
     }
     private ConnectivityOneofCase connectivityCase_ = ConnectivityOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectivityOneofCase ConnectivityCase {
       get { return connectivityCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearConnectivity() {
       connectivityCase_ = ConnectivityOneofCase.None;
       connectivity_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MigrationJob);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MigrationJob other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4477,6 +4738,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -4506,11 +4768,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4596,6 +4860,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -4677,6 +4942,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4741,6 +5007,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MigrationJob other) {
       if (other == null) {
         return;
@@ -4837,6 +5104,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4966,6 +5234,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5093,6 +5362,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the MigrationJob message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The current migration job states.
@@ -5228,19 +5498,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<ConnectionProfile> _parser = new pb::MessageParser<ConnectionProfile>(() => new ConnectionProfile());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConnectionProfile> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionProfile() {
       OnConstruction();
     }
@@ -5248,6 +5522,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionProfile(ConnectionProfile other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -5273,6 +5548,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionProfile Clone() {
       return new ConnectionProfile(this);
     }
@@ -5285,6 +5561,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// projects/{project}/locations/{location}/instances/{instance}.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5301,6 +5578,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: "2014-10-02T15:01:23.045123456Z".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -5317,6 +5595,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: "2014-10-02T15:01:23.045123456Z".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -5337,6 +5616,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Example: `{ "name": "wrench", "mass": "1.3kg", "count": "3" }`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -5348,6 +5628,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The current connection profile state (e.g. DRAFT, READY, or FAILED).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.ConnectionProfile.Types.State State {
       get { return state_; }
       set {
@@ -5362,6 +5643,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The connection profile display name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -5375,6 +5657,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// A MySQL database connection profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.MySqlConnectionProfile Mysql {
       get { return connectionProfileCase_ == ConnectionProfileOneofCase.Mysql ? (global::Google.Cloud.CloudDms.V1.MySqlConnectionProfile) connectionProfile_ : null; }
       set {
@@ -5389,6 +5672,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// A PostgreSQL database connection profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.PostgreSqlConnectionProfile Postgresql {
       get { return connectionProfileCase_ == ConnectionProfileOneofCase.Postgresql ? (global::Google.Cloud.CloudDms.V1.PostgreSqlConnectionProfile) connectionProfile_ : null; }
       set {
@@ -5403,6 +5687,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// A CloudSQL database connection profile.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.CloudSqlConnectionProfile Cloudsql {
       get { return connectionProfileCase_ == ConnectionProfileOneofCase.Cloudsql ? (global::Google.Cloud.CloudDms.V1.CloudSqlConnectionProfile) connectionProfile_ : null; }
       set {
@@ -5418,6 +5703,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. The error details in case of state FAILED.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -5432,6 +5718,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// The database provider.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.DatabaseProvider Provider {
       get { return provider_; }
       set {
@@ -5449,22 +5736,26 @@ namespace Google.Cloud.CloudDms.V1 {
     }
     private ConnectionProfileOneofCase connectionProfileCase_ = ConnectionProfileOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionProfileOneofCase ConnectionProfileCase {
       get { return connectionProfileCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearConnectionProfile() {
       connectionProfileCase_ = ConnectionProfileOneofCase.None;
       connectionProfile_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConnectionProfile);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConnectionProfile other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5488,6 +5779,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -5509,11 +5801,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5567,6 +5861,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -5616,6 +5911,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -5656,6 +5952,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConnectionProfile other) {
       if (other == null) {
         return;
@@ -5716,6 +6013,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5801,6 +6099,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5884,6 +6183,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ConnectionProfile message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The current connection profile state (e.g. DRAFT, READY, or FAILED).
@@ -5939,19 +6239,23 @@ namespace Google.Cloud.CloudDms.V1 {
     private static readonly pb::MessageParser<MigrationJobVerificationError> _parser = new pb::MessageParser<MigrationJobVerificationError>(() => new MigrationJobVerificationError());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MigrationJobVerificationError> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudDms.V1.ClouddmsResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationJobVerificationError() {
       OnConstruction();
     }
@@ -5959,6 +6263,7 @@ namespace Google.Cloud.CloudDms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationJobVerificationError(MigrationJobVerificationError other) : this() {
       errorCode_ = other.errorCode_;
       errorMessage_ = other.errorMessage_;
@@ -5967,6 +6272,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrationJobVerificationError Clone() {
       return new MigrationJobVerificationError(this);
     }
@@ -5978,6 +6284,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. An instance of ErrorCode specifying the error that occurred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Types.ErrorCode ErrorCode {
       get { return errorCode_; }
       set {
@@ -5992,6 +6299,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. A formatted message with further details about the error and a CTA.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ErrorMessage {
       get { return errorMessage_; }
       set {
@@ -6006,6 +6314,7 @@ namespace Google.Cloud.CloudDms.V1 {
     /// Output only. A specific detailed error message, if supplied by the engine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ErrorDetailMessage {
       get { return errorDetailMessage_; }
       set {
@@ -6014,11 +6323,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MigrationJobVerificationError);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MigrationJobVerificationError other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6033,6 +6344,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ErrorCode != global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Types.ErrorCode.Unspecified) hash ^= ErrorCode.GetHashCode();
@@ -6045,11 +6357,13 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6074,6 +6388,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ErrorCode != global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Types.ErrorCode.Unspecified) {
         output.WriteRawTag(8);
@@ -6094,6 +6409,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ErrorCode != global::Google.Cloud.CloudDms.V1.MigrationJobVerificationError.Types.ErrorCode.Unspecified) {
@@ -6112,6 +6428,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MigrationJobVerificationError other) {
       if (other == null) {
         return;
@@ -6129,6 +6446,7 @@ namespace Google.Cloud.CloudDms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6158,6 +6476,7 @@ namespace Google.Cloud.CloudDms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6185,6 +6504,7 @@ namespace Google.Cloud.CloudDms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the MigrationJobVerificationError message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A general error code describing the type of error that occurred.

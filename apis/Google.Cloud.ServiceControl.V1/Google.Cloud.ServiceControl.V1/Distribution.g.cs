@@ -77,19 +77,23 @@ namespace Google.Cloud.ServiceControl.V1 {
     private static readonly pb::MessageParser<Distribution> _parser = new pb::MessageParser<Distribution>(() => new Distribution());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Distribution> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ServiceControl.V1.DistributionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Distribution() {
       OnConstruction();
     }
@@ -97,6 +101,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Distribution(Distribution other) : this() {
       count_ = other.count_;
       mean_ = other.mean_;
@@ -121,6 +126,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Distribution Clone() {
       return new Distribution(this);
     }
@@ -132,6 +138,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// The total number of samples in the distribution. Must be >= 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Count {
       get { return count_; }
       set {
@@ -147,6 +154,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// zero then this field must be zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Mean {
       get { return mean_; }
       set {
@@ -161,6 +169,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// The minimum of the population of values. Ignored if `count` is zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Minimum {
       get { return minimum_; }
       set {
@@ -175,6 +184,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// The maximum of the population of values. Ignored if `count` is zero.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Maximum {
       get { return maximum_; }
       set {
@@ -192,6 +202,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// must be zero, otherwise validation of the request fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double SumOfSquaredDeviation {
       get { return sumOfSquaredDeviation_; }
       set {
@@ -218,6 +229,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Any suffix of trailing zeros may be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<long> BucketCounts {
       get { return bucketCounts_; }
     }
@@ -228,6 +240,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Buckets with constant width.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ServiceControl.V1.Distribution.Types.LinearBuckets LinearBuckets {
       get { return bucketOptionCase_ == BucketOptionOneofCase.LinearBuckets ? (global::Google.Cloud.ServiceControl.V1.Distribution.Types.LinearBuckets) bucketOption_ : null; }
       set {
@@ -242,6 +255,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Buckets with exponentially growing width.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExponentialBuckets ExponentialBuckets {
       get { return bucketOptionCase_ == BucketOptionOneofCase.ExponentialBuckets ? (global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExponentialBuckets) bucketOption_ : null; }
       set {
@@ -256,6 +270,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Buckets with arbitrary user-provided width.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExplicitBuckets ExplicitBuckets {
       get { return bucketOptionCase_ == BucketOptionOneofCase.ExplicitBuckets ? (global::Google.Cloud.ServiceControl.V1.Distribution.Types.ExplicitBuckets) bucketOption_ : null; }
       set {
@@ -273,6 +288,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Example points. Must be in increasing order of `value` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Api.Distribution.Types.Exemplar> Exemplars {
       get { return exemplars_; }
     }
@@ -287,22 +303,26 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
     private BucketOptionOneofCase bucketOptionCase_ = BucketOptionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BucketOptionOneofCase BucketOptionCase {
       get { return bucketOptionCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearBucketOption() {
       bucketOptionCase_ = BucketOptionOneofCase.None;
       bucketOption_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Distribution);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Distribution other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -325,6 +345,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Count != 0L) hash ^= Count.GetHashCode();
@@ -345,11 +366,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -396,6 +419,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Count != 0L) {
         output.WriteRawTag(8);
@@ -438,6 +462,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Count != 0L) {
@@ -473,6 +498,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Distribution other) {
       if (other == null) {
         return;
@@ -519,6 +545,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -592,6 +619,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -663,6 +691,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Distribution message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Describing buckets with constant width.
@@ -675,19 +704,23 @@ namespace Google.Cloud.ServiceControl.V1 {
         private static readonly pb::MessageParser<LinearBuckets> _parser = new pb::MessageParser<LinearBuckets>(() => new LinearBuckets());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<LinearBuckets> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ServiceControl.V1.Distribution.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public LinearBuckets() {
           OnConstruction();
         }
@@ -695,6 +728,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public LinearBuckets(LinearBuckets other) : this() {
           numFiniteBuckets_ = other.numFiniteBuckets_;
           width_ = other.width_;
@@ -703,6 +737,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public LinearBuckets Clone() {
           return new LinearBuckets(this);
         }
@@ -716,6 +751,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         /// See comments on `bucket_options` for details.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int NumFiniteBuckets {
           get { return numFiniteBuckets_; }
           set {
@@ -733,6 +769,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         /// Must be strictly positive.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Width {
           get { return width_; }
           set {
@@ -749,6 +786,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         /// where i ranges from 1 to num_finite_buckets, inclusive.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Offset {
           get { return offset_; }
           set {
@@ -757,11 +795,13 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as LinearBuckets);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(LinearBuckets other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -776,6 +816,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (NumFiniteBuckets != 0) hash ^= NumFiniteBuckets.GetHashCode();
@@ -788,11 +829,13 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -817,6 +860,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (NumFiniteBuckets != 0) {
             output.WriteRawTag(8);
@@ -837,6 +881,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (NumFiniteBuckets != 0) {
@@ -855,6 +900,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(LinearBuckets other) {
           if (other == null) {
             return;
@@ -872,6 +918,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -901,6 +948,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -938,19 +986,23 @@ namespace Google.Cloud.ServiceControl.V1 {
         private static readonly pb::MessageParser<ExponentialBuckets> _parser = new pb::MessageParser<ExponentialBuckets>(() => new ExponentialBuckets());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ExponentialBuckets> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ServiceControl.V1.Distribution.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExponentialBuckets() {
           OnConstruction();
         }
@@ -958,6 +1010,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExponentialBuckets(ExponentialBuckets other) : this() {
           numFiniteBuckets_ = other.numFiniteBuckets_;
           growthFactor_ = other.growthFactor_;
@@ -966,6 +1019,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExponentialBuckets Clone() {
           return new ExponentialBuckets(this);
         }
@@ -979,6 +1033,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         /// See comments on `bucket_options` for details.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int NumFiniteBuckets {
           get { return numFiniteBuckets_; }
           set {
@@ -996,6 +1051,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         /// Must be larger than 1.0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double GrowthFactor {
           get { return growthFactor_; }
           set {
@@ -1013,6 +1069,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         /// Must be > 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Scale {
           get { return scale_; }
           set {
@@ -1021,11 +1078,13 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ExponentialBuckets);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ExponentialBuckets other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1040,6 +1099,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (NumFiniteBuckets != 0) hash ^= NumFiniteBuckets.GetHashCode();
@@ -1052,11 +1112,13 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1081,6 +1143,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (NumFiniteBuckets != 0) {
             output.WriteRawTag(8);
@@ -1101,6 +1164,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (NumFiniteBuckets != 0) {
@@ -1119,6 +1183,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ExponentialBuckets other) {
           if (other == null) {
             return;
@@ -1136,6 +1201,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1165,6 +1231,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1202,19 +1269,23 @@ namespace Google.Cloud.ServiceControl.V1 {
         private static readonly pb::MessageParser<ExplicitBuckets> _parser = new pb::MessageParser<ExplicitBuckets>(() => new ExplicitBuckets());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ExplicitBuckets> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.ServiceControl.V1.Distribution.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExplicitBuckets() {
           OnConstruction();
         }
@@ -1222,12 +1293,14 @@ namespace Google.Cloud.ServiceControl.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExplicitBuckets(ExplicitBuckets other) : this() {
           bounds_ = other.bounds_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExplicitBuckets Clone() {
           return new ExplicitBuckets(this);
         }
@@ -1255,16 +1328,19 @@ namespace Google.Cloud.ServiceControl.V1 {
         ///  i == bound_size() (overflow)    bound[i-1]     +inf
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<double> Bounds {
           get { return bounds_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ExplicitBuckets);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ExplicitBuckets other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1277,6 +1353,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= bounds_.GetHashCode();
@@ -1287,11 +1364,13 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1305,6 +1384,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           bounds_.WriteTo(ref output, _repeated_bounds_codec);
           if (_unknownFields != null) {
@@ -1314,6 +1394,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += bounds_.CalculateSize(_repeated_bounds_codec);
@@ -1324,6 +1405,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ExplicitBuckets other) {
           if (other == null) {
             return;
@@ -1333,6 +1415,7 @@ namespace Google.Cloud.ServiceControl.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1355,6 +1438,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

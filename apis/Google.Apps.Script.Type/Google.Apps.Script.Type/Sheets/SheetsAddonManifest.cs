@@ -61,19 +61,23 @@ namespace Google.Apps.Script.Type.Sheets {
     private static readonly pb::MessageParser<SheetsAddOnManifest> _parser = new pb::MessageParser<SheetsAddOnManifest>(() => new SheetsAddOnManifest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SheetsAddOnManifest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Sheets.SheetsAddonManifestReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SheetsAddOnManifest() {
       OnConstruction();
     }
@@ -81,6 +85,7 @@ namespace Google.Apps.Script.Type.Sheets {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SheetsAddOnManifest(SheetsAddOnManifest other) : this() {
       homepageTrigger_ = other.homepageTrigger_ != null ? other.homepageTrigger_.Clone() : null;
       onFileScopeGrantedTrigger_ = other.onFileScopeGrantedTrigger_ != null ? other.onFileScopeGrantedTrigger_.Clone() : null;
@@ -88,6 +93,7 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SheetsAddOnManifest Clone() {
       return new SheetsAddOnManifest(this);
     }
@@ -100,6 +106,7 @@ namespace Google.Apps.Script.Type.Sheets {
     /// `addOns.common.homepageTrigger`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.HomepageExtensionPoint HomepageTrigger {
       get { return homepageTrigger_; }
       set {
@@ -115,6 +122,7 @@ namespace Google.Apps.Script.Type.Sheets {
     /// for this document/user pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Sheets.SheetsExtensionPoint OnFileScopeGrantedTrigger {
       get { return onFileScopeGrantedTrigger_; }
       set {
@@ -123,11 +131,13 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SheetsAddOnManifest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SheetsAddOnManifest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -141,6 +151,7 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (homepageTrigger_ != null) hash ^= HomepageTrigger.GetHashCode();
@@ -152,11 +163,13 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -177,6 +190,7 @@ namespace Google.Apps.Script.Type.Sheets {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (homepageTrigger_ != null) {
         output.WriteRawTag(26);
@@ -193,6 +207,7 @@ namespace Google.Apps.Script.Type.Sheets {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (homepageTrigger_ != null) {
@@ -208,6 +223,7 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SheetsAddOnManifest other) {
       if (other == null) {
         return;
@@ -228,6 +244,7 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -259,6 +276,7 @@ namespace Google.Apps.Script.Type.Sheets {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -298,19 +316,23 @@ namespace Google.Apps.Script.Type.Sheets {
     private static readonly pb::MessageParser<SheetsExtensionPoint> _parser = new pb::MessageParser<SheetsExtensionPoint>(() => new SheetsExtensionPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SheetsExtensionPoint> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Sheets.SheetsAddonManifestReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SheetsExtensionPoint() {
       OnConstruction();
     }
@@ -318,12 +340,14 @@ namespace Google.Apps.Script.Type.Sheets {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SheetsExtensionPoint(SheetsExtensionPoint other) : this() {
       runFunction_ = other.runFunction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SheetsExtensionPoint Clone() {
       return new SheetsExtensionPoint(this);
     }
@@ -335,6 +359,7 @@ namespace Google.Apps.Script.Type.Sheets {
     /// Required. The endpoint to execute when this extension point is activated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
       get { return runFunction_; }
       set {
@@ -343,11 +368,13 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SheetsExtensionPoint);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SheetsExtensionPoint other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -360,6 +387,7 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (RunFunction.Length != 0) hash ^= RunFunction.GetHashCode();
@@ -370,11 +398,13 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -391,6 +421,7 @@ namespace Google.Apps.Script.Type.Sheets {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RunFunction.Length != 0) {
         output.WriteRawTag(10);
@@ -403,6 +434,7 @@ namespace Google.Apps.Script.Type.Sheets {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (RunFunction.Length != 0) {
@@ -415,6 +447,7 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SheetsExtensionPoint other) {
       if (other == null) {
         return;
@@ -426,6 +459,7 @@ namespace Google.Apps.Script.Type.Sheets {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -447,6 +481,7 @@ namespace Google.Apps.Script.Type.Sheets {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

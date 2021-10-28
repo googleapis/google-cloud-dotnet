@@ -365,19 +365,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<Intent> _parser = new pb::MessageParser<Intent>(() => new Intent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Intent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Intent() {
       OnConstruction();
     }
@@ -385,6 +389,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Intent(Intent other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -410,6 +415,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Intent Clone() {
       return new Intent(this);
     }
@@ -424,6 +430,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -438,6 +445,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The name of this intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -452,6 +460,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. Indicates whether webhooks are enabled for the intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.Intent.Types.WebhookState WebhookState {
       get { return webhookState_; }
       set {
@@ -473,6 +482,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     ///   in runtime detect intent requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Priority {
       get { return priority_; }
       set {
@@ -487,6 +497,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. Indicates whether this is a fallback intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsFallback {
       get { return isFallback_; }
       set {
@@ -504,6 +515,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// auto-markup in the UI is turned off.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool MlDisabled {
       get { return mlDisabled_; }
       set {
@@ -521,6 +533,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool LiveAgentHandoff {
       get { return liveAgentHandoff_; }
       set {
@@ -537,6 +550,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// to close interaction with an end user. Default is false.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EndInteraction {
       get { return endInteraction_; }
       set {
@@ -555,6 +569,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent/sessions/-/contexts/{Context ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> InputContextNames {
       get { return inputContextNames_; }
     }
@@ -571,6 +586,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Event names are limited to 150 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Events {
       get { return events_; }
     }
@@ -585,6 +601,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// trained on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase> TrainingPhrases {
       get { return trainingPhrases_; }
     }
@@ -597,6 +614,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Note: The action name must not contain whitespaces.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Action {
       get { return action_; }
       set {
@@ -617,6 +635,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent/sessions/-/contexts/{Context ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Context> OutputContexts {
       get { return outputContexts_; }
     }
@@ -629,6 +648,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// session when this intent is matched.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ResetContexts {
       get { return resetContexts_; }
       set {
@@ -645,6 +665,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The collection of parameters associated with the intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Parameter> Parameters {
       get { return parameters_; }
     }
@@ -659,6 +680,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// `Response` field in the Dialogflow console.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message> Messages {
       get { return messages_; }
     }
@@ -673,6 +695,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// copied from the messages in PLATFORM_UNSPECIFIED (i.e. default platform).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform> DefaultResponsePlatforms {
       get { return defaultResponsePlatforms_; }
     }
@@ -689,6 +712,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RootFollowupIntentName {
       get { return rootFollowupIntentName_; }
       set {
@@ -710,6 +734,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ParentFollowupIntentName {
       get { return parentFollowupIntentName_; }
       set {
@@ -727,16 +752,19 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// a direct or indirect parent. We populate this field only in the output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.FollowupIntentInfo> FollowupIntentInfo {
       get { return followupIntentInfo_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Intent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Intent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -768,6 +796,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -797,11 +826,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -870,6 +901,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -934,6 +966,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -987,6 +1020,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Intent other) {
       if (other == null) {
         return;
@@ -1039,6 +1073,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1137,6 +1172,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1233,6 +1269,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #region Nested types
     /// <summary>Container for nested types declared in the Intent message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Represents the different states that webhooks can be in.
@@ -1264,19 +1301,23 @@ namespace Google.Cloud.Dialogflow.V2 {
         private static readonly pb::MessageParser<TrainingPhrase> _parser = new pb::MessageParser<TrainingPhrase>(() => new TrainingPhrase());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TrainingPhrase> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Dialogflow.V2.Intent.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingPhrase() {
           OnConstruction();
         }
@@ -1284,6 +1325,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingPhrase(TrainingPhrase other) : this() {
           name_ = other.name_;
           type_ = other.type_;
@@ -1293,6 +1335,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingPhrase Clone() {
           return new TrainingPhrase(this);
         }
@@ -1304,6 +1347,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Output only. The unique identifier of this training phrase.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Name {
           get { return name_; }
           set {
@@ -1318,6 +1362,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Required. The type of the training phrase.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Type Type {
           get { return type_; }
           set {
@@ -1352,6 +1397,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         ///     set.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Types.Part> Parts {
           get { return parts_; }
         }
@@ -1365,6 +1411,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// intent or training, this counter is increased.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int TimesAddedCount {
           get { return timesAddedCount_; }
           set {
@@ -1373,11 +1420,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as TrainingPhrase);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(TrainingPhrase other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1393,6 +1442,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1406,11 +1456,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1436,6 +1488,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Name.Length != 0) {
             output.WriteRawTag(10);
@@ -1457,6 +1510,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Name.Length != 0) {
@@ -1476,6 +1530,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(TrainingPhrase other) {
           if (other == null) {
             return;
@@ -1494,6 +1549,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1527,6 +1583,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1558,6 +1615,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         #region Nested types
         /// <summary>Container for nested types declared in the TrainingPhrase message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Represents different types of training phrases.
@@ -1594,19 +1652,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<Part> _parser = new pb::MessageParser<Part>(() => new Part());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Part> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.TrainingPhrase.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Part() {
               OnConstruction();
             }
@@ -1614,6 +1676,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Part(Part other) : this() {
               text_ = other.text_;
               entityType_ = other.entityType_;
@@ -1623,6 +1686,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Part Clone() {
               return new Part(this);
             }
@@ -1634,6 +1698,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. The text for this part.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Text {
               get { return text_; }
               set {
@@ -1649,6 +1714,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// This field is required for annotated parts of the training phrase.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string EntityType {
               get { return entityType_; }
               set {
@@ -1665,6 +1731,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// This field is required for annotated parts of the training phrase.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Alias {
               get { return alias_; }
               set {
@@ -1682,6 +1749,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// API, you must set this to true.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool UserDefined {
               get { return userDefined_; }
               set {
@@ -1690,11 +1758,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Part);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Part other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -1710,6 +1780,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -1723,11 +1794,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -1756,6 +1829,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Text.Length != 0) {
                 output.WriteRawTag(10);
@@ -1780,6 +1854,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Text.Length != 0) {
@@ -1801,6 +1876,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Part other) {
               if (other == null) {
                 return;
@@ -1821,6 +1897,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -1854,6 +1931,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -1900,19 +1978,23 @@ namespace Google.Cloud.Dialogflow.V2 {
         private static readonly pb::MessageParser<Parameter> _parser = new pb::MessageParser<Parameter>(() => new Parameter());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Parameter> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Dialogflow.V2.Intent.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Parameter() {
           OnConstruction();
         }
@@ -1920,6 +2002,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Parameter(Parameter other) : this() {
           name_ = other.name_;
           displayName_ = other.displayName_;
@@ -1933,6 +2016,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Parameter Clone() {
           return new Parameter(this);
         }
@@ -1944,6 +2028,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The unique identifier of this parameter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Name {
           get { return name_; }
           set {
@@ -1958,6 +2043,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Required. The name of the parameter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DisplayName {
           get { return displayName_; }
           set {
@@ -1978,6 +2064,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         ///   `#context_name.parameter_name`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Value {
           get { return value_; }
           set {
@@ -1995,6 +2082,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// syntax: `#context_name.parameter_name`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DefaultValue {
           get { return defaultValue_; }
           set {
@@ -2011,6 +2099,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// required, this must be provided.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string EntityTypeDisplayName {
           get { return entityTypeDisplayName_; }
           set {
@@ -2027,6 +2116,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// value.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Mandatory {
           get { return mandatory_; }
           set {
@@ -2044,6 +2134,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// user in order to collect a value for the parameter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Prompts {
           get { return prompts_; }
         }
@@ -2055,6 +2146,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Optional. Indicates whether the parameter represents a list of values.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool IsList {
           get { return isList_; }
           set {
@@ -2063,11 +2155,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Parameter);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Parameter other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2087,6 +2181,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2104,11 +2199,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2150,6 +2247,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Name.Length != 0) {
             output.WriteRawTag(10);
@@ -2187,6 +2285,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Name.Length != 0) {
@@ -2218,6 +2317,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Parameter other) {
           if (other == null) {
             return;
@@ -2248,6 +2348,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2297,6 +2398,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2358,19 +2460,23 @@ namespace Google.Cloud.Dialogflow.V2 {
         private static readonly pb::MessageParser<Message> _parser = new pb::MessageParser<Message>(() => new Message());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Message> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Dialogflow.V2.Intent.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Message() {
           OnConstruction();
         }
@@ -2378,6 +2484,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Message(Message other) : this() {
           platform_ = other.platform_;
           switch (other.MessageCase) {
@@ -2429,6 +2536,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Message Clone() {
           return new Message(this);
         }
@@ -2439,6 +2547,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The text response.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Text Text {
           get { return messageCase_ == MessageOneofCase.Text ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Text) message_ : null; }
           set {
@@ -2453,6 +2562,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The image response.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image Image {
           get { return messageCase_ == MessageOneofCase.Image ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image) message_ : null; }
           set {
@@ -2467,6 +2577,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The quick replies response.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.QuickReplies QuickReplies {
           get { return messageCase_ == MessageOneofCase.QuickReplies ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.QuickReplies) message_ : null; }
           set {
@@ -2481,6 +2592,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The card response.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card Card {
           get { return messageCase_ == MessageOneofCase.Card ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card) message_ : null; }
           set {
@@ -2495,6 +2607,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// A custom platform-specific response.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Struct Payload {
           get { return messageCase_ == MessageOneofCase.Payload ? (global::Google.Protobuf.WellKnownTypes.Struct) message_ : null; }
           set {
@@ -2509,6 +2622,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The voice and text-only responses for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponses SimpleResponses {
           get { return messageCase_ == MessageOneofCase.SimpleResponses ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponses) message_ : null; }
           set {
@@ -2523,6 +2637,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The basic card response for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard BasicCard {
           get { return messageCase_ == MessageOneofCase.BasicCard ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard) message_ : null; }
           set {
@@ -2537,6 +2652,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The suggestion chips for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestions Suggestions {
           get { return messageCase_ == MessageOneofCase.Suggestions ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestions) message_ : null; }
           set {
@@ -2551,6 +2667,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The link out suggestion chip for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.LinkOutSuggestion LinkOutSuggestion {
           get { return messageCase_ == MessageOneofCase.LinkOutSuggestion ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.LinkOutSuggestion) message_ : null; }
           set {
@@ -2565,6 +2682,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The list card response for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect ListSelect {
           get { return messageCase_ == MessageOneofCase.ListSelect ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect) message_ : null; }
           set {
@@ -2579,6 +2697,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The carousel card response for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect CarouselSelect {
           get { return messageCase_ == MessageOneofCase.CarouselSelect ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect) message_ : null; }
           set {
@@ -2593,6 +2712,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Browse carousel card for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard BrowseCarouselCard {
           get { return messageCase_ == MessageOneofCase.BrowseCarouselCard ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard) message_ : null; }
           set {
@@ -2607,6 +2727,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Table card for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCard TableCard {
           get { return messageCase_ == MessageOneofCase.TableCard ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCard) message_ : null; }
           set {
@@ -2621,6 +2742,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// The media content card for Actions on Google.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent MediaContent {
           get { return messageCase_ == MessageOneofCase.MediaContent ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent) message_ : null; }
           set {
@@ -2636,6 +2758,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Optional. The platform that this message is intended for.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Platform Platform {
           get { return platform_; }
           set {
@@ -2664,22 +2787,26 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
         private MessageOneofCase messageCase_ = MessageOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MessageOneofCase MessageCase {
           get { return messageCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearMessage() {
           messageCase_ = MessageOneofCase.None;
           message_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Message);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Message other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2707,6 +2834,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (messageCase_ == MessageOneofCase.Text) hash ^= Text.GetHashCode();
@@ -2732,11 +2860,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2809,6 +2939,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (messageCase_ == MessageOneofCase.Text) {
             output.WriteRawTag(10);
@@ -2877,6 +3008,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (messageCase_ == MessageOneofCase.Text) {
@@ -2931,6 +3063,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Message other) {
           if (other == null) {
             return;
@@ -3029,6 +3162,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3176,6 +3310,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3321,6 +3456,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         #region Nested types
         /// <summary>Container for nested types declared in the Message message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// The rich response message integration platform. See
@@ -3382,19 +3518,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<Text> _parser = new pb::MessageParser<Text>(() => new Text());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Text> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Text() {
               OnConstruction();
             }
@@ -3402,12 +3542,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Text(Text other) : this() {
               text_ = other.text_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Text Clone() {
               return new Text(this);
             }
@@ -3421,16 +3563,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The collection of the agent's responses.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> Text_ {
               get { return text_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Text);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Text other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -3443,6 +3588,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= text_.GetHashCode();
@@ -3453,11 +3599,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -3471,6 +3619,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               text_.WriteTo(ref output, _repeated_text_codec);
               if (_unknownFields != null) {
@@ -3480,6 +3629,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += text_.CalculateSize(_repeated_text_codec);
@@ -3490,6 +3640,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Text other) {
               if (other == null) {
                 return;
@@ -3499,6 +3650,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -3520,6 +3672,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -3549,19 +3702,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<Image> _parser = new pb::MessageParser<Image>(() => new Image());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Image> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[1]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Image() {
               OnConstruction();
             }
@@ -3569,6 +3726,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Image(Image other) : this() {
               imageUri_ = other.imageUri_;
               accessibilityText_ = other.accessibilityText_;
@@ -3576,6 +3734,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Image Clone() {
               return new Image(this);
             }
@@ -3587,6 +3746,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The public URI to an image file.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ImageUri {
               get { return imageUri_; }
               set {
@@ -3602,6 +3762,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// e.g., screen readers.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string AccessibilityText {
               get { return accessibilityText_; }
               set {
@@ -3610,11 +3771,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Image);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Image other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -3628,6 +3791,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (ImageUri.Length != 0) hash ^= ImageUri.GetHashCode();
@@ -3639,11 +3803,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -3664,6 +3830,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (ImageUri.Length != 0) {
                 output.WriteRawTag(10);
@@ -3680,6 +3847,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (ImageUri.Length != 0) {
@@ -3695,6 +3863,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Image other) {
               if (other == null) {
                 return;
@@ -3709,6 +3878,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -3734,6 +3904,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -3767,19 +3938,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<QuickReplies> _parser = new pb::MessageParser<QuickReplies>(() => new QuickReplies());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<QuickReplies> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[2]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public QuickReplies() {
               OnConstruction();
             }
@@ -3787,6 +3962,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public QuickReplies(QuickReplies other) : this() {
               title_ = other.title_;
               quickReplies_ = other.quickReplies_.Clone();
@@ -3794,6 +3970,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public QuickReplies Clone() {
               return new QuickReplies(this);
             }
@@ -3805,6 +3982,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The title of the collection of quick replies.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Title {
               get { return title_; }
               set {
@@ -3821,16 +3999,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The collection of quick replies.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> QuickReplies_ {
               get { return quickReplies_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as QuickReplies);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(QuickReplies other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -3844,6 +4025,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -3855,11 +4037,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -3877,6 +4061,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Title.Length != 0) {
                 output.WriteRawTag(10);
@@ -3890,6 +4075,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Title.Length != 0) {
@@ -3903,6 +4089,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(QuickReplies other) {
               if (other == null) {
                 return;
@@ -3915,6 +4102,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -3940,6 +4128,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -3973,19 +4162,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<Card> _parser = new pb::MessageParser<Card>(() => new Card());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Card> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[3]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Card() {
               OnConstruction();
             }
@@ -3993,6 +4186,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Card(Card other) : this() {
               title_ = other.title_;
               subtitle_ = other.subtitle_;
@@ -4002,6 +4196,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Card Clone() {
               return new Card(this);
             }
@@ -4013,6 +4208,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The title of the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Title {
               get { return title_; }
               set {
@@ -4027,6 +4223,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The subtitle of the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Subtitle {
               get { return subtitle_; }
               set {
@@ -4041,6 +4238,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The public URI to an image file for the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string ImageUri {
               get { return imageUri_; }
               set {
@@ -4057,16 +4255,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The collection of card buttons.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Types.Button> Buttons {
               get { return buttons_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Card);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Card other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -4082,6 +4283,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -4095,11 +4297,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -4125,6 +4329,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Title.Length != 0) {
                 output.WriteRawTag(10);
@@ -4146,6 +4351,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Title.Length != 0) {
@@ -4165,6 +4371,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Card other) {
               if (other == null) {
                 return;
@@ -4183,6 +4390,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -4216,6 +4424,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -4247,6 +4456,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #region Nested types
             /// <summary>Container for nested types declared in the Card message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Contains information about a button.
@@ -4259,19 +4469,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                 private static readonly pb::MessageParser<Button> _parser = new pb::MessageParser<Button>(() => new Button());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<Button> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Card.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Button() {
                   OnConstruction();
                 }
@@ -4279,6 +4493,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Button(Button other) : this() {
                   text_ = other.text_;
                   postback_ = other.postback_;
@@ -4286,6 +4501,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Button Clone() {
                   return new Button(this);
                 }
@@ -4297,6 +4513,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. The text to show on the button.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Text {
                   get { return text_; }
                   set {
@@ -4312,6 +4529,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// open.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Postback {
                   get { return postback_; }
                   set {
@@ -4320,11 +4538,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as Button);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(Button other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -4338,6 +4558,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -4349,11 +4570,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -4374,6 +4597,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (Text.Length != 0) {
                     output.WriteRawTag(10);
@@ -4390,6 +4614,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (Text.Length != 0) {
@@ -4405,6 +4630,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(Button other) {
                   if (other == null) {
                     return;
@@ -4419,6 +4645,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -4444,6 +4671,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -4482,19 +4710,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<SimpleResponse> _parser = new pb::MessageParser<SimpleResponse>(() => new SimpleResponse());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<SimpleResponse> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[4]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SimpleResponse() {
               OnConstruction();
             }
@@ -4502,6 +4734,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SimpleResponse(SimpleResponse other) : this() {
               textToSpeech_ = other.textToSpeech_;
               ssml_ = other.ssml_;
@@ -4510,6 +4743,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SimpleResponse Clone() {
               return new SimpleResponse(this);
             }
@@ -4522,6 +4756,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// speech output. Mutually exclusive with ssml.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string TextToSpeech {
               get { return textToSpeech_; }
               set {
@@ -4538,6 +4773,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// text_to_speech.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Ssml {
               get { return ssml_; }
               set {
@@ -4552,6 +4788,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The text to display.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string DisplayText {
               get { return displayText_; }
               set {
@@ -4560,11 +4797,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as SimpleResponse);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(SimpleResponse other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -4579,6 +4818,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (TextToSpeech.Length != 0) hash ^= TextToSpeech.GetHashCode();
@@ -4591,11 +4831,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -4620,6 +4862,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (TextToSpeech.Length != 0) {
                 output.WriteRawTag(10);
@@ -4640,6 +4883,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (TextToSpeech.Length != 0) {
@@ -4658,6 +4902,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(SimpleResponse other) {
               if (other == null) {
                 return;
@@ -4675,6 +4920,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -4704,6 +4950,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -4744,19 +4991,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<SimpleResponses> _parser = new pb::MessageParser<SimpleResponses>(() => new SimpleResponses());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<SimpleResponses> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[5]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SimpleResponses() {
               OnConstruction();
             }
@@ -4764,12 +5015,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SimpleResponses(SimpleResponses other) : this() {
               simpleResponses_ = other.simpleResponses_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SimpleResponses Clone() {
               return new SimpleResponses(this);
             }
@@ -4783,16 +5036,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. The list of simple responses.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SimpleResponse> SimpleResponses_ {
               get { return simpleResponses_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as SimpleResponses);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(SimpleResponses other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -4805,6 +5061,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= simpleResponses_.GetHashCode();
@@ -4815,11 +5072,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -4833,6 +5092,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               simpleResponses_.WriteTo(ref output, _repeated_simpleResponses_codec);
               if (_unknownFields != null) {
@@ -4842,6 +5102,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += simpleResponses_.CalculateSize(_repeated_simpleResponses_codec);
@@ -4852,6 +5113,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(SimpleResponses other) {
               if (other == null) {
                 return;
@@ -4861,6 +5123,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -4882,6 +5145,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -4911,19 +5175,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<BasicCard> _parser = new pb::MessageParser<BasicCard>(() => new BasicCard());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<BasicCard> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[6]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public BasicCard() {
               OnConstruction();
             }
@@ -4931,6 +5199,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public BasicCard(BasicCard other) : this() {
               title_ = other.title_;
               subtitle_ = other.subtitle_;
@@ -4941,6 +5210,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public BasicCard Clone() {
               return new BasicCard(this);
             }
@@ -4952,6 +5222,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The title of the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Title {
               get { return title_; }
               set {
@@ -4966,6 +5237,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The subtitle of the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Subtitle {
               get { return subtitle_; }
               set {
@@ -4980,6 +5252,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required, unless image is present. The body text of the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string FormattedText {
               get { return formattedText_; }
               set {
@@ -4994,6 +5267,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The image for the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image Image {
               get { return image_; }
               set {
@@ -5010,16 +5284,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The collection of card buttons.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button> Buttons {
               get { return buttons_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as BasicCard);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(BasicCard other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -5036,6 +5313,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -5050,11 +5328,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -5084,6 +5364,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Title.Length != 0) {
                 output.WriteRawTag(10);
@@ -5109,6 +5390,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Title.Length != 0) {
@@ -5131,6 +5413,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(BasicCard other) {
               if (other == null) {
                 return;
@@ -5155,6 +5438,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -5195,6 +5479,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -5233,6 +5518,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #region Nested types
             /// <summary>Container for nested types declared in the BasicCard message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// The button object that appears at the bottom of a card.
@@ -5245,19 +5531,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                 private static readonly pb::MessageParser<Button> _parser = new pb::MessageParser<Button>(() => new Button());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<Button> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Button() {
                   OnConstruction();
                 }
@@ -5265,6 +5555,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Button(Button other) : this() {
                   title_ = other.title_;
                   openUriAction_ = other.openUriAction_ != null ? other.openUriAction_.Clone() : null;
@@ -5272,6 +5563,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Button Clone() {
                   return new Button(this);
                 }
@@ -5283,6 +5575,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. The title of the button.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Title {
                   get { return title_; }
                   set {
@@ -5297,6 +5590,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Action to take when a user taps on the button.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Types.OpenUriAction OpenUriAction {
                   get { return openUriAction_; }
                   set {
@@ -5305,11 +5599,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as Button);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(Button other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -5323,6 +5619,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -5334,11 +5631,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -5359,6 +5658,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (Title.Length != 0) {
                     output.WriteRawTag(10);
@@ -5375,6 +5675,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (Title.Length != 0) {
@@ -5390,6 +5691,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(Button other) {
                   if (other == null) {
                     return;
@@ -5407,6 +5709,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -5435,6 +5738,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -5461,6 +5765,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #region Nested types
                 /// <summary>Container for nested types declared in the Button message type.</summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static partial class Types {
                   /// <summary>
                   /// Opens the given URI.
@@ -5473,19 +5778,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                     private static readonly pb::MessageParser<OpenUriAction> _parser = new pb::MessageParser<OpenUriAction>(() => new OpenUriAction());
                     private pb::UnknownFieldSet _unknownFields;
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public static pb::MessageParser<OpenUriAction> Parser { get { return _parser; } }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public static pbr::MessageDescriptor Descriptor {
                       get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button.Descriptor.NestedTypes[0]; }
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     pbr::MessageDescriptor pb::IMessage.Descriptor {
                       get { return Descriptor; }
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public OpenUriAction() {
                       OnConstruction();
                     }
@@ -5493,12 +5802,14 @@ namespace Google.Cloud.Dialogflow.V2 {
                     partial void OnConstruction();
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public OpenUriAction(OpenUriAction other) : this() {
                       uri_ = other.uri_;
                       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public OpenUriAction Clone() {
                       return new OpenUriAction(this);
                     }
@@ -5510,6 +5821,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     /// Required. The HTTP or HTTPS scheme URI.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public string Uri {
                       get { return uri_; }
                       set {
@@ -5518,11 +5830,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public override bool Equals(object other) {
                       return Equals(other as OpenUriAction);
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public bool Equals(OpenUriAction other) {
                       if (ReferenceEquals(other, null)) {
                         return false;
@@ -5535,6 +5849,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public override int GetHashCode() {
                       int hash = 1;
                       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
@@ -5545,11 +5860,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public override string ToString() {
                       return pb::JsonFormatter.ToDiagnosticString(this);
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public void WriteTo(pb::CodedOutputStream output) {
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                       output.WriteRawMessage(this);
@@ -5566,6 +5883,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                       if (Uri.Length != 0) {
                         output.WriteRawTag(10);
@@ -5578,6 +5896,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     #endif
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public int CalculateSize() {
                       int size = 0;
                       if (Uri.Length != 0) {
@@ -5590,6 +5909,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public void MergeFrom(OpenUriAction other) {
                       if (other == null) {
                         return;
@@ -5601,6 +5921,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public void MergeFrom(pb::CodedInputStream input) {
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                       input.ReadRawMessage(this);
@@ -5622,6 +5943,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                       uint tag;
                       while ((tag = input.ReadTag()) != 0) {
@@ -5662,19 +5984,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<Suggestion> _parser = new pb::MessageParser<Suggestion>(() => new Suggestion());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Suggestion> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[7]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Suggestion() {
               OnConstruction();
             }
@@ -5682,12 +6008,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Suggestion(Suggestion other) : this() {
               title_ = other.title_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Suggestion Clone() {
               return new Suggestion(this);
             }
@@ -5699,6 +6027,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. The text shown the in the suggestion chip.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Title {
               get { return title_; }
               set {
@@ -5707,11 +6036,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Suggestion);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Suggestion other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -5724,6 +6055,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -5734,11 +6066,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -5755,6 +6089,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Title.Length != 0) {
                 output.WriteRawTag(10);
@@ -5767,6 +6102,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Title.Length != 0) {
@@ -5779,6 +6115,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Suggestion other) {
               if (other == null) {
                 return;
@@ -5790,6 +6127,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -5811,6 +6149,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -5840,19 +6179,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<Suggestions> _parser = new pb::MessageParser<Suggestions>(() => new Suggestions());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Suggestions> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[8]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Suggestions() {
               OnConstruction();
             }
@@ -5860,12 +6203,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Suggestions(Suggestions other) : this() {
               suggestions_ = other.suggestions_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Suggestions Clone() {
               return new Suggestions(this);
             }
@@ -5879,16 +6224,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. The list of suggested replies.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Suggestion> Suggestions_ {
               get { return suggestions_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Suggestions);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Suggestions other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -5901,6 +6249,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= suggestions_.GetHashCode();
@@ -5911,11 +6260,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -5929,6 +6280,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               suggestions_.WriteTo(ref output, _repeated_suggestions_codec);
               if (_unknownFields != null) {
@@ -5938,6 +6290,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += suggestions_.CalculateSize(_repeated_suggestions_codec);
@@ -5948,6 +6301,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Suggestions other) {
               if (other == null) {
                 return;
@@ -5957,6 +6311,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -5978,6 +6333,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -6008,19 +6364,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<LinkOutSuggestion> _parser = new pb::MessageParser<LinkOutSuggestion>(() => new LinkOutSuggestion());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<LinkOutSuggestion> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[9]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public LinkOutSuggestion() {
               OnConstruction();
             }
@@ -6028,6 +6388,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public LinkOutSuggestion(LinkOutSuggestion other) : this() {
               destinationName_ = other.destinationName_;
               uri_ = other.uri_;
@@ -6035,6 +6396,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public LinkOutSuggestion Clone() {
               return new LinkOutSuggestion(this);
             }
@@ -6046,6 +6408,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. The name of the app or site this chip is linking to.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string DestinationName {
               get { return destinationName_; }
               set {
@@ -6061,6 +6424,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// suggestion chip.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Uri {
               get { return uri_; }
               set {
@@ -6069,11 +6433,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as LinkOutSuggestion);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(LinkOutSuggestion other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -6087,6 +6453,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (DestinationName.Length != 0) hash ^= DestinationName.GetHashCode();
@@ -6098,11 +6465,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -6123,6 +6492,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (DestinationName.Length != 0) {
                 output.WriteRawTag(10);
@@ -6139,6 +6509,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (DestinationName.Length != 0) {
@@ -6154,6 +6525,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(LinkOutSuggestion other) {
               if (other == null) {
                 return;
@@ -6168,6 +6540,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -6193,6 +6566,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -6226,19 +6600,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<ListSelect> _parser = new pb::MessageParser<ListSelect>(() => new ListSelect());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<ListSelect> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[10]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ListSelect() {
               OnConstruction();
             }
@@ -6246,6 +6624,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ListSelect(ListSelect other) : this() {
               title_ = other.title_;
               items_ = other.items_.Clone();
@@ -6254,6 +6633,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ListSelect Clone() {
               return new ListSelect(this);
             }
@@ -6265,6 +6645,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. The overall title of the list.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Title {
               get { return title_; }
               set {
@@ -6281,6 +6662,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. List items.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Types.Item> Items {
               get { return items_; }
             }
@@ -6292,6 +6674,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. Subtitle of the list.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Subtitle {
               get { return subtitle_; }
               set {
@@ -6300,11 +6683,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as ListSelect);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(ListSelect other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -6319,6 +6704,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -6331,11 +6717,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -6357,6 +6745,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Title.Length != 0) {
                 output.WriteRawTag(10);
@@ -6374,6 +6763,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Title.Length != 0) {
@@ -6390,6 +6780,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(ListSelect other) {
               if (other == null) {
                 return;
@@ -6405,6 +6796,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -6434,6 +6826,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -6461,6 +6854,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #region Nested types
             /// <summary>Container for nested types declared in the ListSelect message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// An item in the list.
@@ -6473,19 +6867,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                 private static readonly pb::MessageParser<Item> _parser = new pb::MessageParser<Item>(() => new Item());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<Item> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ListSelect.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Item() {
                   OnConstruction();
                 }
@@ -6493,6 +6891,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Item(Item other) : this() {
                   info_ = other.info_ != null ? other.info_.Clone() : null;
                   title_ = other.title_;
@@ -6502,6 +6901,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Item Clone() {
                   return new Item(this);
                 }
@@ -6513,6 +6913,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Additional information about this option.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo Info {
                   get { return info_; }
                   set {
@@ -6527,6 +6928,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. The title of the list item.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Title {
                   get { return title_; }
                   set {
@@ -6541,6 +6943,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. The main text describing the item.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Description {
                   get { return description_; }
                   set {
@@ -6555,6 +6958,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. The image to display.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image Image {
                   get { return image_; }
                   set {
@@ -6563,11 +6967,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as Item);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(Item other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -6583,6 +6989,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (info_ != null) hash ^= Info.GetHashCode();
@@ -6596,11 +7003,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -6629,6 +7038,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (info_ != null) {
                     output.WriteRawTag(10);
@@ -6653,6 +7063,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (info_ != null) {
@@ -6674,6 +7085,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(Item other) {
                   if (other == null) {
                     return;
@@ -6700,6 +7112,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -6739,6 +7152,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -6791,19 +7205,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<CarouselSelect> _parser = new pb::MessageParser<CarouselSelect>(() => new CarouselSelect());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<CarouselSelect> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[11]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CarouselSelect() {
               OnConstruction();
             }
@@ -6811,12 +7229,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CarouselSelect(CarouselSelect other) : this() {
               items_ = other.items_.Clone();
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public CarouselSelect Clone() {
               return new CarouselSelect(this);
             }
@@ -6830,16 +7250,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. Carousel items.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Types.Item> Items {
               get { return items_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as CarouselSelect);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(CarouselSelect other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -6852,6 +7275,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= items_.GetHashCode();
@@ -6862,11 +7286,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -6880,6 +7306,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               items_.WriteTo(ref output, _repeated_items_codec);
               if (_unknownFields != null) {
@@ -6889,6 +7316,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += items_.CalculateSize(_repeated_items_codec);
@@ -6899,6 +7327,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(CarouselSelect other) {
               if (other == null) {
                 return;
@@ -6908,6 +7337,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -6929,6 +7359,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -6948,6 +7379,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #region Nested types
             /// <summary>Container for nested types declared in the CarouselSelect message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// An item in the carousel.
@@ -6960,19 +7392,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                 private static readonly pb::MessageParser<Item> _parser = new pb::MessageParser<Item>(() => new Item());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<Item> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.CarouselSelect.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Item() {
                   OnConstruction();
                 }
@@ -6980,6 +7416,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Item(Item other) : this() {
                   info_ = other.info_ != null ? other.info_.Clone() : null;
                   title_ = other.title_;
@@ -6989,6 +7426,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public Item Clone() {
                   return new Item(this);
                 }
@@ -7000,6 +7438,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Additional info about the option item.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.SelectItemInfo Info {
                   get { return info_; }
                   set {
@@ -7014,6 +7453,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Title of the carousel item.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Title {
                   get { return title_; }
                   set {
@@ -7028,6 +7468,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. The body text of the card.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Description {
                   get { return description_; }
                   set {
@@ -7042,6 +7483,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. The image to display.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image Image {
                   get { return image_; }
                   set {
@@ -7050,11 +7492,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as Item);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(Item other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -7070,6 +7514,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (info_ != null) hash ^= Info.GetHashCode();
@@ -7083,11 +7528,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -7116,6 +7563,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (info_ != null) {
                     output.WriteRawTag(10);
@@ -7140,6 +7588,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (info_ != null) {
@@ -7161,6 +7610,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(Item other) {
                   if (other == null) {
                     return;
@@ -7187,6 +7637,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -7226,6 +7677,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -7279,19 +7731,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<SelectItemInfo> _parser = new pb::MessageParser<SelectItemInfo>(() => new SelectItemInfo());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<SelectItemInfo> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[12]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SelectItemInfo() {
               OnConstruction();
             }
@@ -7299,6 +7755,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SelectItemInfo(SelectItemInfo other) : this() {
               key_ = other.key_;
               synonyms_ = other.synonyms_.Clone();
@@ -7306,6 +7763,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public SelectItemInfo Clone() {
               return new SelectItemInfo(this);
             }
@@ -7318,6 +7776,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// response is given.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Key {
               get { return key_; }
               set {
@@ -7335,16 +7794,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// item in dialog.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> Synonyms {
               get { return synonyms_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as SelectItemInfo);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(SelectItemInfo other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -7358,6 +7820,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -7369,11 +7832,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -7391,6 +7856,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Key.Length != 0) {
                 output.WriteRawTag(10);
@@ -7404,6 +7870,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Key.Length != 0) {
@@ -7417,6 +7884,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(SelectItemInfo other) {
               if (other == null) {
                 return;
@@ -7429,6 +7897,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -7454,6 +7923,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -7487,19 +7957,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<MediaContent> _parser = new pb::MessageParser<MediaContent>(() => new MediaContent());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<MediaContent> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[13]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public MediaContent() {
               OnConstruction();
             }
@@ -7507,6 +7981,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public MediaContent(MediaContent other) : this() {
               mediaType_ = other.mediaType_;
               mediaObjects_ = other.mediaObjects_.Clone();
@@ -7514,6 +7989,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public MediaContent Clone() {
               return new MediaContent(this);
             }
@@ -7525,6 +8001,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. What type of media is the content (ie "audio").
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType MediaType {
               get { return mediaType_; }
               set {
@@ -7541,16 +8018,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. List of media objects.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaObject> MediaObjects {
               get { return mediaObjects_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as MediaContent);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(MediaContent other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -7564,6 +8044,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (MediaType != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified) hash ^= MediaType.GetHashCode();
@@ -7575,11 +8056,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -7597,6 +8080,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (MediaType != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified) {
                 output.WriteRawTag(8);
@@ -7610,6 +8094,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (MediaType != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Types.ResponseMediaType.Unspecified) {
@@ -7623,6 +8108,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(MediaContent other) {
               if (other == null) {
                 return;
@@ -7635,6 +8121,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -7660,6 +8147,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -7683,6 +8171,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #region Nested types
             /// <summary>Container for nested types declared in the MediaContent message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Format of response media type.
@@ -7709,19 +8198,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                 private static readonly pb::MessageParser<ResponseMediaObject> _parser = new pb::MessageParser<ResponseMediaObject>(() => new ResponseMediaObject());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<ResponseMediaObject> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.MediaContent.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public ResponseMediaObject() {
                   OnConstruction();
                 }
@@ -7729,6 +8222,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public ResponseMediaObject(ResponseMediaObject other) : this() {
                   name_ = other.name_;
                   description_ = other.description_;
@@ -7746,6 +8240,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public ResponseMediaObject Clone() {
                   return new ResponseMediaObject(this);
                 }
@@ -7757,6 +8252,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Name of media card.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Name {
                   get { return name_; }
                   set {
@@ -7771,6 +8267,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. Description of media card.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Description {
                   get { return description_; }
                   set {
@@ -7784,6 +8281,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. Image to display above media content.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image LargeImage {
                   get { return imageCase_ == ImageOneofCase.LargeImage ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image) image_ : null; }
                   set {
@@ -7798,6 +8296,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. Icon to display above media content.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image Icon {
                   get { return imageCase_ == ImageOneofCase.Icon ? (global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image) image_ : null; }
                   set {
@@ -7813,6 +8312,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Url where the media is stored.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string ContentUrl {
                   get { return contentUrl_; }
                   set {
@@ -7829,22 +8329,26 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
                 private ImageOneofCase imageCase_ = ImageOneofCase.None;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public ImageOneofCase ImageCase {
                   get { return imageCase_; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void ClearImage() {
                   imageCase_ = ImageOneofCase.None;
                   image_ = null;
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as ResponseMediaObject);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(ResponseMediaObject other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -7862,6 +8366,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -7877,11 +8382,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -7914,6 +8421,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (Name.Length != 0) {
                     output.WriteRawTag(10);
@@ -7942,6 +8450,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (Name.Length != 0) {
@@ -7966,6 +8475,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(ResponseMediaObject other) {
                   if (other == null) {
                     return;
@@ -7998,6 +8508,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -8045,6 +8556,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -8106,19 +8618,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<BrowseCarouselCard> _parser = new pb::MessageParser<BrowseCarouselCard>(() => new BrowseCarouselCard());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<BrowseCarouselCard> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[14]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public BrowseCarouselCard() {
               OnConstruction();
             }
@@ -8126,6 +8642,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public BrowseCarouselCard(BrowseCarouselCard other) : this() {
               items_ = other.items_.Clone();
               imageDisplayOptions_ = other.imageDisplayOptions_;
@@ -8133,6 +8650,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public BrowseCarouselCard Clone() {
               return new BrowseCarouselCard(this);
             }
@@ -8147,6 +8665,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// items, maximum of ten.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem> Items {
               get { return items_; }
             }
@@ -8159,6 +8678,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// [items][google.cloud.dialogflow.v2.Intent.Message.BrowseCarouselCard.items].
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions ImageDisplayOptions {
               get { return imageDisplayOptions_; }
               set {
@@ -8167,11 +8687,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as BrowseCarouselCard);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(BrowseCarouselCard other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -8185,6 +8707,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= items_.GetHashCode();
@@ -8196,11 +8719,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -8218,6 +8743,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               items_.WriteTo(ref output, _repeated_items_codec);
               if (ImageDisplayOptions != global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.ImageDisplayOptions.Unspecified) {
@@ -8231,6 +8757,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += items_.CalculateSize(_repeated_items_codec);
@@ -8244,6 +8771,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(BrowseCarouselCard other) {
               if (other == null) {
                 return;
@@ -8256,6 +8784,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -8281,6 +8810,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -8304,6 +8834,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #region Nested types
             /// <summary>Container for nested types declared in the BrowseCarouselCard message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Image display options for Actions on Google. This should be used for
@@ -8353,19 +8884,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                 private static readonly pb::MessageParser<BrowseCarouselCardItem> _parser = new pb::MessageParser<BrowseCarouselCardItem>(() => new BrowseCarouselCardItem());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<BrowseCarouselCardItem> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public BrowseCarouselCardItem() {
                   OnConstruction();
                 }
@@ -8373,6 +8908,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public BrowseCarouselCardItem(BrowseCarouselCardItem other) : this() {
                   openUriAction_ = other.openUriAction_ != null ? other.openUriAction_.Clone() : null;
                   title_ = other.title_;
@@ -8383,6 +8919,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public BrowseCarouselCardItem Clone() {
                   return new BrowseCarouselCardItem(this);
                 }
@@ -8394,6 +8931,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Action to present to the user.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction OpenUriAction {
                   get { return openUriAction_; }
                   set {
@@ -8408,6 +8946,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Required. Title of the carousel item. Maximum of two lines of text.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Title {
                   get { return title_; }
                   set {
@@ -8423,6 +8962,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// text.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Description {
                   get { return description_; }
                   set {
@@ -8437,6 +8977,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Optional. Hero image for the carousel item.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image Image {
                   get { return image_; }
                   set {
@@ -8452,6 +8993,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 /// Card. Maximum of one line of text.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string Footer {
                   get { return footer_; }
                   set {
@@ -8460,11 +9002,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as BrowseCarouselCardItem);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(BrowseCarouselCardItem other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -8481,6 +9025,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (openUriAction_ != null) hash ^= OpenUriAction.GetHashCode();
@@ -8495,11 +9040,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -8532,6 +9079,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (openUriAction_ != null) {
                     output.WriteRawTag(10);
@@ -8560,6 +9108,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (openUriAction_ != null) {
@@ -8584,6 +9133,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(BrowseCarouselCardItem other) {
                   if (other == null) {
                     return;
@@ -8613,6 +9163,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -8656,6 +9207,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -8697,6 +9249,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                 #region Nested types
                 /// <summary>Container for nested types declared in the BrowseCarouselCardItem message type.</summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static partial class Types {
                   /// <summary>
                   /// Actions on Google action to open a given url.
@@ -8709,19 +9262,23 @@ namespace Google.Cloud.Dialogflow.V2 {
                     private static readonly pb::MessageParser<OpenUrlAction> _parser = new pb::MessageParser<OpenUrlAction>(() => new OpenUrlAction());
                     private pb::UnknownFieldSet _unknownFields;
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public static pb::MessageParser<OpenUrlAction> Parser { get { return _parser; } }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public static pbr::MessageDescriptor Descriptor {
                       get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Descriptor.NestedTypes[0]; }
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     pbr::MessageDescriptor pb::IMessage.Descriptor {
                       get { return Descriptor; }
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public OpenUrlAction() {
                       OnConstruction();
                     }
@@ -8729,6 +9286,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     partial void OnConstruction();
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public OpenUrlAction(OpenUrlAction other) : this() {
                       url_ = other.url_;
                       urlTypeHint_ = other.urlTypeHint_;
@@ -8736,6 +9294,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public OpenUrlAction Clone() {
                       return new OpenUrlAction(this);
                     }
@@ -8747,6 +9306,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     /// Required. URL
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public string Url {
                       get { return url_; }
                       set {
@@ -8762,6 +9322,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     /// the URL. Defaults to opening via web browser.
                     /// </summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BrowseCarouselCard.Types.BrowseCarouselCardItem.Types.OpenUrlAction.Types.UrlTypeHint UrlTypeHint {
                       get { return urlTypeHint_; }
                       set {
@@ -8770,11 +9331,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public override bool Equals(object other) {
                       return Equals(other as OpenUrlAction);
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public bool Equals(OpenUrlAction other) {
                       if (ReferenceEquals(other, null)) {
                         return false;
@@ -8788,6 +9351,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public override int GetHashCode() {
                       int hash = 1;
                       if (Url.Length != 0) hash ^= Url.GetHashCode();
@@ -8799,11 +9363,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public override string ToString() {
                       return pb::JsonFormatter.ToDiagnosticString(this);
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public void WriteTo(pb::CodedOutputStream output) {
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                       output.WriteRawMessage(this);
@@ -8824,6 +9390,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                       if (Url.Length != 0) {
                         output.WriteRawTag(10);
@@ -8840,6 +9407,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     #endif
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public int CalculateSize() {
                       int size = 0;
                       if (Url.Length != 0) {
@@ -8855,6 +9423,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public void MergeFrom(OpenUrlAction other) {
                       if (other == null) {
                         return;
@@ -8869,6 +9438,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     }
 
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public void MergeFrom(pb::CodedInputStream input) {
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                       input.ReadRawMessage(this);
@@ -8894,6 +9464,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
                     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                       uint tag;
                       while ((tag = input.ReadTag()) != 0) {
@@ -8917,6 +9488,7 @@ namespace Google.Cloud.Dialogflow.V2 {
                     #region Nested types
                     /// <summary>Container for nested types declared in the OpenUrlAction message type.</summary>
                     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                     public static partial class Types {
                       /// <summary>
                       /// Type of the URI.
@@ -8963,19 +9535,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<TableCard> _parser = new pb::MessageParser<TableCard>(() => new TableCard());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<TableCard> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[15]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCard() {
               OnConstruction();
             }
@@ -8983,6 +9559,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCard(TableCard other) : this() {
               title_ = other.title_;
               subtitle_ = other.subtitle_;
@@ -8994,6 +9571,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCard Clone() {
               return new TableCard(this);
             }
@@ -9005,6 +9583,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. Title of the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Title {
               get { return title_; }
               set {
@@ -9019,6 +9598,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. Subtitle to the title.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Subtitle {
               get { return subtitle_; }
               set {
@@ -9033,6 +9613,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. Image which should be displayed on the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.Image Image {
               get { return image_; }
               set {
@@ -9049,6 +9630,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. Display properties for the columns in this table.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties> ColumnProperties {
               get { return columnProperties_; }
             }
@@ -9062,6 +9644,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. Rows in this table of data.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardRow> Rows {
               get { return rows_; }
             }
@@ -9075,16 +9658,19 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. List of buttons for the card.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.BasicCard.Types.Button> Buttons {
               get { return buttons_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as TableCard);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(TableCard other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -9102,6 +9688,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -9117,11 +9704,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -9149,6 +9738,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Title.Length != 0) {
                 output.WriteRawTag(10);
@@ -9172,6 +9762,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Title.Length != 0) {
@@ -9193,6 +9784,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(TableCard other) {
               if (other == null) {
                 return;
@@ -9216,6 +9808,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -9260,6 +9853,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -9312,19 +9906,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<ColumnProperties> _parser = new pb::MessageParser<ColumnProperties>(() => new ColumnProperties());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<ColumnProperties> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[16]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ColumnProperties() {
               OnConstruction();
             }
@@ -9332,6 +9930,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ColumnProperties(ColumnProperties other) : this() {
               header_ = other.header_;
               horizontalAlignment_ = other.horizontalAlignment_;
@@ -9339,6 +9938,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ColumnProperties Clone() {
               return new ColumnProperties(this);
             }
@@ -9350,6 +9950,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. Column heading.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Header {
               get { return header_; }
               set {
@@ -9364,6 +9965,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. Defines text alignment for all cells in this column.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.ColumnProperties.Types.HorizontalAlignment HorizontalAlignment {
               get { return horizontalAlignment_; }
               set {
@@ -9372,11 +9974,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as ColumnProperties);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(ColumnProperties other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -9390,6 +9994,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Header.Length != 0) hash ^= Header.GetHashCode();
@@ -9401,11 +10006,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -9426,6 +10033,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Header.Length != 0) {
                 output.WriteRawTag(10);
@@ -9442,6 +10050,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Header.Length != 0) {
@@ -9457,6 +10066,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(ColumnProperties other) {
               if (other == null) {
                 return;
@@ -9471,6 +10081,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -9496,6 +10107,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -9519,6 +10131,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #region Nested types
             /// <summary>Container for nested types declared in the ColumnProperties message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Text alignments within a cell.
@@ -9558,19 +10171,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<TableCardRow> _parser = new pb::MessageParser<TableCardRow>(() => new TableCardRow());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<TableCardRow> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[17]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCardRow() {
               OnConstruction();
             }
@@ -9578,6 +10195,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCardRow(TableCardRow other) : this() {
               cells_ = other.cells_.Clone();
               dividerAfter_ = other.dividerAfter_;
@@ -9585,6 +10203,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCardRow Clone() {
               return new TableCardRow(this);
             }
@@ -9598,6 +10217,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. List of cells that make up this row.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Types.TableCardCell> Cells {
               get { return cells_; }
             }
@@ -9609,6 +10229,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Optional. Whether to add a visual divider after this row.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool DividerAfter {
               get { return dividerAfter_; }
               set {
@@ -9617,11 +10238,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as TableCardRow);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(TableCardRow other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -9635,6 +10258,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= cells_.GetHashCode();
@@ -9646,11 +10270,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -9668,6 +10294,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               cells_.WriteTo(ref output, _repeated_cells_codec);
               if (DividerAfter != false) {
@@ -9681,6 +10308,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += cells_.CalculateSize(_repeated_cells_codec);
@@ -9694,6 +10322,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(TableCardRow other) {
               if (other == null) {
                 return;
@@ -9706,6 +10335,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -9731,6 +10361,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -9764,19 +10395,23 @@ namespace Google.Cloud.Dialogflow.V2 {
             private static readonly pb::MessageParser<TableCardCell> _parser = new pb::MessageParser<TableCardCell>(() => new TableCardCell());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<TableCardCell> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.Dialogflow.V2.Intent.Types.Message.Descriptor.NestedTypes[18]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCardCell() {
               OnConstruction();
             }
@@ -9784,12 +10419,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCardCell(TableCardCell other) : this() {
               text_ = other.text_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public TableCardCell Clone() {
               return new TableCardCell(this);
             }
@@ -9801,6 +10438,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             /// Required. Text in this cell.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Text {
               get { return text_; }
               set {
@@ -9809,11 +10447,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as TableCardCell);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(TableCardCell other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -9826,6 +10466,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -9836,11 +10477,13 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -9857,6 +10500,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Text.Length != 0) {
                 output.WriteRawTag(10);
@@ -9869,6 +10513,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Text.Length != 0) {
@@ -9881,6 +10526,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(TableCardCell other) {
               if (other == null) {
                 return;
@@ -9892,6 +10538,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -9913,6 +10560,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -9947,19 +10595,23 @@ namespace Google.Cloud.Dialogflow.V2 {
         private static readonly pb::MessageParser<FollowupIntentInfo> _parser = new pb::MessageParser<FollowupIntentInfo>(() => new FollowupIntentInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<FollowupIntentInfo> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Dialogflow.V2.Intent.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FollowupIntentInfo() {
           OnConstruction();
         }
@@ -9967,6 +10619,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FollowupIntentInfo(FollowupIntentInfo other) : this() {
           followupIntentName_ = other.followupIntentName_;
           parentFollowupIntentName_ = other.parentFollowupIntentName_;
@@ -9974,6 +10627,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FollowupIntentInfo Clone() {
           return new FollowupIntentInfo(this);
         }
@@ -9986,6 +10640,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string FollowupIntentName {
           get { return followupIntentName_; }
           set {
@@ -10001,6 +10656,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ParentFollowupIntentName {
           get { return parentFollowupIntentName_; }
           set {
@@ -10009,11 +10665,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as FollowupIntentInfo);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(FollowupIntentInfo other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -10027,6 +10685,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (FollowupIntentName.Length != 0) hash ^= FollowupIntentName.GetHashCode();
@@ -10038,11 +10697,13 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -10063,6 +10724,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (FollowupIntentName.Length != 0) {
             output.WriteRawTag(10);
@@ -10079,6 +10741,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (FollowupIntentName.Length != 0) {
@@ -10094,6 +10757,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(FollowupIntentInfo other) {
           if (other == null) {
             return;
@@ -10108,6 +10772,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -10133,6 +10798,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -10171,19 +10837,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<ListIntentsRequest> _parser = new pb::MessageParser<ListIntentsRequest>(() => new ListIntentsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListIntentsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListIntentsRequest() {
       OnConstruction();
     }
@@ -10191,6 +10861,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListIntentsRequest(ListIntentsRequest other) : this() {
       parent_ = other.parent_;
       languageCode_ = other.languageCode_;
@@ -10201,6 +10872,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListIntentsRequest Clone() {
       return new ListIntentsRequest(this);
     }
@@ -10221,6 +10893,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -10239,6 +10912,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -10253,6 +10927,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.IntentView IntentView {
       get { return intentView_; }
       set {
@@ -10268,6 +10943,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// default 100 and at most 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -10282,6 +10958,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The next_page_token value returned from a previous list request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -10290,11 +10967,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListIntentsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListIntentsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10311,6 +10990,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -10325,11 +11005,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10362,6 +11044,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -10390,6 +11073,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -10414,6 +11098,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListIntentsRequest other) {
       if (other == null) {
         return;
@@ -10437,6 +11122,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10474,6 +11160,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10519,19 +11206,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<ListIntentsResponse> _parser = new pb::MessageParser<ListIntentsResponse>(() => new ListIntentsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListIntentsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListIntentsResponse() {
       OnConstruction();
     }
@@ -10539,6 +11230,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListIntentsResponse(ListIntentsResponse other) : this() {
       intents_ = other.intents_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -10546,6 +11238,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListIntentsResponse Clone() {
       return new ListIntentsResponse(this);
     }
@@ -10560,6 +11253,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// returned based on the page_size field in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent> Intents {
       get { return intents_; }
     }
@@ -10572,6 +11266,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// more results in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -10580,11 +11275,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListIntentsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListIntentsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10598,6 +11295,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= intents_.GetHashCode();
@@ -10609,11 +11307,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10631,6 +11331,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       intents_.WriteTo(ref output, _repeated_intents_codec);
       if (NextPageToken.Length != 0) {
@@ -10644,6 +11345,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += intents_.CalculateSize(_repeated_intents_codec);
@@ -10657,6 +11359,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListIntentsResponse other) {
       if (other == null) {
         return;
@@ -10669,6 +11372,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10694,6 +11398,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10727,19 +11432,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<GetIntentRequest> _parser = new pb::MessageParser<GetIntentRequest>(() => new GetIntentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetIntentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetIntentRequest() {
       OnConstruction();
     }
@@ -10747,6 +11456,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetIntentRequest(GetIntentRequest other) : this() {
       name_ = other.name_;
       languageCode_ = other.languageCode_;
@@ -10755,6 +11465,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetIntentRequest Clone() {
       return new GetIntentRequest(this);
     }
@@ -10767,6 +11478,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -10785,6 +11497,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -10799,6 +11512,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.IntentView IntentView {
       get { return intentView_; }
       set {
@@ -10807,11 +11521,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetIntentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetIntentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10826,6 +11542,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -10838,11 +11555,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10867,6 +11586,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -10887,6 +11607,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -10905,6 +11626,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetIntentRequest other) {
       if (other == null) {
         return;
@@ -10922,6 +11644,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10951,6 +11674,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10988,19 +11712,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<CreateIntentRequest> _parser = new pb::MessageParser<CreateIntentRequest>(() => new CreateIntentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateIntentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateIntentRequest() {
       OnConstruction();
     }
@@ -11008,6 +11736,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateIntentRequest(CreateIntentRequest other) : this() {
       parent_ = other.parent_;
       intent_ = other.intent_ != null ? other.intent_.Clone() : null;
@@ -11017,6 +11746,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateIntentRequest Clone() {
       return new CreateIntentRequest(this);
     }
@@ -11029,6 +11759,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -11043,6 +11774,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The intent to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.Intent Intent {
       get { return intent_; }
       set {
@@ -11061,6 +11793,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -11075,6 +11808,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.IntentView IntentView {
       get { return intentView_; }
       set {
@@ -11083,11 +11817,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateIntentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateIntentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11103,6 +11839,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -11116,11 +11853,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11149,6 +11888,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -11173,6 +11913,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -11194,6 +11935,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateIntentRequest other) {
       if (other == null) {
         return;
@@ -11217,6 +11959,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11253,6 +11996,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11297,19 +12041,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<UpdateIntentRequest> _parser = new pb::MessageParser<UpdateIntentRequest>(() => new UpdateIntentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateIntentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateIntentRequest() {
       OnConstruction();
     }
@@ -11317,6 +12065,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateIntentRequest(UpdateIntentRequest other) : this() {
       intent_ = other.intent_ != null ? other.intent_.Clone() : null;
       languageCode_ = other.languageCode_;
@@ -11326,6 +12075,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateIntentRequest Clone() {
       return new UpdateIntentRequest(this);
     }
@@ -11337,6 +12087,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Required. The intent to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.Intent Intent {
       get { return intent_; }
       set {
@@ -11355,6 +12106,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -11369,6 +12121,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The mask to control which fields get updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -11383,6 +12136,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.IntentView IntentView {
       get { return intentView_; }
       set {
@@ -11391,11 +12145,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateIntentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateIntentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11411,6 +12167,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (intent_ != null) hash ^= Intent.GetHashCode();
@@ -11424,11 +12181,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11457,6 +12216,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (intent_ != null) {
         output.WriteRawTag(10);
@@ -11481,6 +12241,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (intent_ != null) {
@@ -11502,6 +12263,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateIntentRequest other) {
       if (other == null) {
         return;
@@ -11528,6 +12290,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11567,6 +12330,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11614,19 +12378,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<DeleteIntentRequest> _parser = new pb::MessageParser<DeleteIntentRequest>(() => new DeleteIntentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteIntentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteIntentRequest() {
       OnConstruction();
     }
@@ -11634,12 +12402,14 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteIntentRequest(DeleteIntentRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteIntentRequest Clone() {
       return new DeleteIntentRequest(this);
     }
@@ -11653,6 +12423,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent/intents/{Intent ID}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -11661,11 +12432,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteIntentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteIntentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11678,6 +12451,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -11688,11 +12462,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11709,6 +12485,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -11721,6 +12498,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -11733,6 +12511,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteIntentRequest other) {
       if (other == null) {
         return;
@@ -11744,6 +12523,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11765,6 +12545,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11791,19 +12572,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<BatchUpdateIntentsRequest> _parser = new pb::MessageParser<BatchUpdateIntentsRequest>(() => new BatchUpdateIntentsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchUpdateIntentsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchUpdateIntentsRequest() {
       OnConstruction();
     }
@@ -11811,6 +12596,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchUpdateIntentsRequest(BatchUpdateIntentsRequest other) : this() {
       parent_ = other.parent_;
       languageCode_ = other.languageCode_;
@@ -11829,6 +12615,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchUpdateIntentsRequest Clone() {
       return new BatchUpdateIntentsRequest(this);
     }
@@ -11841,6 +12628,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Format: `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -11856,6 +12644,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// type) or JSON object. Note: The URI must start with "gs://".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string IntentBatchUri {
       get { return intentBatchCase_ == IntentBatchOneofCase.IntentBatchUri ? (string) intentBatch_ : ""; }
       set {
@@ -11870,6 +12659,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The collection of intents to update or create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.IntentBatch IntentBatchInline {
       get { return intentBatchCase_ == IntentBatchOneofCase.IntentBatchInline ? (global::Google.Cloud.Dialogflow.V2.IntentBatch) intentBatch_ : null; }
       set {
@@ -11889,6 +12679,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// data](https://cloud.google.com/dialogflow/docs/agents-multilingual#intent-entity).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -11903,6 +12694,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The mask to control which fields get updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -11917,6 +12709,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// Optional. The resource view to apply to the returned intent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dialogflow.V2.IntentView IntentView {
       get { return intentView_; }
       set {
@@ -11933,22 +12726,26 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
     private IntentBatchOneofCase intentBatchCase_ = IntentBatchOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IntentBatchOneofCase IntentBatchCase {
       get { return intentBatchCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearIntentBatch() {
       intentBatchCase_ = IntentBatchOneofCase.None;
       intentBatch_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchUpdateIntentsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchUpdateIntentsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11967,6 +12764,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -11983,11 +12781,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12024,6 +12824,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -12056,6 +12857,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -12083,6 +12885,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchUpdateIntentsRequest other) {
       if (other == null) {
         return;
@@ -12118,6 +12921,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12167,6 +12971,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12224,19 +13029,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<BatchUpdateIntentsResponse> _parser = new pb::MessageParser<BatchUpdateIntentsResponse>(() => new BatchUpdateIntentsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchUpdateIntentsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchUpdateIntentsResponse() {
       OnConstruction();
     }
@@ -12244,12 +13053,14 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchUpdateIntentsResponse(BatchUpdateIntentsResponse other) : this() {
       intents_ = other.intents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchUpdateIntentsResponse Clone() {
       return new BatchUpdateIntentsResponse(this);
     }
@@ -12263,16 +13074,19 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// The collection of updated or created intents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent> Intents {
       get { return intents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchUpdateIntentsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchUpdateIntentsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12285,6 +13099,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= intents_.GetHashCode();
@@ -12295,11 +13110,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12313,6 +13130,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       intents_.WriteTo(ref output, _repeated_intents_codec);
       if (_unknownFields != null) {
@@ -12322,6 +13140,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += intents_.CalculateSize(_repeated_intents_codec);
@@ -12332,6 +13151,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchUpdateIntentsResponse other) {
       if (other == null) {
         return;
@@ -12341,6 +13161,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12362,6 +13183,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12391,19 +13213,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<BatchDeleteIntentsRequest> _parser = new pb::MessageParser<BatchDeleteIntentsRequest>(() => new BatchDeleteIntentsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchDeleteIntentsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchDeleteIntentsRequest() {
       OnConstruction();
     }
@@ -12411,6 +13237,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchDeleteIntentsRequest(BatchDeleteIntentsRequest other) : this() {
       parent_ = other.parent_;
       intents_ = other.intents_.Clone();
@@ -12418,6 +13245,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchDeleteIntentsRequest Clone() {
       return new BatchDeleteIntentsRequest(this);
     }
@@ -12430,6 +13258,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// `projects/{Project ID}/agent`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -12447,16 +13276,19 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// filled in.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent> Intents {
       get { return intents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchDeleteIntentsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchDeleteIntentsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12470,6 +13302,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -12481,11 +13314,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12503,6 +13338,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -12516,6 +13352,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -12529,6 +13366,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchDeleteIntentsRequest other) {
       if (other == null) {
         return;
@@ -12541,6 +13379,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12566,6 +13405,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12599,19 +13439,23 @@ namespace Google.Cloud.Dialogflow.V2 {
     private static readonly pb::MessageParser<IntentBatch> _parser = new pb::MessageParser<IntentBatch>(() => new IntentBatch());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IntentBatch> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IntentBatch() {
       OnConstruction();
     }
@@ -12619,12 +13463,14 @@ namespace Google.Cloud.Dialogflow.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IntentBatch(IntentBatch other) : this() {
       intents_ = other.intents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IntentBatch Clone() {
       return new IntentBatch(this);
     }
@@ -12638,16 +13484,19 @@ namespace Google.Cloud.Dialogflow.V2 {
     /// A collection of intents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dialogflow.V2.Intent> Intents {
       get { return intents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IntentBatch);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IntentBatch other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12660,6 +13509,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= intents_.GetHashCode();
@@ -12670,11 +13520,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12688,6 +13540,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       intents_.WriteTo(ref output, _repeated_intents_codec);
       if (_unknownFields != null) {
@@ -12697,6 +13550,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += intents_.CalculateSize(_repeated_intents_codec);
@@ -12707,6 +13561,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IntentBatch other) {
       if (other == null) {
         return;
@@ -12716,6 +13571,7 @@ namespace Google.Cloud.Dialogflow.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12737,6 +13593,7 @@ namespace Google.Cloud.Dialogflow.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

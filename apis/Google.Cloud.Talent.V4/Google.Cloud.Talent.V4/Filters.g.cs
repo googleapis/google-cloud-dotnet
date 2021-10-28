@@ -98,19 +98,23 @@ namespace Google.Cloud.Talent.V4 {
     private static readonly pb::MessageParser<JobQuery> _parser = new pb::MessageParser<JobQuery>(() => new JobQuery());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<JobQuery> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Talent.V4.FiltersReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobQuery() {
       OnConstruction();
     }
@@ -118,6 +122,7 @@ namespace Google.Cloud.Talent.V4 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobQuery(JobQuery other) : this() {
       query_ = other.query_;
       queryLanguageCode_ = other.queryLanguageCode_;
@@ -137,6 +142,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobQuery Clone() {
       return new JobQuery(this);
     }
@@ -151,6 +157,7 @@ namespace Google.Cloud.Talent.V4 {
     /// The maximum number of allowed characters is 255.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Query {
       get { return query_; }
       set {
@@ -173,6 +180,7 @@ namespace Google.Cloud.Talent.V4 {
     /// [Tags for Identifying Languages](https://tools.ietf.org/html/bcp47).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string QueryLanguageCode {
       get { return queryLanguageCode_; }
       set {
@@ -201,6 +209,7 @@ namespace Google.Cloud.Talent.V4 {
     /// At most 20 company filters are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Companies {
       get { return companies_; }
     }
@@ -225,6 +234,7 @@ namespace Google.Cloud.Talent.V4 {
     /// At most 5 location filters are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4.LocationFilter> LocationFilters {
       get { return locationFilters_; }
     }
@@ -244,6 +254,7 @@ namespace Google.Cloud.Talent.V4 {
     /// categories are searched against.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4.JobCategory> JobCategories {
       get { return jobCategories_; }
     }
@@ -261,6 +272,7 @@ namespace Google.Cloud.Talent.V4 {
     ///  Currently we don't support sorting by commute time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.CommuteFilter CommuteFilter {
       get { return commuteFilter_; }
       set {
@@ -286,6 +298,7 @@ namespace Google.Cloud.Talent.V4 {
     /// At most 20 company display name filters are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> CompanyDisplayNames {
       get { return companyDisplayNames_; }
     }
@@ -301,6 +314,7 @@ namespace Google.Cloud.Talent.V4 {
     /// are searched.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.CompensationFilter CompensationFilter {
       get { return compensationFilter_; }
       set {
@@ -336,6 +350,7 @@ namespace Google.Cloud.Talent.V4 {
     /// driving_years > 10`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomAttributeFilter {
       get { return customAttributeFilter_; }
       set {
@@ -354,6 +369,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Defaults to false: a spell check is performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableSpellCheck {
       get { return disableSpellCheck_; }
       set {
@@ -377,6 +393,7 @@ namespace Google.Cloud.Talent.V4 {
     /// any of the specified employment types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4.EmploymentType> EmploymentTypes {
       get { return employmentTypes_; }
     }
@@ -400,6 +417,7 @@ namespace Google.Cloud.Talent.V4 {
     /// At most 10 language code filters are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> LanguageCodes {
       get { return languageCodes_; }
     }
@@ -412,6 +430,7 @@ namespace Google.Cloud.Talent.V4 {
     /// against.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.TimestampRange PublishTimeRange {
       get { return publishTimeRange_; }
       set {
@@ -430,16 +449,19 @@ namespace Google.Cloud.Talent.V4 {
     /// At most 400 excluded job names are allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ExcludedJobs {
       get { return excludedJobs_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as JobQuery);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(JobQuery other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -465,6 +487,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Query.Length != 0) hash ^= Query.GetHashCode();
@@ -488,11 +511,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -540,6 +565,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Query.Length != 0) {
         output.WriteRawTag(10);
@@ -583,6 +609,7 @@ namespace Google.Cloud.Talent.V4 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Query.Length != 0) {
@@ -620,6 +647,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(JobQuery other) {
       if (other == null) {
         return;
@@ -665,6 +693,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -749,6 +778,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -841,19 +871,23 @@ namespace Google.Cloud.Talent.V4 {
     private static readonly pb::MessageParser<LocationFilter> _parser = new pb::MessageParser<LocationFilter>(() => new LocationFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LocationFilter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Talent.V4.FiltersReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LocationFilter() {
       OnConstruction();
     }
@@ -861,6 +895,7 @@ namespace Google.Cloud.Talent.V4 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LocationFilter(LocationFilter other) : this() {
       address_ = other.address_;
       regionCode_ = other.regionCode_;
@@ -871,6 +906,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LocationFilter Clone() {
       return new LocationFilter(this);
     }
@@ -882,6 +918,7 @@ namespace Google.Cloud.Talent.V4 {
     /// The address name, such as "Mountain View" or "Bay Area".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Address {
       get { return address_; }
       set {
@@ -910,6 +947,7 @@ namespace Google.Cloud.Talent.V4 {
     /// for details. Example: "CH" for Switzerland.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RegionCode {
       get { return regionCode_; }
       set {
@@ -925,6 +963,7 @@ namespace Google.Cloud.Talent.V4 {
     /// field is ignored if `address` is provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.LatLng LatLng {
       get { return latLng_; }
       set {
@@ -941,6 +980,7 @@ namespace Google.Cloud.Talent.V4 {
     /// being searched for is a state or larger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DistanceInMiles {
       get { return distanceInMiles_; }
       set {
@@ -972,6 +1012,7 @@ namespace Google.Cloud.Talent.V4 {
     /// This field is only used for job search requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.LocationFilter.Types.TelecommutePreference TelecommutePreference {
       get { return telecommutePreference_; }
       set {
@@ -980,11 +1021,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LocationFilter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LocationFilter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1001,6 +1044,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Address.Length != 0) hash ^= Address.GetHashCode();
@@ -1015,11 +1059,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1052,6 +1098,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Address.Length != 0) {
         output.WriteRawTag(10);
@@ -1080,6 +1127,7 @@ namespace Google.Cloud.Talent.V4 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Address.Length != 0) {
@@ -1104,6 +1152,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LocationFilter other) {
       if (other == null) {
         return;
@@ -1130,6 +1179,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1170,6 +1220,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1208,6 +1259,7 @@ namespace Google.Cloud.Talent.V4 {
     #region Nested types
     /// <summary>Container for nested types declared in the LocationFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specify whether to include telecommute jobs.
@@ -1243,19 +1295,23 @@ namespace Google.Cloud.Talent.V4 {
     private static readonly pb::MessageParser<CompensationFilter> _parser = new pb::MessageParser<CompensationFilter>(() => new CompensationFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CompensationFilter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Talent.V4.FiltersReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CompensationFilter() {
       OnConstruction();
     }
@@ -1263,6 +1319,7 @@ namespace Google.Cloud.Talent.V4 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CompensationFilter(CompensationFilter other) : this() {
       type_ = other.type_;
       units_ = other.units_.Clone();
@@ -1272,6 +1329,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CompensationFilter Clone() {
       return new CompensationFilter(this);
     }
@@ -1283,6 +1341,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Required. Type of filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.CompensationFilter.Types.FilterType Type {
       get { return type_; }
       set {
@@ -1300,6 +1359,7 @@ namespace Google.Cloud.Talent.V4 {
     /// [CompensationInfo.CompensationUnit][google.cloud.talent.v4.CompensationInfo.CompensationUnit].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Talent.V4.CompensationInfo.Types.CompensationUnit> Units {
       get { return units_; }
     }
@@ -1311,6 +1371,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Compensation range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.CompensationInfo.Types.CompensationRange Range {
       get { return range_; }
       set {
@@ -1326,6 +1387,7 @@ namespace Google.Cloud.Talent.V4 {
     /// included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludeJobsWithUnspecifiedCompensationRange {
       get { return includeJobsWithUnspecifiedCompensationRange_; }
       set {
@@ -1334,11 +1396,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CompensationFilter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CompensationFilter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1354,6 +1418,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::Google.Cloud.Talent.V4.CompensationFilter.Types.FilterType.Unspecified) hash ^= Type.GetHashCode();
@@ -1367,11 +1432,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1397,6 +1464,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type != global::Google.Cloud.Talent.V4.CompensationFilter.Types.FilterType.Unspecified) {
         output.WriteRawTag(8);
@@ -1418,6 +1486,7 @@ namespace Google.Cloud.Talent.V4 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Type != global::Google.Cloud.Talent.V4.CompensationFilter.Types.FilterType.Unspecified) {
@@ -1437,6 +1506,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CompensationFilter other) {
       if (other == null) {
         return;
@@ -1458,6 +1528,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1495,6 +1566,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1530,6 +1602,7 @@ namespace Google.Cloud.Talent.V4 {
     #region Nested types
     /// <summary>Container for nested types declared in the CompensationFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specify the type of filtering.
@@ -1591,19 +1664,23 @@ namespace Google.Cloud.Talent.V4 {
     private static readonly pb::MessageParser<CommuteFilter> _parser = new pb::MessageParser<CommuteFilter>(() => new CommuteFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CommuteFilter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Talent.V4.FiltersReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommuteFilter() {
       OnConstruction();
     }
@@ -1611,6 +1688,7 @@ namespace Google.Cloud.Talent.V4 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommuteFilter(CommuteFilter other) : this() {
       commuteMethod_ = other.commuteMethod_;
       startCoordinates_ = other.startCoordinates_ != null ? other.startCoordinates_.Clone() : null;
@@ -1629,6 +1707,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommuteFilter Clone() {
       return new CommuteFilter(this);
     }
@@ -1640,6 +1719,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Required. The method of transportation to calculate the commute time for.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.CommuteMethod CommuteMethod {
       get { return commuteMethod_; }
       set {
@@ -1655,6 +1735,7 @@ namespace Google.Cloud.Talent.V4 {
     /// commute time from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.LatLng StartCoordinates {
       get { return startCoordinates_; }
       set {
@@ -1670,6 +1751,7 @@ namespace Google.Cloud.Talent.V4 {
     /// (one hour). Format is `123s`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TravelDuration {
       get { return travelDuration_; }
       set {
@@ -1688,6 +1770,7 @@ namespace Google.Cloud.Talent.V4 {
     /// street level addresses will be returned by commute search.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AllowImpreciseAddresses {
       get { return allowImpreciseAddresses_; }
       set {
@@ -1701,6 +1784,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Specifies the traffic density to use when calculating commute time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Talent.V4.CommuteFilter.Types.RoadTraffic RoadTraffic {
       get { return trafficOptionCase_ == TrafficOptionOneofCase.RoadTraffic ? (global::Google.Cloud.Talent.V4.CommuteFilter.Types.RoadTraffic) trafficOption_ : global::Google.Cloud.Talent.V4.CommuteFilter.Types.RoadTraffic.Unspecified; }
       set {
@@ -1718,6 +1802,7 @@ namespace Google.Cloud.Talent.V4 {
     /// Currently traffic model is restricted to hour level resolution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.TimeOfDay DepartureTime {
       get { return trafficOptionCase_ == TrafficOptionOneofCase.DepartureTime ? (global::Google.Type.TimeOfDay) trafficOption_ : null; }
       set {
@@ -1735,22 +1820,26 @@ namespace Google.Cloud.Talent.V4 {
     }
     private TrafficOptionOneofCase trafficOptionCase_ = TrafficOptionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TrafficOptionOneofCase TrafficOptionCase {
       get { return trafficOptionCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTrafficOption() {
       trafficOptionCase_ = TrafficOptionOneofCase.None;
       trafficOption_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CommuteFilter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CommuteFilter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1769,6 +1858,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CommuteMethod != global::Google.Cloud.Talent.V4.CommuteMethod.Unspecified) hash ^= CommuteMethod.GetHashCode();
@@ -1785,11 +1875,13 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1826,6 +1918,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CommuteMethod != global::Google.Cloud.Talent.V4.CommuteMethod.Unspecified) {
         output.WriteRawTag(8);
@@ -1858,6 +1951,7 @@ namespace Google.Cloud.Talent.V4 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CommuteMethod != global::Google.Cloud.Talent.V4.CommuteMethod.Unspecified) {
@@ -1885,6 +1979,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CommuteFilter other) {
       if (other == null) {
         return;
@@ -1923,6 +2018,7 @@ namespace Google.Cloud.Talent.V4 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1976,6 +2072,7 @@ namespace Google.Cloud.Talent.V4 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2027,6 +2124,7 @@ namespace Google.Cloud.Talent.V4 {
     #region Nested types
     /// <summary>Container for nested types declared in the CommuteFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The traffic density to use when calculating commute time.

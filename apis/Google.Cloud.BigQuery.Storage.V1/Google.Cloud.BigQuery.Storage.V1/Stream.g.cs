@@ -119,19 +119,23 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     private static readonly pb::MessageParser<ReadSession> _parser = new pb::MessageParser<ReadSession>(() => new ReadSession());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReadSession> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.Storage.V1.StreamReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadSession() {
       OnConstruction();
     }
@@ -139,6 +143,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadSession(ReadSession other) : this() {
       name_ = other.name_;
       expireTime_ = other.expireTime_ != null ? other.expireTime_.Clone() : null;
@@ -161,6 +166,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadSession Clone() {
       return new ReadSession(this);
     }
@@ -173,6 +179,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// `projects/{project_id}/locations/{location}/sessions/{session_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -189,6 +196,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// automatically assigned and currently cannot be specified or updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
       get { return expireTime_; }
       set {
@@ -203,6 +211,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// Immutable. Data format of the output data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Storage.V1.DataFormat DataFormat {
       get { return dataFormat_; }
       set {
@@ -216,6 +225,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// Output only. Avro schema.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Storage.V1.AvroSchema AvroSchema {
       get { return schemaCase_ == SchemaOneofCase.AvroSchema ? (global::Google.Cloud.BigQuery.Storage.V1.AvroSchema) schema_ : null; }
       set {
@@ -230,6 +240,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// Output only. Arrow schema.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema ArrowSchema {
       get { return schemaCase_ == SchemaOneofCase.ArrowSchema ? (global::Google.Cloud.BigQuery.Storage.V1.ArrowSchema) schema_ : null; }
       set {
@@ -246,6 +257,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// `projects/{project_id}/datasets/{dataset_id}/tables/{table_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Table {
       get { return table_; }
       set {
@@ -260,6 +272,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// Optional. Any modifiers which are applied when reading from the specified table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers TableModifiers {
       get { return tableModifiers_; }
       set {
@@ -274,6 +287,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// Optional. Read options for this session (e.g. column selection, filters).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions ReadOptions {
       get { return readOptions_; }
       set {
@@ -295,6 +309,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// instead, which is not yet available.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.BigQuery.Storage.V1.ReadStream> Streams {
       get { return streams_; }
     }
@@ -308,6 +323,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// metadata from the table which might be incomplete or stale.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long EstimatedTotalBytesScanned {
       get { return estimatedTotalBytesScanned_; }
       set {
@@ -324,22 +340,26 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
     private SchemaOneofCase schemaCase_ = SchemaOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SchemaOneofCase SchemaCase {
       get { return schemaCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSchema() {
       schemaCase_ = SchemaOneofCase.None;
       schema_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ReadSession);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ReadSession other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -362,6 +382,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -382,11 +403,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -436,6 +459,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -481,6 +505,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -518,6 +543,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReadSession other) {
       if (other == null) {
         return;
@@ -572,6 +598,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -648,6 +675,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -722,6 +750,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ReadSession message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Additional attributes when reading a table.
@@ -734,19 +763,23 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         private static readonly pb::MessageParser<TableModifiers> _parser = new pb::MessageParser<TableModifiers>(() => new TableModifiers());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TableModifiers> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TableModifiers() {
           OnConstruction();
         }
@@ -754,12 +787,14 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TableModifiers(TableModifiers other) : this() {
           snapshotTime_ = other.snapshotTime_ != null ? other.snapshotTime_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TableModifiers Clone() {
           return new TableModifiers(this);
         }
@@ -771,6 +806,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// The snapshot time of the table. If not set, interpreted as now.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp SnapshotTime {
           get { return snapshotTime_; }
           set {
@@ -779,11 +815,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as TableModifiers);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(TableModifiers other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -796,6 +834,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (snapshotTime_ != null) hash ^= SnapshotTime.GetHashCode();
@@ -806,11 +845,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -827,6 +868,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (snapshotTime_ != null) {
             output.WriteRawTag(10);
@@ -839,6 +881,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (snapshotTime_ != null) {
@@ -851,6 +894,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(TableModifiers other) {
           if (other == null) {
             return;
@@ -865,6 +909,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -889,6 +934,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -921,19 +967,23 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         private static readonly pb::MessageParser<TableReadOptions> _parser = new pb::MessageParser<TableReadOptions>(() => new TableReadOptions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TableReadOptions> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TableReadOptions() {
           OnConstruction();
         }
@@ -941,6 +991,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TableReadOptions(TableReadOptions other) : this() {
           selectedFields_ = other.selectedFields_.Clone();
           rowRestriction_ = other.rowRestriction_;
@@ -954,6 +1005,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TableReadOptions Clone() {
           return new TableReadOptions(this);
         }
@@ -970,6 +1022,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// unrelated to the order of fields in selected_fields.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> SelectedFields {
           get { return selectedFields_; }
         }
@@ -990,6 +1043,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// Restricted to a maximum length for 1 MB.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string RowRestriction {
           get { return rowRestriction_; }
           set {
@@ -1003,6 +1057,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// Optional. Options specific to the Apache Arrow output format.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions ArrowSerializationOptions {
           get { return outputFormatSerializationOptionsCase_ == OutputFormatSerializationOptionsOneofCase.ArrowSerializationOptions ? (global::Google.Cloud.BigQuery.Storage.V1.ArrowSerializationOptions) outputFormatSerializationOptions_ : null; }
           set {
@@ -1019,22 +1074,26 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
         private OutputFormatSerializationOptionsOneofCase outputFormatSerializationOptionsCase_ = OutputFormatSerializationOptionsOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OutputFormatSerializationOptionsOneofCase OutputFormatSerializationOptionsCase {
           get { return outputFormatSerializationOptionsCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearOutputFormatSerializationOptions() {
           outputFormatSerializationOptionsCase_ = OutputFormatSerializationOptionsOneofCase.None;
           outputFormatSerializationOptions_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as TableReadOptions);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(TableReadOptions other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1050,6 +1109,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= selectedFields_.GetHashCode();
@@ -1063,11 +1123,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1089,6 +1151,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           selectedFields_.WriteTo(ref output, _repeated_selectedFields_codec);
           if (RowRestriction.Length != 0) {
@@ -1106,6 +1169,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += selectedFields_.CalculateSize(_repeated_selectedFields_codec);
@@ -1122,6 +1186,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(TableReadOptions other) {
           if (other == null) {
             return;
@@ -1143,6 +1208,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1177,6 +1243,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1226,19 +1293,23 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     private static readonly pb::MessageParser<ReadStream> _parser = new pb::MessageParser<ReadStream>(() => new ReadStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReadStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.Storage.V1.StreamReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadStream() {
       OnConstruction();
     }
@@ -1246,12 +1317,14 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadStream(ReadStream other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadStream Clone() {
       return new ReadStream(this);
     }
@@ -1264,6 +1337,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// `projects/{project_id}/locations/{location}/sessions/{session_id}/streams/{stream_id}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1272,11 +1346,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ReadStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ReadStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1289,6 +1365,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1299,11 +1376,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1320,6 +1399,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1332,6 +1412,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1344,6 +1425,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReadStream other) {
       if (other == null) {
         return;
@@ -1355,6 +1437,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1376,6 +1459,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1405,19 +1489,23 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     private static readonly pb::MessageParser<WriteStream> _parser = new pb::MessageParser<WriteStream>(() => new WriteStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WriteStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.BigQuery.Storage.V1.StreamReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WriteStream() {
       OnConstruction();
     }
@@ -1425,6 +1513,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WriteStream(WriteStream other) : this() {
       name_ = other.name_;
       type_ = other.type_;
@@ -1435,6 +1524,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WriteStream Clone() {
       return new WriteStream(this);
     }
@@ -1447,6 +1537,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// `projects/{project}/datasets/{dataset}/tables/{table}/streams/{stream}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1461,6 +1552,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// Immutable. Type of the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type Type {
       get { return type_; }
       set {
@@ -1476,6 +1568,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// creation_time of the table.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1493,6 +1586,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// means it is not committed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CommitTime {
       get { return commitTime_; }
       set {
@@ -1510,6 +1604,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     /// The table schema could go out of date during the life time of the stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.BigQuery.Storage.V1.TableSchema TableSchema {
       get { return tableSchema_; }
       set {
@@ -1518,11 +1613,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WriteStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WriteStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1539,6 +1636,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1553,11 +1651,13 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1590,6 +1690,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1618,6 +1719,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1642,6 +1744,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WriteStream other) {
       if (other == null) {
         return;
@@ -1674,6 +1777,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1720,6 +1824,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1764,6 +1869,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the WriteStream message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Type enum of the stream.

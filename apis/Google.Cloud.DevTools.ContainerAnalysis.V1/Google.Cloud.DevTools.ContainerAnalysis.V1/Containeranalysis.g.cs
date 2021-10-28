@@ -92,19 +92,23 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     private static readonly pb::MessageParser<GetVulnerabilityOccurrencesSummaryRequest> _parser = new pb::MessageParser<GetVulnerabilityOccurrencesSummaryRequest>(() => new GetVulnerabilityOccurrencesSummaryRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetVulnerabilityOccurrencesSummaryRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DevTools.ContainerAnalysis.V1.ContaineranalysisReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetVulnerabilityOccurrencesSummaryRequest() {
       OnConstruction();
     }
@@ -112,6 +116,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetVulnerabilityOccurrencesSummaryRequest(GetVulnerabilityOccurrencesSummaryRequest other) : this() {
       parent_ = other.parent_;
       filter_ = other.filter_;
@@ -119,6 +124,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetVulnerabilityOccurrencesSummaryRequest Clone() {
       return new GetVulnerabilityOccurrencesSummaryRequest(this);
     }
@@ -131,6 +137,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     /// `projects/[PROJECT_ID]`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -145,6 +152,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     /// The filter expression.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -153,11 +161,13 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetVulnerabilityOccurrencesSummaryRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetVulnerabilityOccurrencesSummaryRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -171,6 +181,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -182,11 +193,13 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -207,6 +220,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -223,6 +237,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -238,6 +253,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetVulnerabilityOccurrencesSummaryRequest other) {
       if (other == null) {
         return;
@@ -252,6 +268,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -277,6 +294,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -311,19 +329,23 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     private static readonly pb::MessageParser<VulnerabilityOccurrencesSummary> _parser = new pb::MessageParser<VulnerabilityOccurrencesSummary>(() => new VulnerabilityOccurrencesSummary());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VulnerabilityOccurrencesSummary> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DevTools.ContainerAnalysis.V1.ContaineranalysisReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VulnerabilityOccurrencesSummary() {
       OnConstruction();
     }
@@ -331,12 +353,14 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VulnerabilityOccurrencesSummary(VulnerabilityOccurrencesSummary other) : this() {
       counts_ = other.counts_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VulnerabilityOccurrencesSummary Clone() {
       return new VulnerabilityOccurrencesSummary(this);
     }
@@ -350,16 +374,19 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     /// A listing by resource of the number of fixable and total vulnerabilities.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Types.FixableTotalByDigest> Counts {
       get { return counts_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VulnerabilityOccurrencesSummary);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VulnerabilityOccurrencesSummary other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -372,6 +399,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= counts_.GetHashCode();
@@ -382,11 +410,13 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -400,6 +430,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       counts_.WriteTo(ref output, _repeated_counts_codec);
       if (_unknownFields != null) {
@@ -409,6 +440,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += counts_.CalculateSize(_repeated_counts_codec);
@@ -419,6 +451,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VulnerabilityOccurrencesSummary other) {
       if (other == null) {
         return;
@@ -428,6 +461,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -449,6 +483,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -468,6 +503,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the VulnerabilityOccurrencesSummary message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Per resource and severity counts of fixable and total vulnerabilities.
@@ -480,19 +516,23 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         private static readonly pb::MessageParser<FixableTotalByDigest> _parser = new pb::MessageParser<FixableTotalByDigest>(() => new FixableTotalByDigest());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<FixableTotalByDigest> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.DevTools.ContainerAnalysis.V1.VulnerabilityOccurrencesSummary.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FixableTotalByDigest() {
           OnConstruction();
         }
@@ -500,6 +540,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FixableTotalByDigest(FixableTotalByDigest other) : this() {
           resourceUri_ = other.resourceUri_;
           severity_ = other.severity_;
@@ -509,6 +550,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FixableTotalByDigest Clone() {
           return new FixableTotalByDigest(this);
         }
@@ -520,6 +562,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         /// The affected resource.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ResourceUri {
           get { return resourceUri_; }
           set {
@@ -535,6 +578,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         /// all severities.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Grafeas.V1.Severity Severity {
           get { return severity_; }
           set {
@@ -549,6 +593,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         /// The number of fixable vulnerabilities associated with this resource.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long FixableCount {
           get { return fixableCount_; }
           set {
@@ -563,6 +608,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         /// The total number of vulnerabilities associated with this resource.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long TotalCount {
           get { return totalCount_; }
           set {
@@ -571,11 +617,13 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as FixableTotalByDigest);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(FixableTotalByDigest other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -591,6 +639,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (ResourceUri.Length != 0) hash ^= ResourceUri.GetHashCode();
@@ -604,11 +653,13 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -637,6 +688,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (ResourceUri.Length != 0) {
             output.WriteRawTag(10);
@@ -661,6 +713,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (ResourceUri.Length != 0) {
@@ -682,6 +735,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(FixableTotalByDigest other) {
           if (other == null) {
             return;
@@ -702,6 +756,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -735,6 +790,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

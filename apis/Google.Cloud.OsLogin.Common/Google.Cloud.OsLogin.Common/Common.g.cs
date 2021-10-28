@@ -91,19 +91,23 @@ namespace Google.Cloud.OsLogin.Common {
     private static readonly pb::MessageParser<PosixAccount> _parser = new pb::MessageParser<PosixAccount>(() => new PosixAccount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PosixAccount> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PosixAccount() {
       OnConstruction();
     }
@@ -111,6 +115,7 @@ namespace Google.Cloud.OsLogin.Common {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PosixAccount(PosixAccount other) : this() {
       primary_ = other.primary_;
       username_ = other.username_;
@@ -127,6 +132,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PosixAccount Clone() {
       return new PosixAccount(this);
     }
@@ -138,6 +144,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// Only one POSIX account can be marked as primary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Primary {
       get { return primary_; }
       set {
@@ -152,6 +159,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// The username of the POSIX account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Username {
       get { return username_; }
       set {
@@ -166,6 +174,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// The user ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Uid {
       get { return uid_; }
       set {
@@ -180,6 +189,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// The default group ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Gid {
       get { return gid_; }
       set {
@@ -194,6 +204,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// The path to the home directory for this account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string HomeDirectory {
       get { return homeDirectory_; }
       set {
@@ -208,6 +219,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// The path to the logic shell for this account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Shell {
       get { return shell_; }
       set {
@@ -222,6 +234,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// The GECOS (user information) entry for this account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Gecos {
       get { return gecos_; }
       set {
@@ -237,6 +250,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// By default, the empty value is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SystemId {
       get { return systemId_; }
       set {
@@ -251,6 +265,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// Output only. A POSIX account identifier.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AccountId {
       get { return accountId_; }
       set {
@@ -265,6 +280,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// The operating system type where this account applies.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.OsLogin.Common.OperatingSystemType OperatingSystemType {
       get { return operatingSystemType_; }
       set {
@@ -279,6 +295,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// Output only. The canonical resource name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -287,11 +304,13 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PosixAccount);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PosixAccount other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -314,6 +333,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Primary != false) hash ^= Primary.GetHashCode();
@@ -334,11 +354,13 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -395,6 +417,7 @@ namespace Google.Cloud.OsLogin.Common {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Primary != false) {
         output.WriteRawTag(8);
@@ -447,6 +470,7 @@ namespace Google.Cloud.OsLogin.Common {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Primary != false) {
@@ -489,6 +513,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PosixAccount other) {
       if (other == null) {
         return;
@@ -530,6 +555,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -591,6 +617,7 @@ namespace Google.Cloud.OsLogin.Common {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -660,19 +687,23 @@ namespace Google.Cloud.OsLogin.Common {
     private static readonly pb::MessageParser<SshPublicKey> _parser = new pb::MessageParser<SshPublicKey>(() => new SshPublicKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SshPublicKey> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsLogin.Common.CommonReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SshPublicKey() {
       OnConstruction();
     }
@@ -680,6 +711,7 @@ namespace Google.Cloud.OsLogin.Common {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SshPublicKey(SshPublicKey other) : this() {
       key_ = other.key_;
       expirationTimeUsec_ = other.expirationTimeUsec_;
@@ -689,6 +721,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SshPublicKey Clone() {
       return new SshPublicKey(this);
     }
@@ -702,6 +735,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// section 6.6.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Key {
       get { return key_; }
       set {
@@ -716,6 +750,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// An expiration time in microseconds since epoch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ExpirationTimeUsec {
       get { return expirationTimeUsec_; }
       set {
@@ -730,6 +765,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// Output only. The SHA-256 fingerprint of the SSH public key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Fingerprint {
       get { return fingerprint_; }
       set {
@@ -744,6 +780,7 @@ namespace Google.Cloud.OsLogin.Common {
     /// Output only. The canonical resource name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -752,11 +789,13 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SshPublicKey);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SshPublicKey other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -772,6 +811,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -785,11 +825,13 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -818,6 +860,7 @@ namespace Google.Cloud.OsLogin.Common {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Key.Length != 0) {
         output.WriteRawTag(10);
@@ -842,6 +885,7 @@ namespace Google.Cloud.OsLogin.Common {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Key.Length != 0) {
@@ -863,6 +907,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SshPublicKey other) {
       if (other == null) {
         return;
@@ -883,6 +928,7 @@ namespace Google.Cloud.OsLogin.Common {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -916,6 +962,7 @@ namespace Google.Cloud.OsLogin.Common {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

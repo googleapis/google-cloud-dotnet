@@ -78,19 +78,23 @@ namespace Google.Apps.Script.Type.Gmail {
     private static readonly pb::MessageParser<GmailAddOnManifest> _parser = new pb::MessageParser<GmailAddOnManifest>(() => new GmailAddOnManifest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GmailAddOnManifest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Gmail.GmailAddonManifestReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GmailAddOnManifest() {
       OnConstruction();
     }
@@ -98,6 +102,7 @@ namespace Google.Apps.Script.Type.Gmail {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GmailAddOnManifest(GmailAddOnManifest other) : this() {
       homepageTrigger_ = other.homepageTrigger_ != null ? other.homepageTrigger_.Clone() : null;
       contextualTriggers_ = other.contextualTriggers_.Clone();
@@ -108,6 +113,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GmailAddOnManifest Clone() {
       return new GmailAddOnManifest(this);
     }
@@ -125,6 +131,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// `addOns.common.homepageTrigger`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.HomepageExtensionPoint HomepageTrigger {
       get { return homepageTrigger_; }
       set {
@@ -141,6 +148,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// Defines the set of conditions that trigger the add-on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Apps.Script.Type.Gmail.ContextualTrigger> ContextualTriggers {
       get { return contextualTriggers_; }
     }
@@ -156,6 +164,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// triggers universal actions from the add-on toolbar menu.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Apps.Script.Type.Gmail.UniversalAction> UniversalActions {
       get { return universalActions_; }
     }
@@ -172,6 +181,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// draft.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Gmail.ComposeTrigger ComposeTrigger {
       get { return composeTrigger_; }
       set {
@@ -190,6 +200,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// invocation of the add-on, in order to ensure a smooth user experience.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AuthorizationCheckFunction {
       get { return authorizationCheckFunction_; }
       set {
@@ -198,11 +209,13 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GmailAddOnManifest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GmailAddOnManifest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -219,6 +232,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (homepageTrigger_ != null) hash ^= HomepageTrigger.GetHashCode();
@@ -233,11 +247,13 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -264,6 +280,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       contextualTriggers_.WriteTo(ref output, _repeated_contextualTriggers_codec);
       universalActions_.WriteTo(ref output, _repeated_universalActions_codec);
@@ -286,6 +303,7 @@ namespace Google.Apps.Script.Type.Gmail {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (homepageTrigger_ != null) {
@@ -306,6 +324,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GmailAddOnManifest other) {
       if (other == null) {
         return;
@@ -331,6 +350,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -374,6 +394,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -426,19 +447,23 @@ namespace Google.Apps.Script.Type.Gmail {
     private static readonly pb::MessageParser<UniversalAction> _parser = new pb::MessageParser<UniversalAction>(() => new UniversalAction());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UniversalAction> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Gmail.GmailAddonManifestReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UniversalAction() {
       OnConstruction();
     }
@@ -446,6 +471,7 @@ namespace Google.Apps.Script.Type.Gmail {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UniversalAction(UniversalAction other) : this() {
       text_ = other.text_;
       switch (other.ActionTypeCase) {
@@ -461,6 +487,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UniversalAction Clone() {
       return new UniversalAction(this);
     }
@@ -473,6 +500,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// contact."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
       get { return text_; }
       set {
@@ -486,6 +514,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// A link that is opened by Gmail when the user triggers the action.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OpenLink {
       get { return actionTypeCase_ == ActionTypeOneofCase.OpenLink ? (string) actionType_ : ""; }
       set {
@@ -502,6 +531,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// guide](/gmail/add-ons/how-tos/universal-actions) for details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
       get { return actionTypeCase_ == ActionTypeOneofCase.RunFunction ? (string) actionType_ : ""; }
       set {
@@ -519,22 +549,26 @@ namespace Google.Apps.Script.Type.Gmail {
     }
     private ActionTypeOneofCase actionTypeCase_ = ActionTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActionTypeOneofCase ActionTypeCase {
       get { return actionTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearActionType() {
       actionTypeCase_ = ActionTypeOneofCase.None;
       actionType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UniversalAction);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UniversalAction other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -550,6 +584,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -563,11 +598,13 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -592,6 +629,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Text.Length != 0) {
         output.WriteRawTag(10);
@@ -612,6 +650,7 @@ namespace Google.Apps.Script.Type.Gmail {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Text.Length != 0) {
@@ -630,6 +669,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UniversalAction other) {
       if (other == null) {
         return;
@@ -650,6 +690,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -679,6 +720,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -716,19 +758,23 @@ namespace Google.Apps.Script.Type.Gmail {
     private static readonly pb::MessageParser<ComposeTrigger> _parser = new pb::MessageParser<ComposeTrigger>(() => new ComposeTrigger());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ComposeTrigger> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Gmail.GmailAddonManifestReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComposeTrigger() {
       OnConstruction();
     }
@@ -736,6 +782,7 @@ namespace Google.Apps.Script.Type.Gmail {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComposeTrigger(ComposeTrigger other) : this() {
       actions_ = other.actions_.Clone();
       draftAccess_ = other.draftAccess_;
@@ -743,6 +790,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ComposeTrigger Clone() {
       return new ComposeTrigger(this);
     }
@@ -757,6 +805,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// that user can trigger on a compose time addon.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Apps.Script.Type.MenuItemExtensionPoint> Actions {
       get { return actions_; }
     }
@@ -768,6 +817,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// Define the level of data access when a compose time addon is triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Gmail.ComposeTrigger.Types.DraftAccess DraftAccess {
       get { return draftAccess_; }
       set {
@@ -776,11 +826,13 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ComposeTrigger);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ComposeTrigger other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -794,6 +846,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= actions_.GetHashCode();
@@ -805,11 +858,13 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -827,6 +882,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DraftAccess != global::Google.Apps.Script.Type.Gmail.ComposeTrigger.Types.DraftAccess.Unspecified) {
         output.WriteRawTag(32);
@@ -840,6 +896,7 @@ namespace Google.Apps.Script.Type.Gmail {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += actions_.CalculateSize(_repeated_actions_codec);
@@ -853,6 +910,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ComposeTrigger other) {
       if (other == null) {
         return;
@@ -865,6 +923,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -890,6 +949,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -913,6 +973,7 @@ namespace Google.Apps.Script.Type.Gmail {
     #region Nested types
     /// <summary>Container for nested types declared in the ComposeTrigger message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// An enum defining the level of data access this compose trigger requires.
@@ -953,19 +1014,23 @@ namespace Google.Apps.Script.Type.Gmail {
     private static readonly pb::MessageParser<ContextualTrigger> _parser = new pb::MessageParser<ContextualTrigger>(() => new ContextualTrigger());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ContextualTrigger> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Gmail.GmailAddonManifestReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContextualTrigger() {
       OnConstruction();
     }
@@ -973,6 +1038,7 @@ namespace Google.Apps.Script.Type.Gmail {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContextualTrigger(ContextualTrigger other) : this() {
       onTriggerFunction_ = other.onTriggerFunction_;
       switch (other.TriggerCase) {
@@ -985,6 +1051,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ContextualTrigger Clone() {
       return new ContextualTrigger(this);
     }
@@ -995,6 +1062,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// UnconditionalTriggers are executed when any mail message is opened.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Gmail.UnconditionalTrigger Unconditional {
       get { return triggerCase_ == TriggerOneofCase.Unconditional ? (global::Google.Apps.Script.Type.Gmail.UnconditionalTrigger) trigger_ : null; }
       set {
@@ -1011,6 +1079,7 @@ namespace Google.Apps.Script.Type.Gmail {
     /// trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OnTriggerFunction {
       get { return onTriggerFunction_; }
       set {
@@ -1026,22 +1095,26 @@ namespace Google.Apps.Script.Type.Gmail {
     }
     private TriggerOneofCase triggerCase_ = TriggerOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TriggerOneofCase TriggerCase {
       get { return triggerCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTrigger() {
       triggerCase_ = TriggerOneofCase.None;
       trigger_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ContextualTrigger);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ContextualTrigger other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1056,6 +1129,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (triggerCase_ == TriggerOneofCase.Unconditional) hash ^= Unconditional.GetHashCode();
@@ -1068,11 +1142,13 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1093,6 +1169,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (triggerCase_ == TriggerOneofCase.Unconditional) {
         output.WriteRawTag(10);
@@ -1109,6 +1186,7 @@ namespace Google.Apps.Script.Type.Gmail {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (triggerCase_ == TriggerOneofCase.Unconditional) {
@@ -1124,6 +1202,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ContextualTrigger other) {
       if (other == null) {
         return;
@@ -1144,6 +1223,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1174,6 +1254,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1212,19 +1293,23 @@ namespace Google.Apps.Script.Type.Gmail {
     private static readonly pb::MessageParser<UnconditionalTrigger> _parser = new pb::MessageParser<UnconditionalTrigger>(() => new UnconditionalTrigger());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UnconditionalTrigger> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Gmail.GmailAddonManifestReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnconditionalTrigger() {
       OnConstruction();
     }
@@ -1232,21 +1317,25 @@ namespace Google.Apps.Script.Type.Gmail {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnconditionalTrigger(UnconditionalTrigger other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UnconditionalTrigger Clone() {
       return new UnconditionalTrigger(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UnconditionalTrigger);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UnconditionalTrigger other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1258,6 +1347,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -1267,11 +1357,13 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1284,6 +1376,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -1292,6 +1385,7 @@ namespace Google.Apps.Script.Type.Gmail {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -1301,6 +1395,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UnconditionalTrigger other) {
       if (other == null) {
         return;
@@ -1309,6 +1404,7 @@ namespace Google.Apps.Script.Type.Gmail {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1326,6 +1422,7 @@ namespace Google.Apps.Script.Type.Gmail {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
