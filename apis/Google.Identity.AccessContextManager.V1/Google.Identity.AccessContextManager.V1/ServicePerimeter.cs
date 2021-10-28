@@ -134,19 +134,23 @@ namespace Google.Identity.AccessContextManager.V1 {
     private static readonly pb::MessageParser<ServicePerimeter> _parser = new pb::MessageParser<ServicePerimeter>(() => new ServicePerimeter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ServicePerimeter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServicePerimeter() {
       OnConstruction();
     }
@@ -154,6 +158,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServicePerimeter(ServicePerimeter other) : this() {
       name_ = other.name_;
       title_ = other.title_;
@@ -168,6 +173,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServicePerimeter Clone() {
       return new ServicePerimeter(this);
     }
@@ -182,6 +188,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// `accessPolicies/{access_policy}/servicePerimeters/{service_perimeter}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -196,6 +203,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// Human readable title. Must be unique within the Policy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Title {
       get { return title_; }
       set {
@@ -211,6 +219,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// behavior.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -225,6 +234,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// Output only. Time the `ServicePerimeter` was created in UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -239,6 +249,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// Output only. Time the `ServicePerimeter` was updated in UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -258,6 +269,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Identity.AccessContextManager.V1.ServicePerimeter.Types.PerimeterType PerimeterType {
       get { return perimeterType_; }
       set {
@@ -274,6 +286,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// content and boundaries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig Status {
       get { return status_; }
       set {
@@ -291,6 +304,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// "use_explicit_dry_run_spec" flag is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig Spec {
       get { return spec_; }
       set {
@@ -314,6 +328,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// fields in the spec are set to non-default values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UseExplicitDryRunSpec {
       get { return useExplicitDryRunSpec_; }
       set {
@@ -322,11 +337,13 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ServicePerimeter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ServicePerimeter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -347,6 +364,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -365,11 +383,13 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -418,6 +438,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -462,6 +483,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -498,6 +520,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ServicePerimeter other) {
       if (other == null) {
         return;
@@ -545,6 +568,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -610,6 +634,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -673,6 +698,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ServicePerimeter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies the type of the Perimeter. There are two types: regular and
@@ -719,19 +745,23 @@ namespace Google.Identity.AccessContextManager.V1 {
     private static readonly pb::MessageParser<ServicePerimeterConfig> _parser = new pb::MessageParser<ServicePerimeterConfig>(() => new ServicePerimeterConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ServicePerimeterConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServicePerimeterConfig() {
       OnConstruction();
     }
@@ -739,6 +769,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServicePerimeterConfig(ServicePerimeterConfig other) : this() {
       resources_ = other.resources_.Clone();
       accessLevels_ = other.accessLevels_.Clone();
@@ -750,6 +781,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServicePerimeterConfig Clone() {
       return new ServicePerimeterConfig(this);
     }
@@ -764,6 +796,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// Currently only projects are allowed. Format: `projects/{project_number}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Resources {
       get { return resources_; }
     }
@@ -784,6 +817,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// For Service Perimeter Bridge, must be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> AccessLevels {
       get { return accessLevels_; }
     }
@@ -800,6 +834,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// access restrictions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> RestrictedServices {
       get { return restrictedServices_; }
     }
@@ -811,6 +846,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// Configuration for APIs allowed within Perimeter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.VpcAccessibleServices VpcAccessibleServices {
       get { return vpcAccessibleServices_; }
       set {
@@ -834,6 +870,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// grants it. Must be empty for a perimeter bridge.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressPolicy> IngressPolicies {
       get { return ingressPolicies_; }
     }
@@ -854,16 +891,19 @@ namespace Google.Identity.AccessContextManager.V1 {
     /// grants it. Must be empty for a perimeter bridge.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressPolicy> EgressPolicies {
       get { return egressPolicies_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ServicePerimeterConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ServicePerimeterConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -881,6 +921,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= resources_.GetHashCode();
@@ -896,11 +937,13 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -922,6 +965,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       resources_.WriteTo(ref output, _repeated_resources_codec);
       accessLevels_.WriteTo(ref output, _repeated_accessLevels_codec);
@@ -939,6 +983,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += resources_.CalculateSize(_repeated_resources_codec);
@@ -956,6 +1001,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ServicePerimeterConfig other) {
       if (other == null) {
         return;
@@ -975,6 +1021,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1019,6 +1066,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1061,6 +1109,7 @@ namespace Google.Identity.AccessContextManager.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ServicePerimeterConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies the types of identities that are allowed access in either
@@ -1101,19 +1150,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<VpcAccessibleServices> _parser = new pb::MessageParser<VpcAccessibleServices>(() => new VpcAccessibleServices());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<VpcAccessibleServices> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VpcAccessibleServices() {
           OnConstruction();
         }
@@ -1121,6 +1174,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VpcAccessibleServices(VpcAccessibleServices other) : this() {
           enableRestriction_ = other.enableRestriction_;
           allowedServices_ = other.allowedServices_.Clone();
@@ -1128,6 +1182,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VpcAccessibleServices Clone() {
           return new VpcAccessibleServices(this);
         }
@@ -1140,6 +1195,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// APIs specified in 'allowed_services'.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool EnableRestriction {
           get { return enableRestriction_; }
           set {
@@ -1159,16 +1215,19 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// automatically includes all of the services protected by the perimeter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> AllowedServices {
           get { return allowedServices_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as VpcAccessibleServices);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(VpcAccessibleServices other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1182,6 +1241,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (EnableRestriction != false) hash ^= EnableRestriction.GetHashCode();
@@ -1193,11 +1253,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1215,6 +1277,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (EnableRestriction != false) {
             output.WriteRawTag(8);
@@ -1228,6 +1291,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (EnableRestriction != false) {
@@ -1241,6 +1305,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(VpcAccessibleServices other) {
           if (other == null) {
             return;
@@ -1253,6 +1318,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1278,6 +1344,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1312,19 +1379,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<MethodSelector> _parser = new pb::MessageParser<MethodSelector>(() => new MethodSelector());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<MethodSelector> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MethodSelector() {
           OnConstruction();
         }
@@ -1332,6 +1403,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MethodSelector(MethodSelector other) : this() {
           switch (other.KindCase) {
             case KindOneofCase.Method:
@@ -1346,6 +1418,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MethodSelector Clone() {
           return new MethodSelector(this);
         }
@@ -1360,6 +1433,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// allowed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Method {
           get { return kindCase_ == KindOneofCase.Method ? (string) kind_ : ""; }
           set {
@@ -1376,6 +1450,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// [google.identity.accesscontextmanager.v1.ServicePerimeterConfig.ApiOperation].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Permission {
           get { return kindCase_ == KindOneofCase.Permission ? (string) kind_ : ""; }
           set {
@@ -1393,22 +1468,26 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
         private KindOneofCase kindCase_ = KindOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public KindOneofCase KindCase {
           get { return kindCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearKind() {
           kindCase_ = KindOneofCase.None;
           kind_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as MethodSelector);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(MethodSelector other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1423,6 +1502,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (kindCase_ == KindOneofCase.Method) hash ^= Method.GetHashCode();
@@ -1435,11 +1515,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1460,6 +1542,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (kindCase_ == KindOneofCase.Method) {
             output.WriteRawTag(10);
@@ -1476,6 +1559,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (kindCase_ == KindOneofCase.Method) {
@@ -1491,6 +1575,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(MethodSelector other) {
           if (other == null) {
             return;
@@ -1508,6 +1593,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1533,6 +1619,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1566,19 +1653,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<ApiOperation> _parser = new pb::MessageParser<ApiOperation>(() => new ApiOperation());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ApiOperation> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ApiOperation() {
           OnConstruction();
         }
@@ -1586,6 +1677,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ApiOperation(ApiOperation other) : this() {
           serviceName_ = other.serviceName_;
           methodSelectors_ = other.methodSelectors_.Clone();
@@ -1593,6 +1685,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ApiOperation Clone() {
           return new ApiOperation(this);
         }
@@ -1611,6 +1704,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// permissions for all services.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ServiceName {
           get { return serviceName_; }
           set {
@@ -1631,16 +1725,19 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// AND permissions for the service specified in `service_name`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.MethodSelector> MethodSelectors {
           get { return methodSelectors_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ApiOperation);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ApiOperation other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1654,6 +1751,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (ServiceName.Length != 0) hash ^= ServiceName.GetHashCode();
@@ -1665,11 +1763,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1687,6 +1787,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (ServiceName.Length != 0) {
             output.WriteRawTag(10);
@@ -1700,6 +1801,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (ServiceName.Length != 0) {
@@ -1713,6 +1815,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ApiOperation other) {
           if (other == null) {
             return;
@@ -1725,6 +1828,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1750,6 +1854,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1785,19 +1890,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<IngressSource> _parser = new pb::MessageParser<IngressSource>(() => new IngressSource());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<IngressSource> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressSource() {
           OnConstruction();
         }
@@ -1805,6 +1914,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressSource(IngressSource other) : this() {
           switch (other.SourceCase) {
             case SourceOneofCase.AccessLevel:
@@ -1819,6 +1929,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressSource Clone() {
           return new IngressSource(this);
         }
@@ -1846,6 +1957,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// will be allowed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string AccessLevel {
           get { return sourceCase_ == SourceOneofCase.AccessLevel ? (string) source_ : ""; }
           set {
@@ -1866,6 +1978,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// case of allowing all Google Cloud resources only is not supported.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Resource {
           get { return sourceCase_ == SourceOneofCase.Resource ? (string) source_ : ""; }
           set {
@@ -1883,22 +1996,26 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
         private SourceOneofCase sourceCase_ = SourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SourceOneofCase SourceCase {
           get { return sourceCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearSource() {
           sourceCase_ = SourceOneofCase.None;
           source_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as IngressSource);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(IngressSource other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1913,6 +2030,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (sourceCase_ == SourceOneofCase.AccessLevel) hash ^= AccessLevel.GetHashCode();
@@ -1925,11 +2043,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1950,6 +2070,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (sourceCase_ == SourceOneofCase.AccessLevel) {
             output.WriteRawTag(10);
@@ -1966,6 +2087,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (sourceCase_ == SourceOneofCase.AccessLevel) {
@@ -1981,6 +2103,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(IngressSource other) {
           if (other == null) {
             return;
@@ -1998,6 +2121,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2023,6 +2147,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2070,19 +2195,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<EgressTo> _parser = new pb::MessageParser<EgressTo>(() => new EgressTo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<EgressTo> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressTo() {
           OnConstruction();
         }
@@ -2090,6 +2219,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressTo(EgressTo other) : this() {
           resources_ = other.resources_.Clone();
           operations_ = other.operations_.Clone();
@@ -2097,6 +2227,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressTo Clone() {
           return new EgressTo(this);
         }
@@ -2117,6 +2248,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// rule will authorize access to all resources outside the perimeter.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Resources {
           get { return resources_; }
         }
@@ -2135,16 +2267,19 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// A request matches if it uses an operation/service in this list.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> Operations {
           get { return operations_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as EgressTo);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(EgressTo other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2158,6 +2293,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= resources_.GetHashCode();
@@ -2169,11 +2305,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2188,6 +2326,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           resources_.WriteTo(ref output, _repeated_resources_codec);
           operations_.WriteTo(ref output, _repeated_operations_codec);
@@ -2198,6 +2337,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += resources_.CalculateSize(_repeated_resources_codec);
@@ -2209,6 +2349,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(EgressTo other) {
           if (other == null) {
             return;
@@ -2219,6 +2360,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2244,6 +2386,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2281,19 +2424,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<IngressFrom> _parser = new pb::MessageParser<IngressFrom>(() => new IngressFrom());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<IngressFrom> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressFrom() {
           OnConstruction();
         }
@@ -2301,6 +2448,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressFrom(IngressFrom other) : this() {
           sources_ = other.sources_.Clone();
           identities_ = other.identities_.Clone();
@@ -2309,6 +2457,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressFrom Clone() {
           return new IngressFrom(this);
         }
@@ -2324,6 +2473,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// authorizes access from.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressSource> Sources {
           get { return sources_; }
         }
@@ -2339,6 +2489,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// should represent individual user or service account only.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Identities {
           get { return identities_; }
         }
@@ -2352,6 +2503,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// be allowed access.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType IdentityType {
           get { return identityType_; }
           set {
@@ -2360,11 +2512,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as IngressFrom);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(IngressFrom other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2379,6 +2533,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= sources_.GetHashCode();
@@ -2391,11 +2546,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2414,6 +2571,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           sources_.WriteTo(ref output, _repeated_sources_codec);
           identities_.WriteTo(ref output, _repeated_identities_codec);
@@ -2428,6 +2586,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += sources_.CalculateSize(_repeated_sources_codec);
@@ -2442,6 +2601,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(IngressFrom other) {
           if (other == null) {
             return;
@@ -2455,6 +2615,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2484,6 +2645,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2528,19 +2690,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<IngressTo> _parser = new pb::MessageParser<IngressTo>(() => new IngressTo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<IngressTo> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressTo() {
           OnConstruction();
         }
@@ -2548,6 +2714,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressTo(IngressTo other) : this() {
           operations_ = other.operations_.Clone();
           resources_ = other.resources_.Clone();
@@ -2555,6 +2722,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressTo Clone() {
           return new IngressTo(this);
         }
@@ -2574,6 +2742,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// [google.identity.accesscontextmanager.v1.ServicePerimeter].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.ApiOperation> Operations {
           get { return operations_; }
         }
@@ -2594,16 +2763,19 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// perimeter are allowed.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Resources {
           get { return resources_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as IngressTo);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(IngressTo other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2617,6 +2789,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= operations_.GetHashCode();
@@ -2628,11 +2801,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2647,6 +2822,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           operations_.WriteTo(ref output, _repeated_operations_codec);
           resources_.WriteTo(ref output, _repeated_resources_codec);
@@ -2657,6 +2833,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += operations_.CalculateSize(_repeated_operations_codec);
@@ -2668,6 +2845,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(IngressTo other) {
           if (other == null) {
             return;
@@ -2678,6 +2856,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2703,6 +2882,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2755,19 +2935,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<IngressPolicy> _parser = new pb::MessageParser<IngressPolicy>(() => new IngressPolicy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<IngressPolicy> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[7]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressPolicy() {
           OnConstruction();
         }
@@ -2775,6 +2959,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressPolicy(IngressPolicy other) : this() {
           ingressFrom_ = other.ingressFrom_ != null ? other.ingressFrom_.Clone() : null;
           ingressTo_ = other.ingressTo_ != null ? other.ingressTo_.Clone() : null;
@@ -2782,6 +2967,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public IngressPolicy Clone() {
           return new IngressPolicy(this);
         }
@@ -2796,6 +2982,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// to apply.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressFrom IngressFrom {
           get { return ingressFrom_; }
           set {
@@ -2814,6 +3001,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// to apply.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IngressTo IngressTo {
           get { return ingressTo_; }
           set {
@@ -2822,11 +3010,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as IngressPolicy);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(IngressPolicy other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2840,6 +3030,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (ingressFrom_ != null) hash ^= IngressFrom.GetHashCode();
@@ -2851,11 +3042,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2876,6 +3069,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (ingressFrom_ != null) {
             output.WriteRawTag(10);
@@ -2892,6 +3086,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (ingressFrom_ != null) {
@@ -2907,6 +3102,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(IngressPolicy other) {
           if (other == null) {
             return;
@@ -2927,6 +3123,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2958,6 +3155,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3024,19 +3222,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<EgressPolicy> _parser = new pb::MessageParser<EgressPolicy>(() => new EgressPolicy());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<EgressPolicy> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[8]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressPolicy() {
           OnConstruction();
         }
@@ -3044,6 +3246,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressPolicy(EgressPolicy other) : this() {
           egressFrom_ = other.egressFrom_ != null ? other.egressFrom_.Clone() : null;
           egressTo_ = other.egressTo_ != null ? other.egressTo_.Clone() : null;
@@ -3051,6 +3254,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressPolicy Clone() {
           return new EgressPolicy(this);
         }
@@ -3064,6 +3268,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// to apply.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressFrom EgressFrom {
           get { return egressFrom_; }
           set {
@@ -3082,6 +3287,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// to apply.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.EgressTo EgressTo {
           get { return egressTo_; }
           set {
@@ -3090,11 +3296,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as EgressPolicy);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(EgressPolicy other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3108,6 +3316,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (egressFrom_ != null) hash ^= EgressFrom.GetHashCode();
@@ -3119,11 +3328,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3144,6 +3355,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (egressFrom_ != null) {
             output.WriteRawTag(10);
@@ -3160,6 +3372,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (egressFrom_ != null) {
@@ -3175,6 +3388,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(EgressPolicy other) {
           if (other == null) {
             return;
@@ -3195,6 +3409,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3226,6 +3441,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3275,19 +3491,23 @@ namespace Google.Identity.AccessContextManager.V1 {
         private static readonly pb::MessageParser<EgressFrom> _parser = new pb::MessageParser<EgressFrom>(() => new EgressFrom());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<EgressFrom> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Descriptor.NestedTypes[9]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressFrom() {
           OnConstruction();
         }
@@ -3295,6 +3515,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressFrom(EgressFrom other) : this() {
           identities_ = other.identities_.Clone();
           identityType_ = other.identityType_;
@@ -3302,6 +3523,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EgressFrom Clone() {
           return new EgressFrom(this);
         }
@@ -3317,6 +3539,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// represent individual user or service account only.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Identities {
           get { return identities_; }
         }
@@ -3330,6 +3553,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         /// be allowed access.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType IdentityType {
           get { return identityType_; }
           set {
@@ -3338,11 +3562,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as EgressFrom);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(EgressFrom other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3356,6 +3582,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= identities_.GetHashCode();
@@ -3367,11 +3594,13 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3389,6 +3618,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           identities_.WriteTo(ref output, _repeated_identities_codec);
           if (IdentityType != global::Google.Identity.AccessContextManager.V1.ServicePerimeterConfig.Types.IdentityType.Unspecified) {
@@ -3402,6 +3632,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += identities_.CalculateSize(_repeated_identities_codec);
@@ -3415,6 +3646,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(EgressFrom other) {
           if (other == null) {
             return;
@@ -3427,6 +3659,7 @@ namespace Google.Identity.AccessContextManager.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3452,6 +3685,7 @@ namespace Google.Identity.AccessContextManager.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

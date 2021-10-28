@@ -680,19 +680,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<Account> _parser = new pb::MessageParser<Account>(() => new Account());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Account> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Account() {
       OnConstruction();
     }
@@ -700,6 +704,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Account(Account other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -711,6 +716,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Account Clone() {
       return new Account(this);
     }
@@ -724,6 +730,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "accounts/100"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -738,6 +745,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this account was originally created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -752,6 +760,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when account payload fields were last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -766,6 +775,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Required. Human-readable display name for this account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -780,6 +790,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Country of business. Must be a Unicode CLDR region code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RegionCode {
       get { return regionCode_; }
       set {
@@ -795,6 +806,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// accounts are excluded from List results unless specifically requested.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Deleted {
       get { return deleted_; }
       set {
@@ -803,11 +815,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Account);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Account other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -825,6 +839,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -840,11 +855,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -881,6 +898,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -913,6 +931,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -940,6 +959,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Account other) {
       if (other == null) {
         return;
@@ -972,6 +992,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1019,6 +1040,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1074,19 +1096,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<Property> _parser = new pb::MessageParser<Property>(() => new Property());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Property> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Property() {
       OnConstruction();
     }
@@ -1094,6 +1120,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Property(Property other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -1110,6 +1137,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Property Clone() {
       return new Property(this);
     }
@@ -1123,6 +1151,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "properties/1000"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1137,6 +1166,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when the entity was originally created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1151,6 +1181,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when entity payload fields were last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -1169,6 +1200,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "accounts/100"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -1185,6 +1217,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// The max allowed display name length is 100 UTF-16 code units.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -1200,6 +1233,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: AUTOMOTIVE, FOOD_AND_DRINK
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.IndustryCategory IndustryCategory {
       get { return industryCategory_; }
       set {
@@ -1222,6 +1256,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "America/Los_Angeles"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TimeZone {
       get { return timeZone_; }
       set {
@@ -1239,6 +1274,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Examples: "USD", "EUR", "JPY"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CurrencyCode {
       get { return currencyCode_; }
       set {
@@ -1253,6 +1289,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. The Google Analytics service level that applies to this property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.ServiceLevel ServiceLevel {
       get { return serviceLevel_; }
       set {
@@ -1268,6 +1305,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// property is not currently in the trash can.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
       get { return deleteTime_; }
       set {
@@ -1284,6 +1322,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// and is not slated to be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
       get { return expireTime_; }
       set {
@@ -1292,11 +1331,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Property);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Property other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1319,6 +1360,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1339,11 +1381,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1400,6 +1444,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1452,6 +1497,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1494,6 +1540,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Property other) {
       if (other == null) {
         return;
@@ -1547,6 +1594,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1620,6 +1668,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1701,19 +1750,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<AndroidAppDataStream> _parser = new pb::MessageParser<AndroidAppDataStream>(() => new AndroidAppDataStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AndroidAppDataStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AndroidAppDataStream() {
       OnConstruction();
     }
@@ -1721,6 +1774,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AndroidAppDataStream(AndroidAppDataStream other) : this() {
       name_ = other.name_;
       firebaseAppId_ = other.firebaseAppId_;
@@ -1732,6 +1786,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AndroidAppDataStream Clone() {
       return new AndroidAppDataStream(this);
     }
@@ -1745,6 +1800,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "properties/1000/androidAppDataStreams/2000"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1760,6 +1816,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// This ID can change if the Android app is deleted and recreated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FirebaseAppId {
       get { return firebaseAppId_; }
       set {
@@ -1774,6 +1831,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this stream was originally created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1788,6 +1846,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when stream payload fields were last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -1803,6 +1862,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "com.example.myandroidapp"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PackageName {
       get { return packageName_; }
       set {
@@ -1819,6 +1879,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// The max allowed display name length is 255 UTF-16 code units.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -1827,11 +1888,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AndroidAppDataStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AndroidAppDataStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1849,6 +1912,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1864,11 +1928,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1905,6 +1971,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1937,6 +2004,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1964,6 +2032,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AndroidAppDataStream other) {
       if (other == null) {
         return;
@@ -1996,6 +2065,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2043,6 +2113,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2098,19 +2169,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<IosAppDataStream> _parser = new pb::MessageParser<IosAppDataStream>(() => new IosAppDataStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IosAppDataStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IosAppDataStream() {
       OnConstruction();
     }
@@ -2118,6 +2193,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IosAppDataStream(IosAppDataStream other) : this() {
       name_ = other.name_;
       firebaseAppId_ = other.firebaseAppId_;
@@ -2129,6 +2205,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IosAppDataStream Clone() {
       return new IosAppDataStream(this);
     }
@@ -2142,6 +2219,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "properties/1000/iosAppDataStreams/2000"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2157,6 +2235,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// This ID can change if the iOS app is deleted and recreated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FirebaseAppId {
       get { return firebaseAppId_; }
       set {
@@ -2171,6 +2250,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this stream was originally created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -2185,6 +2265,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when stream payload fields were last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -2200,6 +2281,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "com.example.myiosapp"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BundleId {
       get { return bundleId_; }
       set {
@@ -2216,6 +2298,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// The max allowed display name length is 255 UTF-16 code units.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -2224,11 +2307,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IosAppDataStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IosAppDataStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2246,6 +2331,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2261,11 +2347,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2302,6 +2390,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2334,6 +2423,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2361,6 +2451,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IosAppDataStream other) {
       if (other == null) {
         return;
@@ -2393,6 +2484,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2440,6 +2532,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2495,19 +2588,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<WebDataStream> _parser = new pb::MessageParser<WebDataStream>(() => new WebDataStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WebDataStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebDataStream() {
       OnConstruction();
     }
@@ -2515,6 +2612,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebDataStream(WebDataStream other) : this() {
       name_ = other.name_;
       measurementId_ = other.measurementId_;
@@ -2527,6 +2625,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebDataStream Clone() {
       return new WebDataStream(this);
     }
@@ -2540,6 +2639,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "properties/1000/webDataStreams/2000"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2555,6 +2655,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "G-1A2BCD345E" would just be "1A2BCD345E"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MeasurementId {
       get { return measurementId_; }
       set {
@@ -2570,6 +2671,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// This ID can change if the web app is deleted and recreated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FirebaseAppId {
       get { return firebaseAppId_; }
       set {
@@ -2584,6 +2686,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this stream was originally created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -2598,6 +2701,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when stream payload fields were last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -2613,6 +2717,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "http://www.google.com", "https://www.google.com"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DefaultUri {
       get { return defaultUri_; }
       set {
@@ -2629,6 +2734,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// The max allowed display name length is 100 UTF-16 code units.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -2637,11 +2743,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WebDataStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WebDataStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2660,6 +2768,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2676,11 +2785,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2721,6 +2832,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2757,6 +2869,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2787,6 +2900,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WebDataStream other) {
       if (other == null) {
         return;
@@ -2822,6 +2936,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2873,6 +2988,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2933,19 +3049,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<UserLink> _parser = new pb::MessageParser<UserLink>(() => new UserLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UserLink> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserLink() {
       OnConstruction();
     }
@@ -2953,6 +3073,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserLink(UserLink other) : this() {
       name_ = other.name_;
       emailAddress_ = other.emailAddress_;
@@ -2961,6 +3082,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserLink Clone() {
       return new UserLink(this);
     }
@@ -2972,6 +3094,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Example format: properties/1234/userLinks/5678
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2986,6 +3109,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Immutable. Email address of the user to link
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EmailAddress {
       get { return emailAddress_; }
       set {
@@ -3014,16 +3138,19 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> DirectRoles {
       get { return directRoles_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UserLink);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UserLink other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3038,6 +3165,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3050,11 +3178,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3076,6 +3206,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3093,6 +3224,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3109,6 +3241,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UserLink other) {
       if (other == null) {
         return;
@@ -3124,6 +3257,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3153,6 +3287,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3190,19 +3325,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<AuditUserLink> _parser = new pb::MessageParser<AuditUserLink>(() => new AuditUserLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AuditUserLink> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuditUserLink() {
       OnConstruction();
     }
@@ -3210,6 +3349,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuditUserLink(AuditUserLink other) : this() {
       name_ = other.name_;
       emailAddress_ = other.emailAddress_;
@@ -3219,6 +3359,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuditUserLink Clone() {
       return new AuditUserLink(this);
     }
@@ -3230,6 +3371,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example format: properties/1234/userLinks/5678
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -3244,6 +3386,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Email address of the linked user
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EmailAddress {
       get { return emailAddress_; }
       set {
@@ -3265,6 +3408,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// property), group, or organization admin role.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> DirectRoles {
       get { return directRoles_; }
     }
@@ -3281,16 +3425,19 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Format: predefinedRoles/read
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> EffectiveRoles {
       get { return effectiveRoles_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AuditUserLink);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AuditUserLink other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3306,6 +3453,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3319,11 +3467,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3346,6 +3496,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3364,6 +3515,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3381,6 +3533,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AuditUserLink other) {
       if (other == null) {
         return;
@@ -3397,6 +3550,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3430,6 +3584,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3472,19 +3627,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<EnhancedMeasurementSettings> _parser = new pb::MessageParser<EnhancedMeasurementSettings>(() => new EnhancedMeasurementSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EnhancedMeasurementSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnhancedMeasurementSettings() {
       OnConstruction();
     }
@@ -3492,6 +3651,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnhancedMeasurementSettings(EnhancedMeasurementSettings other) : this() {
       name_ = other.name_;
       streamEnabled_ = other.streamEnabled_;
@@ -3509,6 +3669,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnhancedMeasurementSettings Clone() {
       return new EnhancedMeasurementSettings(this);
     }
@@ -3523,6 +3684,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "properties/1000/webDataStreams/2000/enhancedMeasurementSettings"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -3541,6 +3703,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// whether they are respected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool StreamEnabled {
       get { return streamEnabled_; }
       set {
@@ -3556,6 +3719,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// website changes the browser history state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PageViewsEnabled {
       get { return pageViewsEnabled_; }
       set {
@@ -3571,6 +3735,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// a page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ScrollsEnabled {
       get { return scrollsEnabled_; }
       set {
@@ -3586,6 +3751,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// link that leads them away from your domain.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool OutboundClicksEnabled {
       get { return outboundClicksEnabled_; }
       set {
@@ -3601,6 +3767,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// performs a search on your site (based on a query parameter).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SiteSearchEnabled {
       get { return siteSearchEnabled_; }
       set {
@@ -3616,6 +3783,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// view embedded videos on your site.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool VideoEngagementEnabled {
       get { return videoEngagementEnabled_; }
       set {
@@ -3631,6 +3799,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// a common document, compressed file, application, video, or audio extension.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool FileDownloadsEnabled {
       get { return fileDownloadsEnabled_; }
       set {
@@ -3645,6 +3814,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. If enabled, capture a page view event each time a page loads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PageLoadsEnabled {
       get { return pageLoadsEnabled_; }
       set {
@@ -3660,6 +3830,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// browser history state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PageChangesEnabled {
       get { return pageChangesEnabled_; }
       set {
@@ -3675,6 +3846,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Max length is 1024 characters. Must not be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SearchQueryParameter {
       get { return searchQueryParameter_; }
       set {
@@ -3690,6 +3862,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Max length is 1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UriQueryParameter {
       get { return uriQueryParameter_; }
       set {
@@ -3698,11 +3871,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EnhancedMeasurementSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EnhancedMeasurementSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3726,6 +3901,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3747,11 +3923,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3812,6 +3990,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3868,6 +4047,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3913,6 +4093,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EnhancedMeasurementSettings other) {
       if (other == null) {
         return;
@@ -3957,6 +4138,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4022,6 +4204,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4095,19 +4278,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<FirebaseLink> _parser = new pb::MessageParser<FirebaseLink>(() => new FirebaseLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FirebaseLink> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FirebaseLink() {
       OnConstruction();
     }
@@ -4115,6 +4302,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FirebaseLink(FirebaseLink other) : this() {
       name_ = other.name_;
       project_ = other.project_;
@@ -4123,6 +4311,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FirebaseLink Clone() {
       return new FirebaseLink(this);
     }
@@ -4134,6 +4323,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Example format: properties/1234/firebaseLinks/5678
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -4154,6 +4344,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: 'projects/1234'
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Project {
       get { return project_; }
       set {
@@ -4168,6 +4359,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this FirebaseLink was originally created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -4176,11 +4368,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FirebaseLink);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FirebaseLink other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4195,6 +4389,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -4207,11 +4402,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4236,6 +4433,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -4256,6 +4454,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4274,6 +4473,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FirebaseLink other) {
       if (other == null) {
         return;
@@ -4294,6 +4494,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4326,6 +4527,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4367,19 +4569,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<GlobalSiteTag> _parser = new pb::MessageParser<GlobalSiteTag>(() => new GlobalSiteTag());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GlobalSiteTag> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GlobalSiteTag() {
       OnConstruction();
     }
@@ -4387,6 +4593,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GlobalSiteTag(GlobalSiteTag other) : this() {
       name_ = other.name_;
       snippet_ = other.snippet_;
@@ -4394,6 +4601,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GlobalSiteTag Clone() {
       return new GlobalSiteTag(this);
     }
@@ -4406,6 +4614,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Format: properties/{propertyId}/globalSiteTag
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -4421,6 +4630,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// every webpage to measure.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Snippet {
       get { return snippet_; }
       set {
@@ -4429,11 +4639,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GlobalSiteTag);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GlobalSiteTag other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4447,6 +4659,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -4458,11 +4671,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4483,6 +4698,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -4499,6 +4715,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4514,6 +4731,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GlobalSiteTag other) {
       if (other == null) {
         return;
@@ -4528,6 +4746,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4553,6 +4772,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4586,19 +4806,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<GoogleAdsLink> _parser = new pb::MessageParser<GoogleAdsLink>(() => new GoogleAdsLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GoogleAdsLink> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleAdsLink() {
       OnConstruction();
     }
@@ -4606,6 +4830,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleAdsLink(GoogleAdsLink other) : this() {
       name_ = other.name_;
       customerId_ = other.customerId_;
@@ -4618,6 +4843,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleAdsLink Clone() {
       return new GoogleAdsLink(this);
     }
@@ -4631,6 +4857,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Note: googleAdsLinkId is not the Google Ads customer ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -4645,6 +4872,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Immutable. Google Ads customer ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CustomerId {
       get { return customerId_; }
       set {
@@ -4659,6 +4887,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. If true, this link is for a Google Ads manager account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CanManageClients {
       get { return canManageClients_; }
       set {
@@ -4677,6 +4906,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this field is not set on create/update, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? AdsPersonalizationEnabled {
       get { return adsPersonalizationEnabled_; }
       set {
@@ -4692,6 +4922,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this link was originally created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -4706,6 +4937,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this link was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -4721,6 +4953,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// An empty string will be returned if the email address can't be retrieved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CreatorEmailAddress {
       get { return creatorEmailAddress_; }
       set {
@@ -4729,11 +4962,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GoogleAdsLink);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GoogleAdsLink other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4752,6 +4987,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -4768,11 +5004,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4812,6 +5050,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -4847,6 +5086,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4877,6 +5117,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GoogleAdsLink other) {
       if (other == null) {
         return;
@@ -4914,6 +5155,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4968,6 +5210,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5031,19 +5274,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<DataSharingSettings> _parser = new pb::MessageParser<DataSharingSettings>(() => new DataSharingSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DataSharingSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataSharingSettings() {
       OnConstruction();
     }
@@ -5051,6 +5298,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataSharingSettings(DataSharingSettings other) : this() {
       name_ = other.name_;
       sharingWithGoogleSupportEnabled_ = other.sharingWithGoogleSupportEnabled_;
@@ -5062,6 +5310,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataSharingSettings Clone() {
       return new DataSharingSettings(this);
     }
@@ -5075,6 +5324,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "accounts/1000/dataSharingSettings"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5090,6 +5340,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// issues.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SharingWithGoogleSupportEnabled {
       get { return sharingWithGoogleSupportEnabled_; }
       set {
@@ -5106,6 +5357,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Sales team restrictions still apply when enabled.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SharingWithGoogleAssignedSalesEnabled {
       get { return sharingWithGoogleAssignedSalesEnabled_; }
       set {
@@ -5121,6 +5373,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// configuration changes to improve results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SharingWithGoogleAnySalesEnabled {
       get { return sharingWithGoogleAnySalesEnabled_; }
       set {
@@ -5135,6 +5388,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Allows Google to use the data to improve other Google products or services.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SharingWithGoogleProductsEnabled {
       get { return sharingWithGoogleProductsEnabled_; }
       set {
@@ -5149,6 +5403,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Allows Google to share the data anonymously in aggregate form with others.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SharingWithOthersEnabled {
       get { return sharingWithOthersEnabled_; }
       set {
@@ -5157,11 +5412,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DataSharingSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DataSharingSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5179,6 +5436,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -5194,11 +5452,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5235,6 +5495,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -5267,6 +5528,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -5294,6 +5556,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DataSharingSettings other) {
       if (other == null) {
         return;
@@ -5320,6 +5583,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5361,6 +5625,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5411,19 +5676,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<AccountSummary> _parser = new pb::MessageParser<AccountSummary>(() => new AccountSummary());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AccountSummary> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AccountSummary() {
       OnConstruction();
     }
@@ -5431,6 +5700,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AccountSummary(AccountSummary other) : this() {
       name_ = other.name_;
       account_ = other.account_;
@@ -5440,6 +5710,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AccountSummary Clone() {
       return new AccountSummary(this);
     }
@@ -5453,6 +5724,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "accountSummaries/1000"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5469,6 +5741,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "accounts/1000"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Account {
       get { return account_; }
       set {
@@ -5483,6 +5756,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Display name for the account referred to in this account summary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -5499,16 +5773,19 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// List of summaries for child accounts of this account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.PropertySummary> PropertySummaries {
       get { return propertySummaries_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AccountSummary);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AccountSummary other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5524,6 +5801,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -5537,11 +5815,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5567,6 +5847,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -5588,6 +5869,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -5607,6 +5889,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AccountSummary other) {
       if (other == null) {
         return;
@@ -5625,6 +5908,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5658,6 +5942,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5699,19 +5984,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<PropertySummary> _parser = new pb::MessageParser<PropertySummary>(() => new PropertySummary());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PropertySummary> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropertySummary() {
       OnConstruction();
     }
@@ -5719,6 +6008,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropertySummary(PropertySummary other) : this() {
       property_ = other.property_;
       displayName_ = other.displayName_;
@@ -5726,6 +6016,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PropertySummary Clone() {
       return new PropertySummary(this);
     }
@@ -5739,6 +6030,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "properties/1000"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Property {
       get { return property_; }
       set {
@@ -5753,6 +6045,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Display name for the property referred to in this account summary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -5761,11 +6054,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PropertySummary);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PropertySummary other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5779,6 +6074,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Property.Length != 0) hash ^= Property.GetHashCode();
@@ -5790,11 +6086,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5815,6 +6113,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Property.Length != 0) {
         output.WriteRawTag(10);
@@ -5831,6 +6130,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Property.Length != 0) {
@@ -5846,6 +6146,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PropertySummary other) {
       if (other == null) {
         return;
@@ -5860,6 +6161,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5885,6 +6187,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5918,19 +6221,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<MeasurementProtocolSecret> _parser = new pb::MessageParser<MeasurementProtocolSecret>(() => new MeasurementProtocolSecret());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MeasurementProtocolSecret> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MeasurementProtocolSecret() {
       OnConstruction();
     }
@@ -5938,6 +6245,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MeasurementProtocolSecret(MeasurementProtocolSecret other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -5946,6 +6254,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MeasurementProtocolSecret Clone() {
       return new MeasurementProtocolSecret(this);
     }
@@ -5960,6 +6269,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// properties/{property}/webDataStreams/{webDataStream}/measurementProtocolSecrets/{measurementProtocolSecret}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5974,6 +6284,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Required. Human-readable display name for this secret.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -5990,6 +6301,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// secret's parent property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SecretValue {
       get { return secretValue_; }
       set {
@@ -5998,11 +6310,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MeasurementProtocolSecret);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MeasurementProtocolSecret other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6017,6 +6331,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -6029,11 +6344,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6058,6 +6375,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -6078,6 +6396,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -6096,6 +6415,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MeasurementProtocolSecret other) {
       if (other == null) {
         return;
@@ -6113,6 +6433,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6142,6 +6463,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6182,19 +6504,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<ChangeHistoryEvent> _parser = new pb::MessageParser<ChangeHistoryEvent>(() => new ChangeHistoryEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ChangeHistoryEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeHistoryEvent() {
       OnConstruction();
     }
@@ -6202,6 +6528,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeHistoryEvent(ChangeHistoryEvent other) : this() {
       id_ = other.id_;
       changeTime_ = other.changeTime_ != null ? other.changeTime_.Clone() : null;
@@ -6213,6 +6540,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeHistoryEvent Clone() {
       return new ChangeHistoryEvent(this);
     }
@@ -6224,6 +6552,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// ID of this change history event. This ID is unique across Google Analytics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -6238,6 +6567,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Time when change was made.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ChangeTime {
       get { return changeTime_; }
       set {
@@ -6252,6 +6582,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// The type of actor that made this change.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.ActorType ActorType {
       get { return actorType_; }
       set {
@@ -6268,6 +6599,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Google accounts that have been deleted will cause an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string UserActorEmail {
       get { return userActorEmail_; }
       set {
@@ -6283,6 +6615,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// represent all changes that occurred in this event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ChangesFiltered {
       get { return changesFiltered_; }
       set {
@@ -6300,16 +6633,19 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// specified in SearchChangeHistoryEventsRequest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange> Changes {
       get { return changes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ChangeHistoryEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ChangeHistoryEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6327,6 +6663,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -6342,11 +6679,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6380,6 +6719,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -6409,6 +6749,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -6434,6 +6775,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ChangeHistoryEvent other) {
       if (other == null) {
         return;
@@ -6461,6 +6803,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6505,6 +6848,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6557,19 +6901,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<ChangeHistoryChange> _parser = new pb::MessageParser<ChangeHistoryChange>(() => new ChangeHistoryChange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ChangeHistoryChange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeHistoryChange() {
       OnConstruction();
     }
@@ -6577,6 +6925,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeHistoryChange(ChangeHistoryChange other) : this() {
       resource_ = other.resource_;
       action_ = other.action_;
@@ -6586,6 +6935,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeHistoryChange Clone() {
       return new ChangeHistoryChange(this);
     }
@@ -6597,6 +6947,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Resource name of the resource whose changes are described by this entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Resource {
       get { return resource_; }
       set {
@@ -6611,6 +6962,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// The type of action that changed this resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.ActionType Action {
       get { return action_; }
       set {
@@ -6626,6 +6978,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// created in this change, this field will be missing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource ResourceBeforeChange {
       get { return resourceBeforeChange_; }
       set {
@@ -6641,6 +6994,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// deleted in this change, this field will be missing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Types.ChangeHistoryResource ResourceAfterChange {
       get { return resourceAfterChange_; }
       set {
@@ -6649,11 +7003,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ChangeHistoryChange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ChangeHistoryChange other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6669,6 +7025,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Resource.Length != 0) hash ^= Resource.GetHashCode();
@@ -6682,11 +7039,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6715,6 +7074,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Resource.Length != 0) {
         output.WriteRawTag(10);
@@ -6739,6 +7099,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Resource.Length != 0) {
@@ -6760,6 +7121,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ChangeHistoryChange other) {
       if (other == null) {
         return;
@@ -6786,6 +7148,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6825,6 +7188,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6862,6 +7226,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the ChangeHistoryChange message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A snapshot of a resource as before or after the result of a change in
@@ -6875,19 +7240,23 @@ namespace Google.Analytics.Admin.V1Alpha {
         private static readonly pb::MessageParser<ChangeHistoryResource> _parser = new pb::MessageParser<ChangeHistoryResource>(() => new ChangeHistoryResource());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ChangeHistoryResource> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Analytics.Admin.V1Alpha.ChangeHistoryChange.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ChangeHistoryResource() {
           OnConstruction();
         }
@@ -6895,6 +7264,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ChangeHistoryResource(ChangeHistoryResource other) : this() {
           switch (other.ResourceCase) {
             case ResourceOneofCase.Account:
@@ -6948,6 +7318,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ChangeHistoryResource Clone() {
           return new ChangeHistoryResource(this);
         }
@@ -6958,6 +7329,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of an Account resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.Account Account {
           get { return resourceCase_ == ResourceOneofCase.Account ? (global::Google.Analytics.Admin.V1Alpha.Account) resource_ : null; }
           set {
@@ -6972,6 +7344,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a Property resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.Property Property {
           get { return resourceCase_ == ResourceOneofCase.Property ? (global::Google.Analytics.Admin.V1Alpha.Property) resource_ : null; }
           set {
@@ -6986,6 +7359,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a WebDataStream resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.WebDataStream WebDataStream {
           get { return resourceCase_ == ResourceOneofCase.WebDataStream ? (global::Google.Analytics.Admin.V1Alpha.WebDataStream) resource_ : null; }
           set {
@@ -7000,6 +7374,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of an AndroidAppDataStream resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream AndroidAppDataStream {
           get { return resourceCase_ == ResourceOneofCase.AndroidAppDataStream ? (global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream) resource_ : null; }
           set {
@@ -7014,6 +7389,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of an IosAppDataStream resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.IosAppDataStream IosAppDataStream {
           get { return resourceCase_ == ResourceOneofCase.IosAppDataStream ? (global::Google.Analytics.Admin.V1Alpha.IosAppDataStream) resource_ : null; }
           set {
@@ -7028,6 +7404,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a FirebaseLink resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.FirebaseLink FirebaseLink {
           get { return resourceCase_ == ResourceOneofCase.FirebaseLink ? (global::Google.Analytics.Admin.V1Alpha.FirebaseLink) resource_ : null; }
           set {
@@ -7042,6 +7419,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a GoogleAdsLink resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink GoogleAdsLink {
           get { return resourceCase_ == ResourceOneofCase.GoogleAdsLink ? (global::Google.Analytics.Admin.V1Alpha.GoogleAdsLink) resource_ : null; }
           set {
@@ -7056,6 +7434,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a GoogleSignalsSettings resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings GoogleSignalsSettings {
           get { return resourceCase_ == ResourceOneofCase.GoogleSignalsSettings ? (global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings) resource_ : null; }
           set {
@@ -7071,6 +7450,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink DisplayVideo360AdvertiserLink {
           get { return resourceCase_ == ResourceOneofCase.DisplayVideo360AdvertiserLink ? (global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLink) resource_ : null; }
           set {
@@ -7086,6 +7466,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal DisplayVideo360AdvertiserLinkProposal {
           get { return resourceCase_ == ResourceOneofCase.DisplayVideo360AdvertiserLinkProposal ? (global::Google.Analytics.Admin.V1Alpha.DisplayVideo360AdvertiserLinkProposal) resource_ : null; }
           set {
@@ -7100,6 +7481,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a ConversionEvent resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.ConversionEvent ConversionEvent {
           get { return resourceCase_ == ResourceOneofCase.ConversionEvent ? (global::Google.Analytics.Admin.V1Alpha.ConversionEvent) resource_ : null; }
           set {
@@ -7114,6 +7496,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a MeasurementProtocolSecret resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret MeasurementProtocolSecret {
           get { return resourceCase_ == ResourceOneofCase.MeasurementProtocolSecret ? (global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret) resource_ : null; }
           set {
@@ -7128,6 +7511,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a CustomDimension resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.CustomDimension CustomDimension {
           get { return resourceCase_ == ResourceOneofCase.CustomDimension ? (global::Google.Analytics.Admin.V1Alpha.CustomDimension) resource_ : null; }
           set {
@@ -7142,6 +7526,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a CustomMetric resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.CustomMetric CustomMetric {
           get { return resourceCase_ == ResourceOneofCase.CustomMetric ? (global::Google.Analytics.Admin.V1Alpha.CustomMetric) resource_ : null; }
           set {
@@ -7156,6 +7541,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         /// A snapshot of a data retention settings resource in change history.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings DataRetentionSettings {
           get { return resourceCase_ == ResourceOneofCase.DataRetentionSettings ? (global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings) resource_ : null; }
           set {
@@ -7186,22 +7572,26 @@ namespace Google.Analytics.Admin.V1Alpha {
         }
         private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ResourceOneofCase ResourceCase {
           get { return resourceCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearResource() {
           resourceCase_ = ResourceOneofCase.None;
           resource_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ChangeHistoryResource);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ChangeHistoryResource other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -7229,6 +7619,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (resourceCase_ == ResourceOneofCase.Account) hash ^= Account.GetHashCode();
@@ -7254,11 +7645,13 @@ namespace Google.Analytics.Admin.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -7331,6 +7724,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (resourceCase_ == ResourceOneofCase.Account) {
             output.WriteRawTag(10);
@@ -7399,6 +7793,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (resourceCase_ == ResourceOneofCase.Account) {
@@ -7453,6 +7848,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ChangeHistoryResource other) {
           if (other == null) {
             return;
@@ -7554,6 +7950,7 @@ namespace Google.Analytics.Admin.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -7706,6 +8103,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -7871,19 +8269,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<DisplayVideo360AdvertiserLink> _parser = new pb::MessageParser<DisplayVideo360AdvertiserLink>(() => new DisplayVideo360AdvertiserLink());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DisplayVideo360AdvertiserLink> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayVideo360AdvertiserLink() {
       OnConstruction();
     }
@@ -7891,6 +8293,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayVideo360AdvertiserLink(DisplayVideo360AdvertiserLink other) : this() {
       name_ = other.name_;
       advertiserId_ = other.advertiserId_;
@@ -7902,6 +8305,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayVideo360AdvertiserLink Clone() {
       return new DisplayVideo360AdvertiserLink(this);
     }
@@ -7916,6 +8320,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Note: linkId is not the Display &amp; Video 360 Advertiser ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -7930,6 +8335,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Immutable. The Display &amp; Video 360 Advertiser's advertiser ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdvertiserId {
       get { return advertiserId_; }
       set {
@@ -7944,6 +8350,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. The display name of the Display &amp; Video 360 Advertiser.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdvertiserDisplayName {
       get { return advertiserDisplayName_; }
       set {
@@ -7960,6 +8367,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this field is not set on create/update, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? AdsPersonalizationEnabled {
       get { return adsPersonalizationEnabled_; }
       set {
@@ -7979,6 +8387,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this field is not set on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? CampaignDataSharingEnabled {
       get { return campaignDataSharingEnabled_; }
       set {
@@ -7999,6 +8408,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this field is not set on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? CostDataSharingEnabled {
       get { return costDataSharingEnabled_; }
       set {
@@ -8008,11 +8418,13 @@ namespace Google.Analytics.Admin.V1Alpha {
 
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DisplayVideo360AdvertiserLink);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DisplayVideo360AdvertiserLink other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8030,6 +8442,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -8045,11 +8458,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8083,6 +8498,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -8112,6 +8528,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -8139,6 +8556,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DisplayVideo360AdvertiserLink other) {
       if (other == null) {
         return;
@@ -8171,6 +8589,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8221,6 +8640,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8284,19 +8704,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<DisplayVideo360AdvertiserLinkProposal> _parser = new pb::MessageParser<DisplayVideo360AdvertiserLinkProposal>(() => new DisplayVideo360AdvertiserLinkProposal());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DisplayVideo360AdvertiserLinkProposal> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayVideo360AdvertiserLinkProposal() {
       OnConstruction();
     }
@@ -8304,6 +8728,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayVideo360AdvertiserLinkProposal(DisplayVideo360AdvertiserLinkProposal other) : this() {
       name_ = other.name_;
       advertiserId_ = other.advertiserId_;
@@ -8317,6 +8742,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DisplayVideo360AdvertiserLinkProposal Clone() {
       return new DisplayVideo360AdvertiserLinkProposal(this);
     }
@@ -8332,6 +8758,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Note: proposalId is not the Display &amp; Video 360 Advertiser ID
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -8346,6 +8773,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Immutable. The Display &amp; Video 360 Advertiser's advertiser ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdvertiserId {
       get { return advertiserId_; }
       set {
@@ -8360,6 +8788,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. The status information for this link proposal.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.LinkProposalStatusDetails LinkProposalStatusDetails {
       get { return linkProposalStatusDetails_; }
       set {
@@ -8375,6 +8804,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Only populated for proposals that originated from Display &amp; Video 360.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdvertiserDisplayName {
       get { return advertiserDisplayName_; }
       set {
@@ -8394,6 +8824,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// may approve the proposal.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ValidationEmail {
       get { return validationEmail_; }
       set {
@@ -8410,6 +8841,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this field is not set on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? AdsPersonalizationEnabled {
       get { return adsPersonalizationEnabled_; }
       set {
@@ -8427,6 +8859,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this field is not set on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? CampaignDataSharingEnabled {
       get { return campaignDataSharingEnabled_; }
       set {
@@ -8445,6 +8878,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// If this field is not set on create, it will be defaulted to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? CostDataSharingEnabled {
       get { return costDataSharingEnabled_; }
       set {
@@ -8454,11 +8888,13 @@ namespace Google.Analytics.Admin.V1Alpha {
 
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DisplayVideo360AdvertiserLinkProposal);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DisplayVideo360AdvertiserLinkProposal other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8478,6 +8914,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -8495,11 +8932,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8541,6 +8980,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -8578,6 +9018,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -8611,6 +9052,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DisplayVideo360AdvertiserLinkProposal other) {
       if (other == null) {
         return;
@@ -8652,6 +9094,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8713,6 +9156,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8782,19 +9226,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<LinkProposalStatusDetails> _parser = new pb::MessageParser<LinkProposalStatusDetails>(() => new LinkProposalStatusDetails());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LinkProposalStatusDetails> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LinkProposalStatusDetails() {
       OnConstruction();
     }
@@ -8802,6 +9250,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LinkProposalStatusDetails(LinkProposalStatusDetails other) : this() {
       linkProposalInitiatingProduct_ = other.linkProposalInitiatingProduct_;
       requestorEmail_ = other.requestorEmail_;
@@ -8810,6 +9259,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LinkProposalStatusDetails Clone() {
       return new LinkProposalStatusDetails(this);
     }
@@ -8821,6 +9271,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. The source of this proposal.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct LinkProposalInitiatingProduct {
       get { return linkProposalInitiatingProduct_; }
       set {
@@ -8835,6 +9286,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. The email address of the user that proposed this linkage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestorEmail {
       get { return requestorEmail_; }
       set {
@@ -8849,6 +9301,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. The state of this proposal.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.LinkProposalState LinkProposalState {
       get { return linkProposalState_; }
       set {
@@ -8857,11 +9310,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LinkProposalStatusDetails);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LinkProposalStatusDetails other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8876,6 +9331,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (LinkProposalInitiatingProduct != global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct.Unspecified) hash ^= LinkProposalInitiatingProduct.GetHashCode();
@@ -8888,11 +9344,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8917,6 +9375,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LinkProposalInitiatingProduct != global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct.Unspecified) {
         output.WriteRawTag(8);
@@ -8937,6 +9396,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (LinkProposalInitiatingProduct != global::Google.Analytics.Admin.V1Alpha.LinkProposalInitiatingProduct.Unspecified) {
@@ -8955,6 +9415,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LinkProposalStatusDetails other) {
       if (other == null) {
         return;
@@ -8972,6 +9433,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9001,6 +9463,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9038,19 +9501,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<ConversionEvent> _parser = new pb::MessageParser<ConversionEvent>(() => new ConversionEvent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConversionEvent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversionEvent() {
       OnConstruction();
     }
@@ -9058,6 +9525,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversionEvent(ConversionEvent other) : this() {
       name_ = other.name_;
       eventName_ = other.eventName_;
@@ -9068,6 +9536,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConversionEvent Clone() {
       return new ConversionEvent(this);
     }
@@ -9080,6 +9549,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Format: properties/{property}/conversionEvents/{conversion_event}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -9095,6 +9565,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Examples: 'click', 'purchase'
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string EventName {
       get { return eventName_; }
       set {
@@ -9109,6 +9580,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Time when this conversion event was created in the property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -9123,6 +9595,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. If set, this event can currently be deleted via DeleteConversionEvent.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Deletable {
       get { return deletable_; }
       set {
@@ -9142,6 +9615,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// custom conversion events that may be created per property.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Custom {
       get { return custom_; }
       set {
@@ -9150,11 +9624,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConversionEvent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConversionEvent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9171,6 +9647,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -9185,11 +9662,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9222,6 +9701,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -9250,6 +9730,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -9274,6 +9755,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConversionEvent other) {
       if (other == null) {
         return;
@@ -9300,6 +9782,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9340,6 +9823,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9388,19 +9872,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<GoogleSignalsSettings> _parser = new pb::MessageParser<GoogleSignalsSettings>(() => new GoogleSignalsSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GoogleSignalsSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleSignalsSettings() {
       OnConstruction();
     }
@@ -9408,6 +9896,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleSignalsSettings(GoogleSignalsSettings other) : this() {
       name_ = other.name_;
       state_ = other.state_;
@@ -9416,6 +9905,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleSignalsSettings Clone() {
       return new GoogleSignalsSettings(this);
     }
@@ -9429,6 +9919,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Example: "properties/1000/googleSignalsSettings"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -9443,6 +9934,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Status of this setting.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.GoogleSignalsState State {
       get { return state_; }
       set {
@@ -9457,6 +9949,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Output only. Terms of Service acceptance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.GoogleSignalsConsent Consent {
       get { return consent_; }
       set {
@@ -9465,11 +9958,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GoogleSignalsSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GoogleSignalsSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9484,6 +9979,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -9496,11 +9992,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9525,6 +10023,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -9545,6 +10044,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -9563,6 +10063,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GoogleSignalsSettings other) {
       if (other == null) {
         return;
@@ -9580,6 +10081,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9609,6 +10111,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9646,19 +10149,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<CustomDimension> _parser = new pb::MessageParser<CustomDimension>(() => new CustomDimension());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CustomDimension> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomDimension() {
       OnConstruction();
     }
@@ -9666,6 +10173,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomDimension(CustomDimension other) : this() {
       name_ = other.name_;
       parameterName_ = other.parameterName_;
@@ -9677,6 +10185,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomDimension Clone() {
       return new CustomDimension(this);
     }
@@ -9689,6 +10198,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Format: properties/{property}/customDimensions/{customDimension}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -9711,6 +10221,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// characters for event-scoped dimensions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ParameterName {
       get { return parameterName_; }
       set {
@@ -9729,6 +10240,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// brackets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -9743,6 +10255,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Optional. Description for this custom dimension. Max length of 150 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -9757,6 +10270,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Required. Immutable. The scope of this dimension.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.CustomDimension.Types.DimensionScope Scope {
       get { return scope_; }
       set {
@@ -9774,6 +10288,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// This is currently only supported by user-scoped custom dimensions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisallowAdsPersonalization {
       get { return disallowAdsPersonalization_; }
       set {
@@ -9782,11 +10297,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CustomDimension);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CustomDimension other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9804,6 +10321,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -9819,11 +10337,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9860,6 +10380,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -9892,6 +10413,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -9919,6 +10441,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CustomDimension other) {
       if (other == null) {
         return;
@@ -9945,6 +10468,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9986,6 +10510,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10025,6 +10550,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the CustomDimension message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Valid values for the scope of this dimension.
@@ -10060,19 +10586,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<CustomMetric> _parser = new pb::MessageParser<CustomMetric>(() => new CustomMetric());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CustomMetric> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomMetric() {
       OnConstruction();
     }
@@ -10080,6 +10610,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomMetric(CustomMetric other) : this() {
       name_ = other.name_;
       parameterName_ = other.parameterName_;
@@ -10091,6 +10622,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomMetric Clone() {
       return new CustomMetric(this);
     }
@@ -10103,6 +10635,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Format: properties/{property}/customMetrics/{customMetric}
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -10123,6 +10656,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// letter. Max length of 40 characters for event-scoped metrics.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ParameterName {
       get { return parameterName_; }
       set {
@@ -10141,6 +10675,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// brackets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -10156,6 +10691,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Max length of 150 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -10170,6 +10706,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Required. The type for the custom metric's value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MeasurementUnit MeasurementUnit {
       get { return measurementUnit_; }
       set {
@@ -10184,6 +10721,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Required. Immutable. The scope of this custom metric.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.CustomMetric.Types.MetricScope Scope {
       get { return scope_; }
       set {
@@ -10192,11 +10730,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CustomMetric);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CustomMetric other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10214,6 +10754,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -10229,11 +10770,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10270,6 +10813,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -10302,6 +10846,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -10329,6 +10874,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CustomMetric other) {
       if (other == null) {
         return;
@@ -10355,6 +10901,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10396,6 +10943,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10435,6 +10983,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the CustomMetric message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Possible types of representing the custom metric's value.
@@ -10519,19 +11068,23 @@ namespace Google.Analytics.Admin.V1Alpha {
     private static readonly pb::MessageParser<DataRetentionSettings> _parser = new pb::MessageParser<DataRetentionSettings>(() => new DataRetentionSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DataRetentionSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Analytics.Admin.V1Alpha.ResourcesReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataRetentionSettings() {
       OnConstruction();
     }
@@ -10539,6 +11092,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataRetentionSettings(DataRetentionSettings other) : this() {
       name_ = other.name_;
       eventDataRetention_ = other.eventDataRetention_;
@@ -10547,6 +11101,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataRetentionSettings Clone() {
       return new DataRetentionSettings(this);
     }
@@ -10559,6 +11114,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// Format: properties/{property}/dataRetentionSettings
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -10573,6 +11129,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// The length of time that event-level data is retained.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Types.RetentionDuration EventDataRetention {
       get { return eventDataRetention_; }
       set {
@@ -10588,6 +11145,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     /// event from that user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ResetUserDataOnNewActivity {
       get { return resetUserDataOnNewActivity_; }
       set {
@@ -10596,11 +11154,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DataRetentionSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DataRetentionSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10615,6 +11175,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -10627,11 +11188,13 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10656,6 +11219,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -10676,6 +11240,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -10694,6 +11259,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DataRetentionSettings other) {
       if (other == null) {
         return;
@@ -10711,6 +11277,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10740,6 +11307,7 @@ namespace Google.Analytics.Admin.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10767,6 +11335,7 @@ namespace Google.Analytics.Admin.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the DataRetentionSettings message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Valid values for the data retention duration.

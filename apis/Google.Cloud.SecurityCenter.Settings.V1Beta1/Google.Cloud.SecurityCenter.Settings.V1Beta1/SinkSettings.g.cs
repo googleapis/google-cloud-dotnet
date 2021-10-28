@@ -57,19 +57,23 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     private static readonly pb::MessageParser<SinkSettings> _parser = new pb::MessageParser<SinkSettings>(() => new SinkSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SinkSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.SecurityCenter.Settings.V1Beta1.SinkSettingsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SinkSettings() {
       OnConstruction();
     }
@@ -77,12 +81,14 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SinkSettings(SinkSettings other) : this() {
       loggingSinkProject_ = other.loggingSinkProject_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SinkSettings Clone() {
       return new SinkSettings(this);
     }
@@ -98,6 +104,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     /// project number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LoggingSinkProject {
       get { return loggingSinkProject_; }
       set {
@@ -106,11 +113,13 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SinkSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SinkSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -123,6 +132,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (LoggingSinkProject.Length != 0) hash ^= LoggingSinkProject.GetHashCode();
@@ -133,11 +143,13 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -154,6 +166,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LoggingSinkProject.Length != 0) {
         output.WriteRawTag(10);
@@ -166,6 +179,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (LoggingSinkProject.Length != 0) {
@@ -178,6 +192,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SinkSettings other) {
       if (other == null) {
         return;
@@ -189,6 +204,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -210,6 +226,7 @@ namespace Google.Cloud.SecurityCenter.Settings.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

@@ -55,19 +55,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<FixedOrPercent> _parser = new pb::MessageParser<FixedOrPercent>(() => new FixedOrPercent());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FixedOrPercent> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.OsconfigCommonReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FixedOrPercent() {
       OnConstruction();
     }
@@ -75,6 +79,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FixedOrPercent(FixedOrPercent other) : this() {
       switch (other.ModeCase) {
         case ModeOneofCase.Fixed:
@@ -89,6 +94,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FixedOrPercent Clone() {
       return new FixedOrPercent(this);
     }
@@ -99,6 +105,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Specifies a fixed value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Fixed {
       get { return modeCase_ == ModeOneofCase.Fixed ? (int) mode_ : 0; }
       set {
@@ -114,6 +121,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// multiplied by a reference value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Percent {
       get { return modeCase_ == ModeOneofCase.Percent ? (int) mode_ : 0; }
       set {
@@ -131,22 +139,26 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
     private ModeOneofCase modeCase_ = ModeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModeOneofCase ModeCase {
       get { return modeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMode() {
       modeCase_ = ModeOneofCase.None;
       mode_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FixedOrPercent);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FixedOrPercent other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -161,6 +173,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (modeCase_ == ModeOneofCase.Fixed) hash ^= Fixed.GetHashCode();
@@ -173,11 +186,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -198,6 +213,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (modeCase_ == ModeOneofCase.Fixed) {
         output.WriteRawTag(8);
@@ -214,6 +230,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (modeCase_ == ModeOneofCase.Fixed) {
@@ -229,6 +246,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FixedOrPercent other) {
       if (other == null) {
         return;
@@ -246,6 +264,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -271,6 +290,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

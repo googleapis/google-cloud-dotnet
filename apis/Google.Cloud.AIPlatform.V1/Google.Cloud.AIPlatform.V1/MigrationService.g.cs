@@ -144,19 +144,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<SearchMigratableResourcesRequest> _parser = new pb::MessageParser<SearchMigratableResourcesRequest>(() => new SearchMigratableResourcesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SearchMigratableResourcesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigrationServiceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchMigratableResourcesRequest() {
       OnConstruction();
     }
@@ -164,6 +168,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchMigratableResourcesRequest(SearchMigratableResourcesRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -173,6 +178,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchMigratableResourcesRequest Clone() {
       return new SearchMigratableResourcesRequest(this);
     }
@@ -188,6 +194,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -203,6 +210,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The default and maximum value is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -217,6 +225,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The standard page token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -242,6 +251,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///     *   `NOT last_migrate_time:*` filters for not yet migrated resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -250,11 +260,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SearchMigratableResourcesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SearchMigratableResourcesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -270,6 +282,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -283,11 +296,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -316,6 +331,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -340,6 +356,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -361,6 +378,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SearchMigratableResourcesRequest other) {
       if (other == null) {
         return;
@@ -381,6 +399,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -414,6 +433,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -455,19 +475,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<SearchMigratableResourcesResponse> _parser = new pb::MessageParser<SearchMigratableResourcesResponse>(() => new SearchMigratableResourcesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SearchMigratableResourcesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigrationServiceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchMigratableResourcesResponse() {
       OnConstruction();
     }
@@ -475,6 +499,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchMigratableResourcesResponse(SearchMigratableResourcesResponse other) : this() {
       migratableResources_ = other.migratableResources_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -482,6 +507,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SearchMigratableResourcesResponse Clone() {
       return new SearchMigratableResourcesResponse(this);
     }
@@ -496,6 +522,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// location specified in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.MigratableResource> MigratableResources {
       get { return migratableResources_; }
     }
@@ -509,6 +536,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// SearchMigratableResourcesRequest even when there are subsequent pages.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -517,11 +545,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SearchMigratableResourcesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SearchMigratableResourcesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -535,6 +565,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= migratableResources_.GetHashCode();
@@ -546,11 +577,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -568,6 +601,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       migratableResources_.WriteTo(ref output, _repeated_migratableResources_codec);
       if (NextPageToken.Length != 0) {
@@ -581,6 +615,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += migratableResources_.CalculateSize(_repeated_migratableResources_codec);
@@ -594,6 +629,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SearchMigratableResourcesResponse other) {
       if (other == null) {
         return;
@@ -606,6 +642,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -631,6 +668,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -664,19 +702,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<BatchMigrateResourcesRequest> _parser = new pb::MessageParser<BatchMigrateResourcesRequest>(() => new BatchMigrateResourcesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchMigrateResourcesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigrationServiceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesRequest() {
       OnConstruction();
     }
@@ -684,6 +726,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesRequest(BatchMigrateResourcesRequest other) : this() {
       parent_ = other.parent_;
       migrateResourceRequests_ = other.migrateResourceRequests_.Clone();
@@ -691,6 +734,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesRequest Clone() {
       return new BatchMigrateResourcesRequest(this);
     }
@@ -703,6 +747,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -721,16 +766,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Up to 50 resources can be migrated in one batch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest> MigrateResourceRequests {
       get { return migrateResourceRequests_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchMigrateResourcesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchMigrateResourcesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -744,6 +792,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -755,11 +804,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -777,6 +828,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -790,6 +842,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -803,6 +856,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchMigrateResourcesRequest other) {
       if (other == null) {
         return;
@@ -815,6 +869,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -840,6 +895,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -874,19 +930,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<MigrateResourceRequest> _parser = new pb::MessageParser<MigrateResourceRequest>(() => new MigrateResourceRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MigrateResourceRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigrationServiceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrateResourceRequest() {
       OnConstruction();
     }
@@ -894,6 +954,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrateResourceRequest(MigrateResourceRequest other) : this() {
       switch (other.RequestCase) {
         case RequestOneofCase.MigrateMlEngineModelVersionConfig:
@@ -914,6 +975,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrateResourceRequest Clone() {
       return new MigrateResourceRequest(this);
     }
@@ -924,6 +986,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Config for migrating Version in ml.googleapis.com to Vertex AI's Model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateMlEngineModelVersionConfig MigrateMlEngineModelVersionConfig {
       get { return requestCase_ == RequestOneofCase.MigrateMlEngineModelVersionConfig ? (global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateMlEngineModelVersionConfig) request_ : null; }
       set {
@@ -939,6 +1002,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateAutomlModelConfig MigrateAutomlModelConfig {
       get { return requestCase_ == RequestOneofCase.MigrateAutomlModelConfig ? (global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateAutomlModelConfig) request_ : null; }
       set {
@@ -954,6 +1018,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateAutomlDatasetConfig MigrateAutomlDatasetConfig {
       get { return requestCase_ == RequestOneofCase.MigrateAutomlDatasetConfig ? (global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateAutomlDatasetConfig) request_ : null; }
       set {
@@ -969,6 +1034,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Vertex AI's Dataset.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig MigrateDataLabelingDatasetConfig {
       get { return requestCase_ == RequestOneofCase.MigrateDataLabelingDatasetConfig ? (global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig) request_ : null; }
       set {
@@ -988,22 +1054,26 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
     private RequestOneofCase requestCase_ = RequestOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RequestOneofCase RequestCase {
       get { return requestCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRequest() {
       requestCase_ = RequestOneofCase.None;
       request_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MigrateResourceRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MigrateResourceRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1020,6 +1090,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (requestCase_ == RequestOneofCase.MigrateMlEngineModelVersionConfig) hash ^= MigrateMlEngineModelVersionConfig.GetHashCode();
@@ -1034,11 +1105,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1067,6 +1140,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (requestCase_ == RequestOneofCase.MigrateMlEngineModelVersionConfig) {
         output.WriteRawTag(10);
@@ -1091,6 +1165,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (requestCase_ == RequestOneofCase.MigrateMlEngineModelVersionConfig) {
@@ -1112,6 +1187,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MigrateResourceRequest other) {
       if (other == null) {
         return;
@@ -1147,6 +1223,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1200,6 +1277,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1251,6 +1329,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the MigrateResourceRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Config for migrating version in ml.googleapis.com to Vertex AI's Model.
@@ -1263,19 +1342,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<MigrateMlEngineModelVersionConfig> _parser = new pb::MessageParser<MigrateMlEngineModelVersionConfig>(() => new MigrateMlEngineModelVersionConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<MigrateMlEngineModelVersionConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateMlEngineModelVersionConfig() {
           OnConstruction();
         }
@@ -1283,6 +1366,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateMlEngineModelVersionConfig(MigrateMlEngineModelVersionConfig other) : this() {
           endpoint_ = other.endpoint_;
           modelVersion_ = other.modelVersion_;
@@ -1291,6 +1375,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateMlEngineModelVersionConfig Clone() {
           return new MigrateMlEngineModelVersionConfig(this);
         }
@@ -1312,6 +1397,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// * asia-east1-ml.googleapis.com
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Endpoint {
           get { return endpoint_; }
           set {
@@ -1327,6 +1413,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Format: `projects/{project}/models/{model}/versions/{version}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ModelVersion {
           get { return modelVersion_; }
           set {
@@ -1342,6 +1429,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// System will pick a display name if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ModelDisplayName {
           get { return modelDisplayName_; }
           set {
@@ -1350,11 +1438,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as MigrateMlEngineModelVersionConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(MigrateMlEngineModelVersionConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1369,6 +1459,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Endpoint.Length != 0) hash ^= Endpoint.GetHashCode();
@@ -1381,11 +1472,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1410,6 +1503,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Endpoint.Length != 0) {
             output.WriteRawTag(10);
@@ -1430,6 +1524,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Endpoint.Length != 0) {
@@ -1448,6 +1543,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(MigrateMlEngineModelVersionConfig other) {
           if (other == null) {
             return;
@@ -1465,6 +1561,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1494,6 +1591,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1531,19 +1629,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<MigrateAutomlModelConfig> _parser = new pb::MessageParser<MigrateAutomlModelConfig>(() => new MigrateAutomlModelConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<MigrateAutomlModelConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateAutomlModelConfig() {
           OnConstruction();
         }
@@ -1551,6 +1653,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateAutomlModelConfig(MigrateAutomlModelConfig other) : this() {
           model_ = other.model_;
           modelDisplayName_ = other.modelDisplayName_;
@@ -1558,6 +1661,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateAutomlModelConfig Clone() {
           return new MigrateAutomlModelConfig(this);
         }
@@ -1571,6 +1675,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// `projects/{project}/locations/{location}/models/{model}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Model {
           get { return model_; }
           set {
@@ -1586,6 +1691,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// System will pick a display name if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ModelDisplayName {
           get { return modelDisplayName_; }
           set {
@@ -1594,11 +1700,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as MigrateAutomlModelConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(MigrateAutomlModelConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1612,6 +1720,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -1623,11 +1732,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1648,6 +1759,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Model.Length != 0) {
             output.WriteRawTag(10);
@@ -1664,6 +1776,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Model.Length != 0) {
@@ -1679,6 +1792,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(MigrateAutomlModelConfig other) {
           if (other == null) {
             return;
@@ -1693,6 +1807,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1718,6 +1833,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1752,19 +1868,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<MigrateAutomlDatasetConfig> _parser = new pb::MessageParser<MigrateAutomlDatasetConfig>(() => new MigrateAutomlDatasetConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<MigrateAutomlDatasetConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateAutomlDatasetConfig() {
           OnConstruction();
         }
@@ -1772,6 +1892,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateAutomlDatasetConfig(MigrateAutomlDatasetConfig other) : this() {
           dataset_ = other.dataset_;
           datasetDisplayName_ = other.datasetDisplayName_;
@@ -1779,6 +1900,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateAutomlDatasetConfig Clone() {
           return new MigrateAutomlDatasetConfig(this);
         }
@@ -1792,6 +1914,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// `projects/{project}/locations/{location}/datasets/{dataset}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
           get { return dataset_; }
           set {
@@ -1807,6 +1930,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// System will pick a display name if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DatasetDisplayName {
           get { return datasetDisplayName_; }
           set {
@@ -1815,11 +1939,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as MigrateAutomlDatasetConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(MigrateAutomlDatasetConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1833,6 +1959,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
@@ -1844,11 +1971,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1869,6 +1998,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Dataset.Length != 0) {
             output.WriteRawTag(10);
@@ -1885,6 +2015,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Dataset.Length != 0) {
@@ -1900,6 +2031,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(MigrateAutomlDatasetConfig other) {
           if (other == null) {
             return;
@@ -1914,6 +2046,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1939,6 +2072,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1973,19 +2107,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<MigrateDataLabelingDatasetConfig> _parser = new pb::MessageParser<MigrateDataLabelingDatasetConfig>(() => new MigrateDataLabelingDatasetConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<MigrateDataLabelingDatasetConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateDataLabelingDatasetConfig() {
           OnConstruction();
         }
@@ -1993,6 +2131,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateDataLabelingDatasetConfig(MigrateDataLabelingDatasetConfig other) : this() {
           dataset_ = other.dataset_;
           datasetDisplayName_ = other.datasetDisplayName_;
@@ -2001,6 +2140,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MigrateDataLabelingDatasetConfig Clone() {
           return new MigrateDataLabelingDatasetConfig(this);
         }
@@ -2014,6 +2154,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// `projects/{project}/datasets/{dataset}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
           get { return dataset_; }
           set {
@@ -2029,6 +2170,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// System will pick a display name if unspecified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DatasetDisplayName {
           get { return datasetDisplayName_; }
           set {
@@ -2047,16 +2189,19 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// to the datalabeling Dataset.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig.Types.MigrateDataLabelingAnnotatedDatasetConfig> MigrateDataLabelingAnnotatedDatasetConfigs {
           get { return migrateDataLabelingAnnotatedDatasetConfigs_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as MigrateDataLabelingDatasetConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(MigrateDataLabelingDatasetConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2071,6 +2216,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
@@ -2083,11 +2229,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2109,6 +2257,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Dataset.Length != 0) {
             output.WriteRawTag(10);
@@ -2126,6 +2275,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Dataset.Length != 0) {
@@ -2142,6 +2292,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(MigrateDataLabelingDatasetConfig other) {
           if (other == null) {
             return;
@@ -2157,6 +2308,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2186,6 +2338,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2213,6 +2366,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the MigrateDataLabelingDatasetConfig message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Config for migrating AnnotatedDataset in datalabeling.googleapis.com to
@@ -2226,19 +2380,23 @@ namespace Google.Cloud.AIPlatform.V1 {
             private static readonly pb::MessageParser<MigrateDataLabelingAnnotatedDatasetConfig> _parser = new pb::MessageParser<MigrateDataLabelingAnnotatedDatasetConfig>(() => new MigrateDataLabelingAnnotatedDatasetConfig());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<MigrateDataLabelingAnnotatedDatasetConfig> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest.Types.MigrateDataLabelingDatasetConfig.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public MigrateDataLabelingAnnotatedDatasetConfig() {
               OnConstruction();
             }
@@ -2246,12 +2404,14 @@ namespace Google.Cloud.AIPlatform.V1 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public MigrateDataLabelingAnnotatedDatasetConfig(MigrateDataLabelingAnnotatedDatasetConfig other) : this() {
               annotatedDataset_ = other.annotatedDataset_;
               _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public MigrateDataLabelingAnnotatedDatasetConfig Clone() {
               return new MigrateDataLabelingAnnotatedDatasetConfig(this);
             }
@@ -2265,6 +2425,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// `projects/{project}/datasets/{dataset}/annotatedDatasets/{annotated_dataset}`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string AnnotatedDataset {
               get { return annotatedDataset_; }
               set {
@@ -2273,11 +2434,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as MigrateDataLabelingAnnotatedDatasetConfig);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(MigrateDataLabelingAnnotatedDatasetConfig other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -2290,6 +2453,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (AnnotatedDataset.Length != 0) hash ^= AnnotatedDataset.GetHashCode();
@@ -2300,11 +2464,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -2321,6 +2487,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (AnnotatedDataset.Length != 0) {
                 output.WriteRawTag(10);
@@ -2333,6 +2500,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (AnnotatedDataset.Length != 0) {
@@ -2345,6 +2513,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(MigrateDataLabelingAnnotatedDatasetConfig other) {
               if (other == null) {
                 return;
@@ -2356,6 +2525,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -2377,6 +2547,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -2416,19 +2587,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<BatchMigrateResourcesResponse> _parser = new pb::MessageParser<BatchMigrateResourcesResponse>(() => new BatchMigrateResourcesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchMigrateResourcesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigrationServiceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesResponse() {
       OnConstruction();
     }
@@ -2436,12 +2611,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesResponse(BatchMigrateResourcesResponse other) : this() {
       migrateResourceResponses_ = other.migrateResourceResponses_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesResponse Clone() {
       return new BatchMigrateResourcesResponse(this);
     }
@@ -2455,16 +2632,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Successfully migrated resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.MigrateResourceResponse> MigrateResourceResponses {
       get { return migrateResourceResponses_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchMigrateResourcesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchMigrateResourcesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2477,6 +2657,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= migrateResourceResponses_.GetHashCode();
@@ -2487,11 +2668,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2505,6 +2688,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       migrateResourceResponses_.WriteTo(ref output, _repeated_migrateResourceResponses_codec);
       if (_unknownFields != null) {
@@ -2514,6 +2698,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += migrateResourceResponses_.CalculateSize(_repeated_migrateResourceResponses_codec);
@@ -2524,6 +2709,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchMigrateResourcesResponse other) {
       if (other == null) {
         return;
@@ -2533,6 +2719,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2554,6 +2741,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2583,19 +2771,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<MigrateResourceResponse> _parser = new pb::MessageParser<MigrateResourceResponse>(() => new MigrateResourceResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MigrateResourceResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigrationServiceReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrateResourceResponse() {
       OnConstruction();
     }
@@ -2603,6 +2795,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrateResourceResponse(MigrateResourceResponse other) : this() {
       migratableResource_ = other.migratableResource_ != null ? other.migratableResource_.Clone() : null;
       switch (other.MigratedResourceCase) {
@@ -2618,6 +2811,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigrateResourceResponse Clone() {
       return new MigrateResourceResponse(this);
     }
@@ -2628,6 +2822,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Migrated Dataset's resource name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Dataset {
       get { return migratedResourceCase_ == MigratedResourceOneofCase.Dataset ? (string) migratedResource_ : ""; }
       set {
@@ -2642,6 +2837,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Migrated Model's resource name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return migratedResourceCase_ == MigratedResourceOneofCase.Model ? (string) migratedResource_ : ""; }
       set {
@@ -2658,6 +2854,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// automl.googleapis.com or datalabeling.googleapis.com.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigratableResource MigratableResource {
       get { return migratableResource_; }
       set {
@@ -2674,22 +2871,26 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
     private MigratedResourceOneofCase migratedResourceCase_ = MigratedResourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigratedResourceOneofCase MigratedResourceCase {
       get { return migratedResourceCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMigratedResource() {
       migratedResourceCase_ = MigratedResourceOneofCase.None;
       migratedResource_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MigrateResourceResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MigrateResourceResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2705,6 +2906,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) hash ^= Dataset.GetHashCode();
@@ -2718,11 +2920,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2747,6 +2951,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
         output.WriteRawTag(10);
@@ -2767,6 +2972,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (migratedResourceCase_ == MigratedResourceOneofCase.Dataset) {
@@ -2785,6 +2991,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MigrateResourceResponse other) {
       if (other == null) {
         return;
@@ -2808,6 +3015,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2840,6 +3048,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2880,19 +3089,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<BatchMigrateResourcesOperationMetadata> _parser = new pb::MessageParser<BatchMigrateResourcesOperationMetadata>(() => new BatchMigrateResourcesOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchMigrateResourcesOperationMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigrationServiceReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesOperationMetadata() {
       OnConstruction();
     }
@@ -2900,6 +3113,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesOperationMetadata(BatchMigrateResourcesOperationMetadata other) : this() {
       genericMetadata_ = other.genericMetadata_ != null ? other.genericMetadata_.Clone() : null;
       partialResults_ = other.partialResults_.Clone();
@@ -2907,6 +3121,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchMigrateResourcesOperationMetadata Clone() {
       return new BatchMigrateResourcesOperationMetadata(this);
     }
@@ -2918,6 +3133,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The common part of the operation metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata GenericMetadata {
       get { return genericMetadata_; }
       set {
@@ -2934,16 +3150,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Partial results that reflect the latest migration operation progress.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.BatchMigrateResourcesOperationMetadata.Types.PartialResult> PartialResults {
       get { return partialResults_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchMigrateResourcesOperationMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchMigrateResourcesOperationMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2957,6 +3176,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (genericMetadata_ != null) hash ^= GenericMetadata.GetHashCode();
@@ -2968,11 +3188,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2990,6 +3212,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (genericMetadata_ != null) {
         output.WriteRawTag(10);
@@ -3003,6 +3226,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (genericMetadata_ != null) {
@@ -3016,6 +3240,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchMigrateResourcesOperationMetadata other) {
       if (other == null) {
         return;
@@ -3031,6 +3256,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3059,6 +3285,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3085,6 +3312,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the BatchMigrateResourcesOperationMetadata message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Represents a partial result in batch migration operation for one
@@ -3098,19 +3326,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<PartialResult> _parser = new pb::MessageParser<PartialResult>(() => new PartialResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<PartialResult> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.BatchMigrateResourcesOperationMetadata.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PartialResult() {
           OnConstruction();
         }
@@ -3118,6 +3350,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PartialResult(PartialResult other) : this() {
           request_ = other.request_ != null ? other.request_.Clone() : null;
           switch (other.ResultCase) {
@@ -3136,6 +3369,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PartialResult Clone() {
           return new PartialResult(this);
         }
@@ -3146,6 +3380,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The error result of the migration request in case of failure.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Rpc.Status Error {
           get { return resultCase_ == ResultOneofCase.Error ? (global::Google.Rpc.Status) result_ : null; }
           set {
@@ -3160,6 +3395,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Migrated model resource name.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Model {
           get { return resultCase_ == ResultOneofCase.Model ? (string) result_ : ""; }
           set {
@@ -3174,6 +3410,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Migrated dataset resource name.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
           get { return resultCase_ == ResultOneofCase.Dataset ? (string) result_ : ""; }
           set {
@@ -3190,6 +3427,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// [MigrateResourceRequest.migrate_resource_requests][].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.MigrateResourceRequest Request {
           get { return request_; }
           set {
@@ -3207,22 +3445,26 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         private ResultOneofCase resultCase_ = ResultOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ResultOneofCase ResultCase {
           get { return resultCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearResult() {
           resultCase_ = ResultOneofCase.None;
           result_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as PartialResult);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(PartialResult other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3239,6 +3481,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (resultCase_ == ResultOneofCase.Error) hash ^= Error.GetHashCode();
@@ -3253,11 +3496,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3286,6 +3531,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (request_ != null) {
             output.WriteRawTag(10);
@@ -3310,6 +3556,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (resultCase_ == ResultOneofCase.Error) {
@@ -3331,6 +3578,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(PartialResult other) {
           if (other == null) {
             return;
@@ -3360,6 +3608,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3401,6 +3650,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

@@ -60,19 +60,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     private static readonly pb::MessageParser<TabularRegressionPredictionResult> _parser = new pb::MessageParser<TabularRegressionPredictionResult>(() => new TabularRegressionPredictionResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TabularRegressionPredictionResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.TabularRegressionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TabularRegressionPredictionResult() {
       OnConstruction();
     }
@@ -80,6 +84,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TabularRegressionPredictionResult(TabularRegressionPredictionResult other) : this() {
       value_ = other.value_;
       lowerBound_ = other.lowerBound_;
@@ -88,6 +93,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TabularRegressionPredictionResult Clone() {
       return new TabularRegressionPredictionResult(this);
     }
@@ -99,6 +105,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// The regression value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Value {
       get { return value_; }
       set {
@@ -113,6 +120,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// The lower bound of the prediction interval.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float LowerBound {
       get { return lowerBound_; }
       set {
@@ -127,6 +135,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// The upper bound of the prediction interval.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float UpperBound {
       get { return upperBound_; }
       set {
@@ -135,11 +144,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TabularRegressionPredictionResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TabularRegressionPredictionResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -154,6 +165,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Value != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(Value);
@@ -166,11 +178,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -195,6 +209,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Value != 0F) {
         output.WriteRawTag(13);
@@ -215,6 +230,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Value != 0F) {
@@ -233,6 +249,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TabularRegressionPredictionResult other) {
       if (other == null) {
         return;
@@ -250,6 +267,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -279,6 +297,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

@@ -138,19 +138,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<PipelineJob> _parser = new pb::MessageParser<PipelineJob>(() => new PipelineJob());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PipelineJob> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.PipelineJobReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineJob() {
       OnConstruction();
     }
@@ -158,6 +162,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineJob(PipelineJob other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -178,6 +183,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineJob Clone() {
       return new PipelineJob(this);
     }
@@ -189,6 +195,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The resource name of the PipelineJob.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -205,6 +212,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -219,6 +227,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Pipeline creation time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -233,6 +242,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Pipeline start time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -247,6 +257,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Pipeline end time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -261,6 +272,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Timestamp when this PipelineJob was most recently updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -275,6 +287,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Required. The spec of the pipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Struct PipelineSpec {
       get { return pipelineSpec_; }
       set {
@@ -289,6 +302,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The detailed state of the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineState State {
       get { return state_; }
       set {
@@ -303,6 +317,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The details of pipeline run. Not available in the list view.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineJobDetail JobDetail {
       get { return jobDetail_; }
       set {
@@ -318,6 +333,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Only populated when the pipeline's state is FAILED or CANCELLED.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -340,6 +356,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// See https://goo.gl/xmQnxf for more information and examples of labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -351,6 +368,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Runtime config of the pipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineJob.Types.RuntimeConfig RuntimeConfig {
       get { return runtimeConfig_; }
       set {
@@ -366,6 +384,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// PipelineJob and all of its sub-resources will be secured by this key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.EncryptionSpec EncryptionSpec {
       get { return encryptionSpec_; }
       set {
@@ -387,6 +406,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// permission on this service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceAccount {
       get { return serviceAccount_; }
       set {
@@ -414,6 +434,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// with any network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Network {
       get { return network_; }
       set {
@@ -422,11 +443,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PipelineJob);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PipelineJob other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -453,6 +476,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -477,11 +501,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -551,6 +577,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -616,6 +643,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -668,6 +696,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PipelineJob other) {
       if (other == null) {
         return;
@@ -746,6 +775,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -850,6 +880,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -952,6 +983,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PipelineJob message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The runtime config of a PipelineJob.
@@ -964,19 +996,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<RuntimeConfig> _parser = new pb::MessageParser<RuntimeConfig>(() => new RuntimeConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<RuntimeConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.PipelineJob.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RuntimeConfig() {
           OnConstruction();
         }
@@ -984,6 +1020,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RuntimeConfig(RuntimeConfig other) : this() {
           parameters_ = other.parameters_.Clone();
           gcsOutputDirectory_ = other.gcsOutputDirectory_;
@@ -991,6 +1028,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RuntimeConfig Clone() {
           return new RuntimeConfig(this);
         }
@@ -1006,6 +1044,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// at runtime.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.Value> Parameters {
           get { return parameters_; }
         }
@@ -1023,6 +1062,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// permissions for this bucket.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string GcsOutputDirectory {
           get { return gcsOutputDirectory_; }
           set {
@@ -1031,11 +1071,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as RuntimeConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(RuntimeConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1049,6 +1091,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= Parameters.GetHashCode();
@@ -1060,11 +1103,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1082,6 +1127,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           parameters_.WriteTo(ref output, _map_parameters_codec);
           if (GcsOutputDirectory.Length != 0) {
@@ -1095,6 +1141,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += parameters_.CalculateSize(_map_parameters_codec);
@@ -1108,6 +1155,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(RuntimeConfig other) {
           if (other == null) {
             return;
@@ -1120,6 +1168,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1145,6 +1194,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1183,19 +1233,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<PipelineJobDetail> _parser = new pb::MessageParser<PipelineJobDetail>(() => new PipelineJobDetail());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PipelineJobDetail> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.PipelineJobReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineJobDetail() {
       OnConstruction();
     }
@@ -1203,6 +1257,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineJobDetail(PipelineJobDetail other) : this() {
       pipelineContext_ = other.pipelineContext_ != null ? other.pipelineContext_.Clone() : null;
       pipelineRunContext_ = other.pipelineRunContext_ != null ? other.pipelineRunContext_.Clone() : null;
@@ -1211,6 +1266,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineJobDetail Clone() {
       return new PipelineJobDetail(this);
     }
@@ -1222,6 +1278,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The context of the pipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Context PipelineContext {
       get { return pipelineContext_; }
       set {
@@ -1236,6 +1293,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The context of the current pipeline run.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Context PipelineRunContext {
       get { return pipelineRunContext_; }
       set {
@@ -1252,16 +1310,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The runtime details of the tasks under the pipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail> TaskDetails {
       get { return taskDetails_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PipelineJobDetail);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PipelineJobDetail other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1276,6 +1337,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (pipelineContext_ != null) hash ^= PipelineContext.GetHashCode();
@@ -1288,11 +1350,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1314,6 +1378,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (pipelineContext_ != null) {
         output.WriteRawTag(10);
@@ -1331,6 +1396,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (pipelineContext_ != null) {
@@ -1347,6 +1413,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PipelineJobDetail other) {
       if (other == null) {
         return;
@@ -1368,6 +1435,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1403,6 +1471,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1446,19 +1515,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<PipelineTaskDetail> _parser = new pb::MessageParser<PipelineTaskDetail>(() => new PipelineTaskDetail());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PipelineTaskDetail> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.PipelineJobReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineTaskDetail() {
       OnConstruction();
     }
@@ -1466,6 +1539,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineTaskDetail(PipelineTaskDetail other) : this() {
       taskId_ = other.taskId_;
       parentTaskId_ = other.parentTaskId_;
@@ -1483,6 +1557,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineTaskDetail Clone() {
       return new PipelineTaskDetail(this);
     }
@@ -1494,6 +1569,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The system generated ID of the task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TaskId {
       get { return taskId_; }
       set {
@@ -1509,6 +1585,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Empty if the task is at the root level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ParentTaskId {
       get { return parentTaskId_; }
       set {
@@ -1524,6 +1601,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// [PipelineJob.spec][].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TaskName {
       get { return taskName_; }
       set {
@@ -1538,6 +1616,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Task create time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1552,6 +1631,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Task start time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -1566,6 +1646,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Task end time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -1580,6 +1661,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The detailed execution info.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail ExecutorDetail {
       get { return executorDetail_; }
       set {
@@ -1594,6 +1676,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. State of the task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.State State {
       get { return state_; }
       set {
@@ -1608,6 +1691,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The execution metadata of the task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Execution Execution {
       get { return execution_; }
       set {
@@ -1623,6 +1707,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Only populated when the task's state is FAILED or CANCELLED.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -1639,6 +1724,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The runtime input artifacts of the task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.ArtifactList> Inputs {
       get { return inputs_; }
     }
@@ -1652,16 +1738,19 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The runtime output artifacts of the task.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Types.ArtifactList> Outputs {
       get { return outputs_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PipelineTaskDetail);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PipelineTaskDetail other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1685,6 +1774,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TaskId != 0L) hash ^= TaskId.GetHashCode();
@@ -1706,11 +1796,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1765,6 +1857,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TaskId != 0L) {
         output.WriteRawTag(8);
@@ -1815,6 +1908,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TaskId != 0L) {
@@ -1856,6 +1950,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PipelineTaskDetail other) {
       if (other == null) {
         return;
@@ -1914,6 +2009,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1997,6 +2093,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2078,6 +2175,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PipelineTaskDetail message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies state of TaskExecution
@@ -2138,19 +2236,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<ArtifactList> _parser = new pb::MessageParser<ArtifactList>(() => new ArtifactList());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ArtifactList> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.PipelineTaskDetail.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ArtifactList() {
           OnConstruction();
         }
@@ -2158,12 +2260,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ArtifactList(ArtifactList other) : this() {
           artifacts_ = other.artifacts_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ArtifactList Clone() {
           return new ArtifactList(this);
         }
@@ -2177,16 +2281,19 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Output only. A list of artifact metadata.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Artifact> Artifacts {
           get { return artifacts_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ArtifactList);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ArtifactList other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2199,6 +2306,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= artifacts_.GetHashCode();
@@ -2209,11 +2317,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2227,6 +2337,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           artifacts_.WriteTo(ref output, _repeated_artifacts_codec);
           if (_unknownFields != null) {
@@ -2236,6 +2347,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += artifacts_.CalculateSize(_repeated_artifacts_codec);
@@ -2246,6 +2358,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ArtifactList other) {
           if (other == null) {
             return;
@@ -2255,6 +2368,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2276,6 +2390,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2310,19 +2425,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<PipelineTaskExecutorDetail> _parser = new pb::MessageParser<PipelineTaskExecutorDetail>(() => new PipelineTaskExecutorDetail());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PipelineTaskExecutorDetail> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.PipelineJobReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineTaskExecutorDetail() {
       OnConstruction();
     }
@@ -2330,6 +2449,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineTaskExecutorDetail(PipelineTaskExecutorDetail other) : this() {
       switch (other.DetailsCase) {
         case DetailsOneofCase.ContainerDetail:
@@ -2344,6 +2464,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PipelineTaskExecutorDetail Clone() {
       return new PipelineTaskExecutorDetail(this);
     }
@@ -2354,6 +2475,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. The detailed info for a container executor.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.ContainerDetail ContainerDetail {
       get { return detailsCase_ == DetailsOneofCase.ContainerDetail ? (global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.ContainerDetail) details_ : null; }
       set {
@@ -2369,6 +2491,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.CustomJobDetail CustomJobDetail {
       get { return detailsCase_ == DetailsOneofCase.CustomJobDetail ? (global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Types.CustomJobDetail) details_ : null; }
       set {
@@ -2386,22 +2509,26 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
     private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DetailsOneofCase DetailsCase {
       get { return detailsCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDetails() {
       detailsCase_ = DetailsOneofCase.None;
       details_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PipelineTaskExecutorDetail);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PipelineTaskExecutorDetail other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2416,6 +2543,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (detailsCase_ == DetailsOneofCase.ContainerDetail) hash ^= ContainerDetail.GetHashCode();
@@ -2428,11 +2556,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2453,6 +2583,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (detailsCase_ == DetailsOneofCase.ContainerDetail) {
         output.WriteRawTag(10);
@@ -2469,6 +2600,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (detailsCase_ == DetailsOneofCase.ContainerDetail) {
@@ -2484,6 +2616,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PipelineTaskExecutorDetail other) {
       if (other == null) {
         return;
@@ -2507,6 +2640,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2542,6 +2676,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2575,6 +2710,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PipelineTaskExecutorDetail message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The detail of a container execution. It contains the job names of the
@@ -2588,19 +2724,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<ContainerDetail> _parser = new pb::MessageParser<ContainerDetail>(() => new ContainerDetail());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ContainerDetail> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContainerDetail() {
           OnConstruction();
         }
@@ -2608,6 +2748,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContainerDetail(ContainerDetail other) : this() {
           mainJob_ = other.mainJob_;
           preCachingCheckJob_ = other.preCachingCheckJob_;
@@ -2615,6 +2756,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ContainerDetail Clone() {
           return new ContainerDetail(this);
         }
@@ -2626,6 +2768,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Output only. The name of the [CustomJob][google.cloud.aiplatform.v1.CustomJob] for the main container execution.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string MainJob {
           get { return mainJob_; }
           set {
@@ -2643,6 +2786,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// the lifecycle events.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PreCachingCheckJob {
           get { return preCachingCheckJob_; }
           set {
@@ -2651,11 +2795,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ContainerDetail);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ContainerDetail other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2669,6 +2815,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (MainJob.Length != 0) hash ^= MainJob.GetHashCode();
@@ -2680,11 +2827,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2705,6 +2854,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (MainJob.Length != 0) {
             output.WriteRawTag(10);
@@ -2721,6 +2871,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (MainJob.Length != 0) {
@@ -2736,6 +2887,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ContainerDetail other) {
           if (other == null) {
             return;
@@ -2750,6 +2902,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2775,6 +2928,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2809,19 +2963,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<CustomJobDetail> _parser = new pb::MessageParser<CustomJobDetail>(() => new CustomJobDetail());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<CustomJobDetail> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.PipelineTaskExecutorDetail.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CustomJobDetail() {
           OnConstruction();
         }
@@ -2829,12 +2987,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CustomJobDetail(CustomJobDetail other) : this() {
           job_ = other.job_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public CustomJobDetail Clone() {
           return new CustomJobDetail(this);
         }
@@ -2846,6 +3006,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Output only. The name of the [CustomJob][google.cloud.aiplatform.v1.CustomJob].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Job {
           get { return job_; }
           set {
@@ -2854,11 +3015,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as CustomJobDetail);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(CustomJobDetail other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2871,6 +3034,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Job.Length != 0) hash ^= Job.GetHashCode();
@@ -2881,11 +3045,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2902,6 +3068,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Job.Length != 0) {
             output.WriteRawTag(10);
@@ -2914,6 +3081,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Job.Length != 0) {
@@ -2926,6 +3094,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(CustomJobDetail other) {
           if (other == null) {
             return;
@@ -2937,6 +3106,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2958,6 +3128,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

@@ -204,19 +204,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<CreateEnvironmentRequest> _parser = new pb::MessageParser<CreateEnvironmentRequest>(() => new CreateEnvironmentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateEnvironmentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateEnvironmentRequest() {
       OnConstruction();
     }
@@ -224,6 +228,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateEnvironmentRequest(CreateEnvironmentRequest other) : this() {
       parent_ = other.parent_;
       environment_ = other.environment_ != null ? other.environment_.Clone() : null;
@@ -231,6 +236,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateEnvironmentRequest Clone() {
       return new CreateEnvironmentRequest(this);
     }
@@ -243,6 +249,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// "projects/{projectId}/locations/{locationId}".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -257,6 +264,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The environment to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.Environment Environment {
       get { return environment_; }
       set {
@@ -265,11 +273,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateEnvironmentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateEnvironmentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -283,6 +293,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -294,11 +305,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -319,6 +332,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -335,6 +349,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -350,6 +365,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateEnvironmentRequest other) {
       if (other == null) {
         return;
@@ -367,6 +383,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -395,6 +412,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -431,19 +449,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<GetEnvironmentRequest> _parser = new pb::MessageParser<GetEnvironmentRequest>(() => new GetEnvironmentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetEnvironmentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetEnvironmentRequest() {
       OnConstruction();
     }
@@ -451,12 +473,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetEnvironmentRequest(GetEnvironmentRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetEnvironmentRequest Clone() {
       return new GetEnvironmentRequest(this);
     }
@@ -469,6 +493,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -477,11 +502,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetEnvironmentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetEnvironmentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -494,6 +521,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -504,11 +532,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -525,6 +555,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -537,6 +568,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -549,6 +581,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetEnvironmentRequest other) {
       if (other == null) {
         return;
@@ -560,6 +593,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -581,6 +615,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -610,19 +645,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<ListEnvironmentsRequest> _parser = new pb::MessageParser<ListEnvironmentsRequest>(() => new ListEnvironmentsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListEnvironmentsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListEnvironmentsRequest() {
       OnConstruction();
     }
@@ -630,6 +669,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListEnvironmentsRequest(ListEnvironmentsRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -638,6 +678,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListEnvironmentsRequest Clone() {
       return new ListEnvironmentsRequest(this);
     }
@@ -650,6 +691,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// "projects/{projectId}/locations/{locationId}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -664,6 +706,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The maximum number of environments to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -678,6 +721,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The next_page_token value returned from a previous List request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -686,11 +730,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListEnvironmentsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListEnvironmentsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -705,6 +751,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -717,11 +764,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -746,6 +795,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -766,6 +816,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -784,6 +835,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListEnvironmentsRequest other) {
       if (other == null) {
         return;
@@ -801,6 +853,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -830,6 +883,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -867,19 +921,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<ListEnvironmentsResponse> _parser = new pb::MessageParser<ListEnvironmentsResponse>(() => new ListEnvironmentsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListEnvironmentsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListEnvironmentsResponse() {
       OnConstruction();
     }
@@ -887,6 +945,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListEnvironmentsResponse(ListEnvironmentsResponse other) : this() {
       environments_ = other.environments_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -894,6 +953,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListEnvironmentsResponse Clone() {
       return new ListEnvironmentsResponse(this);
     }
@@ -907,6 +967,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The list of environments returned by a ListEnvironmentsRequest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Orchestration.Airflow.Service.V1.Environment> Environments {
       get { return environments_; }
     }
@@ -918,6 +979,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The page token used to query for the next page if one exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -926,11 +988,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListEnvironmentsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListEnvironmentsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -944,6 +1008,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= environments_.GetHashCode();
@@ -955,11 +1020,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -977,6 +1044,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       environments_.WriteTo(ref output, _repeated_environments_codec);
       if (NextPageToken.Length != 0) {
@@ -990,6 +1058,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += environments_.CalculateSize(_repeated_environments_codec);
@@ -1003,6 +1072,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListEnvironmentsResponse other) {
       if (other == null) {
         return;
@@ -1015,6 +1085,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1040,6 +1111,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1073,19 +1145,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<DeleteEnvironmentRequest> _parser = new pb::MessageParser<DeleteEnvironmentRequest>(() => new DeleteEnvironmentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteEnvironmentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteEnvironmentRequest() {
       OnConstruction();
     }
@@ -1093,12 +1169,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteEnvironmentRequest(DeleteEnvironmentRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteEnvironmentRequest Clone() {
       return new DeleteEnvironmentRequest(this);
     }
@@ -1111,6 +1189,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1119,11 +1198,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteEnvironmentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteEnvironmentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1136,6 +1217,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1146,11 +1228,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1167,6 +1251,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1179,6 +1264,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1191,6 +1277,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteEnvironmentRequest other) {
       if (other == null) {
         return;
@@ -1202,6 +1289,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1223,6 +1311,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1252,19 +1341,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<UpdateEnvironmentRequest> _parser = new pb::MessageParser<UpdateEnvironmentRequest>(() => new UpdateEnvironmentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateEnvironmentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateEnvironmentRequest() {
       OnConstruction();
     }
@@ -1272,6 +1365,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateEnvironmentRequest(UpdateEnvironmentRequest other) : this() {
       name_ = other.name_;
       environment_ = other.environment_ != null ? other.environment_.Clone() : null;
@@ -1280,6 +1374,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateEnvironmentRequest Clone() {
       return new UpdateEnvironmentRequest(this);
     }
@@ -1292,6 +1387,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// "projects/{projectId}/locations/{locationId}/environments/{environmentId}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1307,6 +1403,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// from the patch environment into the environment under update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.Environment Environment {
       get { return environment_; }
       set {
@@ -1433,6 +1530,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     ///       more individual environment variables.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -1441,11 +1539,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateEnvironmentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateEnvironmentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1460,6 +1560,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1472,11 +1573,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1501,6 +1604,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (environment_ != null) {
         output.WriteRawTag(10);
@@ -1521,6 +1625,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1539,6 +1644,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateEnvironmentRequest other) {
       if (other == null) {
         return;
@@ -1562,6 +1668,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1597,6 +1704,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1640,19 +1748,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<EnvironmentConfig> _parser = new pb::MessageParser<EnvironmentConfig>(() => new EnvironmentConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EnvironmentConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnvironmentConfig() {
       OnConstruction();
     }
@@ -1660,6 +1772,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnvironmentConfig(EnvironmentConfig other) : this() {
       gkeCluster_ = other.gkeCluster_;
       dagGcsPrefix_ = other.dagGcsPrefix_;
@@ -1676,6 +1789,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EnvironmentConfig Clone() {
       return new EnvironmentConfig(this);
     }
@@ -1687,6 +1801,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Output only. The Kubernetes Engine cluster used to run this environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GkeCluster {
       get { return gkeCluster_; }
       set {
@@ -1704,6 +1819,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// this environment reside in a simulated directory with the given prefix.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DagGcsPrefix {
       get { return dagGcsPrefix_; }
       set {
@@ -1719,6 +1835,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// used to run this environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int NodeCount {
       get { return nodeCount_; }
       set {
@@ -1733,6 +1850,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The configuration settings for software inside the environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.SoftwareConfig SoftwareConfig {
       get { return softwareConfig_; }
       set {
@@ -1747,6 +1865,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The configuration used for the Kubernetes Engine cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.NodeConfig NodeConfig {
       get { return nodeConfig_; }
       set {
@@ -1761,6 +1880,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The configuration used for the Private IP Cloud Composer environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.PrivateEnvironmentConfig PrivateEnvironmentConfig {
       get { return privateEnvironmentConfig_; }
       set {
@@ -1776,6 +1896,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// unspecified, no network-level access restrictions will be applied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.WebServerNetworkAccessControl WebServerNetworkAccessControl {
       get { return webServerNetworkAccessControl_; }
       set {
@@ -1791,6 +1912,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Airflow software.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.DatabaseConfig DatabaseConfig {
       get { return databaseConfig_; }
       set {
@@ -1805,6 +1927,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Optional. The configuration settings for the Airflow web server App Engine instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.WebServerConfig WebServerConfig {
       get { return webServerConfig_; }
       set {
@@ -1820,6 +1943,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// and its dependencies. Cannot be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.EncryptionConfig EncryptionConfig {
       get { return encryptionConfig_; }
       set {
@@ -1836,6 +1960,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// interface](/composer/docs/how-to/accessing/airflow-web-interface)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AirflowUri {
       get { return airflowUri_; }
       set {
@@ -1844,11 +1969,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EnvironmentConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EnvironmentConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1871,6 +1998,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (GkeCluster.Length != 0) hash ^= GkeCluster.GetHashCode();
@@ -1891,11 +2019,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1952,6 +2082,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GkeCluster.Length != 0) {
         output.WriteRawTag(10);
@@ -2004,6 +2135,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (GkeCluster.Length != 0) {
@@ -2046,6 +2178,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EnvironmentConfig other) {
       if (other == null) {
         return;
@@ -2108,6 +2241,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2190,6 +2324,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2280,19 +2415,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<WebServerNetworkAccessControl> _parser = new pb::MessageParser<WebServerNetworkAccessControl>(() => new WebServerNetworkAccessControl());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WebServerNetworkAccessControl> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebServerNetworkAccessControl() {
       OnConstruction();
     }
@@ -2300,12 +2439,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebServerNetworkAccessControl(WebServerNetworkAccessControl other) : this() {
       allowedIpRanges_ = other.allowedIpRanges_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebServerNetworkAccessControl Clone() {
       return new WebServerNetworkAccessControl(this);
     }
@@ -2319,16 +2460,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// A collection of allowed IP ranges with descriptions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Orchestration.Airflow.Service.V1.WebServerNetworkAccessControl.Types.AllowedIpRange> AllowedIpRanges {
       get { return allowedIpRanges_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WebServerNetworkAccessControl);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WebServerNetworkAccessControl other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2341,6 +2485,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= allowedIpRanges_.GetHashCode();
@@ -2351,11 +2496,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2369,6 +2516,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       allowedIpRanges_.WriteTo(ref output, _repeated_allowedIpRanges_codec);
       if (_unknownFields != null) {
@@ -2378,6 +2526,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += allowedIpRanges_.CalculateSize(_repeated_allowedIpRanges_codec);
@@ -2388,6 +2537,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WebServerNetworkAccessControl other) {
       if (other == null) {
         return;
@@ -2397,6 +2547,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2418,6 +2569,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2437,6 +2589,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the WebServerNetworkAccessControl message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Allowed IP range with user-provided description.
@@ -2449,19 +2602,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         private static readonly pb::MessageParser<AllowedIpRange> _parser = new pb::MessageParser<AllowedIpRange>(() => new AllowedIpRange());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AllowedIpRange> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.WebServerNetworkAccessControl.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AllowedIpRange() {
           OnConstruction();
         }
@@ -2469,6 +2626,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AllowedIpRange(AllowedIpRange other) : this() {
           value_ = other.value_;
           description_ = other.description_;
@@ -2476,6 +2634,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AllowedIpRange Clone() {
           return new AllowedIpRange(this);
         }
@@ -2494,6 +2653,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         /// `2001:db8::1/32` should be truncated to `2001:db8::/32`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Value {
           get { return value_; }
           set {
@@ -2508,6 +2668,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         /// Optional. User-provided description. It must contain at most 300 characters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Description {
           get { return description_; }
           set {
@@ -2516,11 +2677,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AllowedIpRange);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AllowedIpRange other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2534,6 +2697,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Value.Length != 0) hash ^= Value.GetHashCode();
@@ -2545,11 +2709,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2570,6 +2736,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Value.Length != 0) {
             output.WriteRawTag(10);
@@ -2586,6 +2753,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Value.Length != 0) {
@@ -2601,6 +2769,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AllowedIpRange other) {
           if (other == null) {
             return;
@@ -2615,6 +2784,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2640,6 +2810,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2679,19 +2850,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<DatabaseConfig> _parser = new pb::MessageParser<DatabaseConfig>(() => new DatabaseConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DatabaseConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DatabaseConfig() {
       OnConstruction();
     }
@@ -2699,12 +2874,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DatabaseConfig(DatabaseConfig other) : this() {
       machineType_ = other.machineType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DatabaseConfig Clone() {
       return new DatabaseConfig(this);
     }
@@ -2718,6 +2895,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// or db-n1-standard-16. If not specified, db-n1-standard-2 will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MachineType {
       get { return machineType_; }
       set {
@@ -2726,11 +2904,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DatabaseConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DatabaseConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2743,6 +2923,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
@@ -2753,11 +2934,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2774,6 +2957,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MachineType.Length != 0) {
         output.WriteRawTag(10);
@@ -2786,6 +2970,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MachineType.Length != 0) {
@@ -2798,6 +2983,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DatabaseConfig other) {
       if (other == null) {
         return;
@@ -2809,6 +2995,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2830,6 +3017,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2859,19 +3047,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<WebServerConfig> _parser = new pb::MessageParser<WebServerConfig>(() => new WebServerConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WebServerConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebServerConfig() {
       OnConstruction();
     }
@@ -2879,12 +3071,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebServerConfig(WebServerConfig other) : this() {
       machineType_ = other.machineType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebServerConfig Clone() {
       return new WebServerConfig(this);
     }
@@ -2901,6 +3095,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// were manually changed to a non-standard values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MachineType {
       get { return machineType_; }
       set {
@@ -2909,11 +3104,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WebServerConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WebServerConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2926,6 +3123,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
@@ -2936,11 +3134,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2957,6 +3157,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MachineType.Length != 0) {
         output.WriteRawTag(10);
@@ -2969,6 +3170,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MachineType.Length != 0) {
@@ -2981,6 +3183,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WebServerConfig other) {
       if (other == null) {
         return;
@@ -2992,6 +3195,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3013,6 +3217,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3043,19 +3248,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<EncryptionConfig> _parser = new pb::MessageParser<EncryptionConfig>(() => new EncryptionConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EncryptionConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EncryptionConfig() {
       OnConstruction();
     }
@@ -3063,12 +3272,14 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EncryptionConfig(EncryptionConfig other) : this() {
       kmsKeyName_ = other.kmsKeyName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EncryptionConfig Clone() {
       return new EncryptionConfig(this);
     }
@@ -3082,6 +3293,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// If not specified, Google-managed key will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string KmsKeyName {
       get { return kmsKeyName_; }
       set {
@@ -3090,11 +3302,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EncryptionConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EncryptionConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3107,6 +3321,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
@@ -3117,11 +3332,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3138,6 +3355,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (KmsKeyName.Length != 0) {
         output.WriteRawTag(10);
@@ -3150,6 +3368,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (KmsKeyName.Length != 0) {
@@ -3162,6 +3381,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EncryptionConfig other) {
       if (other == null) {
         return;
@@ -3173,6 +3393,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3194,6 +3415,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3223,19 +3445,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<SoftwareConfig> _parser = new pb::MessageParser<SoftwareConfig>(() => new SoftwareConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SoftwareConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SoftwareConfig() {
       OnConstruction();
     }
@@ -3243,6 +3469,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SoftwareConfig(SoftwareConfig other) : this() {
       imageVersion_ = other.imageVersion_;
       airflowConfigOverrides_ = other.airflowConfigOverrides_.Clone();
@@ -3253,6 +3480,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SoftwareConfig Clone() {
       return new SoftwareConfig(this);
     }
@@ -3283,6 +3511,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// List](/composer/docs/concepts/versioning/composer-versions).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageVersion {
       get { return imageVersion_; }
       set {
@@ -3313,6 +3542,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// and cannot be overridden.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> AirflowConfigOverrides {
       get { return airflowConfigOverrides_; }
     }
@@ -3333,6 +3563,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// the value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> PypiPackages {
       get { return pypiPackages_; }
     }
@@ -3367,6 +3598,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// * `SQL_USER`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> EnvVariables {
       get { return envVariables_; }
     }
@@ -3382,6 +3614,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PythonVersion {
       get { return pythonVersion_; }
       set {
@@ -3390,11 +3623,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SoftwareConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SoftwareConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3411,6 +3646,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImageVersion.Length != 0) hash ^= ImageVersion.GetHashCode();
@@ -3425,11 +3661,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3453,6 +3691,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImageVersion.Length != 0) {
         output.WriteRawTag(10);
@@ -3472,6 +3711,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImageVersion.Length != 0) {
@@ -3490,6 +3730,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SoftwareConfig other) {
       if (other == null) {
         return;
@@ -3507,6 +3748,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3544,6 +3786,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3590,19 +3833,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<IPAllocationPolicy> _parser = new pb::MessageParser<IPAllocationPolicy>(() => new IPAllocationPolicy());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IPAllocationPolicy> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IPAllocationPolicy() {
       OnConstruction();
     }
@@ -3610,6 +3857,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IPAllocationPolicy(IPAllocationPolicy other) : this() {
       useIpAliases_ = other.useIpAliases_;
       switch (other.ClusterIpAllocationCase) {
@@ -3634,6 +3882,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IPAllocationPolicy Clone() {
       return new IPAllocationPolicy(this);
     }
@@ -3646,6 +3895,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// If `true`, a VPC-native cluster is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UseIpAliases {
       get { return useIpAliases_; }
       set {
@@ -3662,6 +3912,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// This field is applicable only when `use_ip_aliases` is true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterSecondaryRangeName {
       get { return clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterSecondaryRangeName ? (string) clusterIpAllocation_ : ""; }
       set {
@@ -3690,6 +3941,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// to use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterIpv4CidrBlock {
       get { return clusterIpAllocationCase_ == ClusterIpAllocationOneofCase.ClusterIpv4CidrBlock ? (string) clusterIpAllocation_ : ""; }
       set {
@@ -3707,6 +3959,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// This field is applicable only when `use_ip_aliases` is true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServicesSecondaryRangeName {
       get { return servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesSecondaryRangeName ? (string) servicesIpAllocation_ : ""; }
       set {
@@ -3735,6 +3988,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// to use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServicesIpv4CidrBlock {
       get { return servicesIpAllocationCase_ == ServicesIpAllocationOneofCase.ServicesIpv4CidrBlock ? (string) servicesIpAllocation_ : ""; }
       set {
@@ -3752,11 +4006,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
     private ClusterIpAllocationOneofCase clusterIpAllocationCase_ = ClusterIpAllocationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClusterIpAllocationOneofCase ClusterIpAllocationCase {
       get { return clusterIpAllocationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearClusterIpAllocation() {
       clusterIpAllocationCase_ = ClusterIpAllocationOneofCase.None;
       clusterIpAllocation_ = null;
@@ -3771,22 +4027,26 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
     private ServicesIpAllocationOneofCase servicesIpAllocationCase_ = ServicesIpAllocationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ServicesIpAllocationOneofCase ServicesIpAllocationCase {
       get { return servicesIpAllocationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearServicesIpAllocation() {
       servicesIpAllocationCase_ = ServicesIpAllocationOneofCase.None;
       servicesIpAllocation_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IPAllocationPolicy);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IPAllocationPolicy other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3805,6 +4065,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (UseIpAliases != false) hash ^= UseIpAliases.GetHashCode();
@@ -3821,11 +4082,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3858,6 +4121,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (UseIpAliases != false) {
         output.WriteRawTag(8);
@@ -3886,6 +4150,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (UseIpAliases != false) {
@@ -3910,6 +4175,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IPAllocationPolicy other) {
       if (other == null) {
         return;
@@ -3939,6 +4205,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3976,6 +4243,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4022,19 +4290,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<NodeConfig> _parser = new pb::MessageParser<NodeConfig>(() => new NodeConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NodeConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NodeConfig() {
       OnConstruction();
     }
@@ -4042,6 +4314,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NodeConfig(NodeConfig other) : this() {
       location_ = other.location_;
       machineType_ = other.machineType_;
@@ -4056,6 +4329,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NodeConfig Clone() {
       return new NodeConfig(this);
     }
@@ -4080,6 +4354,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// propagated to the unspecified field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Location {
       get { return location_; }
       set {
@@ -4114,6 +4389,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// to "n1-standard-1".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MachineType {
       get { return machineType_; }
       set {
@@ -4138,6 +4414,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// `nodeConfig.subnetwork`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Network {
       get { return network_; }
       set {
@@ -4160,6 +4437,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Subnetwork {
       get { return subnetwork_; }
       set {
@@ -4175,6 +4453,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// If unspecified, defaults to 100GB. Cannot be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int DiskSizeGb {
       get { return diskSizeGb_; }
       set {
@@ -4193,6 +4472,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// ["https://www.googleapis.com/auth/cloud-platform"]. Cannot be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> OauthScopes {
       get { return oauthScopes_; }
     }
@@ -4206,6 +4486,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// service account is used. Cannot be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceAccount {
       get { return serviceAccount_; }
       set {
@@ -4225,6 +4506,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Cannot be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Tags {
       get { return tags_; }
     }
@@ -4236,6 +4518,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Optional. The configuration for controlling how IPs are allocated in the GKE cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.IPAllocationPolicy IpAllocationPolicy {
       get { return ipAllocationPolicy_; }
       set {
@@ -4244,11 +4527,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NodeConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NodeConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4269,6 +4554,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Location.Length != 0) hash ^= Location.GetHashCode();
@@ -4287,11 +4573,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4334,6 +4622,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Location.Length != 0) {
         output.WriteRawTag(10);
@@ -4372,6 +4661,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Location.Length != 0) {
@@ -4404,6 +4694,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NodeConfig other) {
       if (other == null) {
         return;
@@ -4438,6 +4729,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4494,6 +4786,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4559,19 +4852,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<PrivateClusterConfig> _parser = new pb::MessageParser<PrivateClusterConfig>(() => new PrivateClusterConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PrivateClusterConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateClusterConfig() {
       OnConstruction();
     }
@@ -4579,6 +4876,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateClusterConfig(PrivateClusterConfig other) : this() {
       enablePrivateEndpoint_ = other.enablePrivateEndpoint_;
       masterIpv4CidrBlock_ = other.masterIpv4CidrBlock_;
@@ -4587,6 +4885,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateClusterConfig Clone() {
       return new PrivateClusterConfig(this);
     }
@@ -4599,6 +4898,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// denied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnablePrivateEndpoint {
       get { return enablePrivateEndpoint_; }
       set {
@@ -4614,6 +4914,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// left blank, the default value of '172.16.0.0/23' is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MasterIpv4CidrBlock {
       get { return masterIpv4CidrBlock_; }
       set {
@@ -4632,6 +4933,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// within the cluster's network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MasterIpv4ReservedRange {
       get { return masterIpv4ReservedRange_; }
       set {
@@ -4640,11 +4942,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PrivateClusterConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PrivateClusterConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4659,6 +4963,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (EnablePrivateEndpoint != false) hash ^= EnablePrivateEndpoint.GetHashCode();
@@ -4671,11 +4976,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4700,6 +5007,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EnablePrivateEndpoint != false) {
         output.WriteRawTag(8);
@@ -4720,6 +5028,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (EnablePrivateEndpoint != false) {
@@ -4738,6 +5047,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PrivateClusterConfig other) {
       if (other == null) {
         return;
@@ -4755,6 +5065,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4784,6 +5095,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4822,19 +5134,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<PrivateEnvironmentConfig> _parser = new pb::MessageParser<PrivateEnvironmentConfig>(() => new PrivateEnvironmentConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PrivateEnvironmentConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateEnvironmentConfig() {
       OnConstruction();
     }
@@ -4842,6 +5158,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateEnvironmentConfig(PrivateEnvironmentConfig other) : this() {
       enablePrivateEnvironment_ = other.enablePrivateEnvironment_;
       privateClusterConfig_ = other.privateClusterConfig_ != null ? other.privateClusterConfig_.Clone() : null;
@@ -4852,6 +5169,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivateEnvironmentConfig Clone() {
       return new PrivateEnvironmentConfig(this);
     }
@@ -4865,6 +5183,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// set to true.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnablePrivateEnvironment {
       get { return enablePrivateEnvironment_; }
       set {
@@ -4880,6 +5199,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Cloud Composer environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.PrivateClusterConfig PrivateClusterConfig {
       get { return privateClusterConfig_; }
       set {
@@ -4896,6 +5216,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// `cloud_sql_ipv4_cidr_block`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WebServerIpv4CidrBlock {
       get { return webServerIpv4CidrBlock_; }
       set {
@@ -4911,6 +5232,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Cloud SQL. Needs to be disjoint from `web_server_ipv4_cidr_block`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CloudSqlIpv4CidrBlock {
       get { return cloudSqlIpv4CidrBlock_; }
       set {
@@ -4925,6 +5247,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Output only. The IP range reserved for the tenant project's App Engine VMs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WebServerIpv4ReservedRange {
       get { return webServerIpv4ReservedRange_; }
       set {
@@ -4933,11 +5256,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PrivateEnvironmentConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PrivateEnvironmentConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4954,6 +5279,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (EnablePrivateEnvironment != false) hash ^= EnablePrivateEnvironment.GetHashCode();
@@ -4968,11 +5294,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5005,6 +5333,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EnablePrivateEnvironment != false) {
         output.WriteRawTag(8);
@@ -5033,6 +5362,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (EnablePrivateEnvironment != false) {
@@ -5057,6 +5387,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PrivateEnvironmentConfig other) {
       if (other == null) {
         return;
@@ -5083,6 +5414,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5123,6 +5455,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5171,19 +5504,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<Environment> _parser = new pb::MessageParser<Environment>(() => new Environment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Environment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Environment() {
       OnConstruction();
     }
@@ -5191,6 +5528,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Environment(Environment other) : this() {
       name_ = other.name_;
       config_ = other.config_ != null ? other.config_.Clone() : null;
@@ -5203,6 +5541,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Environment Clone() {
       return new Environment(this);
     }
@@ -5218,6 +5557,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// lowercase letters, numbers, or hyphens, and cannot end with a hyphen.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5232,6 +5572,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Configuration parameters for this environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentConfig Config {
       get { return config_; }
       set {
@@ -5247,6 +5588,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// This value is generated when the environment is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uuid {
       get { return uuid_; }
       set {
@@ -5261,6 +5603,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The current state of the environment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.Environment.Types.State State {
       get { return state_; }
       set {
@@ -5275,6 +5618,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Output only. The time at which this environment was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -5289,6 +5633,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Output only. The time at which this environment was last modified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -5312,16 +5657,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Environment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Environment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5340,6 +5688,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -5356,11 +5705,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5398,6 +5749,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -5431,6 +5783,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -5459,6 +5812,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Environment other) {
       if (other == null) {
         return;
@@ -5495,6 +5849,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5549,6 +5904,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5601,6 +5957,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Environment message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// State of the environment.
@@ -5650,19 +6007,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<CheckUpgradeResponse> _parser = new pb::MessageParser<CheckUpgradeResponse>(() => new CheckUpgradeResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CheckUpgradeResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.EnvironmentsReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CheckUpgradeResponse() {
       OnConstruction();
     }
@@ -5670,6 +6031,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CheckUpgradeResponse(CheckUpgradeResponse other) : this() {
       buildLogUri_ = other.buildLogUri_;
       containsPypiModulesConflict_ = other.containsPypiModulesConflict_;
@@ -5680,6 +6042,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CheckUpgradeResponse Clone() {
       return new CheckUpgradeResponse(this);
     }
@@ -5691,6 +6054,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Output only. Url for a docker build log of an upgraded image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuildLogUri {
       get { return buildLogUri_; }
       set {
@@ -5705,6 +6069,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Output only. Whether build has succeeded or failed on modules conflicts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Orchestration.Airflow.Service.V1.CheckUpgradeResponse.Types.ConflictResult ContainsPypiModulesConflict {
       get { return containsPypiModulesConflict_; }
       set {
@@ -5720,6 +6085,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// modules conflicts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PypiConflictBuildLogExtract {
       get { return pypiConflictBuildLogExtract_; }
       set {
@@ -5734,6 +6100,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Composer image for which the build was happening.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageVersion {
       get { return imageVersion_; }
       set {
@@ -5751,16 +6118,19 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// when the build was triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> PypiDependencies {
       get { return pypiDependencies_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CheckUpgradeResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CheckUpgradeResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5777,6 +6147,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (BuildLogUri.Length != 0) hash ^= BuildLogUri.GetHashCode();
@@ -5791,11 +6162,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5825,6 +6198,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BuildLogUri.Length != 0) {
         output.WriteRawTag(10);
@@ -5850,6 +6224,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (BuildLogUri.Length != 0) {
@@ -5872,6 +6247,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CheckUpgradeResponse other) {
       if (other == null) {
         return;
@@ -5893,6 +6269,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5930,6 +6307,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5965,6 +6343,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the CheckUpgradeResponse message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Whether there were python modules conflict during image build.

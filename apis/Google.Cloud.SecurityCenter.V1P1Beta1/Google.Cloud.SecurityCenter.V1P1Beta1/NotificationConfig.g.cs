@@ -74,19 +74,23 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     private static readonly pb::MessageParser<NotificationConfig> _parser = new pb::MessageParser<NotificationConfig>(() => new NotificationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NotificationConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfigReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationConfig() {
       OnConstruction();
     }
@@ -94,6 +98,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationConfig(NotificationConfig other) : this() {
       name_ = other.name_;
       description_ = other.description_;
@@ -110,6 +115,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationConfig Clone() {
       return new NotificationConfig(this);
     }
@@ -124,6 +130,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// "organizations/{organization_id}/notificationConfigs/notify_public_bucket".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -138,6 +145,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// The description of the notification config (max of 1024 characters).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -152,6 +160,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// The type of events the config is for, e.g. FINDING.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.EventType EventType {
       get { return eventType_; }
       set {
@@ -167,6 +176,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// "projects/[project_id]/topics/[topic]".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubsubTopic {
       get { return pubsubTopic_; }
       set {
@@ -182,6 +192,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// permission to publish to the Pub/Sub topic.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceAccount {
       get { return serviceAccount_; }
       set {
@@ -195,6 +206,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// The config for triggering streaming-based notifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig StreamingConfig {
       get { return notifyConfigCase_ == NotifyConfigOneofCase.StreamingConfig ? (global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Types.StreamingConfig) notifyConfig_ : null; }
       set {
@@ -211,22 +223,26 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     }
     private NotifyConfigOneofCase notifyConfigCase_ = NotifyConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotifyConfigOneofCase NotifyConfigCase {
       get { return notifyConfigCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearNotifyConfig() {
       notifyConfigCase_ = NotifyConfigOneofCase.None;
       notifyConfig_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NotificationConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NotificationConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -245,6 +261,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -261,11 +278,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -302,6 +321,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -334,6 +354,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -361,6 +382,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NotificationConfig other) {
       if (other == null) {
         return;
@@ -393,6 +415,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -439,6 +462,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -483,6 +507,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the NotificationConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The type of events.
@@ -510,19 +535,23 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         private static readonly pb::MessageParser<StreamingConfig> _parser = new pb::MessageParser<StreamingConfig>(() => new StreamingConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<StreamingConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.SecurityCenter.V1P1Beta1.NotificationConfig.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public StreamingConfig() {
           OnConstruction();
         }
@@ -530,12 +559,14 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public StreamingConfig(StreamingConfig other) : this() {
           filter_ = other.filter_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public StreamingConfig Clone() {
           return new StreamingConfig(this);
         }
@@ -567,6 +598,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         /// * boolean literals `true` and `false` without quotes.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Filter {
           get { return filter_; }
           set {
@@ -575,11 +607,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as StreamingConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(StreamingConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -592,6 +626,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Filter.Length != 0) hash ^= Filter.GetHashCode();
@@ -602,11 +637,13 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -623,6 +660,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Filter.Length != 0) {
             output.WriteRawTag(10);
@@ -635,6 +673,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Filter.Length != 0) {
@@ -647,6 +686,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(StreamingConfig other) {
           if (other == null) {
             return;
@@ -658,6 +698,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -679,6 +720,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

@@ -93,19 +93,23 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     private static readonly pb::MessageParser<Queue> _parser = new pb::MessageParser<Queue>(() => new Queue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Queue> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Queue() {
       OnConstruction();
     }
@@ -113,6 +117,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Queue(Queue other) : this() {
       name_ = other.name_;
       rateLimits_ = other.rateLimits_ != null ? other.rateLimits_.Clone() : null;
@@ -134,6 +139,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Queue Clone() {
       return new Queue(this);
     }
@@ -163,6 +169,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///   hyphens (-). The maximum length is 100 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -178,6 +185,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// [Http tasks][google.cloud.tasks.v2beta3.HttpRequest] are not affected by this proto.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpQueue AppEngineHttpQueue {
       get { return queueTypeCase_ == QueueTypeOneofCase.AppEngineHttpQueue ? (global::Google.Cloud.Tasks.V2Beta3.AppEngineHttpQueue) queueType_ : null; }
       set {
@@ -216,6 +224,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///   sudden large traffic spikes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tasks.V2Beta3.RateLimits RateLimits {
       get { return rateLimits_; }
       set {
@@ -239,6 +248,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     ///   documentation](https://cloud.google.com/appengine/docs/standard/python/taskqueue/push/retrying-tasks).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tasks.V2Beta3.RetryConfig RetryConfig {
       get { return retryConfig_; }
       set {
@@ -259,6 +269,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// [UpdateQueue][google.cloud.tasks.v2beta3.CloudTasks.UpdateQueue] cannot be used to change `state`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tasks.V2Beta3.Queue.Types.State State {
       get { return state_; }
       set {
@@ -283,6 +294,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// time will be unset if the queue has never been purged.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PurgeTime {
       get { return purgeTime_; }
       set {
@@ -308,6 +320,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// [Duration][google.protobuf.Duration].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TaskTtl {
       get { return taskTtl_; }
       set {
@@ -331,6 +344,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// Queues created by Cloud Tasks have a default `tombstone_ttl` of 1 hour.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TombstoneTtl {
       get { return tombstoneTtl_; }
       set {
@@ -347,6 +361,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// field is unset, then no logs are written.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tasks.V2Beta3.StackdriverLoggingConfig StackdriverLoggingConfig {
       get { return stackdriverLoggingConfig_; }
       set {
@@ -365,6 +380,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// selected.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tasks.V2Beta3.Queue.Types.Type Type {
       get { return type_; }
       set {
@@ -381,6 +397,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// FieldMask.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tasks.V2Beta3.QueueStats Stats {
       get { return stats_; }
       set {
@@ -396,22 +413,26 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
     private QueueTypeOneofCase queueTypeCase_ = QueueTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueueTypeOneofCase QueueTypeCase {
       get { return queueTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearQueueType() {
       queueTypeCase_ = QueueTypeOneofCase.None;
       queueType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Queue);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Queue other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -435,6 +456,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -456,11 +478,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -517,6 +541,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -569,6 +594,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -611,6 +637,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Queue other) {
       if (other == null) {
         return;
@@ -679,6 +706,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -766,6 +794,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -851,6 +880,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     #region Nested types
     /// <summary>Container for nested types declared in the Queue message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// State of the queue.
@@ -936,19 +966,23 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     private static readonly pb::MessageParser<RateLimits> _parser = new pb::MessageParser<RateLimits>(() => new RateLimits());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RateLimits> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RateLimits() {
       OnConstruction();
     }
@@ -956,6 +990,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RateLimits(RateLimits other) : this() {
       maxDispatchesPerSecond_ = other.maxDispatchesPerSecond_;
       maxBurstSize_ = other.maxBurstSize_;
@@ -964,6 +999,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RateLimits Clone() {
       return new RateLimits(this);
     }
@@ -985,6 +1021,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#rate).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double MaxDispatchesPerSecond {
       get { return maxDispatchesPerSecond_; }
       set {
@@ -1030,6 +1067,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// [max_dispatches_per_second][google.cloud.tasks.v2beta3.RateLimits.max_dispatches_per_second].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxBurstSize {
       get { return maxBurstSize_; }
       set {
@@ -1056,6 +1094,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#max_concurrent_requests).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxConcurrentDispatches {
       get { return maxConcurrentDispatches_; }
       set {
@@ -1064,11 +1103,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RateLimits);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RateLimits other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1083,6 +1124,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MaxDispatchesPerSecond != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(MaxDispatchesPerSecond);
@@ -1095,11 +1137,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1124,6 +1168,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MaxDispatchesPerSecond != 0D) {
         output.WriteRawTag(9);
@@ -1144,6 +1189,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MaxDispatchesPerSecond != 0D) {
@@ -1162,6 +1208,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RateLimits other) {
       if (other == null) {
         return;
@@ -1179,6 +1226,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1208,6 +1256,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1247,19 +1296,23 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     private static readonly pb::MessageParser<RetryConfig> _parser = new pb::MessageParser<RetryConfig>(() => new RetryConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RetryConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryConfig() {
       OnConstruction();
     }
@@ -1267,6 +1320,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryConfig(RetryConfig other) : this() {
       maxAttempts_ = other.maxAttempts_;
       maxRetryDuration_ = other.maxRetryDuration_ != null ? other.maxRetryDuration_.Clone() : null;
@@ -1277,6 +1331,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryConfig Clone() {
       return new RetryConfig(this);
     }
@@ -1301,6 +1356,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxAttempts {
       get { return maxAttempts_; }
       set {
@@ -1331,6 +1387,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MaxRetryDuration {
       get { return maxRetryDuration_; }
       set {
@@ -1358,6 +1415,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MinBackoff {
       get { return minBackoff_; }
       set {
@@ -1385,6 +1443,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MaxBackoff {
       get { return maxBackoff_; }
       set {
@@ -1423,6 +1482,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// queue.yaml/xml](https://cloud.google.com/appengine/docs/standard/python/config/queueref#retry_parameters).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxDoublings {
       get { return maxDoublings_; }
       set {
@@ -1431,11 +1491,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RetryConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RetryConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1452,6 +1514,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MaxAttempts != 0) hash ^= MaxAttempts.GetHashCode();
@@ -1466,11 +1529,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1503,6 +1568,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MaxAttempts != 0) {
         output.WriteRawTag(8);
@@ -1531,6 +1597,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MaxAttempts != 0) {
@@ -1555,6 +1622,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RetryConfig other) {
       if (other == null) {
         return;
@@ -1587,6 +1655,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1633,6 +1702,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1688,19 +1758,23 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     private static readonly pb::MessageParser<StackdriverLoggingConfig> _parser = new pb::MessageParser<StackdriverLoggingConfig>(() => new StackdriverLoggingConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StackdriverLoggingConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StackdriverLoggingConfig() {
       OnConstruction();
     }
@@ -1708,12 +1782,14 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StackdriverLoggingConfig(StackdriverLoggingConfig other) : this() {
       samplingRatio_ = other.samplingRatio_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StackdriverLoggingConfig Clone() {
       return new StackdriverLoggingConfig(this);
     }
@@ -1728,6 +1804,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// 0.0 is the default and means that no operations are logged.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double SamplingRatio {
       get { return samplingRatio_; }
       set {
@@ -1736,11 +1813,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StackdriverLoggingConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StackdriverLoggingConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1753,6 +1832,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SamplingRatio != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SamplingRatio);
@@ -1763,11 +1843,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1784,6 +1866,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SamplingRatio != 0D) {
         output.WriteRawTag(9);
@@ -1796,6 +1879,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SamplingRatio != 0D) {
@@ -1808,6 +1892,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StackdriverLoggingConfig other) {
       if (other == null) {
         return;
@@ -1819,6 +1904,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1840,6 +1926,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1869,19 +1956,23 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     private static readonly pb::MessageParser<QueueStats> _parser = new pb::MessageParser<QueueStats>(() => new QueueStats());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<QueueStats> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tasks.V2Beta3.QueueReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueueStats() {
       OnConstruction();
     }
@@ -1889,6 +1980,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueueStats(QueueStats other) : this() {
       tasksCount_ = other.tasksCount_;
       oldestEstimatedArrivalTime_ = other.oldestEstimatedArrivalTime_ != null ? other.oldestEstimatedArrivalTime_.Clone() : null;
@@ -1899,6 +1991,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueueStats Clone() {
       return new QueueStats(this);
     }
@@ -1913,6 +2006,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// tasks that the queue is retrying.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TasksCount {
       get { return tasksCount_; }
       set {
@@ -1928,6 +2022,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// is scheduled to be executed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp OldestEstimatedArrivalTime {
       get { return oldestEstimatedArrivalTime_; }
       set {
@@ -1944,6 +2039,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// non-successful executions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ExecutedLastMinuteCount {
       get { return executedLastMinuteCount_; }
       set {
@@ -1959,6 +2055,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// a reply for yet.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ConcurrentDispatchesCount {
       get { return concurrentDispatchesCount_; }
       set {
@@ -1976,6 +2073,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     /// tasks in the queue are targeting.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double EffectiveExecutionRate {
       get { return effectiveExecutionRate_; }
       set {
@@ -1984,11 +2082,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as QueueStats);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(QueueStats other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2005,6 +2105,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TasksCount != 0L) hash ^= TasksCount.GetHashCode();
@@ -2019,11 +2120,13 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2056,6 +2159,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TasksCount != 0L) {
         output.WriteRawTag(8);
@@ -2084,6 +2188,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TasksCount != 0L) {
@@ -2108,6 +2213,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(QueueStats other) {
       if (other == null) {
         return;
@@ -2134,6 +2240,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2174,6 +2281,7 @@ namespace Google.Cloud.Tasks.V2Beta3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

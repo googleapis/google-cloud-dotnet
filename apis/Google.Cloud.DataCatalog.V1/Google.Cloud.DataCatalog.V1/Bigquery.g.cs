@@ -68,19 +68,23 @@ namespace Google.Cloud.DataCatalog.V1 {
     private static readonly pb::MessageParser<BigQueryConnectionSpec> _parser = new pb::MessageParser<BigQueryConnectionSpec>(() => new BigQueryConnectionSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BigQueryConnectionSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataCatalog.V1.BigqueryReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryConnectionSpec() {
       OnConstruction();
     }
@@ -88,6 +92,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryConnectionSpec(BigQueryConnectionSpec other) : this() {
       connectionType_ = other.connectionType_;
       hasCredential_ = other.hasCredential_;
@@ -101,6 +106,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryConnectionSpec Clone() {
       return new BigQueryConnectionSpec(this);
     }
@@ -112,6 +118,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// The type of the BigQuery connection.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec.Types.ConnectionType ConnectionType {
       get { return connectionType_; }
       set {
@@ -125,6 +132,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Specification for the BigQuery connection to a Cloud SQL instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.CloudSqlBigQueryConnectionSpec CloudSql {
       get { return connectionSpecCase_ == ConnectionSpecOneofCase.CloudSql ? (global::Google.Cloud.DataCatalog.V1.CloudSqlBigQueryConnectionSpec) connectionSpec_ : null; }
       set {
@@ -141,6 +149,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// otherwise.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasCredential {
       get { return hasCredential_; }
       set {
@@ -156,22 +165,26 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
     private ConnectionSpecOneofCase connectionSpecCase_ = ConnectionSpecOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConnectionSpecOneofCase ConnectionSpecCase {
       get { return connectionSpecCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearConnectionSpec() {
       connectionSpecCase_ = ConnectionSpecOneofCase.None;
       connectionSpec_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BigQueryConnectionSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BigQueryConnectionSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -187,6 +200,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ConnectionType != global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec.Types.ConnectionType.Unspecified) hash ^= ConnectionType.GetHashCode();
@@ -200,11 +214,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -229,6 +245,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ConnectionType != global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec.Types.ConnectionType.Unspecified) {
         output.WriteRawTag(8);
@@ -249,6 +266,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ConnectionType != global::Google.Cloud.DataCatalog.V1.BigQueryConnectionSpec.Types.ConnectionType.Unspecified) {
@@ -267,6 +285,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BigQueryConnectionSpec other) {
       if (other == null) {
         return;
@@ -290,6 +309,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -324,6 +344,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -356,6 +377,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the BigQueryConnectionSpec message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The type of the BigQuery connection.
@@ -387,19 +409,23 @@ namespace Google.Cloud.DataCatalog.V1 {
     private static readonly pb::MessageParser<CloudSqlBigQueryConnectionSpec> _parser = new pb::MessageParser<CloudSqlBigQueryConnectionSpec>(() => new CloudSqlBigQueryConnectionSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CloudSqlBigQueryConnectionSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataCatalog.V1.BigqueryReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlBigQueryConnectionSpec() {
       OnConstruction();
     }
@@ -407,6 +433,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlBigQueryConnectionSpec(CloudSqlBigQueryConnectionSpec other) : this() {
       instanceId_ = other.instanceId_;
       database_ = other.database_;
@@ -415,6 +442,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudSqlBigQueryConnectionSpec Clone() {
       return new CloudSqlBigQueryConnectionSpec(this);
     }
@@ -426,6 +454,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Cloud SQL instance ID in the format of `project:location:instance`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InstanceId {
       get { return instanceId_; }
       set {
@@ -440,6 +469,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Database name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Database {
       get { return database_; }
       set {
@@ -454,6 +484,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Type of the Cloud SQL database.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.CloudSqlBigQueryConnectionSpec.Types.DatabaseType Type {
       get { return type_; }
       set {
@@ -462,11 +493,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CloudSqlBigQueryConnectionSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CloudSqlBigQueryConnectionSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -481,6 +514,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (InstanceId.Length != 0) hash ^= InstanceId.GetHashCode();
@@ -493,11 +527,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -522,6 +558,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (InstanceId.Length != 0) {
         output.WriteRawTag(10);
@@ -542,6 +579,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (InstanceId.Length != 0) {
@@ -560,6 +598,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CloudSqlBigQueryConnectionSpec other) {
       if (other == null) {
         return;
@@ -577,6 +616,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -606,6 +646,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -633,6 +674,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the CloudSqlBigQueryConnectionSpec message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Supported Cloud SQL database types.
@@ -668,19 +710,23 @@ namespace Google.Cloud.DataCatalog.V1 {
     private static readonly pb::MessageParser<BigQueryRoutineSpec> _parser = new pb::MessageParser<BigQueryRoutineSpec>(() => new BigQueryRoutineSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BigQueryRoutineSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataCatalog.V1.BigqueryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryRoutineSpec() {
       OnConstruction();
     }
@@ -688,12 +734,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryRoutineSpec(BigQueryRoutineSpec other) : this() {
       importedLibraries_ = other.importedLibraries_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BigQueryRoutineSpec Clone() {
       return new BigQueryRoutineSpec(this);
     }
@@ -707,16 +755,19 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Paths of the imported libraries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ImportedLibraries {
       get { return importedLibraries_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BigQueryRoutineSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BigQueryRoutineSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -729,6 +780,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= importedLibraries_.GetHashCode();
@@ -739,11 +791,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -757,6 +811,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       importedLibraries_.WriteTo(ref output, _repeated_importedLibraries_codec);
       if (_unknownFields != null) {
@@ -766,6 +821,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += importedLibraries_.CalculateSize(_repeated_importedLibraries_codec);
@@ -776,6 +832,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BigQueryRoutineSpec other) {
       if (other == null) {
         return;
@@ -785,6 +842,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -806,6 +864,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

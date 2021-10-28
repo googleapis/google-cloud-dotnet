@@ -133,19 +133,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private static readonly pb::MessageParser<Budget> _parser = new pb::MessageParser<Budget>(() => new Budget());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Budget> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Budget() {
       OnConstruction();
     }
@@ -153,6 +157,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Budget(Budget other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -165,6 +170,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Budget Clone() {
       return new Budget(this);
     }
@@ -178,6 +184,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// `billingAccounts/{billingAccountId}/budgets/{budgetId}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -193,6 +200,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Validation: &lt;= 60 chars.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -209,6 +217,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// budget's time period, as well as other filters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.Filter BudgetFilter {
       get { return budgetFilter_; }
       set {
@@ -223,6 +232,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Required. Budgeted amount.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetAmount Amount {
       get { return amount_; }
       set {
@@ -240,6 +250,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// being crossed) when spend exceeds the specified percentages of the budget.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule> ThresholdRules {
       get { return thresholdRules_; }
     }
@@ -252,6 +263,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// thresholds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.AllUpdatesRule AllUpdatesRule {
       get { return allUpdatesRule_; }
       set {
@@ -268,6 +280,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// An empty etag will cause an update to overwrite other changes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Etag {
       get { return etag_; }
       set {
@@ -276,11 +289,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Budget);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Budget other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -299,6 +314,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -315,11 +331,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -357,6 +375,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -390,6 +409,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -418,6 +438,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Budget other) {
       if (other == null) {
         return;
@@ -454,6 +475,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -508,6 +530,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -570,19 +593,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private static readonly pb::MessageParser<BudgetAmount> _parser = new pb::MessageParser<BudgetAmount>(() => new BudgetAmount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BudgetAmount> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BudgetAmount() {
       OnConstruction();
     }
@@ -590,6 +617,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BudgetAmount(BudgetAmount other) : this() {
       switch (other.BudgetAmountCase) {
         case BudgetAmountOneofCase.SpecifiedAmount:
@@ -604,6 +632,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BudgetAmount Clone() {
       return new BudgetAmount(this);
     }
@@ -618,6 +647,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// The `currency_code` is provided on output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.Money SpecifiedAmount {
       get { return budgetAmountCase_ == BudgetAmountOneofCase.SpecifiedAmount ? (global::Google.Type.Money) budgetAmount_ : null; }
       set {
@@ -636,6 +666,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// [Filter.custom_period][google.cloud.billing.budgets.v1beta1.Filter.custom_period].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount LastPeriodAmount {
       get { return budgetAmountCase_ == BudgetAmountOneofCase.LastPeriodAmount ? (global::Google.Cloud.Billing.Budgets.V1Beta1.LastPeriodAmount) budgetAmount_ : null; }
       set {
@@ -653,22 +684,26 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
     private BudgetAmountOneofCase budgetAmountCase_ = BudgetAmountOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BudgetAmountOneofCase BudgetAmountCase {
       get { return budgetAmountCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearBudgetAmount() {
       budgetAmountCase_ = BudgetAmountOneofCase.None;
       budgetAmount_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BudgetAmount);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BudgetAmount other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -683,6 +718,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (budgetAmountCase_ == BudgetAmountOneofCase.SpecifiedAmount) hash ^= SpecifiedAmount.GetHashCode();
@@ -695,11 +731,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -720,6 +758,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (budgetAmountCase_ == BudgetAmountOneofCase.SpecifiedAmount) {
         output.WriteRawTag(10);
@@ -736,6 +775,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (budgetAmountCase_ == BudgetAmountOneofCase.SpecifiedAmount) {
@@ -751,6 +791,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BudgetAmount other) {
       if (other == null) {
         return;
@@ -774,6 +815,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -809,6 +851,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -860,19 +903,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private static readonly pb::MessageParser<LastPeriodAmount> _parser = new pb::MessageParser<LastPeriodAmount>(() => new LastPeriodAmount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LastPeriodAmount> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LastPeriodAmount() {
       OnConstruction();
     }
@@ -880,21 +927,25 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LastPeriodAmount(LastPeriodAmount other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LastPeriodAmount Clone() {
       return new LastPeriodAmount(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LastPeriodAmount);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LastPeriodAmount other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -906,6 +957,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -915,11 +967,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -932,6 +986,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -940,6 +995,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -949,6 +1005,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LastPeriodAmount other) {
       if (other == null) {
         return;
@@ -957,6 +1014,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -974,6 +1032,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1005,19 +1064,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private static readonly pb::MessageParser<ThresholdRule> _parser = new pb::MessageParser<ThresholdRule>(() => new ThresholdRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ThresholdRule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThresholdRule() {
       OnConstruction();
     }
@@ -1025,6 +1088,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThresholdRule(ThresholdRule other) : this() {
       thresholdPercent_ = other.thresholdPercent_;
       spendBasis_ = other.spendBasis_;
@@ -1032,6 +1096,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThresholdRule Clone() {
       return new ThresholdRule(this);
     }
@@ -1045,6 +1110,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Validation: non-negative number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double ThresholdPercent {
       get { return thresholdPercent_; }
       set {
@@ -1060,6 +1126,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// threshold. Behavior defaults to CURRENT_SPEND if not set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.ThresholdRule.Types.Basis SpendBasis {
       get { return spendBasis_; }
       set {
@@ -1068,11 +1135,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ThresholdRule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ThresholdRule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1086,6 +1155,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ThresholdPercent != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ThresholdPercent);
@@ -1097,11 +1167,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1122,6 +1194,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ThresholdPercent != 0D) {
         output.WriteRawTag(9);
@@ -1138,6 +1211,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ThresholdPercent != 0D) {
@@ -1153,6 +1227,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ThresholdRule other) {
       if (other == null) {
         return;
@@ -1167,6 +1242,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1192,6 +1268,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1215,6 +1292,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ThresholdRule message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The type of basis used to determine if spend has passed the threshold.
@@ -1256,19 +1334,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private static readonly pb::MessageParser<AllUpdatesRule> _parser = new pb::MessageParser<AllUpdatesRule>(() => new AllUpdatesRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AllUpdatesRule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllUpdatesRule() {
       OnConstruction();
     }
@@ -1276,6 +1358,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllUpdatesRule(AllUpdatesRule other) : this() {
       pubsubTopic_ = other.pubsubTopic_;
       schemaVersion_ = other.schemaVersion_;
@@ -1285,6 +1368,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AllUpdatesRule Clone() {
       return new AllUpdatesRule(this);
     }
@@ -1306,6 +1390,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// for more details on Pub/Sub roles and permissions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubsubTopic {
       get { return pubsubTopic_; }
       set {
@@ -1325,6 +1410,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// https://cloud.google.com/billing/docs/how-to/budgets-programmatic-notifications#notification_format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SchemaVersion {
       get { return schemaVersion_; }
       set {
@@ -1348,6 +1434,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> MonitoringNotificationChannels {
       get { return monitoringNotificationChannels_; }
     }
@@ -1362,6 +1449,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DisableDefaultIamRecipients {
       get { return disableDefaultIamRecipients_; }
       set {
@@ -1370,11 +1458,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AllUpdatesRule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AllUpdatesRule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1390,6 +1480,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PubsubTopic.Length != 0) hash ^= PubsubTopic.GetHashCode();
@@ -1403,11 +1494,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1433,6 +1526,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PubsubTopic.Length != 0) {
         output.WriteRawTag(10);
@@ -1454,6 +1548,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PubsubTopic.Length != 0) {
@@ -1473,6 +1568,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AllUpdatesRule other) {
       if (other == null) {
         return;
@@ -1491,6 +1587,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1524,6 +1621,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1565,19 +1663,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private static readonly pb::MessageParser<Filter> _parser = new pb::MessageParser<Filter>(() => new Filter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Filter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Filter() {
       OnConstruction();
     }
@@ -1585,6 +1687,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Filter(Filter other) : this() {
       projects_ = other.projects_.Clone();
       creditTypes_ = other.creditTypes_.Clone();
@@ -1605,6 +1708,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Filter Clone() {
       return new Filter(this);
     }
@@ -1622,6 +1726,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Only zero or one project can be specified currently.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Projects {
       get { return projects_; }
     }
@@ -1644,6 +1749,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// is **not** INCLUDE_SPECIFIED_CREDITS, this field must be empty.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> CreditTypes {
       get { return creditTypes_; }
     }
@@ -1655,6 +1761,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Optional. If not set, default behavior is `INCLUDE_ALL_CREDITS`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.Filter.Types.CreditTypesTreatment CreditTypesTreatment {
       get { return creditTypesTreatment_; }
       set {
@@ -1676,6 +1783,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// https://cloud.google.com/billing/v1/how-tos/catalog-api.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Services {
       get { return services_; }
     }
@@ -1694,6 +1802,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// subaccounts, if they exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Subaccounts {
       get { return subaccounts_; }
     }
@@ -1710,6 +1819,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// the report will include all labeled and unlabeled usage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Protobuf.WellKnownTypes.ListValue> Labels {
       get { return labels_; }
     }
@@ -1725,6 +1835,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// so on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod CalendarPeriod {
       get { return usagePeriodCase_ == UsagePeriodOneofCase.CalendarPeriod ? (global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod) usagePeriod_ : global::Google.Cloud.Billing.Budgets.V1Beta1.CalendarPeriod.Unspecified; }
       set {
@@ -1740,6 +1851,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// end date (optional). This time period is static, it does not recur.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod CustomPeriod {
       get { return usagePeriodCase_ == UsagePeriodOneofCase.CustomPeriod ? (global::Google.Cloud.Billing.Budgets.V1Beta1.CustomPeriod) usagePeriod_ : null; }
       set {
@@ -1757,22 +1869,26 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
     private UsagePeriodOneofCase usagePeriodCase_ = UsagePeriodOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UsagePeriodOneofCase UsagePeriodCase {
       get { return usagePeriodCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearUsagePeriod() {
       usagePeriodCase_ = UsagePeriodOneofCase.None;
       usagePeriod_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Filter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Filter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1793,6 +1909,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= projects_.GetHashCode();
@@ -1811,11 +1928,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1845,6 +1964,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       projects_.WriteTo(ref output, _repeated_projects_codec);
       services_.WriteTo(ref output, _repeated_services_codec);
@@ -1870,6 +1990,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += projects_.CalculateSize(_repeated_projects_codec);
@@ -1893,6 +2014,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Filter other) {
       if (other == null) {
         return;
@@ -1921,6 +2043,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1976,6 +2099,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2029,6 +2153,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Filter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies how credits are applied when determining the spend for
@@ -2074,19 +2199,23 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     private static readonly pb::MessageParser<CustomPeriod> _parser = new pb::MessageParser<CustomPeriod>(() => new CustomPeriod());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CustomPeriod> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Billing.Budgets.V1Beta1.BudgetModelReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomPeriod() {
       OnConstruction();
     }
@@ -2094,6 +2223,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomPeriod(CustomPeriod other) : this() {
       startDate_ = other.startDate_ != null ? other.startDate_.Clone() : null;
       endDate_ = other.endDate_ != null ? other.endDate_.Clone() : null;
@@ -2101,6 +2231,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CustomPeriod Clone() {
       return new CustomPeriod(this);
     }
@@ -2112,6 +2243,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// Required. The start date must be after January 1, 2017.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.Date StartDate {
       get { return startDate_; }
       set {
@@ -2128,6 +2260,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     /// the start_date.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.Date EndDate {
       get { return endDate_; }
       set {
@@ -2136,11 +2269,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CustomPeriod);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CustomPeriod other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2154,6 +2289,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startDate_ != null) hash ^= StartDate.GetHashCode();
@@ -2165,11 +2301,13 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2190,6 +2328,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startDate_ != null) {
         output.WriteRawTag(10);
@@ -2206,6 +2345,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startDate_ != null) {
@@ -2221,6 +2361,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CustomPeriod other) {
       if (other == null) {
         return;
@@ -2241,6 +2382,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2272,6 +2414,7 @@ namespace Google.Cloud.Billing.Budgets.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

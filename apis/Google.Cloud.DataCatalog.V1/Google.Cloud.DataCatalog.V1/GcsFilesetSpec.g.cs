@@ -61,19 +61,23 @@ namespace Google.Cloud.DataCatalog.V1 {
     private static readonly pb::MessageParser<GcsFilesetSpec> _parser = new pb::MessageParser<GcsFilesetSpec>(() => new GcsFilesetSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GcsFilesetSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataCatalog.V1.GcsFilesetSpecReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsFilesetSpec() {
       OnConstruction();
     }
@@ -81,6 +85,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsFilesetSpec(GcsFilesetSpec other) : this() {
       filePatterns_ = other.filePatterns_.Clone();
       sampleGcsFileSpecs_ = other.sampleGcsFileSpecs_.Clone();
@@ -88,6 +93,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsFilesetSpec Clone() {
       return new GcsFilesetSpec(this);
     }
@@ -129,6 +135,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// `gs://bucket_name/[a-m]??.j*g`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> FilePatterns {
       get { return filePatterns_; }
     }
@@ -143,16 +150,19 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// contained in this fileset are represented here.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.DataCatalog.V1.GcsFileSpec> SampleGcsFileSpecs {
       get { return sampleGcsFileSpecs_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GcsFilesetSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GcsFilesetSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -166,6 +176,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= filePatterns_.GetHashCode();
@@ -177,11 +188,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -196,6 +209,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       filePatterns_.WriteTo(ref output, _repeated_filePatterns_codec);
       sampleGcsFileSpecs_.WriteTo(ref output, _repeated_sampleGcsFileSpecs_codec);
@@ -206,6 +220,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += filePatterns_.CalculateSize(_repeated_filePatterns_codec);
@@ -217,6 +232,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GcsFilesetSpec other) {
       if (other == null) {
         return;
@@ -227,6 +243,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -252,6 +269,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -285,19 +303,23 @@ namespace Google.Cloud.DataCatalog.V1 {
     private static readonly pb::MessageParser<GcsFileSpec> _parser = new pb::MessageParser<GcsFileSpec>(() => new GcsFileSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GcsFileSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DataCatalog.V1.GcsFilesetSpecReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsFileSpec() {
       OnConstruction();
     }
@@ -305,6 +327,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsFileSpec(GcsFileSpec other) : this() {
       filePath_ = other.filePath_;
       gcsTimestamps_ = other.gcsTimestamps_ != null ? other.gcsTimestamps_.Clone() : null;
@@ -313,6 +336,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsFileSpec Clone() {
       return new GcsFileSpec(this);
     }
@@ -324,6 +348,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Required. Full file path. Example: `gs://bucket_name/a/b.txt`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FilePath {
       get { return filePath_; }
       set {
@@ -338,6 +363,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Output only. Creation, modification, and expiration timestamps of a Cloud Storage file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DataCatalog.V1.SystemTimestamps GcsTimestamps {
       get { return gcsTimestamps_; }
       set {
@@ -352,6 +378,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// Output only. File size in bytes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SizeBytes {
       get { return sizeBytes_; }
       set {
@@ -360,11 +387,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GcsFileSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GcsFileSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -379,6 +408,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (FilePath.Length != 0) hash ^= FilePath.GetHashCode();
@@ -391,11 +421,13 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -420,6 +452,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FilePath.Length != 0) {
         output.WriteRawTag(10);
@@ -440,6 +473,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (FilePath.Length != 0) {
@@ -458,6 +492,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GcsFileSpec other) {
       if (other == null) {
         return;
@@ -478,6 +513,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -510,6 +546,7 @@ namespace Google.Cloud.DataCatalog.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

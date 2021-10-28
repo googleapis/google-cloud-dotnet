@@ -202,19 +202,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<KeyRing> _parser = new pb::MessageParser<KeyRing>(() => new KeyRing());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<KeyRing> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyRing() {
       OnConstruction();
     }
@@ -222,6 +226,7 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyRing(KeyRing other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -229,6 +234,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyRing Clone() {
       return new KeyRing(this);
     }
@@ -241,6 +247,7 @@ namespace Google.Cloud.Kms.V1 {
     /// `projects/*/locations/*/keyRings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -255,6 +262,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Output only. The time at which this [KeyRing][google.cloud.kms.v1.KeyRing] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -263,11 +271,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as KeyRing);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(KeyRing other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -281,6 +291,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -292,11 +303,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -317,6 +330,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -333,6 +347,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -348,6 +363,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(KeyRing other) {
       if (other == null) {
         return;
@@ -365,6 +381,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -393,6 +410,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -433,19 +451,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<CryptoKey> _parser = new pb::MessageParser<CryptoKey>(() => new CryptoKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CryptoKey> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKey() {
       OnConstruction();
     }
@@ -453,6 +475,7 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKey(CryptoKey other) : this() {
       name_ = other.name_;
       primary_ = other.primary_ != null ? other.primary_.Clone() : null;
@@ -473,6 +496,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKey Clone() {
       return new CryptoKey(this);
     }
@@ -485,6 +509,7 @@ namespace Google.Cloud.Kms.V1 {
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -508,6 +533,7 @@ namespace Google.Cloud.Kms.V1 {
     /// primary. For other keys, this field will be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion Primary {
       get { return primary_; }
       set {
@@ -522,6 +548,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Immutable. The immutable purpose of this [CryptoKey][google.cloud.kms.v1.CryptoKey].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.CryptoKey.Types.CryptoKeyPurpose Purpose {
       get { return purpose_; }
       set {
@@ -536,6 +563,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Output only. The time at which this [CryptoKey][google.cloud.kms.v1.CryptoKey] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -562,6 +590,7 @@ namespace Google.Cloud.Kms.V1 {
     /// automatic rotation. For other keys, this field must be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp NextRotationTime {
       get { return nextRotationTime_; }
       set {
@@ -583,6 +612,7 @@ namespace Google.Cloud.Kms.V1 {
     /// automatic rotation. For other keys, this field must be omitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration RotationPeriod {
       get { return rotationScheduleCase_ == RotationScheduleOneofCase.RotationPeriod ? (global::Google.Protobuf.WellKnownTypes.Duration) rotationSchedule_ : null; }
       set {
@@ -601,6 +631,7 @@ namespace Google.Cloud.Kms.V1 {
     /// auto-rotation are controlled by this template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersionTemplate VersionTemplate {
       get { return versionTemplate_; }
       set {
@@ -618,6 +649,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [Labeling Keys](https://cloud.google.com/kms/docs/labeling-keys).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -629,6 +661,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Immutable. Whether this key may contain imported versions only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ImportOnly {
       get { return importOnly_; }
       set {
@@ -647,6 +680,7 @@ namespace Google.Cloud.Kms.V1 {
     /// specified at creation time, the default duration is 24 hours.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration DestroyScheduledDuration {
       get { return destroyScheduledDuration_; }
       set {
@@ -662,22 +696,26 @@ namespace Google.Cloud.Kms.V1 {
     }
     private RotationScheduleOneofCase rotationScheduleCase_ = RotationScheduleOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RotationScheduleOneofCase RotationScheduleCase {
       get { return rotationScheduleCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRotationSchedule() {
       rotationScheduleCase_ = RotationScheduleOneofCase.None;
       rotationSchedule_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CryptoKey);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CryptoKey other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -700,6 +738,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -720,11 +759,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -774,6 +815,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -819,6 +861,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -856,6 +899,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CryptoKey other) {
       if (other == null) {
         return;
@@ -913,6 +957,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -990,6 +1035,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1065,6 +1111,7 @@ namespace Google.Cloud.Kms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the CryptoKey message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// [CryptoKeyPurpose][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose] describes the cryptographic capabilities of a
@@ -1121,19 +1168,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<CryptoKeyVersionTemplate> _parser = new pb::MessageParser<CryptoKeyVersionTemplate>(() => new CryptoKeyVersionTemplate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CryptoKeyVersionTemplate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKeyVersionTemplate() {
       OnConstruction();
     }
@@ -1141,6 +1192,7 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKeyVersionTemplate(CryptoKeyVersionTemplate other) : this() {
       protectionLevel_ = other.protectionLevel_;
       algorithm_ = other.algorithm_;
@@ -1148,6 +1200,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKeyVersionTemplate Clone() {
       return new CryptoKeyVersionTemplate(this);
     }
@@ -1160,6 +1213,7 @@ namespace Google.Cloud.Kms.V1 {
     /// this template. Immutable. Defaults to [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
       get { return protectionLevel_; }
       set {
@@ -1179,6 +1233,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [ENCRYPT_DECRYPT][google.cloud.kms.v1.CryptoKey.CryptoKeyPurpose.ENCRYPT_DECRYPT].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
       get { return algorithm_; }
       set {
@@ -1187,11 +1242,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CryptoKeyVersionTemplate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CryptoKeyVersionTemplate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1205,6 +1262,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) hash ^= ProtectionLevel.GetHashCode();
@@ -1216,11 +1274,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1241,6 +1301,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) {
         output.WriteRawTag(8);
@@ -1257,6 +1318,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ProtectionLevel != global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified) {
@@ -1272,6 +1334,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CryptoKeyVersionTemplate other) {
       if (other == null) {
         return;
@@ -1286,6 +1349,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1311,6 +1375,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1346,19 +1411,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<KeyOperationAttestation> _parser = new pb::MessageParser<KeyOperationAttestation>(() => new KeyOperationAttestation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<KeyOperationAttestation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyOperationAttestation() {
       OnConstruction();
     }
@@ -1366,6 +1435,7 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyOperationAttestation(KeyOperationAttestation other) : this() {
       format_ = other.format_;
       content_ = other.content_;
@@ -1373,6 +1443,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyOperationAttestation Clone() {
       return new KeyOperationAttestation(this);
     }
@@ -1384,6 +1455,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Output only. The format of the attestation data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat Format {
       get { return format_; }
       set {
@@ -1399,6 +1471,7 @@ namespace Google.Cloud.Kms.V1 {
     /// operation was performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Content {
       get { return content_; }
       set {
@@ -1407,11 +1480,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as KeyOperationAttestation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(KeyOperationAttestation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1425,6 +1500,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Format != global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat.Unspecified) hash ^= Format.GetHashCode();
@@ -1436,11 +1512,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1461,6 +1539,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Format != global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat.Unspecified) {
         output.WriteRawTag(32);
@@ -1477,6 +1556,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Format != global::Google.Cloud.Kms.V1.KeyOperationAttestation.Types.AttestationFormat.Unspecified) {
@@ -1492,6 +1572,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(KeyOperationAttestation other) {
       if (other == null) {
         return;
@@ -1506,6 +1587,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1531,6 +1613,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1554,6 +1637,7 @@ namespace Google.Cloud.Kms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the KeyOperationAttestation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Attestation formats provided by the HSM.
@@ -1600,19 +1684,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<CryptoKeyVersion> _parser = new pb::MessageParser<CryptoKeyVersion>(() => new CryptoKeyVersion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CryptoKeyVersion> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKeyVersion() {
       OnConstruction();
     }
@@ -1620,6 +1708,7 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKeyVersion(CryptoKeyVersion other) : this() {
       name_ = other.name_;
       state_ = other.state_;
@@ -1639,6 +1728,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CryptoKeyVersion Clone() {
       return new CryptoKeyVersion(this);
     }
@@ -1651,6 +1741,7 @@ namespace Google.Cloud.Kms.V1 {
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*/cryptoKeyVersions/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1665,6 +1756,7 @@ namespace Google.Cloud.Kms.V1 {
     /// The current state of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionState State {
       get { return state_; }
       set {
@@ -1680,6 +1772,7 @@ namespace Google.Cloud.Kms.V1 {
     /// performed with this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
       get { return protectionLevel_; }
       set {
@@ -1695,6 +1788,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] supports.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
       get { return algorithm_; }
       set {
@@ -1712,6 +1806,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [protection_level][google.cloud.kms.v1.CryptoKeyVersion.protection_level] [HSM][google.cloud.kms.v1.ProtectionLevel.HSM].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.KeyOperationAttestation Attestation {
       get { return attestation_; }
       set {
@@ -1726,6 +1821,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Output only. The time at which this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1741,6 +1837,7 @@ namespace Google.Cloud.Kms.V1 {
     /// generated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp GenerateTime {
       get { return generateTime_; }
       set {
@@ -1757,6 +1854,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [DESTROY_SCHEDULED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROY_SCHEDULED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DestroyTime {
       get { return destroyTime_; }
       set {
@@ -1773,6 +1871,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DestroyEventTime {
       get { return destroyEventTime_; }
       set {
@@ -1789,6 +1888,7 @@ namespace Google.Cloud.Kms.V1 {
     /// imported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImportJob {
       get { return importJob_; }
       set {
@@ -1804,6 +1904,7 @@ namespace Google.Cloud.Kms.V1 {
     /// was most recently imported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ImportTime {
       get { return importTime_; }
       set {
@@ -1820,6 +1921,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [IMPORT_FAILED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.IMPORT_FAILED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImportFailureReason {
       get { return importFailureReason_; }
       set {
@@ -1836,6 +1938,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL] protection level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ExternalProtectionLevelOptions ExternalProtectionLevelOptions {
       get { return externalProtectionLevelOptions_; }
       set {
@@ -1852,6 +1955,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [ImportCryptoKeyVersionRequest.crypto_key_version][google.cloud.kms.v1.ImportCryptoKeyVersionRequest.crypto_key_version].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ReimportEligible {
       get { return reimportEligible_; }
       set {
@@ -1860,11 +1964,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CryptoKeyVersion);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CryptoKeyVersion other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1890,6 +1996,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1913,11 +2020,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1986,6 +2095,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2050,6 +2160,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2101,6 +2212,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CryptoKeyVersion other) {
       if (other == null) {
         return;
@@ -2172,6 +2284,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2266,6 +2379,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2358,6 +2472,7 @@ namespace Google.Cloud.Kms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the CryptoKeyVersion message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The algorithm of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], indicating what
@@ -2594,19 +2709,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<PublicKey> _parser = new pb::MessageParser<PublicKey>(() => new PublicKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PublicKey> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKey() {
       OnConstruction();
     }
@@ -2614,6 +2733,7 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKey(PublicKey other) : this() {
       pem_ = other.pem_;
       algorithm_ = other.algorithm_;
@@ -2624,6 +2744,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKey Clone() {
       return new PublicKey(this);
     }
@@ -2639,6 +2760,7 @@ namespace Google.Cloud.Kms.V1 {
     /// (https://tools.ietf.org/html/rfc7468#section-13).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Pem {
       get { return pem_; }
       set {
@@ -2654,6 +2776,7 @@ namespace Google.Cloud.Kms.V1 {
     /// with this key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm Algorithm {
       get { return algorithm_; }
       set {
@@ -2681,6 +2804,7 @@ namespace Google.Cloud.Kms.V1 {
     /// NOTE: This field is in Beta.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long? PemCrc32C {
       get { return pemCrc32C_; }
       set {
@@ -2699,6 +2823,7 @@ namespace Google.Cloud.Kms.V1 {
     /// NOTE: This field is in Beta.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2713,6 +2838,7 @@ namespace Google.Cloud.Kms.V1 {
     /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
       get { return protectionLevel_; }
       set {
@@ -2721,11 +2847,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PublicKey);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PublicKey other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2742,6 +2870,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Pem.Length != 0) hash ^= Pem.GetHashCode();
@@ -2756,11 +2885,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2792,6 +2923,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Pem.Length != 0) {
         output.WriteRawTag(10);
@@ -2819,6 +2951,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Pem.Length != 0) {
@@ -2843,6 +2976,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PublicKey other) {
       if (other == null) {
         return;
@@ -2868,6 +3002,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2908,6 +3043,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2982,19 +3118,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<ImportJob> _parser = new pb::MessageParser<ImportJob>(() => new ImportJob());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImportJob> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportJob() {
       OnConstruction();
     }
@@ -3002,6 +3142,7 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportJob(ImportJob other) : this() {
       name_ = other.name_;
       importMethod_ = other.importMethod_;
@@ -3017,6 +3158,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportJob Clone() {
       return new ImportJob(this);
     }
@@ -3029,6 +3171,7 @@ namespace Google.Cloud.Kms.V1 {
     /// `projects/*/locations/*/keyRings/*/importJobs/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -3043,6 +3186,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Required. Immutable. The wrapping method to be used for incoming key material.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ImportJob.Types.ImportMethod ImportMethod {
       get { return importMethod_; }
       set {
@@ -3060,6 +3204,7 @@ namespace Google.Cloud.Kms.V1 {
     /// attempt to import into.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ProtectionLevel ProtectionLevel {
       get { return protectionLevel_; }
       set {
@@ -3074,6 +3219,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Output only. The time at which this [ImportJob][google.cloud.kms.v1.ImportJob] was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -3088,6 +3234,7 @@ namespace Google.Cloud.Kms.V1 {
     /// Output only. The time this [ImportJob][google.cloud.kms.v1.ImportJob]'s key material was generated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp GenerateTime {
       get { return generateTime_; }
       set {
@@ -3103,6 +3250,7 @@ namespace Google.Cloud.Kms.V1 {
     /// expiration and can no longer be used to import key material.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireTime {
       get { return expireTime_; }
       set {
@@ -3118,6 +3266,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [state][google.cloud.kms.v1.ImportJob.state] is [EXPIRED][google.cloud.kms.v1.ImportJob.ImportJobState.EXPIRED].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpireEventTime {
       get { return expireEventTime_; }
       set {
@@ -3133,6 +3282,7 @@ namespace Google.Cloud.Kms.V1 {
     /// be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ImportJob.Types.ImportJobState State {
       get { return state_; }
       set {
@@ -3149,6 +3299,7 @@ namespace Google.Cloud.Kms.V1 {
     /// [ACTIVE][google.cloud.kms.v1.ImportJob.ImportJobState.ACTIVE].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.ImportJob.Types.WrappingPublicKey PublicKey {
       get { return publicKey_; }
       set {
@@ -3167,6 +3318,7 @@ namespace Google.Cloud.Kms.V1 {
     /// level of [HSM][google.cloud.kms.v1.ProtectionLevel.HSM].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Kms.V1.KeyOperationAttestation Attestation {
       get { return attestation_; }
       set {
@@ -3175,11 +3327,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImportJob);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImportJob other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3201,6 +3355,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3220,11 +3375,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3277,6 +3434,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3325,6 +3483,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3364,6 +3523,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImportJob other) {
       if (other == null) {
         return;
@@ -3420,6 +3580,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3495,6 +3656,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3568,6 +3730,7 @@ namespace Google.Cloud.Kms.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ImportJob message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// [ImportMethod][google.cloud.kms.v1.ImportJob.ImportMethod] describes the key wrapping method chosen for this
@@ -3637,19 +3800,23 @@ namespace Google.Cloud.Kms.V1 {
         private static readonly pb::MessageParser<WrappingPublicKey> _parser = new pb::MessageParser<WrappingPublicKey>(() => new WrappingPublicKey());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<WrappingPublicKey> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Kms.V1.ImportJob.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WrappingPublicKey() {
           OnConstruction();
         }
@@ -3657,12 +3824,14 @@ namespace Google.Cloud.Kms.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WrappingPublicKey(WrappingPublicKey other) : this() {
           pem_ = other.pem_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WrappingPublicKey Clone() {
           return new WrappingPublicKey(this);
         }
@@ -3678,6 +3847,7 @@ namespace Google.Cloud.Kms.V1 {
         /// (https://tools.ietf.org/html/rfc7468#section-13).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Pem {
           get { return pem_; }
           set {
@@ -3686,11 +3856,13 @@ namespace Google.Cloud.Kms.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as WrappingPublicKey);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(WrappingPublicKey other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3703,6 +3875,7 @@ namespace Google.Cloud.Kms.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Pem.Length != 0) hash ^= Pem.GetHashCode();
@@ -3713,11 +3886,13 @@ namespace Google.Cloud.Kms.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3734,6 +3909,7 @@ namespace Google.Cloud.Kms.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Pem.Length != 0) {
             output.WriteRawTag(10);
@@ -3746,6 +3922,7 @@ namespace Google.Cloud.Kms.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Pem.Length != 0) {
@@ -3758,6 +3935,7 @@ namespace Google.Cloud.Kms.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(WrappingPublicKey other) {
           if (other == null) {
             return;
@@ -3769,6 +3947,7 @@ namespace Google.Cloud.Kms.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3790,6 +3969,7 @@ namespace Google.Cloud.Kms.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3826,19 +4006,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::MessageParser<ExternalProtectionLevelOptions> _parser = new pb::MessageParser<ExternalProtectionLevelOptions>(() => new ExternalProtectionLevelOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExternalProtectionLevelOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Kms.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExternalProtectionLevelOptions() {
       OnConstruction();
     }
@@ -3846,12 +4030,14 @@ namespace Google.Cloud.Kms.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExternalProtectionLevelOptions(ExternalProtectionLevelOptions other) : this() {
       externalKeyUri_ = other.externalKeyUri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExternalProtectionLevelOptions Clone() {
       return new ExternalProtectionLevelOptions(this);
     }
@@ -3863,6 +4049,7 @@ namespace Google.Cloud.Kms.V1 {
     /// The URI for an external resource that this [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] represents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ExternalKeyUri {
       get { return externalKeyUri_; }
       set {
@@ -3871,11 +4058,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExternalProtectionLevelOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExternalProtectionLevelOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3888,6 +4077,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ExternalKeyUri.Length != 0) hash ^= ExternalKeyUri.GetHashCode();
@@ -3898,11 +4088,13 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3919,6 +4111,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ExternalKeyUri.Length != 0) {
         output.WriteRawTag(10);
@@ -3931,6 +4124,7 @@ namespace Google.Cloud.Kms.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ExternalKeyUri.Length != 0) {
@@ -3943,6 +4137,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExternalProtectionLevelOptions other) {
       if (other == null) {
         return;
@@ -3954,6 +4149,7 @@ namespace Google.Cloud.Kms.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3975,6 +4171,7 @@ namespace Google.Cloud.Kms.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

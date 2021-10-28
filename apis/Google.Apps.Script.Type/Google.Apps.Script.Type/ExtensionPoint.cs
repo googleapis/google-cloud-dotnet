@@ -61,19 +61,23 @@ namespace Google.Apps.Script.Type {
     private static readonly pb::MessageParser<MenuItemExtensionPoint> _parser = new pb::MessageParser<MenuItemExtensionPoint>(() => new MenuItemExtensionPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MenuItemExtensionPoint> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.ExtensionPointReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MenuItemExtensionPoint() {
       OnConstruction();
     }
@@ -81,6 +85,7 @@ namespace Google.Apps.Script.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MenuItemExtensionPoint(MenuItemExtensionPoint other) : this() {
       runFunction_ = other.runFunction_;
       label_ = other.label_;
@@ -89,6 +94,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MenuItemExtensionPoint Clone() {
       return new MenuItemExtensionPoint(this);
     }
@@ -101,6 +107,7 @@ namespace Google.Apps.Script.Type {
     /// activated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
       get { return runFunction_; }
       set {
@@ -116,6 +123,7 @@ namespace Google.Apps.Script.Type {
     /// extension point. For example, "Insert invoice".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Label {
       get { return label_; }
       set {
@@ -132,6 +140,7 @@ namespace Google.Apps.Script.Type {
     /// If not set, defaults to the add-on's primary logo URL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LogoUrl {
       get { return logoUrl_; }
       set {
@@ -140,11 +149,13 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MenuItemExtensionPoint);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MenuItemExtensionPoint other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -159,6 +170,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (RunFunction.Length != 0) hash ^= RunFunction.GetHashCode();
@@ -171,11 +183,13 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -200,6 +214,7 @@ namespace Google.Apps.Script.Type {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RunFunction.Length != 0) {
         output.WriteRawTag(10);
@@ -220,6 +235,7 @@ namespace Google.Apps.Script.Type {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (RunFunction.Length != 0) {
@@ -238,6 +254,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MenuItemExtensionPoint other) {
       if (other == null) {
         return;
@@ -255,6 +272,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -284,6 +302,7 @@ namespace Google.Apps.Script.Type {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -321,19 +340,23 @@ namespace Google.Apps.Script.Type {
     private static readonly pb::MessageParser<HomepageExtensionPoint> _parser = new pb::MessageParser<HomepageExtensionPoint>(() => new HomepageExtensionPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HomepageExtensionPoint> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.ExtensionPointReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HomepageExtensionPoint() {
       OnConstruction();
     }
@@ -341,6 +364,7 @@ namespace Google.Apps.Script.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HomepageExtensionPoint(HomepageExtensionPoint other) : this() {
       runFunction_ = other.runFunction_;
       Enabled = other.Enabled;
@@ -348,6 +372,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HomepageExtensionPoint Clone() {
       return new HomepageExtensionPoint(this);
     }
@@ -360,6 +385,7 @@ namespace Google.Apps.Script.Type {
     /// activated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
       get { return runFunction_; }
       set {
@@ -380,6 +406,7 @@ namespace Google.Apps.Script.Type {
     /// card will be provided for users instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool? Enabled {
       get { return enabled_; }
       set {
@@ -389,11 +416,13 @@ namespace Google.Apps.Script.Type {
 
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HomepageExtensionPoint);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HomepageExtensionPoint other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -407,6 +436,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (RunFunction.Length != 0) hash ^= RunFunction.GetHashCode();
@@ -418,11 +448,13 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -442,6 +474,7 @@ namespace Google.Apps.Script.Type {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RunFunction.Length != 0) {
         output.WriteRawTag(10);
@@ -457,6 +490,7 @@ namespace Google.Apps.Script.Type {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (RunFunction.Length != 0) {
@@ -472,6 +506,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HomepageExtensionPoint other) {
       if (other == null) {
         return;
@@ -488,6 +523,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -516,6 +552,7 @@ namespace Google.Apps.Script.Type {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -552,19 +589,23 @@ namespace Google.Apps.Script.Type {
     private static readonly pb::MessageParser<UniversalActionExtensionPoint> _parser = new pb::MessageParser<UniversalActionExtensionPoint>(() => new UniversalActionExtensionPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UniversalActionExtensionPoint> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.ExtensionPointReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UniversalActionExtensionPoint() {
       OnConstruction();
     }
@@ -572,6 +613,7 @@ namespace Google.Apps.Script.Type {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UniversalActionExtensionPoint(UniversalActionExtensionPoint other) : this() {
       label_ = other.label_;
       switch (other.ActionTypeCase) {
@@ -587,6 +629,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UniversalActionExtensionPoint Clone() {
       return new UniversalActionExtensionPoint(this);
     }
@@ -599,6 +642,7 @@ namespace Google.Apps.Script.Type {
     /// extension point, for example, "Add a new contact".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Label {
       get { return label_; }
       set {
@@ -612,6 +656,7 @@ namespace Google.Apps.Script.Type {
     /// URL to be opened by the UniversalAction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OpenLink {
       get { return actionTypeCase_ == ActionTypeOneofCase.OpenLink ? (string) actionType_ : ""; }
       set {
@@ -626,6 +671,7 @@ namespace Google.Apps.Script.Type {
     /// Endpoint to be run by the UniversalAction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
       get { return actionTypeCase_ == ActionTypeOneofCase.RunFunction ? (string) actionType_ : ""; }
       set {
@@ -643,22 +689,26 @@ namespace Google.Apps.Script.Type {
     }
     private ActionTypeOneofCase actionTypeCase_ = ActionTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ActionTypeOneofCase ActionTypeCase {
       get { return actionTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearActionType() {
       actionTypeCase_ = ActionTypeOneofCase.None;
       actionType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UniversalActionExtensionPoint);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UniversalActionExtensionPoint other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -674,6 +724,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Label.Length != 0) hash ^= Label.GetHashCode();
@@ -687,11 +738,13 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -716,6 +769,7 @@ namespace Google.Apps.Script.Type {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Label.Length != 0) {
         output.WriteRawTag(10);
@@ -736,6 +790,7 @@ namespace Google.Apps.Script.Type {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Label.Length != 0) {
@@ -754,6 +809,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UniversalActionExtensionPoint other) {
       if (other == null) {
         return;
@@ -774,6 +830,7 @@ namespace Google.Apps.Script.Type {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -803,6 +860,7 @@ namespace Google.Apps.Script.Type {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

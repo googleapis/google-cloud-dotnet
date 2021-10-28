@@ -95,19 +95,23 @@ namespace Google.Cloud.Monitoring.V3 {
     private static readonly pb::MessageParser<Point> _parser = new pb::MessageParser<Point>(() => new Point());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Point> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Point() {
       OnConstruction();
     }
@@ -115,6 +119,7 @@ namespace Google.Cloud.Monitoring.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Point(Point other) : this() {
       interval_ = other.interval_ != null ? other.interval_.Clone() : null;
       value_ = other.value_ != null ? other.value_.Clone() : null;
@@ -122,6 +127,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Point Clone() {
       return new Point(this);
     }
@@ -141,6 +147,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// time for the following points.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Monitoring.V3.TimeInterval Interval {
       get { return interval_; }
       set {
@@ -155,6 +162,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// The value of the data point.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Monitoring.V3.TypedValue Value {
       get { return value_; }
       set {
@@ -163,11 +171,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Point);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Point other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -181,6 +191,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (interval_ != null) hash ^= Interval.GetHashCode();
@@ -192,11 +203,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -217,6 +230,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (interval_ != null) {
         output.WriteRawTag(10);
@@ -233,6 +247,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (interval_ != null) {
@@ -248,6 +263,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Point other) {
       if (other == null) {
         return;
@@ -268,6 +284,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -299,6 +316,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -341,19 +359,23 @@ namespace Google.Cloud.Monitoring.V3 {
     private static readonly pb::MessageParser<TimeSeries> _parser = new pb::MessageParser<TimeSeries>(() => new TimeSeries());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimeSeries> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeries() {
       OnConstruction();
     }
@@ -361,6 +383,7 @@ namespace Google.Cloud.Monitoring.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeries(TimeSeries other) : this() {
       metric_ = other.metric_ != null ? other.metric_.Clone() : null;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
@@ -373,6 +396,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeries Clone() {
       return new TimeSeries(this);
     }
@@ -385,6 +409,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// series.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Api.Metric Metric {
       get { return metric_; }
       set {
@@ -402,6 +427,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// metrics](https://cloud.google.com/monitoring/custom-metrics/creating-metrics#custom-metric-resources).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Api.MonitoredResource Resource {
       get { return resource_; }
       set {
@@ -418,6 +444,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// named in the reduction. When creating a time series, this field is ignored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Api.MonitoredResourceMetadata Metadata {
       get { return metadata_; }
       set {
@@ -440,6 +467,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// or `CUMULATIVE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Api.MetricDescriptor.Types.MetricKind MetricKind {
       get { return metricKind_; }
       set {
@@ -459,6 +487,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// the same as the type of the data in the `points` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Api.MetricDescriptor.Types.ValueType ValueType {
       get { return valueType_; }
       set {
@@ -482,6 +511,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// must be `BOOL`, `INT64`, `DOUBLE`, or `DISTRIBUTION`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.Point> Points {
       get { return points_; }
     }
@@ -495,6 +525,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// defines the representation of the stored metric values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Unit {
       get { return unit_; }
       set {
@@ -503,11 +534,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimeSeries);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimeSeries other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -526,6 +559,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (metric_ != null) hash ^= Metric.GetHashCode();
@@ -542,11 +576,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -584,6 +620,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (metric_ != null) {
         output.WriteRawTag(10);
@@ -617,6 +654,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (metric_ != null) {
@@ -645,6 +683,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimeSeries other) {
       if (other == null) {
         return;
@@ -681,6 +720,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -735,6 +775,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -797,19 +838,23 @@ namespace Google.Cloud.Monitoring.V3 {
     private static readonly pb::MessageParser<TimeSeriesDescriptor> _parser = new pb::MessageParser<TimeSeriesDescriptor>(() => new TimeSeriesDescriptor());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimeSeriesDescriptor> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeriesDescriptor() {
       OnConstruction();
     }
@@ -817,6 +862,7 @@ namespace Google.Cloud.Monitoring.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeriesDescriptor(TimeSeriesDescriptor other) : this() {
       labelDescriptors_ = other.labelDescriptors_.Clone();
       pointDescriptors_ = other.pointDescriptors_.Clone();
@@ -824,6 +870,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeriesDescriptor Clone() {
       return new TimeSeriesDescriptor(this);
     }
@@ -837,6 +884,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// Descriptors for the labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Api.LabelDescriptor> LabelDescriptors {
       get { return labelDescriptors_; }
     }
@@ -850,16 +898,19 @@ namespace Google.Cloud.Monitoring.V3 {
     /// Descriptors for the point data value columns.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Types.ValueDescriptor> PointDescriptors {
       get { return pointDescriptors_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimeSeriesDescriptor);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimeSeriesDescriptor other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -873,6 +924,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= labelDescriptors_.GetHashCode();
@@ -884,11 +936,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -903,6 +957,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       labelDescriptors_.WriteTo(ref output, _repeated_labelDescriptors_codec);
       pointDescriptors_.WriteTo(ref output, _repeated_pointDescriptors_codec);
@@ -913,6 +968,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += labelDescriptors_.CalculateSize(_repeated_labelDescriptors_codec);
@@ -924,6 +980,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimeSeriesDescriptor other) {
       if (other == null) {
         return;
@@ -934,6 +991,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -959,6 +1017,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -982,6 +1041,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #region Nested types
     /// <summary>Container for nested types declared in the TimeSeriesDescriptor message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A descriptor for the value columns in a data point.
@@ -994,19 +1054,23 @@ namespace Google.Cloud.Monitoring.V3 {
         private static readonly pb::MessageParser<ValueDescriptor> _parser = new pb::MessageParser<ValueDescriptor>(() => new ValueDescriptor());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ValueDescriptor> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Monitoring.V3.TimeSeriesDescriptor.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ValueDescriptor() {
           OnConstruction();
         }
@@ -1014,6 +1078,7 @@ namespace Google.Cloud.Monitoring.V3 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ValueDescriptor(ValueDescriptor other) : this() {
           key_ = other.key_;
           valueType_ = other.valueType_;
@@ -1023,6 +1088,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ValueDescriptor Clone() {
           return new ValueDescriptor(this);
         }
@@ -1034,6 +1100,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The value key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Key {
           get { return key_; }
           set {
@@ -1048,6 +1115,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The value type.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Api.MetricDescriptor.Types.ValueType ValueType {
           get { return valueType_; }
           set {
@@ -1062,6 +1130,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The value stream kind.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Api.MetricDescriptor.Types.MetricKind MetricKind {
           get { return metricKind_; }
           set {
@@ -1079,6 +1148,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// `unit` is only valid if `value_type` is INTEGER, DOUBLE, DISTRIBUTION.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Unit {
           get { return unit_; }
           set {
@@ -1087,11 +1157,13 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ValueDescriptor);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ValueDescriptor other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1107,6 +1179,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -1120,11 +1193,13 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1153,6 +1228,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Key.Length != 0) {
             output.WriteRawTag(10);
@@ -1177,6 +1253,7 @@ namespace Google.Cloud.Monitoring.V3 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Key.Length != 0) {
@@ -1198,6 +1275,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ValueDescriptor other) {
           if (other == null) {
             return;
@@ -1218,6 +1296,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1251,6 +1330,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1298,19 +1378,23 @@ namespace Google.Cloud.Monitoring.V3 {
     private static readonly pb::MessageParser<TimeSeriesData> _parser = new pb::MessageParser<TimeSeriesData>(() => new TimeSeriesData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimeSeriesData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeriesData() {
       OnConstruction();
     }
@@ -1318,6 +1402,7 @@ namespace Google.Cloud.Monitoring.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeriesData(TimeSeriesData other) : this() {
       labelValues_ = other.labelValues_.Clone();
       pointData_ = other.pointData_.Clone();
@@ -1325,6 +1410,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSeriesData Clone() {
       return new TimeSeriesData(this);
     }
@@ -1341,6 +1427,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// given in the corresponding entry of `label_descriptors`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.LabelValue> LabelValues {
       get { return labelValues_; }
     }
@@ -1354,16 +1441,19 @@ namespace Google.Cloud.Monitoring.V3 {
     /// The points in the time series.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TimeSeriesData.Types.PointData> PointData {
       get { return pointData_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimeSeriesData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimeSeriesData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1377,6 +1467,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= labelValues_.GetHashCode();
@@ -1388,11 +1479,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1407,6 +1500,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       labelValues_.WriteTo(ref output, _repeated_labelValues_codec);
       pointData_.WriteTo(ref output, _repeated_pointData_codec);
@@ -1417,6 +1511,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += labelValues_.CalculateSize(_repeated_labelValues_codec);
@@ -1428,6 +1523,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimeSeriesData other) {
       if (other == null) {
         return;
@@ -1438,6 +1534,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1463,6 +1560,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1486,6 +1584,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #region Nested types
     /// <summary>Container for nested types declared in the TimeSeriesData message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A point's value columns and time interval. Each point has one or more
@@ -1500,19 +1599,23 @@ namespace Google.Cloud.Monitoring.V3 {
         private static readonly pb::MessageParser<PointData> _parser = new pb::MessageParser<PointData>(() => new PointData());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<PointData> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Monitoring.V3.TimeSeriesData.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PointData() {
           OnConstruction();
         }
@@ -1520,6 +1623,7 @@ namespace Google.Cloud.Monitoring.V3 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PointData(PointData other) : this() {
           values_ = other.values_.Clone();
           timeInterval_ = other.timeInterval_ != null ? other.timeInterval_.Clone() : null;
@@ -1527,6 +1631,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PointData Clone() {
           return new PointData(this);
         }
@@ -1540,6 +1645,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The values that make up the point.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Monitoring.V3.TypedValue> Values {
           get { return values_; }
         }
@@ -1551,6 +1657,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The time interval associated with the point.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Monitoring.V3.TimeInterval TimeInterval {
           get { return timeInterval_; }
           set {
@@ -1559,11 +1666,13 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as PointData);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(PointData other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1577,6 +1686,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= values_.GetHashCode();
@@ -1588,11 +1698,13 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1610,6 +1722,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           values_.WriteTo(ref output, _repeated_values_codec);
           if (timeInterval_ != null) {
@@ -1623,6 +1736,7 @@ namespace Google.Cloud.Monitoring.V3 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += values_.CalculateSize(_repeated_values_codec);
@@ -1636,6 +1750,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(PointData other) {
           if (other == null) {
             return;
@@ -1651,6 +1766,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1679,6 +1795,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1720,19 +1837,23 @@ namespace Google.Cloud.Monitoring.V3 {
     private static readonly pb::MessageParser<LabelValue> _parser = new pb::MessageParser<LabelValue>(() => new LabelValue());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<LabelValue> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelValue() {
       OnConstruction();
     }
@@ -1740,6 +1861,7 @@ namespace Google.Cloud.Monitoring.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelValue(LabelValue other) : this() {
       switch (other.ValueCase) {
         case ValueOneofCase.BoolValue:
@@ -1757,6 +1879,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public LabelValue Clone() {
       return new LabelValue(this);
     }
@@ -1767,6 +1890,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// A bool label value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
       get { return valueCase_ == ValueOneofCase.BoolValue ? (bool) value_ : false; }
       set {
@@ -1781,6 +1905,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// An int64 label value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
       get { return valueCase_ == ValueOneofCase.Int64Value ? (long) value_ : 0L; }
       set {
@@ -1795,6 +1920,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// A string label value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
       get { return valueCase_ == ValueOneofCase.StringValue ? (string) value_ : ""; }
       set {
@@ -1813,22 +1939,26 @@ namespace Google.Cloud.Monitoring.V3 {
     }
     private ValueOneofCase valueCase_ = ValueOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueOneofCase ValueCase {
       get { return valueCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearValue() {
       valueCase_ = ValueOneofCase.None;
       value_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as LabelValue);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(LabelValue other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1844,6 +1974,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (valueCase_ == ValueOneofCase.BoolValue) hash ^= BoolValue.GetHashCode();
@@ -1857,11 +1988,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1886,6 +2019,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (valueCase_ == ValueOneofCase.BoolValue) {
         output.WriteRawTag(8);
@@ -1906,6 +2040,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (valueCase_ == ValueOneofCase.BoolValue) {
@@ -1924,6 +2059,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(LabelValue other) {
       if (other == null) {
         return;
@@ -1944,6 +2080,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1973,6 +2110,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2010,19 +2148,23 @@ namespace Google.Cloud.Monitoring.V3 {
     private static readonly pb::MessageParser<QueryError> _parser = new pb::MessageParser<QueryError>(() => new QueryError());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<QueryError> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueryError() {
       OnConstruction();
     }
@@ -2030,6 +2172,7 @@ namespace Google.Cloud.Monitoring.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueryError(QueryError other) : this() {
       locator_ = other.locator_ != null ? other.locator_.Clone() : null;
       message_ = other.message_;
@@ -2037,6 +2180,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public QueryError Clone() {
       return new QueryError(this);
     }
@@ -2049,6 +2193,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Monitoring.V3.TextLocator Locator {
       get { return locator_; }
       set {
@@ -2063,6 +2208,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// The error message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Message {
       get { return message_; }
       set {
@@ -2071,11 +2217,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as QueryError);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(QueryError other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2089,6 +2237,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (locator_ != null) hash ^= Locator.GetHashCode();
@@ -2100,11 +2249,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2125,6 +2276,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (locator_ != null) {
         output.WriteRawTag(10);
@@ -2141,6 +2293,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (locator_ != null) {
@@ -2156,6 +2309,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(QueryError other) {
       if (other == null) {
         return;
@@ -2173,6 +2327,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2201,6 +2356,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2256,19 +2412,23 @@ namespace Google.Cloud.Monitoring.V3 {
     private static readonly pb::MessageParser<TextLocator> _parser = new pb::MessageParser<TextLocator>(() => new TextLocator());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextLocator> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Monitoring.V3.MetricReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextLocator() {
       OnConstruction();
     }
@@ -2276,6 +2436,7 @@ namespace Google.Cloud.Monitoring.V3 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextLocator(TextLocator other) : this() {
       source_ = other.source_;
       startPosition_ = other.startPosition_ != null ? other.startPosition_.Clone() : null;
@@ -2286,6 +2447,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextLocator Clone() {
       return new TextLocator(this);
     }
@@ -2303,6 +2465,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// the source (e.g. the macro name).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Source {
       get { return source_; }
       set {
@@ -2317,6 +2480,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// The position of the first byte within the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position StartPosition {
       get { return startPosition_; }
       set {
@@ -2331,6 +2495,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// The position of the last byte within the text.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Monitoring.V3.TextLocator.Types.Position EndPosition {
       get { return endPosition_; }
       set {
@@ -2348,6 +2513,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// identifies the location within that object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Monitoring.V3.TextLocator NestedLocator {
       get { return nestedLocator_; }
       set {
@@ -2367,6 +2533,7 @@ namespace Google.Cloud.Monitoring.V3 {
     /// substituted away.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NestingReason {
       get { return nestingReason_; }
       set {
@@ -2375,11 +2542,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextLocator);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextLocator other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2396,6 +2565,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Source.Length != 0) hash ^= Source.GetHashCode();
@@ -2410,11 +2580,13 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2447,6 +2619,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Source.Length != 0) {
         output.WriteRawTag(10);
@@ -2475,6 +2648,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Source.Length != 0) {
@@ -2499,6 +2673,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextLocator other) {
       if (other == null) {
         return;
@@ -2531,6 +2706,7 @@ namespace Google.Cloud.Monitoring.V3 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2577,6 +2753,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2621,6 +2798,7 @@ namespace Google.Cloud.Monitoring.V3 {
     #region Nested types
     /// <summary>Container for nested types declared in the TextLocator message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The position of a byte within the text.
@@ -2633,19 +2811,23 @@ namespace Google.Cloud.Monitoring.V3 {
         private static readonly pb::MessageParser<Position> _parser = new pb::MessageParser<Position>(() => new Position());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Position> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Monitoring.V3.TextLocator.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Position() {
           OnConstruction();
         }
@@ -2653,6 +2835,7 @@ namespace Google.Cloud.Monitoring.V3 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Position(Position other) : this() {
           line_ = other.line_;
           column_ = other.column_;
@@ -2660,6 +2843,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Position Clone() {
           return new Position(this);
         }
@@ -2671,6 +2855,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// The line, starting with 1, where the byte is positioned.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int Line {
           get { return line_; }
           set {
@@ -2686,6 +2871,7 @@ namespace Google.Cloud.Monitoring.V3 {
         /// positioned. This is a byte index even though the text is UTF-8.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int Column {
           get { return column_; }
           set {
@@ -2694,11 +2880,13 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Position);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Position other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2712,6 +2900,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Line != 0) hash ^= Line.GetHashCode();
@@ -2723,11 +2912,13 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2748,6 +2939,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Line != 0) {
             output.WriteRawTag(8);
@@ -2764,6 +2956,7 @@ namespace Google.Cloud.Monitoring.V3 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Line != 0) {
@@ -2779,6 +2972,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Position other) {
           if (other == null) {
             return;
@@ -2793,6 +2987,7 @@ namespace Google.Cloud.Monitoring.V3 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2818,6 +3013,7 @@ namespace Google.Cloud.Monitoring.V3 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

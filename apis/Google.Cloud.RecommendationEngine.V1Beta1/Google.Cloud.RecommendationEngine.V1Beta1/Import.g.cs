@@ -115,19 +115,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<GcsSource> _parser = new pb::MessageParser<GcsSource>(() => new GcsSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GcsSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsSource() {
       OnConstruction();
     }
@@ -135,12 +139,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsSource(GcsSource other) : this() {
       inputUris_ = other.inputUris_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsSource Clone() {
       return new GcsSource(this);
     }
@@ -160,16 +166,19 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// for the expected file format and setup instructions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> InputUris {
       get { return inputUris_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GcsSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GcsSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -182,6 +191,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputUris_.GetHashCode();
@@ -192,11 +202,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -210,6 +222,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       inputUris_.WriteTo(ref output, _repeated_inputUris_codec);
       if (_unknownFields != null) {
@@ -219,6 +232,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += inputUris_.CalculateSize(_repeated_inputUris_codec);
@@ -229,6 +243,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GcsSource other) {
       if (other == null) {
         return;
@@ -238,6 +253,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -259,6 +275,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -288,19 +305,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<CatalogInlineSource> _parser = new pb::MessageParser<CatalogInlineSource>(() => new CatalogInlineSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CatalogInlineSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CatalogInlineSource() {
       OnConstruction();
     }
@@ -308,12 +329,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CatalogInlineSource(CatalogInlineSource other) : this() {
       catalogItems_ = other.catalogItems_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CatalogInlineSource Clone() {
       return new CatalogInlineSource(this);
     }
@@ -328,16 +351,19 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogItem> CatalogItems {
       get { return catalogItems_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CatalogInlineSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CatalogInlineSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -350,6 +376,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= catalogItems_.GetHashCode();
@@ -360,11 +387,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -378,6 +407,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       catalogItems_.WriteTo(ref output, _repeated_catalogItems_codec);
       if (_unknownFields != null) {
@@ -387,6 +417,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += catalogItems_.CalculateSize(_repeated_catalogItems_codec);
@@ -397,6 +428,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CatalogInlineSource other) {
       if (other == null) {
         return;
@@ -406,6 +438,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -427,6 +460,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -456,19 +490,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<UserEventInlineSource> _parser = new pb::MessageParser<UserEventInlineSource>(() => new UserEventInlineSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UserEventInlineSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserEventInlineSource() {
       OnConstruction();
     }
@@ -476,12 +514,14 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserEventInlineSource(UserEventInlineSource other) : this() {
       userEvents_ = other.userEvents_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserEventInlineSource Clone() {
       return new UserEventInlineSource(this);
     }
@@ -495,16 +535,19 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Optional. A list of user events to import. Recommended max of 10k items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.RecommendationEngine.V1Beta1.UserEvent> UserEvents {
       get { return userEvents_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UserEventInlineSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UserEventInlineSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -517,6 +560,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= userEvents_.GetHashCode();
@@ -527,11 +571,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -545,6 +591,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       userEvents_.WriteTo(ref output, _repeated_userEvents_codec);
       if (_unknownFields != null) {
@@ -554,6 +601,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += userEvents_.CalculateSize(_repeated_userEvents_codec);
@@ -564,6 +612,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UserEventInlineSource other) {
       if (other == null) {
         return;
@@ -573,6 +622,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -594,6 +644,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -623,19 +674,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<ImportErrorsConfig> _parser = new pb::MessageParser<ImportErrorsConfig>(() => new ImportErrorsConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImportErrorsConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportErrorsConfig() {
       OnConstruction();
     }
@@ -643,6 +698,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportErrorsConfig(ImportErrorsConfig other) : this() {
       switch (other.DestinationCase) {
         case DestinationOneofCase.GcsPrefix:
@@ -654,6 +710,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportErrorsConfig Clone() {
       return new ImportErrorsConfig(this);
     }
@@ -667,6 +724,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// `google.rpc.Status` message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcsPrefix {
       get { return destinationCase_ == DestinationOneofCase.GcsPrefix ? (string) destination_ : ""; }
       set {
@@ -683,22 +741,26 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
     private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DestinationOneofCase DestinationCase {
       get { return destinationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDestination() {
       destinationCase_ = DestinationOneofCase.None;
       destination_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImportErrorsConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImportErrorsConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -712,6 +774,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (destinationCase_ == DestinationOneofCase.GcsPrefix) hash ^= GcsPrefix.GetHashCode();
@@ -723,11 +786,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -744,6 +809,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
         output.WriteRawTag(10);
@@ -756,6 +822,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (destinationCase_ == DestinationOneofCase.GcsPrefix) {
@@ -768,6 +835,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImportErrorsConfig other) {
       if (other == null) {
         return;
@@ -782,6 +850,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -803,6 +872,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -832,19 +902,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<ImportCatalogItemsRequest> _parser = new pb::MessageParser<ImportCatalogItemsRequest>(() => new ImportCatalogItemsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImportCatalogItemsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportCatalogItemsRequest() {
       OnConstruction();
     }
@@ -852,6 +926,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportCatalogItemsRequest(ImportCatalogItemsRequest other) : this() {
       parent_ = other.parent_;
       requestId_ = other.requestId_;
@@ -861,6 +936,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportCatalogItemsRequest Clone() {
       return new ImportCatalogItemsRequest(this);
     }
@@ -872,6 +948,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Required. `projects/1234/locations/global/catalogs/default_catalog`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -889,6 +966,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// returned as google.longrunning.Operation.name in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestId {
       get { return requestId_; }
       set {
@@ -903,6 +981,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Required. The desired input location of the data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.InputConfig InputConfig {
       get { return inputConfig_; }
       set {
@@ -917,6 +996,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Optional. The desired location of errors incurred during the Import.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig ErrorsConfig {
       get { return errorsConfig_; }
       set {
@@ -925,11 +1005,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImportCatalogItemsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImportCatalogItemsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -945,6 +1027,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -958,11 +1041,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -991,6 +1076,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -1015,6 +1101,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -1036,6 +1123,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImportCatalogItemsRequest other) {
       if (other == null) {
         return;
@@ -1062,6 +1150,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1101,6 +1190,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1148,19 +1238,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<ImportUserEventsRequest> _parser = new pb::MessageParser<ImportUserEventsRequest>(() => new ImportUserEventsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImportUserEventsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportUserEventsRequest() {
       OnConstruction();
     }
@@ -1168,6 +1262,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportUserEventsRequest(ImportUserEventsRequest other) : this() {
       parent_ = other.parent_;
       requestId_ = other.requestId_;
@@ -1177,6 +1272,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportUserEventsRequest Clone() {
       return new ImportUserEventsRequest(this);
     }
@@ -1189,6 +1285,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// `projects/1234/locations/global/catalogs/default_catalog/eventStores/default_event_store`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -1208,6 +1305,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// catalog_inline_source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestId {
       get { return requestId_; }
       set {
@@ -1222,6 +1320,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Required. The desired input location of the data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.InputConfig InputConfig {
       get { return inputConfig_; }
       set {
@@ -1236,6 +1335,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Optional. The desired location of errors incurred during the Import.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig ErrorsConfig {
       get { return errorsConfig_; }
       set {
@@ -1244,11 +1344,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImportUserEventsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImportUserEventsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1264,6 +1366,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -1277,11 +1380,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1310,6 +1415,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -1334,6 +1440,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -1355,6 +1462,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImportUserEventsRequest other) {
       if (other == null) {
         return;
@@ -1381,6 +1489,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1420,6 +1529,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1467,19 +1577,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<InputConfig> _parser = new pb::MessageParser<InputConfig>(() => new InputConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InputConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InputConfig() {
       OnConstruction();
     }
@@ -1487,6 +1601,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InputConfig(InputConfig other) : this() {
       switch (other.SourceCase) {
         case SourceOneofCase.CatalogInlineSource:
@@ -1504,6 +1619,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InputConfig Clone() {
       return new InputConfig(this);
     }
@@ -1514,6 +1630,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// The Inline source for the input content for Catalog items.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogInlineSource CatalogInlineSource {
       get { return sourceCase_ == SourceOneofCase.CatalogInlineSource ? (global::Google.Cloud.RecommendationEngine.V1Beta1.CatalogInlineSource) source_ : null; }
       set {
@@ -1528,6 +1645,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Google Cloud Storage location for the input content.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.GcsSource GcsSource {
       get { return sourceCase_ == SourceOneofCase.GcsSource ? (global::Google.Cloud.RecommendationEngine.V1Beta1.GcsSource) source_ : null; }
       set {
@@ -1542,6 +1660,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// The Inline source for the input content for UserEvents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.UserEventInlineSource UserEventInlineSource {
       get { return sourceCase_ == SourceOneofCase.UserEventInlineSource ? (global::Google.Cloud.RecommendationEngine.V1Beta1.UserEventInlineSource) source_ : null; }
       set {
@@ -1560,22 +1679,26 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceOneofCase SourceCase {
       get { return sourceCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSource() {
       sourceCase_ = SourceOneofCase.None;
       source_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InputConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InputConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1591,6 +1714,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.CatalogInlineSource) hash ^= CatalogInlineSource.GetHashCode();
@@ -1604,11 +1728,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1633,6 +1759,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (sourceCase_ == SourceOneofCase.CatalogInlineSource) {
         output.WriteRawTag(10);
@@ -1653,6 +1780,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (sourceCase_ == SourceOneofCase.CatalogInlineSource) {
@@ -1671,6 +1799,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InputConfig other) {
       if (other == null) {
         return;
@@ -1700,6 +1829,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1744,6 +1874,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1797,19 +1928,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<ImportMetadata> _parser = new pb::MessageParser<ImportMetadata>(() => new ImportMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImportMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportMetadata() {
       OnConstruction();
     }
@@ -1817,6 +1952,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportMetadata(ImportMetadata other) : this() {
       operationName_ = other.operationName_;
       requestId_ = other.requestId_;
@@ -1828,6 +1964,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportMetadata Clone() {
       return new ImportMetadata(this);
     }
@@ -1839,6 +1976,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Name of the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OperationName {
       get { return operationName_; }
       set {
@@ -1854,6 +1992,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// was passed in the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestId {
       get { return requestId_; }
       set {
@@ -1868,6 +2007,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Operation create time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1882,6 +2022,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Count of entries that were processed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SuccessCount {
       get { return successCount_; }
       set {
@@ -1896,6 +2037,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Count of entries that encountered errors while processing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long FailureCount {
       get { return failureCount_; }
       set {
@@ -1911,6 +2053,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// finish time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -1919,11 +2062,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImportMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImportMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1941,6 +2086,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (OperationName.Length != 0) hash ^= OperationName.GetHashCode();
@@ -1956,11 +2102,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1997,6 +2145,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SuccessCount != 0L) {
         output.WriteRawTag(8);
@@ -2029,6 +2178,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (OperationName.Length != 0) {
@@ -2056,6 +2206,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImportMetadata other) {
       if (other == null) {
         return;
@@ -2088,6 +2239,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2135,6 +2287,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2192,19 +2345,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<ImportCatalogItemsResponse> _parser = new pb::MessageParser<ImportCatalogItemsResponse>(() => new ImportCatalogItemsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImportCatalogItemsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportCatalogItemsResponse() {
       OnConstruction();
     }
@@ -2212,6 +2369,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportCatalogItemsResponse(ImportCatalogItemsResponse other) : this() {
       errorSamples_ = other.errorSamples_.Clone();
       errorsConfig_ = other.errorsConfig_ != null ? other.errorsConfig_.Clone() : null;
@@ -2219,6 +2377,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportCatalogItemsResponse Clone() {
       return new ImportCatalogItemsResponse(this);
     }
@@ -2232,6 +2391,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// A sample of errors encountered while processing the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Rpc.Status> ErrorSamples {
       get { return errorSamples_; }
     }
@@ -2243,6 +2403,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Echoes the destination for the complete errors in the request if set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig ErrorsConfig {
       get { return errorsConfig_; }
       set {
@@ -2251,11 +2412,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImportCatalogItemsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImportCatalogItemsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2269,6 +2432,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= errorSamples_.GetHashCode();
@@ -2280,11 +2444,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2302,6 +2468,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       errorSamples_.WriteTo(ref output, _repeated_errorSamples_codec);
       if (errorsConfig_ != null) {
@@ -2315,6 +2482,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += errorSamples_.CalculateSize(_repeated_errorSamples_codec);
@@ -2328,6 +2496,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImportCatalogItemsResponse other) {
       if (other == null) {
         return;
@@ -2343,6 +2512,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2371,6 +2541,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2409,19 +2580,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<ImportUserEventsResponse> _parser = new pb::MessageParser<ImportUserEventsResponse>(() => new ImportUserEventsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImportUserEventsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportUserEventsResponse() {
       OnConstruction();
     }
@@ -2429,6 +2604,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportUserEventsResponse(ImportUserEventsResponse other) : this() {
       errorSamples_ = other.errorSamples_.Clone();
       errorsConfig_ = other.errorsConfig_ != null ? other.errorsConfig_.Clone() : null;
@@ -2437,6 +2613,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImportUserEventsResponse Clone() {
       return new ImportUserEventsResponse(this);
     }
@@ -2450,6 +2627,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// A sample of errors encountered while processing the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Rpc.Status> ErrorSamples {
       get { return errorSamples_; }
     }
@@ -2462,6 +2640,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.ImportErrorsConfig ErrorsConfig {
       get { return errorsConfig_; }
       set {
@@ -2476,6 +2655,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Aggregated statistics of user event import status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.RecommendationEngine.V1Beta1.UserEventImportSummary ImportSummary {
       get { return importSummary_; }
       set {
@@ -2484,11 +2664,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImportUserEventsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImportUserEventsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2503,6 +2685,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= errorSamples_.GetHashCode();
@@ -2515,11 +2698,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2541,6 +2726,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       errorSamples_.WriteTo(ref output, _repeated_errorSamples_codec);
       if (errorsConfig_ != null) {
@@ -2558,6 +2744,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += errorSamples_.CalculateSize(_repeated_errorSamples_codec);
@@ -2574,6 +2761,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImportUserEventsResponse other) {
       if (other == null) {
         return;
@@ -2595,6 +2783,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2630,6 +2819,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2674,19 +2864,23 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     private static readonly pb::MessageParser<UserEventImportSummary> _parser = new pb::MessageParser<UserEventImportSummary>(() => new UserEventImportSummary());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UserEventImportSummary> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.RecommendationEngine.V1Beta1.ImportReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserEventImportSummary() {
       OnConstruction();
     }
@@ -2694,6 +2888,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserEventImportSummary(UserEventImportSummary other) : this() {
       joinedEventsCount_ = other.joinedEventsCount_;
       unjoinedEventsCount_ = other.unjoinedEventsCount_;
@@ -2701,6 +2896,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UserEventImportSummary Clone() {
       return new UserEventImportSummary(this);
     }
@@ -2712,6 +2908,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// Count of user events imported with complete existing catalog information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long JoinedEventsCount {
       get { return joinedEventsCount_; }
       set {
@@ -2727,6 +2924,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     /// in the imported catalog.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long UnjoinedEventsCount {
       get { return unjoinedEventsCount_; }
       set {
@@ -2735,11 +2933,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UserEventImportSummary);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UserEventImportSummary other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2753,6 +2953,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (JoinedEventsCount != 0L) hash ^= JoinedEventsCount.GetHashCode();
@@ -2764,11 +2965,13 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2789,6 +2992,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (JoinedEventsCount != 0L) {
         output.WriteRawTag(8);
@@ -2805,6 +3009,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (JoinedEventsCount != 0L) {
@@ -2820,6 +3025,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UserEventImportSummary other) {
       if (other == null) {
         return;
@@ -2834,6 +3040,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2859,6 +3066,7 @@ namespace Google.Cloud.RecommendationEngine.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

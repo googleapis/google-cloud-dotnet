@@ -78,19 +78,23 @@ namespace Google.Cloud.Channel.V1 {
     private static readonly pb::MessageParser<EduData> _parser = new pb::MessageParser<EduData>(() => new EduData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EduData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Channel.V1.CommonReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EduData() {
       OnConstruction();
     }
@@ -98,6 +102,7 @@ namespace Google.Cloud.Channel.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EduData(EduData other) : this() {
       instituteType_ = other.instituteType_;
       instituteSize_ = other.instituteSize_;
@@ -106,6 +111,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EduData Clone() {
       return new EduData(this);
     }
@@ -117,6 +123,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Designated institute type of customer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.EduData.Types.InstituteType InstituteType {
       get { return instituteType_; }
       set {
@@ -131,6 +138,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Size of the institute.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.EduData.Types.InstituteSize InstituteSize {
       get { return instituteSize_; }
       set {
@@ -145,6 +153,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Web address for the edu customer's institution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Website {
       get { return website_; }
       set {
@@ -153,11 +162,13 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EduData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EduData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -172,6 +183,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (InstituteType != global::Google.Cloud.Channel.V1.EduData.Types.InstituteType.Unspecified) hash ^= InstituteType.GetHashCode();
@@ -184,11 +196,13 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -213,6 +227,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (InstituteType != global::Google.Cloud.Channel.V1.EduData.Types.InstituteType.Unspecified) {
         output.WriteRawTag(8);
@@ -233,6 +248,7 @@ namespace Google.Cloud.Channel.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (InstituteType != global::Google.Cloud.Channel.V1.EduData.Types.InstituteType.Unspecified) {
@@ -251,6 +267,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EduData other) {
       if (other == null) {
         return;
@@ -268,6 +285,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -297,6 +315,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -324,6 +343,7 @@ namespace Google.Cloud.Channel.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the EduData message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Enum to specify the institute type.
@@ -397,19 +417,23 @@ namespace Google.Cloud.Channel.V1 {
     private static readonly pb::MessageParser<CloudIdentityInfo> _parser = new pb::MessageParser<CloudIdentityInfo>(() => new CloudIdentityInfo());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CloudIdentityInfo> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Channel.V1.CommonReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudIdentityInfo() {
       OnConstruction();
     }
@@ -417,6 +441,7 @@ namespace Google.Cloud.Channel.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudIdentityInfo(CloudIdentityInfo other) : this() {
       customerType_ = other.customerType_;
       primaryDomain_ = other.primaryDomain_;
@@ -430,6 +455,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CloudIdentityInfo Clone() {
       return new CloudIdentityInfo(this);
     }
@@ -441,6 +467,7 @@ namespace Google.Cloud.Channel.V1 {
     /// CustomerType indicates verification type needed for using services.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.CloudIdentityInfo.Types.CustomerType CustomerType {
       get { return customerType_; }
       set {
@@ -455,6 +482,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Output only. The primary domain name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PrimaryDomain {
       get { return primaryDomain_; }
       set {
@@ -473,6 +501,7 @@ namespace Google.Cloud.Channel.V1 {
     /// to track domain verification of their resolve Workspace customers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsDomainVerified {
       get { return isDomainVerified_; }
       set {
@@ -487,6 +516,7 @@ namespace Google.Cloud.Channel.V1 {
     /// The alternate email.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AlternateEmail {
       get { return alternateEmail_; }
       set {
@@ -501,6 +531,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Phone number associated with the Cloud Identity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PhoneNumber {
       get { return phoneNumber_; }
       set {
@@ -515,6 +546,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Language code.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -529,6 +561,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Output only. URI of Customer's Admin console dashboard.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AdminConsoleUri {
       get { return adminConsoleUri_; }
       set {
@@ -543,6 +576,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Edu information about the customer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Channel.V1.EduData EduData {
       get { return eduData_; }
       set {
@@ -551,11 +585,13 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CloudIdentityInfo);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CloudIdentityInfo other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -575,6 +611,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (CustomerType != global::Google.Cloud.Channel.V1.CloudIdentityInfo.Types.CustomerType.Unspecified) hash ^= CustomerType.GetHashCode();
@@ -592,11 +629,13 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -641,6 +680,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (CustomerType != global::Google.Cloud.Channel.V1.CloudIdentityInfo.Types.CustomerType.Unspecified) {
         output.WriteRawTag(8);
@@ -681,6 +721,7 @@ namespace Google.Cloud.Channel.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (CustomerType != global::Google.Cloud.Channel.V1.CloudIdentityInfo.Types.CustomerType.Unspecified) {
@@ -714,6 +755,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CloudIdentityInfo other) {
       if (other == null) {
         return;
@@ -749,6 +791,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -801,6 +844,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -851,6 +895,7 @@ namespace Google.Cloud.Channel.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the CloudIdentityInfo message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// CustomerType of the customer
@@ -886,19 +931,23 @@ namespace Google.Cloud.Channel.V1 {
     private static readonly pb::MessageParser<Value> _parser = new pb::MessageParser<Value>(() => new Value());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Value> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Channel.V1.CommonReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Value() {
       OnConstruction();
     }
@@ -906,6 +955,7 @@ namespace Google.Cloud.Channel.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Value(Value other) : this() {
       switch (other.KindCase) {
         case KindOneofCase.Int64Value:
@@ -929,6 +979,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Value Clone() {
       return new Value(this);
     }
@@ -939,6 +990,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Represents an int64 value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Int64Value {
       get { return kindCase_ == KindOneofCase.Int64Value ? (long) kind_ : 0L; }
       set {
@@ -953,6 +1005,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Represents a string value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StringValue {
       get { return kindCase_ == KindOneofCase.StringValue ? (string) kind_ : ""; }
       set {
@@ -967,6 +1020,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Represents a double value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double DoubleValue {
       get { return kindCase_ == KindOneofCase.DoubleValue ? (double) kind_ : 0D; }
       set {
@@ -981,6 +1035,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Represents an 'Any' proto value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Any ProtoValue {
       get { return kindCase_ == KindOneofCase.ProtoValue ? (global::Google.Protobuf.WellKnownTypes.Any) kind_ : null; }
       set {
@@ -995,6 +1050,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Represents a boolean value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BoolValue {
       get { return kindCase_ == KindOneofCase.BoolValue ? (bool) kind_ : false; }
       set {
@@ -1015,22 +1071,26 @@ namespace Google.Cloud.Channel.V1 {
     }
     private KindOneofCase kindCase_ = KindOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KindOneofCase KindCase {
       get { return kindCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearKind() {
       kindCase_ = KindOneofCase.None;
       kind_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Value);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Value other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1048,6 +1108,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (kindCase_ == KindOneofCase.Int64Value) hash ^= Int64Value.GetHashCode();
@@ -1063,11 +1124,13 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1100,6 +1163,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (kindCase_ == KindOneofCase.Int64Value) {
         output.WriteRawTag(8);
@@ -1128,6 +1192,7 @@ namespace Google.Cloud.Channel.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (kindCase_ == KindOneofCase.Int64Value) {
@@ -1152,6 +1217,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Value other) {
       if (other == null) {
         return;
@@ -1181,6 +1247,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1223,6 +1290,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1273,19 +1341,23 @@ namespace Google.Cloud.Channel.V1 {
     private static readonly pb::MessageParser<AdminUser> _parser = new pb::MessageParser<AdminUser>(() => new AdminUser());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AdminUser> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Channel.V1.CommonReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdminUser() {
       OnConstruction();
     }
@@ -1293,6 +1365,7 @@ namespace Google.Cloud.Channel.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdminUser(AdminUser other) : this() {
       email_ = other.email_;
       givenName_ = other.givenName_;
@@ -1301,6 +1374,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdminUser Clone() {
       return new AdminUser(this);
     }
@@ -1312,6 +1386,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Primary email of the admin user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Email {
       get { return email_; }
       set {
@@ -1326,6 +1401,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Given name of the admin user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GivenName {
       get { return givenName_; }
       set {
@@ -1340,6 +1416,7 @@ namespace Google.Cloud.Channel.V1 {
     /// Family name of the admin user.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FamilyName {
       get { return familyName_; }
       set {
@@ -1348,11 +1425,13 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AdminUser);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AdminUser other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1367,6 +1446,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Email.Length != 0) hash ^= Email.GetHashCode();
@@ -1379,11 +1459,13 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1408,6 +1490,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Email.Length != 0) {
         output.WriteRawTag(10);
@@ -1428,6 +1511,7 @@ namespace Google.Cloud.Channel.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Email.Length != 0) {
@@ -1446,6 +1530,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AdminUser other) {
       if (other == null) {
         return;
@@ -1463,6 +1548,7 @@ namespace Google.Cloud.Channel.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1492,6 +1578,7 @@ namespace Google.Cloud.Channel.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

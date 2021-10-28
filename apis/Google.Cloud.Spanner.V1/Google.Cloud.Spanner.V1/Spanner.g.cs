@@ -253,19 +253,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<CreateSessionRequest> _parser = new pb::MessageParser<CreateSessionRequest>(() => new CreateSessionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateSessionRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateSessionRequest() {
       OnConstruction();
     }
@@ -273,6 +277,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateSessionRequest(CreateSessionRequest other) : this() {
       database_ = other.database_;
       session_ = other.session_ != null ? other.session_.Clone() : null;
@@ -280,6 +285,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateSessionRequest Clone() {
       return new CreateSessionRequest(this);
     }
@@ -291,6 +297,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The database in which the new session is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Database {
       get { return database_; }
       set {
@@ -305,6 +312,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// The session to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Session Session {
       get { return session_; }
       set {
@@ -313,11 +321,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateSessionRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateSessionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -331,6 +341,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
@@ -342,11 +353,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -367,6 +380,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Database.Length != 0) {
         output.WriteRawTag(10);
@@ -383,6 +397,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Database.Length != 0) {
@@ -398,6 +413,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateSessionRequest other) {
       if (other == null) {
         return;
@@ -415,6 +431,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -443,6 +460,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -479,19 +497,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<BatchCreateSessionsRequest> _parser = new pb::MessageParser<BatchCreateSessionsRequest>(() => new BatchCreateSessionsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchCreateSessionsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchCreateSessionsRequest() {
       OnConstruction();
     }
@@ -499,6 +521,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchCreateSessionsRequest(BatchCreateSessionsRequest other) : this() {
       database_ = other.database_;
       sessionTemplate_ = other.sessionTemplate_ != null ? other.sessionTemplate_.Clone() : null;
@@ -507,6 +530,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchCreateSessionsRequest Clone() {
       return new BatchCreateSessionsRequest(this);
     }
@@ -518,6 +542,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The database in which the new sessions are created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Database {
       get { return database_; }
       set {
@@ -532,6 +557,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Parameters to be applied to each created session.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Session SessionTemplate {
       get { return sessionTemplate_; }
       set {
@@ -550,6 +576,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// [session_count][google.spanner.v1.BatchCreateSessionsRequest.session_count] as necessary).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SessionCount {
       get { return sessionCount_; }
       set {
@@ -558,11 +585,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchCreateSessionsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchCreateSessionsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -577,6 +606,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
@@ -589,11 +619,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -618,6 +650,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Database.Length != 0) {
         output.WriteRawTag(10);
@@ -638,6 +671,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Database.Length != 0) {
@@ -656,6 +690,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchCreateSessionsRequest other) {
       if (other == null) {
         return;
@@ -676,6 +711,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -708,6 +744,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -748,19 +785,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<BatchCreateSessionsResponse> _parser = new pb::MessageParser<BatchCreateSessionsResponse>(() => new BatchCreateSessionsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BatchCreateSessionsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchCreateSessionsResponse() {
       OnConstruction();
     }
@@ -768,12 +809,14 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchCreateSessionsResponse(BatchCreateSessionsResponse other) : this() {
       session_ = other.session_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BatchCreateSessionsResponse Clone() {
       return new BatchCreateSessionsResponse(this);
     }
@@ -787,16 +830,19 @@ namespace Google.Cloud.Spanner.V1 {
     /// The freshly created sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Session> Session {
       get { return session_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BatchCreateSessionsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BatchCreateSessionsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -809,6 +855,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= session_.GetHashCode();
@@ -819,11 +866,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -837,6 +886,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       session_.WriteTo(ref output, _repeated_session_codec);
       if (_unknownFields != null) {
@@ -846,6 +896,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += session_.CalculateSize(_repeated_session_codec);
@@ -856,6 +907,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BatchCreateSessionsResponse other) {
       if (other == null) {
         return;
@@ -865,6 +917,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -886,6 +939,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -915,19 +969,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<Session> _parser = new pb::MessageParser<Session>(() => new Session());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Session> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Session() {
       OnConstruction();
     }
@@ -935,6 +993,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Session(Session other) : this() {
       name_ = other.name_;
       labels_ = other.labels_.Clone();
@@ -944,6 +1003,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Session Clone() {
       return new Session(this);
     }
@@ -955,6 +1015,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Output only. The name of the session. This is always system-assigned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -979,6 +1040,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// See https://goo.gl/xmQnxf for more information on and examples of labels.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -990,6 +1052,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Output only. The timestamp when the session is created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -1005,6 +1068,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// typically earlier than the actual last use time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ApproximateLastUseTime {
       get { return approximateLastUseTime_; }
       set {
@@ -1013,11 +1077,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Session);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Session other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1033,6 +1099,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1046,11 +1113,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1076,6 +1145,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1097,6 +1167,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1116,6 +1187,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Session other) {
       if (other == null) {
         return;
@@ -1140,6 +1212,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1179,6 +1252,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1226,19 +1300,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<GetSessionRequest> _parser = new pb::MessageParser<GetSessionRequest>(() => new GetSessionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetSessionRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionRequest() {
       OnConstruction();
     }
@@ -1246,12 +1324,14 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionRequest(GetSessionRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetSessionRequest Clone() {
       return new GetSessionRequest(this);
     }
@@ -1263,6 +1343,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The name of the session to retrieve.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1271,11 +1352,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetSessionRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetSessionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1288,6 +1371,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1298,11 +1382,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1319,6 +1405,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1331,6 +1418,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1343,6 +1431,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetSessionRequest other) {
       if (other == null) {
         return;
@@ -1354,6 +1443,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1375,6 +1465,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1404,19 +1495,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<ListSessionsRequest> _parser = new pb::MessageParser<ListSessionsRequest>(() => new ListSessionsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListSessionsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListSessionsRequest() {
       OnConstruction();
     }
@@ -1424,6 +1519,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListSessionsRequest(ListSessionsRequest other) : this() {
       database_ = other.database_;
       pageSize_ = other.pageSize_;
@@ -1433,6 +1529,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListSessionsRequest Clone() {
       return new ListSessionsRequest(this);
     }
@@ -1444,6 +1541,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The database in which to list sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Database {
       get { return database_; }
       set {
@@ -1459,6 +1557,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// to the server's maximum allowed page size.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -1475,6 +1574,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// [ListSessionsResponse][google.spanner.v1.ListSessionsResponse].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -1498,6 +1598,7 @@ namespace Google.Cloud.Spanner.V1 {
     ///                        the label contains the string "dev".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -1506,11 +1607,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListSessionsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListSessionsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1526,6 +1629,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Database.Length != 0) hash ^= Database.GetHashCode();
@@ -1539,11 +1643,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1572,6 +1678,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Database.Length != 0) {
         output.WriteRawTag(10);
@@ -1596,6 +1703,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Database.Length != 0) {
@@ -1617,6 +1725,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListSessionsRequest other) {
       if (other == null) {
         return;
@@ -1637,6 +1746,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1670,6 +1780,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1711,19 +1822,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<ListSessionsResponse> _parser = new pb::MessageParser<ListSessionsResponse>(() => new ListSessionsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListSessionsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListSessionsResponse() {
       OnConstruction();
     }
@@ -1731,6 +1846,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListSessionsResponse(ListSessionsResponse other) : this() {
       sessions_ = other.sessions_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -1738,6 +1854,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListSessionsResponse Clone() {
       return new ListSessionsResponse(this);
     }
@@ -1751,6 +1868,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// The list of requested sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Session> Sessions {
       get { return sessions_; }
     }
@@ -1764,6 +1882,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// sessions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -1772,11 +1891,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListSessionsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListSessionsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1790,6 +1911,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= sessions_.GetHashCode();
@@ -1801,11 +1923,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1823,6 +1947,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       sessions_.WriteTo(ref output, _repeated_sessions_codec);
       if (NextPageToken.Length != 0) {
@@ -1836,6 +1961,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += sessions_.CalculateSize(_repeated_sessions_codec);
@@ -1849,6 +1975,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListSessionsResponse other) {
       if (other == null) {
         return;
@@ -1861,6 +1988,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1886,6 +2014,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1919,19 +2048,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<DeleteSessionRequest> _parser = new pb::MessageParser<DeleteSessionRequest>(() => new DeleteSessionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteSessionRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteSessionRequest() {
       OnConstruction();
     }
@@ -1939,12 +2072,14 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteSessionRequest(DeleteSessionRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteSessionRequest Clone() {
       return new DeleteSessionRequest(this);
     }
@@ -1956,6 +2091,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The name of the session to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1964,11 +2100,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteSessionRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteSessionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1981,6 +2119,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1991,11 +2130,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2012,6 +2153,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2024,6 +2166,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2036,6 +2179,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteSessionRequest other) {
       if (other == null) {
         return;
@@ -2047,6 +2191,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2068,6 +2213,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2097,19 +2243,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<RequestOptions> _parser = new pb::MessageParser<RequestOptions>(() => new RequestOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RequestOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RequestOptions() {
       OnConstruction();
     }
@@ -2117,6 +2267,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RequestOptions(RequestOptions other) : this() {
       priority_ = other.priority_;
       requestTag_ = other.requestTag_;
@@ -2125,6 +2276,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RequestOptions Clone() {
       return new RequestOptions(this);
     }
@@ -2136,6 +2288,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Priority for the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.RequestOptions.Types.Priority Priority {
       get { return priority_; }
       set {
@@ -2158,6 +2311,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// characters. Values that exceed this limit are truncated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestTag {
       get { return requestTag_; }
       set {
@@ -2181,6 +2335,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// characters. Values that exceed this limit are truncated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TransactionTag {
       get { return transactionTag_; }
       set {
@@ -2189,11 +2344,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RequestOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RequestOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2208,6 +2365,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Priority != global::Google.Cloud.Spanner.V1.RequestOptions.Types.Priority.Unspecified) hash ^= Priority.GetHashCode();
@@ -2220,11 +2378,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2249,6 +2409,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Priority != global::Google.Cloud.Spanner.V1.RequestOptions.Types.Priority.Unspecified) {
         output.WriteRawTag(8);
@@ -2269,6 +2430,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Priority != global::Google.Cloud.Spanner.V1.RequestOptions.Types.Priority.Unspecified) {
@@ -2287,6 +2449,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RequestOptions other) {
       if (other == null) {
         return;
@@ -2304,6 +2467,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2333,6 +2497,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2360,6 +2525,7 @@ namespace Google.Cloud.Spanner.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the RequestOptions message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The relative priority for requests. Note that priority is not applicable
@@ -2415,19 +2581,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<ExecuteSqlRequest> _parser = new pb::MessageParser<ExecuteSqlRequest>(() => new ExecuteSqlRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExecuteSqlRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteSqlRequest() {
       OnConstruction();
     }
@@ -2435,6 +2605,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteSqlRequest(ExecuteSqlRequest other) : this() {
       session_ = other.session_;
       transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
@@ -2451,6 +2622,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteSqlRequest Clone() {
       return new ExecuteSqlRequest(this);
     }
@@ -2462,6 +2634,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session in which the SQL query should be performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -2485,6 +2658,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Partitioned DML requires an existing Partitioned DML transaction ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
       get { return transaction_; }
       set {
@@ -2499,6 +2673,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The SQL string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sql {
       get { return sql_; }
       set {
@@ -2525,6 +2700,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// It is an error to execute a SQL statement with unbound parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Struct Params {
       get { return params_; }
       set {
@@ -2548,6 +2724,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// about SQL types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> ParamTypes {
       get { return paramTypes_; }
     }
@@ -2564,6 +2741,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// request that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ResumeToken {
       get { return resumeToken_; }
       set {
@@ -2580,6 +2758,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// be set to [QueryMode.NORMAL][google.spanner.v1.ExecuteSqlRequest.QueryMode.NORMAL].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryMode QueryMode {
       get { return queryMode_; }
       set {
@@ -2597,6 +2776,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// PartitionQueryRequest message used to create this partition_token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString PartitionToken {
       get { return partitionToken_; }
       set {
@@ -2620,6 +2800,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required for DML statements. Ignored for queries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Seqno {
       get { return seqno_; }
       set {
@@ -2634,6 +2815,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Query optimizer configuration to use for the given query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Types.QueryOptions QueryOptions {
       get { return queryOptions_; }
       set {
@@ -2648,6 +2830,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Common options for this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.RequestOptions RequestOptions {
       get { return requestOptions_; }
       set {
@@ -2656,11 +2839,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExecuteSqlRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExecuteSqlRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2683,6 +2868,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -2703,11 +2889,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2761,6 +2949,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -2810,6 +2999,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -2850,6 +3040,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExecuteSqlRequest other) {
       if (other == null) {
         return;
@@ -2901,6 +3092,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2974,6 +3166,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3045,6 +3238,7 @@ namespace Google.Cloud.Spanner.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ExecuteSqlRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Mode in which the statement must be processed.
@@ -3077,19 +3271,23 @@ namespace Google.Cloud.Spanner.V1 {
         private static readonly pb::MessageParser<QueryOptions> _parser = new pb::MessageParser<QueryOptions>(() => new QueryOptions());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<QueryOptions> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Spanner.V1.ExecuteSqlRequest.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public QueryOptions() {
           OnConstruction();
         }
@@ -3097,6 +3295,7 @@ namespace Google.Cloud.Spanner.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public QueryOptions(QueryOptions other) : this() {
           optimizerVersion_ = other.optimizerVersion_;
           optimizerStatisticsPackage_ = other.optimizerStatisticsPackage_;
@@ -3104,6 +3303,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public QueryOptions Clone() {
           return new QueryOptions(this);
         }
@@ -3136,6 +3336,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// The `optimizer_version` statement hint has precedence over this setting.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string OptimizerVersion {
           get { return optimizerVersion_; }
           set {
@@ -3173,6 +3374,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// an `INVALID_ARGUMENT` error.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string OptimizerStatisticsPackage {
           get { return optimizerStatisticsPackage_; }
           set {
@@ -3181,11 +3383,13 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as QueryOptions);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(QueryOptions other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3199,6 +3403,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (OptimizerVersion.Length != 0) hash ^= OptimizerVersion.GetHashCode();
@@ -3210,11 +3415,13 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3235,6 +3442,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (OptimizerVersion.Length != 0) {
             output.WriteRawTag(10);
@@ -3251,6 +3459,7 @@ namespace Google.Cloud.Spanner.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (OptimizerVersion.Length != 0) {
@@ -3266,6 +3475,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(QueryOptions other) {
           if (other == null) {
             return;
@@ -3280,6 +3490,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3305,6 +3516,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3343,19 +3555,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<ExecuteBatchDmlRequest> _parser = new pb::MessageParser<ExecuteBatchDmlRequest>(() => new ExecuteBatchDmlRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExecuteBatchDmlRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteBatchDmlRequest() {
       OnConstruction();
     }
@@ -3363,6 +3579,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteBatchDmlRequest(ExecuteBatchDmlRequest other) : this() {
       session_ = other.session_;
       transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
@@ -3373,6 +3590,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteBatchDmlRequest Clone() {
       return new ExecuteBatchDmlRequest(this);
     }
@@ -3384,6 +3602,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session in which the DML statements should be performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -3402,6 +3621,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
       get { return transaction_; }
       set {
@@ -3423,6 +3643,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Callers must provide at least one statement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Types.Statement> Statements {
       get { return statements_; }
     }
@@ -3441,6 +3662,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// handled requests will yield the same response as the first execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Seqno {
       get { return seqno_; }
       set {
@@ -3455,6 +3677,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Common options for this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.RequestOptions RequestOptions {
       get { return requestOptions_; }
       set {
@@ -3463,11 +3686,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExecuteBatchDmlRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExecuteBatchDmlRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3484,6 +3709,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -3498,11 +3724,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3532,6 +3760,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -3557,6 +3786,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -3579,6 +3809,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExecuteBatchDmlRequest other) {
       if (other == null) {
         return;
@@ -3606,6 +3837,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3649,6 +3881,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3690,6 +3923,7 @@ namespace Google.Cloud.Spanner.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ExecuteBatchDmlRequest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A single DML statement.
@@ -3702,19 +3936,23 @@ namespace Google.Cloud.Spanner.V1 {
         private static readonly pb::MessageParser<Statement> _parser = new pb::MessageParser<Statement>(() => new Statement());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Statement> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Spanner.V1.ExecuteBatchDmlRequest.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Statement() {
           OnConstruction();
         }
@@ -3722,6 +3960,7 @@ namespace Google.Cloud.Spanner.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Statement(Statement other) : this() {
           sql_ = other.sql_;
           params_ = other.params_ != null ? other.params_.Clone() : null;
@@ -3730,6 +3969,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Statement Clone() {
           return new Statement(this);
         }
@@ -3741,6 +3981,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// Required. The DML string.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Sql {
           get { return sql_; }
           set {
@@ -3766,6 +4007,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// It is an error to execute a SQL statement with unbound parameters.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Struct Params {
           get { return params_; }
           set {
@@ -3789,16 +4031,19 @@ namespace Google.Cloud.Spanner.V1 {
         /// about SQL types.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> ParamTypes {
           get { return paramTypes_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Statement);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Statement other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3813,6 +4058,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Sql.Length != 0) hash ^= Sql.GetHashCode();
@@ -3825,11 +4071,13 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3851,6 +4099,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Sql.Length != 0) {
             output.WriteRawTag(10);
@@ -3868,6 +4117,7 @@ namespace Google.Cloud.Spanner.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Sql.Length != 0) {
@@ -3884,6 +4134,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Statement other) {
           if (other == null) {
             return;
@@ -3902,6 +4153,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3934,6 +4186,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -4002,19 +4255,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<ExecuteBatchDmlResponse> _parser = new pb::MessageParser<ExecuteBatchDmlResponse>(() => new ExecuteBatchDmlResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExecuteBatchDmlResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteBatchDmlResponse() {
       OnConstruction();
     }
@@ -4022,6 +4279,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteBatchDmlResponse(ExecuteBatchDmlResponse other) : this() {
       resultSets_ = other.resultSets_.Clone();
       status_ = other.status_ != null ? other.status_.Clone() : null;
@@ -4029,6 +4287,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExecuteBatchDmlResponse Clone() {
       return new ExecuteBatchDmlResponse(this);
     }
@@ -4048,6 +4307,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// [ResultSetMetadata][google.spanner.v1.ResultSetMetadata].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.ResultSet> ResultSets {
       get { return resultSets_; }
     }
@@ -4060,6 +4320,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Otherwise, the error status of the first failed statement.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Status {
       get { return status_; }
       set {
@@ -4068,11 +4329,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExecuteBatchDmlResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExecuteBatchDmlResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4086,6 +4349,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= resultSets_.GetHashCode();
@@ -4097,11 +4361,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4119,6 +4385,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       resultSets_.WriteTo(ref output, _repeated_resultSets_codec);
       if (status_ != null) {
@@ -4132,6 +4399,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += resultSets_.CalculateSize(_repeated_resultSets_codec);
@@ -4145,6 +4413,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExecuteBatchDmlResponse other) {
       if (other == null) {
         return;
@@ -4160,6 +4429,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4188,6 +4458,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4225,19 +4496,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<PartitionOptions> _parser = new pb::MessageParser<PartitionOptions>(() => new PartitionOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PartitionOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionOptions() {
       OnConstruction();
     }
@@ -4245,6 +4520,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionOptions(PartitionOptions other) : this() {
       partitionSizeBytes_ = other.partitionSizeBytes_;
       maxPartitions_ = other.maxPartitions_;
@@ -4252,6 +4528,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionOptions Clone() {
       return new PartitionOptions(this);
     }
@@ -4268,6 +4545,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// partition may be smaller or larger than this size request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long PartitionSizeBytes {
       get { return partitionSizeBytes_; }
       set {
@@ -4289,6 +4567,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// than this maximum count request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long MaxPartitions {
       get { return maxPartitions_; }
       set {
@@ -4297,11 +4576,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PartitionOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PartitionOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4315,6 +4596,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PartitionSizeBytes != 0L) hash ^= PartitionSizeBytes.GetHashCode();
@@ -4326,11 +4608,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4351,6 +4635,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PartitionSizeBytes != 0L) {
         output.WriteRawTag(8);
@@ -4367,6 +4652,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PartitionSizeBytes != 0L) {
@@ -4382,6 +4668,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PartitionOptions other) {
       if (other == null) {
         return;
@@ -4396,6 +4683,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4421,6 +4709,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4454,19 +4743,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<PartitionQueryRequest> _parser = new pb::MessageParser<PartitionQueryRequest>(() => new PartitionQueryRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PartitionQueryRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionQueryRequest() {
       OnConstruction();
     }
@@ -4474,6 +4767,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionQueryRequest(PartitionQueryRequest other) : this() {
       session_ = other.session_;
       transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
@@ -4485,6 +4779,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionQueryRequest Clone() {
       return new PartitionQueryRequest(this);
     }
@@ -4496,6 +4791,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session used to create the partitions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -4511,6 +4807,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// transactions are not.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
       get { return transaction_; }
       set {
@@ -4534,6 +4831,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// PartitionedDml transaction for large, partition-friendly DML operations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Sql {
       get { return sql_; }
       set {
@@ -4559,6 +4857,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// It is an error to execute a SQL statement with unbound parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Struct Params {
       get { return params_; }
       set {
@@ -4582,6 +4881,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// about SQL types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.Spanner.V1.Type> ParamTypes {
       get { return paramTypes_; }
     }
@@ -4593,6 +4893,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Additional options that affect how many partitions are created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.PartitionOptions PartitionOptions {
       get { return partitionOptions_; }
       set {
@@ -4601,11 +4902,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PartitionQueryRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PartitionQueryRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4623,6 +4926,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -4638,11 +4942,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4676,6 +4982,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -4705,6 +5012,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -4730,6 +5038,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PartitionQueryRequest other) {
       if (other == null) {
         return;
@@ -4763,6 +5072,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4813,6 +5123,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4871,19 +5182,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<PartitionReadRequest> _parser = new pb::MessageParser<PartitionReadRequest>(() => new PartitionReadRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PartitionReadRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionReadRequest() {
       OnConstruction();
     }
@@ -4891,6 +5206,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionReadRequest(PartitionReadRequest other) : this() {
       session_ = other.session_;
       transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
@@ -4903,6 +5219,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionReadRequest Clone() {
       return new PartitionReadRequest(this);
     }
@@ -4914,6 +5231,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session used to create the partitions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -4929,6 +5247,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// transactions are not.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
       get { return transaction_; }
       set {
@@ -4943,6 +5262,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The name of the table in the database to be read.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Table {
       get { return table_; }
       set {
@@ -4959,6 +5279,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// and sorting result rows. See [key_set][google.spanner.v1.PartitionReadRequest.key_set] for further information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Index {
       get { return index_; }
       set {
@@ -4976,6 +5297,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Columns {
       get { return columns_; }
     }
@@ -4993,6 +5315,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// exist in the database. Read yields nothing for nonexistent rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.KeySet KeySet {
       get { return keySet_; }
       set {
@@ -5007,6 +5330,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Additional options that affect how many partitions are created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.PartitionOptions PartitionOptions {
       get { return partitionOptions_; }
       set {
@@ -5015,11 +5339,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PartitionReadRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PartitionReadRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5038,6 +5364,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -5054,11 +5381,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5096,6 +5425,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -5129,6 +5459,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -5157,6 +5488,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PartitionReadRequest other) {
       if (other == null) {
         return;
@@ -5193,6 +5525,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5247,6 +5580,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5310,19 +5644,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<Partition> _parser = new pb::MessageParser<Partition>(() => new Partition());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Partition> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Partition() {
       OnConstruction();
     }
@@ -5330,12 +5668,14 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Partition(Partition other) : this() {
       partitionToken_ = other.partitionToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Partition Clone() {
       return new Partition(this);
     }
@@ -5349,6 +5689,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// this partition token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString PartitionToken {
       get { return partitionToken_; }
       set {
@@ -5357,11 +5698,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Partition);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Partition other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5374,6 +5717,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PartitionToken.Length != 0) hash ^= PartitionToken.GetHashCode();
@@ -5384,11 +5728,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5405,6 +5751,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PartitionToken.Length != 0) {
         output.WriteRawTag(10);
@@ -5417,6 +5764,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PartitionToken.Length != 0) {
@@ -5429,6 +5777,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Partition other) {
       if (other == null) {
         return;
@@ -5440,6 +5789,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5461,6 +5811,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5491,19 +5842,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<PartitionResponse> _parser = new pb::MessageParser<PartitionResponse>(() => new PartitionResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PartitionResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionResponse() {
       OnConstruction();
     }
@@ -5511,6 +5866,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionResponse(PartitionResponse other) : this() {
       partitions_ = other.partitions_.Clone();
       transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
@@ -5518,6 +5874,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PartitionResponse Clone() {
       return new PartitionResponse(this);
     }
@@ -5531,6 +5888,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Partitions created by this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Partition> Partitions {
       get { return partitions_; }
     }
@@ -5542,6 +5900,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Transaction created by this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Transaction Transaction {
       get { return transaction_; }
       set {
@@ -5550,11 +5909,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PartitionResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PartitionResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5568,6 +5929,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= partitions_.GetHashCode();
@@ -5579,11 +5941,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5601,6 +5965,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       partitions_.WriteTo(ref output, _repeated_partitions_codec);
       if (transaction_ != null) {
@@ -5614,6 +5979,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += partitions_.CalculateSize(_repeated_partitions_codec);
@@ -5627,6 +5993,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PartitionResponse other) {
       if (other == null) {
         return;
@@ -5642,6 +6009,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5670,6 +6038,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5707,19 +6076,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<ReadRequest> _parser = new pb::MessageParser<ReadRequest>(() => new ReadRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReadRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadRequest() {
       OnConstruction();
     }
@@ -5727,6 +6100,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadRequest(ReadRequest other) : this() {
       session_ = other.session_;
       transaction_ = other.transaction_ != null ? other.transaction_.Clone() : null;
@@ -5742,6 +6116,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadRequest Clone() {
       return new ReadRequest(this);
     }
@@ -5753,6 +6128,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session in which the read should be performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -5768,6 +6144,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// temporary read-only transaction with strong concurrency.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.TransactionSelector Transaction {
       get { return transaction_; }
       set {
@@ -5782,6 +6159,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The name of the table in the database to be read.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Table {
       get { return table_; }
       set {
@@ -5798,6 +6176,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// and sorting result rows. See [key_set][google.spanner.v1.ReadRequest.key_set] for further information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Index {
       get { return index_; }
       set {
@@ -5815,6 +6194,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Columns {
       get { return columns_; }
     }
@@ -5837,6 +6217,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// exist in the database. Read yields nothing for nonexistent rows.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.KeySet KeySet {
       get { return keySet_; }
       set {
@@ -5853,6 +6234,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// `partition_token` is set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Limit {
       get { return limit_; }
       set {
@@ -5872,6 +6254,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// that yielded this token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ResumeToken {
       get { return resumeToken_; }
       set {
@@ -5889,6 +6272,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// PartitionReadRequest message used to create this partition_token.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString PartitionToken {
       get { return partitionToken_; }
       set {
@@ -5903,6 +6287,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Common options for this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.RequestOptions RequestOptions {
       get { return requestOptions_; }
       set {
@@ -5911,11 +6296,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ReadRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ReadRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5937,6 +6324,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -5956,11 +6344,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6010,6 +6400,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -6055,6 +6446,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -6092,6 +6484,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReadRequest other) {
       if (other == null) {
         return;
@@ -6137,6 +6530,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6203,6 +6597,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6277,19 +6672,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<BeginTransactionRequest> _parser = new pb::MessageParser<BeginTransactionRequest>(() => new BeginTransactionRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BeginTransactionRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BeginTransactionRequest() {
       OnConstruction();
     }
@@ -6297,6 +6696,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BeginTransactionRequest(BeginTransactionRequest other) : this() {
       session_ = other.session_;
       options_ = other.options_ != null ? other.options_.Clone() : null;
@@ -6305,6 +6705,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BeginTransactionRequest Clone() {
       return new BeginTransactionRequest(this);
     }
@@ -6316,6 +6717,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session in which the transaction runs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -6330,6 +6732,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. Options for the new transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.TransactionOptions Options {
       get { return options_; }
       set {
@@ -6348,6 +6751,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// transaction instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.RequestOptions RequestOptions {
       get { return requestOptions_; }
       set {
@@ -6356,11 +6760,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BeginTransactionRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BeginTransactionRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6375,6 +6781,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -6387,11 +6794,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6416,6 +6825,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -6436,6 +6846,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -6454,6 +6865,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BeginTransactionRequest other) {
       if (other == null) {
         return;
@@ -6477,6 +6889,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6512,6 +6925,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6555,19 +6969,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<CommitRequest> _parser = new pb::MessageParser<CommitRequest>(() => new CommitRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CommitRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommitRequest() {
       OnConstruction();
     }
@@ -6575,6 +6993,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommitRequest(CommitRequest other) : this() {
       session_ = other.session_;
       mutations_ = other.mutations_.Clone();
@@ -6593,6 +7012,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommitRequest Clone() {
       return new CommitRequest(this);
     }
@@ -6604,6 +7024,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session in which the transaction to be committed is running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -6617,6 +7038,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Commit a previously-started transaction.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString TransactionId {
       get { return transactionCase_ == TransactionOneofCase.TransactionId ? (pb::ByteString) transaction_ : pb::ByteString.Empty; }
       set {
@@ -6639,6 +7061,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// [Commit][google.spanner.v1.Spanner.Commit] instead.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.TransactionOptions SingleUseTransaction {
       get { return transactionCase_ == TransactionOneofCase.SingleUseTransaction ? (global::Google.Cloud.Spanner.V1.TransactionOptions) transaction_ : null; }
       set {
@@ -6658,6 +7081,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// this list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.Mutation> Mutations {
       get { return mutations_; }
     }
@@ -6671,6 +7095,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ReturnCommitStats {
       get { return returnCommitStats_; }
       set {
@@ -6685,6 +7110,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Common options for this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.RequestOptions RequestOptions {
       get { return requestOptions_; }
       set {
@@ -6701,22 +7127,26 @@ namespace Google.Cloud.Spanner.V1 {
     }
     private TransactionOneofCase transactionCase_ = TransactionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransactionOneofCase TransactionCase {
       get { return transactionCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTransaction() {
       transactionCase_ = TransactionOneofCase.None;
       transaction_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CommitRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CommitRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6735,6 +7165,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -6751,11 +7182,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6789,6 +7222,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -6818,6 +7252,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -6843,6 +7278,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CommitRequest other) {
       if (other == null) {
         return;
@@ -6876,6 +7312,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6925,6 +7362,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6982,19 +7420,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<RollbackRequest> _parser = new pb::MessageParser<RollbackRequest>(() => new RollbackRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RollbackRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.SpannerReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RollbackRequest() {
       OnConstruction();
     }
@@ -7002,6 +7444,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RollbackRequest(RollbackRequest other) : this() {
       session_ = other.session_;
       transactionId_ = other.transactionId_;
@@ -7009,6 +7452,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RollbackRequest Clone() {
       return new RollbackRequest(this);
     }
@@ -7020,6 +7464,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The session in which the transaction to roll back is running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Session {
       get { return session_; }
       set {
@@ -7034,6 +7479,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// Required. The transaction to roll back.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString TransactionId {
       get { return transactionId_; }
       set {
@@ -7042,11 +7488,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RollbackRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RollbackRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7060,6 +7508,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Session.Length != 0) hash ^= Session.GetHashCode();
@@ -7071,11 +7520,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7096,6 +7547,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Session.Length != 0) {
         output.WriteRawTag(10);
@@ -7112,6 +7564,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Session.Length != 0) {
@@ -7127,6 +7580,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RollbackRequest other) {
       if (other == null) {
         return;
@@ -7141,6 +7595,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7166,6 +7621,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

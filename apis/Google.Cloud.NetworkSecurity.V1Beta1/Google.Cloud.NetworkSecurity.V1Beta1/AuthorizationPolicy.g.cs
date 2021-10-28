@@ -116,19 +116,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     private static readonly pb::MessageParser<AuthorizationPolicy> _parser = new pb::MessageParser<AuthorizationPolicy>(() => new AuthorizationPolicy());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AuthorizationPolicy> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuthorizationPolicy() {
       OnConstruction();
     }
@@ -136,6 +140,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuthorizationPolicy(AuthorizationPolicy other) : this() {
       name_ = other.name_;
       description_ = other.description_;
@@ -148,6 +153,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuthorizationPolicy Clone() {
       return new AuthorizationPolicy(this);
     }
@@ -160,6 +166,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// `projects/{project}/locations/{location}/authorizationPolicies/&lt;authorization_policy>`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -174,6 +181,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// Optional. Free-text description of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -188,6 +196,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// Output only. The timestamp when the resource was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -202,6 +211,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// Output only. The timestamp when the resource was updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -218,6 +228,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// Optional. Set of label tags associated with the AuthorizationPolicy resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -230,6 +241,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// are "ALLOW" or "DENY".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Action Action {
       get { return action_; }
       set {
@@ -249,16 +261,19 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// action specified in the `action` field will be applied on every request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule> Rules {
       get { return rules_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AuthorizationPolicy);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AuthorizationPolicy other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -277,6 +292,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -293,11 +309,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -332,6 +350,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -362,6 +381,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -388,6 +408,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AuthorizationPolicy other) {
       if (other == null) {
         return;
@@ -419,6 +440,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -470,6 +492,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -519,6 +542,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the AuthorizationPolicy message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Possible values that define what action to take.
@@ -549,19 +573,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         private static readonly pb::MessageParser<Rule> _parser = new pb::MessageParser<Rule>(() => new Rule());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Rule> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Rule() {
           OnConstruction();
         }
@@ -569,6 +597,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Rule(Rule other) : this() {
           sources_ = other.sources_.Clone();
           destinations_ = other.destinations_.Clone();
@@ -576,6 +605,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Rule Clone() {
           return new Rule(this);
         }
@@ -592,6 +622,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         /// rule checks for the source.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule.Types.Source> Sources {
           get { return sources_; }
         }
@@ -609,16 +640,19 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         /// checks for the destination.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule.Types.Destination> Destinations {
           get { return destinations_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Rule);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Rule other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -632,6 +666,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= sources_.GetHashCode();
@@ -643,11 +678,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -662,6 +699,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           sources_.WriteTo(ref output, _repeated_sources_codec);
           destinations_.WriteTo(ref output, _repeated_destinations_codec);
@@ -672,6 +710,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += sources_.CalculateSize(_repeated_sources_codec);
@@ -683,6 +722,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Rule other) {
           if (other == null) {
             return;
@@ -693,6 +733,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -718,6 +759,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -741,6 +783,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         #region Nested types
         /// <summary>Container for nested types declared in the Rule message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Specification of traffic source attributes.
@@ -753,19 +796,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             private static readonly pb::MessageParser<Source> _parser = new pb::MessageParser<Source>(() => new Source());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Source> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Source() {
               OnConstruction();
             }
@@ -773,6 +820,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Source(Source other) : this() {
               principals_ = other.principals_.Clone();
               ipBlocks_ = other.ipBlocks_.Clone();
@@ -780,6 +828,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Source Clone() {
               return new Source(this);
             }
@@ -796,6 +845,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// */service-account") or a presence match "*".
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> Principals {
               get { return principals_; }
             }
@@ -811,16 +861,19 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// "1.2.3.0/24") are supported.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> IpBlocks {
               get { return ipBlocks_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Source);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Source other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -834,6 +887,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= principals_.GetHashCode();
@@ -845,11 +899,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -864,6 +920,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               principals_.WriteTo(ref output, _repeated_principals_codec);
               ipBlocks_.WriteTo(ref output, _repeated_ipBlocks_codec);
@@ -874,6 +931,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += principals_.CalculateSize(_repeated_principals_codec);
@@ -885,6 +943,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Source other) {
               if (other == null) {
                 return;
@@ -895,6 +954,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -920,6 +980,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -953,19 +1014,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             private static readonly pb::MessageParser<Destination> _parser = new pb::MessageParser<Destination>(() => new Destination());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<Destination> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule.Descriptor.NestedTypes[1]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Destination() {
               OnConstruction();
             }
@@ -973,6 +1038,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Destination(Destination other) : this() {
               hosts_ = other.hosts_.Clone();
               ports_ = other.ports_.Clone();
@@ -982,6 +1048,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public Destination Clone() {
               return new Destination(this);
             }
@@ -998,6 +1065,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// match (example // *.myorg.com") or a presence(any) match "*".
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> Hosts {
               get { return hosts_; }
             }
@@ -1011,6 +1079,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// Required. List of destination ports to match. At least one port should match.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<uint> Ports {
               get { return ports_; }
             }
@@ -1025,6 +1094,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// match. Should not be set for gRPC services.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public pbc::RepeatedField<string> Methods {
               get { return methods_; }
             }
@@ -1038,6 +1108,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// advanced use cases. At least one header should match.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule.Types.Destination.Types.HttpHeaderMatch HttpHeaderMatch {
               get { return httpHeaderMatch_; }
               set {
@@ -1046,11 +1117,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as Destination);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(Destination other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -1066,6 +1139,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               hash ^= hosts_.GetHashCode();
@@ -1079,11 +1153,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -1103,6 +1179,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               hosts_.WriteTo(ref output, _repeated_hosts_codec);
               ports_.WriteTo(ref output, _repeated_ports_codec);
@@ -1118,6 +1195,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               size += hosts_.CalculateSize(_repeated_hosts_codec);
@@ -1133,6 +1211,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(Destination other) {
               if (other == null) {
                 return;
@@ -1150,6 +1229,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -1187,6 +1267,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -1222,6 +1303,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             #region Nested types
             /// <summary>Container for nested types declared in the Destination message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// Specification of HTTP header match atrributes.
@@ -1234,19 +1316,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 private static readonly pb::MessageParser<HttpHeaderMatch> _parser = new pb::MessageParser<HttpHeaderMatch>(() => new HttpHeaderMatch());
                 private pb::UnknownFieldSet _unknownFields;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pb::MessageParser<HttpHeaderMatch> Parser { get { return _parser; } }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public static pbr::MessageDescriptor Descriptor {
                   get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule.Types.Destination.Descriptor.NestedTypes[0]; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 pbr::MessageDescriptor pb::IMessage.Descriptor {
                   get { return Descriptor; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public HttpHeaderMatch() {
                   OnConstruction();
                 }
@@ -1254,6 +1340,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 partial void OnConstruction();
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public HttpHeaderMatch(HttpHeaderMatch other) : this() {
                   headerName_ = other.headerName_;
                   switch (other.TypeCase) {
@@ -1266,6 +1353,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public HttpHeaderMatch Clone() {
                   return new HttpHeaderMatch(this);
                 }
@@ -1282,6 +1370,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 /// header's port specifier.
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string RegexMatch {
                   get { return typeCase_ == TypeOneofCase.RegexMatch ? (string) type_ : ""; }
                   set {
@@ -1300,6 +1389,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 /// request's method, use the headerName ":method".
                 /// </summary>
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public string HeaderName {
                   get { return headerName_; }
                   set {
@@ -1315,22 +1405,26 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 }
                 private TypeOneofCase typeCase_ = TypeOneofCase.None;
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public TypeOneofCase TypeCase {
                   get { return typeCase_; }
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void ClearType() {
                   typeCase_ = TypeOneofCase.None;
                   type_ = null;
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override bool Equals(object other) {
                   return Equals(other as HttpHeaderMatch);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public bool Equals(HttpHeaderMatch other) {
                   if (ReferenceEquals(other, null)) {
                     return false;
@@ -1345,6 +1439,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override int GetHashCode() {
                   int hash = 1;
                   if (typeCase_ == TypeOneofCase.RegexMatch) hash ^= RegexMatch.GetHashCode();
@@ -1357,11 +1452,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public override string ToString() {
                   return pb::JsonFormatter.ToDiagnosticString(this);
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void WriteTo(pb::CodedOutputStream output) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   output.WriteRawMessage(this);
@@ -1382,6 +1479,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
                   if (HeaderName.Length != 0) {
                     output.WriteRawTag(10);
@@ -1398,6 +1496,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 #endif
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public int CalculateSize() {
                   int size = 0;
                   if (typeCase_ == TypeOneofCase.RegexMatch) {
@@ -1413,6 +1512,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(HttpHeaderMatch other) {
                   if (other == null) {
                     return;
@@ -1430,6 +1530,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 }
 
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 public void MergeFrom(pb::CodedInputStream input) {
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                   input.ReadRawMessage(this);
@@ -1455,6 +1556,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
                 #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
                 [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+                [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
                 void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
                   uint tag;
                   while ((tag = input.ReadTag()) != 0) {
@@ -1503,19 +1605,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     private static readonly pb::MessageParser<ListAuthorizationPoliciesRequest> _parser = new pb::MessageParser<ListAuthorizationPoliciesRequest>(() => new ListAuthorizationPoliciesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListAuthorizationPoliciesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListAuthorizationPoliciesRequest() {
       OnConstruction();
     }
@@ -1523,6 +1629,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListAuthorizationPoliciesRequest(ListAuthorizationPoliciesRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -1531,6 +1638,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListAuthorizationPoliciesRequest Clone() {
       return new ListAuthorizationPoliciesRequest(this);
     }
@@ -1544,6 +1652,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -1558,6 +1667,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// Maximum number of AuthorizationPolicies to return per call.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -1575,6 +1685,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// that the system should return the next page of data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -1583,11 +1694,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListAuthorizationPoliciesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListAuthorizationPoliciesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1602,6 +1715,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -1614,11 +1728,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1643,6 +1759,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -1663,6 +1780,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -1681,6 +1799,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListAuthorizationPoliciesRequest other) {
       if (other == null) {
         return;
@@ -1698,6 +1817,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1727,6 +1847,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1764,19 +1885,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     private static readonly pb::MessageParser<ListAuthorizationPoliciesResponse> _parser = new pb::MessageParser<ListAuthorizationPoliciesResponse>(() => new ListAuthorizationPoliciesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListAuthorizationPoliciesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListAuthorizationPoliciesResponse() {
       OnConstruction();
     }
@@ -1784,6 +1909,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListAuthorizationPoliciesResponse(ListAuthorizationPoliciesResponse other) : this() {
       authorizationPolicies_ = other.authorizationPolicies_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -1791,6 +1917,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListAuthorizationPoliciesResponse Clone() {
       return new ListAuthorizationPoliciesResponse(this);
     }
@@ -1804,6 +1931,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// List of AuthorizationPolicies resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy> AuthorizationPolicies {
       get { return authorizationPolicies_; }
     }
@@ -1817,6 +1945,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// method again using the value of `next_page_token` as `page_token`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -1825,11 +1954,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListAuthorizationPoliciesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListAuthorizationPoliciesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1843,6 +1974,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= authorizationPolicies_.GetHashCode();
@@ -1854,11 +1986,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1876,6 +2010,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       authorizationPolicies_.WriteTo(ref output, _repeated_authorizationPolicies_codec);
       if (NextPageToken.Length != 0) {
@@ -1889,6 +2024,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += authorizationPolicies_.CalculateSize(_repeated_authorizationPolicies_codec);
@@ -1902,6 +2038,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListAuthorizationPoliciesResponse other) {
       if (other == null) {
         return;
@@ -1914,6 +2051,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1939,6 +2077,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1972,19 +2111,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     private static readonly pb::MessageParser<GetAuthorizationPolicyRequest> _parser = new pb::MessageParser<GetAuthorizationPolicyRequest>(() => new GetAuthorizationPolicyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetAuthorizationPolicyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAuthorizationPolicyRequest() {
       OnConstruction();
     }
@@ -1992,12 +2135,14 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAuthorizationPolicyRequest(GetAuthorizationPolicyRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetAuthorizationPolicyRequest Clone() {
       return new GetAuthorizationPolicyRequest(this);
     }
@@ -2010,6 +2155,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2018,11 +2164,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetAuthorizationPolicyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetAuthorizationPolicyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2035,6 +2183,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2045,11 +2194,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2066,6 +2217,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2078,6 +2230,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2090,6 +2243,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetAuthorizationPolicyRequest other) {
       if (other == null) {
         return;
@@ -2101,6 +2255,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2122,6 +2277,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2151,19 +2307,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     private static readonly pb::MessageParser<CreateAuthorizationPolicyRequest> _parser = new pb::MessageParser<CreateAuthorizationPolicyRequest>(() => new CreateAuthorizationPolicyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateAuthorizationPolicyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateAuthorizationPolicyRequest() {
       OnConstruction();
     }
@@ -2171,6 +2331,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateAuthorizationPolicyRequest(CreateAuthorizationPolicyRequest other) : this() {
       parent_ = other.parent_;
       authorizationPolicyId_ = other.authorizationPolicyId_;
@@ -2179,6 +2340,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateAuthorizationPolicyRequest Clone() {
       return new CreateAuthorizationPolicyRequest(this);
     }
@@ -2191,6 +2353,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// format `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -2208,6 +2371,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// with a number. E.g. "authz_policy".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AuthorizationPolicyId {
       get { return authorizationPolicyId_; }
       set {
@@ -2222,6 +2386,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// Required. AuthorizationPolicy resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy AuthorizationPolicy {
       get { return authorizationPolicy_; }
       set {
@@ -2230,11 +2395,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateAuthorizationPolicyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateAuthorizationPolicyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2249,6 +2416,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -2261,11 +2429,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2290,6 +2460,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -2310,6 +2481,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -2328,6 +2500,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateAuthorizationPolicyRequest other) {
       if (other == null) {
         return;
@@ -2348,6 +2521,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2380,6 +2554,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2420,19 +2595,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     private static readonly pb::MessageParser<UpdateAuthorizationPolicyRequest> _parser = new pb::MessageParser<UpdateAuthorizationPolicyRequest>(() => new UpdateAuthorizationPolicyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateAuthorizationPolicyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateAuthorizationPolicyRequest() {
       OnConstruction();
     }
@@ -2440,6 +2619,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateAuthorizationPolicyRequest(UpdateAuthorizationPolicyRequest other) : this() {
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
       authorizationPolicy_ = other.authorizationPolicy_ != null ? other.authorizationPolicy_.Clone() : null;
@@ -2447,6 +2627,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateAuthorizationPolicyRequest Clone() {
       return new UpdateAuthorizationPolicyRequest(this);
     }
@@ -2462,6 +2643,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// user does not provide a mask then all fields will be overwritten.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -2476,6 +2658,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// Required. Updated AuthorizationPolicy resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy AuthorizationPolicy {
       get { return authorizationPolicy_; }
       set {
@@ -2484,11 +2667,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateAuthorizationPolicyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateAuthorizationPolicyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2502,6 +2687,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (updateMask_ != null) hash ^= UpdateMask.GetHashCode();
@@ -2513,11 +2699,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2538,6 +2726,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (updateMask_ != null) {
         output.WriteRawTag(10);
@@ -2554,6 +2743,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (updateMask_ != null) {
@@ -2569,6 +2759,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateAuthorizationPolicyRequest other) {
       if (other == null) {
         return;
@@ -2589,6 +2780,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2620,6 +2812,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2659,19 +2852,23 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     private static readonly pb::MessageParser<DeleteAuthorizationPolicyRequest> _parser = new pb::MessageParser<DeleteAuthorizationPolicyRequest>(() => new DeleteAuthorizationPolicyRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteAuthorizationPolicyRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicyReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteAuthorizationPolicyRequest() {
       OnConstruction();
     }
@@ -2679,12 +2876,14 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteAuthorizationPolicyRequest(DeleteAuthorizationPolicyRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteAuthorizationPolicyRequest Clone() {
       return new DeleteAuthorizationPolicyRequest(this);
     }
@@ -2697,6 +2896,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     /// `projects/{project}/locations/{location}/authorizationPolicies/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2705,11 +2905,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteAuthorizationPolicyRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteAuthorizationPolicyRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2722,6 +2924,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2732,11 +2935,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2753,6 +2958,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2765,6 +2971,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2777,6 +2984,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteAuthorizationPolicyRequest other) {
       if (other == null) {
         return;
@@ -2788,6 +2996,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2809,6 +3018,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

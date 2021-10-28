@@ -93,19 +93,23 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     private static readonly pb::MessageParser<TranslateSpeechConfig> _parser = new pb::MessageParser<TranslateSpeechConfig>(() => new TranslateSpeechConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TranslateSpeechConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.MediaTranslation.V1Beta1.MediaTranslationReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TranslateSpeechConfig() {
       OnConstruction();
     }
@@ -113,6 +117,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TranslateSpeechConfig(TranslateSpeechConfig other) : this() {
       audioEncoding_ = other.audioEncoding_;
       sourceLanguageCode_ = other.sourceLanguageCode_;
@@ -123,6 +128,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TranslateSpeechConfig Clone() {
       return new TranslateSpeechConfig(this);
     }
@@ -169,6 +175,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     ///   sample rate of the file being used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AudioEncoding {
       get { return audioEncoding_; }
       set {
@@ -183,6 +190,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// Required. Source language code (BCP-47) of the input audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceLanguageCode {
       get { return sourceLanguageCode_; }
       set {
@@ -197,6 +205,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// Required. Target language code (BCP-47) of the output.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TargetLanguageCode {
       get { return targetLanguageCode_; }
       set {
@@ -214,6 +223,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// rate of the audio source (instead of re-sampling).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SampleRateHertz {
       get { return sampleRateHertz_; }
       set {
@@ -230,6 +240,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// `google-provided-model/phone-call` is not premium model.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Model {
       get { return model_; }
       set {
@@ -238,11 +249,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TranslateSpeechConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TranslateSpeechConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -259,6 +272,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (AudioEncoding.Length != 0) hash ^= AudioEncoding.GetHashCode();
@@ -273,11 +287,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -310,6 +326,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AudioEncoding.Length != 0) {
         output.WriteRawTag(10);
@@ -338,6 +355,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (AudioEncoding.Length != 0) {
@@ -362,6 +380,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TranslateSpeechConfig other) {
       if (other == null) {
         return;
@@ -385,6 +404,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -422,6 +442,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -467,19 +488,23 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     private static readonly pb::MessageParser<StreamingTranslateSpeechConfig> _parser = new pb::MessageParser<StreamingTranslateSpeechConfig>(() => new StreamingTranslateSpeechConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StreamingTranslateSpeechConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.MediaTranslation.V1Beta1.MediaTranslationReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechConfig() {
       OnConstruction();
     }
@@ -487,6 +512,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechConfig(StreamingTranslateSpeechConfig other) : this() {
       audioConfig_ = other.audioConfig_ != null ? other.audioConfig_.Clone() : null;
       singleUtterance_ = other.singleUtterance_;
@@ -494,6 +520,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechConfig Clone() {
       return new StreamingTranslateSpeechConfig(this);
     }
@@ -505,6 +532,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// Required. The common config for all the following audio contents.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.MediaTranslation.V1Beta1.TranslateSpeechConfig AudioConfig {
       get { return audioConfig_; }
       set {
@@ -532,6 +560,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// response is false), or append (if 'is_final' of previous response is true).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool SingleUtterance {
       get { return singleUtterance_; }
       set {
@@ -540,11 +569,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StreamingTranslateSpeechConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StreamingTranslateSpeechConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -558,6 +589,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (audioConfig_ != null) hash ^= AudioConfig.GetHashCode();
@@ -569,11 +601,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -594,6 +628,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (audioConfig_ != null) {
         output.WriteRawTag(10);
@@ -610,6 +645,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (audioConfig_ != null) {
@@ -625,6 +661,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StreamingTranslateSpeechConfig other) {
       if (other == null) {
         return;
@@ -642,6 +679,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -670,6 +708,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -710,19 +749,23 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     private static readonly pb::MessageParser<StreamingTranslateSpeechRequest> _parser = new pb::MessageParser<StreamingTranslateSpeechRequest>(() => new StreamingTranslateSpeechRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StreamingTranslateSpeechRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.MediaTranslation.V1Beta1.MediaTranslationReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechRequest() {
       OnConstruction();
     }
@@ -730,6 +773,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechRequest(StreamingTranslateSpeechRequest other) : this() {
       switch (other.StreamingRequestCase) {
         case StreamingRequestOneofCase.StreamingConfig:
@@ -744,6 +788,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechRequest Clone() {
       return new StreamingTranslateSpeechRequest(this);
     }
@@ -756,6 +801,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// a `streaming_config` message.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechConfig StreamingConfig {
       get { return streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig ? (global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechConfig) streamingRequest_ : null; }
       set {
@@ -777,6 +823,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// base64).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AudioContent {
       get { return streamingRequestCase_ == StreamingRequestOneofCase.AudioContent ? (pb::ByteString) streamingRequest_ : pb::ByteString.Empty; }
       set {
@@ -794,22 +841,26 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
     private StreamingRequestOneofCase streamingRequestCase_ = StreamingRequestOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingRequestOneofCase StreamingRequestCase {
       get { return streamingRequestCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearStreamingRequest() {
       streamingRequestCase_ = StreamingRequestOneofCase.None;
       streamingRequest_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StreamingTranslateSpeechRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StreamingTranslateSpeechRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -824,6 +875,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) hash ^= StreamingConfig.GetHashCode();
@@ -836,11 +888,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -861,6 +915,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
         output.WriteRawTag(10);
@@ -877,6 +932,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (streamingRequestCase_ == StreamingRequestOneofCase.StreamingConfig) {
@@ -892,6 +948,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StreamingTranslateSpeechRequest other) {
       if (other == null) {
         return;
@@ -912,6 +969,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -942,6 +1000,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -981,19 +1040,23 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     private static readonly pb::MessageParser<StreamingTranslateSpeechResult> _parser = new pb::MessageParser<StreamingTranslateSpeechResult>(() => new StreamingTranslateSpeechResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StreamingTranslateSpeechResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.MediaTranslation.V1Beta1.MediaTranslationReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechResult() {
       OnConstruction();
     }
@@ -1001,6 +1064,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechResult(StreamingTranslateSpeechResult other) : this() {
       switch (other.ResultCase) {
         case ResultOneofCase.TextTranslationResult:
@@ -1012,6 +1076,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechResult Clone() {
       return new StreamingTranslateSpeechResult(this);
     }
@@ -1022,6 +1087,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// Text translation result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Types.TextTranslationResult TextTranslationResult {
       get { return resultCase_ == ResultOneofCase.TextTranslationResult ? (global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Types.TextTranslationResult) result_ : null; }
       set {
@@ -1038,22 +1104,26 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
     private ResultOneofCase resultCase_ = ResultOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResultOneofCase ResultCase {
       get { return resultCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearResult() {
       resultCase_ = ResultOneofCase.None;
       result_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StreamingTranslateSpeechResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StreamingTranslateSpeechResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1067,6 +1137,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (resultCase_ == ResultOneofCase.TextTranslationResult) hash ^= TextTranslationResult.GetHashCode();
@@ -1078,11 +1149,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1099,6 +1172,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (resultCase_ == ResultOneofCase.TextTranslationResult) {
         output.WriteRawTag(10);
@@ -1111,6 +1185,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (resultCase_ == ResultOneofCase.TextTranslationResult) {
@@ -1123,6 +1198,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StreamingTranslateSpeechResult other) {
       if (other == null) {
         return;
@@ -1140,6 +1216,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1166,6 +1243,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1190,6 +1268,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the StreamingTranslateSpeechResult message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Text translation result.
@@ -1202,19 +1281,23 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         private static readonly pb::MessageParser<TextTranslationResult> _parser = new pb::MessageParser<TextTranslationResult>(() => new TextTranslationResult());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TextTranslationResult> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TextTranslationResult() {
           OnConstruction();
         }
@@ -1222,6 +1305,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TextTranslationResult(TextTranslationResult other) : this() {
           translation_ = other.translation_;
           isFinal_ = other.isFinal_;
@@ -1229,6 +1313,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TextTranslationResult Clone() {
           return new TextTranslationResult(this);
         }
@@ -1240,6 +1325,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         /// Output only. The translated sentence.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Translation {
           get { return translation_; }
           set {
@@ -1259,6 +1345,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         /// corresponding audio.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool IsFinal {
           get { return isFinal_; }
           set {
@@ -1267,11 +1354,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as TextTranslationResult);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(TextTranslationResult other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1285,6 +1374,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Translation.Length != 0) hash ^= Translation.GetHashCode();
@@ -1296,11 +1386,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1321,6 +1413,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Translation.Length != 0) {
             output.WriteRawTag(10);
@@ -1337,6 +1430,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Translation.Length != 0) {
@@ -1352,6 +1446,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(TextTranslationResult other) {
           if (other == null) {
             return;
@@ -1366,6 +1461,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1391,6 +1487,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1430,19 +1527,23 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     private static readonly pb::MessageParser<StreamingTranslateSpeechResponse> _parser = new pb::MessageParser<StreamingTranslateSpeechResponse>(() => new StreamingTranslateSpeechResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StreamingTranslateSpeechResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.MediaTranslation.V1Beta1.MediaTranslationReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechResponse() {
       OnConstruction();
     }
@@ -1450,6 +1551,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechResponse(StreamingTranslateSpeechResponse other) : this() {
       error_ = other.error_ != null ? other.error_.Clone() : null;
       result_ = other.result_ != null ? other.result_.Clone() : null;
@@ -1458,6 +1560,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StreamingTranslateSpeechResponse Clone() {
       return new StreamingTranslateSpeechResponse(this);
     }
@@ -1470,6 +1573,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// specifies the error for the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -1485,6 +1589,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// true or false).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResult Result {
       get { return result_; }
       set {
@@ -1499,6 +1604,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     /// Output only. Indicates the type of speech event.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.MediaTranslation.V1Beta1.StreamingTranslateSpeechResponse.Types.SpeechEventType SpeechEventType {
       get { return speechEventType_; }
       set {
@@ -1507,11 +1613,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StreamingTranslateSpeechResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StreamingTranslateSpeechResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1526,6 +1634,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (error_ != null) hash ^= Error.GetHashCode();
@@ -1538,11 +1647,13 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1567,6 +1678,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (error_ != null) {
         output.WriteRawTag(10);
@@ -1587,6 +1699,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (error_ != null) {
@@ -1605,6 +1718,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StreamingTranslateSpeechResponse other) {
       if (other == null) {
         return;
@@ -1628,6 +1742,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1663,6 +1778,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1696,6 +1812,7 @@ namespace Google.Cloud.MediaTranslation.V1Beta1 {
     #region Nested types
     /// <summary>Container for nested types declared in the StreamingTranslateSpeechResponse message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Indicates the type of speech event.

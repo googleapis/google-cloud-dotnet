@@ -148,19 +148,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<KeyRange> _parser = new pb::MessageParser<KeyRange>(() => new KeyRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<KeyRange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyRange() {
       OnConstruction();
     }
@@ -168,6 +172,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyRange(KeyRange other) : this() {
       switch (other.StartKeyTypeCase) {
         case StartKeyTypeOneofCase.StartClosed:
@@ -191,6 +196,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeyRange Clone() {
       return new KeyRange(this);
     }
@@ -202,6 +208,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// first `len(start_closed)` key columns exactly match `start_closed`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.ListValue StartClosed {
       get { return startKeyTypeCase_ == StartKeyTypeOneofCase.StartClosed ? (global::Google.Protobuf.WellKnownTypes.ListValue) startKeyType_ : null; }
       set {
@@ -217,6 +224,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// `len(start_open)` key columns exactly match `start_open`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.ListValue StartOpen {
       get { return startKeyTypeCase_ == StartKeyTypeOneofCase.StartOpen ? (global::Google.Protobuf.WellKnownTypes.ListValue) startKeyType_ : null; }
       set {
@@ -232,6 +240,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// first `len(end_closed)` key columns exactly match `end_closed`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.ListValue EndClosed {
       get { return endKeyTypeCase_ == EndKeyTypeOneofCase.EndClosed ? (global::Google.Protobuf.WellKnownTypes.ListValue) endKeyType_ : null; }
       set {
@@ -247,6 +256,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// `len(end_open)` key columns exactly match `end_open`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.ListValue EndOpen {
       get { return endKeyTypeCase_ == EndKeyTypeOneofCase.EndOpen ? (global::Google.Protobuf.WellKnownTypes.ListValue) endKeyType_ : null; }
       set {
@@ -264,11 +274,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
     private StartKeyTypeOneofCase startKeyTypeCase_ = StartKeyTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartKeyTypeOneofCase StartKeyTypeCase {
       get { return startKeyTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearStartKeyType() {
       startKeyTypeCase_ = StartKeyTypeOneofCase.None;
       startKeyType_ = null;
@@ -283,22 +295,26 @@ namespace Google.Cloud.Spanner.V1 {
     }
     private EndKeyTypeOneofCase endKeyTypeCase_ = EndKeyTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EndKeyTypeOneofCase EndKeyTypeCase {
       get { return endKeyTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEndKeyType() {
       endKeyTypeCase_ = EndKeyTypeOneofCase.None;
       endKeyType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as KeyRange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(KeyRange other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -316,6 +332,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startKeyTypeCase_ == StartKeyTypeOneofCase.StartClosed) hash ^= StartClosed.GetHashCode();
@@ -331,11 +348,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -364,6 +383,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startKeyTypeCase_ == StartKeyTypeOneofCase.StartClosed) {
         output.WriteRawTag(10);
@@ -388,6 +408,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startKeyTypeCase_ == StartKeyTypeOneofCase.StartClosed) {
@@ -409,6 +430,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(KeyRange other) {
       if (other == null) {
         return;
@@ -447,6 +469,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -500,6 +523,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -567,19 +591,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<KeySet> _parser = new pb::MessageParser<KeySet>(() => new KeySet());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<KeySet> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.KeysReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeySet() {
       OnConstruction();
     }
@@ -587,6 +615,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeySet(KeySet other) : this() {
       keys_ = other.keys_.Clone();
       ranges_ = other.ranges_.Clone();
@@ -595,6 +624,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public KeySet Clone() {
       return new KeySet(this);
     }
@@ -611,6 +641,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// encoded as described [here][google.spanner.v1.TypeCode].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> Keys {
       get { return keys_; }
     }
@@ -625,6 +656,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// key range specifications.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Spanner.V1.KeyRange> Ranges {
       get { return ranges_; }
     }
@@ -638,6 +670,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// specified in `keys` or `ranges` are only yielded once.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool All {
       get { return all_; }
       set {
@@ -646,11 +679,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as KeySet);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(KeySet other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -665,6 +700,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= keys_.GetHashCode();
@@ -677,11 +713,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -700,6 +738,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       keys_.WriteTo(ref output, _repeated_keys_codec);
       ranges_.WriteTo(ref output, _repeated_ranges_codec);
@@ -714,6 +753,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += keys_.CalculateSize(_repeated_keys_codec);
@@ -728,6 +768,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(KeySet other) {
       if (other == null) {
         return;
@@ -741,6 +782,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -770,6 +812,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

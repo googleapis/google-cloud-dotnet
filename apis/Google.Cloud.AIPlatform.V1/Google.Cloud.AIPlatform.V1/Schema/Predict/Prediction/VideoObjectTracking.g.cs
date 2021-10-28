@@ -72,19 +72,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     private static readonly pb::MessageParser<VideoObjectTrackingPredictionResult> _parser = new pb::MessageParser<VideoObjectTrackingPredictionResult>(() => new VideoObjectTrackingPredictionResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoObjectTrackingPredictionResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.VideoObjectTrackingReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingPredictionResult() {
       OnConstruction();
     }
@@ -92,6 +96,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingPredictionResult(VideoObjectTrackingPredictionResult other) : this() {
       id_ = other.id_;
       displayName_ = other.displayName_;
@@ -103,6 +108,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoObjectTrackingPredictionResult Clone() {
       return new VideoObjectTrackingPredictionResult(this);
     }
@@ -114,6 +120,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// The resource ID of the AnnotationSpec that had been identified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -128,6 +135,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// The display name of the AnnotationSpec that had been identified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -145,6 +153,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// precision, and with "s" appended at the end.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeSegmentStart {
       get { return timeSegmentStart_; }
       set {
@@ -162,6 +171,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// precision, and with "s" appended at the end.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration TimeSegmentEnd {
       get { return timeSegmentEnd_; }
       set {
@@ -178,6 +188,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// value means higher confidence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float? Confidence {
       get { return confidence_; }
       set {
@@ -196,16 +207,19 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     /// detected. The bounding boxes in the frames identify the same object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.VideoObjectTrackingPredictionResult.Types.Frame> Frames {
       get { return frames_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoObjectTrackingPredictionResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoObjectTrackingPredictionResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -223,6 +237,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -238,11 +253,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -275,6 +292,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -303,6 +321,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -328,6 +347,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoObjectTrackingPredictionResult other) {
       if (other == null) {
         return;
@@ -360,6 +380,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -410,6 +431,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -458,6 +480,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
     #region Nested types
     /// <summary>Container for nested types declared in the VideoObjectTrackingPredictionResult message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The fields `xMin`, `xMax`, `yMin`, and `yMax` refer to a bounding box,
@@ -473,19 +496,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         private static readonly pb::MessageParser<Frame> _parser = new pb::MessageParser<Frame>(() => new Frame());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Frame> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction.VideoObjectTrackingPredictionResult.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Frame() {
           OnConstruction();
         }
@@ -493,6 +520,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Frame(Frame other) : this() {
           timeOffset_ = other.timeOffset_ != null ? other.timeOffset_.Clone() : null;
           XMin = other.XMin;
@@ -503,6 +531,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Frame Clone() {
           return new Frame(this);
         }
@@ -517,6 +546,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         /// with "s" appended at the end.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration TimeOffset {
           get { return timeOffset_; }
           set {
@@ -532,6 +562,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         /// The leftmost coordinate of the bounding box.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float? XMin {
           get { return xMin_; }
           set {
@@ -548,6 +579,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         /// The rightmost coordinate of the bounding box.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float? XMax {
           get { return xMax_; }
           set {
@@ -564,6 +596,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         /// The topmost coordinate of the bounding box.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float? YMin {
           get { return yMin_; }
           set {
@@ -580,6 +613,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         /// The bottommost coordinate of the bounding box.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float? YMax {
           get { return yMax_; }
           set {
@@ -589,11 +623,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Frame);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Frame other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -610,6 +646,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (timeOffset_ != null) hash ^= TimeOffset.GetHashCode();
@@ -624,11 +661,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -657,6 +696,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (timeOffset_ != null) {
             output.WriteRawTag(10);
@@ -681,6 +721,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (timeOffset_ != null) {
@@ -705,6 +746,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Frame other) {
           if (other == null) {
             return;
@@ -739,6 +781,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -791,6 +834,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Prediction {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

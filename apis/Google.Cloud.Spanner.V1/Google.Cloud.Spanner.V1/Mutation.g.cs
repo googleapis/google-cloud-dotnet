@@ -66,19 +66,23 @@ namespace Google.Cloud.Spanner.V1 {
     private static readonly pb::MessageParser<Mutation> _parser = new pb::MessageParser<Mutation>(() => new Mutation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Mutation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Spanner.V1.MutationReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation() {
       OnConstruction();
     }
@@ -86,6 +90,7 @@ namespace Google.Cloud.Spanner.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation(Mutation other) : this() {
       switch (other.OperationCase) {
         case OperationOneofCase.Insert:
@@ -109,6 +114,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation Clone() {
       return new Mutation(this);
     }
@@ -120,6 +126,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// the write or transaction fails with error `ALREADY_EXISTS`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write Insert {
       get { return operationCase_ == OperationOneofCase.Insert ? (global::Google.Cloud.Spanner.V1.Mutation.Types.Write) operation_ : null; }
       set {
@@ -135,6 +142,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// already exist, the transaction fails with error `NOT_FOUND`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write Update {
       get { return operationCase_ == OperationOneofCase.Update ? (global::Google.Cloud.Spanner.V1.Mutation.Types.Write) operation_ : null; }
       set {
@@ -155,6 +163,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// even when the row already exists and will therefore actually be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write InsertOrUpdate {
       get { return operationCase_ == OperationOneofCase.InsertOrUpdate ? (global::Google.Cloud.Spanner.V1.Mutation.Types.Write) operation_ : null; }
       set {
@@ -177,6 +186,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// child rows before you replace the parent row.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Write Replace {
       get { return operationCase_ == OperationOneofCase.Replace ? (global::Google.Cloud.Spanner.V1.Mutation.Types.Write) operation_ : null; }
       set {
@@ -192,6 +202,7 @@ namespace Google.Cloud.Spanner.V1 {
     /// rows were present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Spanner.V1.Mutation.Types.Delete Delete {
       get { return operationCase_ == OperationOneofCase.Delete ? (global::Google.Cloud.Spanner.V1.Mutation.Types.Delete) operation_ : null; }
       set {
@@ -212,22 +223,26 @@ namespace Google.Cloud.Spanner.V1 {
     }
     private OperationOneofCase operationCase_ = OperationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperationOneofCase OperationCase {
       get { return operationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearOperation() {
       operationCase_ = OperationOneofCase.None;
       operation_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Mutation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Mutation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -245,6 +260,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (operationCase_ == OperationOneofCase.Insert) hash ^= Insert.GetHashCode();
@@ -260,11 +276,13 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -297,6 +315,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (operationCase_ == OperationOneofCase.Insert) {
         output.WriteRawTag(10);
@@ -325,6 +344,7 @@ namespace Google.Cloud.Spanner.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (operationCase_ == OperationOneofCase.Insert) {
@@ -349,6 +369,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Mutation other) {
       if (other == null) {
         return;
@@ -390,6 +411,7 @@ namespace Google.Cloud.Spanner.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -452,6 +474,7 @@ namespace Google.Cloud.Spanner.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -512,6 +535,7 @@ namespace Google.Cloud.Spanner.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Mutation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Arguments to [insert][google.spanner.v1.Mutation.insert], [update][google.spanner.v1.Mutation.update], [insert_or_update][google.spanner.v1.Mutation.insert_or_update], and
@@ -525,19 +549,23 @@ namespace Google.Cloud.Spanner.V1 {
         private static readonly pb::MessageParser<Write> _parser = new pb::MessageParser<Write>(() => new Write());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Write> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Spanner.V1.Mutation.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Write() {
           OnConstruction();
         }
@@ -545,6 +573,7 @@ namespace Google.Cloud.Spanner.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Write(Write other) : this() {
           table_ = other.table_;
           columns_ = other.columns_.Clone();
@@ -553,6 +582,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Write Clone() {
           return new Write(this);
         }
@@ -564,6 +594,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// Required. The table whose rows will be written.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Table {
           get { return table_; }
           set {
@@ -584,6 +615,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// row(s) to be modified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Columns {
           get { return columns_; }
         }
@@ -604,16 +636,19 @@ namespace Google.Cloud.Spanner.V1 {
         /// encoded as described [here][google.spanner.v1.TypeCode].
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.ListValue> Values {
           get { return values_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Write);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Write other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -628,6 +663,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Table.Length != 0) hash ^= Table.GetHashCode();
@@ -640,11 +676,13 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -663,6 +701,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Table.Length != 0) {
             output.WriteRawTag(10);
@@ -677,6 +716,7 @@ namespace Google.Cloud.Spanner.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Table.Length != 0) {
@@ -691,6 +731,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Write other) {
           if (other == null) {
             return;
@@ -704,6 +745,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -733,6 +775,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -770,19 +813,23 @@ namespace Google.Cloud.Spanner.V1 {
         private static readonly pb::MessageParser<Delete> _parser = new pb::MessageParser<Delete>(() => new Delete());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Delete> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Spanner.V1.Mutation.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Delete() {
           OnConstruction();
         }
@@ -790,6 +837,7 @@ namespace Google.Cloud.Spanner.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Delete(Delete other) : this() {
           table_ = other.table_;
           keySet_ = other.keySet_ != null ? other.keySet_.Clone() : null;
@@ -797,6 +845,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Delete Clone() {
           return new Delete(this);
         }
@@ -808,6 +857,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// Required. The table whose rows will be deleted.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Table {
           get { return table_; }
           set {
@@ -827,6 +877,7 @@ namespace Google.Cloud.Spanner.V1 {
         /// rows do not exist.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Spanner.V1.KeySet KeySet {
           get { return keySet_; }
           set {
@@ -835,11 +886,13 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Delete);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Delete other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -853,6 +906,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Table.Length != 0) hash ^= Table.GetHashCode();
@@ -864,11 +918,13 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -889,6 +945,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Table.Length != 0) {
             output.WriteRawTag(10);
@@ -905,6 +962,7 @@ namespace Google.Cloud.Spanner.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Table.Length != 0) {
@@ -920,6 +978,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Delete other) {
           if (other == null) {
             return;
@@ -937,6 +996,7 @@ namespace Google.Cloud.Spanner.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -965,6 +1025,7 @@ namespace Google.Cloud.Spanner.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

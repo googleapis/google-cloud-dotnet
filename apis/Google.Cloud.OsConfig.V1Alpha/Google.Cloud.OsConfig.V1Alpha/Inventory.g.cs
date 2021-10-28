@@ -169,19 +169,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<Inventory> _parser = new pb::MessageParser<Inventory>(() => new Inventory());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Inventory> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InventoryReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Inventory() {
       OnConstruction();
     }
@@ -189,6 +193,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Inventory(Inventory other) : this() {
       name_ = other.name_;
       osInfo_ = other.osInfo_ != null ? other.osInfo_.Clone() : null;
@@ -198,6 +203,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Inventory Clone() {
       return new Inventory(this);
     }
@@ -212,6 +218,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// `projects/{project_number}/locations/{location}/instances/{instance_id}/inventory`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -226,6 +233,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Output only. Base level operating system information for the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.OsInfo OsInfo {
       get { return osInfo_; }
       set {
@@ -245,6 +253,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// new package version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item> Items {
       get { return items_; }
     }
@@ -256,6 +265,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Output only. Timestamp of the last reported inventory for the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -264,11 +274,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Inventory);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Inventory other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -284,6 +296,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -297,11 +310,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -327,6 +342,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (osInfo_ != null) {
         output.WriteRawTag(10);
@@ -348,6 +364,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -367,6 +384,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Inventory other) {
       if (other == null) {
         return;
@@ -391,6 +409,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -430,6 +449,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -467,6 +487,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the Inventory message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Operating system information for the VM.
@@ -479,19 +500,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<OsInfo> _parser = new pb::MessageParser<OsInfo>(() => new OsInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<OsInfo> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OsInfo() {
           OnConstruction();
         }
@@ -499,6 +524,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OsInfo(OsInfo other) : this() {
           hostname_ = other.hostname_;
           longName_ = other.longName_;
@@ -512,6 +538,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OsInfo Clone() {
           return new OsInfo(this);
         }
@@ -523,6 +550,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The VM hostname.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Hostname {
           get { return hostname_; }
           set {
@@ -539,6 +567,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Datacenter'.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string LongName {
           get { return longName_; }
           set {
@@ -554,6 +583,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// For example, 'windows' or 'debian'.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ShortName {
           get { return shortName_; }
           set {
@@ -568,6 +598,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The version of the operating system.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Version {
           get { return version_; }
           set {
@@ -582,6 +613,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The system architecture of the operating system.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Architecture {
           get { return architecture_; }
           set {
@@ -596,6 +628,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The kernel version of the operating system.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string KernelVersion {
           get { return kernelVersion_; }
           set {
@@ -610,6 +643,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The kernel release of the operating system.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string KernelRelease {
           get { return kernelRelease_; }
           set {
@@ -624,6 +658,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The current version of the OS Config agent running on the VM.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string OsconfigAgentVersion {
           get { return osconfigAgentVersion_; }
           set {
@@ -632,11 +667,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as OsInfo);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(OsInfo other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -656,6 +693,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Hostname.Length != 0) hash ^= Hostname.GetHashCode();
@@ -673,11 +711,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -722,6 +762,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (LongName.Length != 0) {
             output.WriteRawTag(18);
@@ -762,6 +803,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Hostname.Length != 0) {
@@ -795,6 +837,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(OsInfo other) {
           if (other == null) {
             return;
@@ -827,6 +870,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -876,6 +920,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -933,19 +978,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<Item> _parser = new pb::MessageParser<Item>(() => new Item());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Item> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Item() {
           OnConstruction();
         }
@@ -953,6 +1002,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Item(Item other) : this() {
           id_ = other.id_;
           originType_ = other.originType_;
@@ -972,6 +1022,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Item Clone() {
           return new Item(this);
         }
@@ -983,6 +1034,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Identifier for this item, unique across items for this VM.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Id {
           get { return id_; }
           set {
@@ -997,6 +1049,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The origin of this inventory item.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item.Types.OriginType OriginType {
           get { return originType_; }
           set {
@@ -1011,6 +1064,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// When this inventory item was first detected.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
           get { return createTime_; }
           set {
@@ -1025,6 +1079,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// When this inventory item was last modified.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
           get { return updateTime_; }
           set {
@@ -1039,6 +1094,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The specific type of inventory, correlating to its specific details.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.Item.Types.Type Type {
           get { return type_; }
           set {
@@ -1052,6 +1108,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Software package present on the VM instance.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.SoftwarePackage InstalledPackage {
           get { return detailsCase_ == DetailsOneofCase.InstalledPackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.SoftwarePackage) details_ : null; }
           set {
@@ -1066,6 +1123,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Software package available to be installed on the VM instance.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.SoftwarePackage AvailablePackage {
           get { return detailsCase_ == DetailsOneofCase.AvailablePackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.SoftwarePackage) details_ : null; }
           set {
@@ -1083,22 +1141,26 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
         private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DetailsOneofCase DetailsCase {
           get { return detailsCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearDetails() {
           detailsCase_ = DetailsOneofCase.None;
           details_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Item);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Item other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1118,6 +1180,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -1135,11 +1198,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1180,6 +1245,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Id.Length != 0) {
             output.WriteRawTag(10);
@@ -1216,6 +1282,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Id.Length != 0) {
@@ -1246,6 +1313,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Item other) {
           if (other == null) {
             return;
@@ -1290,6 +1358,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1351,6 +1420,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1410,6 +1480,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #region Nested types
         /// <summary>Container for nested types declared in the Item message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// The origin of a specific inventory item.
@@ -1460,19 +1531,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<SoftwarePackage> _parser = new pb::MessageParser<SoftwarePackage>(() => new SoftwarePackage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<SoftwarePackage> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SoftwarePackage() {
           OnConstruction();
         }
@@ -1480,6 +1555,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SoftwarePackage(SoftwarePackage other) : this() {
           switch (other.DetailsCase) {
             case DetailsOneofCase.YumPackage:
@@ -1515,6 +1591,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SoftwarePackage Clone() {
           return new SoftwarePackage(this);
         }
@@ -1527,6 +1604,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-yum.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage YumPackage {
           get { return detailsCase_ == DetailsOneofCase.YumPackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage) details_ : null; }
           set {
@@ -1543,6 +1621,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// https://wiki.debian.org/Apt.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage AptPackage {
           get { return detailsCase_ == DetailsOneofCase.AptPackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage) details_ : null; }
           set {
@@ -1559,6 +1638,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// https://en.opensuse.org/SDB:Zypper_manual.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage ZypperPackage {
           get { return detailsCase_ == DetailsOneofCase.ZypperPackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage) details_ : null; }
           set {
@@ -1575,6 +1655,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         ///  https://github.com/google/googet.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage GoogetPackage {
           get { return detailsCase_ == DetailsOneofCase.GoogetPackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage) details_ : null; }
           set {
@@ -1591,6 +1672,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// https://en.opensuse.org/SDB:Zypper_manual.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.ZypperPatch ZypperPatch {
           get { return detailsCase_ == DetailsOneofCase.ZypperPatch ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.ZypperPatch) details_ : null; }
           set {
@@ -1607,6 +1689,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// information about Windows Update.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsUpdatePackage WuaPackage {
           get { return detailsCase_ == DetailsOneofCase.WuaPackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsUpdatePackage) details_ : null; }
           set {
@@ -1624,6 +1707,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// for info in Windows Quick Fix Engineering.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsQuickFixEngineeringPackage QfePackage {
           get { return detailsCase_ == DetailsOneofCase.QfePackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsQuickFixEngineeringPackage) details_ : null; }
           set {
@@ -1638,6 +1722,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Details of a COS package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage CosPackage {
           get { return detailsCase_ == DetailsOneofCase.CosPackage ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.VersionedPackage) details_ : null; }
           set {
@@ -1652,6 +1737,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Details of Windows Application.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsApplication WindowsApplication {
           get { return detailsCase_ == DetailsOneofCase.WindowsApplication ? (global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsApplication) details_ : null; }
           set {
@@ -1676,22 +1762,26 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
         private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DetailsOneofCase DetailsCase {
           get { return detailsCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearDetails() {
           detailsCase_ = DetailsOneofCase.None;
           details_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as SoftwarePackage);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(SoftwarePackage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1713,6 +1803,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (detailsCase_ == DetailsOneofCase.YumPackage) hash ^= YumPackage.GetHashCode();
@@ -1732,11 +1823,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1785,6 +1878,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (detailsCase_ == DetailsOneofCase.YumPackage) {
             output.WriteRawTag(10);
@@ -1829,6 +1923,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (detailsCase_ == DetailsOneofCase.YumPackage) {
@@ -1865,6 +1960,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(SoftwarePackage other) {
           if (other == null) {
             return;
@@ -1930,6 +2026,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2028,6 +2125,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2135,19 +2233,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<VersionedPackage> _parser = new pb::MessageParser<VersionedPackage>(() => new VersionedPackage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<VersionedPackage> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VersionedPackage() {
           OnConstruction();
         }
@@ -2155,6 +2257,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VersionedPackage(VersionedPackage other) : this() {
           packageName_ = other.packageName_;
           architecture_ = other.architecture_;
@@ -2163,6 +2266,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public VersionedPackage Clone() {
           return new VersionedPackage(this);
         }
@@ -2174,6 +2278,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The name of the package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PackageName {
           get { return packageName_; }
           set {
@@ -2188,6 +2293,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The system architecture this package is intended for.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Architecture {
           get { return architecture_; }
           set {
@@ -2202,6 +2308,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The version of the package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Version {
           get { return version_; }
           set {
@@ -2210,11 +2317,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as VersionedPackage);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(VersionedPackage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2229,6 +2338,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (PackageName.Length != 0) hash ^= PackageName.GetHashCode();
@@ -2241,11 +2351,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2270,6 +2382,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Architecture.Length != 0) {
             output.WriteRawTag(18);
@@ -2290,6 +2403,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (PackageName.Length != 0) {
@@ -2308,6 +2422,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(VersionedPackage other) {
           if (other == null) {
             return;
@@ -2325,6 +2440,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2354,6 +2470,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2391,19 +2508,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<ZypperPatch> _parser = new pb::MessageParser<ZypperPatch>(() => new ZypperPatch());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ZypperPatch> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ZypperPatch() {
           OnConstruction();
         }
@@ -2411,6 +2532,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ZypperPatch(ZypperPatch other) : this() {
           patchName_ = other.patchName_;
           category_ = other.category_;
@@ -2420,6 +2542,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ZypperPatch Clone() {
           return new ZypperPatch(this);
         }
@@ -2431,6 +2554,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The name of the patch.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PatchName {
           get { return patchName_; }
           set {
@@ -2445,6 +2569,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The category of the patch.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Category {
           get { return category_; }
           set {
@@ -2459,6 +2584,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The severity specified for this patch
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Severity {
           get { return severity_; }
           set {
@@ -2473,6 +2599,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Any summary information provided about this patch.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Summary {
           get { return summary_; }
           set {
@@ -2481,11 +2608,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ZypperPatch);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ZypperPatch other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2501,6 +2630,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (PatchName.Length != 0) hash ^= PatchName.GetHashCode();
@@ -2514,11 +2644,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2547,6 +2679,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Category.Length != 0) {
             output.WriteRawTag(18);
@@ -2571,6 +2704,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (PatchName.Length != 0) {
@@ -2592,6 +2726,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ZypperPatch other) {
           if (other == null) {
             return;
@@ -2612,6 +2747,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2645,6 +2781,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2690,19 +2827,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<WindowsUpdatePackage> _parser = new pb::MessageParser<WindowsUpdatePackage>(() => new WindowsUpdatePackage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<WindowsUpdatePackage> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsUpdatePackage() {
           OnConstruction();
         }
@@ -2710,6 +2851,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsUpdatePackage(WindowsUpdatePackage other) : this() {
           title_ = other.title_;
           description_ = other.description_;
@@ -2724,6 +2866,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsUpdatePackage Clone() {
           return new WindowsUpdatePackage(this);
         }
@@ -2735,6 +2878,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The localized title of the update package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Title {
           get { return title_; }
           set {
@@ -2749,6 +2893,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The localized description of the update package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Description {
           get { return description_; }
           set {
@@ -2765,6 +2910,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The categories that are associated with this update package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsUpdatePackage.Types.WindowsUpdateCategory> Categories {
           get { return categories_; }
         }
@@ -2779,6 +2925,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// with the update package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> KbArticleIds {
           get { return kbArticleIds_; }
         }
@@ -2790,6 +2937,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// A hyperlink to the language-specific support information for the update.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string SupportUrl {
           get { return supportUrl_; }
           set {
@@ -2807,6 +2955,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> MoreInfoUrls {
           get { return moreInfoUrls_; }
         }
@@ -2819,6 +2968,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// revisions.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string UpdateId {
           get { return updateId_; }
           set {
@@ -2833,6 +2983,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The revision number of this update package.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int RevisionNumber {
           get { return revisionNumber_; }
           set {
@@ -2847,6 +2998,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The last published date of the update, in (UTC) date and time.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp LastDeploymentChangeTime {
           get { return lastDeploymentChangeTime_; }
           set {
@@ -2855,11 +3007,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as WindowsUpdatePackage);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(WindowsUpdatePackage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2880,6 +3034,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Title.Length != 0) hash ^= Title.GetHashCode();
@@ -2898,11 +3053,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2942,6 +3099,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Title.Length != 0) {
             output.WriteRawTag(10);
@@ -2977,6 +3135,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Title.Length != 0) {
@@ -3007,6 +3166,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(WindowsUpdatePackage other) {
           if (other == null) {
             return;
@@ -3039,6 +3199,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3095,6 +3256,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3149,6 +3311,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #region Nested types
         /// <summary>Container for nested types declared in the WindowsUpdatePackage message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Categories specified by the Windows Update.
@@ -3161,19 +3324,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             private static readonly pb::MessageParser<WindowsUpdateCategory> _parser = new pb::MessageParser<WindowsUpdateCategory>(() => new WindowsUpdateCategory());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<WindowsUpdateCategory> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Types.WindowsUpdatePackage.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public WindowsUpdateCategory() {
               OnConstruction();
             }
@@ -3181,6 +3348,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public WindowsUpdateCategory(WindowsUpdateCategory other) : this() {
               id_ = other.id_;
               name_ = other.name_;
@@ -3188,6 +3356,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public WindowsUpdateCategory Clone() {
               return new WindowsUpdateCategory(this);
             }
@@ -3199,6 +3368,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             /// The identifier of the windows update category.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Id {
               get { return id_; }
               set {
@@ -3213,6 +3383,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             /// The name of the windows update category.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string Name {
               get { return name_; }
               set {
@@ -3221,11 +3392,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as WindowsUpdateCategory);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(WindowsUpdateCategory other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -3239,6 +3412,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -3250,11 +3424,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -3275,6 +3451,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (Id.Length != 0) {
                 output.WriteRawTag(10);
@@ -3291,6 +3468,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (Id.Length != 0) {
@@ -3306,6 +3484,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(WindowsUpdateCategory other) {
               if (other == null) {
                 return;
@@ -3320,6 +3499,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -3345,6 +3525,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -3386,19 +3567,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<WindowsQuickFixEngineeringPackage> _parser = new pb::MessageParser<WindowsQuickFixEngineeringPackage>(() => new WindowsQuickFixEngineeringPackage());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<WindowsQuickFixEngineeringPackage> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsQuickFixEngineeringPackage() {
           OnConstruction();
         }
@@ -3406,6 +3591,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsQuickFixEngineeringPackage(WindowsQuickFixEngineeringPackage other) : this() {
           caption_ = other.caption_;
           description_ = other.description_;
@@ -3415,6 +3601,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsQuickFixEngineeringPackage Clone() {
           return new WindowsQuickFixEngineeringPackage(this);
         }
@@ -3426,6 +3613,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// A short textual description of the QFE update.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Caption {
           get { return caption_; }
           set {
@@ -3440,6 +3628,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// A textual description of the QFE update.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Description {
           get { return description_; }
           set {
@@ -3454,6 +3643,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Unique identifier associated with a particular QFE update.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string HotFixId {
           get { return hotFixId_; }
           set {
@@ -3468,6 +3658,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Date that the QFE update was installed.  Mapped from installed_on field.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Timestamp InstallTime {
           get { return installTime_; }
           set {
@@ -3476,11 +3667,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as WindowsQuickFixEngineeringPackage);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(WindowsQuickFixEngineeringPackage other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3496,6 +3689,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Caption.Length != 0) hash ^= Caption.GetHashCode();
@@ -3509,11 +3703,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3542,6 +3738,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Caption.Length != 0) {
             output.WriteRawTag(10);
@@ -3566,6 +3763,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Caption.Length != 0) {
@@ -3587,6 +3785,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(WindowsQuickFixEngineeringPackage other) {
           if (other == null) {
             return;
@@ -3610,6 +3809,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3646,6 +3846,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3695,19 +3896,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<WindowsApplication> _parser = new pb::MessageParser<WindowsApplication>(() => new WindowsApplication());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<WindowsApplication> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.Inventory.Descriptor.NestedTypes[7]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsApplication() {
           OnConstruction();
         }
@@ -3715,6 +3920,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsApplication(WindowsApplication other) : this() {
           displayName_ = other.displayName_;
           displayVersion_ = other.displayVersion_;
@@ -3725,6 +3931,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WindowsApplication Clone() {
           return new WindowsApplication(this);
         }
@@ -3736,6 +3943,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The name of the application or product.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DisplayName {
           get { return displayName_; }
           set {
@@ -3750,6 +3958,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The version of the product or application in string format.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DisplayVersion {
           get { return displayVersion_; }
           set {
@@ -3764,6 +3973,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The name of the manufacturer for the product or application.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Publisher {
           get { return publisher_; }
           set {
@@ -3780,6 +3990,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// the command-line option is used to repair the product.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Type.Date InstallDate {
           get { return installDate_; }
           set {
@@ -3794,6 +4005,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The internet address for technical support.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string HelpLink {
           get { return helpLink_; }
           set {
@@ -3802,11 +4014,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as WindowsApplication);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(WindowsApplication other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3823,6 +4037,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
@@ -3837,11 +4052,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3874,6 +4091,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (DisplayName.Length != 0) {
             output.WriteRawTag(10);
@@ -3902,6 +4120,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (DisplayName.Length != 0) {
@@ -3926,6 +4145,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(WindowsApplication other) {
           if (other == null) {
             return;
@@ -3952,6 +4172,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3992,6 +4213,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -4045,19 +4267,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<GetInventoryRequest> _parser = new pb::MessageParser<GetInventoryRequest>(() => new GetInventoryRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetInventoryRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InventoryReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetInventoryRequest() {
       OnConstruction();
     }
@@ -4065,6 +4291,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetInventoryRequest(GetInventoryRequest other) : this() {
       name_ = other.name_;
       view_ = other.view_;
@@ -4072,6 +4299,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetInventoryRequest Clone() {
       return new GetInventoryRequest(this);
     }
@@ -4090,6 +4318,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// can be provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -4105,6 +4334,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// inventory resource. If unspecified, the default view is BASIC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.OsConfig.V1Alpha.InventoryView View {
       get { return view_; }
       set {
@@ -4113,11 +4343,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetInventoryRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetInventoryRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4131,6 +4363,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -4142,11 +4375,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4167,6 +4402,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -4183,6 +4419,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4198,6 +4435,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetInventoryRequest other) {
       if (other == null) {
         return;
@@ -4212,6 +4450,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4237,6 +4476,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4271,19 +4511,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<ListInventoriesRequest> _parser = new pb::MessageParser<ListInventoriesRequest>(() => new ListInventoriesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListInventoriesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InventoryReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInventoriesRequest() {
       OnConstruction();
     }
@@ -4291,6 +4535,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInventoriesRequest(ListInventoriesRequest other) : this() {
       parent_ = other.parent_;
       view_ = other.view_;
@@ -4301,6 +4546,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInventoriesRequest Clone() {
       return new ListInventoriesRequest(this);
     }
@@ -4318,6 +4564,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// list inventories across VMs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -4333,6 +4580,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// inventory resource. If unspecified, the default view is BASIC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.OsConfig.V1Alpha.InventoryView View {
       get { return view_; }
       set {
@@ -4347,6 +4595,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// The maximum number of results to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -4363,6 +4612,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// should continue from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -4378,6 +4628,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// `Inventory` API resource to be included in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -4386,11 +4637,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListInventoriesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListInventoriesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4407,6 +4660,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -4421,11 +4675,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4458,6 +4714,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -4486,6 +4743,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -4510,6 +4768,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListInventoriesRequest other) {
       if (other == null) {
         return;
@@ -4533,6 +4792,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4570,6 +4830,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4616,19 +4877,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<ListInventoriesResponse> _parser = new pb::MessageParser<ListInventoriesResponse>(() => new ListInventoriesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListInventoriesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InventoryReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInventoriesResponse() {
       OnConstruction();
     }
@@ -4636,6 +4901,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInventoriesResponse(ListInventoriesResponse other) : this() {
       inventories_ = other.inventories_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -4643,6 +4909,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInventoriesResponse Clone() {
       return new ListInventoriesResponse(this);
     }
@@ -4656,6 +4923,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// List of inventory objects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.Inventory> Inventories {
       get { return inventories_; }
     }
@@ -4667,6 +4935,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// The pagination token to retrieve the next page of inventory objects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -4675,11 +4944,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListInventoriesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListInventoriesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4693,6 +4964,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inventories_.GetHashCode();
@@ -4704,11 +4976,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4726,6 +5000,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       inventories_.WriteTo(ref output, _repeated_inventories_codec);
       if (NextPageToken.Length != 0) {
@@ -4739,6 +5014,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += inventories_.CalculateSize(_repeated_inventories_codec);
@@ -4752,6 +5028,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListInventoriesResponse other) {
       if (other == null) {
         return;
@@ -4764,6 +5041,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4789,6 +5067,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

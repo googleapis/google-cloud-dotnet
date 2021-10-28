@@ -129,19 +129,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<Row> _parser = new pb::MessageParser<Row>(() => new Row());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Row> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Row() {
       OnConstruction();
     }
@@ -149,6 +153,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Row(Row other) : this() {
       key_ = other.key_;
       families_ = other.families_.Clone();
@@ -156,6 +161,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Row Clone() {
       return new Row(this);
     }
@@ -169,6 +175,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// May contain any non-empty byte string up to 4KiB in length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Key {
       get { return key_; }
       set {
@@ -186,16 +193,19 @@ namespace Google.Cloud.Bigtable.V2 {
     /// The mutual ordering of column families is not specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Family> Families {
       get { return families_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Row);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Row other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -209,6 +219,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -220,11 +231,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -242,6 +255,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Key.Length != 0) {
         output.WriteRawTag(10);
@@ -255,6 +269,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Key.Length != 0) {
@@ -268,6 +283,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Row other) {
       if (other == null) {
         return;
@@ -280,6 +296,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -305,6 +322,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -339,19 +357,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<Family> _parser = new pb::MessageParser<Family>(() => new Family());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Family> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Family() {
       OnConstruction();
     }
@@ -359,6 +381,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Family(Family other) : this() {
       name_ = other.name_;
       columns_ = other.columns_.Clone();
@@ -366,6 +389,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Family Clone() {
       return new Family(this);
     }
@@ -382,6 +406,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Must be no greater than 64 characters in length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -398,16 +423,19 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Must not be empty. Sorted in order of increasing "qualifier".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Column> Columns {
       get { return columns_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Family);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Family other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -421,6 +449,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -432,11 +461,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -454,6 +485,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -467,6 +499,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -480,6 +513,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Family other) {
       if (other == null) {
         return;
@@ -492,6 +526,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -517,6 +552,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -551,19 +587,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<Column> _parser = new pb::MessageParser<Column>(() => new Column());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Column> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Column() {
       OnConstruction();
     }
@@ -571,6 +611,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Column(Column other) : this() {
       qualifier_ = other.qualifier_;
       cells_ = other.cells_.Clone();
@@ -578,6 +619,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Column Clone() {
       return new Column(this);
     }
@@ -593,6 +635,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Qualifier {
       get { return qualifier_; }
       set {
@@ -609,16 +652,19 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Must not be empty. Sorted in order of decreasing "timestamp_micros".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.Cell> Cells {
       get { return cells_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Column);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Column other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -632,6 +678,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Qualifier.Length != 0) hash ^= Qualifier.GetHashCode();
@@ -643,11 +690,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -665,6 +714,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Qualifier.Length != 0) {
         output.WriteRawTag(10);
@@ -678,6 +728,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Qualifier.Length != 0) {
@@ -691,6 +742,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Column other) {
       if (other == null) {
         return;
@@ -703,6 +755,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -728,6 +781,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -761,19 +815,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<Cell> _parser = new pb::MessageParser<Cell>(() => new Cell());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Cell> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Cell() {
       OnConstruction();
     }
@@ -781,6 +839,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Cell(Cell other) : this() {
       timestampMicros_ = other.timestampMicros_;
       value_ = other.value_;
@@ -789,6 +848,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Cell Clone() {
       return new Cell(this);
     }
@@ -805,6 +865,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// values of `timestamp_micros` which are multiples of 1000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long TimestampMicros {
       get { return timestampMicros_; }
       set {
@@ -821,6 +882,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// length.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Value {
       get { return value_; }
       set {
@@ -837,16 +899,19 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Labels applied to the cell by a [RowFilter][google.bigtable.v2.RowFilter].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Labels {
       get { return labels_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Cell);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Cell other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -861,6 +926,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (TimestampMicros != 0L) hash ^= TimestampMicros.GetHashCode();
@@ -873,11 +939,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -899,6 +967,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (TimestampMicros != 0L) {
         output.WriteRawTag(8);
@@ -916,6 +985,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (TimestampMicros != 0L) {
@@ -932,6 +1002,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Cell other) {
       if (other == null) {
         return;
@@ -947,6 +1018,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -976,6 +1048,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1013,19 +1086,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<RowRange> _parser = new pb::MessageParser<RowRange>(() => new RowRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RowRange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowRange() {
       OnConstruction();
     }
@@ -1033,6 +1110,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowRange(RowRange other) : this() {
       switch (other.StartKeyCase) {
         case StartKeyOneofCase.StartKeyClosed:
@@ -1056,6 +1134,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowRange Clone() {
       return new RowRange(this);
     }
@@ -1066,6 +1145,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an inclusive lower bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartKeyClosed {
       get { return startKeyCase_ == StartKeyOneofCase.StartKeyClosed ? (pb::ByteString) startKey_ : pb::ByteString.Empty; }
       set {
@@ -1080,6 +1160,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an exclusive lower bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartKeyOpen {
       get { return startKeyCase_ == StartKeyOneofCase.StartKeyOpen ? (pb::ByteString) startKey_ : pb::ByteString.Empty; }
       set {
@@ -1094,6 +1175,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an exclusive upper bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndKeyOpen {
       get { return endKeyCase_ == EndKeyOneofCase.EndKeyOpen ? (pb::ByteString) endKey_ : pb::ByteString.Empty; }
       set {
@@ -1108,6 +1190,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an inclusive upper bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndKeyClosed {
       get { return endKeyCase_ == EndKeyOneofCase.EndKeyClosed ? (pb::ByteString) endKey_ : pb::ByteString.Empty; }
       set {
@@ -1125,11 +1208,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private StartKeyOneofCase startKeyCase_ = StartKeyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartKeyOneofCase StartKeyCase {
       get { return startKeyCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearStartKey() {
       startKeyCase_ = StartKeyOneofCase.None;
       startKey_ = null;
@@ -1144,22 +1229,26 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private EndKeyOneofCase endKeyCase_ = EndKeyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EndKeyOneofCase EndKeyCase {
       get { return endKeyCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEndKey() {
       endKeyCase_ = EndKeyOneofCase.None;
       endKey_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RowRange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RowRange other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1177,6 +1266,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) hash ^= StartKeyClosed.GetHashCode();
@@ -1192,11 +1282,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1225,6 +1317,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) {
         output.WriteRawTag(10);
@@ -1249,6 +1342,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startKeyCase_ == StartKeyOneofCase.StartKeyClosed) {
@@ -1270,6 +1364,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RowRange other) {
       if (other == null) {
         return;
@@ -1296,6 +1391,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1329,6 +1425,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1370,19 +1467,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<RowSet> _parser = new pb::MessageParser<RowSet>(() => new RowSet());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RowSet> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowSet() {
       OnConstruction();
     }
@@ -1390,6 +1491,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowSet(RowSet other) : this() {
       rowKeys_ = other.rowKeys_.Clone();
       rowRanges_ = other.rowRanges_.Clone();
@@ -1397,6 +1499,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowSet Clone() {
       return new RowSet(this);
     }
@@ -1410,6 +1513,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Single rows included in the set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<pb::ByteString> RowKeys {
       get { return rowKeys_; }
     }
@@ -1423,16 +1527,19 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Contiguous row ranges included in the set.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.RowRange> RowRanges {
       get { return rowRanges_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RowSet);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RowSet other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1446,6 +1553,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= rowKeys_.GetHashCode();
@@ -1457,11 +1565,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1476,6 +1586,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       rowKeys_.WriteTo(ref output, _repeated_rowKeys_codec);
       rowRanges_.WriteTo(ref output, _repeated_rowRanges_codec);
@@ -1486,6 +1597,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += rowKeys_.CalculateSize(_repeated_rowKeys_codec);
@@ -1497,6 +1609,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RowSet other) {
       if (other == null) {
         return;
@@ -1507,6 +1620,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1532,6 +1646,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1568,19 +1683,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<ColumnRange> _parser = new pb::MessageParser<ColumnRange>(() => new ColumnRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ColumnRange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ColumnRange() {
       OnConstruction();
     }
@@ -1588,6 +1707,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ColumnRange(ColumnRange other) : this() {
       familyName_ = other.familyName_;
       switch (other.StartQualifierCase) {
@@ -1612,6 +1732,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ColumnRange Clone() {
       return new ColumnRange(this);
     }
@@ -1623,6 +1744,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// The name of the column family within which this range falls.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FamilyName {
       get { return familyName_; }
       set {
@@ -1636,6 +1758,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an inclusive lower bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartQualifierClosed {
       get { return startQualifierCase_ == StartQualifierOneofCase.StartQualifierClosed ? (pb::ByteString) startQualifier_ : pb::ByteString.Empty; }
       set {
@@ -1650,6 +1773,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an exclusive lower bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartQualifierOpen {
       get { return startQualifierCase_ == StartQualifierOneofCase.StartQualifierOpen ? (pb::ByteString) startQualifier_ : pb::ByteString.Empty; }
       set {
@@ -1664,6 +1788,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an inclusive upper bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndQualifierClosed {
       get { return endQualifierCase_ == EndQualifierOneofCase.EndQualifierClosed ? (pb::ByteString) endQualifier_ : pb::ByteString.Empty; }
       set {
@@ -1678,6 +1803,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an exclusive upper bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndQualifierOpen {
       get { return endQualifierCase_ == EndQualifierOneofCase.EndQualifierOpen ? (pb::ByteString) endQualifier_ : pb::ByteString.Empty; }
       set {
@@ -1695,11 +1821,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private StartQualifierOneofCase startQualifierCase_ = StartQualifierOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartQualifierOneofCase StartQualifierCase {
       get { return startQualifierCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearStartQualifier() {
       startQualifierCase_ = StartQualifierOneofCase.None;
       startQualifier_ = null;
@@ -1714,22 +1842,26 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private EndQualifierOneofCase endQualifierCase_ = EndQualifierOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EndQualifierOneofCase EndQualifierCase {
       get { return endQualifierCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEndQualifier() {
       endQualifierCase_ = EndQualifierOneofCase.None;
       endQualifier_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ColumnRange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ColumnRange other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1748,6 +1880,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
@@ -1764,11 +1897,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1801,6 +1936,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FamilyName.Length != 0) {
         output.WriteRawTag(10);
@@ -1829,6 +1965,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (FamilyName.Length != 0) {
@@ -1853,6 +1990,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ColumnRange other) {
       if (other == null) {
         return;
@@ -1882,6 +2020,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1919,6 +2058,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1964,19 +2104,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<TimestampRange> _parser = new pb::MessageParser<TimestampRange>(() => new TimestampRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimestampRange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimestampRange() {
       OnConstruction();
     }
@@ -1984,6 +2128,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimestampRange(TimestampRange other) : this() {
       startTimestampMicros_ = other.startTimestampMicros_;
       endTimestampMicros_ = other.endTimestampMicros_;
@@ -1991,6 +2136,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimestampRange Clone() {
       return new TimestampRange(this);
     }
@@ -2002,6 +2148,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Inclusive lower bound. If left empty, interpreted as 0.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long StartTimestampMicros {
       get { return startTimestampMicros_; }
       set {
@@ -2016,6 +2163,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Exclusive upper bound. If left empty, interpreted as infinity.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long EndTimestampMicros {
       get { return endTimestampMicros_; }
       set {
@@ -2024,11 +2172,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimestampRange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimestampRange other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2042,6 +2192,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (StartTimestampMicros != 0L) hash ^= StartTimestampMicros.GetHashCode();
@@ -2053,11 +2204,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2078,6 +2231,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (StartTimestampMicros != 0L) {
         output.WriteRawTag(8);
@@ -2094,6 +2248,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (StartTimestampMicros != 0L) {
@@ -2109,6 +2264,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimestampRange other) {
       if (other == null) {
         return;
@@ -2123,6 +2279,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2148,6 +2305,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2181,19 +2339,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<ValueRange> _parser = new pb::MessageParser<ValueRange>(() => new ValueRange());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ValueRange> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueRange() {
       OnConstruction();
     }
@@ -2201,6 +2363,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueRange(ValueRange other) : this() {
       switch (other.StartValueCase) {
         case StartValueOneofCase.StartValueClosed:
@@ -2224,6 +2387,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueRange Clone() {
       return new ValueRange(this);
     }
@@ -2234,6 +2398,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an inclusive lower bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartValueClosed {
       get { return startValueCase_ == StartValueOneofCase.StartValueClosed ? (pb::ByteString) startValue_ : pb::ByteString.Empty; }
       set {
@@ -2248,6 +2413,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an exclusive lower bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString StartValueOpen {
       get { return startValueCase_ == StartValueOneofCase.StartValueOpen ? (pb::ByteString) startValue_ : pb::ByteString.Empty; }
       set {
@@ -2262,6 +2428,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an inclusive upper bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndValueClosed {
       get { return endValueCase_ == EndValueOneofCase.EndValueClosed ? (pb::ByteString) endValue_ : pb::ByteString.Empty; }
       set {
@@ -2276,6 +2443,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Used when giving an exclusive upper bound for the range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString EndValueOpen {
       get { return endValueCase_ == EndValueOneofCase.EndValueOpen ? (pb::ByteString) endValue_ : pb::ByteString.Empty; }
       set {
@@ -2293,11 +2461,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private StartValueOneofCase startValueCase_ = StartValueOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StartValueOneofCase StartValueCase {
       get { return startValueCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearStartValue() {
       startValueCase_ = StartValueOneofCase.None;
       startValue_ = null;
@@ -2312,22 +2482,26 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private EndValueOneofCase endValueCase_ = EndValueOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EndValueOneofCase EndValueCase {
       get { return endValueCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEndValue() {
       endValueCase_ = EndValueOneofCase.None;
       endValue_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ValueRange);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ValueRange other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2345,6 +2519,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startValueCase_ == StartValueOneofCase.StartValueClosed) hash ^= StartValueClosed.GetHashCode();
@@ -2360,11 +2535,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2393,6 +2570,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startValueCase_ == StartValueOneofCase.StartValueClosed) {
         output.WriteRawTag(10);
@@ -2417,6 +2595,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startValueCase_ == StartValueOneofCase.StartValueClosed) {
@@ -2438,6 +2617,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ValueRange other) {
       if (other == null) {
         return;
@@ -2464,6 +2644,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2497,6 +2678,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2570,19 +2752,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<RowFilter> _parser = new pb::MessageParser<RowFilter>(() => new RowFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RowFilter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowFilter() {
       OnConstruction();
     }
@@ -2590,6 +2776,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowFilter(RowFilter other) : this() {
       switch (other.FilterCase) {
         case FilterOneofCase.Chain:
@@ -2655,6 +2842,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RowFilter Clone() {
       return new RowFilter(this);
     }
@@ -2666,6 +2854,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// narrowing the results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain Chain {
       get { return filterCase_ == FilterOneofCase.Chain ? (global::Google.Cloud.Bigtable.V2.RowFilter.Types.Chain) filter_ : null; }
       set {
@@ -2681,6 +2870,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave Interleave {
       get { return filterCase_ == FilterOneofCase.Interleave ? (global::Google.Cloud.Bigtable.V2.RowFilter.Types.Interleave) filter_ : null; }
       set {
@@ -2696,6 +2886,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// a predicate RowFilter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition Condition {
       get { return filterCase_ == FilterOneofCase.Condition ? (global::Google.Cloud.Bigtable.V2.RowFilter.Types.Condition) filter_ : null; }
       set {
@@ -2768,6 +2959,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// `false_filter` of a [Condition][google.bigtable.v2.RowFilter.Condition].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Sink {
       get { return filterCase_ == FilterOneofCase.Sink ? (bool) filter_ : false; }
       set {
@@ -2783,6 +2975,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// leaving `filter` unset, but included for completeness.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool PassAllFilter {
       get { return filterCase_ == FilterOneofCase.PassAllFilter ? (bool) filter_ : false; }
       set {
@@ -2798,6 +2991,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// disabling just part of a filter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool BlockAllFilter {
       get { return filterCase_ == FilterOneofCase.BlockAllFilter ? (bool) filter_ : false; }
       set {
@@ -2818,6 +3012,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// binary key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString RowKeyRegexFilter {
       get { return filterCase_ == FilterOneofCase.RowKeyRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
       set {
@@ -2833,6 +3028,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// from the row with probability 1-p.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double RowSampleFilter {
       get { return filterCase_ == FilterOneofCase.RowSampleFilter ? (double) filter_ : 0D; }
       set {
@@ -2852,6 +3048,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// column family names.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FamilyNameRegexFilter {
       get { return filterCase_ == FilterOneofCase.FamilyNameRegexFilter ? (string) filter_ : ""; }
       set {
@@ -2871,6 +3068,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// present in a binary qualifier.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ColumnQualifierRegexFilter {
       get { return filterCase_ == FilterOneofCase.ColumnQualifierRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
       set {
@@ -2885,6 +3083,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Matches only cells from columns within the given range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.ColumnRange ColumnRangeFilter {
       get { return filterCase_ == FilterOneofCase.ColumnRangeFilter ? (global::Google.Cloud.Bigtable.V2.ColumnRange) filter_ : null; }
       set {
@@ -2899,6 +3098,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Matches only cells with timestamps within the given range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.TimestampRange TimestampRangeFilter {
       get { return filterCase_ == FilterOneofCase.TimestampRangeFilter ? (global::Google.Cloud.Bigtable.V2.TimestampRange) filter_ : null; }
       set {
@@ -2917,6 +3117,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// binary value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ValueRegexFilter {
       get { return filterCase_ == FilterOneofCase.ValueRegexFilter ? (pb::ByteString) filter_ : pb::ByteString.Empty; }
       set {
@@ -2931,6 +3132,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Matches only cells with values that fall within the given range.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.ValueRange ValueRangeFilter {
       get { return filterCase_ == FilterOneofCase.ValueRangeFilter ? (global::Google.Cloud.Bigtable.V2.ValueRange) filter_ : null; }
       set {
@@ -2947,6 +3149,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// each copy of the cell is counted separately.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CellsPerRowOffsetFilter {
       get { return filterCase_ == FilterOneofCase.CellsPerRowOffsetFilter ? (int) filter_ : 0; }
       set {
@@ -2963,6 +3166,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// each copy of the cell is counted separately.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CellsPerRowLimitFilter {
       get { return filterCase_ == FilterOneofCase.CellsPerRowLimitFilter ? (int) filter_ : 0; }
       set {
@@ -2982,6 +3186,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// each copy of the cell is counted separately.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CellsPerColumnLimitFilter {
       get { return filterCase_ == FilterOneofCase.CellsPerColumnLimitFilter ? (int) filter_ : 0; }
       set {
@@ -2996,6 +3201,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Replaces each cell's value with the empty string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool StripValueTransformer {
       get { return filterCase_ == FilterOneofCase.StripValueTransformer ? (bool) filter_ : false; }
       set {
@@ -3022,6 +3228,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// the future.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ApplyLabelTransformer {
       get { return filterCase_ == FilterOneofCase.ApplyLabelTransformer ? (string) filter_ : ""; }
       set {
@@ -3056,22 +3263,26 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private FilterOneofCase filterCase_ = FilterOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FilterOneofCase FilterCase {
       get { return filterCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearFilter() {
       filterCase_ = FilterOneofCase.None;
       filter_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RowFilter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RowFilter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3103,6 +3314,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (filterCase_ == FilterOneofCase.Chain) hash ^= Chain.GetHashCode();
@@ -3132,11 +3344,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3225,6 +3439,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (filterCase_ == FilterOneofCase.Chain) {
         output.WriteRawTag(10);
@@ -3309,6 +3524,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (filterCase_ == FilterOneofCase.Chain) {
@@ -3375,6 +3591,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RowFilter other) {
       if (other == null) {
         return;
@@ -3461,6 +3678,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3584,6 +3802,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3705,6 +3924,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #region Nested types
     /// <summary>Container for nested types declared in the RowFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A RowFilter which sends rows through several RowFilters in sequence.
@@ -3717,19 +3937,23 @@ namespace Google.Cloud.Bigtable.V2 {
         private static readonly pb::MessageParser<Chain> _parser = new pb::MessageParser<Chain>(() => new Chain());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Chain> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Bigtable.V2.RowFilter.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Chain() {
           OnConstruction();
         }
@@ -3737,12 +3961,14 @@ namespace Google.Cloud.Bigtable.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Chain(Chain other) : this() {
           filters_ = other.filters_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Chain Clone() {
           return new Chain(this);
         }
@@ -3758,16 +3984,19 @@ namespace Google.Cloud.Bigtable.V2 {
         /// The full chain is executed atomically.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.RowFilter> Filters {
           get { return filters_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Chain);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Chain other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3780,6 +4009,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= filters_.GetHashCode();
@@ -3790,11 +4020,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -3808,6 +4040,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           filters_.WriteTo(ref output, _repeated_filters_codec);
           if (_unknownFields != null) {
@@ -3817,6 +4050,7 @@ namespace Google.Cloud.Bigtable.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += filters_.CalculateSize(_repeated_filters_codec);
@@ -3827,6 +4061,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Chain other) {
           if (other == null) {
             return;
@@ -3836,6 +4071,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -3857,6 +4093,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -3887,19 +4124,23 @@ namespace Google.Cloud.Bigtable.V2 {
         private static readonly pb::MessageParser<Interleave> _parser = new pb::MessageParser<Interleave>(() => new Interleave());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Interleave> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Bigtable.V2.RowFilter.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Interleave() {
           OnConstruction();
         }
@@ -3907,12 +4148,14 @@ namespace Google.Cloud.Bigtable.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Interleave(Interleave other) : this() {
           filters_ = other.filters_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Interleave Clone() {
           return new Interleave(this);
         }
@@ -3950,16 +4193,19 @@ namespace Google.Cloud.Bigtable.V2 {
         /// All interleaved filters are executed atomically.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Bigtable.V2.RowFilter> Filters {
           get { return filters_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Interleave);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Interleave other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -3972,6 +4218,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= filters_.GetHashCode();
@@ -3982,11 +4229,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -4000,6 +4249,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           filters_.WriteTo(ref output, _repeated_filters_codec);
           if (_unknownFields != null) {
@@ -4009,6 +4259,7 @@ namespace Google.Cloud.Bigtable.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += filters_.CalculateSize(_repeated_filters_codec);
@@ -4019,6 +4270,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Interleave other) {
           if (other == null) {
             return;
@@ -4028,6 +4280,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -4049,6 +4302,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -4084,19 +4338,23 @@ namespace Google.Cloud.Bigtable.V2 {
         private static readonly pb::MessageParser<Condition> _parser = new pb::MessageParser<Condition>(() => new Condition());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Condition> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Bigtable.V2.RowFilter.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Condition() {
           OnConstruction();
         }
@@ -4104,6 +4362,7 @@ namespace Google.Cloud.Bigtable.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Condition(Condition other) : this() {
           predicateFilter_ = other.predicateFilter_ != null ? other.predicateFilter_.Clone() : null;
           trueFilter_ = other.trueFilter_ != null ? other.trueFilter_.Clone() : null;
@@ -4112,6 +4371,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Condition Clone() {
           return new Condition(this);
         }
@@ -4124,6 +4384,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// evaluated on the input row. Otherwise, `false_filter` will be evaluated.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Bigtable.V2.RowFilter PredicateFilter {
           get { return predicateFilter_; }
           set {
@@ -4139,6 +4400,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// results. If not provided, no results will be returned in the true case.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Bigtable.V2.RowFilter TrueFilter {
           get { return trueFilter_; }
           set {
@@ -4155,6 +4417,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// false case.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Bigtable.V2.RowFilter FalseFilter {
           get { return falseFilter_; }
           set {
@@ -4163,11 +4426,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Condition);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Condition other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -4182,6 +4447,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (predicateFilter_ != null) hash ^= PredicateFilter.GetHashCode();
@@ -4194,11 +4460,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -4223,6 +4491,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (predicateFilter_ != null) {
             output.WriteRawTag(10);
@@ -4243,6 +4512,7 @@ namespace Google.Cloud.Bigtable.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (predicateFilter_ != null) {
@@ -4261,6 +4531,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Condition other) {
           if (other == null) {
             return;
@@ -4287,6 +4558,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -4325,6 +4597,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -4376,19 +4649,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<Mutation> _parser = new pb::MessageParser<Mutation>(() => new Mutation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Mutation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation() {
       OnConstruction();
     }
@@ -4396,6 +4673,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation(Mutation other) : this() {
       switch (other.MutationCase) {
         case MutationOneofCase.SetCell:
@@ -4416,6 +4694,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Mutation Clone() {
       return new Mutation(this);
     }
@@ -4426,6 +4705,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Set a cell's value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell SetCell {
       get { return mutationCase_ == MutationOneofCase.SetCell ? (global::Google.Cloud.Bigtable.V2.Mutation.Types.SetCell) mutation_ : null; }
       set {
@@ -4440,6 +4720,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Deletes cells from a column.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn DeleteFromColumn {
       get { return mutationCase_ == MutationOneofCase.DeleteFromColumn ? (global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromColumn) mutation_ : null; }
       set {
@@ -4454,6 +4735,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Deletes cells from a column family.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromFamily DeleteFromFamily {
       get { return mutationCase_ == MutationOneofCase.DeleteFromFamily ? (global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromFamily) mutation_ : null; }
       set {
@@ -4468,6 +4750,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Deletes cells from the entire row.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromRow DeleteFromRow {
       get { return mutationCase_ == MutationOneofCase.DeleteFromRow ? (global::Google.Cloud.Bigtable.V2.Mutation.Types.DeleteFromRow) mutation_ : null; }
       set {
@@ -4487,22 +4770,26 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private MutationOneofCase mutationCase_ = MutationOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MutationOneofCase MutationCase {
       get { return mutationCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearMutation() {
       mutationCase_ = MutationOneofCase.None;
       mutation_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Mutation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Mutation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4519,6 +4806,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (mutationCase_ == MutationOneofCase.SetCell) hash ^= SetCell.GetHashCode();
@@ -4533,11 +4821,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4566,6 +4856,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (mutationCase_ == MutationOneofCase.SetCell) {
         output.WriteRawTag(10);
@@ -4590,6 +4881,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (mutationCase_ == MutationOneofCase.SetCell) {
@@ -4611,6 +4903,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Mutation other) {
       if (other == null) {
         return;
@@ -4646,6 +4939,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4699,6 +4993,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4750,6 +5045,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #region Nested types
     /// <summary>Container for nested types declared in the Mutation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// A Mutation which sets the value of the specified cell.
@@ -4762,19 +5058,23 @@ namespace Google.Cloud.Bigtable.V2 {
         private static readonly pb::MessageParser<SetCell> _parser = new pb::MessageParser<SetCell>(() => new SetCell());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<SetCell> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SetCell() {
           OnConstruction();
         }
@@ -4782,6 +5082,7 @@ namespace Google.Cloud.Bigtable.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SetCell(SetCell other) : this() {
           familyName_ = other.familyName_;
           columnQualifier_ = other.columnQualifier_;
@@ -4791,6 +5092,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public SetCell Clone() {
           return new SetCell(this);
         }
@@ -4803,6 +5105,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// Must match `[-_.a-zA-Z0-9]+`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string FamilyName {
           get { return familyName_; }
           set {
@@ -4818,6 +5121,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// Can be any byte string, including the empty string.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pb::ByteString ColumnQualifier {
           get { return columnQualifier_; }
           set {
@@ -4836,6 +5140,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// Values must match the granularity of the table (e.g. micros, millis).
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long TimestampMicros {
           get { return timestampMicros_; }
           set {
@@ -4850,6 +5155,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// The value to be written into the specified cell.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pb::ByteString Value {
           get { return value_; }
           set {
@@ -4858,11 +5164,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as SetCell);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(SetCell other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -4878,6 +5186,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
@@ -4891,11 +5200,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -4924,6 +5235,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (FamilyName.Length != 0) {
             output.WriteRawTag(10);
@@ -4948,6 +5260,7 @@ namespace Google.Cloud.Bigtable.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (FamilyName.Length != 0) {
@@ -4969,6 +5282,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(SetCell other) {
           if (other == null) {
             return;
@@ -4989,6 +5303,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5022,6 +5337,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5064,19 +5380,23 @@ namespace Google.Cloud.Bigtable.V2 {
         private static readonly pb::MessageParser<DeleteFromColumn> _parser = new pb::MessageParser<DeleteFromColumn>(() => new DeleteFromColumn());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DeleteFromColumn> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromColumn() {
           OnConstruction();
         }
@@ -5084,6 +5404,7 @@ namespace Google.Cloud.Bigtable.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromColumn(DeleteFromColumn other) : this() {
           familyName_ = other.familyName_;
           columnQualifier_ = other.columnQualifier_;
@@ -5092,6 +5413,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromColumn Clone() {
           return new DeleteFromColumn(this);
         }
@@ -5104,6 +5426,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// Must match `[-_.a-zA-Z0-9]+`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string FamilyName {
           get { return familyName_; }
           set {
@@ -5119,6 +5442,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// Can be any byte string, including the empty string.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pb::ByteString ColumnQualifier {
           get { return columnQualifier_; }
           set {
@@ -5133,6 +5457,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// The range of timestamps within which cells should be deleted.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Bigtable.V2.TimestampRange TimeRange {
           get { return timeRange_; }
           set {
@@ -5141,11 +5466,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as DeleteFromColumn);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(DeleteFromColumn other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5160,6 +5487,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
@@ -5172,11 +5500,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5201,6 +5531,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (FamilyName.Length != 0) {
             output.WriteRawTag(10);
@@ -5221,6 +5552,7 @@ namespace Google.Cloud.Bigtable.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (FamilyName.Length != 0) {
@@ -5239,6 +5571,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(DeleteFromColumn other) {
           if (other == null) {
             return;
@@ -5259,6 +5592,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5291,6 +5625,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5331,19 +5666,23 @@ namespace Google.Cloud.Bigtable.V2 {
         private static readonly pb::MessageParser<DeleteFromFamily> _parser = new pb::MessageParser<DeleteFromFamily>(() => new DeleteFromFamily());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DeleteFromFamily> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromFamily() {
           OnConstruction();
         }
@@ -5351,12 +5690,14 @@ namespace Google.Cloud.Bigtable.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromFamily(DeleteFromFamily other) : this() {
           familyName_ = other.familyName_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromFamily Clone() {
           return new DeleteFromFamily(this);
         }
@@ -5369,6 +5710,7 @@ namespace Google.Cloud.Bigtable.V2 {
         /// Must match `[-_.a-zA-Z0-9]+`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string FamilyName {
           get { return familyName_; }
           set {
@@ -5377,11 +5719,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as DeleteFromFamily);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(DeleteFromFamily other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5394,6 +5738,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
@@ -5404,11 +5749,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5425,6 +5772,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (FamilyName.Length != 0) {
             output.WriteRawTag(10);
@@ -5437,6 +5785,7 @@ namespace Google.Cloud.Bigtable.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (FamilyName.Length != 0) {
@@ -5449,6 +5798,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(DeleteFromFamily other) {
           if (other == null) {
             return;
@@ -5460,6 +5810,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5481,6 +5832,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5510,19 +5862,23 @@ namespace Google.Cloud.Bigtable.V2 {
         private static readonly pb::MessageParser<DeleteFromRow> _parser = new pb::MessageParser<DeleteFromRow>(() => new DeleteFromRow());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DeleteFromRow> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Bigtable.V2.Mutation.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromRow() {
           OnConstruction();
         }
@@ -5530,21 +5886,25 @@ namespace Google.Cloud.Bigtable.V2 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromRow(DeleteFromRow other) : this() {
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeleteFromRow Clone() {
           return new DeleteFromRow(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as DeleteFromRow);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(DeleteFromRow other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5556,6 +5916,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (_unknownFields != null) {
@@ -5565,11 +5926,13 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5582,6 +5945,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
@@ -5590,6 +5954,7 @@ namespace Google.Cloud.Bigtable.V2 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (_unknownFields != null) {
@@ -5599,6 +5964,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(DeleteFromRow other) {
           if (other == null) {
             return;
@@ -5607,6 +5973,7 @@ namespace Google.Cloud.Bigtable.V2 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5624,6 +5991,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5655,19 +6023,23 @@ namespace Google.Cloud.Bigtable.V2 {
     private static readonly pb::MessageParser<ReadModifyWriteRule> _parser = new pb::MessageParser<ReadModifyWriteRule>(() => new ReadModifyWriteRule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReadModifyWriteRule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Bigtable.V2.DataReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadModifyWriteRule() {
       OnConstruction();
     }
@@ -5675,6 +6047,7 @@ namespace Google.Cloud.Bigtable.V2 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadModifyWriteRule(ReadModifyWriteRule other) : this() {
       familyName_ = other.familyName_;
       columnQualifier_ = other.columnQualifier_;
@@ -5691,6 +6064,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReadModifyWriteRule Clone() {
       return new ReadModifyWriteRule(this);
     }
@@ -5703,6 +6077,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Must match `[-_.a-zA-Z0-9]+`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FamilyName {
       get { return familyName_; }
       set {
@@ -5719,6 +6094,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// Can be any byte string, including the empty string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString ColumnQualifier {
       get { return columnQualifier_; }
       set {
@@ -5734,6 +6110,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// empty string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AppendValue {
       get { return ruleCase_ == RuleOneofCase.AppendValue ? (pb::ByteString) rule_ : pb::ByteString.Empty; }
       set {
@@ -5751,6 +6128,7 @@ namespace Google.Cloud.Bigtable.V2 {
     /// as a 64-bit big-endian signed integer), or the entire request will fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long IncrementAmount {
       get { return ruleCase_ == RuleOneofCase.IncrementAmount ? (long) rule_ : 0L; }
       set {
@@ -5768,22 +6146,26 @@ namespace Google.Cloud.Bigtable.V2 {
     }
     private RuleOneofCase ruleCase_ = RuleOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RuleOneofCase RuleCase {
       get { return ruleCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRule() {
       ruleCase_ = RuleOneofCase.None;
       rule_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ReadModifyWriteRule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ReadModifyWriteRule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5800,6 +6182,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (FamilyName.Length != 0) hash ^= FamilyName.GetHashCode();
@@ -5814,11 +6197,13 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5847,6 +6232,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FamilyName.Length != 0) {
         output.WriteRawTag(10);
@@ -5871,6 +6257,7 @@ namespace Google.Cloud.Bigtable.V2 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (FamilyName.Length != 0) {
@@ -5892,6 +6279,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReadModifyWriteRule other) {
       if (other == null) {
         return;
@@ -5915,6 +6303,7 @@ namespace Google.Cloud.Bigtable.V2 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5948,6 +6337,7 @@ namespace Google.Cloud.Bigtable.V2 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

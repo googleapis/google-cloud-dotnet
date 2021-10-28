@@ -100,19 +100,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<InstanceOSPoliciesCompliance> _parser = new pb::MessageParser<InstanceOSPoliciesCompliance>(() => new InstanceOSPoliciesCompliance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InstanceOSPoliciesCompliance> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InstanceOsPoliciesComplianceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstanceOSPoliciesCompliance() {
       OnConstruction();
     }
@@ -120,6 +124,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstanceOSPoliciesCompliance(InstanceOSPoliciesCompliance other) : this() {
       name_ = other.name_;
       instance_ = other.instance_;
@@ -133,6 +138,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstanceOSPoliciesCompliance Clone() {
       return new InstanceOSPoliciesCompliance(this);
     }
@@ -147,6 +153,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// `projects/{project_number}/locations/{location}/instanceOSPoliciesCompliances/{instance_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -161,6 +168,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Output only. The Compute Engine VM instance name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Instance {
       get { return instance_; }
       set {
@@ -175,6 +183,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Output only. Compliance state of the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState State {
       get { return state_; }
       set {
@@ -202,6 +211,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// compliance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DetailedState {
       get { return detailedState_; }
       set {
@@ -216,6 +226,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Output only. The reason for the `detailed_state` of the VM (if any).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DetailedStateReason {
       get { return detailedStateReason_; }
       set {
@@ -232,6 +243,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Output only. Compliance data for each `OSPolicy` that is applied to the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance.Types.OSPolicyCompliance> OsPolicyCompliances {
       get { return osPolicyCompliances_; }
     }
@@ -243,6 +255,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// Output only. Timestamp of the last compliance check for the VM.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastComplianceCheckTime {
       get { return lastComplianceCheckTime_; }
       set {
@@ -259,6 +272,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// can be used for debugging and tracing purpose.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LastComplianceRunId {
       get { return lastComplianceRunId_; }
       set {
@@ -267,11 +281,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InstanceOSPoliciesCompliance);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InstanceOSPoliciesCompliance other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -291,6 +307,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -308,11 +325,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -354,6 +373,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -391,6 +411,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -422,6 +443,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InstanceOSPoliciesCompliance other) {
       if (other == null) {
         return;
@@ -455,6 +477,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -507,6 +530,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -557,6 +581,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #region Nested types
     /// <summary>Container for nested types declared in the InstanceOSPoliciesCompliance message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Compliance data for an OS policy
@@ -569,19 +594,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         private static readonly pb::MessageParser<OSPolicyCompliance> _parser = new pb::MessageParser<OSPolicyCompliance>(() => new OSPolicyCompliance());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<OSPolicyCompliance> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OSPolicyCompliance() {
           OnConstruction();
         }
@@ -589,6 +618,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OSPolicyCompliance(OSPolicyCompliance other) : this() {
           osPolicyId_ = other.osPolicyId_;
           osPolicyAssignment_ = other.osPolicyAssignment_;
@@ -598,6 +628,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OSPolicyCompliance Clone() {
           return new OSPolicyCompliance(this);
         }
@@ -609,6 +640,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// The OS policy id
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string OsPolicyId {
           get { return osPolicyId_; }
           set {
@@ -627,6 +659,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// `projects/{project_number}/locations/{location}/osPolicyAssignments/{os_policy_assignment_id@revision_id}`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string OsPolicyAssignment {
           get { return osPolicyAssignment_; }
           set {
@@ -641,6 +674,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// Compliance state of the OS policy.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.OsConfig.V1Alpha.OSPolicyComplianceState State {
           get { return state_; }
           set {
@@ -658,16 +692,19 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         /// VM.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.OSPolicyResourceCompliance> OsPolicyResourceCompliances {
           get { return osPolicyResourceCompliances_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as OSPolicyCompliance);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(OSPolicyCompliance other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -683,6 +720,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (OsPolicyId.Length != 0) hash ^= OsPolicyId.GetHashCode();
@@ -696,11 +734,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -726,6 +766,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (OsPolicyId.Length != 0) {
             output.WriteRawTag(10);
@@ -747,6 +788,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (OsPolicyId.Length != 0) {
@@ -766,6 +808,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(OSPolicyCompliance other) {
           if (other == null) {
             return;
@@ -784,6 +827,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -817,6 +861,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -864,19 +909,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<GetInstanceOSPoliciesComplianceRequest> _parser = new pb::MessageParser<GetInstanceOSPoliciesComplianceRequest>(() => new GetInstanceOSPoliciesComplianceRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetInstanceOSPoliciesComplianceRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InstanceOsPoliciesComplianceReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetInstanceOSPoliciesComplianceRequest() {
       OnConstruction();
     }
@@ -884,12 +933,14 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetInstanceOSPoliciesComplianceRequest(GetInstanceOSPoliciesComplianceRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetInstanceOSPoliciesComplianceRequest Clone() {
       return new GetInstanceOSPoliciesComplianceRequest(this);
     }
@@ -909,6 +960,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// be provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -917,11 +969,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetInstanceOSPoliciesComplianceRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetInstanceOSPoliciesComplianceRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -934,6 +988,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -944,11 +999,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -965,6 +1022,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -977,6 +1035,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -989,6 +1048,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetInstanceOSPoliciesComplianceRequest other) {
       if (other == null) {
         return;
@@ -1000,6 +1060,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1021,6 +1082,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1051,19 +1113,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<ListInstanceOSPoliciesCompliancesRequest> _parser = new pb::MessageParser<ListInstanceOSPoliciesCompliancesRequest>(() => new ListInstanceOSPoliciesCompliancesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListInstanceOSPoliciesCompliancesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InstanceOsPoliciesComplianceReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInstanceOSPoliciesCompliancesRequest() {
       OnConstruction();
     }
@@ -1071,6 +1137,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInstanceOSPoliciesCompliancesRequest(ListInstanceOSPoliciesCompliancesRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -1080,6 +1147,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInstanceOSPoliciesCompliancesRequest Clone() {
       return new ListInstanceOSPoliciesCompliancesRequest(this);
     }
@@ -1096,6 +1164,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -1110,6 +1179,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// The maximum number of results to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -1126,6 +1196,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// should continue from.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -1141,6 +1212,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// `InstanceOSPoliciesCompliance` API resource to be included in the response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -1149,11 +1221,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListInstanceOSPoliciesCompliancesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListInstanceOSPoliciesCompliancesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1169,6 +1243,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -1182,11 +1257,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1215,6 +1292,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -1239,6 +1317,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -1260,6 +1339,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListInstanceOSPoliciesCompliancesRequest other) {
       if (other == null) {
         return;
@@ -1280,6 +1360,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1313,6 +1394,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1355,19 +1437,23 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     private static readonly pb::MessageParser<ListInstanceOSPoliciesCompliancesResponse> _parser = new pb::MessageParser<ListInstanceOSPoliciesCompliancesResponse>(() => new ListInstanceOSPoliciesCompliancesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListInstanceOSPoliciesCompliancesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.OsConfig.V1Alpha.InstanceOsPoliciesComplianceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInstanceOSPoliciesCompliancesResponse() {
       OnConstruction();
     }
@@ -1375,6 +1461,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInstanceOSPoliciesCompliancesResponse(ListInstanceOSPoliciesCompliancesResponse other) : this() {
       instanceOsPoliciesCompliances_ = other.instanceOsPoliciesCompliances_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -1382,6 +1469,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListInstanceOSPoliciesCompliancesResponse Clone() {
       return new ListInstanceOSPoliciesCompliancesResponse(this);
     }
@@ -1395,6 +1483,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// List of instance OS policies compliance objects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.OsConfig.V1Alpha.InstanceOSPoliciesCompliance> InstanceOsPoliciesCompliances {
       get { return instanceOsPoliciesCompliances_; }
     }
@@ -1407,6 +1496,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     /// compliance objects.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -1415,11 +1505,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListInstanceOSPoliciesCompliancesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListInstanceOSPoliciesCompliancesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1433,6 +1525,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= instanceOsPoliciesCompliances_.GetHashCode();
@@ -1444,11 +1537,13 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1466,6 +1561,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       instanceOsPoliciesCompliances_.WriteTo(ref output, _repeated_instanceOsPoliciesCompliances_codec);
       if (NextPageToken.Length != 0) {
@@ -1479,6 +1575,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += instanceOsPoliciesCompliances_.CalculateSize(_repeated_instanceOsPoliciesCompliances_codec);
@@ -1492,6 +1589,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListInstanceOSPoliciesCompliancesResponse other) {
       if (other == null) {
         return;
@@ -1504,6 +1602,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1529,6 +1628,7 @@ namespace Google.Cloud.OsConfig.V1Alpha {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

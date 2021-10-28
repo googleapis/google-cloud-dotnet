@@ -69,19 +69,23 @@ namespace Google.Cloud.AutoML.V1 {
     private static readonly pb::MessageParser<ImageObjectDetectionAnnotation> _parser = new pb::MessageParser<ImageObjectDetectionAnnotation>(() => new ImageObjectDetectionAnnotation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageObjectDetectionAnnotation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AutoML.V1.DetectionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageObjectDetectionAnnotation() {
       OnConstruction();
     }
@@ -89,6 +93,7 @@ namespace Google.Cloud.AutoML.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageObjectDetectionAnnotation(ImageObjectDetectionAnnotation other) : this() {
       boundingBox_ = other.boundingBox_ != null ? other.boundingBox_.Clone() : null;
       score_ = other.score_;
@@ -96,6 +101,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageObjectDetectionAnnotation Clone() {
       return new ImageObjectDetectionAnnotation(this);
     }
@@ -107,6 +113,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// Output only. The rectangle representing the object location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AutoML.V1.BoundingPoly BoundingBox {
       get { return boundingBox_; }
       set {
@@ -122,6 +129,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// value in [0, 1], higher means higher positivity confidence.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float Score {
       get { return score_; }
       set {
@@ -130,11 +138,13 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImageObjectDetectionAnnotation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImageObjectDetectionAnnotation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -148,6 +158,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (boundingBox_ != null) hash ^= BoundingBox.GetHashCode();
@@ -159,11 +170,13 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -184,6 +197,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (boundingBox_ != null) {
         output.WriteRawTag(10);
@@ -200,6 +214,7 @@ namespace Google.Cloud.AutoML.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (boundingBox_ != null) {
@@ -215,6 +230,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImageObjectDetectionAnnotation other) {
       if (other == null) {
         return;
@@ -232,6 +248,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -260,6 +277,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -297,19 +315,23 @@ namespace Google.Cloud.AutoML.V1 {
     private static readonly pb::MessageParser<BoundingBoxMetricsEntry> _parser = new pb::MessageParser<BoundingBoxMetricsEntry>(() => new BoundingBoxMetricsEntry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BoundingBoxMetricsEntry> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AutoML.V1.DetectionReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundingBoxMetricsEntry() {
       OnConstruction();
     }
@@ -317,6 +339,7 @@ namespace Google.Cloud.AutoML.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundingBoxMetricsEntry(BoundingBoxMetricsEntry other) : this() {
       iouThreshold_ = other.iouThreshold_;
       meanAveragePrecision_ = other.meanAveragePrecision_;
@@ -325,6 +348,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BoundingBoxMetricsEntry Clone() {
       return new BoundingBoxMetricsEntry(this);
     }
@@ -337,6 +361,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// this metrics entry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float IouThreshold {
       get { return iouThreshold_; }
       set {
@@ -351,6 +376,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// Output only. The mean average precision, most often close to au_prc.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float MeanAveragePrecision {
       get { return meanAveragePrecision_; }
       set {
@@ -369,16 +395,19 @@ namespace Google.Cloud.AutoML.V1 {
     /// derived from them.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AutoML.V1.BoundingBoxMetricsEntry.Types.ConfidenceMetricsEntry> ConfidenceMetricsEntries {
       get { return confidenceMetricsEntries_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BoundingBoxMetricsEntry);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BoundingBoxMetricsEntry other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -393,6 +422,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (IouThreshold != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(IouThreshold);
@@ -405,11 +435,13 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -431,6 +463,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (IouThreshold != 0F) {
         output.WriteRawTag(13);
@@ -448,6 +481,7 @@ namespace Google.Cloud.AutoML.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (IouThreshold != 0F) {
@@ -464,6 +498,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BoundingBoxMetricsEntry other) {
       if (other == null) {
         return;
@@ -479,6 +514,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -508,6 +544,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -535,6 +572,7 @@ namespace Google.Cloud.AutoML.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the BoundingBoxMetricsEntry message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Metrics for a single confidence threshold.
@@ -547,19 +585,23 @@ namespace Google.Cloud.AutoML.V1 {
         private static readonly pb::MessageParser<ConfidenceMetricsEntry> _parser = new pb::MessageParser<ConfidenceMetricsEntry>(() => new ConfidenceMetricsEntry());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ConfidenceMetricsEntry> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AutoML.V1.BoundingBoxMetricsEntry.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ConfidenceMetricsEntry() {
           OnConstruction();
         }
@@ -567,6 +609,7 @@ namespace Google.Cloud.AutoML.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ConfidenceMetricsEntry(ConfidenceMetricsEntry other) : this() {
           confidenceThreshold_ = other.confidenceThreshold_;
           recall_ = other.recall_;
@@ -576,6 +619,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ConfidenceMetricsEntry Clone() {
           return new ConfidenceMetricsEntry(this);
         }
@@ -587,6 +631,7 @@ namespace Google.Cloud.AutoML.V1 {
         /// Output only. The confidence threshold value used to compute the metrics.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float ConfidenceThreshold {
           get { return confidenceThreshold_; }
           set {
@@ -601,6 +646,7 @@ namespace Google.Cloud.AutoML.V1 {
         /// Output only. Recall under the given confidence threshold.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float Recall {
           get { return recall_; }
           set {
@@ -615,6 +661,7 @@ namespace Google.Cloud.AutoML.V1 {
         /// Output only. Precision under the given confidence threshold.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float Precision {
           get { return precision_; }
           set {
@@ -629,6 +676,7 @@ namespace Google.Cloud.AutoML.V1 {
         /// Output only. The harmonic mean of recall and precision.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public float F1Score {
           get { return f1Score_; }
           set {
@@ -637,11 +685,13 @@ namespace Google.Cloud.AutoML.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ConfidenceMetricsEntry);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ConfidenceMetricsEntry other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -657,6 +707,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (ConfidenceThreshold != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(ConfidenceThreshold);
@@ -670,11 +721,13 @@ namespace Google.Cloud.AutoML.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -703,6 +756,7 @@ namespace Google.Cloud.AutoML.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (ConfidenceThreshold != 0F) {
             output.WriteRawTag(13);
@@ -727,6 +781,7 @@ namespace Google.Cloud.AutoML.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (ConfidenceThreshold != 0F) {
@@ -748,6 +803,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ConfidenceMetricsEntry other) {
           if (other == null) {
             return;
@@ -768,6 +824,7 @@ namespace Google.Cloud.AutoML.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -801,6 +858,7 @@ namespace Google.Cloud.AutoML.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -848,19 +906,23 @@ namespace Google.Cloud.AutoML.V1 {
     private static readonly pb::MessageParser<ImageObjectDetectionEvaluationMetrics> _parser = new pb::MessageParser<ImageObjectDetectionEvaluationMetrics>(() => new ImageObjectDetectionEvaluationMetrics());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageObjectDetectionEvaluationMetrics> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AutoML.V1.DetectionReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageObjectDetectionEvaluationMetrics() {
       OnConstruction();
     }
@@ -868,6 +930,7 @@ namespace Google.Cloud.AutoML.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageObjectDetectionEvaluationMetrics(ImageObjectDetectionEvaluationMetrics other) : this() {
       evaluatedBoundingBoxCount_ = other.evaluatedBoundingBoxCount_;
       boundingBoxMetricsEntries_ = other.boundingBoxMetricsEntries_.Clone();
@@ -876,6 +939,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageObjectDetectionEvaluationMetrics Clone() {
       return new ImageObjectDetectionEvaluationMetrics(this);
     }
@@ -888,6 +952,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// images) the ground truth used to create this evaluation had.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int EvaluatedBoundingBoxCount {
       get { return evaluatedBoundingBoxCount_; }
       set {
@@ -907,6 +972,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AutoML.V1.BoundingBoxMetricsEntry> BoundingBoxMetricsEntries {
       get { return boundingBoxMetricsEntries_; }
     }
@@ -919,6 +985,7 @@ namespace Google.Cloud.AutoML.V1 {
     /// the mean_average_precision averaged over all bounding_box_metrics_entries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public float BoundingBoxMeanAveragePrecision {
       get { return boundingBoxMeanAveragePrecision_; }
       set {
@@ -927,11 +994,13 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImageObjectDetectionEvaluationMetrics);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImageObjectDetectionEvaluationMetrics other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -946,6 +1015,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (EvaluatedBoundingBoxCount != 0) hash ^= EvaluatedBoundingBoxCount.GetHashCode();
@@ -958,11 +1028,13 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -984,6 +1056,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (EvaluatedBoundingBoxCount != 0) {
         output.WriteRawTag(8);
@@ -1001,6 +1074,7 @@ namespace Google.Cloud.AutoML.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (EvaluatedBoundingBoxCount != 0) {
@@ -1017,6 +1091,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImageObjectDetectionEvaluationMetrics other) {
       if (other == null) {
         return;
@@ -1032,6 +1107,7 @@ namespace Google.Cloud.AutoML.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1061,6 +1137,7 @@ namespace Google.Cloud.AutoML.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

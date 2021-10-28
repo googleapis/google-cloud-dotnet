@@ -557,19 +557,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<RetryBuildRequest> _parser = new pb::MessageParser<RetryBuildRequest>(() => new RetryBuildRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RetryBuildRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryBuildRequest() {
       OnConstruction();
     }
@@ -577,6 +581,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryBuildRequest(RetryBuildRequest other) : this() {
       name_ = other.name_;
       projectId_ = other.projectId_;
@@ -585,6 +590,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryBuildRequest Clone() {
       return new RetryBuildRequest(this);
     }
@@ -597,6 +603,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/builds/{build}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -611,6 +618,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -625,6 +633,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. Build ID of the original build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -633,11 +642,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RetryBuildRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RetryBuildRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -652,6 +663,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -664,11 +676,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -693,6 +707,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -713,6 +728,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -731,6 +747,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RetryBuildRequest other) {
       if (other == null) {
         return;
@@ -748,6 +765,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -777,6 +795,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -814,19 +833,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<RunBuildTriggerRequest> _parser = new pb::MessageParser<RunBuildTriggerRequest>(() => new RunBuildTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RunBuildTriggerRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunBuildTriggerRequest() {
       OnConstruction();
     }
@@ -834,6 +857,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunBuildTriggerRequest(RunBuildTriggerRequest other) : this() {
       name_ = other.name_;
       projectId_ = other.projectId_;
@@ -843,6 +867,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RunBuildTriggerRequest Clone() {
       return new RunBuildTriggerRequest(this);
     }
@@ -855,6 +880,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -869,6 +895,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -883,6 +910,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerId {
       get { return triggerId_; }
       set {
@@ -897,6 +925,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Source to build against this trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.RepoSource Source {
       get { return source_; }
       set {
@@ -905,11 +934,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RunBuildTriggerRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RunBuildTriggerRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -925,6 +956,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -938,11 +970,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -971,6 +1005,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -995,6 +1030,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1016,6 +1052,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RunBuildTriggerRequest other) {
       if (other == null) {
         return;
@@ -1039,6 +1076,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1075,6 +1113,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1119,19 +1158,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<StorageSource> _parser = new pb::MessageParser<StorageSource>(() => new StorageSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StorageSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StorageSource() {
       OnConstruction();
     }
@@ -1139,6 +1182,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StorageSource(StorageSource other) : this() {
       bucket_ = other.bucket_;
       object_ = other.object_;
@@ -1147,6 +1191,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StorageSource Clone() {
       return new StorageSource(this);
     }
@@ -1160,6 +1205,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Bucket {
       get { return bucket_; }
       set {
@@ -1177,6 +1223,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Object {
       get { return object_; }
       set {
@@ -1192,6 +1239,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// omitted, the latest generation will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Generation {
       get { return generation_; }
       set {
@@ -1200,11 +1248,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StorageSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StorageSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1219,6 +1269,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Bucket.Length != 0) hash ^= Bucket.GetHashCode();
@@ -1231,11 +1282,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1260,6 +1313,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Bucket.Length != 0) {
         output.WriteRawTag(10);
@@ -1280,6 +1334,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Bucket.Length != 0) {
@@ -1298,6 +1353,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StorageSource other) {
       if (other == null) {
         return;
@@ -1315,6 +1371,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1344,6 +1401,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1381,19 +1439,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<RepoSource> _parser = new pb::MessageParser<RepoSource>(() => new RepoSource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RepoSource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RepoSource() {
       OnConstruction();
     }
@@ -1401,6 +1463,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RepoSource(RepoSource other) : this() {
       projectId_ = other.projectId_;
       repoName_ = other.repoName_;
@@ -1423,6 +1486,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RepoSource Clone() {
       return new RepoSource(this);
     }
@@ -1435,6 +1499,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// project ID requesting the build is assumed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -1449,6 +1514,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Name of the Cloud Source Repository.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RepoName {
       get { return repoName_; }
       set {
@@ -1465,6 +1531,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// RE2 and described at https://github.com/google/re2/wiki/Syntax
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BranchName {
       get { return revisionCase_ == RevisionOneofCase.BranchName ? (string) revision_ : ""; }
       set {
@@ -1482,6 +1549,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// RE2 and described at https://github.com/google/re2/wiki/Syntax
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TagName {
       get { return revisionCase_ == RevisionOneofCase.TagName ? (string) revision_ : ""; }
       set {
@@ -1496,6 +1564,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Explicit commit SHA to build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string CommitSha {
       get { return revisionCase_ == RevisionOneofCase.CommitSha ? (string) revision_ : ""; }
       set {
@@ -1514,6 +1583,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// absolute path, this value is ignored for that step's execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Dir {
       get { return dir_; }
       set {
@@ -1529,6 +1599,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// regex.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InvertRegex {
       get { return invertRegex_; }
       set {
@@ -1546,6 +1617,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Should only be used with RunBuildTrigger
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Substitutions {
       get { return substitutions_; }
     }
@@ -1560,22 +1632,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private RevisionOneofCase revisionCase_ = RevisionOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RevisionOneofCase RevisionCase {
       get { return revisionCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearRevision() {
       revisionCase_ = RevisionOneofCase.None;
       revision_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RepoSource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RepoSource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1596,6 +1672,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -1614,11 +1691,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1660,6 +1739,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -1697,6 +1777,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -1728,6 +1809,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RepoSource other) {
       if (other == null) {
         return;
@@ -1761,6 +1843,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1810,6 +1893,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1869,19 +1953,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<StorageSourceManifest> _parser = new pb::MessageParser<StorageSourceManifest>(() => new StorageSourceManifest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StorageSourceManifest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StorageSourceManifest() {
       OnConstruction();
     }
@@ -1889,6 +1977,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StorageSourceManifest(StorageSourceManifest other) : this() {
       bucket_ = other.bucket_;
       object_ = other.object_;
@@ -1897,6 +1986,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StorageSourceManifest Clone() {
       return new StorageSourceManifest(this);
     }
@@ -1910,6 +2000,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Requirements](https://cloud.google.com/storage/docs/bucket-naming#requirements)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Bucket {
       get { return bucket_; }
       set {
@@ -1926,6 +2017,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// This object must be a JSON file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Object {
       get { return object_; }
       set {
@@ -1941,6 +2033,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// omitted, the latest generation will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Generation {
       get { return generation_; }
       set {
@@ -1949,11 +2042,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StorageSourceManifest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StorageSourceManifest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1968,6 +2063,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Bucket.Length != 0) hash ^= Bucket.GetHashCode();
@@ -1980,11 +2076,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2009,6 +2107,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Bucket.Length != 0) {
         output.WriteRawTag(10);
@@ -2029,6 +2128,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Bucket.Length != 0) {
@@ -2047,6 +2147,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StorageSourceManifest other) {
       if (other == null) {
         return;
@@ -2064,6 +2165,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2093,6 +2195,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2130,19 +2233,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Source> _parser = new pb::MessageParser<Source>(() => new Source());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Source> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Source() {
       OnConstruction();
     }
@@ -2150,6 +2257,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Source(Source other) : this() {
       switch (other.SourceCase) {
         case SourceOneofCase.StorageSource:
@@ -2167,6 +2275,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Source Clone() {
       return new Source(this);
     }
@@ -2177,6 +2286,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// If provided, get the source from this location in Google Cloud Storage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.StorageSource StorageSource {
       get { return sourceCase_ == SourceOneofCase.StorageSource ? (global::Google.Cloud.CloudBuild.V1.StorageSource) source_ : null; }
       set {
@@ -2192,6 +2302,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Repository.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.RepoSource RepoSource {
       get { return sourceCase_ == SourceOneofCase.RepoSource ? (global::Google.Cloud.CloudBuild.V1.RepoSource) source_ : null; }
       set {
@@ -2208,6 +2319,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// [here](https://github.com/GoogleCloudPlatform/cloud-builders/tree/master/gcs-fetcher).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.StorageSourceManifest StorageSourceManifest {
       get { return sourceCase_ == SourceOneofCase.StorageSourceManifest ? (global::Google.Cloud.CloudBuild.V1.StorageSourceManifest) source_ : null; }
       set {
@@ -2226,22 +2338,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private SourceOneofCase sourceCase_ = SourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceOneofCase SourceCase {
       get { return sourceCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSource() {
       sourceCase_ = SourceOneofCase.None;
       source_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Source);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Source other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2257,6 +2373,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (sourceCase_ == SourceOneofCase.StorageSource) hash ^= StorageSource.GetHashCode();
@@ -2270,11 +2387,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2299,6 +2418,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (sourceCase_ == SourceOneofCase.StorageSource) {
         output.WriteRawTag(18);
@@ -2319,6 +2439,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (sourceCase_ == SourceOneofCase.StorageSource) {
@@ -2337,6 +2458,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Source other) {
       if (other == null) {
         return;
@@ -2366,6 +2488,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2410,6 +2533,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2462,19 +2586,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<BuiltImage> _parser = new pb::MessageParser<BuiltImage>(() => new BuiltImage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BuiltImage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuiltImage() {
       OnConstruction();
     }
@@ -2482,6 +2610,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuiltImage(BuiltImage other) : this() {
       name_ = other.name_;
       digest_ = other.digest_;
@@ -2490,6 +2619,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuiltImage Clone() {
       return new BuiltImage(this);
     }
@@ -2502,6 +2632,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// presented to `docker push`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2516,6 +2647,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Docker Registry 2.0 digest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Digest {
       get { return digest_; }
       set {
@@ -2530,6 +2662,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Stores timing information for pushing the specified image.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.TimeSpan PushTiming {
       get { return pushTiming_; }
       set {
@@ -2538,11 +2671,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BuiltImage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BuiltImage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2557,6 +2692,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2569,11 +2705,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2598,6 +2736,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2618,6 +2757,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2636,6 +2776,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BuiltImage other) {
       if (other == null) {
         return;
@@ -2656,6 +2797,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2688,6 +2830,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2728,19 +2871,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<BuildStep> _parser = new pb::MessageParser<BuildStep>(() => new BuildStep());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BuildStep> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildStep() {
       OnConstruction();
     }
@@ -2748,6 +2895,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildStep(BuildStep other) : this() {
       name_ = other.name_;
       env_ = other.env_.Clone();
@@ -2767,6 +2915,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildStep Clone() {
       return new BuildStep(this);
     }
@@ -2794,6 +2943,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// later build step.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2813,6 +2963,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// being given the value "VALUE".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Env {
       get { return env_; }
     }
@@ -2831,6 +2982,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// and the remainder will be used as arguments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Args {
       get { return args_; }
     }
@@ -2851,6 +3003,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// the step's execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Dir {
       get { return dir_; }
       set {
@@ -2866,6 +3019,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// reference this build step as a dependency.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -2886,6 +3040,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// completed successfully.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> WaitFor {
       get { return waitFor_; }
     }
@@ -2898,6 +3053,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// If unset, the image's default entrypoint is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Entrypoint {
       get { return entrypoint_; }
       set {
@@ -2916,6 +3072,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// build's `Secret`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> SecretEnv {
       get { return secretEnv_; }
     }
@@ -2936,6 +3093,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// of a build request with an incorrect configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.Volume> Volumes {
       get { return volumes_; }
     }
@@ -2947,6 +3105,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Stores timing information for executing this build step.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.TimeSpan Timing {
       get { return timing_; }
       set {
@@ -2962,6 +3121,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// builder image only.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.TimeSpan PullTiming {
       get { return pullTiming_; }
       set {
@@ -2978,6 +3138,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// or the build itself times out.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Timeout {
       get { return timeout_; }
       set {
@@ -2994,6 +3155,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// as the build progresses.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Build.Types.Status Status {
       get { return status_; }
       set {
@@ -3010,6 +3172,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// When script is provided, the user cannot specify the entrypoint or args.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Script {
       get { return script_; }
       set {
@@ -3018,11 +3181,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BuildStep);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BuildStep other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3048,6 +3213,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3071,11 +3237,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3129,6 +3297,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3178,6 +3347,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3219,6 +3389,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BuildStep other) {
       if (other == null) {
         return;
@@ -3268,6 +3439,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3350,6 +3522,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3441,19 +3614,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Volume> _parser = new pb::MessageParser<Volume>(() => new Volume());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Volume> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Volume() {
       OnConstruction();
     }
@@ -3461,6 +3638,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Volume(Volume other) : this() {
       name_ = other.name_;
       path_ = other.path_;
@@ -3468,6 +3646,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Volume Clone() {
       return new Volume(this);
     }
@@ -3482,6 +3661,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Docker volumes. Each named volume must be used by at least two build steps.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -3499,6 +3679,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// same build step or with certain reserved volume paths.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Path {
       get { return path_; }
       set {
@@ -3507,11 +3688,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Volume);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Volume other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3525,6 +3708,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3536,11 +3720,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3561,6 +3747,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3577,6 +3764,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3592,6 +3780,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Volume other) {
       if (other == null) {
         return;
@@ -3606,6 +3795,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3631,6 +3821,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3664,19 +3855,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Results> _parser = new pb::MessageParser<Results>(() => new Results());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Results> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Results() {
       OnConstruction();
     }
@@ -3684,6 +3879,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Results(Results other) : this() {
       images_ = other.images_.Clone();
       buildStepImages_ = other.buildStepImages_.Clone();
@@ -3695,6 +3891,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Results Clone() {
       return new Results(this);
     }
@@ -3708,6 +3905,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Container images that were built as a part of the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.BuiltImage> Images {
       get { return images_; }
     }
@@ -3722,6 +3920,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// indices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> BuildStepImages {
       get { return buildStepImages_; }
     }
@@ -3733,6 +3932,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Path to the artifact manifest. Only populated when artifacts are uploaded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ArtifactManifest {
       get { return artifactManifest_; }
       set {
@@ -3747,6 +3947,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Number of artifacts uploaded. Only populated when artifacts are uploaded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long NumArtifacts {
       get { return numArtifacts_; }
       set {
@@ -3768,6 +3969,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Only the first 4KB of data is stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<pb::ByteString> BuildStepOutputs {
       get { return buildStepOutputs_; }
     }
@@ -3779,6 +3981,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Time to push all non-container artifacts.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.TimeSpan ArtifactTiming {
       get { return artifactTiming_; }
       set {
@@ -3787,11 +3990,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Results);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Results other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3809,6 +4014,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= images_.GetHashCode();
@@ -3824,11 +4030,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3856,6 +4064,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       images_.WriteTo(ref output, _repeated_images_codec);
       buildStepImages_.WriteTo(ref output, _repeated_buildStepImages_codec);
@@ -3879,6 +4088,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += images_.CalculateSize(_repeated_images_codec);
@@ -3900,6 +4110,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Results other) {
       if (other == null) {
         return;
@@ -3923,6 +4134,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3967,6 +4179,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4020,19 +4233,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ArtifactResult> _parser = new pb::MessageParser<ArtifactResult>(() => new ArtifactResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ArtifactResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ArtifactResult() {
       OnConstruction();
     }
@@ -4040,6 +4257,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ArtifactResult(ArtifactResult other) : this() {
       location_ = other.location_;
       fileHash_ = other.fileHash_.Clone();
@@ -4047,6 +4265,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ArtifactResult Clone() {
       return new ArtifactResult(this);
     }
@@ -4060,6 +4279,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `gs://mybucket/path/to/output.jar#generation`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Location {
       get { return location_; }
       set {
@@ -4076,16 +4296,19 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// The file hash of the artifact.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.FileHashes> FileHash {
       get { return fileHash_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ArtifactResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ArtifactResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4099,6 +4322,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Location.Length != 0) hash ^= Location.GetHashCode();
@@ -4110,11 +4334,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4132,6 +4358,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Location.Length != 0) {
         output.WriteRawTag(10);
@@ -4145,6 +4372,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Location.Length != 0) {
@@ -4158,6 +4386,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ArtifactResult other) {
       if (other == null) {
         return;
@@ -4170,6 +4399,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4195,6 +4425,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4245,19 +4476,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Build> _parser = new pb::MessageParser<Build>(() => new Build());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Build> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Build() {
       OnConstruction();
     }
@@ -4265,6 +4500,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Build(Build other) : this() {
       name_ = other.name_;
       id_ = other.id_;
@@ -4299,6 +4535,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Build Clone() {
       return new Build(this);
     }
@@ -4312,6 +4549,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// is a unique identifier generated by the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -4326,6 +4564,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Unique identifier of the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -4340,6 +4579,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -4354,6 +4594,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Status of the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Build.Types.Status Status {
       get { return status_; }
       set {
@@ -4368,6 +4609,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Customer-readable message about the current status.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StatusDetail {
       get { return statusDetail_; }
       set {
@@ -4382,6 +4624,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// The location of the source files to build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Source Source {
       get { return source_; }
       set {
@@ -4398,6 +4641,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. The operations to be performed on the workspace.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.BuildStep> Steps {
       get { return steps_; }
     }
@@ -4409,6 +4653,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Results of the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Results Results {
       get { return results_; }
       set {
@@ -4423,6 +4668,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Time at which the request to create the build was received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -4437,6 +4683,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Time at which execution of the build was started.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -4454,6 +4701,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// build's execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp FinishTime {
       get { return finishTime_; }
       set {
@@ -4474,6 +4722,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Default time is ten minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Timeout {
       get { return timeout_; }
       set {
@@ -4499,6 +4748,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `FAILURE`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Images {
       get { return images_; }
     }
@@ -4514,6 +4764,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// The TTL starts ticking from create_time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration QueueTtl {
       get { return queueTtl_; }
       set {
@@ -4529,6 +4780,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// successful completion of all build steps.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Artifacts Artifacts {
       get { return artifacts_; }
       set {
@@ -4546,6 +4798,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Logs file names will be of the format `${logs_bucket}/log-${build_id}.txt`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LogsBucket {
       get { return logsBucket_; }
       set {
@@ -4560,6 +4813,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. A permanent fixed identifier for source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.SourceProvenance SourceProvenance {
       get { return sourceProvenance_; }
       set {
@@ -4575,6 +4829,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// was triggered automatically.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BuildTriggerId {
       get { return buildTriggerId_; }
       set {
@@ -4589,6 +4844,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Special options for this build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildOptions Options {
       get { return options_; }
       set {
@@ -4603,6 +4859,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. URL to logs for this build in Google Cloud Console.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LogUrl {
       get { return logUrl_; }
       set {
@@ -4619,6 +4876,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Substitutions data for `Build` resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Substitutions {
       get { return substitutions_; }
     }
@@ -4632,6 +4890,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Tags for annotation of a `Build`. These are not docker tags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Tags {
       get { return tags_; }
     }
@@ -4649,6 +4908,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// see: https://cloud.google.com/cloud-build/docs/securing-builds/use-secrets
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.Secret> Secrets {
       get { return secrets_; }
     }
@@ -4671,6 +4931,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// these keys will not be included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.CloudBuild.V1.TimeSpan> Timing {
       get { return timing_; }
     }
@@ -4683,6 +4944,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// and result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildApproval Approval {
       get { return approval_; }
       set {
@@ -4699,6 +4961,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// ACCOUNT can be email address or uniqueId of the service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceAccount {
       get { return serviceAccount_; }
       set {
@@ -4713,6 +4976,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Secrets and secret environment variables.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Secrets AvailableSecrets {
       get { return availableSecrets_; }
       set {
@@ -4730,6 +4994,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.Build.Types.Warning> Warnings {
       get { return warnings_; }
     }
@@ -4741,6 +5006,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Contains information about the build when status=FAILURE.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo FailureInfo {
       get { return failureInfo_; }
       set {
@@ -4749,11 +5015,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Build);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Build other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4794,6 +5062,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -4832,11 +5101,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4944,6 +5215,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -5047,6 +5319,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -5129,6 +5402,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Build other) {
       if (other == null) {
         return;
@@ -5249,6 +5523,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5421,6 +5696,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5591,6 +5867,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Build message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Possible status of a build or build step.
@@ -5650,19 +5927,23 @@ namespace Google.Cloud.CloudBuild.V1 {
         private static readonly pb::MessageParser<Warning> _parser = new pb::MessageParser<Warning>(() => new Warning());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Warning> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.CloudBuild.V1.Build.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Warning() {
           OnConstruction();
         }
@@ -5670,6 +5951,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Warning(Warning other) : this() {
           text_ = other.text_;
           priority_ = other.priority_;
@@ -5677,6 +5959,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Warning Clone() {
           return new Warning(this);
         }
@@ -5688,6 +5971,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Explanation of the warning generated.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Text {
           get { return text_; }
           set {
@@ -5702,6 +5986,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// The priority for this warning.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.CloudBuild.V1.Build.Types.Warning.Types.Priority Priority {
           get { return priority_; }
           set {
@@ -5710,11 +5995,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Warning);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Warning other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5728,6 +6015,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Text.Length != 0) hash ^= Text.GetHashCode();
@@ -5739,11 +6027,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5764,6 +6054,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Text.Length != 0) {
             output.WriteRawTag(10);
@@ -5780,6 +6071,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Text.Length != 0) {
@@ -5795,6 +6087,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Warning other) {
           if (other == null) {
             return;
@@ -5809,6 +6102,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5834,6 +6128,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5857,6 +6152,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the Warning message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// The relative importance of this warning.
@@ -5896,19 +6192,23 @@ namespace Google.Cloud.CloudBuild.V1 {
         private static readonly pb::MessageParser<FailureInfo> _parser = new pb::MessageParser<FailureInfo>(() => new FailureInfo());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<FailureInfo> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.CloudBuild.V1.Build.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FailureInfo() {
           OnConstruction();
         }
@@ -5916,6 +6216,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FailureInfo(FailureInfo other) : this() {
           type_ = other.type_;
           detail_ = other.detail_;
@@ -5923,6 +6224,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public FailureInfo Clone() {
           return new FailureInfo(this);
         }
@@ -5934,6 +6236,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// The name of the failure.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType Type {
           get { return type_; }
           set {
@@ -5948,6 +6251,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Explains the failure issue in more detail using hard-coded text.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Detail {
           get { return detail_; }
           set {
@@ -5956,11 +6260,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as FailureInfo);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(FailureInfo other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5974,6 +6280,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) hash ^= Type.GetHashCode();
@@ -5985,11 +6292,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -6010,6 +6319,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) {
             output.WriteRawTag(8);
@@ -6026,6 +6336,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Type != global::Google.Cloud.CloudBuild.V1.Build.Types.FailureInfo.Types.FailureType.Unspecified) {
@@ -6041,6 +6352,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(FailureInfo other) {
           if (other == null) {
             return;
@@ -6055,6 +6367,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -6080,6 +6393,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -6103,6 +6417,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the FailureInfo message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// The name of a fatal problem encountered during the execution of the
@@ -6161,19 +6476,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Artifacts> _parser = new pb::MessageParser<Artifacts>(() => new Artifacts());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Artifacts> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Artifacts() {
       OnConstruction();
     }
@@ -6181,6 +6500,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Artifacts(Artifacts other) : this() {
       images_ = other.images_.Clone();
       objects_ = other.objects_ != null ? other.objects_.Clone() : null;
@@ -6188,6 +6508,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Artifacts Clone() {
       return new Artifacts(this);
     }
@@ -6209,6 +6530,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// If any of the images fail to be pushed, the build is marked FAILURE.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Images {
       get { return images_; }
     }
@@ -6230,6 +6552,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// If any objects fail to be pushed, the build is marked FAILURE.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Artifacts.Types.ArtifactObjects Objects {
       get { return objects_; }
       set {
@@ -6238,11 +6561,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Artifacts);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Artifacts other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6256,6 +6581,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= images_.GetHashCode();
@@ -6267,11 +6593,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6289,6 +6617,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       images_.WriteTo(ref output, _repeated_images_codec);
       if (objects_ != null) {
@@ -6302,6 +6631,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += images_.CalculateSize(_repeated_images_codec);
@@ -6315,6 +6645,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Artifacts other) {
       if (other == null) {
         return;
@@ -6330,6 +6661,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6358,6 +6690,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6384,6 +6717,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Artifacts message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Files in the workspace to upload to Cloud Storage upon successful
@@ -6397,19 +6731,23 @@ namespace Google.Cloud.CloudBuild.V1 {
         private static readonly pb::MessageParser<ArtifactObjects> _parser = new pb::MessageParser<ArtifactObjects>(() => new ArtifactObjects());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ArtifactObjects> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.CloudBuild.V1.Artifacts.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ArtifactObjects() {
           OnConstruction();
         }
@@ -6417,6 +6755,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ArtifactObjects(ArtifactObjects other) : this() {
           location_ = other.location_;
           paths_ = other.paths_.Clone();
@@ -6425,6 +6764,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ArtifactObjects Clone() {
           return new ArtifactObjects(this);
         }
@@ -6441,6 +6781,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Cloud Storage with this location as a prefix.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Location {
           get { return location_; }
           set {
@@ -6457,6 +6798,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Path globs used to match files in the build's workspace.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> Paths {
           get { return paths_; }
         }
@@ -6468,6 +6810,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Output only. Stores timing information for pushing all artifact objects.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.CloudBuild.V1.TimeSpan Timing {
           get { return timing_; }
           set {
@@ -6476,11 +6819,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ArtifactObjects);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ArtifactObjects other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -6495,6 +6840,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Location.Length != 0) hash ^= Location.GetHashCode();
@@ -6507,11 +6853,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -6533,6 +6881,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Location.Length != 0) {
             output.WriteRawTag(10);
@@ -6550,6 +6899,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Location.Length != 0) {
@@ -6566,6 +6916,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ArtifactObjects other) {
           if (other == null) {
             return;
@@ -6584,6 +6935,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -6616,6 +6968,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -6661,19 +7014,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<TimeSpan> _parser = new pb::MessageParser<TimeSpan>(() => new TimeSpan());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TimeSpan> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSpan() {
       OnConstruction();
     }
@@ -6681,6 +7038,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSpan(TimeSpan other) : this() {
       startTime_ = other.startTime_ != null ? other.startTime_.Clone() : null;
       endTime_ = other.endTime_ != null ? other.endTime_.Clone() : null;
@@ -6688,6 +7046,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TimeSpan Clone() {
       return new TimeSpan(this);
     }
@@ -6699,6 +7058,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Start of time span.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -6713,6 +7073,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// End of time span.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -6721,11 +7082,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TimeSpan);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TimeSpan other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6739,6 +7102,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startTime_ != null) hash ^= StartTime.GetHashCode();
@@ -6750,11 +7114,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6775,6 +7141,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startTime_ != null) {
         output.WriteRawTag(10);
@@ -6791,6 +7158,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startTime_ != null) {
@@ -6806,6 +7174,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimeSpan other) {
       if (other == null) {
         return;
@@ -6826,6 +7195,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6857,6 +7227,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6896,19 +7267,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<BuildOperationMetadata> _parser = new pb::MessageParser<BuildOperationMetadata>(() => new BuildOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BuildOperationMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildOperationMetadata() {
       OnConstruction();
     }
@@ -6916,12 +7291,14 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildOperationMetadata(BuildOperationMetadata other) : this() {
       build_ = other.build_ != null ? other.build_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildOperationMetadata Clone() {
       return new BuildOperationMetadata(this);
     }
@@ -6933,6 +7310,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// The build that the operation is tracking.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Build Build {
       get { return build_; }
       set {
@@ -6941,11 +7319,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BuildOperationMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BuildOperationMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6958,6 +7338,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (build_ != null) hash ^= Build.GetHashCode();
@@ -6968,11 +7349,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6989,6 +7372,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (build_ != null) {
         output.WriteRawTag(10);
@@ -7001,6 +7385,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (build_ != null) {
@@ -7013,6 +7398,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BuildOperationMetadata other) {
       if (other == null) {
         return;
@@ -7027,6 +7413,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7051,6 +7438,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7084,19 +7472,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<SourceProvenance> _parser = new pb::MessageParser<SourceProvenance>(() => new SourceProvenance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SourceProvenance> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceProvenance() {
       OnConstruction();
     }
@@ -7104,6 +7496,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceProvenance(SourceProvenance other) : this() {
       resolvedStorageSource_ = other.resolvedStorageSource_ != null ? other.resolvedStorageSource_.Clone() : null;
       resolvedRepoSource_ = other.resolvedRepoSource_ != null ? other.resolvedRepoSource_.Clone() : null;
@@ -7113,6 +7506,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SourceProvenance Clone() {
       return new SourceProvenance(this);
     }
@@ -7125,6 +7519,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// generations resolved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.StorageSource ResolvedStorageSource {
       get { return resolvedStorageSource_; }
       set {
@@ -7140,6 +7535,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// revisions resolved.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.RepoSource ResolvedRepoSource {
       get { return resolvedRepoSource_; }
       set {
@@ -7156,6 +7552,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// This feature is in Preview.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.StorageSourceManifest ResolvedStorageSourceManifest {
       get { return resolvedStorageSourceManifest_; }
       set {
@@ -7181,16 +7578,19 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// (`.tar.gz`), the `FileHash` will be for the single path to that file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.CloudBuild.V1.FileHashes> FileHashes {
       get { return fileHashes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SourceProvenance);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SourceProvenance other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7206,6 +7606,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (resolvedStorageSource_ != null) hash ^= ResolvedStorageSource.GetHashCode();
@@ -7219,11 +7620,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7249,6 +7652,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (resolvedStorageSource_ != null) {
         output.WriteRawTag(26);
@@ -7270,6 +7674,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (resolvedStorageSource_ != null) {
@@ -7289,6 +7694,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SourceProvenance other) {
       if (other == null) {
         return;
@@ -7316,6 +7722,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7358,6 +7765,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7409,19 +7817,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<FileHashes> _parser = new pb::MessageParser<FileHashes>(() => new FileHashes());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FileHashes> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FileHashes() {
       OnConstruction();
     }
@@ -7429,12 +7841,14 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FileHashes(FileHashes other) : this() {
       fileHash_ = other.fileHash_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FileHashes Clone() {
       return new FileHashes(this);
     }
@@ -7448,16 +7862,19 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Collection of file hashes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.Hash> FileHash {
       get { return fileHash_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FileHashes);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FileHashes other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7470,6 +7887,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= fileHash_.GetHashCode();
@@ -7480,11 +7898,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7498,6 +7918,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       fileHash_.WriteTo(ref output, _repeated_fileHash_codec);
       if (_unknownFields != null) {
@@ -7507,6 +7928,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += fileHash_.CalculateSize(_repeated_fileHash_codec);
@@ -7517,6 +7939,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FileHashes other) {
       if (other == null) {
         return;
@@ -7526,6 +7949,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7547,6 +7971,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7576,19 +8001,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Hash> _parser = new pb::MessageParser<Hash>(() => new Hash());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Hash> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Hash() {
       OnConstruction();
     }
@@ -7596,6 +8025,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Hash(Hash other) : this() {
       type_ = other.type_;
       value_ = other.value_;
@@ -7603,6 +8033,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Hash Clone() {
       return new Hash(this);
     }
@@ -7614,6 +8045,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// The type of hash that was performed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Hash.Types.HashType Type {
       get { return type_; }
       set {
@@ -7628,6 +8060,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// The hash value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString Value {
       get { return value_; }
       set {
@@ -7636,11 +8069,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Hash);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Hash other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7654,6 +8089,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Type != global::Google.Cloud.CloudBuild.V1.Hash.Types.HashType.None) hash ^= Type.GetHashCode();
@@ -7665,11 +8101,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7690,6 +8128,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Type != global::Google.Cloud.CloudBuild.V1.Hash.Types.HashType.None) {
         output.WriteRawTag(8);
@@ -7706,6 +8145,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Type != global::Google.Cloud.CloudBuild.V1.Hash.Types.HashType.None) {
@@ -7721,6 +8161,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Hash other) {
       if (other == null) {
         return;
@@ -7735,6 +8176,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7760,6 +8202,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -7783,6 +8226,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Hash message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies the hash algorithm, if any.
@@ -7818,19 +8262,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Secrets> _parser = new pb::MessageParser<Secrets>(() => new Secrets());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Secrets> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secrets() {
       OnConstruction();
     }
@@ -7838,6 +8286,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secrets(Secrets other) : this() {
       secretManager_ = other.secretManager_.Clone();
       inline_ = other.inline_.Clone();
@@ -7845,6 +8294,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secrets Clone() {
       return new Secrets(this);
     }
@@ -7858,6 +8308,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Secrets in Secret Manager and associated secret environment variable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.SecretManagerSecret> SecretManager {
       get { return secretManager_; }
     }
@@ -7872,16 +8323,19 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// variable.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.InlineSecret> Inline {
       get { return inline_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Secrets);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Secrets other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -7895,6 +8349,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= secretManager_.GetHashCode();
@@ -7906,11 +8361,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -7925,6 +8382,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       secretManager_.WriteTo(ref output, _repeated_secretManager_codec);
       inline_.WriteTo(ref output, _repeated_inline_codec);
@@ -7935,6 +8393,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += secretManager_.CalculateSize(_repeated_secretManager_codec);
@@ -7946,6 +8405,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Secrets other) {
       if (other == null) {
         return;
@@ -7956,6 +8416,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -7981,6 +8442,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8015,19 +8477,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<InlineSecret> _parser = new pb::MessageParser<InlineSecret>(() => new InlineSecret());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InlineSecret> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InlineSecret() {
       OnConstruction();
     }
@@ -8035,6 +8501,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InlineSecret(InlineSecret other) : this() {
       kmsKeyName_ = other.kmsKeyName_;
       envMap_ = other.envMap_.Clone();
@@ -8042,6 +8509,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InlineSecret Clone() {
       return new InlineSecret(this);
     }
@@ -8054,6 +8522,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// In format: projects/*/locations/*/keyRings/*/cryptoKeys/*
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string KmsKeyName {
       get { return kmsKeyName_; }
       set {
@@ -8075,16 +8544,19 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// build's secrets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, pb::ByteString> EnvMap {
       get { return envMap_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InlineSecret);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InlineSecret other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8098,6 +8570,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
@@ -8109,11 +8582,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8131,6 +8606,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (KmsKeyName.Length != 0) {
         output.WriteRawTag(10);
@@ -8144,6 +8620,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (KmsKeyName.Length != 0) {
@@ -8157,6 +8634,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InlineSecret other) {
       if (other == null) {
         return;
@@ -8169,6 +8647,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8194,6 +8673,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8227,19 +8707,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<SecretManagerSecret> _parser = new pb::MessageParser<SecretManagerSecret>(() => new SecretManagerSecret());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SecretManagerSecret> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SecretManagerSecret() {
       OnConstruction();
     }
@@ -8247,6 +8731,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SecretManagerSecret(SecretManagerSecret other) : this() {
       versionName_ = other.versionName_;
       env_ = other.env_;
@@ -8254,6 +8739,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SecretManagerSecret Clone() {
       return new SecretManagerSecret(this);
     }
@@ -8266,6 +8752,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// projects/*/secrets/*/versions/*
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string VersionName {
       get { return versionName_; }
       set {
@@ -8282,6 +8769,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// secrets, and must be used by at least one build step.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Env {
       get { return env_; }
       set {
@@ -8290,11 +8778,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SecretManagerSecret);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SecretManagerSecret other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8308,6 +8798,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (VersionName.Length != 0) hash ^= VersionName.GetHashCode();
@@ -8319,11 +8810,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8344,6 +8837,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (VersionName.Length != 0) {
         output.WriteRawTag(10);
@@ -8360,6 +8854,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (VersionName.Length != 0) {
@@ -8375,6 +8870,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SecretManagerSecret other) {
       if (other == null) {
         return;
@@ -8389,6 +8885,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8414,6 +8911,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8451,19 +8949,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<Secret> _parser = new pb::MessageParser<Secret>(() => new Secret());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Secret> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[21]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secret() {
       OnConstruction();
     }
@@ -8471,6 +8973,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secret(Secret other) : this() {
       kmsKeyName_ = other.kmsKeyName_;
       secretEnv_ = other.secretEnv_.Clone();
@@ -8478,6 +8981,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Secret Clone() {
       return new Secret(this);
     }
@@ -8489,6 +8993,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Cloud KMS key name to use to decrypt these envs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string KmsKeyName {
       get { return kmsKeyName_; }
       set {
@@ -8510,16 +9015,19 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// build's secrets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, pb::ByteString> SecretEnv {
       get { return secretEnv_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Secret);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Secret other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8533,6 +9041,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (KmsKeyName.Length != 0) hash ^= KmsKeyName.GetHashCode();
@@ -8544,11 +9053,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8566,6 +9077,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (KmsKeyName.Length != 0) {
         output.WriteRawTag(10);
@@ -8579,6 +9091,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (KmsKeyName.Length != 0) {
@@ -8592,6 +9105,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Secret other) {
       if (other == null) {
         return;
@@ -8604,6 +9118,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8629,6 +9144,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8662,19 +9178,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<CreateBuildRequest> _parser = new pb::MessageParser<CreateBuildRequest>(() => new CreateBuildRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateBuildRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[22]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBuildRequest() {
       OnConstruction();
     }
@@ -8682,6 +9202,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBuildRequest(CreateBuildRequest other) : this() {
       parent_ = other.parent_;
       projectId_ = other.projectId_;
@@ -8690,6 +9211,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBuildRequest Clone() {
       return new CreateBuildRequest(this);
     }
@@ -8702,6 +9224,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -8716,6 +9239,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -8730,6 +9254,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. Build resource to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Build Build {
       get { return build_; }
       set {
@@ -8738,11 +9263,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateBuildRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateBuildRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8757,6 +9284,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -8769,11 +9297,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8798,6 +9328,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -8818,6 +9349,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -8836,6 +9368,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateBuildRequest other) {
       if (other == null) {
         return;
@@ -8856,6 +9389,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8888,6 +9422,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8928,19 +9463,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<GetBuildRequest> _parser = new pb::MessageParser<GetBuildRequest>(() => new GetBuildRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetBuildRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[23]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBuildRequest() {
       OnConstruction();
     }
@@ -8948,6 +9487,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBuildRequest(GetBuildRequest other) : this() {
       name_ = other.name_;
       projectId_ = other.projectId_;
@@ -8956,6 +9496,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBuildRequest Clone() {
       return new GetBuildRequest(this);
     }
@@ -8968,6 +9509,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/builds/{build}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -8982,6 +9524,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -8996,6 +9539,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -9004,11 +9548,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetBuildRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetBuildRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9023,6 +9569,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -9035,11 +9582,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9064,6 +9613,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -9084,6 +9634,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -9102,6 +9653,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetBuildRequest other) {
       if (other == null) {
         return;
@@ -9119,6 +9671,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9148,6 +9701,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9185,19 +9739,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ListBuildsRequest> _parser = new pb::MessageParser<ListBuildsRequest>(() => new ListBuildsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListBuildsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[24]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildsRequest() {
       OnConstruction();
     }
@@ -9205,6 +9763,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildsRequest(ListBuildsRequest other) : this() {
       parent_ = other.parent_;
       projectId_ = other.projectId_;
@@ -9215,6 +9774,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildsRequest Clone() {
       return new ListBuildsRequest(this);
     }
@@ -9227,6 +9787,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/location`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -9241,6 +9802,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -9255,6 +9817,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Number of results to return in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -9277,6 +9840,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// See https://google.aip.dev/158 for more.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -9291,6 +9855,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// The raw filter text to constrain the results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -9299,11 +9864,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListBuildsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListBuildsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9320,6 +9887,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -9334,11 +9902,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9371,6 +9941,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -9399,6 +9970,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -9423,6 +9995,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListBuildsRequest other) {
       if (other == null) {
         return;
@@ -9446,6 +10019,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9483,6 +10057,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9528,19 +10103,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ListBuildsResponse> _parser = new pb::MessageParser<ListBuildsResponse>(() => new ListBuildsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListBuildsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[25]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildsResponse() {
       OnConstruction();
     }
@@ -9548,6 +10127,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildsResponse(ListBuildsResponse other) : this() {
       builds_ = other.builds_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -9555,6 +10135,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildsResponse Clone() {
       return new ListBuildsResponse(this);
     }
@@ -9568,6 +10149,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Builds will be sorted by `create_time`, descending.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.Build> Builds {
       get { return builds_; }
     }
@@ -9580,6 +10162,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// This will be absent if the end of the response list has been reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -9588,11 +10171,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListBuildsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListBuildsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9606,6 +10191,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= builds_.GetHashCode();
@@ -9617,11 +10203,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9639,6 +10227,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       builds_.WriteTo(ref output, _repeated_builds_codec);
       if (NextPageToken.Length != 0) {
@@ -9652,6 +10241,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += builds_.CalculateSize(_repeated_builds_codec);
@@ -9665,6 +10255,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListBuildsResponse other) {
       if (other == null) {
         return;
@@ -9677,6 +10268,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9702,6 +10294,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9735,19 +10328,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<CancelBuildRequest> _parser = new pb::MessageParser<CancelBuildRequest>(() => new CancelBuildRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CancelBuildRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[26]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelBuildRequest() {
       OnConstruction();
     }
@@ -9755,6 +10352,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelBuildRequest(CancelBuildRequest other) : this() {
       name_ = other.name_;
       projectId_ = other.projectId_;
@@ -9763,6 +10361,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CancelBuildRequest Clone() {
       return new CancelBuildRequest(this);
     }
@@ -9775,6 +10374,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/builds/{build}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -9789,6 +10389,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -9803,6 +10404,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -9811,11 +10413,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CancelBuildRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CancelBuildRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -9830,6 +10434,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -9842,11 +10447,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -9871,6 +10478,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -9891,6 +10499,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -9909,6 +10518,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CancelBuildRequest other) {
       if (other == null) {
         return;
@@ -9926,6 +10536,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -9955,6 +10566,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -9992,19 +10604,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ApproveBuildRequest> _parser = new pb::MessageParser<ApproveBuildRequest>(() => new ApproveBuildRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ApproveBuildRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[27]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApproveBuildRequest() {
       OnConstruction();
     }
@@ -10012,6 +10628,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApproveBuildRequest(ApproveBuildRequest other) : this() {
       name_ = other.name_;
       approvalResult_ = other.approvalResult_ != null ? other.approvalResult_.Clone() : null;
@@ -10019,6 +10636,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApproveBuildRequest Clone() {
       return new ApproveBuildRequest(this);
     }
@@ -10031,6 +10649,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// For example: "projects/{$project_id}/builds/{$build_id}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -10045,6 +10664,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Approval decision and metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.ApprovalResult ApprovalResult {
       get { return approvalResult_; }
       set {
@@ -10053,11 +10673,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ApproveBuildRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ApproveBuildRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10071,6 +10693,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -10082,11 +10705,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10107,6 +10732,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -10123,6 +10749,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -10138,6 +10765,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ApproveBuildRequest other) {
       if (other == null) {
         return;
@@ -10155,6 +10783,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10183,6 +10812,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10220,19 +10850,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<BuildApproval> _parser = new pb::MessageParser<BuildApproval>(() => new BuildApproval());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BuildApproval> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[28]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildApproval() {
       OnConstruction();
     }
@@ -10240,6 +10874,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildApproval(BuildApproval other) : this() {
       state_ = other.state_;
       config_ = other.config_ != null ? other.config_.Clone() : null;
@@ -10248,6 +10883,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildApproval Clone() {
       return new BuildApproval(this);
     }
@@ -10259,6 +10895,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. The state of this build's approval.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildApproval.Types.State State {
       get { return state_; }
       set {
@@ -10273,6 +10910,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Configuration for manual approval of this build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.ApprovalConfig Config {
       get { return config_; }
       set {
@@ -10287,6 +10925,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Result of manual approval for this Build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.ApprovalResult Result {
       get { return result_; }
       set {
@@ -10295,11 +10934,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BuildApproval);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BuildApproval other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10314,6 +10955,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (State != global::Google.Cloud.CloudBuild.V1.BuildApproval.Types.State.Unspecified) hash ^= State.GetHashCode();
@@ -10326,11 +10968,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10355,6 +10999,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (State != global::Google.Cloud.CloudBuild.V1.BuildApproval.Types.State.Unspecified) {
         output.WriteRawTag(8);
@@ -10375,6 +11020,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (State != global::Google.Cloud.CloudBuild.V1.BuildApproval.Types.State.Unspecified) {
@@ -10393,6 +11039,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BuildApproval other) {
       if (other == null) {
         return;
@@ -10416,6 +11063,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10451,6 +11099,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10484,6 +11133,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the BuildApproval message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies the current state of a build's approval.
@@ -10527,19 +11177,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ApprovalConfig> _parser = new pb::MessageParser<ApprovalConfig>(() => new ApprovalConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ApprovalConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[29]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApprovalConfig() {
       OnConstruction();
     }
@@ -10547,12 +11201,14 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApprovalConfig(ApprovalConfig other) : this() {
       approvalRequired_ = other.approvalRequired_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApprovalConfig Clone() {
       return new ApprovalConfig(this);
     }
@@ -10566,6 +11222,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// to start.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ApprovalRequired {
       get { return approvalRequired_; }
       set {
@@ -10574,11 +11231,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ApprovalConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ApprovalConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10591,6 +11250,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ApprovalRequired != false) hash ^= ApprovalRequired.GetHashCode();
@@ -10601,11 +11261,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10622,6 +11284,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ApprovalRequired != false) {
         output.WriteRawTag(8);
@@ -10634,6 +11297,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ApprovalRequired != false) {
@@ -10646,6 +11310,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ApprovalConfig other) {
       if (other == null) {
         return;
@@ -10657,6 +11322,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -10678,6 +11344,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -10708,19 +11375,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ApprovalResult> _parser = new pb::MessageParser<ApprovalResult>(() => new ApprovalResult());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ApprovalResult> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[30]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApprovalResult() {
       OnConstruction();
     }
@@ -10728,6 +11399,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApprovalResult(ApprovalResult other) : this() {
       approverAccount_ = other.approverAccount_;
       approvalTime_ = other.approvalTime_ != null ? other.approvalTime_.Clone() : null;
@@ -10738,6 +11410,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ApprovalResult Clone() {
       return new ApprovalResult(this);
     }
@@ -10750,6 +11423,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// approve or reject a build at the time that the API was called.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ApproverAccount {
       get { return approverAccount_; }
       set {
@@ -10764,6 +11438,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. The time when the approval decision was made.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ApprovalTime {
       get { return approvalTime_; }
       set {
@@ -10778,6 +11453,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. The decision of this manual approval.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.ApprovalResult.Types.Decision Decision {
       get { return decision_; }
       set {
@@ -10792,6 +11468,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Optional. An optional comment for this manual approval result.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Comment {
       get { return comment_; }
       set {
@@ -10809,6 +11486,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// approved this Build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Url {
       get { return url_; }
       set {
@@ -10817,11 +11495,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ApprovalResult);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ApprovalResult other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -10838,6 +11518,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ApproverAccount.Length != 0) hash ^= ApproverAccount.GetHashCode();
@@ -10852,11 +11533,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -10889,6 +11572,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ApproverAccount.Length != 0) {
         output.WriteRawTag(18);
@@ -10917,6 +11601,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ApproverAccount.Length != 0) {
@@ -10941,6 +11626,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ApprovalResult other) {
       if (other == null) {
         return;
@@ -10967,6 +11653,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11007,6 +11694,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11045,6 +11733,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ApprovalResult message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies whether or not this manual approval result is to approve
@@ -11082,19 +11771,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<BuildTrigger> _parser = new pb::MessageParser<BuildTrigger>(() => new BuildTrigger());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BuildTrigger> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[31]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildTrigger() {
       OnConstruction();
     }
@@ -11102,6 +11795,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildTrigger(BuildTrigger other) : this() {
       resourceName_ = other.resourceName_;
       id_ = other.id_;
@@ -11135,6 +11829,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildTrigger Clone() {
       return new BuildTrigger(this);
     }
@@ -11148,6 +11843,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// {trigger} is a unique identifier generated by the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ResourceName {
       get { return resourceName_; }
       set {
@@ -11162,6 +11858,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Unique identifier of the trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -11176,6 +11873,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Human-readable description of this trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -11195,6 +11893,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// + They must begin and end with an alphanumeric character.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -11211,6 +11910,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Tags for annotation of a `BuildTrigger`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Tags {
       get { return tags_; }
     }
@@ -11228,6 +11928,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Mutually exclusive with `github`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.RepoSource TriggerTemplate {
       get { return triggerTemplate_; }
       set {
@@ -11245,6 +11946,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Mutually exclusive with `trigger_template`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.GitHubEventsConfig Github {
       get { return github_; }
       set {
@@ -11260,6 +11962,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// creates a build whenever a Pub/Sub message is published.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PubsubConfig PubsubConfig {
       get { return pubsubConfig_; }
       set {
@@ -11275,6 +11978,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// creates a build whenever a webhook is sent to a trigger's webhook URL.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.WebhookConfig WebhookConfig {
       get { return webhookConfig_; }
       set {
@@ -11296,6 +12000,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Currently only available for GitHub App Triggers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Autodetect {
       get { return buildTemplateCase_ == BuildTemplateOneofCase.Autodetect ? (bool) buildTemplate_ : false; }
       set {
@@ -11310,6 +12015,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Contents of the build template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.Build Build {
       get { return buildTemplateCase_ == BuildTemplateOneofCase.Build ? (global::Google.Cloud.CloudBuild.V1.Build) buildTemplate_ : null; }
       set {
@@ -11325,6 +12031,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// (i.e. cloudbuild.yaml).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filename {
       get { return buildTemplateCase_ == BuildTemplateOneofCase.Filename ? (string) buildTemplate_ : ""; }
       set {
@@ -11340,6 +12047,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. Time when the trigger was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -11354,6 +12062,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// If true, the trigger will never automatically execute a build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Disabled {
       get { return disabled_; }
       set {
@@ -11371,6 +12080,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// regular expression: `^_[A-Z0-9_]+$`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Substitutions {
       get { return substitutions_; }
     }
@@ -11392,6 +12102,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// outside of the ignored_files globs, then we do not trigger a build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> IgnoredFiles {
       get { return ignoredFiles_; }
     }
@@ -11412,6 +12123,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// then we do not trigger a build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> IncludedFiles {
       get { return includedFiles_; }
     }
@@ -11423,6 +12135,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Optional. A Common Expression Language string.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -11441,6 +12154,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_ID_OR_EMAIL}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceAccount {
       get { return serviceAccount_; }
       set {
@@ -11458,22 +12172,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private BuildTemplateOneofCase buildTemplateCase_ = BuildTemplateOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildTemplateOneofCase BuildTemplateCase {
       get { return buildTemplateCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearBuildTemplate() {
       buildTemplateCase_ = BuildTemplateOneofCase.None;
       buildTemplate_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BuildTrigger);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BuildTrigger other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11505,6 +12223,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ResourceName.Length != 0) hash ^= ResourceName.GetHashCode();
@@ -11534,11 +12253,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11615,6 +12336,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -11687,6 +12409,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ResourceName.Length != 0) {
@@ -11745,6 +12468,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BuildTrigger other) {
       if (other == null) {
         return;
@@ -11823,6 +12547,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11936,6 +12661,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12060,19 +12786,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<GitHubEventsConfig> _parser = new pb::MessageParser<GitHubEventsConfig>(() => new GitHubEventsConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GitHubEventsConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[32]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitHubEventsConfig() {
       OnConstruction();
     }
@@ -12080,6 +12810,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitHubEventsConfig(GitHubEventsConfig other) : this() {
       installationId_ = other.installationId_;
       owner_ = other.owner_;
@@ -12097,6 +12828,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitHubEventsConfig Clone() {
       return new GitHubEventsConfig(this);
     }
@@ -12109,6 +12841,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long InstallationId {
       get { return installationId_; }
       set {
@@ -12125,6 +12858,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// "googlecloudplatform".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Owner {
       get { return owner_; }
       set {
@@ -12140,6 +12874,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// https://github.com/googlecloudplatform/cloud-builders is "cloud-builders".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -12153,6 +12888,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// filter to match changes in pull requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PullRequestFilter PullRequest {
       get { return eventCase_ == EventOneofCase.PullRequest ? (global::Google.Cloud.CloudBuild.V1.PullRequestFilter) event_ : null; }
       set {
@@ -12167,6 +12903,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// filter to match changes in refs like branches, tags.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PushFilter Push {
       get { return eventCase_ == EventOneofCase.Push ? (global::Google.Cloud.CloudBuild.V1.PushFilter) event_ : null; }
       set {
@@ -12184,22 +12921,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private EventOneofCase eventCase_ = EventOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EventOneofCase EventCase {
       get { return eventCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEvent() {
       eventCase_ = EventOneofCase.None;
       event_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GitHubEventsConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GitHubEventsConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12217,6 +12958,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (InstallationId != 0L) hash ^= InstallationId.GetHashCode();
@@ -12232,11 +12974,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12269,6 +13013,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (InstallationId != 0L) {
         output.WriteRawTag(8);
@@ -12297,6 +13042,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (InstallationId != 0L) {
@@ -12321,6 +13067,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GitHubEventsConfig other) {
       if (other == null) {
         return;
@@ -12353,6 +13100,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12400,6 +13148,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12456,19 +13205,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<PubsubConfig> _parser = new pb::MessageParser<PubsubConfig>(() => new PubsubConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PubsubConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[33]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PubsubConfig() {
       OnConstruction();
     }
@@ -12476,6 +13229,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PubsubConfig(PubsubConfig other) : this() {
       subscription_ = other.subscription_;
       topic_ = other.topic_;
@@ -12485,6 +13239,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PubsubConfig Clone() {
       return new PubsubConfig(this);
     }
@@ -12497,6 +13252,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `projects/{project}/subscriptions/{subscription}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Subscription {
       get { return subscription_; }
       set {
@@ -12512,6 +13268,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format is `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Topic {
       get { return topic_; }
       set {
@@ -12526,6 +13283,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Service account that will make the push request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ServiceAccountEmail {
       get { return serviceAccountEmail_; }
       set {
@@ -12541,6 +13299,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Only populated on get requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PubsubConfig.Types.State State {
       get { return state_; }
       set {
@@ -12549,11 +13308,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PubsubConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PubsubConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12569,6 +13330,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Subscription.Length != 0) hash ^= Subscription.GetHashCode();
@@ -12582,11 +13344,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12615,6 +13379,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Subscription.Length != 0) {
         output.WriteRawTag(10);
@@ -12639,6 +13404,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Subscription.Length != 0) {
@@ -12660,6 +13426,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PubsubConfig other) {
       if (other == null) {
         return;
@@ -12680,6 +13447,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12713,6 +13481,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12744,6 +13513,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PubsubConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Enumerates potential issues with the underlying Pub/Sub subscription
@@ -12789,19 +13559,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<WebhookConfig> _parser = new pb::MessageParser<WebhookConfig>(() => new WebhookConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WebhookConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[34]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebhookConfig() {
       OnConstruction();
     }
@@ -12809,6 +13583,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebhookConfig(WebhookConfig other) : this() {
       state_ = other.state_;
       switch (other.AuthMethodCase) {
@@ -12821,6 +13596,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WebhookConfig Clone() {
       return new WebhookConfig(this);
     }
@@ -12831,6 +13607,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. Resource name for the secret required as a URL parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Secret {
       get { return authMethodCase_ == AuthMethodOneofCase.Secret ? (string) authMethod_ : ""; }
       set {
@@ -12847,6 +13624,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Only populated on get requests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.WebhookConfig.Types.State State {
       get { return state_; }
       set {
@@ -12862,22 +13640,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private AuthMethodOneofCase authMethodCase_ = AuthMethodOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AuthMethodOneofCase AuthMethodCase {
       get { return authMethodCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAuthMethod() {
       authMethodCase_ = AuthMethodOneofCase.None;
       authMethod_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WebhookConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WebhookConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12892,6 +13674,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (authMethodCase_ == AuthMethodOneofCase.Secret) hash ^= Secret.GetHashCode();
@@ -12904,11 +13687,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12929,6 +13714,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (authMethodCase_ == AuthMethodOneofCase.Secret) {
         output.WriteRawTag(26);
@@ -12945,6 +13731,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (authMethodCase_ == AuthMethodOneofCase.Secret) {
@@ -12960,6 +13747,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WebhookConfig other) {
       if (other == null) {
         return;
@@ -12977,6 +13765,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -13002,6 +13791,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -13025,6 +13815,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the WebhookConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Enumerates potential issues with the Secret Manager secret provided by the
@@ -13062,19 +13853,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<PullRequestFilter> _parser = new pb::MessageParser<PullRequestFilter>(() => new PullRequestFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PullRequestFilter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[35]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullRequestFilter() {
       OnConstruction();
     }
@@ -13082,6 +13877,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullRequestFilter(PullRequestFilter other) : this() {
       commentControl_ = other.commentControl_;
       invertRegex_ = other.invertRegex_;
@@ -13095,6 +13891,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PullRequestFilter Clone() {
       return new PullRequestFilter(this);
     }
@@ -13108,6 +13905,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// RE2 and described at https://github.com/google/re2/wiki/Syntax
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Branch {
       get { return gitRefCase_ == GitRefOneofCase.Branch ? (string) gitRef_ : ""; }
       set {
@@ -13124,6 +13922,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// comment `/gcbrun`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PullRequestFilter.Types.CommentControl CommentControl {
       get { return commentControl_; }
       set {
@@ -13138,6 +13937,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// If true, branches that do NOT match the git_ref will trigger a build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InvertRegex {
       get { return invertRegex_; }
       set {
@@ -13153,22 +13953,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private GitRefOneofCase gitRefCase_ = GitRefOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitRefOneofCase GitRefCase {
       get { return gitRefCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearGitRef() {
       gitRefCase_ = GitRefOneofCase.None;
       gitRef_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PullRequestFilter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PullRequestFilter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -13184,6 +13988,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (gitRefCase_ == GitRefOneofCase.Branch) hash ^= Branch.GetHashCode();
@@ -13197,11 +14002,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -13226,6 +14033,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (gitRefCase_ == GitRefOneofCase.Branch) {
         output.WriteRawTag(18);
@@ -13246,6 +14054,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (gitRefCase_ == GitRefOneofCase.Branch) {
@@ -13264,6 +14073,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PullRequestFilter other) {
       if (other == null) {
         return;
@@ -13284,6 +14094,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -13313,6 +14124,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -13340,6 +14152,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PullRequestFilter message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Controls behavior of Pull Request comments.
@@ -13377,19 +14190,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<PushFilter> _parser = new pb::MessageParser<PushFilter>(() => new PushFilter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PushFilter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[36]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PushFilter() {
       OnConstruction();
     }
@@ -13397,6 +14214,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PushFilter(PushFilter other) : this() {
       invertRegex_ = other.invertRegex_;
       switch (other.GitRefCase) {
@@ -13412,6 +14230,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PushFilter Clone() {
       return new PushFilter(this);
     }
@@ -13425,6 +14244,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// RE2 and described at https://github.com/google/re2/wiki/Syntax
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Branch {
       get { return gitRefCase_ == GitRefOneofCase.Branch ? (string) gitRef_ : ""; }
       set {
@@ -13442,6 +14262,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// RE2 and described at https://github.com/google/re2/wiki/Syntax
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Tag {
       get { return gitRefCase_ == GitRefOneofCase.Tag ? (string) gitRef_ : ""; }
       set {
@@ -13458,6 +14279,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// git_ref regex.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool InvertRegex {
       get { return invertRegex_; }
       set {
@@ -13474,22 +14296,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private GitRefOneofCase gitRefCase_ = GitRefOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitRefOneofCase GitRefCase {
       get { return gitRefCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearGitRef() {
       gitRefCase_ = GitRefOneofCase.None;
       gitRef_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PushFilter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PushFilter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -13505,6 +14331,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (gitRefCase_ == GitRefOneofCase.Branch) hash ^= Branch.GetHashCode();
@@ -13518,11 +14345,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -13547,6 +14376,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (gitRefCase_ == GitRefOneofCase.Branch) {
         output.WriteRawTag(18);
@@ -13567,6 +14397,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (gitRefCase_ == GitRefOneofCase.Branch) {
@@ -13585,6 +14416,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PushFilter other) {
       if (other == null) {
         return;
@@ -13605,6 +14437,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -13634,6 +14467,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -13671,19 +14505,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<CreateBuildTriggerRequest> _parser = new pb::MessageParser<CreateBuildTriggerRequest>(() => new CreateBuildTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateBuildTriggerRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[37]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBuildTriggerRequest() {
       OnConstruction();
     }
@@ -13691,6 +14529,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBuildTriggerRequest(CreateBuildTriggerRequest other) : this() {
       parent_ = other.parent_;
       projectId_ = other.projectId_;
@@ -13699,6 +14538,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateBuildTriggerRequest Clone() {
       return new CreateBuildTriggerRequest(this);
     }
@@ -13711,6 +14551,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -13725,6 +14566,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project for which to configure automatic builds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -13739,6 +14581,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. `BuildTrigger` to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildTrigger Trigger {
       get { return trigger_; }
       set {
@@ -13747,11 +14590,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateBuildTriggerRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateBuildTriggerRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -13766,6 +14611,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -13778,11 +14624,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -13807,6 +14655,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -13827,6 +14676,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -13845,6 +14695,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateBuildTriggerRequest other) {
       if (other == null) {
         return;
@@ -13865,6 +14716,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -13897,6 +14749,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -13937,19 +14790,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<GetBuildTriggerRequest> _parser = new pb::MessageParser<GetBuildTriggerRequest>(() => new GetBuildTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetBuildTriggerRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[38]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBuildTriggerRequest() {
       OnConstruction();
     }
@@ -13957,6 +14814,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBuildTriggerRequest(GetBuildTriggerRequest other) : this() {
       name_ = other.name_;
       projectId_ = other.projectId_;
@@ -13965,6 +14823,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetBuildTriggerRequest Clone() {
       return new GetBuildTriggerRequest(this);
     }
@@ -13977,6 +14836,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -13991,6 +14851,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project that owns the trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -14005,6 +14866,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. Identifier (`id` or `name`) of the `BuildTrigger` to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerId {
       get { return triggerId_; }
       set {
@@ -14013,11 +14875,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetBuildTriggerRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetBuildTriggerRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -14032,6 +14896,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -14044,11 +14909,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -14073,6 +14940,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -14093,6 +14961,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -14111,6 +14980,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetBuildTriggerRequest other) {
       if (other == null) {
         return;
@@ -14128,6 +14998,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -14157,6 +15028,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -14194,19 +15066,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ListBuildTriggersRequest> _parser = new pb::MessageParser<ListBuildTriggersRequest>(() => new ListBuildTriggersRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListBuildTriggersRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[39]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildTriggersRequest() {
       OnConstruction();
     }
@@ -14214,6 +15090,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildTriggersRequest(ListBuildTriggersRequest other) : this() {
       parent_ = other.parent_;
       projectId_ = other.projectId_;
@@ -14223,6 +15100,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildTriggersRequest Clone() {
       return new ListBuildTriggersRequest(this);
     }
@@ -14235,6 +15113,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -14249,6 +15128,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project for which to list BuildTriggers.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -14263,6 +15143,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Number of results to return in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -14277,6 +15158,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Token to provide to skip to a particular spot in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -14285,11 +15167,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListBuildTriggersRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListBuildTriggersRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -14305,6 +15189,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -14318,11 +15203,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -14351,6 +15238,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -14375,6 +15263,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -14396,6 +15285,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListBuildTriggersRequest other) {
       if (other == null) {
         return;
@@ -14416,6 +15306,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -14449,6 +15340,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -14490,19 +15382,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ListBuildTriggersResponse> _parser = new pb::MessageParser<ListBuildTriggersResponse>(() => new ListBuildTriggersResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListBuildTriggersResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[40]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildTriggersResponse() {
       OnConstruction();
     }
@@ -14510,6 +15406,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildTriggersResponse(ListBuildTriggersResponse other) : this() {
       triggers_ = other.triggers_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -14517,6 +15414,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListBuildTriggersResponse Clone() {
       return new ListBuildTriggersResponse(this);
     }
@@ -14530,6 +15428,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `BuildTriggers` for the project, sorted by `create_time` descending.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.BuildTrigger> Triggers {
       get { return triggers_; }
     }
@@ -14541,6 +15440,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Token to receive the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -14549,11 +15449,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListBuildTriggersResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListBuildTriggersResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -14567,6 +15469,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= triggers_.GetHashCode();
@@ -14578,11 +15481,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -14600,6 +15505,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       triggers_.WriteTo(ref output, _repeated_triggers_codec);
       if (NextPageToken.Length != 0) {
@@ -14613,6 +15519,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += triggers_.CalculateSize(_repeated_triggers_codec);
@@ -14626,6 +15533,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListBuildTriggersResponse other) {
       if (other == null) {
         return;
@@ -14638,6 +15546,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -14663,6 +15572,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -14696,19 +15606,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<DeleteBuildTriggerRequest> _parser = new pb::MessageParser<DeleteBuildTriggerRequest>(() => new DeleteBuildTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteBuildTriggerRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[41]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteBuildTriggerRequest() {
       OnConstruction();
     }
@@ -14716,6 +15630,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteBuildTriggerRequest(DeleteBuildTriggerRequest other) : this() {
       name_ = other.name_;
       projectId_ = other.projectId_;
@@ -14724,6 +15639,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteBuildTriggerRequest Clone() {
       return new DeleteBuildTriggerRequest(this);
     }
@@ -14736,6 +15652,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -14750,6 +15667,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project that owns the trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -14764,6 +15682,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the `BuildTrigger` to delete.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerId {
       get { return triggerId_; }
       set {
@@ -14772,11 +15691,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteBuildTriggerRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteBuildTriggerRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -14791,6 +15712,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -14803,11 +15725,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -14832,6 +15756,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -14852,6 +15777,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -14870,6 +15796,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteBuildTriggerRequest other) {
       if (other == null) {
         return;
@@ -14887,6 +15814,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -14916,6 +15844,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -14953,19 +15882,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<UpdateBuildTriggerRequest> _parser = new pb::MessageParser<UpdateBuildTriggerRequest>(() => new UpdateBuildTriggerRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateBuildTriggerRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[42]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateBuildTriggerRequest() {
       OnConstruction();
     }
@@ -14973,6 +15906,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateBuildTriggerRequest(UpdateBuildTriggerRequest other) : this() {
       projectId_ = other.projectId_;
       triggerId_ = other.triggerId_;
@@ -14981,6 +15915,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateBuildTriggerRequest Clone() {
       return new UpdateBuildTriggerRequest(this);
     }
@@ -14992,6 +15927,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the project that owns the trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -15006,6 +15942,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. ID of the `BuildTrigger` to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TriggerId {
       get { return triggerId_; }
       set {
@@ -15020,6 +15957,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. `BuildTrigger` to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildTrigger Trigger {
       get { return trigger_; }
       set {
@@ -15028,11 +15966,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateBuildTriggerRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateBuildTriggerRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -15047,6 +15987,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ProjectId.Length != 0) hash ^= ProjectId.GetHashCode();
@@ -15059,11 +16000,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -15088,6 +16031,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ProjectId.Length != 0) {
         output.WriteRawTag(10);
@@ -15108,6 +16052,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ProjectId.Length != 0) {
@@ -15126,6 +16071,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateBuildTriggerRequest other) {
       if (other == null) {
         return;
@@ -15146,6 +16092,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -15178,6 +16125,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -15218,19 +16166,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<BuildOptions> _parser = new pb::MessageParser<BuildOptions>(() => new BuildOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<BuildOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[43]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildOptions() {
       OnConstruction();
     }
@@ -15238,6 +16190,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildOptions(BuildOptions other) : this() {
       sourceProvenanceHash_ = other.sourceProvenanceHash_.Clone();
       requestedVerifyOption_ = other.requestedVerifyOption_;
@@ -15256,6 +16209,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public BuildOptions Clone() {
       return new BuildOptions(this);
     }
@@ -15269,6 +16223,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Requested hash for SourceProvenance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.Hash.Types.HashType> SourceProvenanceHash {
       get { return sourceProvenanceHash_; }
     }
@@ -15280,6 +16235,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Requested verifiability options.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.VerifyOption RequestedVerifyOption {
       get { return requestedVerifyOption_; }
       set {
@@ -15294,6 +16250,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Compute Engine machine type on which to run the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.MachineType MachineType {
       get { return machineType_; }
       set {
@@ -15313,6 +16270,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// more than the maximum are rejected with an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long DiskSizeGb {
       get { return diskSizeGb_; }
       set {
@@ -15331,6 +16289,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// be overridden in the build configuration file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.SubstitutionOption SubstitutionOption {
       get { return substitutionOption_; }
       set {
@@ -15349,6 +16308,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// overridden in the build configuration file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DynamicSubstitutions {
       get { return dynamicSubstitutions_; }
       set {
@@ -15364,6 +16324,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Storage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LogStreamingOption LogStreamingOption {
       get { return logStreamingOption_; }
       set {
@@ -15379,6 +16340,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WorkerPool {
       get { return workerPool_; }
       set {
@@ -15397,6 +16359,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// for more information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.PoolOption Pool {
       get { return pool_; }
       set {
@@ -15412,6 +16375,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// logs are stored.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.LoggingMode Logging {
       get { return logging_; }
       set {
@@ -15433,6 +16397,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// being given the value "VALUE".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Env {
       get { return env_; }
     }
@@ -15449,6 +16414,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// in this build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> SecretEnv {
       get { return secretEnv_; }
     }
@@ -15470,16 +16436,19 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// it is indicative of a build request with an incorrect configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.Volume> Volumes {
       get { return volumes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as BuildOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(BuildOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -15504,6 +16473,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= sourceProvenanceHash_.GetHashCode();
@@ -15526,11 +16496,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -15583,6 +16555,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       sourceProvenanceHash_.WriteTo(ref output, _repeated_sourceProvenanceHash_codec);
       if (RequestedVerifyOption != global::Google.Cloud.CloudBuild.V1.BuildOptions.Types.VerifyOption.NotVerified) {
@@ -15631,6 +16604,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += sourceProvenanceHash_.CalculateSize(_repeated_sourceProvenanceHash_codec);
@@ -15671,6 +16645,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(BuildOptions other) {
       if (other == null) {
         return;
@@ -15713,6 +16688,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -15786,6 +16762,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -15857,6 +16834,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the BuildOptions message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Specifies the manner in which the build should be verified, if at all.
@@ -15982,19 +16960,23 @@ namespace Google.Cloud.CloudBuild.V1 {
         private static readonly pb::MessageParser<PoolOption> _parser = new pb::MessageParser<PoolOption>(() => new PoolOption());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<PoolOption> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.CloudBuild.V1.BuildOptions.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PoolOption() {
           OnConstruction();
         }
@@ -16002,12 +16984,14 @@ namespace Google.Cloud.CloudBuild.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PoolOption(PoolOption other) : this() {
           name_ = other.name_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PoolOption Clone() {
           return new PoolOption(this);
         }
@@ -16023,6 +17007,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Format projects/{project}/locations/{location}/workerPools/{workerPoolId}
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Name {
           get { return name_; }
           set {
@@ -16031,11 +17016,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as PoolOption);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(PoolOption other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -16048,6 +17035,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -16058,11 +17046,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -16079,6 +17069,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Name.Length != 0) {
             output.WriteRawTag(10);
@@ -16091,6 +17082,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Name.Length != 0) {
@@ -16103,6 +17095,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(PoolOption other) {
           if (other == null) {
             return;
@@ -16114,6 +17107,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -16135,6 +17129,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -16170,19 +17165,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ReceiveTriggerWebhookRequest> _parser = new pb::MessageParser<ReceiveTriggerWebhookRequest>(() => new ReceiveTriggerWebhookRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReceiveTriggerWebhookRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[44]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReceiveTriggerWebhookRequest() {
       OnConstruction();
     }
@@ -16190,6 +17189,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReceiveTriggerWebhookRequest(ReceiveTriggerWebhookRequest other) : this() {
       name_ = other.name_;
       body_ = other.body_ != null ? other.body_.Clone() : null;
@@ -16200,6 +17200,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReceiveTriggerWebhookRequest Clone() {
       return new ReceiveTriggerWebhookRequest(this);
     }
@@ -16212,6 +17213,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/triggers/{trigger}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -16226,6 +17228,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// HTTP request body.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Api.HttpBody Body {
       get { return body_; }
       set {
@@ -16240,6 +17243,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Project in which the specified trigger lives
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -16254,6 +17258,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Name of the trigger to run the payload against
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Trigger {
       get { return trigger_; }
       set {
@@ -16268,6 +17273,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Secret token used for authorization if an OAuth token isn't provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Secret {
       get { return secret_; }
       set {
@@ -16276,11 +17282,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ReceiveTriggerWebhookRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ReceiveTriggerWebhookRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -16297,6 +17305,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -16311,11 +17320,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -16348,6 +17359,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (body_ != null) {
         output.WriteRawTag(10);
@@ -16376,6 +17388,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -16400,6 +17413,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReceiveTriggerWebhookRequest other) {
       if (other == null) {
         return;
@@ -16426,6 +17440,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -16466,6 +17481,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -16515,19 +17531,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ReceiveTriggerWebhookResponse> _parser = new pb::MessageParser<ReceiveTriggerWebhookResponse>(() => new ReceiveTriggerWebhookResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ReceiveTriggerWebhookResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[45]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReceiveTriggerWebhookResponse() {
       OnConstruction();
     }
@@ -16535,21 +17555,25 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReceiveTriggerWebhookResponse(ReceiveTriggerWebhookResponse other) : this() {
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ReceiveTriggerWebhookResponse Clone() {
       return new ReceiveTriggerWebhookResponse(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ReceiveTriggerWebhookResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ReceiveTriggerWebhookResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -16561,6 +17585,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (_unknownFields != null) {
@@ -16570,11 +17595,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -16587,6 +17614,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -16595,6 +17623,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (_unknownFields != null) {
@@ -16604,6 +17633,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ReceiveTriggerWebhookResponse other) {
       if (other == null) {
         return;
@@ -16612,6 +17642,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -16629,6 +17660,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -16666,19 +17698,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<WorkerPool> _parser = new pb::MessageParser<WorkerPool>(() => new WorkerPool());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkerPool> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[46]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerPool() {
       OnConstruction();
     }
@@ -16686,6 +17722,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerPool(WorkerPool other) : this() {
       name_ = other.name_;
       displayName_ = other.displayName_;
@@ -16706,6 +17743,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkerPool Clone() {
       return new WorkerPool(this);
     }
@@ -16721,6 +17759,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// the endpoint accessed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -16736,6 +17775,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// this value must be 1-63 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DisplayName {
       get { return displayName_; }
       set {
@@ -16750,6 +17790,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. A unique identifier for the `WorkerPool`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uid {
       get { return uid_; }
       set {
@@ -16767,6 +17808,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// for more details such as format and size limitations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Annotations {
       get { return annotations_; }
     }
@@ -16779,6 +17821,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -16794,6 +17837,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -16809,6 +17853,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// received.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DeleteTime {
       get { return deleteTime_; }
       set {
@@ -16823,6 +17868,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Output only. `WorkerPool` state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.WorkerPool.Types.State State {
       get { return state_; }
       set {
@@ -16836,6 +17882,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Private Pool using a v1 configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config PrivatePoolV1Config {
       get { return configCase_ == ConfigOneofCase.PrivatePoolV1Config ? (global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config) config_ : null; }
       set {
@@ -16853,6 +17900,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Etag {
       get { return etag_; }
       set {
@@ -16868,22 +17916,26 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
     private ConfigOneofCase configCase_ = ConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigOneofCase ConfigCase {
       get { return configCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearConfig() {
       configCase_ = ConfigOneofCase.None;
       config_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkerPool);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkerPool other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -16906,6 +17958,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -16926,11 +17979,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -16980,6 +18035,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -17025,6 +18081,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -17062,6 +18119,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkerPool other) {
       if (other == null) {
         return;
@@ -17113,6 +18171,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -17184,6 +18243,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -17253,6 +18313,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the WorkerPool message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// State of the `WorkerPool`.
@@ -17296,19 +18357,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<PrivatePoolV1Config> _parser = new pb::MessageParser<PrivatePoolV1Config>(() => new PrivatePoolV1Config());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PrivatePoolV1Config> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[47]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivatePoolV1Config() {
       OnConstruction();
     }
@@ -17316,6 +18381,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivatePoolV1Config(PrivatePoolV1Config other) : this() {
       workerConfig_ = other.workerConfig_ != null ? other.workerConfig_.Clone() : null;
       networkConfig_ = other.networkConfig_ != null ? other.networkConfig_.Clone() : null;
@@ -17323,6 +18389,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PrivatePoolV1Config Clone() {
       return new PrivatePoolV1Config(this);
     }
@@ -17334,6 +18401,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Machine configuration for the workers in the pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.WorkerConfig WorkerConfig {
       get { return workerConfig_; }
       set {
@@ -17348,6 +18416,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Network configuration for the pool.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig NetworkConfig {
       get { return networkConfig_; }
       set {
@@ -17356,11 +18425,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PrivatePoolV1Config);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PrivatePoolV1Config other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -17374,6 +18445,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (workerConfig_ != null) hash ^= WorkerConfig.GetHashCode();
@@ -17385,11 +18457,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -17410,6 +18484,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (workerConfig_ != null) {
         output.WriteRawTag(10);
@@ -17426,6 +18501,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (workerConfig_ != null) {
@@ -17441,6 +18517,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PrivatePoolV1Config other) {
       if (other == null) {
         return;
@@ -17461,6 +18538,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -17492,6 +18570,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -17521,6 +18600,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PrivatePoolV1Config message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Defines the configuration to be used for creating workers in
@@ -17534,19 +18614,23 @@ namespace Google.Cloud.CloudBuild.V1 {
         private static readonly pb::MessageParser<WorkerConfig> _parser = new pb::MessageParser<WorkerConfig>(() => new WorkerConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<WorkerConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WorkerConfig() {
           OnConstruction();
         }
@@ -17554,6 +18638,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WorkerConfig(WorkerConfig other) : this() {
           machineType_ = other.machineType_;
           diskSizeGb_ = other.diskSizeGb_;
@@ -17561,6 +18646,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public WorkerConfig Clone() {
           return new WorkerConfig(this);
         }
@@ -17575,6 +18661,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// If left blank, Cloud Build will use a sensible default.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string MachineType {
           get { return machineType_; }
           set {
@@ -17593,6 +18680,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// a standard disk size.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public long DiskSizeGb {
           get { return diskSizeGb_; }
           set {
@@ -17601,11 +18689,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as WorkerConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(WorkerConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -17619,6 +18709,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (MachineType.Length != 0) hash ^= MachineType.GetHashCode();
@@ -17630,11 +18721,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -17655,6 +18748,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (MachineType.Length != 0) {
             output.WriteRawTag(10);
@@ -17671,6 +18765,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (MachineType.Length != 0) {
@@ -17686,6 +18781,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(WorkerConfig other) {
           if (other == null) {
             return;
@@ -17700,6 +18796,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -17725,6 +18822,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -17758,19 +18856,23 @@ namespace Google.Cloud.CloudBuild.V1 {
         private static readonly pb::MessageParser<NetworkConfig> _parser = new pb::MessageParser<NetworkConfig>(() => new NetworkConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<NetworkConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public NetworkConfig() {
           OnConstruction();
         }
@@ -17778,6 +18880,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public NetworkConfig(NetworkConfig other) : this() {
           peeredNetwork_ = other.peeredNetwork_;
           egressOption_ = other.egressOption_;
@@ -17785,6 +18888,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public NetworkConfig Clone() {
           return new NetworkConfig(this);
         }
@@ -17803,6 +18907,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// options](https://cloud.google.com/build/docs/private-pools/set-up-private-pool-environment)
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PeeredNetwork {
           get { return peeredNetwork_; }
           set {
@@ -17817,6 +18922,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         /// Option to configure network egress for the workers.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.CloudBuild.V1.PrivatePoolV1Config.Types.NetworkConfig.Types.EgressOption EgressOption {
           get { return egressOption_; }
           set {
@@ -17825,11 +18931,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as NetworkConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(NetworkConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -17843,6 +18951,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (PeeredNetwork.Length != 0) hash ^= PeeredNetwork.GetHashCode();
@@ -17854,11 +18963,13 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -17879,6 +18990,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (PeeredNetwork.Length != 0) {
             output.WriteRawTag(10);
@@ -17895,6 +19007,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (PeeredNetwork.Length != 0) {
@@ -17910,6 +19023,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(NetworkConfig other) {
           if (other == null) {
             return;
@@ -17924,6 +19038,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -17949,6 +19064,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -17972,6 +19088,7 @@ namespace Google.Cloud.CloudBuild.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the NetworkConfig message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Defines the egress option for the pool.
@@ -18014,19 +19131,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<CreateWorkerPoolRequest> _parser = new pb::MessageParser<CreateWorkerPoolRequest>(() => new CreateWorkerPoolRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateWorkerPoolRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[48]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkerPoolRequest() {
       OnConstruction();
     }
@@ -18034,6 +19155,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkerPoolRequest(CreateWorkerPoolRequest other) : this() {
       parent_ = other.parent_;
       workerPool_ = other.workerPool_ != null ? other.workerPool_.Clone() : null;
@@ -18043,6 +19165,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkerPoolRequest Clone() {
       return new CreateWorkerPoolRequest(this);
     }
@@ -18055,6 +19178,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -18069,6 +19193,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Required. `WorkerPool` resource to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.WorkerPool WorkerPool {
       get { return workerPool_; }
       set {
@@ -18087,6 +19212,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// are /[a-z][0-9]-/.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WorkerPoolId {
       get { return workerPoolId_; }
       set {
@@ -18102,6 +19228,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// post it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ValidateOnly {
       get { return validateOnly_; }
       set {
@@ -18110,11 +19237,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateWorkerPoolRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateWorkerPoolRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -18130,6 +19259,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -18143,11 +19273,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -18176,6 +19308,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -18200,6 +19333,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -18221,6 +19355,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateWorkerPoolRequest other) {
       if (other == null) {
         return;
@@ -18244,6 +19379,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -18280,6 +19416,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -18324,19 +19461,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<GetWorkerPoolRequest> _parser = new pb::MessageParser<GetWorkerPoolRequest>(() => new GetWorkerPoolRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetWorkerPoolRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[49]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWorkerPoolRequest() {
       OnConstruction();
     }
@@ -18344,12 +19485,14 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWorkerPoolRequest(GetWorkerPoolRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWorkerPoolRequest Clone() {
       return new GetWorkerPoolRequest(this);
     }
@@ -18362,6 +19505,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -18370,11 +19514,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetWorkerPoolRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetWorkerPoolRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -18387,6 +19533,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -18397,11 +19544,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -18418,6 +19567,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -18430,6 +19580,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -18442,6 +19593,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetWorkerPoolRequest other) {
       if (other == null) {
         return;
@@ -18453,6 +19605,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -18474,6 +19627,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -18503,19 +19657,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<DeleteWorkerPoolRequest> _parser = new pb::MessageParser<DeleteWorkerPoolRequest>(() => new DeleteWorkerPoolRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteWorkerPoolRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[50]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkerPoolRequest() {
       OnConstruction();
     }
@@ -18523,6 +19681,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkerPoolRequest(DeleteWorkerPoolRequest other) : this() {
       name_ = other.name_;
       etag_ = other.etag_;
@@ -18532,6 +19691,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkerPoolRequest Clone() {
       return new DeleteWorkerPoolRequest(this);
     }
@@ -18545,6 +19705,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `projects/{project}/locations/{workerPool}/workerPools/{workerPool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -18560,6 +19721,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// workerpool for the request to be processed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Etag {
       get { return etag_; }
       set {
@@ -18575,6 +19737,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// but no action will be taken on the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool AllowMissing {
       get { return allowMissing_; }
       set {
@@ -18590,6 +19753,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// post it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ValidateOnly {
       get { return validateOnly_; }
       set {
@@ -18598,11 +19762,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteWorkerPoolRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteWorkerPoolRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -18618,6 +19784,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -18631,11 +19798,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -18664,6 +19833,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -18688,6 +19858,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -18709,6 +19880,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteWorkerPoolRequest other) {
       if (other == null) {
         return;
@@ -18729,6 +19901,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -18762,6 +19935,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -18803,19 +19977,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<UpdateWorkerPoolRequest> _parser = new pb::MessageParser<UpdateWorkerPoolRequest>(() => new UpdateWorkerPoolRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateWorkerPoolRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[51]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkerPoolRequest() {
       OnConstruction();
     }
@@ -18823,6 +20001,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkerPoolRequest(UpdateWorkerPoolRequest other) : this() {
       workerPool_ = other.workerPool_ != null ? other.workerPool_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
@@ -18831,6 +20010,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkerPoolRequest Clone() {
       return new UpdateWorkerPoolRequest(this);
     }
@@ -18845,6 +20025,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}/workerPools/{workerPool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.CloudBuild.V1.WorkerPool WorkerPool {
       get { return workerPool_; }
       set {
@@ -18859,6 +20040,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// A mask specifying which fields in `worker_pool` to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -18874,6 +20056,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// post it.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ValidateOnly {
       get { return validateOnly_; }
       set {
@@ -18882,11 +20065,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateWorkerPoolRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateWorkerPoolRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -18901,6 +20086,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (workerPool_ != null) hash ^= WorkerPool.GetHashCode();
@@ -18913,11 +20099,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -18942,6 +20130,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (workerPool_ != null) {
         output.WriteRawTag(10);
@@ -18962,6 +20151,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (workerPool_ != null) {
@@ -18980,6 +20170,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateWorkerPoolRequest other) {
       if (other == null) {
         return;
@@ -19003,6 +20194,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -19038,6 +20230,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -19081,19 +20274,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ListWorkerPoolsRequest> _parser = new pb::MessageParser<ListWorkerPoolsRequest>(() => new ListWorkerPoolsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListWorkerPoolsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[52]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkerPoolsRequest() {
       OnConstruction();
     }
@@ -19101,6 +20298,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkerPoolsRequest(ListWorkerPoolsRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -19109,6 +20307,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkerPoolsRequest Clone() {
       return new ListWorkerPoolsRequest(this);
     }
@@ -19121,6 +20320,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Format: `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -19136,6 +20336,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// fewer than this value. If omitted, the server will use a sensible default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -19151,6 +20352,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// to retrieve the subsequent page.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -19159,11 +20361,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListWorkerPoolsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListWorkerPoolsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -19178,6 +20382,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -19190,11 +20395,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -19219,6 +20426,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -19239,6 +20447,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -19257,6 +20466,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListWorkerPoolsRequest other) {
       if (other == null) {
         return;
@@ -19274,6 +20484,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -19303,6 +20514,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -19340,19 +20552,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<ListWorkerPoolsResponse> _parser = new pb::MessageParser<ListWorkerPoolsResponse>(() => new ListWorkerPoolsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListWorkerPoolsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[53]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkerPoolsResponse() {
       OnConstruction();
     }
@@ -19360,6 +20576,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkerPoolsResponse(ListWorkerPoolsResponse other) : this() {
       workerPools_ = other.workerPools_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -19367,6 +20584,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkerPoolsResponse Clone() {
       return new ListWorkerPoolsResponse(this);
     }
@@ -19380,6 +20598,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `WorkerPools` for the specified project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.CloudBuild.V1.WorkerPool> WorkerPools {
       get { return workerPools_; }
     }
@@ -19393,6 +20612,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -19401,11 +20621,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListWorkerPoolsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListWorkerPoolsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -19419,6 +20641,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= workerPools_.GetHashCode();
@@ -19430,11 +20653,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -19452,6 +20677,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       workerPools_.WriteTo(ref output, _repeated_workerPools_codec);
       if (NextPageToken.Length != 0) {
@@ -19465,6 +20691,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += workerPools_.CalculateSize(_repeated_workerPools_codec);
@@ -19478,6 +20705,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListWorkerPoolsResponse other) {
       if (other == null) {
         return;
@@ -19490,6 +20718,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -19515,6 +20744,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -19548,19 +20778,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<CreateWorkerPoolOperationMetadata> _parser = new pb::MessageParser<CreateWorkerPoolOperationMetadata>(() => new CreateWorkerPoolOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateWorkerPoolOperationMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[54]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkerPoolOperationMetadata() {
       OnConstruction();
     }
@@ -19568,6 +20802,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkerPoolOperationMetadata(CreateWorkerPoolOperationMetadata other) : this() {
       workerPool_ = other.workerPool_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -19576,6 +20811,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkerPoolOperationMetadata Clone() {
       return new CreateWorkerPoolOperationMetadata(this);
     }
@@ -19589,6 +20825,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WorkerPool {
       get { return workerPool_; }
       set {
@@ -19603,6 +20840,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Time the operation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -19617,6 +20855,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Time the operation was completed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CompleteTime {
       get { return completeTime_; }
       set {
@@ -19625,11 +20864,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateWorkerPoolOperationMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateWorkerPoolOperationMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -19644,6 +20885,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
@@ -19656,11 +20898,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -19685,6 +20929,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (WorkerPool.Length != 0) {
         output.WriteRawTag(10);
@@ -19705,6 +20950,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (WorkerPool.Length != 0) {
@@ -19723,6 +20969,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateWorkerPoolOperationMetadata other) {
       if (other == null) {
         return;
@@ -19746,6 +20993,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -19781,6 +21029,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -19824,19 +21073,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<UpdateWorkerPoolOperationMetadata> _parser = new pb::MessageParser<UpdateWorkerPoolOperationMetadata>(() => new UpdateWorkerPoolOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateWorkerPoolOperationMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[55]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkerPoolOperationMetadata() {
       OnConstruction();
     }
@@ -19844,6 +21097,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkerPoolOperationMetadata(UpdateWorkerPoolOperationMetadata other) : this() {
       workerPool_ = other.workerPool_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -19852,6 +21106,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkerPoolOperationMetadata Clone() {
       return new UpdateWorkerPoolOperationMetadata(this);
     }
@@ -19865,6 +21120,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WorkerPool {
       get { return workerPool_; }
       set {
@@ -19879,6 +21135,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Time the operation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -19893,6 +21150,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Time the operation was completed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CompleteTime {
       get { return completeTime_; }
       set {
@@ -19901,11 +21159,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateWorkerPoolOperationMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateWorkerPoolOperationMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -19920,6 +21180,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
@@ -19932,11 +21193,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -19961,6 +21224,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (WorkerPool.Length != 0) {
         output.WriteRawTag(10);
@@ -19981,6 +21245,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (WorkerPool.Length != 0) {
@@ -19999,6 +21264,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateWorkerPoolOperationMetadata other) {
       if (other == null) {
         return;
@@ -20022,6 +21288,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -20057,6 +21324,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -20100,19 +21368,23 @@ namespace Google.Cloud.CloudBuild.V1 {
     private static readonly pb::MessageParser<DeleteWorkerPoolOperationMetadata> _parser = new pb::MessageParser<DeleteWorkerPoolOperationMetadata>(() => new DeleteWorkerPoolOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteWorkerPoolOperationMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.CloudBuild.V1.CloudbuildReflection.Descriptor.MessageTypes[56]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkerPoolOperationMetadata() {
       OnConstruction();
     }
@@ -20120,6 +21392,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkerPoolOperationMetadata(DeleteWorkerPoolOperationMetadata other) : this() {
       workerPool_ = other.workerPool_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -20128,6 +21401,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkerPoolOperationMetadata Clone() {
       return new DeleteWorkerPoolOperationMetadata(this);
     }
@@ -20141,6 +21415,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// `projects/{project}/locations/{location}/workerPools/{worker_pool}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string WorkerPool {
       get { return workerPool_; }
       set {
@@ -20155,6 +21430,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Time the operation was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -20169,6 +21445,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     /// Time the operation was completed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CompleteTime {
       get { return completeTime_; }
       set {
@@ -20177,11 +21454,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteWorkerPoolOperationMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteWorkerPoolOperationMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -20196,6 +21475,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (WorkerPool.Length != 0) hash ^= WorkerPool.GetHashCode();
@@ -20208,11 +21488,13 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -20237,6 +21519,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (WorkerPool.Length != 0) {
         output.WriteRawTag(10);
@@ -20257,6 +21540,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (WorkerPool.Length != 0) {
@@ -20275,6 +21559,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteWorkerPoolOperationMetadata other) {
       if (other == null) {
         return;
@@ -20298,6 +21583,7 @@ namespace Google.Cloud.CloudBuild.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -20333,6 +21619,7 @@ namespace Google.Cloud.CloudBuild.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

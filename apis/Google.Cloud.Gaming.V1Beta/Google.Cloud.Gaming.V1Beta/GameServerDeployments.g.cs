@@ -136,19 +136,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<ListGameServerDeploymentsRequest> _parser = new pb::MessageParser<ListGameServerDeploymentsRequest>(() => new ListGameServerDeploymentsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListGameServerDeploymentsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListGameServerDeploymentsRequest() {
       OnConstruction();
     }
@@ -156,6 +160,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListGameServerDeploymentsRequest(ListGameServerDeploymentsRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -166,6 +171,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListGameServerDeploymentsRequest Clone() {
       return new ListGameServerDeploymentsRequest(this);
     }
@@ -178,6 +184,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -196,6 +203,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// to determine if there are more GameServerDeployments left to be queried.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -211,6 +219,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -225,6 +234,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Optional. The filter to apply to list results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Filter {
       get { return filter_; }
       set {
@@ -240,6 +250,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// https://cloud.google.com/apis/design/design_patterns#sorting_order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OrderBy {
       get { return orderBy_; }
       set {
@@ -248,11 +259,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListGameServerDeploymentsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListGameServerDeploymentsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -269,6 +282,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -283,11 +297,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -320,6 +336,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -348,6 +365,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -372,6 +390,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListGameServerDeploymentsRequest other) {
       if (other == null) {
         return;
@@ -395,6 +414,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -432,6 +452,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -477,19 +498,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<ListGameServerDeploymentsResponse> _parser = new pb::MessageParser<ListGameServerDeploymentsResponse>(() => new ListGameServerDeploymentsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListGameServerDeploymentsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListGameServerDeploymentsResponse() {
       OnConstruction();
     }
@@ -497,6 +522,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListGameServerDeploymentsResponse(ListGameServerDeploymentsResponse other) : this() {
       gameServerDeployments_ = other.gameServerDeployments_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -505,6 +531,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListGameServerDeploymentsResponse Clone() {
       return new ListGameServerDeploymentsResponse(this);
     }
@@ -518,6 +545,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// The list of game server deployments.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerDeployment> GameServerDeployments {
       get { return gameServerDeployments_; }
     }
@@ -530,6 +558,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// results in the list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -546,16 +575,19 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// List of locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Unreachable {
       get { return unreachable_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListGameServerDeploymentsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListGameServerDeploymentsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -570,6 +602,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= gameServerDeployments_.GetHashCode();
@@ -582,11 +615,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -605,6 +640,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       gameServerDeployments_.WriteTo(ref output, _repeated_gameServerDeployments_codec);
       if (NextPageToken.Length != 0) {
@@ -619,6 +655,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += gameServerDeployments_.CalculateSize(_repeated_gameServerDeployments_codec);
@@ -633,6 +670,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListGameServerDeploymentsResponse other) {
       if (other == null) {
         return;
@@ -646,6 +684,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -675,6 +714,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -712,19 +752,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<GetGameServerDeploymentRequest> _parser = new pb::MessageParser<GetGameServerDeploymentRequest>(() => new GetGameServerDeploymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetGameServerDeploymentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetGameServerDeploymentRequest() {
       OnConstruction();
     }
@@ -732,12 +776,14 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetGameServerDeploymentRequest(GetGameServerDeploymentRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetGameServerDeploymentRequest Clone() {
       return new GetGameServerDeploymentRequest(this);
     }
@@ -752,6 +798,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -760,11 +807,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetGameServerDeploymentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetGameServerDeploymentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -777,6 +826,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -787,11 +837,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -808,6 +860,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -820,6 +873,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -832,6 +886,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetGameServerDeploymentRequest other) {
       if (other == null) {
         return;
@@ -843,6 +898,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -864,6 +920,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -894,19 +951,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<GetGameServerDeploymentRolloutRequest> _parser = new pb::MessageParser<GetGameServerDeploymentRolloutRequest>(() => new GetGameServerDeploymentRolloutRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetGameServerDeploymentRolloutRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetGameServerDeploymentRolloutRequest() {
       OnConstruction();
     }
@@ -914,12 +975,14 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetGameServerDeploymentRolloutRequest(GetGameServerDeploymentRolloutRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetGameServerDeploymentRolloutRequest Clone() {
       return new GetGameServerDeploymentRolloutRequest(this);
     }
@@ -934,6 +997,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}/rollout`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -942,11 +1006,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetGameServerDeploymentRolloutRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetGameServerDeploymentRolloutRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -959,6 +1025,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -969,11 +1036,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -990,6 +1059,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1002,6 +1072,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1014,6 +1085,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetGameServerDeploymentRolloutRequest other) {
       if (other == null) {
         return;
@@ -1025,6 +1097,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1046,6 +1119,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1075,19 +1149,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<CreateGameServerDeploymentRequest> _parser = new pb::MessageParser<CreateGameServerDeploymentRequest>(() => new CreateGameServerDeploymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateGameServerDeploymentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateGameServerDeploymentRequest() {
       OnConstruction();
     }
@@ -1095,6 +1173,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateGameServerDeploymentRequest(CreateGameServerDeploymentRequest other) : this() {
       parent_ = other.parent_;
       deploymentId_ = other.deploymentId_;
@@ -1103,6 +1182,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateGameServerDeploymentRequest Clone() {
       return new CreateGameServerDeploymentRequest(this);
     }
@@ -1115,6 +1195,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/{project}/locations/{location}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -1129,6 +1210,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Required. The ID of the game server delpoyment resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DeploymentId {
       get { return deploymentId_; }
       set {
@@ -1143,6 +1225,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Required. The game server delpoyment resource to be created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Gaming.V1Beta.GameServerDeployment GameServerDeployment {
       get { return gameServerDeployment_; }
       set {
@@ -1151,11 +1234,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateGameServerDeploymentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateGameServerDeploymentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1170,6 +1255,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -1182,11 +1268,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1211,6 +1299,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -1231,6 +1320,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -1249,6 +1339,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateGameServerDeploymentRequest other) {
       if (other == null) {
         return;
@@ -1269,6 +1360,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1301,6 +1393,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1341,19 +1434,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<DeleteGameServerDeploymentRequest> _parser = new pb::MessageParser<DeleteGameServerDeploymentRequest>(() => new DeleteGameServerDeploymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteGameServerDeploymentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteGameServerDeploymentRequest() {
       OnConstruction();
     }
@@ -1361,12 +1458,14 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteGameServerDeploymentRequest(DeleteGameServerDeploymentRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteGameServerDeploymentRequest Clone() {
       return new DeleteGameServerDeploymentRequest(this);
     }
@@ -1380,6 +1479,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1388,11 +1488,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteGameServerDeploymentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteGameServerDeploymentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1405,6 +1507,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1415,11 +1518,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1436,6 +1541,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1448,6 +1554,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1460,6 +1567,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteGameServerDeploymentRequest other) {
       if (other == null) {
         return;
@@ -1471,6 +1579,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1492,6 +1601,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1522,19 +1632,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<UpdateGameServerDeploymentRequest> _parser = new pb::MessageParser<UpdateGameServerDeploymentRequest>(() => new UpdateGameServerDeploymentRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateGameServerDeploymentRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGameServerDeploymentRequest() {
       OnConstruction();
     }
@@ -1542,6 +1656,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGameServerDeploymentRequest(UpdateGameServerDeploymentRequest other) : this() {
       gameServerDeployment_ = other.gameServerDeployment_ != null ? other.gameServerDeployment_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
@@ -1549,6 +1664,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGameServerDeploymentRequest Clone() {
       return new UpdateGameServerDeploymentRequest(this);
     }
@@ -1561,6 +1677,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Gaming.V1Beta.GameServerDeployment GameServerDeployment {
       get { return gameServerDeployment_; }
       set {
@@ -1580,6 +1697,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// // /docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -1588,11 +1706,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateGameServerDeploymentRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateGameServerDeploymentRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1606,6 +1726,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (gameServerDeployment_ != null) hash ^= GameServerDeployment.GetHashCode();
@@ -1617,11 +1738,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1642,6 +1765,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (gameServerDeployment_ != null) {
         output.WriteRawTag(10);
@@ -1658,6 +1782,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (gameServerDeployment_ != null) {
@@ -1673,6 +1798,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateGameServerDeploymentRequest other) {
       if (other == null) {
         return;
@@ -1693,6 +1819,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1724,6 +1851,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1764,19 +1892,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<UpdateGameServerDeploymentRolloutRequest> _parser = new pb::MessageParser<UpdateGameServerDeploymentRolloutRequest>(() => new UpdateGameServerDeploymentRolloutRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateGameServerDeploymentRolloutRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGameServerDeploymentRolloutRequest() {
       OnConstruction();
     }
@@ -1784,6 +1916,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGameServerDeploymentRolloutRequest(UpdateGameServerDeploymentRolloutRequest other) : this() {
       rollout_ = other.rollout_ != null ? other.rollout_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
@@ -1791,6 +1924,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateGameServerDeploymentRolloutRequest Clone() {
       return new UpdateGameServerDeploymentRolloutRequest(this);
     }
@@ -1803,6 +1937,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout Rollout {
       get { return rollout_; }
       set {
@@ -1822,6 +1957,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// // /docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -1830,11 +1966,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateGameServerDeploymentRolloutRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateGameServerDeploymentRolloutRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1848,6 +1986,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (rollout_ != null) hash ^= Rollout.GetHashCode();
@@ -1859,11 +1998,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1884,6 +2025,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rollout_ != null) {
         output.WriteRawTag(10);
@@ -1900,6 +2042,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (rollout_ != null) {
@@ -1915,6 +2058,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateGameServerDeploymentRolloutRequest other) {
       if (other == null) {
         return;
@@ -1935,6 +2079,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1966,6 +2111,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2005,19 +2151,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<FetchDeploymentStateRequest> _parser = new pb::MessageParser<FetchDeploymentStateRequest>(() => new FetchDeploymentStateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FetchDeploymentStateRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FetchDeploymentStateRequest() {
       OnConstruction();
     }
@@ -2025,12 +2175,14 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FetchDeploymentStateRequest(FetchDeploymentStateRequest other) : this() {
       name_ = other.name_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FetchDeploymentStateRequest Clone() {
       return new FetchDeploymentStateRequest(this);
     }
@@ -2044,6 +2196,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/{project}/locations/{location}/gameServerDeployments/{deployment}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2052,11 +2205,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FetchDeploymentStateRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FetchDeploymentStateRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2069,6 +2224,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2079,11 +2235,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2100,6 +2258,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2112,6 +2271,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2124,6 +2284,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FetchDeploymentStateRequest other) {
       if (other == null) {
         return;
@@ -2135,6 +2296,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2156,6 +2318,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2185,19 +2348,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<FetchDeploymentStateResponse> _parser = new pb::MessageParser<FetchDeploymentStateResponse>(() => new FetchDeploymentStateResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FetchDeploymentStateResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FetchDeploymentStateResponse() {
       OnConstruction();
     }
@@ -2205,6 +2372,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FetchDeploymentStateResponse(FetchDeploymentStateResponse other) : this() {
       clusterState_ = other.clusterState_.Clone();
       unavailable_ = other.unavailable_.Clone();
@@ -2212,6 +2380,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FetchDeploymentStateResponse Clone() {
       return new FetchDeploymentStateResponse(this);
     }
@@ -2225,6 +2394,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// The state of the game server deployment in each game server cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Types.DeployedClusterState> ClusterState {
       get { return clusterState_; }
     }
@@ -2238,16 +2408,19 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// List of locations that could not be reached.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Unavailable {
       get { return unavailable_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FetchDeploymentStateResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FetchDeploymentStateResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2261,6 +2434,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= clusterState_.GetHashCode();
@@ -2272,11 +2446,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2291,6 +2467,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       clusterState_.WriteTo(ref output, _repeated_clusterState_codec);
       unavailable_.WriteTo(ref output, _repeated_unavailable_codec);
@@ -2301,6 +2478,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += clusterState_.CalculateSize(_repeated_clusterState_codec);
@@ -2312,6 +2490,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FetchDeploymentStateResponse other) {
       if (other == null) {
         return;
@@ -2322,6 +2501,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2347,6 +2527,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2370,6 +2551,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #region Nested types
     /// <summary>Container for nested types declared in the FetchDeploymentStateResponse message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The game server cluster changes made by the game server deployment.
@@ -2382,19 +2564,23 @@ namespace Google.Cloud.Gaming.V1Beta {
         private static readonly pb::MessageParser<DeployedClusterState> _parser = new pb::MessageParser<DeployedClusterState>(() => new DeployedClusterState());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DeployedClusterState> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Gaming.V1Beta.FetchDeploymentStateResponse.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeployedClusterState() {
           OnConstruction();
         }
@@ -2402,6 +2588,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeployedClusterState(DeployedClusterState other) : this() {
           cluster_ = other.cluster_;
           fleetDetails_ = other.fleetDetails_.Clone();
@@ -2409,6 +2596,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DeployedClusterState Clone() {
           return new DeployedClusterState(this);
         }
@@ -2420,6 +2608,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         /// The name of the cluster.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Cluster {
           get { return cluster_; }
           set {
@@ -2437,16 +2626,19 @@ namespace Google.Cloud.Gaming.V1Beta {
         /// game server cluster.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.DeployedFleetDetails> FleetDetails {
           get { return fleetDetails_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as DeployedClusterState);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(DeployedClusterState other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2460,6 +2652,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Cluster.Length != 0) hash ^= Cluster.GetHashCode();
@@ -2471,11 +2664,13 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2493,6 +2688,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Cluster.Length != 0) {
             output.WriteRawTag(10);
@@ -2506,6 +2702,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Cluster.Length != 0) {
@@ -2519,6 +2716,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(DeployedClusterState other) {
           if (other == null) {
             return;
@@ -2531,6 +2729,7 @@ namespace Google.Cloud.Gaming.V1Beta {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2556,6 +2755,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2594,19 +2794,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<GameServerDeployment> _parser = new pb::MessageParser<GameServerDeployment>(() => new GameServerDeployment());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GameServerDeployment> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerDeployment() {
       OnConstruction();
     }
@@ -2614,6 +2818,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerDeployment(GameServerDeployment other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -2625,6 +2830,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerDeployment Clone() {
       return new GameServerDeployment(this);
     }
@@ -2641,6 +2847,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/my-project/locations/{location}/gameServerDeployments/my-deployment`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2655,6 +2862,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Output only. The creation time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -2669,6 +2877,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Output only. The last-modified time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -2686,6 +2895,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// key-value pair.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -2697,6 +2907,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// ETag of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Etag {
       get { return etag_; }
       set {
@@ -2711,6 +2922,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Human readable description of the game server delpoyment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -2719,11 +2931,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GameServerDeployment);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GameServerDeployment other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2741,6 +2955,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2756,11 +2971,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2794,6 +3011,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2823,6 +3041,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2848,6 +3067,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GameServerDeployment other) {
       if (other == null) {
         return;
@@ -2878,6 +3098,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2925,6 +3146,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2980,19 +3202,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<GameServerConfigOverride> _parser = new pb::MessageParser<GameServerConfigOverride>(() => new GameServerConfigOverride());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GameServerConfigOverride> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerConfigOverride() {
       OnConstruction();
     }
@@ -3000,6 +3226,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerConfigOverride(GameServerConfigOverride other) : this() {
       switch (other.SelectorCase) {
         case SelectorOneofCase.RealmsSelector:
@@ -3017,6 +3244,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerConfigOverride Clone() {
       return new GameServerConfigOverride(this);
     }
@@ -3027,6 +3255,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Selector for choosing applicable realms.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Gaming.V1Beta.RealmSelector RealmsSelector {
       get { return selectorCase_ == SelectorOneofCase.RealmsSelector ? (global::Google.Cloud.Gaming.V1Beta.RealmSelector) selector_ : null; }
       set {
@@ -3041,6 +3270,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// The game server config for this override.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConfigVersion {
       get { return changeCase_ == ChangeOneofCase.ConfigVersion ? (string) change_ : ""; }
       set {
@@ -3057,11 +3287,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
     private SelectorOneofCase selectorCase_ = SelectorOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SelectorOneofCase SelectorCase {
       get { return selectorCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearSelector() {
       selectorCase_ = SelectorOneofCase.None;
       selector_ = null;
@@ -3075,22 +3307,26 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
     private ChangeOneofCase changeCase_ = ChangeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ChangeOneofCase ChangeCase {
       get { return changeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearChange() {
       changeCase_ = ChangeOneofCase.None;
       change_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GameServerConfigOverride);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GameServerConfigOverride other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3106,6 +3342,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (selectorCase_ == SelectorOneofCase.RealmsSelector) hash ^= RealmsSelector.GetHashCode();
@@ -3119,11 +3356,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3144,6 +3383,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (selectorCase_ == SelectorOneofCase.RealmsSelector) {
         output.WriteRawTag(10);
@@ -3160,6 +3400,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (selectorCase_ == SelectorOneofCase.RealmsSelector) {
@@ -3175,6 +3416,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GameServerConfigOverride other) {
       if (other == null) {
         return;
@@ -3198,6 +3440,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3228,6 +3471,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3267,19 +3511,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<GameServerDeploymentRollout> _parser = new pb::MessageParser<GameServerDeploymentRollout>(() => new GameServerDeploymentRollout());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GameServerDeploymentRollout> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerDeploymentRollout() {
       OnConstruction();
     }
@@ -3287,6 +3535,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerDeploymentRollout(GameServerDeploymentRollout other) : this() {
       name_ = other.name_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
@@ -3298,6 +3547,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GameServerDeploymentRollout Clone() {
       return new GameServerDeploymentRollout(this);
     }
@@ -3314,6 +3564,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/my-project/locations/{location}/gameServerDeployments/my-deployment/rollout`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -3328,6 +3579,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Output only. The creation time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -3342,6 +3594,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Output only. The last-modified time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -3359,6 +3612,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// `projects/my-project/locations/global/gameServerDeployments/my-game/configs/my-config`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DefaultGameServerConfig {
       get { return defaultGameServerConfig_; }
       set {
@@ -3377,6 +3631,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// of the list is not processed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Gaming.V1Beta.GameServerConfigOverride> GameServerConfigOverrides {
       get { return gameServerConfigOverrides_; }
     }
@@ -3388,6 +3643,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// ETag of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Etag {
       get { return etag_; }
       set {
@@ -3396,11 +3652,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GameServerDeploymentRollout);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GameServerDeploymentRollout other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3418,6 +3676,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3433,11 +3692,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3471,6 +3732,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -3500,6 +3762,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -3525,6 +3788,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GameServerDeploymentRollout other) {
       if (other == null) {
         return;
@@ -3555,6 +3819,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3602,6 +3867,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3657,19 +3923,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<PreviewGameServerDeploymentRolloutRequest> _parser = new pb::MessageParser<PreviewGameServerDeploymentRolloutRequest>(() => new PreviewGameServerDeploymentRolloutRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PreviewGameServerDeploymentRolloutRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreviewGameServerDeploymentRolloutRequest() {
       OnConstruction();
     }
@@ -3677,6 +3947,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreviewGameServerDeploymentRolloutRequest(PreviewGameServerDeploymentRolloutRequest other) : this() {
       rollout_ = other.rollout_ != null ? other.rollout_.Clone() : null;
       updateMask_ = other.updateMask_ != null ? other.updateMask_.Clone() : null;
@@ -3685,6 +3956,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreviewGameServerDeploymentRolloutRequest Clone() {
       return new PreviewGameServerDeploymentRolloutRequest(this);
     }
@@ -3697,6 +3969,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Only fields specified in update_mask are updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentRollout Rollout {
       get { return rollout_; }
       set {
@@ -3716,6 +3989,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// // /docs/reference/google.protobuf#fieldmask
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.FieldMask UpdateMask {
       get { return updateMask_; }
       set {
@@ -3731,6 +4005,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// immediately after the proposed rollout completes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp PreviewTime {
       get { return previewTime_; }
       set {
@@ -3739,11 +4014,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PreviewGameServerDeploymentRolloutRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PreviewGameServerDeploymentRolloutRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3758,6 +4035,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (rollout_ != null) hash ^= Rollout.GetHashCode();
@@ -3770,11 +4048,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3799,6 +4079,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (rollout_ != null) {
         output.WriteRawTag(10);
@@ -3819,6 +4100,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (rollout_ != null) {
@@ -3837,6 +4119,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PreviewGameServerDeploymentRolloutRequest other) {
       if (other == null) {
         return;
@@ -3863,6 +4146,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3901,6 +4185,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3948,19 +4233,23 @@ namespace Google.Cloud.Gaming.V1Beta {
     private static readonly pb::MessageParser<PreviewGameServerDeploymentRolloutResponse> _parser = new pb::MessageParser<PreviewGameServerDeploymentRolloutResponse>(() => new PreviewGameServerDeploymentRolloutResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PreviewGameServerDeploymentRolloutResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Gaming.V1Beta.GameServerDeploymentsReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreviewGameServerDeploymentRolloutResponse() {
       OnConstruction();
     }
@@ -3968,6 +4257,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreviewGameServerDeploymentRolloutResponse(PreviewGameServerDeploymentRolloutResponse other) : this() {
       unavailable_ = other.unavailable_.Clone();
       etag_ = other.etag_;
@@ -3976,6 +4266,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreviewGameServerDeploymentRolloutResponse Clone() {
       return new PreviewGameServerDeploymentRolloutResponse(this);
     }
@@ -3989,6 +4280,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// Locations that could not be reached on this request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Unavailable {
       get { return unavailable_; }
     }
@@ -4000,6 +4292,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// ETag of the game server deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Etag {
       get { return etag_; }
       set {
@@ -4014,6 +4307,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     /// The target state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Gaming.V1Beta.TargetState TargetState {
       get { return targetState_; }
       set {
@@ -4022,11 +4316,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PreviewGameServerDeploymentRolloutResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PreviewGameServerDeploymentRolloutResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4041,6 +4337,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= unavailable_.GetHashCode();
@@ -4053,11 +4350,13 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4079,6 +4378,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       unavailable_.WriteTo(ref output, _repeated_unavailable_codec);
       if (Etag.Length != 0) {
@@ -4096,6 +4396,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += unavailable_.CalculateSize(_repeated_unavailable_codec);
@@ -4112,6 +4413,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PreviewGameServerDeploymentRolloutResponse other) {
       if (other == null) {
         return;
@@ -4130,6 +4432,7 @@ namespace Google.Cloud.Gaming.V1Beta {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4162,6 +4465,7 @@ namespace Google.Cloud.Gaming.V1Beta {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

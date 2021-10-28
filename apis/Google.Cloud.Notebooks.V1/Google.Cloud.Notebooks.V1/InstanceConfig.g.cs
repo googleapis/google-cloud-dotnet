@@ -54,19 +54,23 @@ namespace Google.Cloud.Notebooks.V1 {
     private static readonly pb::MessageParser<InstanceConfig> _parser = new pb::MessageParser<InstanceConfig>(() => new InstanceConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InstanceConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Notebooks.V1.InstanceConfigReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstanceConfig() {
       OnConstruction();
     }
@@ -74,6 +78,7 @@ namespace Google.Cloud.Notebooks.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstanceConfig(InstanceConfig other) : this() {
       notebookUpgradeSchedule_ = other.notebookUpgradeSchedule_;
       enableHealthMonitoring_ = other.enableHealthMonitoring_;
@@ -81,6 +86,7 @@ namespace Google.Cloud.Notebooks.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstanceConfig Clone() {
       return new InstanceConfig(this);
     }
@@ -93,6 +99,7 @@ namespace Google.Cloud.Notebooks.V1 {
     /// Please follow the [cron format](https://en.wikipedia.org/wiki/Cron).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NotebookUpgradeSchedule {
       get { return notebookUpgradeSchedule_; }
       set {
@@ -107,6 +114,7 @@ namespace Google.Cloud.Notebooks.V1 {
     /// Verifies core internal services are running.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableHealthMonitoring {
       get { return enableHealthMonitoring_; }
       set {
@@ -115,11 +123,13 @@ namespace Google.Cloud.Notebooks.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InstanceConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InstanceConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -133,6 +143,7 @@ namespace Google.Cloud.Notebooks.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (NotebookUpgradeSchedule.Length != 0) hash ^= NotebookUpgradeSchedule.GetHashCode();
@@ -144,11 +155,13 @@ namespace Google.Cloud.Notebooks.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -169,6 +182,7 @@ namespace Google.Cloud.Notebooks.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NotebookUpgradeSchedule.Length != 0) {
         output.WriteRawTag(10);
@@ -185,6 +199,7 @@ namespace Google.Cloud.Notebooks.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (NotebookUpgradeSchedule.Length != 0) {
@@ -200,6 +215,7 @@ namespace Google.Cloud.Notebooks.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InstanceConfig other) {
       if (other == null) {
         return;
@@ -214,6 +230,7 @@ namespace Google.Cloud.Notebooks.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -239,6 +256,7 @@ namespace Google.Cloud.Notebooks.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

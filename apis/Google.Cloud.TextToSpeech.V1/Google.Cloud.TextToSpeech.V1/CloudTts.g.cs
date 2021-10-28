@@ -154,19 +154,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<ListVoicesRequest> _parser = new pb::MessageParser<ListVoicesRequest>(() => new ListVoicesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListVoicesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListVoicesRequest() {
       OnConstruction();
     }
@@ -174,12 +178,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListVoicesRequest(ListVoicesRequest other) : this() {
       languageCode_ = other.languageCode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListVoicesRequest Clone() {
       return new ListVoicesRequest(this);
     }
@@ -198,6 +204,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// supported "yue-\*" voices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -206,11 +213,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListVoicesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListVoicesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -223,6 +232,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
@@ -233,11 +243,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -254,6 +266,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(10);
@@ -266,6 +279,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (LanguageCode.Length != 0) {
@@ -278,6 +292,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListVoicesRequest other) {
       if (other == null) {
         return;
@@ -289,6 +304,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -310,6 +326,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -339,19 +356,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<ListVoicesResponse> _parser = new pb::MessageParser<ListVoicesResponse>(() => new ListVoicesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListVoicesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListVoicesResponse() {
       OnConstruction();
     }
@@ -359,12 +380,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListVoicesResponse(ListVoicesResponse other) : this() {
       voices_ = other.voices_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListVoicesResponse Clone() {
       return new ListVoicesResponse(this);
     }
@@ -378,16 +401,19 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// The list of voices.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.TextToSpeech.V1.Voice> Voices {
       get { return voices_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListVoicesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListVoicesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -400,6 +426,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= voices_.GetHashCode();
@@ -410,11 +437,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -428,6 +457,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       voices_.WriteTo(ref output, _repeated_voices_codec);
       if (_unknownFields != null) {
@@ -437,6 +467,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += voices_.CalculateSize(_repeated_voices_codec);
@@ -447,6 +478,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListVoicesResponse other) {
       if (other == null) {
         return;
@@ -456,6 +488,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -477,6 +510,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -506,19 +540,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<Voice> _parser = new pb::MessageParser<Voice>(() => new Voice());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Voice> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Voice() {
       OnConstruction();
     }
@@ -526,6 +564,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Voice(Voice other) : this() {
       languageCodes_ = other.languageCodes_.Clone();
       name_ = other.name_;
@@ -535,6 +574,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Voice Clone() {
       return new Voice(this);
     }
@@ -550,6 +590,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// "en-US", "es-419", "cmn-tw").
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> LanguageCodes {
       get { return languageCodes_; }
     }
@@ -561,6 +602,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// The name of this voice.  Each distinct voice has a unique name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -575,6 +617,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// The gender of this voice.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender SsmlGender {
       get { return ssmlGender_; }
       set {
@@ -589,6 +632,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// The natural sample rate (in hertz) for this voice.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int NaturalSampleRateHertz {
       get { return naturalSampleRateHertz_; }
       set {
@@ -597,11 +641,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Voice);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Voice other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -617,6 +663,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= languageCodes_.GetHashCode();
@@ -630,11 +677,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -660,6 +709,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       languageCodes_.WriteTo(ref output, _repeated_languageCodes_codec);
       if (Name.Length != 0) {
@@ -681,6 +731,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += languageCodes_.CalculateSize(_repeated_languageCodes_codec);
@@ -700,6 +751,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Voice other) {
       if (other == null) {
         return;
@@ -718,6 +770,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -751,6 +804,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -792,19 +846,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<SynthesizeSpeechRequest> _parser = new pb::MessageParser<SynthesizeSpeechRequest>(() => new SynthesizeSpeechRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SynthesizeSpeechRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesizeSpeechRequest() {
       OnConstruction();
     }
@@ -812,6 +870,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesizeSpeechRequest(SynthesizeSpeechRequest other) : this() {
       input_ = other.input_ != null ? other.input_.Clone() : null;
       voice_ = other.voice_ != null ? other.voice_.Clone() : null;
@@ -820,6 +879,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesizeSpeechRequest Clone() {
       return new SynthesizeSpeechRequest(this);
     }
@@ -831,6 +891,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// Required. The Synthesizer requires either plain text or SSML as input.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1.SynthesisInput Input {
       get { return input_; }
       set {
@@ -845,6 +906,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// Required. The desired voice of the synthesized audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1.VoiceSelectionParams Voice {
       get { return voice_; }
       set {
@@ -859,6 +921,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// Required. The configuration of the synthesized audio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1.AudioConfig AudioConfig {
       get { return audioConfig_; }
       set {
@@ -867,11 +930,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SynthesizeSpeechRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SynthesizeSpeechRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -886,6 +951,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (input_ != null) hash ^= Input.GetHashCode();
@@ -898,11 +964,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -927,6 +995,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (input_ != null) {
         output.WriteRawTag(10);
@@ -947,6 +1016,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (input_ != null) {
@@ -965,6 +1035,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SynthesizeSpeechRequest other) {
       if (other == null) {
         return;
@@ -991,6 +1062,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1029,6 +1101,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1078,19 +1151,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<SynthesisInput> _parser = new pb::MessageParser<SynthesisInput>(() => new SynthesisInput());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SynthesisInput> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesisInput() {
       OnConstruction();
     }
@@ -1098,6 +1175,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesisInput(SynthesisInput other) : this() {
       switch (other.InputSourceCase) {
         case InputSourceOneofCase.Text:
@@ -1112,6 +1190,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesisInput Clone() {
       return new SynthesisInput(this);
     }
@@ -1122,6 +1201,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// The raw text to be synthesized.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Text {
       get { return inputSourceCase_ == InputSourceOneofCase.Text ? (string) inputSource_ : ""; }
       set {
@@ -1139,6 +1219,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// [SSML](https://cloud.google.com/text-to-speech/docs/ssml).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Ssml {
       get { return inputSourceCase_ == InputSourceOneofCase.Ssml ? (string) inputSource_ : ""; }
       set {
@@ -1156,22 +1237,26 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
     private InputSourceOneofCase inputSourceCase_ = InputSourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InputSourceOneofCase InputSourceCase {
       get { return inputSourceCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearInputSource() {
       inputSourceCase_ = InputSourceOneofCase.None;
       inputSource_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SynthesisInput);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SynthesisInput other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1186,6 +1271,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (inputSourceCase_ == InputSourceOneofCase.Text) hash ^= Text.GetHashCode();
@@ -1198,11 +1284,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1223,6 +1311,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (inputSourceCase_ == InputSourceOneofCase.Text) {
         output.WriteRawTag(10);
@@ -1239,6 +1328,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (inputSourceCase_ == InputSourceOneofCase.Text) {
@@ -1254,6 +1344,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SynthesisInput other) {
       if (other == null) {
         return;
@@ -1271,6 +1362,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1296,6 +1388,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1329,19 +1422,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<VoiceSelectionParams> _parser = new pb::MessageParser<VoiceSelectionParams>(() => new VoiceSelectionParams());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VoiceSelectionParams> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VoiceSelectionParams() {
       OnConstruction();
     }
@@ -1349,6 +1446,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VoiceSelectionParams(VoiceSelectionParams other) : this() {
       languageCode_ = other.languageCode_;
       name_ = other.name_;
@@ -1357,6 +1455,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VoiceSelectionParams Clone() {
       return new VoiceSelectionParams(this);
     }
@@ -1378,6 +1477,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// Bokmal) instead of "no" (Norwegian)".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LanguageCode {
       get { return languageCode_; }
       set {
@@ -1393,6 +1493,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// voice based on the other parameters such as language_code and gender.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1411,6 +1512,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// substitute a voice with a different gender rather than failing the request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender SsmlGender {
       get { return ssmlGender_; }
       set {
@@ -1419,11 +1521,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VoiceSelectionParams);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VoiceSelectionParams other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1438,6 +1542,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (LanguageCode.Length != 0) hash ^= LanguageCode.GetHashCode();
@@ -1450,11 +1555,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1479,6 +1586,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (LanguageCode.Length != 0) {
         output.WriteRawTag(10);
@@ -1499,6 +1607,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (LanguageCode.Length != 0) {
@@ -1517,6 +1626,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VoiceSelectionParams other) {
       if (other == null) {
         return;
@@ -1534,6 +1644,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1563,6 +1674,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1600,19 +1712,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<AudioConfig> _parser = new pb::MessageParser<AudioConfig>(() => new AudioConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AudioConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioConfig() {
       OnConstruction();
     }
@@ -1620,6 +1736,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioConfig(AudioConfig other) : this() {
       audioEncoding_ = other.audioEncoding_;
       speakingRate_ = other.speakingRate_;
@@ -1631,6 +1748,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioConfig Clone() {
       return new AudioConfig(this);
     }
@@ -1642,6 +1760,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// Required. The format of the audio byte stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.TextToSpeech.V1.AudioEncoding AudioEncoding {
       get { return audioEncoding_; }
       set {
@@ -1659,6 +1778,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// speed. Any other values &lt; 0.25 or > 4.0 will return an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double SpeakingRate {
       get { return speakingRate_; }
       set {
@@ -1675,6 +1795,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// semitones from the original pitch.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Pitch {
       get { return pitch_; }
       set {
@@ -1696,6 +1817,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// increase in loudness for any value greater than that.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double VolumeGainDb {
       get { return volumeGainDb_; }
       set {
@@ -1716,6 +1838,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// [google.rpc.Code.INVALID_ARGUMENT][].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SampleRateHertz {
       get { return sampleRateHertz_; }
       set {
@@ -1737,16 +1860,19 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// current supported profile ids.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> EffectsProfileId {
       get { return effectsProfileId_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AudioConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AudioConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1764,6 +1890,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (AudioEncoding != global::Google.Cloud.TextToSpeech.V1.AudioEncoding.Unspecified) hash ^= AudioEncoding.GetHashCode();
@@ -1779,11 +1906,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1817,6 +1946,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AudioEncoding != global::Google.Cloud.TextToSpeech.V1.AudioEncoding.Unspecified) {
         output.WriteRawTag(8);
@@ -1846,6 +1976,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (AudioEncoding != global::Google.Cloud.TextToSpeech.V1.AudioEncoding.Unspecified) {
@@ -1871,6 +2002,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AudioConfig other) {
       if (other == null) {
         return;
@@ -1895,6 +2027,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1936,6 +2069,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1985,19 +2119,23 @@ namespace Google.Cloud.TextToSpeech.V1 {
     private static readonly pb::MessageParser<SynthesizeSpeechResponse> _parser = new pb::MessageParser<SynthesizeSpeechResponse>(() => new SynthesizeSpeechResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SynthesizeSpeechResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.TextToSpeech.V1.CloudTtsReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesizeSpeechResponse() {
       OnConstruction();
     }
@@ -2005,12 +2143,14 @@ namespace Google.Cloud.TextToSpeech.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesizeSpeechResponse(SynthesizeSpeechResponse other) : this() {
       audioContent_ = other.audioContent_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SynthesizeSpeechResponse Clone() {
       return new SynthesizeSpeechResponse(this);
     }
@@ -2026,6 +2166,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// whereas JSON representations use base64.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString AudioContent {
       get { return audioContent_; }
       set {
@@ -2034,11 +2175,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SynthesizeSpeechResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SynthesizeSpeechResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2051,6 +2194,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (AudioContent.Length != 0) hash ^= AudioContent.GetHashCode();
@@ -2061,11 +2205,13 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2082,6 +2228,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AudioContent.Length != 0) {
         output.WriteRawTag(10);
@@ -2094,6 +2241,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (AudioContent.Length != 0) {
@@ -2106,6 +2254,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SynthesizeSpeechResponse other) {
       if (other == null) {
         return;
@@ -2117,6 +2266,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2138,6 +2288,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

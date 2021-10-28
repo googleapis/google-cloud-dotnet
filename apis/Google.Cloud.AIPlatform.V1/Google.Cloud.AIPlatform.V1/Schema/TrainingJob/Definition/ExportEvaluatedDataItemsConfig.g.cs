@@ -61,19 +61,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     private static readonly pb::MessageParser<ExportEvaluatedDataItemsConfig> _parser = new pb::MessageParser<ExportEvaluatedDataItemsConfig>(() => new ExportEvaluatedDataItemsConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ExportEvaluatedDataItemsConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.ExportEvaluatedDataItemsConfigReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExportEvaluatedDataItemsConfig() {
       OnConstruction();
     }
@@ -81,6 +85,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExportEvaluatedDataItemsConfig(ExportEvaluatedDataItemsConfig other) : this() {
       destinationBigqueryUri_ = other.destinationBigqueryUri_;
       overrideExistingTable_ = other.overrideExistingTable_;
@@ -88,6 +93,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExportEvaluatedDataItemsConfig Clone() {
       return new ExportEvaluatedDataItemsConfig(this);
     }
@@ -104,6 +110,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// &lt;project_id>:export_evaluated_examples_&lt;model_name>_&lt;yyyy_MM_dd'T'HH_mm_ss_SSS'Z'>.evaluated_examples
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string DestinationBigqueryUri {
       get { return destinationBigqueryUri_; }
       set {
@@ -120,6 +127,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// exists, then the export operation fails.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool OverrideExistingTable {
       get { return overrideExistingTable_; }
       set {
@@ -128,11 +136,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ExportEvaluatedDataItemsConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ExportEvaluatedDataItemsConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -146,6 +156,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (DestinationBigqueryUri.Length != 0) hash ^= DestinationBigqueryUri.GetHashCode();
@@ -157,11 +168,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -182,6 +195,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (DestinationBigqueryUri.Length != 0) {
         output.WriteRawTag(10);
@@ -198,6 +212,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (DestinationBigqueryUri.Length != 0) {
@@ -213,6 +228,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ExportEvaluatedDataItemsConfig other) {
       if (other == null) {
         return;
@@ -227,6 +243,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -252,6 +269,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

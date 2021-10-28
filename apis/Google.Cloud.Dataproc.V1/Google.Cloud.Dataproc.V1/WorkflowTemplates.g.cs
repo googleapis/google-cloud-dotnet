@@ -240,19 +240,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<WorkflowTemplate> _parser = new pb::MessageParser<WorkflowTemplate>(() => new WorkflowTemplate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkflowTemplate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowTemplate() {
       OnConstruction();
     }
@@ -260,6 +264,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowTemplate(WorkflowTemplate other) : this() {
       id_ = other.id_;
       name_ = other.name_;
@@ -275,6 +280,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowTemplate Clone() {
       return new WorkflowTemplate(this);
     }
@@ -283,6 +289,7 @@ namespace Google.Cloud.Dataproc.V1 {
     public const int IdFieldNumber = 2;
     private string id_ = "";
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -306,6 +313,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -328,6 +336,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// then returns it as part of the `UpdateWorkflowTemplate` request.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Version {
       get { return version_; }
       set {
@@ -342,6 +351,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The time template was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -356,6 +366,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The time template was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -383,6 +394,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// No more than 32 labels can be associated with a template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -394,6 +406,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Required. WorkflowTemplate scheduling information.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.WorkflowTemplatePlacement Placement {
       get { return placement_; }
       set {
@@ -410,6 +423,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Required. The Directed Acyclic Graph of Jobs to submit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.OrderedJob> Jobs {
       get { return jobs_; }
     }
@@ -425,6 +439,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// instantiated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.TemplateParameter> Parameters {
       get { return parameters_; }
     }
@@ -445,6 +460,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// the cluster is deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration DagTimeout {
       get { return dagTimeout_; }
       set {
@@ -453,11 +469,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkflowTemplate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkflowTemplate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -479,6 +497,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -498,11 +517,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -546,6 +567,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -585,6 +607,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -618,6 +641,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkflowTemplate other) {
       if (other == null) {
         return;
@@ -662,6 +686,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -731,6 +756,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -810,19 +836,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<WorkflowTemplatePlacement> _parser = new pb::MessageParser<WorkflowTemplatePlacement>(() => new WorkflowTemplatePlacement());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkflowTemplatePlacement> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowTemplatePlacement() {
       OnConstruction();
     }
@@ -830,6 +860,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowTemplatePlacement(WorkflowTemplatePlacement other) : this() {
       switch (other.PlacementCase) {
         case PlacementOneofCase.ManagedCluster:
@@ -844,6 +875,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowTemplatePlacement Clone() {
       return new WorkflowTemplatePlacement(this);
     }
@@ -854,6 +886,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// A cluster that is managed by the workflow.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.ManagedCluster ManagedCluster {
       get { return placementCase_ == PlacementOneofCase.ManagedCluster ? (global::Google.Cloud.Dataproc.V1.ManagedCluster) placement_ : null; }
       set {
@@ -871,6 +904,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// The selector is evaluated at the time each job is submitted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.ClusterSelector ClusterSelector {
       get { return placementCase_ == PlacementOneofCase.ClusterSelector ? (global::Google.Cloud.Dataproc.V1.ClusterSelector) placement_ : null; }
       set {
@@ -888,22 +922,26 @@ namespace Google.Cloud.Dataproc.V1 {
     }
     private PlacementOneofCase placementCase_ = PlacementOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PlacementOneofCase PlacementCase {
       get { return placementCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearPlacement() {
       placementCase_ = PlacementOneofCase.None;
       placement_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkflowTemplatePlacement);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkflowTemplatePlacement other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -918,6 +956,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (placementCase_ == PlacementOneofCase.ManagedCluster) hash ^= ManagedCluster.GetHashCode();
@@ -930,11 +969,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -955,6 +996,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (placementCase_ == PlacementOneofCase.ManagedCluster) {
         output.WriteRawTag(10);
@@ -971,6 +1013,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (placementCase_ == PlacementOneofCase.ManagedCluster) {
@@ -986,6 +1029,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkflowTemplatePlacement other) {
       if (other == null) {
         return;
@@ -1009,6 +1053,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1044,6 +1089,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1087,19 +1133,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<ManagedCluster> _parser = new pb::MessageParser<ManagedCluster>(() => new ManagedCluster());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ManagedCluster> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ManagedCluster() {
       OnConstruction();
     }
@@ -1107,6 +1157,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ManagedCluster(ManagedCluster other) : this() {
       clusterName_ = other.clusterName_;
       config_ = other.config_ != null ? other.config_.Clone() : null;
@@ -1115,6 +1166,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ManagedCluster Clone() {
       return new ManagedCluster(this);
     }
@@ -1131,6 +1183,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// hyphen. Must consist of between 2 and 35 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterName {
       get { return clusterName_; }
       set {
@@ -1145,6 +1198,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Required. The cluster configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.ClusterConfig Config {
       get { return config_; }
       set {
@@ -1170,16 +1224,19 @@ namespace Google.Cloud.Dataproc.V1 {
     /// No more than 32 labels can be associated with a given cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ManagedCluster);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ManagedCluster other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1194,6 +1251,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
@@ -1206,11 +1264,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1232,6 +1292,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ClusterName.Length != 0) {
         output.WriteRawTag(18);
@@ -1249,6 +1310,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ClusterName.Length != 0) {
@@ -1265,6 +1327,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ManagedCluster other) {
       if (other == null) {
         return;
@@ -1283,6 +1346,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1315,6 +1379,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1355,19 +1420,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<ClusterSelector> _parser = new pb::MessageParser<ClusterSelector>(() => new ClusterSelector());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ClusterSelector> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClusterSelector() {
       OnConstruction();
     }
@@ -1375,6 +1444,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClusterSelector(ClusterSelector other) : this() {
       zone_ = other.zone_;
       clusterLabels_ = other.clusterLabels_.Clone();
@@ -1382,6 +1452,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClusterSelector Clone() {
       return new ClusterSelector(this);
     }
@@ -1397,6 +1468,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// is used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Zone {
       get { return zone_; }
       set {
@@ -1414,16 +1486,19 @@ namespace Google.Cloud.Dataproc.V1 {
     /// to match.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> ClusterLabels {
       get { return clusterLabels_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ClusterSelector);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ClusterSelector other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1437,6 +1512,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Zone.Length != 0) hash ^= Zone.GetHashCode();
@@ -1448,11 +1524,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1470,6 +1548,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Zone.Length != 0) {
         output.WriteRawTag(10);
@@ -1483,6 +1562,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Zone.Length != 0) {
@@ -1496,6 +1576,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ClusterSelector other) {
       if (other == null) {
         return;
@@ -1508,6 +1589,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1533,6 +1615,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1566,19 +1649,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<OrderedJob> _parser = new pb::MessageParser<OrderedJob>(() => new OrderedJob());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OrderedJob> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OrderedJob() {
       OnConstruction();
     }
@@ -1586,6 +1673,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OrderedJob(OrderedJob other) : this() {
       stepId_ = other.stepId_;
       labels_ = other.labels_.Clone();
@@ -1622,6 +1710,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OrderedJob Clone() {
       return new OrderedJob(this);
     }
@@ -1643,6 +1732,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// or hyphen. Must consist of between 3 and 50 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StepId {
       get { return stepId_; }
       set {
@@ -1656,6 +1746,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a Hadoop job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.HadoopJob HadoopJob {
       get { return jobTypeCase_ == JobTypeOneofCase.HadoopJob ? (global::Google.Cloud.Dataproc.V1.HadoopJob) jobType_ : null; }
       set {
@@ -1670,6 +1761,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a Spark job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.SparkJob SparkJob {
       get { return jobTypeCase_ == JobTypeOneofCase.SparkJob ? (global::Google.Cloud.Dataproc.V1.SparkJob) jobType_ : null; }
       set {
@@ -1684,6 +1776,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a PySpark job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.PySparkJob PysparkJob {
       get { return jobTypeCase_ == JobTypeOneofCase.PysparkJob ? (global::Google.Cloud.Dataproc.V1.PySparkJob) jobType_ : null; }
       set {
@@ -1698,6 +1791,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a Hive job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.HiveJob HiveJob {
       get { return jobTypeCase_ == JobTypeOneofCase.HiveJob ? (global::Google.Cloud.Dataproc.V1.HiveJob) jobType_ : null; }
       set {
@@ -1712,6 +1806,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a Pig job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.PigJob PigJob {
       get { return jobTypeCase_ == JobTypeOneofCase.PigJob ? (global::Google.Cloud.Dataproc.V1.PigJob) jobType_ : null; }
       set {
@@ -1726,6 +1821,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a SparkR job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.SparkRJob SparkRJob {
       get { return jobTypeCase_ == JobTypeOneofCase.SparkRJob ? (global::Google.Cloud.Dataproc.V1.SparkRJob) jobType_ : null; }
       set {
@@ -1740,6 +1836,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a SparkSql job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.SparkSqlJob SparkSqlJob {
       get { return jobTypeCase_ == JobTypeOneofCase.SparkSqlJob ? (global::Google.Cloud.Dataproc.V1.SparkSqlJob) jobType_ : null; }
       set {
@@ -1754,6 +1851,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job is a Presto job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.PrestoJob PrestoJob {
       get { return jobTypeCase_ == JobTypeOneofCase.PrestoJob ? (global::Google.Cloud.Dataproc.V1.PrestoJob) jobType_ : null; }
       set {
@@ -1780,6 +1878,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// No more than 32 labels can be associated with a given job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -1791,6 +1890,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Job scheduling configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.JobScheduling Scheduling {
       get { return scheduling_; }
       set {
@@ -1808,6 +1908,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// If not specified, the job will start at the beginning of workflow.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> PrerequisiteStepIds {
       get { return prerequisiteStepIds_; }
     }
@@ -1827,22 +1928,26 @@ namespace Google.Cloud.Dataproc.V1 {
     }
     private JobTypeOneofCase jobTypeCase_ = JobTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobTypeOneofCase JobTypeCase {
       get { return jobTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearJobType() {
       jobTypeCase_ = JobTypeOneofCase.None;
       jobType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OrderedJob);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OrderedJob other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1867,6 +1972,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (StepId.Length != 0) hash ^= StepId.GetHashCode();
@@ -1889,11 +1995,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1948,6 +2056,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (StepId.Length != 0) {
         output.WriteRawTag(10);
@@ -1998,6 +2107,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (StepId.Length != 0) {
@@ -2039,6 +2149,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OrderedJob other) {
       if (other == null) {
         return;
@@ -2109,6 +2220,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2217,6 +2329,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2341,19 +2454,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<TemplateParameter> _parser = new pb::MessageParser<TemplateParameter>(() => new TemplateParameter());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TemplateParameter> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TemplateParameter() {
       OnConstruction();
     }
@@ -2361,6 +2478,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TemplateParameter(TemplateParameter other) : this() {
       name_ = other.name_;
       fields_ = other.fields_.Clone();
@@ -2370,6 +2488,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TemplateParameter Clone() {
       return new TemplateParameter(this);
     }
@@ -2387,6 +2506,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// 40 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -2446,6 +2566,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// - jobs['step-id'].sparkJob.args
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Fields {
       get { return fields_; }
     }
@@ -2458,6 +2579,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Must not exceed 1024 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -2472,6 +2594,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Validation rules to be applied to this parameter's value.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.ParameterValidation Validation {
       get { return validation_; }
       set {
@@ -2480,11 +2603,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TemplateParameter);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TemplateParameter other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2500,6 +2625,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -2513,11 +2639,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2543,6 +2671,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -2564,6 +2693,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -2583,6 +2713,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TemplateParameter other) {
       if (other == null) {
         return;
@@ -2604,6 +2735,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2640,6 +2772,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2684,19 +2817,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<ParameterValidation> _parser = new pb::MessageParser<ParameterValidation>(() => new ParameterValidation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ParameterValidation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ParameterValidation() {
       OnConstruction();
     }
@@ -2704,6 +2841,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ParameterValidation(ParameterValidation other) : this() {
       switch (other.ValidationTypeCase) {
         case ValidationTypeOneofCase.Regex:
@@ -2718,6 +2856,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ParameterValidation Clone() {
       return new ParameterValidation(this);
     }
@@ -2728,6 +2867,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Validation based on regular expressions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.RegexValidation Regex {
       get { return validationTypeCase_ == ValidationTypeOneofCase.Regex ? (global::Google.Cloud.Dataproc.V1.RegexValidation) validationType_ : null; }
       set {
@@ -2742,6 +2882,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Validation based on a list of allowed values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.ValueValidation Values {
       get { return validationTypeCase_ == ValidationTypeOneofCase.Values ? (global::Google.Cloud.Dataproc.V1.ValueValidation) validationType_ : null; }
       set {
@@ -2759,22 +2900,26 @@ namespace Google.Cloud.Dataproc.V1 {
     }
     private ValidationTypeOneofCase validationTypeCase_ = ValidationTypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValidationTypeOneofCase ValidationTypeCase {
       get { return validationTypeCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearValidationType() {
       validationTypeCase_ = ValidationTypeOneofCase.None;
       validationType_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ParameterValidation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ParameterValidation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2789,6 +2934,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (validationTypeCase_ == ValidationTypeOneofCase.Regex) hash ^= Regex.GetHashCode();
@@ -2801,11 +2947,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2826,6 +2974,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (validationTypeCase_ == ValidationTypeOneofCase.Regex) {
         output.WriteRawTag(10);
@@ -2842,6 +2991,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (validationTypeCase_ == ValidationTypeOneofCase.Regex) {
@@ -2857,6 +3007,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ParameterValidation other) {
       if (other == null) {
         return;
@@ -2880,6 +3031,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2915,6 +3067,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2958,19 +3111,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<RegexValidation> _parser = new pb::MessageParser<RegexValidation>(() => new RegexValidation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RegexValidation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegexValidation() {
       OnConstruction();
     }
@@ -2978,12 +3135,14 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegexValidation(RegexValidation other) : this() {
       regexes_ = other.regexes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegexValidation Clone() {
       return new RegexValidation(this);
     }
@@ -2999,16 +3158,19 @@ namespace Google.Cloud.Dataproc.V1 {
     /// matches are not sufficient).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Regexes {
       get { return regexes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RegexValidation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RegexValidation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3021,6 +3183,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= regexes_.GetHashCode();
@@ -3031,11 +3194,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3049,6 +3214,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       regexes_.WriteTo(ref output, _repeated_regexes_codec);
       if (_unknownFields != null) {
@@ -3058,6 +3224,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += regexes_.CalculateSize(_repeated_regexes_codec);
@@ -3068,6 +3235,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RegexValidation other) {
       if (other == null) {
         return;
@@ -3077,6 +3245,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3098,6 +3267,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3127,19 +3297,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<ValueValidation> _parser = new pb::MessageParser<ValueValidation>(() => new ValueValidation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ValueValidation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueValidation() {
       OnConstruction();
     }
@@ -3147,12 +3321,14 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueValidation(ValueValidation other) : this() {
       values_ = other.values_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ValueValidation Clone() {
       return new ValueValidation(this);
     }
@@ -3166,16 +3342,19 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Required. List of allowed values for the parameter.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Values {
       get { return values_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ValueValidation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ValueValidation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3188,6 +3367,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= values_.GetHashCode();
@@ -3198,11 +3378,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3216,6 +3398,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       values_.WriteTo(ref output, _repeated_values_codec);
       if (_unknownFields != null) {
@@ -3225,6 +3408,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += values_.CalculateSize(_repeated_values_codec);
@@ -3235,6 +3419,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ValueValidation other) {
       if (other == null) {
         return;
@@ -3244,6 +3429,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3265,6 +3451,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3294,19 +3481,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<WorkflowMetadata> _parser = new pb::MessageParser<WorkflowMetadata>(() => new WorkflowMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkflowMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowMetadata() {
       OnConstruction();
     }
@@ -3314,6 +3505,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowMetadata(WorkflowMetadata other) : this() {
       template_ = other.template_;
       version_ = other.version_;
@@ -3333,6 +3525,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowMetadata Clone() {
       return new WorkflowMetadata(this);
     }
@@ -3353,6 +3546,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Template {
       get { return template_; }
       set {
@@ -3368,6 +3562,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// workflow instantiation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Version {
       get { return version_; }
       set {
@@ -3382,6 +3577,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The create cluster operation metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.ClusterOperation CreateCluster {
       get { return createCluster_; }
       set {
@@ -3396,6 +3592,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The workflow graph.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.WorkflowGraph Graph {
       get { return graph_; }
       set {
@@ -3410,6 +3607,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The delete cluster operation metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.ClusterOperation DeleteCluster {
       get { return deleteCluster_; }
       set {
@@ -3424,6 +3622,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The workflow state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.WorkflowMetadata.Types.State State {
       get { return state_; }
       set {
@@ -3438,6 +3637,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The name of the target cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterName {
       get { return clusterName_; }
       set {
@@ -3454,6 +3654,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Map from parameter names to values that were used for those parameters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Parameters {
       get { return parameters_; }
     }
@@ -3465,6 +3666,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. Workflow start time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -3479,6 +3681,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. Workflow end time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -3493,6 +3696,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The UUID of target cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterUuid {
       get { return clusterUuid_; }
       set {
@@ -3509,6 +3713,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// duration](https://developers.google.com/protocol-buffers/docs/proto3#json)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration DagTimeout {
       get { return dagTimeout_; }
       set {
@@ -3524,6 +3729,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// begins.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DagStartTime {
       get { return dagStartTime_; }
       set {
@@ -3538,6 +3744,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. DAG end time, only set for workflows with [dag_timeout][google.cloud.dataproc.v1.WorkflowMetadata.dag_timeout] when DAG ends.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DagEndTime {
       get { return dagEndTime_; }
       set {
@@ -3546,11 +3753,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkflowMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkflowMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3576,6 +3785,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Template.Length != 0) hash ^= Template.GetHashCode();
@@ -3599,11 +3809,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3669,6 +3881,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Template.Length != 0) {
         output.WriteRawTag(10);
@@ -3730,6 +3943,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Template.Length != 0) {
@@ -3779,6 +3993,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkflowMetadata other) {
       if (other == null) {
         return;
@@ -3851,6 +4066,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3948,6 +4164,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4043,6 +4260,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the WorkflowMetadata message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The operation state.
@@ -4082,19 +4300,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<ClusterOperation> _parser = new pb::MessageParser<ClusterOperation>(() => new ClusterOperation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ClusterOperation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClusterOperation() {
       OnConstruction();
     }
@@ -4102,6 +4324,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClusterOperation(ClusterOperation other) : this() {
       operationId_ = other.operationId_;
       error_ = other.error_;
@@ -4110,6 +4333,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ClusterOperation Clone() {
       return new ClusterOperation(this);
     }
@@ -4121,6 +4345,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The id of the cluster operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OperationId {
       get { return operationId_; }
       set {
@@ -4135,6 +4360,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. Error, if operation failed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Error {
       get { return error_; }
       set {
@@ -4149,6 +4375,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. Indicates the operation is done.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Done {
       get { return done_; }
       set {
@@ -4157,11 +4384,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ClusterOperation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ClusterOperation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4176,6 +4405,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (OperationId.Length != 0) hash ^= OperationId.GetHashCode();
@@ -4188,11 +4418,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4217,6 +4449,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OperationId.Length != 0) {
         output.WriteRawTag(10);
@@ -4237,6 +4470,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (OperationId.Length != 0) {
@@ -4255,6 +4489,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ClusterOperation other) {
       if (other == null) {
         return;
@@ -4272,6 +4507,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4301,6 +4537,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4338,19 +4575,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<WorkflowGraph> _parser = new pb::MessageParser<WorkflowGraph>(() => new WorkflowGraph());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkflowGraph> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowGraph() {
       OnConstruction();
     }
@@ -4358,12 +4599,14 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowGraph(WorkflowGraph other) : this() {
       nodes_ = other.nodes_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowGraph Clone() {
       return new WorkflowGraph(this);
     }
@@ -4377,16 +4620,19 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The workflow nodes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.WorkflowNode> Nodes {
       get { return nodes_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkflowGraph);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkflowGraph other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4399,6 +4645,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= nodes_.GetHashCode();
@@ -4409,11 +4656,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4427,6 +4676,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       nodes_.WriteTo(ref output, _repeated_nodes_codec);
       if (_unknownFields != null) {
@@ -4436,6 +4686,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += nodes_.CalculateSize(_repeated_nodes_codec);
@@ -4446,6 +4697,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkflowGraph other) {
       if (other == null) {
         return;
@@ -4455,6 +4707,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4476,6 +4729,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4505,19 +4759,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<WorkflowNode> _parser = new pb::MessageParser<WorkflowNode>(() => new WorkflowNode());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<WorkflowNode> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowNode() {
       OnConstruction();
     }
@@ -4525,6 +4783,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowNode(WorkflowNode other) : this() {
       stepId_ = other.stepId_;
       prerequisiteStepIds_ = other.prerequisiteStepIds_.Clone();
@@ -4535,6 +4794,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public WorkflowNode Clone() {
       return new WorkflowNode(this);
     }
@@ -4546,6 +4806,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The name of the node.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StepId {
       get { return stepId_; }
       set {
@@ -4562,6 +4823,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. Node's prerequisite nodes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> PrerequisiteStepIds {
       get { return prerequisiteStepIds_; }
     }
@@ -4573,6 +4835,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The job id; populated after the node enters RUNNING state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string JobId {
       get { return jobId_; }
       set {
@@ -4587,6 +4850,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The node state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.WorkflowNode.Types.NodeState State {
       get { return state_; }
       set {
@@ -4601,6 +4865,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. The error detail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Error {
       get { return error_; }
       set {
@@ -4609,11 +4874,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as WorkflowNode);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(WorkflowNode other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4630,6 +4897,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (StepId.Length != 0) hash ^= StepId.GetHashCode();
@@ -4644,11 +4912,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4678,6 +4948,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (StepId.Length != 0) {
         output.WriteRawTag(10);
@@ -4703,6 +4974,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (StepId.Length != 0) {
@@ -4725,6 +4997,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(WorkflowNode other) {
       if (other == null) {
         return;
@@ -4746,6 +5019,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4783,6 +5057,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4818,6 +5093,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the WorkflowNode message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The workflow node state.
@@ -4866,19 +5142,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<CreateWorkflowTemplateRequest> _parser = new pb::MessageParser<CreateWorkflowTemplateRequest>(() => new CreateWorkflowTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CreateWorkflowTemplateRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkflowTemplateRequest() {
       OnConstruction();
     }
@@ -4886,6 +5166,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkflowTemplateRequest(CreateWorkflowTemplateRequest other) : this() {
       parent_ = other.parent_;
       template_ = other.template_ != null ? other.template_.Clone() : null;
@@ -4893,6 +5174,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CreateWorkflowTemplateRequest Clone() {
       return new CreateWorkflowTemplateRequest(this);
     }
@@ -4913,6 +5195,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -4927,6 +5210,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Required. The Dataproc workflow template to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.WorkflowTemplate Template {
       get { return template_; }
       set {
@@ -4935,11 +5219,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CreateWorkflowTemplateRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CreateWorkflowTemplateRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4953,6 +5239,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -4964,11 +5251,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4989,6 +5278,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -5005,6 +5295,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -5020,6 +5311,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CreateWorkflowTemplateRequest other) {
       if (other == null) {
         return;
@@ -5037,6 +5329,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5065,6 +5358,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5101,19 +5395,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<GetWorkflowTemplateRequest> _parser = new pb::MessageParser<GetWorkflowTemplateRequest>(() => new GetWorkflowTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GetWorkflowTemplateRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWorkflowTemplateRequest() {
       OnConstruction();
     }
@@ -5121,6 +5419,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWorkflowTemplateRequest(GetWorkflowTemplateRequest other) : this() {
       name_ = other.name_;
       version_ = other.version_;
@@ -5128,6 +5427,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GetWorkflowTemplateRequest Clone() {
       return new GetWorkflowTemplateRequest(this);
     }
@@ -5148,6 +5448,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5165,6 +5466,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// If unspecified, retrieves the current version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Version {
       get { return version_; }
       set {
@@ -5173,11 +5475,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GetWorkflowTemplateRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GetWorkflowTemplateRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5191,6 +5495,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -5202,11 +5507,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5227,6 +5534,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -5243,6 +5551,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -5258,6 +5567,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GetWorkflowTemplateRequest other) {
       if (other == null) {
         return;
@@ -5272,6 +5582,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5297,6 +5608,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5330,19 +5642,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<InstantiateWorkflowTemplateRequest> _parser = new pb::MessageParser<InstantiateWorkflowTemplateRequest>(() => new InstantiateWorkflowTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InstantiateWorkflowTemplateRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstantiateWorkflowTemplateRequest() {
       OnConstruction();
     }
@@ -5350,6 +5666,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstantiateWorkflowTemplateRequest(InstantiateWorkflowTemplateRequest other) : this() {
       name_ = other.name_;
       version_ = other.version_;
@@ -5359,6 +5676,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstantiateWorkflowTemplateRequest Clone() {
       return new InstantiateWorkflowTemplateRequest(this);
     }
@@ -5379,6 +5697,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5398,6 +5717,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// workflow template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Version {
       get { return version_; }
       set {
@@ -5420,6 +5740,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestId {
       get { return requestId_; }
       set {
@@ -5437,16 +5758,19 @@ namespace Google.Cloud.Dataproc.V1 {
     /// parameters. Values may not exceed 1000 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Parameters {
       get { return parameters_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InstantiateWorkflowTemplateRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InstantiateWorkflowTemplateRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5462,6 +5786,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -5475,11 +5800,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5505,6 +5832,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -5526,6 +5854,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -5545,6 +5874,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InstantiateWorkflowTemplateRequest other) {
       if (other == null) {
         return;
@@ -5563,6 +5893,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5596,6 +5927,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5637,19 +5969,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<InstantiateInlineWorkflowTemplateRequest> _parser = new pb::MessageParser<InstantiateInlineWorkflowTemplateRequest>(() => new InstantiateInlineWorkflowTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InstantiateInlineWorkflowTemplateRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstantiateInlineWorkflowTemplateRequest() {
       OnConstruction();
     }
@@ -5657,6 +5993,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstantiateInlineWorkflowTemplateRequest(InstantiateInlineWorkflowTemplateRequest other) : this() {
       parent_ = other.parent_;
       template_ = other.template_ != null ? other.template_.Clone() : null;
@@ -5665,6 +6002,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstantiateInlineWorkflowTemplateRequest Clone() {
       return new InstantiateInlineWorkflowTemplateRequest(this);
     }
@@ -5685,6 +6023,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -5699,6 +6038,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Required. The workflow template to instantiate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.WorkflowTemplate Template {
       get { return template_; }
       set {
@@ -5721,6 +6061,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// underscores (_), and hyphens (-). The maximum length is 40 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RequestId {
       get { return requestId_; }
       set {
@@ -5729,11 +6070,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InstantiateInlineWorkflowTemplateRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InstantiateInlineWorkflowTemplateRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5748,6 +6091,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -5760,11 +6104,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5789,6 +6135,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -5809,6 +6156,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -5827,6 +6175,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InstantiateInlineWorkflowTemplateRequest other) {
       if (other == null) {
         return;
@@ -5847,6 +6196,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5879,6 +6229,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5919,19 +6270,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<UpdateWorkflowTemplateRequest> _parser = new pb::MessageParser<UpdateWorkflowTemplateRequest>(() => new UpdateWorkflowTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<UpdateWorkflowTemplateRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkflowTemplateRequest() {
       OnConstruction();
     }
@@ -5939,12 +6294,14 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkflowTemplateRequest(UpdateWorkflowTemplateRequest other) : this() {
       template_ = other.template_ != null ? other.template_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public UpdateWorkflowTemplateRequest Clone() {
       return new UpdateWorkflowTemplateRequest(this);
     }
@@ -5958,6 +6315,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// The `template.version` field must match the current version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Dataproc.V1.WorkflowTemplate Template {
       get { return template_; }
       set {
@@ -5966,11 +6324,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as UpdateWorkflowTemplateRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(UpdateWorkflowTemplateRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5983,6 +6343,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (template_ != null) hash ^= Template.GetHashCode();
@@ -5993,11 +6354,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6014,6 +6377,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (template_ != null) {
         output.WriteRawTag(10);
@@ -6026,6 +6390,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (template_ != null) {
@@ -6038,6 +6403,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(UpdateWorkflowTemplateRequest other) {
       if (other == null) {
         return;
@@ -6052,6 +6418,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6076,6 +6443,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6108,19 +6476,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<ListWorkflowTemplatesRequest> _parser = new pb::MessageParser<ListWorkflowTemplatesRequest>(() => new ListWorkflowTemplatesRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListWorkflowTemplatesRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkflowTemplatesRequest() {
       OnConstruction();
     }
@@ -6128,6 +6500,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkflowTemplatesRequest(ListWorkflowTemplatesRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -6136,6 +6509,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkflowTemplatesRequest Clone() {
       return new ListWorkflowTemplatesRequest(this);
     }
@@ -6156,6 +6530,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -6170,6 +6545,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. The maximum number of results to return in each response.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -6185,6 +6561,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -6193,11 +6570,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListWorkflowTemplatesRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListWorkflowTemplatesRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6212,6 +6591,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -6224,11 +6604,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6253,6 +6635,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -6273,6 +6656,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -6291,6 +6675,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListWorkflowTemplatesRequest other) {
       if (other == null) {
         return;
@@ -6308,6 +6693,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6337,6 +6723,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6374,19 +6761,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<ListWorkflowTemplatesResponse> _parser = new pb::MessageParser<ListWorkflowTemplatesResponse>(() => new ListWorkflowTemplatesResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListWorkflowTemplatesResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkflowTemplatesResponse() {
       OnConstruction();
     }
@@ -6394,6 +6785,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkflowTemplatesResponse(ListWorkflowTemplatesResponse other) : this() {
       templates_ = other.templates_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -6401,6 +6793,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListWorkflowTemplatesResponse Clone() {
       return new ListWorkflowTemplatesResponse(this);
     }
@@ -6414,6 +6807,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Output only. WorkflowTemplates list.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Dataproc.V1.WorkflowTemplate> Templates {
       get { return templates_; }
     }
@@ -6427,6 +6821,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// page_token in a subsequent &lt;code>ListWorkflowTemplatesRequest&lt;/code>.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -6435,11 +6830,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListWorkflowTemplatesResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListWorkflowTemplatesResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6453,6 +6850,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= templates_.GetHashCode();
@@ -6464,11 +6862,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6486,6 +6886,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       templates_.WriteTo(ref output, _repeated_templates_codec);
       if (NextPageToken.Length != 0) {
@@ -6499,6 +6900,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += templates_.CalculateSize(_repeated_templates_codec);
@@ -6512,6 +6914,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListWorkflowTemplatesResponse other) {
       if (other == null) {
         return;
@@ -6524,6 +6927,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6549,6 +6953,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6584,19 +6989,23 @@ namespace Google.Cloud.Dataproc.V1 {
     private static readonly pb::MessageParser<DeleteWorkflowTemplateRequest> _parser = new pb::MessageParser<DeleteWorkflowTemplateRequest>(() => new DeleteWorkflowTemplateRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeleteWorkflowTemplateRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Dataproc.V1.WorkflowTemplatesReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkflowTemplateRequest() {
       OnConstruction();
     }
@@ -6604,6 +7013,7 @@ namespace Google.Cloud.Dataproc.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkflowTemplateRequest(DeleteWorkflowTemplateRequest other) : this() {
       name_ = other.name_;
       version_ = other.version_;
@@ -6611,6 +7021,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeleteWorkflowTemplateRequest Clone() {
       return new DeleteWorkflowTemplateRequest(this);
     }
@@ -6631,6 +7042,7 @@ namespace Google.Cloud.Dataproc.V1 {
     ///   `projects/{project_id}/locations/{location}/workflowTemplates/{template_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -6647,6 +7059,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// specified version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Version {
       get { return version_; }
       set {
@@ -6655,11 +7068,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeleteWorkflowTemplateRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeleteWorkflowTemplateRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6673,6 +7088,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -6684,11 +7100,13 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6709,6 +7127,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -6725,6 +7144,7 @@ namespace Google.Cloud.Dataproc.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -6740,6 +7160,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteWorkflowTemplateRequest other) {
       if (other == null) {
         return;
@@ -6754,6 +7175,7 @@ namespace Google.Cloud.Dataproc.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6779,6 +7201,7 @@ namespace Google.Cloud.Dataproc.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

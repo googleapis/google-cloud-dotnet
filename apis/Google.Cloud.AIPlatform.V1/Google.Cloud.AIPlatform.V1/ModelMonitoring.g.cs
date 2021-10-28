@@ -127,19 +127,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<ModelMonitoringObjectiveConfig> _parser = new pb::MessageParser<ModelMonitoringObjectiveConfig>(() => new ModelMonitoringObjectiveConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ModelMonitoringObjectiveConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringObjectiveConfig() {
       OnConstruction();
     }
@@ -147,6 +151,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringObjectiveConfig(ModelMonitoringObjectiveConfig other) : this() {
       trainingDataset_ = other.trainingDataset_ != null ? other.trainingDataset_.Clone() : null;
       trainingPredictionSkewDetectionConfig_ = other.trainingPredictionSkewDetectionConfig_ != null ? other.trainingPredictionSkewDetectionConfig_.Clone() : null;
@@ -156,6 +161,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringObjectiveConfig Clone() {
       return new ModelMonitoringObjectiveConfig(this);
     }
@@ -168,6 +174,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// TrainingPredictionSkewDetectionConfig is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingDataset TrainingDataset {
       get { return trainingDataset_; }
       set {
@@ -182,6 +189,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The config for skew between training data and prediction data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig TrainingPredictionSkewDetectionConfig {
       get { return trainingPredictionSkewDetectionConfig_; }
       set {
@@ -196,6 +204,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The config for drift of prediction data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig PredictionDriftDetectionConfig {
       get { return predictionDriftDetectionConfig_; }
       set {
@@ -210,6 +219,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// The config for integrated with Explainable AI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig ExplanationConfig {
       get { return explanationConfig_; }
       set {
@@ -218,11 +228,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ModelMonitoringObjectiveConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ModelMonitoringObjectiveConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -238,6 +250,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (trainingDataset_ != null) hash ^= TrainingDataset.GetHashCode();
@@ -251,11 +264,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -284,6 +299,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (trainingDataset_ != null) {
         output.WriteRawTag(10);
@@ -308,6 +324,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (trainingDataset_ != null) {
@@ -329,6 +346,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ModelMonitoringObjectiveConfig other) {
       if (other == null) {
         return;
@@ -361,6 +379,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -406,6 +425,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -449,6 +469,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ModelMonitoringObjectiveConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Training Dataset information.
@@ -461,19 +482,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<TrainingDataset> _parser = new pb::MessageParser<TrainingDataset>(() => new TrainingDataset());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TrainingDataset> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingDataset() {
           OnConstruction();
         }
@@ -481,6 +506,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingDataset(TrainingDataset other) : this() {
           dataFormat_ = other.dataFormat_;
           targetField_ = other.targetField_;
@@ -501,6 +527,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingDataset Clone() {
           return new TrainingDataset(this);
         }
@@ -511,6 +538,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The resource name of the Dataset used to train this Model.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
           get { return dataSourceCase_ == DataSourceOneofCase.Dataset ? (string) dataSource_ : ""; }
           set {
@@ -526,6 +554,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// this Model.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.GcsSource GcsSource {
           get { return dataSourceCase_ == DataSourceOneofCase.GcsSource ? (global::Google.Cloud.AIPlatform.V1.GcsSource) dataSource_ : null; }
           set {
@@ -541,6 +570,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Model.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.BigQuerySource BigquerySource {
           get { return dataSourceCase_ == DataSourceOneofCase.BigquerySource ? (global::Google.Cloud.AIPlatform.V1.BigQuerySource) dataSource_ : null; }
           set {
@@ -564,6 +594,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The source file is a CSV file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DataFormat {
           get { return dataFormat_; }
           set {
@@ -580,6 +611,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// training data.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string TargetField {
           get { return targetField_; }
           set {
@@ -595,6 +627,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// If not set, we process the whole dataset.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.SamplingStrategy LoggingSamplingStrategy {
           get { return loggingSamplingStrategy_; }
           set {
@@ -612,22 +645,26 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
         private DataSourceOneofCase dataSourceCase_ = DataSourceOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DataSourceOneofCase DataSourceCase {
           get { return dataSourceCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearDataSource() {
           dataSourceCase_ = DataSourceOneofCase.None;
           dataSource_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as TrainingDataset);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(TrainingDataset other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -646,6 +683,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (dataSourceCase_ == DataSourceOneofCase.Dataset) hash ^= Dataset.GetHashCode();
@@ -662,11 +700,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -703,6 +743,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (DataFormat.Length != 0) {
             output.WriteRawTag(18);
@@ -735,6 +776,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (dataSourceCase_ == DataSourceOneofCase.Dataset) {
@@ -762,6 +804,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(TrainingDataset other) {
           if (other == null) {
             return;
@@ -800,6 +843,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -854,6 +898,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -917,19 +962,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<TrainingPredictionSkewDetectionConfig> _parser = new pb::MessageParser<TrainingPredictionSkewDetectionConfig>(() => new TrainingPredictionSkewDetectionConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TrainingPredictionSkewDetectionConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingPredictionSkewDetectionConfig() {
           OnConstruction();
         }
@@ -937,6 +986,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingPredictionSkewDetectionConfig(TrainingPredictionSkewDetectionConfig other) : this() {
           skewThresholds_ = other.skewThresholds_.Clone();
           attributionScoreSkewThresholds_ = other.attributionScoreSkewThresholds_.Clone();
@@ -944,6 +994,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TrainingPredictionSkewDetectionConfig Clone() {
           return new TrainingPredictionSkewDetectionConfig(this);
         }
@@ -960,6 +1011,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// between the training and prediction feature.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ThresholdConfig> SkewThresholds {
           get { return skewThresholds_; }
         }
@@ -975,16 +1027,19 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// feature.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ThresholdConfig> AttributionScoreSkewThresholds {
           get { return attributionScoreSkewThresholds_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as TrainingPredictionSkewDetectionConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(TrainingPredictionSkewDetectionConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -998,6 +1053,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= SkewThresholds.GetHashCode();
@@ -1009,11 +1065,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1028,6 +1086,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           skewThresholds_.WriteTo(ref output, _map_skewThresholds_codec);
           attributionScoreSkewThresholds_.WriteTo(ref output, _map_attributionScoreSkewThresholds_codec);
@@ -1038,6 +1097,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += skewThresholds_.CalculateSize(_map_skewThresholds_codec);
@@ -1049,6 +1109,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(TrainingPredictionSkewDetectionConfig other) {
           if (other == null) {
             return;
@@ -1059,6 +1120,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1084,6 +1146,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1117,19 +1180,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<PredictionDriftDetectionConfig> _parser = new pb::MessageParser<PredictionDriftDetectionConfig>(() => new PredictionDriftDetectionConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<PredictionDriftDetectionConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PredictionDriftDetectionConfig() {
           OnConstruction();
         }
@@ -1137,6 +1204,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PredictionDriftDetectionConfig(PredictionDriftDetectionConfig other) : this() {
           driftThresholds_ = other.driftThresholds_.Clone();
           attributionScoreDriftThresholds_ = other.attributionScoreDriftThresholds_.Clone();
@@ -1144,6 +1212,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public PredictionDriftDetectionConfig Clone() {
           return new PredictionDriftDetectionConfig(this);
         }
@@ -1160,6 +1229,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// between different time windws.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ThresholdConfig> DriftThresholds {
           get { return driftThresholds_; }
         }
@@ -1174,16 +1244,19 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// against attribution score distance between different time windows.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.ThresholdConfig> AttributionScoreDriftThresholds {
           get { return attributionScoreDriftThresholds_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as PredictionDriftDetectionConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(PredictionDriftDetectionConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1197,6 +1270,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= DriftThresholds.GetHashCode();
@@ -1208,11 +1282,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1227,6 +1303,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           driftThresholds_.WriteTo(ref output, _map_driftThresholds_codec);
           attributionScoreDriftThresholds_.WriteTo(ref output, _map_attributionScoreDriftThresholds_codec);
@@ -1237,6 +1314,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += driftThresholds_.CalculateSize(_map_driftThresholds_codec);
@@ -1248,6 +1326,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(PredictionDriftDetectionConfig other) {
           if (other == null) {
             return;
@@ -1258,6 +1337,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1283,6 +1363,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1317,19 +1398,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<ExplanationConfig> _parser = new pb::MessageParser<ExplanationConfig>(() => new ExplanationConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<ExplanationConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExplanationConfig() {
           OnConstruction();
         }
@@ -1337,6 +1422,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExplanationConfig(ExplanationConfig other) : this() {
           enableFeatureAttributes_ = other.enableFeatureAttributes_;
           explanationBaseline_ = other.explanationBaseline_ != null ? other.explanationBaseline_.Clone() : null;
@@ -1344,6 +1430,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public ExplanationConfig Clone() {
           return new ExplanationConfig(this);
         }
@@ -1357,6 +1444,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// explain response and do the skew/drift detection for them.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool EnableFeatureAttributes {
           get { return enableFeatureAttributes_; }
           set {
@@ -1371,6 +1459,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Predictions generated by the BatchPredictionJob using baseline dataset.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline ExplanationBaseline {
           get { return explanationBaseline_; }
           set {
@@ -1379,11 +1468,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as ExplanationConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(ExplanationConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1397,6 +1488,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (EnableFeatureAttributes != false) hash ^= EnableFeatureAttributes.GetHashCode();
@@ -1408,11 +1500,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1433,6 +1527,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (EnableFeatureAttributes != false) {
             output.WriteRawTag(8);
@@ -1449,6 +1544,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (EnableFeatureAttributes != false) {
@@ -1464,6 +1560,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(ExplanationConfig other) {
           if (other == null) {
             return;
@@ -1481,6 +1578,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1509,6 +1607,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1535,6 +1634,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the ExplanationConfig message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Output from [BatchPredictionJob][google.cloud.aiplatform.v1.BatchPredictionJob] for Model Monitoring baseline dataset,
@@ -1548,19 +1648,23 @@ namespace Google.Cloud.AIPlatform.V1 {
             private static readonly pb::MessageParser<ExplanationBaseline> _parser = new pb::MessageParser<ExplanationBaseline>(() => new ExplanationBaseline());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<ExplanationBaseline> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ExplanationBaseline() {
               OnConstruction();
             }
@@ -1568,6 +1672,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ExplanationBaseline(ExplanationBaseline other) : this() {
               predictionFormat_ = other.predictionFormat_;
               switch (other.DestinationCase) {
@@ -1583,6 +1688,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public ExplanationBaseline Clone() {
               return new ExplanationBaseline(this);
             }
@@ -1593,6 +1699,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// Cloud Storage location for BatchExplain output.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.AIPlatform.V1.GcsDestination Gcs {
               get { return destinationCase_ == DestinationOneofCase.Gcs ? (global::Google.Cloud.AIPlatform.V1.GcsDestination) destination_ : null; }
               set {
@@ -1607,6 +1714,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// BigQuery location for BatchExplain output.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.AIPlatform.V1.BigQueryDestination Bigquery {
               get { return destinationCase_ == DestinationOneofCase.Bigquery ? (global::Google.Cloud.AIPlatform.V1.BigQueryDestination) destination_ : null; }
               set {
@@ -1622,6 +1730,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// The storage format of the predictions generated BatchPrediction job.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Types.PredictionFormat PredictionFormat {
               get { return predictionFormat_; }
               set {
@@ -1638,22 +1747,26 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             private DestinationOneofCase destinationCase_ = DestinationOneofCase.None;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public DestinationOneofCase DestinationCase {
               get { return destinationCase_; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void ClearDestination() {
               destinationCase_ = DestinationOneofCase.None;
               destination_ = null;
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as ExplanationBaseline);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(ExplanationBaseline other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -1669,6 +1782,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (destinationCase_ == DestinationOneofCase.Gcs) hash ^= Gcs.GetHashCode();
@@ -1682,11 +1796,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -1711,6 +1827,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (PredictionFormat != global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Types.PredictionFormat.Unspecified) {
                 output.WriteRawTag(8);
@@ -1731,6 +1848,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (destinationCase_ == DestinationOneofCase.Gcs) {
@@ -1749,6 +1867,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(ExplanationBaseline other) {
               if (other == null) {
                 return;
@@ -1775,6 +1894,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -1814,6 +1934,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {
@@ -1851,6 +1972,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             #region Nested types
             /// <summary>Container for nested types declared in the ExplanationBaseline message type.</summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static partial class Types {
               /// <summary>
               /// The storage format of the predictions generated BatchPrediction job.
@@ -1896,19 +2018,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<ModelMonitoringAlertConfig> _parser = new pb::MessageParser<ModelMonitoringAlertConfig>(() => new ModelMonitoringAlertConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ModelMonitoringAlertConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringAlertConfig() {
       OnConstruction();
     }
@@ -1916,6 +2042,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringAlertConfig(ModelMonitoringAlertConfig other) : this() {
       switch (other.AlertCase) {
         case AlertOneofCase.EmailAlertConfig:
@@ -1927,6 +2054,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringAlertConfig Clone() {
       return new ModelMonitoringAlertConfig(this);
     }
@@ -1937,6 +2065,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Email alert config.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig EmailAlertConfig {
       get { return alertCase_ == AlertOneofCase.EmailAlertConfig ? (global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig) alert_ : null; }
       set {
@@ -1953,22 +2082,26 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
     private AlertOneofCase alertCase_ = AlertOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AlertOneofCase AlertCase {
       get { return alertCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAlert() {
       alertCase_ = AlertOneofCase.None;
       alert_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ModelMonitoringAlertConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ModelMonitoringAlertConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1982,6 +2115,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (alertCase_ == AlertOneofCase.EmailAlertConfig) hash ^= EmailAlertConfig.GetHashCode();
@@ -1993,11 +2127,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2014,6 +2150,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (alertCase_ == AlertOneofCase.EmailAlertConfig) {
         output.WriteRawTag(10);
@@ -2026,6 +2163,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (alertCase_ == AlertOneofCase.EmailAlertConfig) {
@@ -2038,6 +2176,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ModelMonitoringAlertConfig other) {
       if (other == null) {
         return;
@@ -2055,6 +2194,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2081,6 +2221,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2105,6 +2246,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the ModelMonitoringAlertConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The config for email alert.
@@ -2117,19 +2259,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<EmailAlertConfig> _parser = new pb::MessageParser<EmailAlertConfig>(() => new EmailAlertConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<EmailAlertConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EmailAlertConfig() {
           OnConstruction();
         }
@@ -2137,12 +2283,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EmailAlertConfig(EmailAlertConfig other) : this() {
           userEmails_ = other.userEmails_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public EmailAlertConfig Clone() {
           return new EmailAlertConfig(this);
         }
@@ -2156,16 +2304,19 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The email addresses to send the alert.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<string> UserEmails {
           get { return userEmails_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as EmailAlertConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(EmailAlertConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2178,6 +2329,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= userEmails_.GetHashCode();
@@ -2188,11 +2340,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2206,6 +2360,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           userEmails_.WriteTo(ref output, _repeated_userEmails_codec);
           if (_unknownFields != null) {
@@ -2215,6 +2370,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += userEmails_.CalculateSize(_repeated_userEmails_codec);
@@ -2225,6 +2381,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(EmailAlertConfig other) {
           if (other == null) {
             return;
@@ -2234,6 +2391,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2255,6 +2413,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -2290,19 +2449,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<ThresholdConfig> _parser = new pb::MessageParser<ThresholdConfig>(() => new ThresholdConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ThresholdConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThresholdConfig() {
       OnConstruction();
     }
@@ -2310,6 +2473,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThresholdConfig(ThresholdConfig other) : this() {
       switch (other.ThresholdCase) {
         case ThresholdOneofCase.Value:
@@ -2321,6 +2485,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThresholdConfig Clone() {
       return new ThresholdConfig(this);
     }
@@ -2338,6 +2503,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Otherwise no alert will be triggered for that feature.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public double Value {
       get { return thresholdCase_ == ThresholdOneofCase.Value ? (double) threshold_ : 0D; }
       set {
@@ -2354,22 +2520,26 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
     private ThresholdOneofCase thresholdCase_ = ThresholdOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ThresholdOneofCase ThresholdCase {
       get { return thresholdCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearThreshold() {
       thresholdCase_ = ThresholdOneofCase.None;
       threshold_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ThresholdConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ThresholdConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2383,6 +2553,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (thresholdCase_ == ThresholdOneofCase.Value) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Value);
@@ -2394,11 +2565,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2415,6 +2588,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (thresholdCase_ == ThresholdOneofCase.Value) {
         output.WriteRawTag(9);
@@ -2427,6 +2601,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (thresholdCase_ == ThresholdOneofCase.Value) {
@@ -2439,6 +2614,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ThresholdConfig other) {
       if (other == null) {
         return;
@@ -2453,6 +2629,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2474,6 +2651,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2505,19 +2683,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<SamplingStrategy> _parser = new pb::MessageParser<SamplingStrategy>(() => new SamplingStrategy());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SamplingStrategy> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SamplingStrategy() {
       OnConstruction();
     }
@@ -2525,12 +2707,14 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SamplingStrategy(SamplingStrategy other) : this() {
       randomSampleConfig_ = other.randomSampleConfig_ != null ? other.randomSampleConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SamplingStrategy Clone() {
       return new SamplingStrategy(this);
     }
@@ -2542,6 +2726,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Random sample config. Will support more sampling strategies later.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Types.RandomSampleConfig RandomSampleConfig {
       get { return randomSampleConfig_; }
       set {
@@ -2550,11 +2735,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SamplingStrategy);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SamplingStrategy other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2567,6 +2754,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (randomSampleConfig_ != null) hash ^= RandomSampleConfig.GetHashCode();
@@ -2577,11 +2765,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2598,6 +2788,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (randomSampleConfig_ != null) {
         output.WriteRawTag(10);
@@ -2610,6 +2801,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (randomSampleConfig_ != null) {
@@ -2622,6 +2814,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SamplingStrategy other) {
       if (other == null) {
         return;
@@ -2636,6 +2829,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2660,6 +2854,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2682,6 +2877,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the SamplingStrategy message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Requests are randomly selected.
@@ -2694,19 +2890,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<RandomSampleConfig> _parser = new pb::MessageParser<RandomSampleConfig>(() => new RandomSampleConfig());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<RandomSampleConfig> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RandomSampleConfig() {
           OnConstruction();
         }
@@ -2714,12 +2914,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RandomSampleConfig(RandomSampleConfig other) : this() {
           sampleRate_ = other.sampleRate_;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public RandomSampleConfig Clone() {
           return new RandomSampleConfig(this);
         }
@@ -2731,6 +2933,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Sample rate (0, 1]
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double SampleRate {
           get { return sampleRate_; }
           set {
@@ -2739,11 +2942,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as RandomSampleConfig);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(RandomSampleConfig other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -2756,6 +2961,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (SampleRate != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(SampleRate);
@@ -2766,11 +2972,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -2787,6 +2995,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (SampleRate != 0D) {
             output.WriteRawTag(9);
@@ -2799,6 +3008,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (SampleRate != 0D) {
@@ -2811,6 +3021,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(RandomSampleConfig other) {
           if (other == null) {
             return;
@@ -2822,6 +3033,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -2843,6 +3055,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {

@@ -60,19 +60,23 @@ namespace Google.Cloud.SecurityCenter.V1 {
     private static readonly pb::MessageParser<NotificationMessage> _parser = new pb::MessageParser<NotificationMessage>(() => new NotificationMessage());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NotificationMessage> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.SecurityCenter.V1.NotificationMessageReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationMessage() {
       OnConstruction();
     }
@@ -80,6 +84,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationMessage(NotificationMessage other) : this() {
       notificationConfigName_ = other.notificationConfigName_;
       resource_ = other.resource_ != null ? other.resource_.Clone() : null;
@@ -93,6 +98,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationMessage Clone() {
       return new NotificationMessage(this);
     }
@@ -104,6 +110,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// Name of the notification config that generated current notification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NotificationConfigName {
       get { return notificationConfigName_; }
       set {
@@ -118,6 +125,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// populated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.SecurityCenter.V1.Finding Finding {
       get { return eventCase_ == EventOneofCase.Finding ? (global::Google.Cloud.SecurityCenter.V1.Finding) event_ : null; }
       set {
@@ -133,6 +141,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// The Cloud resource tied to this notification's Finding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.SecurityCenter.V1.Resource Resource {
       get { return resource_; }
       set {
@@ -148,22 +157,26 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
     private EventOneofCase eventCase_ = EventOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EventOneofCase EventCase {
       get { return eventCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearEvent() {
       eventCase_ = EventOneofCase.None;
       event_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NotificationMessage);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NotificationMessage other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -179,6 +192,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (NotificationConfigName.Length != 0) hash ^= NotificationConfigName.GetHashCode();
@@ -192,11 +206,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -221,6 +237,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (NotificationConfigName.Length != 0) {
         output.WriteRawTag(10);
@@ -241,6 +258,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (NotificationConfigName.Length != 0) {
@@ -259,6 +277,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NotificationMessage other) {
       if (other == null) {
         return;
@@ -285,6 +304,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -322,6 +342,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

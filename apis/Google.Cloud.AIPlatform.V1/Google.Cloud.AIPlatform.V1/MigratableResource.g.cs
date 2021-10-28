@@ -98,19 +98,23 @@ namespace Google.Cloud.AIPlatform.V1 {
     private static readonly pb::MessageParser<MigratableResource> _parser = new pb::MessageParser<MigratableResource>(() => new MigratableResource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MigratableResource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.MigratableResourceReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigratableResource() {
       OnConstruction();
     }
@@ -118,6 +122,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigratableResource(MigratableResource other) : this() {
       lastMigrateTime_ = other.lastMigrateTime_ != null ? other.lastMigrateTime_.Clone() : null;
       lastUpdateTime_ = other.lastUpdateTime_ != null ? other.lastUpdateTime_.Clone() : null;
@@ -140,6 +145,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MigratableResource Clone() {
       return new MigratableResource(this);
     }
@@ -150,6 +156,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Represents one Version in ml.googleapis.com.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.MlEngineModelVersion MlEngineModelVersion {
       get { return resourceCase_ == ResourceOneofCase.MlEngineModelVersion ? (global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.MlEngineModelVersion) resource_ : null; }
       set {
@@ -164,6 +171,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Represents one Model in automl.googleapis.com.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.AutomlModel AutomlModel {
       get { return resourceCase_ == ResourceOneofCase.AutomlModel ? (global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.AutomlModel) resource_ : null; }
       set {
@@ -178,6 +186,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Represents one Dataset in automl.googleapis.com.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.AutomlDataset AutomlDataset {
       get { return resourceCase_ == ResourceOneofCase.AutomlDataset ? (global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.AutomlDataset) resource_ : null; }
       set {
@@ -192,6 +201,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Represents one Dataset in datalabeling.googleapis.com.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.DataLabelingDataset DataLabelingDataset {
       get { return resourceCase_ == ResourceOneofCase.DataLabelingDataset ? (global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.DataLabelingDataset) resource_ : null; }
       set {
@@ -209,6 +219,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// MigratableResource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastMigrateTime {
       get { return lastMigrateTime_; }
       set {
@@ -223,6 +234,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Output only. Timestamp when this MigratableResource was last updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastUpdateTime {
       get { return lastUpdateTime_; }
       set {
@@ -241,22 +253,26 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
     private ResourceOneofCase resourceCase_ = ResourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResourceOneofCase ResourceCase {
       get { return resourceCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearResource() {
       resourceCase_ = ResourceOneofCase.None;
       resource_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MigratableResource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MigratableResource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -275,6 +291,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (resourceCase_ == ResourceOneofCase.MlEngineModelVersion) hash ^= MlEngineModelVersion.GetHashCode();
@@ -291,11 +308,13 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -332,6 +351,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (resourceCase_ == ResourceOneofCase.MlEngineModelVersion) {
         output.WriteRawTag(10);
@@ -364,6 +384,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (resourceCase_ == ResourceOneofCase.MlEngineModelVersion) {
@@ -391,6 +412,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MigratableResource other) {
       if (other == null) {
         return;
@@ -438,6 +460,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -505,6 +528,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -570,6 +594,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the MigratableResource message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Represents one model Version in ml.googleapis.com.
@@ -582,19 +607,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<MlEngineModelVersion> _parser = new pb::MessageParser<MlEngineModelVersion>(() => new MlEngineModelVersion());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<MlEngineModelVersion> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigratableResource.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MlEngineModelVersion() {
           OnConstruction();
         }
@@ -602,6 +631,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MlEngineModelVersion(MlEngineModelVersion other) : this() {
           endpoint_ = other.endpoint_;
           version_ = other.version_;
@@ -609,6 +639,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public MlEngineModelVersion Clone() {
           return new MlEngineModelVersion(this);
         }
@@ -627,6 +658,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// * asia-east1-ml.googleapis.com
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Endpoint {
           get { return endpoint_; }
           set {
@@ -642,6 +674,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// Format: `projects/{project}/models/{model}/versions/{version}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Version {
           get { return version_; }
           set {
@@ -650,11 +683,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as MlEngineModelVersion);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(MlEngineModelVersion other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -668,6 +703,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Endpoint.Length != 0) hash ^= Endpoint.GetHashCode();
@@ -679,11 +715,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -704,6 +742,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Endpoint.Length != 0) {
             output.WriteRawTag(10);
@@ -720,6 +759,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Endpoint.Length != 0) {
@@ -735,6 +775,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(MlEngineModelVersion other) {
           if (other == null) {
             return;
@@ -749,6 +790,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -774,6 +816,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -807,19 +850,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<AutomlModel> _parser = new pb::MessageParser<AutomlModel>(() => new AutomlModel());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AutomlModel> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigratableResource.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AutomlModel() {
           OnConstruction();
         }
@@ -827,6 +874,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AutomlModel(AutomlModel other) : this() {
           model_ = other.model_;
           modelDisplayName_ = other.modelDisplayName_;
@@ -834,6 +882,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AutomlModel Clone() {
           return new AutomlModel(this);
         }
@@ -847,6 +896,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// `projects/{project}/locations/{location}/models/{model}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Model {
           get { return model_; }
           set {
@@ -861,6 +911,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The Model's display name in automl.googleapis.com.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string ModelDisplayName {
           get { return modelDisplayName_; }
           set {
@@ -869,11 +920,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AutomlModel);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AutomlModel other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -887,6 +940,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Model.Length != 0) hash ^= Model.GetHashCode();
@@ -898,11 +952,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -923,6 +979,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Model.Length != 0) {
             output.WriteRawTag(10);
@@ -939,6 +996,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Model.Length != 0) {
@@ -954,6 +1012,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AutomlModel other) {
           if (other == null) {
             return;
@@ -968,6 +1027,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -993,6 +1053,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1026,19 +1087,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<AutomlDataset> _parser = new pb::MessageParser<AutomlDataset>(() => new AutomlDataset());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AutomlDataset> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigratableResource.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AutomlDataset() {
           OnConstruction();
         }
@@ -1046,6 +1111,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AutomlDataset(AutomlDataset other) : this() {
           dataset_ = other.dataset_;
           datasetDisplayName_ = other.datasetDisplayName_;
@@ -1053,6 +1119,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AutomlDataset Clone() {
           return new AutomlDataset(this);
         }
@@ -1066,6 +1133,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// `projects/{project}/locations/{location}/datasets/{dataset}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
           get { return dataset_; }
           set {
@@ -1080,6 +1148,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The Dataset's display name in automl.googleapis.com.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DatasetDisplayName {
           get { return datasetDisplayName_; }
           set {
@@ -1088,11 +1157,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AutomlDataset);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AutomlDataset other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1106,6 +1177,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
@@ -1117,11 +1189,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1142,6 +1216,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Dataset.Length != 0) {
             output.WriteRawTag(10);
@@ -1158,6 +1233,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Dataset.Length != 0) {
@@ -1173,6 +1249,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AutomlDataset other) {
           if (other == null) {
             return;
@@ -1187,6 +1264,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1212,6 +1290,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1245,19 +1324,23 @@ namespace Google.Cloud.AIPlatform.V1 {
         private static readonly pb::MessageParser<DataLabelingDataset> _parser = new pb::MessageParser<DataLabelingDataset>(() => new DataLabelingDataset());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<DataLabelingDataset> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.AIPlatform.V1.MigratableResource.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DataLabelingDataset() {
           OnConstruction();
         }
@@ -1265,6 +1348,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DataLabelingDataset(DataLabelingDataset other) : this() {
           dataset_ = other.dataset_;
           datasetDisplayName_ = other.datasetDisplayName_;
@@ -1273,6 +1357,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public DataLabelingDataset Clone() {
           return new DataLabelingDataset(this);
         }
@@ -1286,6 +1371,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// `projects/{project}/datasets/{dataset}`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Dataset {
           get { return dataset_; }
           set {
@@ -1300,6 +1386,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The Dataset's display name in datalabeling.googleapis.com.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string DatasetDisplayName {
           get { return datasetDisplayName_; }
           set {
@@ -1317,16 +1404,19 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// the data labeling Dataset.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::RepeatedField<global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.DataLabelingDataset.Types.DataLabelingAnnotatedDataset> DataLabelingAnnotatedDatasets {
           get { return dataLabelingAnnotatedDatasets_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as DataLabelingDataset);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(DataLabelingDataset other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1341,6 +1431,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
@@ -1353,11 +1444,13 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -1379,6 +1472,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Dataset.Length != 0) {
             output.WriteRawTag(10);
@@ -1396,6 +1490,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Dataset.Length != 0) {
@@ -1412,6 +1507,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(DataLabelingDataset other) {
           if (other == null) {
             return;
@@ -1427,6 +1523,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -1456,6 +1553,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -1483,6 +1581,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         #region Nested types
         /// <summary>Container for nested types declared in the DataLabelingDataset message type.</summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static partial class Types {
           /// <summary>
           /// Represents one AnnotatedDataset in datalabeling.googleapis.com.
@@ -1495,19 +1594,23 @@ namespace Google.Cloud.AIPlatform.V1 {
             private static readonly pb::MessageParser<DataLabelingAnnotatedDataset> _parser = new pb::MessageParser<DataLabelingAnnotatedDataset>(() => new DataLabelingAnnotatedDataset());
             private pb::UnknownFieldSet _unknownFields;
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pb::MessageParser<DataLabelingAnnotatedDataset> Parser { get { return _parser; } }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public static pbr::MessageDescriptor Descriptor {
               get { return global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.DataLabelingDataset.Descriptor.NestedTypes[0]; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             pbr::MessageDescriptor pb::IMessage.Descriptor {
               get { return Descriptor; }
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public DataLabelingAnnotatedDataset() {
               OnConstruction();
             }
@@ -1515,6 +1618,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             partial void OnConstruction();
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public DataLabelingAnnotatedDataset(DataLabelingAnnotatedDataset other) : this() {
               annotatedDataset_ = other.annotatedDataset_;
               annotatedDatasetDisplayName_ = other.annotatedDatasetDisplayName_;
@@ -1522,6 +1626,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public DataLabelingAnnotatedDataset Clone() {
               return new DataLabelingAnnotatedDataset(this);
             }
@@ -1535,6 +1640,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// `projects/{project}/datasets/{dataset}/annotatedDatasets/{annotated_dataset}`.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string AnnotatedDataset {
               get { return annotatedDataset_; }
               set {
@@ -1549,6 +1655,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// The AnnotatedDataset's display name in datalabeling.googleapis.com.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public string AnnotatedDatasetDisplayName {
               get { return annotatedDatasetDisplayName_; }
               set {
@@ -1557,11 +1664,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override bool Equals(object other) {
               return Equals(other as DataLabelingAnnotatedDataset);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public bool Equals(DataLabelingAnnotatedDataset other) {
               if (ReferenceEquals(other, null)) {
                 return false;
@@ -1575,6 +1684,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override int GetHashCode() {
               int hash = 1;
               if (AnnotatedDataset.Length != 0) hash ^= AnnotatedDataset.GetHashCode();
@@ -1586,11 +1696,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public override string ToString() {
               return pb::JsonFormatter.ToDiagnosticString(this);
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void WriteTo(pb::CodedOutputStream output) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               output.WriteRawMessage(this);
@@ -1611,6 +1723,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
               if (AnnotatedDataset.Length != 0) {
                 output.WriteRawTag(10);
@@ -1627,6 +1740,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             #endif
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public int CalculateSize() {
               int size = 0;
               if (AnnotatedDataset.Length != 0) {
@@ -1642,6 +1756,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(DataLabelingAnnotatedDataset other) {
               if (other == null) {
                 return;
@@ -1656,6 +1771,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
 
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             public void MergeFrom(pb::CodedInputStream input) {
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
               input.ReadRawMessage(this);
@@ -1681,6 +1797,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
             #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
             void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
               uint tag;
               while ((tag = input.ReadTag()) != 0) {

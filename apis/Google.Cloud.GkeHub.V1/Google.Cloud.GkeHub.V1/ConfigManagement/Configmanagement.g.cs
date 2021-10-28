@@ -199,19 +199,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<MembershipState> _parser = new pb::MessageParser<MembershipState>(() => new MembershipState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MembershipState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MembershipState() {
       OnConstruction();
     }
@@ -219,6 +223,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MembershipState(MembershipState other) : this() {
       clusterName_ = other.clusterName_;
       membershipSpec_ = other.membershipSpec_ != null ? other.membershipSpec_.Clone() : null;
@@ -230,6 +235,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MembershipState Clone() {
       return new MembershipState(this);
     }
@@ -245,6 +251,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Unique within a Anthos Config Management installation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ClusterName {
       get { return clusterName_; }
       set {
@@ -261,6 +268,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// the intended state
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.MembershipSpec MembershipSpec {
       get { return membershipSpec_; }
       set {
@@ -275,6 +283,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Current install status of ACM's Operator
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.OperatorState OperatorState {
       get { return operatorState_; }
       set {
@@ -289,6 +298,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Current sync status
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncState ConfigSyncState {
       get { return configSyncState_; }
       set {
@@ -303,6 +313,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// PolicyController status
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.PolicyControllerState PolicyControllerState {
       get { return policyControllerState_; }
       set {
@@ -317,6 +328,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Hierarchy Controller status
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerState HierarchyControllerState {
       get { return hierarchyControllerState_; }
       set {
@@ -325,11 +337,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MembershipState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MembershipState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -347,6 +361,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ClusterName.Length != 0) hash ^= ClusterName.GetHashCode();
@@ -362,11 +377,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -403,6 +420,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ClusterName.Length != 0) {
         output.WriteRawTag(10);
@@ -435,6 +453,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ClusterName.Length != 0) {
@@ -462,6 +481,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MembershipState other) {
       if (other == null) {
         return;
@@ -503,6 +523,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -559,6 +580,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -624,19 +646,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<MembershipSpec> _parser = new pb::MessageParser<MembershipSpec>(() => new MembershipSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MembershipSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MembershipSpec() {
       OnConstruction();
     }
@@ -644,6 +670,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MembershipSpec(MembershipSpec other) : this() {
       configSync_ = other.configSync_ != null ? other.configSync_.Clone() : null;
       policyController_ = other.policyController_ != null ? other.policyController_.Clone() : null;
@@ -653,6 +680,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MembershipSpec Clone() {
       return new MembershipSpec(this);
     }
@@ -664,6 +692,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Config Sync configuration for the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSync ConfigSync {
       get { return configSync_; }
       set {
@@ -678,6 +707,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Policy Controller configuration for the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.PolicyController PolicyController {
       get { return policyController_; }
       set {
@@ -692,6 +722,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Hierarchy Controller configuration for the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerConfig HierarchyController {
       get { return hierarchyController_; }
       set {
@@ -706,6 +737,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version of ACM installed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -714,11 +746,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MembershipSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MembershipSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -734,6 +768,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (configSync_ != null) hash ^= ConfigSync.GetHashCode();
@@ -747,11 +782,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -780,6 +817,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (configSync_ != null) {
         output.WriteRawTag(10);
@@ -804,6 +842,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (configSync_ != null) {
@@ -825,6 +864,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MembershipSpec other) {
       if (other == null) {
         return;
@@ -854,6 +894,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -896,6 +937,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -946,19 +988,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<ConfigSync> _parser = new pb::MessageParser<ConfigSync>(() => new ConfigSync());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConfigSync> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSync() {
       OnConstruction();
     }
@@ -966,6 +1012,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSync(ConfigSync other) : this() {
       git_ = other.git_ != null ? other.git_.Clone() : null;
       sourceFormat_ = other.sourceFormat_;
@@ -973,6 +1020,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSync Clone() {
       return new ConfigSync(this);
     }
@@ -984,6 +1032,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Git repo configuration for the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.GitConfig Git {
       get { return git_; }
       set {
@@ -999,6 +1048,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// in “hierarchical” or “unstructured” mode.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceFormat {
       get { return sourceFormat_; }
       set {
@@ -1007,11 +1057,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConfigSync);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConfigSync other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1025,6 +1077,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (git_ != null) hash ^= Git.GetHashCode();
@@ -1036,11 +1089,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1061,6 +1116,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (git_ != null) {
         output.WriteRawTag(58);
@@ -1077,6 +1133,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (git_ != null) {
@@ -1092,6 +1149,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConfigSync other) {
       if (other == null) {
         return;
@@ -1109,6 +1167,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1137,6 +1196,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1173,19 +1233,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<GitConfig> _parser = new pb::MessageParser<GitConfig>(() => new GitConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GitConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitConfig() {
       OnConstruction();
     }
@@ -1193,6 +1257,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitConfig(GitConfig other) : this() {
       syncRepo_ = other.syncRepo_;
       syncBranch_ = other.syncBranch_;
@@ -1206,6 +1271,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GitConfig Clone() {
       return new GitConfig(this);
     }
@@ -1217,6 +1283,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The URL of the Git repository to use as the source of truth.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SyncRepo {
       get { return syncRepo_; }
       set {
@@ -1231,6 +1298,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The branch of the repository to sync from. Default: master.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SyncBranch {
       get { return syncBranch_; }
       set {
@@ -1246,6 +1314,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// repo to sync. Default: the root directory of the repository.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PolicyDir {
       get { return policyDir_; }
       set {
@@ -1260,6 +1329,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Period in seconds between consecutive syncs. Default: 15.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long SyncWaitSecs {
       get { return syncWaitSecs_; }
       set {
@@ -1274,6 +1344,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Git revision (tag or hash) to check out. Default HEAD.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SyncRev {
       get { return syncRev_; }
       set {
@@ -1288,6 +1359,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Type of secret configured for access to the Git repo.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SecretType {
       get { return secretType_; }
       set {
@@ -1302,6 +1374,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// URL for the HTTPS proxy to be used when communicating with the Git repo.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string HttpsProxy {
       get { return httpsProxy_; }
       set {
@@ -1317,6 +1390,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// gcpServiceAccount.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GcpServiceAccountEmail {
       get { return gcpServiceAccountEmail_; }
       set {
@@ -1325,11 +1399,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GitConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GitConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1349,6 +1425,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SyncRepo.Length != 0) hash ^= SyncRepo.GetHashCode();
@@ -1366,11 +1443,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1415,6 +1494,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SyncRepo.Length != 0) {
         output.WriteRawTag(10);
@@ -1455,6 +1535,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SyncRepo.Length != 0) {
@@ -1488,6 +1569,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GitConfig other) {
       if (other == null) {
         return;
@@ -1520,6 +1602,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1569,6 +1652,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1627,19 +1711,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private pb::UnknownFieldSet _unknownFields;
     private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PolicyController> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyController() {
       OnConstruction();
     }
@@ -1647,6 +1735,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyController(PolicyController other) : this() {
       _hasBits0 = other._hasBits0;
       enabled_ = other.enabled_;
@@ -1659,6 +1748,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyController Clone() {
       return new PolicyController(this);
     }
@@ -1672,6 +1762,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// effect.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Enabled {
       get { return enabled_; }
       set {
@@ -1686,6 +1777,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Installs the default template library along with Policy Controller.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool TemplateLibraryInstalled {
       get { if ((_hasBits0 & 1) != 0) { return templateLibraryInstalled_; } else { return false; } }
       set {
@@ -1695,11 +1787,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
     /// <summary>Gets whether the "template_library_installed" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasTemplateLibraryInstalled {
       get { return (_hasBits0 & 1) != 0; }
     }
     /// <summary>Clears the value of the "template_library_installed" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTemplateLibraryInstalled() {
       _hasBits0 &= ~1;
     }
@@ -1712,6 +1806,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// When set to 0, this disables audit functionality altogether.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long AuditIntervalSeconds {
       get { if ((_hasBits0 & 2) != 0) { return auditIntervalSeconds_; } else { return 0L; } }
       set {
@@ -1721,11 +1816,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
     /// <summary>Gets whether the "audit_interval_seconds" field is set</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool HasAuditIntervalSeconds {
       get { return (_hasBits0 & 2) != 0; }
     }
     /// <summary>Clears the value of the "audit_interval_seconds" field</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearAuditIntervalSeconds() {
       _hasBits0 &= ~2;
     }
@@ -1740,6 +1837,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Namespaces do not need to currently exist on the cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ExemptableNamespaces {
       get { return exemptableNamespaces_; }
     }
@@ -1752,6 +1850,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// other than the object currently being evaluated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool ReferentialRulesEnabled {
       get { return referentialRulesEnabled_; }
       set {
@@ -1766,6 +1865,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Logs all denies and dry run failures.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool LogDeniesEnabled {
       get { return logDeniesEnabled_; }
       set {
@@ -1774,11 +1874,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PolicyController);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PolicyController other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1796,6 +1898,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Enabled != false) hash ^= Enabled.GetHashCode();
@@ -1811,11 +1914,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1849,6 +1954,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Enabled != false) {
         output.WriteRawTag(8);
@@ -1878,6 +1984,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Enabled != false) {
@@ -1903,6 +2010,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PolicyController other) {
       if (other == null) {
         return;
@@ -1927,6 +2035,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1968,6 +2077,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2017,19 +2127,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<HierarchyControllerConfig> _parser = new pb::MessageParser<HierarchyControllerConfig>(() => new HierarchyControllerConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HierarchyControllerConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerConfig() {
       OnConstruction();
     }
@@ -2037,6 +2151,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerConfig(HierarchyControllerConfig other) : this() {
       enabled_ = other.enabled_;
       enablePodTreeLabels_ = other.enablePodTreeLabels_;
@@ -2045,6 +2160,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerConfig Clone() {
       return new HierarchyControllerConfig(this);
     }
@@ -2056,6 +2172,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Whether Hierarchy Controller is enabled in this cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Enabled {
       get { return enabled_; }
       set {
@@ -2070,6 +2187,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Whether pod tree labels are enabled in this cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnablePodTreeLabels {
       get { return enablePodTreeLabels_; }
       set {
@@ -2084,6 +2202,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Whether hierarchical resource quota is enabled in this cluster.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool EnableHierarchicalResourceQuota {
       get { return enableHierarchicalResourceQuota_; }
       set {
@@ -2092,11 +2211,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HierarchyControllerConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HierarchyControllerConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2111,6 +2232,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Enabled != false) hash ^= Enabled.GetHashCode();
@@ -2123,11 +2245,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2152,6 +2276,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Enabled != false) {
         output.WriteRawTag(8);
@@ -2172,6 +2297,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Enabled != false) {
@@ -2190,6 +2316,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HierarchyControllerConfig other) {
       if (other == null) {
         return;
@@ -2207,6 +2334,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2236,6 +2364,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2273,19 +2402,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<HierarchyControllerDeploymentState> _parser = new pb::MessageParser<HierarchyControllerDeploymentState>(() => new HierarchyControllerDeploymentState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HierarchyControllerDeploymentState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerDeploymentState() {
       OnConstruction();
     }
@@ -2293,6 +2426,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerDeploymentState(HierarchyControllerDeploymentState other) : this() {
       hnc_ = other.hnc_;
       extension_ = other.extension_;
@@ -2300,6 +2434,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerDeploymentState Clone() {
       return new HierarchyControllerDeploymentState(this);
     }
@@ -2311,6 +2446,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The deployment state for open source HNC (e.g. v0.7.0-hc.0)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState Hnc {
       get { return hnc_; }
       set {
@@ -2325,6 +2461,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The deployment state for Hierarchy Controller extension (e.g. v0.7.0-hc.1)
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState Extension {
       get { return extension_; }
       set {
@@ -2333,11 +2470,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HierarchyControllerDeploymentState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HierarchyControllerDeploymentState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2351,6 +2490,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Hnc != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) hash ^= Hnc.GetHashCode();
@@ -2362,11 +2502,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2387,6 +2529,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Hnc != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
         output.WriteRawTag(8);
@@ -2403,6 +2546,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Hnc != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
@@ -2418,6 +2562,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HierarchyControllerDeploymentState other) {
       if (other == null) {
         return;
@@ -2432,6 +2577,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2457,6 +2603,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2490,19 +2637,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<HierarchyControllerVersion> _parser = new pb::MessageParser<HierarchyControllerVersion>(() => new HierarchyControllerVersion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HierarchyControllerVersion> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerVersion() {
       OnConstruction();
     }
@@ -2510,6 +2661,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerVersion(HierarchyControllerVersion other) : this() {
       hnc_ = other.hnc_;
       extension_ = other.extension_;
@@ -2517,6 +2669,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerVersion Clone() {
       return new HierarchyControllerVersion(this);
     }
@@ -2528,6 +2681,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version for open source HNC
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Hnc {
       get { return hnc_; }
       set {
@@ -2542,6 +2696,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version for Hierarchy Controller extension
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Extension {
       get { return extension_; }
       set {
@@ -2550,11 +2705,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HierarchyControllerVersion);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HierarchyControllerVersion other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2568,6 +2725,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Hnc.Length != 0) hash ^= Hnc.GetHashCode();
@@ -2579,11 +2737,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2604,6 +2764,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Hnc.Length != 0) {
         output.WriteRawTag(10);
@@ -2620,6 +2781,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Hnc.Length != 0) {
@@ -2635,6 +2797,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HierarchyControllerVersion other) {
       if (other == null) {
         return;
@@ -2649,6 +2812,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2674,6 +2838,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2707,19 +2872,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<HierarchyControllerState> _parser = new pb::MessageParser<HierarchyControllerState>(() => new HierarchyControllerState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HierarchyControllerState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerState() {
       OnConstruction();
     }
@@ -2727,6 +2896,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerState(HierarchyControllerState other) : this() {
       version_ = other.version_ != null ? other.version_.Clone() : null;
       state_ = other.state_ != null ? other.state_.Clone() : null;
@@ -2734,6 +2904,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HierarchyControllerState Clone() {
       return new HierarchyControllerState(this);
     }
@@ -2745,6 +2916,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The version for Hierarchy Controller
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerVersion Version {
       get { return version_; }
       set {
@@ -2759,6 +2931,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The deployment state for Hierarchy Controller
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.HierarchyControllerDeploymentState State {
       get { return state_; }
       set {
@@ -2767,11 +2940,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HierarchyControllerState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HierarchyControllerState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2785,6 +2960,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (version_ != null) hash ^= Version.GetHashCode();
@@ -2796,11 +2972,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2821,6 +2999,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (version_ != null) {
         output.WriteRawTag(10);
@@ -2837,6 +3016,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (version_ != null) {
@@ -2852,6 +3032,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HierarchyControllerState other) {
       if (other == null) {
         return;
@@ -2872,6 +3053,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2903,6 +3085,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2942,19 +3125,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<OperatorState> _parser = new pb::MessageParser<OperatorState>(() => new OperatorState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<OperatorState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperatorState() {
       OnConstruction();
     }
@@ -2962,6 +3149,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperatorState(OperatorState other) : this() {
       version_ = other.version_;
       deploymentState_ = other.deploymentState_;
@@ -2970,6 +3158,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public OperatorState Clone() {
       return new OperatorState(this);
     }
@@ -2981,6 +3170,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The semenatic version number of the operator
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -2995,6 +3185,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The state of the Operator's deployment
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState DeploymentState {
       get { return deploymentState_; }
       set {
@@ -3011,16 +3202,19 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Install errors.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ConfigManagement.InstallError> Errors {
       get { return errors_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as OperatorState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(OperatorState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3035,6 +3229,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Version.Length != 0) hash ^= Version.GetHashCode();
@@ -3047,11 +3242,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3073,6 +3270,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Version.Length != 0) {
         output.WriteRawTag(10);
@@ -3090,6 +3288,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Version.Length != 0) {
@@ -3106,6 +3305,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(OperatorState other) {
       if (other == null) {
         return;
@@ -3121,6 +3321,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3150,6 +3351,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3187,19 +3389,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<InstallError> _parser = new pb::MessageParser<InstallError>(() => new InstallError());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<InstallError> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstallError() {
       OnConstruction();
     }
@@ -3207,12 +3413,14 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstallError(InstallError other) : this() {
       errorMessage_ = other.errorMessage_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public InstallError Clone() {
       return new InstallError(this);
     }
@@ -3224,6 +3432,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// A string representing the user facing error message
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ErrorMessage {
       get { return errorMessage_; }
       set {
@@ -3232,11 +3441,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as InstallError);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(InstallError other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3249,6 +3460,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ErrorMessage.Length != 0) hash ^= ErrorMessage.GetHashCode();
@@ -3259,11 +3471,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3280,6 +3494,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ErrorMessage.Length != 0) {
         output.WriteRawTag(10);
@@ -3292,6 +3507,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ErrorMessage.Length != 0) {
@@ -3304,6 +3520,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(InstallError other) {
       if (other == null) {
         return;
@@ -3315,6 +3532,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3336,6 +3554,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3365,19 +3584,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<ConfigSyncState> _parser = new pb::MessageParser<ConfigSyncState>(() => new ConfigSyncState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConfigSyncState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncState() {
       OnConstruction();
     }
@@ -3385,6 +3608,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncState(ConfigSyncState other) : this() {
       version_ = other.version_ != null ? other.version_.Clone() : null;
       deploymentState_ = other.deploymentState_ != null ? other.deploymentState_.Clone() : null;
@@ -3393,6 +3617,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncState Clone() {
       return new ConfigSyncState(this);
     }
@@ -3404,6 +3629,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The version of ConfigSync deployed
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncVersion Version {
       get { return version_; }
       set {
@@ -3419,6 +3645,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// of the various Pods deployed
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigSyncDeploymentState DeploymentState {
       get { return deploymentState_; }
       set {
@@ -3433,6 +3660,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The state of ConfigSync's process to sync configs to a cluster
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncState SyncState {
       get { return syncState_; }
       set {
@@ -3441,11 +3669,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConfigSyncState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConfigSyncState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3460,6 +3690,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (version_ != null) hash ^= Version.GetHashCode();
@@ -3472,11 +3703,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3501,6 +3734,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (version_ != null) {
         output.WriteRawTag(10);
@@ -3521,6 +3755,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (version_ != null) {
@@ -3539,6 +3774,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConfigSyncState other) {
       if (other == null) {
         return;
@@ -3565,6 +3801,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3603,6 +3840,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3649,19 +3887,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<ConfigSyncVersion> _parser = new pb::MessageParser<ConfigSyncVersion>(() => new ConfigSyncVersion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConfigSyncVersion> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncVersion() {
       OnConstruction();
     }
@@ -3669,6 +3911,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncVersion(ConfigSyncVersion other) : this() {
       importer_ = other.importer_;
       syncer_ = other.syncer_;
@@ -3680,6 +3923,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncVersion Clone() {
       return new ConfigSyncVersion(this);
     }
@@ -3691,6 +3935,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version of the deployed importer pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Importer {
       get { return importer_; }
       set {
@@ -3705,6 +3950,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version of the deployed syncer pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Syncer {
       get { return syncer_; }
       set {
@@ -3719,6 +3965,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version of the deployed git-sync pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string GitSync {
       get { return gitSync_; }
       set {
@@ -3733,6 +3980,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version of the deployed monitor pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Monitor {
       get { return monitor_; }
       set {
@@ -3747,6 +3995,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version of the deployed reconciler-manager pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ReconcilerManager {
       get { return reconcilerManager_; }
       set {
@@ -3761,6 +4010,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Version of the deployed reconciler container in root-reconciler pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RootReconciler {
       get { return rootReconciler_; }
       set {
@@ -3769,11 +4019,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConfigSyncVersion);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConfigSyncVersion other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3791,6 +4043,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Importer.Length != 0) hash ^= Importer.GetHashCode();
@@ -3806,11 +4059,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3847,6 +4102,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Importer.Length != 0) {
         output.WriteRawTag(10);
@@ -3879,6 +4135,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Importer.Length != 0) {
@@ -3906,6 +4163,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConfigSyncVersion other) {
       if (other == null) {
         return;
@@ -3932,6 +4190,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3973,6 +4232,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4022,19 +4282,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<ConfigSyncDeploymentState> _parser = new pb::MessageParser<ConfigSyncDeploymentState>(() => new ConfigSyncDeploymentState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ConfigSyncDeploymentState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncDeploymentState() {
       OnConstruction();
     }
@@ -4042,6 +4306,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncDeploymentState(ConfigSyncDeploymentState other) : this() {
       importer_ = other.importer_;
       syncer_ = other.syncer_;
@@ -4053,6 +4318,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ConfigSyncDeploymentState Clone() {
       return new ConfigSyncDeploymentState(this);
     }
@@ -4064,6 +4330,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Deployment state of the importer pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState Importer {
       get { return importer_; }
       set {
@@ -4078,6 +4345,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Deployment state of the syncer pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState Syncer {
       get { return syncer_; }
       set {
@@ -4092,6 +4360,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Deployment state of the git-sync pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState GitSync {
       get { return gitSync_; }
       set {
@@ -4106,6 +4375,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Deployment state of the monitor pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState Monitor {
       get { return monitor_; }
       set {
@@ -4120,6 +4390,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Deployment state of reconciler-manager pod
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState ReconcilerManager {
       get { return reconcilerManager_; }
       set {
@@ -4134,6 +4405,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Deployment state of root-reconciler
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState RootReconciler {
       get { return rootReconciler_; }
       set {
@@ -4142,11 +4414,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ConfigSyncDeploymentState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ConfigSyncDeploymentState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4164,6 +4438,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Importer != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) hash ^= Importer.GetHashCode();
@@ -4179,11 +4454,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4220,6 +4497,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Importer != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
         output.WriteRawTag(8);
@@ -4252,6 +4530,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Importer != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
@@ -4279,6 +4558,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ConfigSyncDeploymentState other) {
       if (other == null) {
         return;
@@ -4305,6 +4585,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4346,6 +4627,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4395,19 +4677,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<SyncState> _parser = new pb::MessageParser<SyncState>(() => new SyncState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SyncState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncState() {
       OnConstruction();
     }
@@ -4415,6 +4701,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncState(SyncState other) : this() {
       sourceToken_ = other.sourceToken_;
       importToken_ = other.importToken_;
@@ -4427,6 +4714,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncState Clone() {
       return new SyncState(this);
     }
@@ -4438,6 +4726,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Token indicating the state of the repo.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourceToken {
       get { return sourceToken_; }
       set {
@@ -4452,6 +4741,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Token indicating the state of the importer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImportToken {
       get { return importToken_; }
       set {
@@ -4466,6 +4756,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Token indicating the state of the syncer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SyncToken {
       get { return syncToken_; }
       set {
@@ -4483,6 +4774,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LastSync {
       get { return lastSync_; }
       set {
@@ -4497,6 +4789,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Timestamp type of when ACM last successfully synced the repo
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastSyncTime {
       get { return lastSyncTime_; }
       set {
@@ -4511,6 +4804,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Sync status code
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncState.Types.SyncCode Code {
       get { return code_; }
       set {
@@ -4529,16 +4823,19 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// unlikely for that many errors to simultaneously exist.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ConfigManagement.SyncError> Errors {
       get { return errors_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SyncState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SyncState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4557,6 +4854,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SourceToken.Length != 0) hash ^= SourceToken.GetHashCode();
@@ -4573,11 +4871,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4615,6 +4915,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SourceToken.Length != 0) {
         output.WriteRawTag(10);
@@ -4648,6 +4949,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SourceToken.Length != 0) {
@@ -4676,6 +4978,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SyncState other) {
       if (other == null) {
         return;
@@ -4706,6 +5009,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4754,6 +5058,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4800,6 +5105,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #region Nested types
     /// <summary>Container for nested types declared in the SyncState message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// An enum representing an ACM's status syncing configs to a cluster
@@ -4856,19 +5162,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<SyncError> _parser = new pb::MessageParser<SyncError>(() => new SyncError());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SyncError> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncError() {
       OnConstruction();
     }
@@ -4876,6 +5186,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncError(SyncError other) : this() {
       code_ = other.code_;
       errorMessage_ = other.errorMessage_;
@@ -4884,6 +5195,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SyncError Clone() {
       return new SyncError(this);
     }
@@ -4895,6 +5207,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// An ACM defined error code
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Code {
       get { return code_; }
       set {
@@ -4909,6 +5222,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// A description of the error
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ErrorMessage {
       get { return errorMessage_; }
       set {
@@ -4925,16 +5239,19 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// A list of config(s) associated with the error, if any
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ConfigManagement.ErrorResource> ErrorResources {
       get { return errorResources_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SyncError);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SyncError other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4949,6 +5266,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Code.Length != 0) hash ^= Code.GetHashCode();
@@ -4961,11 +5279,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4987,6 +5307,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Code.Length != 0) {
         output.WriteRawTag(10);
@@ -5004,6 +5325,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Code.Length != 0) {
@@ -5020,6 +5342,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SyncError other) {
       if (other == null) {
         return;
@@ -5035,6 +5358,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5064,6 +5388,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5101,19 +5426,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<ErrorResource> _parser = new pb::MessageParser<ErrorResource>(() => new ErrorResource());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ErrorResource> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorResource() {
       OnConstruction();
     }
@@ -5121,6 +5450,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorResource(ErrorResource other) : this() {
       sourcePath_ = other.sourcePath_;
       resourceName_ = other.resourceName_;
@@ -5130,6 +5460,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorResource Clone() {
       return new ErrorResource(this);
     }
@@ -5141,6 +5472,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Path in the git repo of the erroneous config
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SourcePath {
       get { return sourcePath_; }
       set {
@@ -5155,6 +5487,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Metadata name of the resource that is causing an error
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ResourceName {
       get { return resourceName_; }
       set {
@@ -5169,6 +5502,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Namespace of the resource that is causing an error
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ResourceNamespace {
       get { return resourceNamespace_; }
       set {
@@ -5183,6 +5517,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Group/version/kind of the resource that is causing an error
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.GroupVersionKind ResourceGvk {
       get { return resourceGvk_; }
       set {
@@ -5191,11 +5526,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ErrorResource);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ErrorResource other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5211,6 +5548,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SourcePath.Length != 0) hash ^= SourcePath.GetHashCode();
@@ -5224,11 +5562,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5257,6 +5597,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SourcePath.Length != 0) {
         output.WriteRawTag(10);
@@ -5281,6 +5622,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SourcePath.Length != 0) {
@@ -5302,6 +5644,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ErrorResource other) {
       if (other == null) {
         return;
@@ -5325,6 +5668,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5361,6 +5705,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5405,19 +5750,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<GroupVersionKind> _parser = new pb::MessageParser<GroupVersionKind>(() => new GroupVersionKind());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GroupVersionKind> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GroupVersionKind() {
       OnConstruction();
     }
@@ -5425,6 +5774,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GroupVersionKind(GroupVersionKind other) : this() {
       group_ = other.group_;
       version_ = other.version_;
@@ -5433,6 +5783,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GroupVersionKind Clone() {
       return new GroupVersionKind(this);
     }
@@ -5444,6 +5795,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Kubernetes Group
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Group {
       get { return group_; }
       set {
@@ -5458,6 +5810,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Kubernetes Version
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -5472,6 +5825,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Kubernetes Kind
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Kind {
       get { return kind_; }
       set {
@@ -5480,11 +5834,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GroupVersionKind);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GroupVersionKind other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5499,6 +5855,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Group.Length != 0) hash ^= Group.GetHashCode();
@@ -5511,11 +5868,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5540,6 +5899,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Group.Length != 0) {
         output.WriteRawTag(10);
@@ -5560,6 +5920,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Group.Length != 0) {
@@ -5578,6 +5939,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GroupVersionKind other) {
       if (other == null) {
         return;
@@ -5595,6 +5957,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5624,6 +5987,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5661,19 +6025,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<PolicyControllerState> _parser = new pb::MessageParser<PolicyControllerState>(() => new PolicyControllerState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PolicyControllerState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[18]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyControllerState() {
       OnConstruction();
     }
@@ -5681,6 +6049,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyControllerState(PolicyControllerState other) : this() {
       version_ = other.version_ != null ? other.version_.Clone() : null;
       deploymentState_ = other.deploymentState_ != null ? other.deploymentState_.Clone() : null;
@@ -5688,6 +6057,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyControllerState Clone() {
       return new PolicyControllerState(this);
     }
@@ -5699,6 +6069,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The version of Gatekeeper Policy Controller deployed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.PolicyControllerVersion Version {
       get { return version_; }
       set {
@@ -5713,6 +6084,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// The state about the policy controller installation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.GatekeeperDeploymentState DeploymentState {
       get { return deploymentState_; }
       set {
@@ -5721,11 +6093,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PolicyControllerState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PolicyControllerState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5739,6 +6113,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (version_ != null) hash ^= Version.GetHashCode();
@@ -5750,11 +6125,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5775,6 +6152,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (version_ != null) {
         output.WriteRawTag(10);
@@ -5791,6 +6169,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (version_ != null) {
@@ -5806,6 +6185,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PolicyControllerState other) {
       if (other == null) {
         return;
@@ -5826,6 +6206,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5857,6 +6238,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5896,19 +6278,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<PolicyControllerVersion> _parser = new pb::MessageParser<PolicyControllerVersion>(() => new PolicyControllerVersion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PolicyControllerVersion> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[19]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyControllerVersion() {
       OnConstruction();
     }
@@ -5916,12 +6302,14 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyControllerVersion(PolicyControllerVersion other) : this() {
       version_ = other.version_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PolicyControllerVersion Clone() {
       return new PolicyControllerVersion(this);
     }
@@ -5934,6 +6322,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// number.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -5942,11 +6331,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PolicyControllerVersion);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PolicyControllerVersion other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5959,6 +6350,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Version.Length != 0) hash ^= Version.GetHashCode();
@@ -5969,11 +6361,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5990,6 +6384,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Version.Length != 0) {
         output.WriteRawTag(10);
@@ -6002,6 +6397,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Version.Length != 0) {
@@ -6014,6 +6410,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PolicyControllerVersion other) {
       if (other == null) {
         return;
@@ -6025,6 +6422,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6046,6 +6444,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6075,19 +6474,23 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     private static readonly pb::MessageParser<GatekeeperDeploymentState> _parser = new pb::MessageParser<GatekeeperDeploymentState>(() => new GatekeeperDeploymentState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GatekeeperDeploymentState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.ConfigManagement.ConfigmanagementReflection.Descriptor.MessageTypes[20]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GatekeeperDeploymentState() {
       OnConstruction();
     }
@@ -6095,6 +6498,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GatekeeperDeploymentState(GatekeeperDeploymentState other) : this() {
       gatekeeperControllerManagerState_ = other.gatekeeperControllerManagerState_;
       gatekeeperAudit_ = other.gatekeeperAudit_;
@@ -6102,6 +6506,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GatekeeperDeploymentState Clone() {
       return new GatekeeperDeploymentState(this);
     }
@@ -6113,6 +6518,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Status of gatekeeper-controller-manager pod.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState GatekeeperControllerManagerState {
       get { return gatekeeperControllerManagerState_; }
       set {
@@ -6127,6 +6533,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     /// Status of gatekeeper-audit deployment.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState GatekeeperAudit {
       get { return gatekeeperAudit_; }
       set {
@@ -6135,11 +6542,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GatekeeperDeploymentState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GatekeeperDeploymentState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6153,6 +6562,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (GatekeeperControllerManagerState != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) hash ^= GatekeeperControllerManagerState.GetHashCode();
@@ -6164,11 +6574,13 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6189,6 +6601,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GatekeeperControllerManagerState != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
         output.WriteRawTag(8);
@@ -6205,6 +6618,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (GatekeeperControllerManagerState != global::Google.Cloud.GkeHub.V1.ConfigManagement.DeploymentState.Unspecified) {
@@ -6220,6 +6634,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GatekeeperDeploymentState other) {
       if (other == null) {
         return;
@@ -6234,6 +6649,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6259,6 +6675,7 @@ namespace Google.Cloud.GkeHub.V1.ConfigManagement {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

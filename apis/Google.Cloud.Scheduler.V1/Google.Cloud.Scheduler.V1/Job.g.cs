@@ -80,19 +80,23 @@ namespace Google.Cloud.Scheduler.V1 {
     private static readonly pb::MessageParser<Job> _parser = new pb::MessageParser<Job>(() => new Job());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Job> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Scheduler.V1.JobReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Job() {
       OnConstruction();
     }
@@ -100,6 +104,7 @@ namespace Google.Cloud.Scheduler.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Job(Job other) : this() {
       name_ = other.name_;
       description_ = other.description_;
@@ -128,6 +133,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Job Clone() {
       return new Job(this);
     }
@@ -155,6 +161,7 @@ namespace Google.Cloud.Scheduler.V1 {
     ///    hyphens (-), or underscores (_). The maximum length is 500 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -173,6 +180,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// more than 500 characters.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -186,6 +194,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// Pub/Sub target.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Scheduler.V1.PubsubTarget PubsubTarget {
       get { return targetCase_ == TargetOneofCase.PubsubTarget ? (global::Google.Cloud.Scheduler.V1.PubsubTarget) target_ : null; }
       set {
@@ -200,6 +209,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// App Engine HTTP target.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget AppEngineHttpTarget {
       get { return targetCase_ == TargetOneofCase.AppEngineHttpTarget ? (global::Google.Cloud.Scheduler.V1.AppEngineHttpTarget) target_ : null; }
       set {
@@ -214,6 +224,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// HTTP target.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Scheduler.V1.HttpTarget HttpTarget {
       get { return targetCase_ == TargetOneofCase.HttpTarget ? (global::Google.Cloud.Scheduler.V1.HttpTarget) target_ : null; }
       set {
@@ -251,6 +262,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Schedule {
       get { return schedule_; }
       set {
@@ -273,6 +285,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// as GMT).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TimeZone {
       get { return timeZone_; }
       set {
@@ -287,6 +300,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// Output only. The creation time of the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UserUpdateTime {
       get { return userUpdateTime_; }
       set {
@@ -301,6 +315,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// Output only. State of the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Scheduler.V1.Job.Types.State State {
       get { return state_; }
       set {
@@ -315,6 +330,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// Output only. The response from the target for the last attempted execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Status {
       get { return status_; }
       set {
@@ -331,6 +347,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// according to the schedule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ScheduleTime {
       get { return scheduleTime_; }
       set {
@@ -345,6 +362,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// Output only. The time the last job attempt started.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastAttemptTime {
       get { return lastAttemptTime_; }
       set {
@@ -359,6 +377,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// Settings that determine the retry behavior.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Scheduler.V1.RetryConfig RetryConfig {
       get { return retryConfig_; }
       set {
@@ -382,6 +401,7 @@ namespace Google.Cloud.Scheduler.V1 {
     ///   seconds and 24 hours.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration AttemptDeadline {
       get { return attemptDeadline_; }
       set {
@@ -399,22 +419,26 @@ namespace Google.Cloud.Scheduler.V1 {
     }
     private TargetOneofCase targetCase_ = TargetOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TargetOneofCase TargetCase {
       get { return targetCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearTarget() {
       targetCase_ = TargetOneofCase.None;
       target_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Job);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Job other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -441,6 +465,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -465,11 +490,13 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -538,6 +565,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -602,6 +630,7 @@ namespace Google.Cloud.Scheduler.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -653,6 +682,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Job other) {
       if (other == null) {
         return;
@@ -733,6 +763,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -839,6 +870,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -943,6 +975,7 @@ namespace Google.Cloud.Scheduler.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Job message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// State of the job.
@@ -995,19 +1028,23 @@ namespace Google.Cloud.Scheduler.V1 {
     private static readonly pb::MessageParser<RetryConfig> _parser = new pb::MessageParser<RetryConfig>(() => new RetryConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RetryConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Scheduler.V1.JobReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryConfig() {
       OnConstruction();
     }
@@ -1015,6 +1052,7 @@ namespace Google.Cloud.Scheduler.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryConfig(RetryConfig other) : this() {
       retryCount_ = other.retryCount_;
       maxRetryDuration_ = other.maxRetryDuration_ != null ? other.maxRetryDuration_.Clone() : null;
@@ -1025,6 +1063,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RetryConfig Clone() {
       return new RetryConfig(this);
     }
@@ -1051,6 +1090,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// Values greater than 5 and negative values are not allowed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RetryCount {
       get { return retryCount_; }
       set {
@@ -1071,6 +1111,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// duration is unlimited.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MaxRetryDuration {
       get { return maxRetryDuration_; }
       set {
@@ -1088,6 +1129,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// The default value of this field is 5 seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MinBackoffDuration {
       get { return minBackoffDuration_; }
       set {
@@ -1105,6 +1147,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// The default value of this field is 1 hour.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MaxBackoffDuration {
       get { return maxBackoffDuration_; }
       set {
@@ -1137,6 +1180,7 @@ namespace Google.Cloud.Scheduler.V1 {
     /// The default value of this field is 5.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int MaxDoublings {
       get { return maxDoublings_; }
       set {
@@ -1145,11 +1189,13 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RetryConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RetryConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1166,6 +1212,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (RetryCount != 0) hash ^= RetryCount.GetHashCode();
@@ -1180,11 +1227,13 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1217,6 +1266,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RetryCount != 0) {
         output.WriteRawTag(8);
@@ -1245,6 +1295,7 @@ namespace Google.Cloud.Scheduler.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (RetryCount != 0) {
@@ -1269,6 +1320,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RetryConfig other) {
       if (other == null) {
         return;
@@ -1301,6 +1353,7 @@ namespace Google.Cloud.Scheduler.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1347,6 +1400,7 @@ namespace Google.Cloud.Scheduler.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

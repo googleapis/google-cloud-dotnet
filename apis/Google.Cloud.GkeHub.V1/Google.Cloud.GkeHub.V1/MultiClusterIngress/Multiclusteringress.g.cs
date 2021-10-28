@@ -58,19 +58,23 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     private static readonly pb::MessageParser<FeatureSpec> _parser = new pb::MessageParser<FeatureSpec>(() => new FeatureSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<FeatureSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.GkeHub.V1.MultiClusterIngress.MulticlusteringressReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FeatureSpec() {
       OnConstruction();
     }
@@ -78,12 +82,14 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FeatureSpec(FeatureSpec other) : this() {
       configMembership_ = other.configMembership_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public FeatureSpec Clone() {
       return new FeatureSpec(this);
     }
@@ -96,6 +102,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     /// Example: `projects/foo-proj/locations/global/memberships/bar`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConfigMembership {
       get { return configMembership_; }
       set {
@@ -104,11 +111,13 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as FeatureSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(FeatureSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -121,6 +130,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ConfigMembership.Length != 0) hash ^= ConfigMembership.GetHashCode();
@@ -131,11 +141,13 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -152,6 +164,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ConfigMembership.Length != 0) {
         output.WriteRawTag(10);
@@ -164,6 +177,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ConfigMembership.Length != 0) {
@@ -176,6 +190,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(FeatureSpec other) {
       if (other == null) {
         return;
@@ -187,6 +202,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -208,6 +224,7 @@ namespace Google.Cloud.GkeHub.V1.MultiClusterIngress {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

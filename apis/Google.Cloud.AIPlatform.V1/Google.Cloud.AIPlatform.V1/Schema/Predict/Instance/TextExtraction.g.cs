@@ -59,19 +59,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     private static readonly pb::MessageParser<TextExtractionPredictionInstance> _parser = new pb::MessageParser<TextExtractionPredictionInstance>(() => new TextExtractionPredictionInstance());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextExtractionPredictionInstance> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.Predict.Instance.TextExtractionReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextExtractionPredictionInstance() {
       OnConstruction();
     }
@@ -79,6 +83,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextExtractionPredictionInstance(TextExtractionPredictionInstance other) : this() {
       content_ = other.content_;
       mimeType_ = other.mimeType_;
@@ -87,6 +92,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextExtractionPredictionInstance Clone() {
       return new TextExtractionPredictionInstance(this);
     }
@@ -98,6 +104,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     /// The text snippet to make the predictions on.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Content {
       get { return content_; }
       set {
@@ -114,6 +121,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     /// - text/plain
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MimeType {
       get { return mimeType_; }
       set {
@@ -132,6 +140,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     /// caller to ensure the keys are unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Key {
       get { return key_; }
       set {
@@ -140,11 +149,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextExtractionPredictionInstance);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextExtractionPredictionInstance other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -159,6 +170,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Content.Length != 0) hash ^= Content.GetHashCode();
@@ -171,11 +183,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -200,6 +214,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Content.Length != 0) {
         output.WriteRawTag(10);
@@ -220,6 +235,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Content.Length != 0) {
@@ -238,6 +254,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextExtractionPredictionInstance other) {
       if (other == null) {
         return;
@@ -255,6 +272,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -284,6 +302,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.Predict.Instance {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

@@ -244,19 +244,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<Job> _parser = new pb::MessageParser<Job>(() => new Job());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Job> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Job() {
       OnConstruction();
     }
@@ -264,6 +268,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Job(Job other) : this() {
       name_ = other.name_;
       inputUri_ = other.inputUri_;
@@ -287,6 +292,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Job Clone() {
       return new Job(this);
     }
@@ -299,6 +305,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Format: `projects/{project_number}/locations/{location}/jobs/{job}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -316,6 +323,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// stored in Cloud Storage (for example, `gs://bucket/inputs/file.mp4`).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string InputUri {
       get { return inputUri_; }
       set {
@@ -332,6 +340,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// URI for the output file(s). For example, `gs://my-bucket/outputs/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OutputUri {
       get { return outputUri_; }
       set {
@@ -352,6 +361,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     ///   `{job_template_id}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TemplateId {
       get { return jobConfigCase_ == JobConfigOneofCase.TemplateId ? (string) jobConfig_ : ""; }
       set {
@@ -366,6 +376,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// The configuration for this job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.JobConfig Config {
       get { return jobConfigCase_ == JobConfigOneofCase.Config ? (global::Google.Cloud.Video.Transcoder.V1.JobConfig) jobConfig_ : null; }
       set {
@@ -381,6 +392,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Output only. The current state of the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.Job.Types.ProcessingState State {
       get { return state_; }
       set {
@@ -395,6 +407,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Output only. The time the job was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -409,6 +422,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Output only. The time the transcoding started.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -423,6 +437,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Output only. The time the transcoding finished.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -439,6 +454,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// a value between 1 and 90. The default is 30.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TtlAfterCompletionDays {
       get { return ttlAfterCompletionDays_; }
       set {
@@ -454,6 +470,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// This property is always present when `state` is `FAILED`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status Error {
       get { return error_; }
       set {
@@ -470,22 +487,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
     private JobConfigOneofCase jobConfigCase_ = JobConfigOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobConfigOneofCase JobConfigCase {
       get { return jobConfigCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearJobConfig() {
       jobConfigCase_ = JobConfigOneofCase.None;
       jobConfig_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Job);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Job other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -509,6 +530,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -530,11 +552,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -591,6 +615,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -643,6 +668,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -685,6 +711,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Job other) {
       if (other == null) {
         return;
@@ -744,6 +771,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -822,6 +850,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -898,6 +927,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Job message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The current state of the job.
@@ -942,19 +972,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<JobTemplate> _parser = new pb::MessageParser<JobTemplate>(() => new JobTemplate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<JobTemplate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobTemplate() {
       OnConstruction();
     }
@@ -962,6 +996,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobTemplate(JobTemplate other) : this() {
       name_ = other.name_;
       config_ = other.config_ != null ? other.config_.Clone() : null;
@@ -969,6 +1004,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobTemplate Clone() {
       return new JobTemplate(this);
     }
@@ -982,6 +1018,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// `projects/{project_number}/locations/{location}/jobTemplates/{job_template}`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -996,6 +1033,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// The configuration for this template.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.JobConfig Config {
       get { return config_; }
       set {
@@ -1004,11 +1042,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as JobTemplate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(JobTemplate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1022,6 +1062,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -1033,11 +1074,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1058,6 +1101,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -1074,6 +1118,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -1089,6 +1134,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(JobTemplate other) {
       if (other == null) {
         return;
@@ -1106,6 +1152,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1134,6 +1181,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1170,19 +1218,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<JobConfig> _parser = new pb::MessageParser<JobConfig>(() => new JobConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<JobConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobConfig() {
       OnConstruction();
     }
@@ -1190,6 +1242,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobConfig(JobConfig other) : this() {
       inputs_ = other.inputs_.Clone();
       editList_ = other.editList_.Clone();
@@ -1205,6 +1258,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public JobConfig Clone() {
       return new JobConfig(this);
     }
@@ -1218,6 +1272,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// List of input assets stored in Cloud Storage.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.Input> Inputs {
       get { return inputs_; }
     }
@@ -1232,6 +1287,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// file or manifest.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.EditAtom> EditList {
       get { return editList_; }
     }
@@ -1245,6 +1301,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// List of elementary streams.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.ElementaryStream> ElementaryStreams {
       get { return elementaryStreams_; }
     }
@@ -1258,6 +1315,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// List of multiplexing settings for output streams.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.MuxStream> MuxStreams {
       get { return muxStreams_; }
     }
@@ -1271,6 +1329,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// List of output manifests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.Manifest> Manifests {
       get { return manifests_; }
     }
@@ -1282,6 +1341,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Output configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.Output Output {
       get { return output_; }
       set {
@@ -1299,6 +1359,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// manifests.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.AdBreak> AdBreaks {
       get { return adBreaks_; }
     }
@@ -1310,6 +1371,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Destination on Pub/Sub.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PubsubDestination PubsubDestination {
       get { return pubsubDestination_; }
       set {
@@ -1326,6 +1388,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// List of output sprite sheets.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.SpriteSheet> SpriteSheets {
       get { return spriteSheets_; }
     }
@@ -1339,16 +1402,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// List of overlays on the output video, in descending Z-order.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.Overlay> Overlays {
       get { return overlays_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as JobConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(JobConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1370,6 +1436,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= inputs_.GetHashCode();
@@ -1389,11 +1456,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1422,6 +1491,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       inputs_.WriteTo(ref output, _repeated_inputs_codec);
       editList_.WriteTo(ref output, _repeated_editList_codec);
@@ -1446,6 +1516,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += inputs_.CalculateSize(_repeated_inputs_codec);
@@ -1469,6 +1540,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(JobConfig other) {
       if (other == null) {
         return;
@@ -1497,6 +1569,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1560,6 +1633,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1631,19 +1705,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<Input> _parser = new pb::MessageParser<Input>(() => new Input());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Input> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Input() {
       OnConstruction();
     }
@@ -1651,6 +1729,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Input(Input other) : this() {
       key_ = other.key_;
       uri_ = other.uri_;
@@ -1659,6 +1738,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Input Clone() {
       return new Input(this);
     }
@@ -1671,6 +1751,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// mapping and edit lists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Key {
       get { return key_; }
       set {
@@ -1687,6 +1768,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// If empty, the value will be populated from `Job.input_uri`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
       get { return uri_; }
       set {
@@ -1701,6 +1783,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Preprocessing configurations.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig PreprocessingConfig {
       get { return preprocessingConfig_; }
       set {
@@ -1709,11 +1792,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Input);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Input other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1728,6 +1813,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -1740,11 +1826,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1769,6 +1857,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Key.Length != 0) {
         output.WriteRawTag(10);
@@ -1789,6 +1878,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Key.Length != 0) {
@@ -1807,6 +1897,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Input other) {
       if (other == null) {
         return;
@@ -1827,6 +1918,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1859,6 +1951,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1899,19 +1992,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<Output> _parser = new pb::MessageParser<Output>(() => new Output());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Output> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Output() {
       OnConstruction();
     }
@@ -1919,12 +2016,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Output(Output other) : this() {
       uri_ = other.uri_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Output Clone() {
       return new Output(this);
     }
@@ -1937,6 +2036,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// If empty the value is populated from `Job.output_uri`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Uri {
       get { return uri_; }
       set {
@@ -1945,11 +2045,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Output);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Output other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1962,6 +2064,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
@@ -1972,11 +2075,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1993,6 +2098,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Uri.Length != 0) {
         output.WriteRawTag(10);
@@ -2005,6 +2111,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Uri.Length != 0) {
@@ -2017,6 +2124,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Output other) {
       if (other == null) {
         return;
@@ -2028,6 +2136,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2049,6 +2158,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2078,19 +2188,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<EditAtom> _parser = new pb::MessageParser<EditAtom>(() => new EditAtom());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EditAtom> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EditAtom() {
       OnConstruction();
     }
@@ -2098,6 +2212,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EditAtom(EditAtom other) : this() {
       key_ = other.key_;
       inputs_ = other.inputs_.Clone();
@@ -2107,6 +2222,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EditAtom Clone() {
       return new EditAtom(this);
     }
@@ -2119,6 +2235,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// mapping.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Key {
       get { return key_; }
       set {
@@ -2136,6 +2253,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// The listed `inputs` must have the same timeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> Inputs {
       get { return inputs_; }
     }
@@ -2149,6 +2267,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// the end of the atom.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration EndTimeOffset {
       get { return endTimeOffset_; }
       set {
@@ -2164,6 +2283,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// The default is `0s`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
       get { return startTimeOffset_; }
       set {
@@ -2172,11 +2292,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EditAtom);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EditAtom other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2192,6 +2314,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -2205,11 +2328,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2235,6 +2360,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Key.Length != 0) {
         output.WriteRawTag(10);
@@ -2256,6 +2382,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Key.Length != 0) {
@@ -2275,6 +2402,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EditAtom other) {
       if (other == null) {
         return;
@@ -2299,6 +2427,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2338,6 +2467,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2385,19 +2515,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<AdBreak> _parser = new pb::MessageParser<AdBreak>(() => new AdBreak());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AdBreak> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdBreak() {
       OnConstruction();
     }
@@ -2405,12 +2539,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdBreak(AdBreak other) : this() {
       startTimeOffset_ = other.startTimeOffset_ != null ? other.startTimeOffset_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AdBreak Clone() {
       return new AdBreak(this);
     }
@@ -2423,6 +2559,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// timeline. The default is `0s`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
       get { return startTimeOffset_; }
       set {
@@ -2431,11 +2568,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AdBreak);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AdBreak other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2448,6 +2587,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (startTimeOffset_ != null) hash ^= StartTimeOffset.GetHashCode();
@@ -2458,11 +2598,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2479,6 +2621,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (startTimeOffset_ != null) {
         output.WriteRawTag(10);
@@ -2491,6 +2634,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (startTimeOffset_ != null) {
@@ -2503,6 +2647,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AdBreak other) {
       if (other == null) {
         return;
@@ -2517,6 +2662,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2541,6 +2687,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2575,19 +2722,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<ElementaryStream> _parser = new pb::MessageParser<ElementaryStream>(() => new ElementaryStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ElementaryStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ElementaryStream() {
       OnConstruction();
     }
@@ -2595,6 +2746,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ElementaryStream(ElementaryStream other) : this() {
       key_ = other.key_;
       switch (other.ElementaryStreamCase) {
@@ -2613,6 +2765,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ElementaryStream Clone() {
       return new ElementaryStream(this);
     }
@@ -2624,6 +2777,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// A unique key for this elementary stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Key {
       get { return key_; }
       set {
@@ -2637,6 +2791,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Encoding of a video stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.VideoStream VideoStream {
       get { return elementaryStreamCase_ == ElementaryStreamOneofCase.VideoStream ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream) elementaryStream_ : null; }
       set {
@@ -2651,6 +2806,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Encoding of an audio stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.AudioStream AudioStream {
       get { return elementaryStreamCase_ == ElementaryStreamOneofCase.AudioStream ? (global::Google.Cloud.Video.Transcoder.V1.AudioStream) elementaryStream_ : null; }
       set {
@@ -2665,6 +2821,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Encoding of a text stream. For example, closed captions or subtitles.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.TextStream TextStream {
       get { return elementaryStreamCase_ == ElementaryStreamOneofCase.TextStream ? (global::Google.Cloud.Video.Transcoder.V1.TextStream) elementaryStream_ : null; }
       set {
@@ -2683,22 +2840,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
     private ElementaryStreamOneofCase elementaryStreamCase_ = ElementaryStreamOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ElementaryStreamOneofCase ElementaryStreamCase {
       get { return elementaryStreamCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearElementaryStream() {
       elementaryStreamCase_ = ElementaryStreamOneofCase.None;
       elementaryStream_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ElementaryStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ElementaryStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2715,6 +2876,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -2729,11 +2891,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2762,6 +2926,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (elementaryStreamCase_ == ElementaryStreamOneofCase.VideoStream) {
         output.WriteRawTag(10);
@@ -2786,6 +2951,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Key.Length != 0) {
@@ -2807,6 +2973,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ElementaryStream other) {
       if (other == null) {
         return;
@@ -2839,6 +3006,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2887,6 +3055,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2943,19 +3112,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<MuxStream> _parser = new pb::MessageParser<MuxStream>(() => new MuxStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MuxStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MuxStream() {
       OnConstruction();
     }
@@ -2963,6 +3136,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MuxStream(MuxStream other) : this() {
       key_ = other.key_;
       fileName_ = other.fileName_;
@@ -2973,6 +3147,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MuxStream Clone() {
       return new MuxStream(this);
     }
@@ -2985,6 +3160,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// named `MuxStream.key` with the `.m3u8` extension suffix.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Key {
       get { return key_; }
       set {
@@ -3003,6 +3179,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// starting from 0 before the extension, such as `mux_stream0000000123.ts`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FileName {
       get { return fileName_; }
       set {
@@ -3024,6 +3201,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// - `vtt`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Container {
       get { return container_; }
       set {
@@ -3040,6 +3218,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// List of `ElementaryStream.key`s multiplexed in this stream.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ElementaryStreams {
       get { return elementaryStreams_; }
     }
@@ -3051,6 +3230,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Segment settings for `ts`, `fmp4` and `vtt`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.SegmentSettings SegmentSettings {
       get { return segmentSettings_; }
       set {
@@ -3059,11 +3239,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MuxStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MuxStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3080,6 +3262,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Key.Length != 0) hash ^= Key.GetHashCode();
@@ -3094,11 +3277,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3128,6 +3313,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Key.Length != 0) {
         output.WriteRawTag(10);
@@ -3153,6 +3339,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Key.Length != 0) {
@@ -3175,6 +3362,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MuxStream other) {
       if (other == null) {
         return;
@@ -3199,6 +3387,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3239,6 +3428,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3287,19 +3477,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<Manifest> _parser = new pb::MessageParser<Manifest>(() => new Manifest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Manifest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Manifest() {
       OnConstruction();
     }
@@ -3307,6 +3501,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Manifest(Manifest other) : this() {
       fileName_ = other.fileName_;
       type_ = other.type_;
@@ -3315,6 +3510,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Manifest Clone() {
       return new Manifest(this);
     }
@@ -3327,6 +3523,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// extension suffix corresponding to the `Manifest.type`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FileName {
       get { return fileName_; }
       set {
@@ -3341,6 +3538,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Required. Type of the manifest, can be `HLS` or `DASH`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.Manifest.Types.ManifestType Type {
       get { return type_; }
       set {
@@ -3361,16 +3559,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// `Manifest.mux_streams`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> MuxStreams {
       get { return muxStreams_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Manifest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Manifest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3385,6 +3586,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (FileName.Length != 0) hash ^= FileName.GetHashCode();
@@ -3397,11 +3599,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3423,6 +3627,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (FileName.Length != 0) {
         output.WriteRawTag(10);
@@ -3440,6 +3645,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (FileName.Length != 0) {
@@ -3456,6 +3662,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Manifest other) {
       if (other == null) {
         return;
@@ -3471,6 +3678,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3500,6 +3708,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3527,6 +3736,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Manifest message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The manifest type can be either `HLS` or `DASH`.
@@ -3562,19 +3772,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<PubsubDestination> _parser = new pb::MessageParser<PubsubDestination>(() => new PubsubDestination());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PubsubDestination> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PubsubDestination() {
       OnConstruction();
     }
@@ -3582,12 +3796,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PubsubDestination(PubsubDestination other) : this() {
       topic_ = other.topic_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PubsubDestination Clone() {
       return new PubsubDestination(this);
     }
@@ -3600,6 +3816,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// to. For example: `projects/{project}/topics/{topic}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Topic {
       get { return topic_; }
       set {
@@ -3608,11 +3825,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PubsubDestination);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PubsubDestination other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3625,6 +3844,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Topic.Length != 0) hash ^= Topic.GetHashCode();
@@ -3635,11 +3855,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3656,6 +3878,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Topic.Length != 0) {
         output.WriteRawTag(10);
@@ -3668,6 +3891,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Topic.Length != 0) {
@@ -3680,6 +3904,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PubsubDestination other) {
       if (other == null) {
         return;
@@ -3691,6 +3916,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3712,6 +3938,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3741,19 +3968,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<SpriteSheet> _parser = new pb::MessageParser<SpriteSheet>(() => new SpriteSheet());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SpriteSheet> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpriteSheet() {
       OnConstruction();
     }
@@ -3761,6 +3992,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpriteSheet(SpriteSheet other) : this() {
       format_ = other.format_;
       filePrefix_ = other.filePrefix_;
@@ -3784,6 +4016,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SpriteSheet Clone() {
       return new SpriteSheet(this);
     }
@@ -3799,6 +4032,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// - `jpeg`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Format {
       get { return format_; }
       set {
@@ -3816,6 +4050,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// from 0 before the extension, such as `sprite_sheet0000000123.jpeg`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FilePrefix {
       get { return filePrefix_; }
       set {
@@ -3833,6 +4068,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// automatically calculate the missing field).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SpriteWidthPixels {
       get { return spriteWidthPixels_; }
       set {
@@ -3850,6 +4086,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// automatically calculate the missing field).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SpriteHeightPixels {
       get { return spriteHeightPixels_; }
       set {
@@ -3865,6 +4102,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// which indicates no maximum limit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ColumnCount {
       get { return columnCount_; }
       set {
@@ -3881,6 +4119,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// limit.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int RowCount {
       get { return rowCount_; }
       set {
@@ -3896,6 +4135,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// first sprite to pick. The default is `0s`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
       get { return startTimeOffset_; }
       set {
@@ -3912,6 +4152,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// of the output file.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration EndTimeOffset {
       get { return endTimeOffset_; }
       set {
@@ -3927,6 +4168,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// is 100.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int TotalCount {
       get { return extractionStrategyCase_ == ExtractionStrategyOneofCase.TotalCount ? (int) extractionStrategy_ : 0; }
       set {
@@ -3942,6 +4184,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// interval value in seconds.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration Interval {
       get { return extractionStrategyCase_ == ExtractionStrategyOneofCase.Interval ? (global::Google.Protobuf.WellKnownTypes.Duration) extractionStrategy_ : null; }
       set {
@@ -3960,6 +4203,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// compression ratio.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int Quality {
       get { return quality_; }
       set {
@@ -3976,22 +4220,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
     private ExtractionStrategyOneofCase extractionStrategyCase_ = ExtractionStrategyOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ExtractionStrategyOneofCase ExtractionStrategyCase {
       get { return extractionStrategyCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearExtractionStrategy() {
       extractionStrategyCase_ = ExtractionStrategyOneofCase.None;
       extractionStrategy_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SpriteSheet);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SpriteSheet other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4015,6 +4263,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Format.Length != 0) hash ^= Format.GetHashCode();
@@ -4036,11 +4285,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4097,6 +4348,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Format.Length != 0) {
         output.WriteRawTag(10);
@@ -4149,6 +4401,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Format.Length != 0) {
@@ -4191,6 +4444,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SpriteSheet other) {
       if (other == null) {
         return;
@@ -4244,6 +4498,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4316,6 +4571,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4396,19 +4652,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<Overlay> _parser = new pb::MessageParser<Overlay>(() => new Overlay());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Overlay> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Overlay() {
       OnConstruction();
     }
@@ -4416,6 +4676,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Overlay(Overlay other) : this() {
       image_ = other.image_ != null ? other.image_.Clone() : null;
       animations_ = other.animations_.Clone();
@@ -4423,6 +4684,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Overlay Clone() {
       return new Overlay(this);
     }
@@ -4434,6 +4696,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Image overlay.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.Image Image {
       get { return image_; }
       set {
@@ -4451,16 +4714,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// overlap.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.Animation> Animations {
       get { return animations_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Overlay);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Overlay other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4474,6 +4740,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (image_ != null) hash ^= Image.GetHashCode();
@@ -4485,11 +4752,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4507,6 +4776,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (image_ != null) {
         output.WriteRawTag(10);
@@ -4520,6 +4790,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (image_ != null) {
@@ -4533,6 +4804,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Overlay other) {
       if (other == null) {
         return;
@@ -4548,6 +4820,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4576,6 +4849,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4602,6 +4876,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Overlay message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Fade type for the overlay: `FADE_IN` or `FADE_OUT`.
@@ -4632,19 +4907,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<NormalizedCoordinate> _parser = new pb::MessageParser<NormalizedCoordinate>(() => new NormalizedCoordinate());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<NormalizedCoordinate> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.Overlay.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public NormalizedCoordinate() {
           OnConstruction();
         }
@@ -4652,6 +4931,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public NormalizedCoordinate(NormalizedCoordinate other) : this() {
           x_ = other.x_;
           y_ = other.y_;
@@ -4659,6 +4939,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public NormalizedCoordinate Clone() {
           return new NormalizedCoordinate(this);
         }
@@ -4670,6 +4951,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Normalized x coordinate.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double X {
           get { return x_; }
           set {
@@ -4684,6 +4966,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Normalized y coordinate.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Y {
           get { return y_; }
           set {
@@ -4692,11 +4975,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as NormalizedCoordinate);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(NormalizedCoordinate other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -4710,6 +4995,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (X != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(X);
@@ -4721,11 +5007,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -4746,6 +5034,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (X != 0D) {
             output.WriteRawTag(9);
@@ -4762,6 +5051,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (X != 0D) {
@@ -4777,6 +5067,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(NormalizedCoordinate other) {
           if (other == null) {
             return;
@@ -4791,6 +5082,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -4816,6 +5108,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -4849,19 +5142,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Image> _parser = new pb::MessageParser<Image>(() => new Image());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Image> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.Overlay.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Image() {
           OnConstruction();
         }
@@ -4869,6 +5166,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Image(Image other) : this() {
           uri_ = other.uri_;
           resolution_ = other.resolution_ != null ? other.resolution_.Clone() : null;
@@ -4877,6 +5175,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Image Clone() {
           return new Image(this);
         }
@@ -4889,6 +5188,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `gs://bucket/inputs/image.jpeg`. JPEG is the only supported image type.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Uri {
           get { return uri_; }
           set {
@@ -4906,6 +5206,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// both `x` and `y` to `0.0`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.NormalizedCoordinate Resolution {
           get { return resolution_; }
           set {
@@ -4921,6 +5222,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `0.0` (transparent), exclusive. Set this to a value greater than `0.0`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Alpha {
           get { return alpha_; }
           set {
@@ -4929,11 +5231,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Image);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Image other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -4948,6 +5252,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Uri.Length != 0) hash ^= Uri.GetHashCode();
@@ -4960,11 +5265,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -4989,6 +5296,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Uri.Length != 0) {
             output.WriteRawTag(10);
@@ -5009,6 +5317,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Uri.Length != 0) {
@@ -5027,6 +5336,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Image other) {
           if (other == null) {
             return;
@@ -5047,6 +5357,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5079,6 +5390,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5119,19 +5431,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<AnimationStatic> _parser = new pb::MessageParser<AnimationStatic>(() => new AnimationStatic());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AnimationStatic> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.Overlay.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationStatic() {
           OnConstruction();
         }
@@ -5139,6 +5455,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationStatic(AnimationStatic other) : this() {
           xy_ = other.xy_ != null ? other.xy_.Clone() : null;
           startTimeOffset_ = other.startTimeOffset_ != null ? other.startTimeOffset_.Clone() : null;
@@ -5146,6 +5463,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationStatic Clone() {
           return new AnimationStatic(this);
         }
@@ -5161,6 +5479,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// output video.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.NormalizedCoordinate Xy {
           get { return xy_; }
           set {
@@ -5175,6 +5494,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The time to start displaying the overlay object, in seconds. Default: 0
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
           get { return startTimeOffset_; }
           set {
@@ -5183,11 +5503,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AnimationStatic);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AnimationStatic other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5201,6 +5523,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (xy_ != null) hash ^= Xy.GetHashCode();
@@ -5212,11 +5535,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5237,6 +5562,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (xy_ != null) {
             output.WriteRawTag(10);
@@ -5253,6 +5579,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (xy_ != null) {
@@ -5268,6 +5595,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AnimationStatic other) {
           if (other == null) {
             return;
@@ -5288,6 +5616,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5319,6 +5648,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5358,19 +5688,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<AnimationFade> _parser = new pb::MessageParser<AnimationFade>(() => new AnimationFade());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AnimationFade> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.Overlay.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationFade() {
           OnConstruction();
         }
@@ -5378,6 +5712,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationFade(AnimationFade other) : this() {
           fadeType_ = other.fadeType_;
           xy_ = other.xy_ != null ? other.xy_.Clone() : null;
@@ -5387,6 +5722,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationFade Clone() {
           return new AnimationFade(this);
         }
@@ -5398,6 +5734,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Required. Type of fade animation: `FADE_IN` or `FADE_OUT`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.FadeType FadeType {
           get { return fadeType_; }
           set {
@@ -5416,6 +5753,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// output video.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.NormalizedCoordinate Xy {
           get { return xy_; }
           set {
@@ -5430,6 +5768,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The time to start the fade animation, in seconds. Default: 0
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
           get { return startTimeOffset_; }
           set {
@@ -5445,6 +5784,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `start_time_offset` + 1s
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration EndTimeOffset {
           get { return endTimeOffset_; }
           set {
@@ -5453,11 +5793,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AnimationFade);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AnimationFade other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5473,6 +5815,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (FadeType != global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.FadeType.Unspecified) hash ^= FadeType.GetHashCode();
@@ -5486,11 +5829,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5519,6 +5864,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (FadeType != global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.FadeType.Unspecified) {
             output.WriteRawTag(8);
@@ -5543,6 +5889,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (FadeType != global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.FadeType.Unspecified) {
@@ -5564,6 +5911,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AnimationFade other) {
           if (other == null) {
             return;
@@ -5593,6 +5941,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5635,6 +5984,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5687,19 +6037,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<AnimationEnd> _parser = new pb::MessageParser<AnimationEnd>(() => new AnimationEnd());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AnimationEnd> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.Overlay.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationEnd() {
           OnConstruction();
         }
@@ -5707,12 +6061,14 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationEnd(AnimationEnd other) : this() {
           startTimeOffset_ = other.startTimeOffset_ != null ? other.startTimeOffset_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationEnd Clone() {
           return new AnimationEnd(this);
         }
@@ -5724,6 +6080,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The time to end overlay object, in seconds. Default: 0
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration StartTimeOffset {
           get { return startTimeOffset_; }
           set {
@@ -5732,11 +6089,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AnimationEnd);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AnimationEnd other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5749,6 +6108,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (startTimeOffset_ != null) hash ^= StartTimeOffset.GetHashCode();
@@ -5759,11 +6119,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -5780,6 +6142,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (startTimeOffset_ != null) {
             output.WriteRawTag(10);
@@ -5792,6 +6155,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (startTimeOffset_ != null) {
@@ -5804,6 +6168,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AnimationEnd other) {
           if (other == null) {
             return;
@@ -5818,6 +6183,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -5842,6 +6208,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -5874,19 +6241,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Animation> _parser = new pb::MessageParser<Animation>(() => new Animation());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Animation> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.Overlay.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Animation() {
           OnConstruction();
         }
@@ -5894,6 +6265,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Animation(Animation other) : this() {
           switch (other.AnimationTypeCase) {
             case AnimationTypeOneofCase.AnimationStatic:
@@ -5911,6 +6283,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Animation Clone() {
           return new Animation(this);
         }
@@ -5921,6 +6294,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Display static overlay object.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationStatic AnimationStatic {
           get { return animationTypeCase_ == AnimationTypeOneofCase.AnimationStatic ? (global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationStatic) animationType_ : null; }
           set {
@@ -5935,6 +6309,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Display overlay object with fade animation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationFade AnimationFade {
           get { return animationTypeCase_ == AnimationTypeOneofCase.AnimationFade ? (global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationFade) animationType_ : null; }
           set {
@@ -5949,6 +6324,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// End previous animation.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationEnd AnimationEnd {
           get { return animationTypeCase_ == AnimationTypeOneofCase.AnimationEnd ? (global::Google.Cloud.Video.Transcoder.V1.Overlay.Types.AnimationEnd) animationType_ : null; }
           set {
@@ -5967,22 +6343,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
         private AnimationTypeOneofCase animationTypeCase_ = AnimationTypeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AnimationTypeOneofCase AnimationTypeCase {
           get { return animationTypeCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearAnimationType() {
           animationTypeCase_ = AnimationTypeOneofCase.None;
           animationType_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Animation);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Animation other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -5998,6 +6378,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (animationTypeCase_ == AnimationTypeOneofCase.AnimationStatic) hash ^= AnimationStatic.GetHashCode();
@@ -6011,11 +6392,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -6040,6 +6423,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (animationTypeCase_ == AnimationTypeOneofCase.AnimationStatic) {
             output.WriteRawTag(10);
@@ -6060,6 +6444,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (animationTypeCase_ == AnimationTypeOneofCase.AnimationStatic) {
@@ -6078,6 +6463,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Animation other) {
           if (other == null) {
             return;
@@ -6107,6 +6493,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -6151,6 +6538,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -6208,19 +6596,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<PreprocessingConfig> _parser = new pb::MessageParser<PreprocessingConfig>(() => new PreprocessingConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PreprocessingConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreprocessingConfig() {
       OnConstruction();
     }
@@ -6228,6 +6620,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreprocessingConfig(PreprocessingConfig other) : this() {
       color_ = other.color_ != null ? other.color_.Clone() : null;
       denoise_ = other.denoise_ != null ? other.denoise_.Clone() : null;
@@ -6239,6 +6632,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PreprocessingConfig Clone() {
       return new PreprocessingConfig(this);
     }
@@ -6250,6 +6644,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Color preprocessing configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Color Color {
       get { return color_; }
       set {
@@ -6264,6 +6659,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Denoise preprocessing configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Denoise Denoise {
       get { return denoise_; }
       set {
@@ -6278,6 +6674,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Deblock preprocessing configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Deblock Deblock {
       get { return deblock_; }
       set {
@@ -6292,6 +6689,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Audio preprocessing configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Audio Audio {
       get { return audio_; }
       set {
@@ -6306,6 +6704,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Specify the video cropping configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Crop Crop {
       get { return crop_; }
       set {
@@ -6320,6 +6719,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Specify the video pad filter configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Types.Pad Pad {
       get { return pad_; }
       set {
@@ -6328,11 +6728,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PreprocessingConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PreprocessingConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6350,6 +6752,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (color_ != null) hash ^= Color.GetHashCode();
@@ -6365,11 +6768,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6406,6 +6811,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (color_ != null) {
         output.WriteRawTag(10);
@@ -6438,6 +6844,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (color_ != null) {
@@ -6465,6 +6872,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PreprocessingConfig other) {
       if (other == null) {
         return;
@@ -6509,6 +6917,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6568,6 +6977,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6625,6 +7035,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the PreprocessingConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Color preprocessing configuration.
@@ -6637,19 +7048,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Color> _parser = new pb::MessageParser<Color>(() => new Color());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Color> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Color() {
           OnConstruction();
         }
@@ -6657,6 +7072,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Color(Color other) : this() {
           saturation_ = other.saturation_;
           contrast_ = other.contrast_;
@@ -6665,6 +7081,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Color Clone() {
           return new Color(this);
         }
@@ -6678,6 +7095,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// change. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Saturation {
           get { return saturation_; }
           set {
@@ -6694,6 +7112,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// change. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Contrast {
           get { return contrast_; }
           set {
@@ -6710,6 +7129,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Brightness {
           get { return brightness_; }
           set {
@@ -6718,11 +7138,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Color);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Color other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -6737,6 +7159,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Saturation != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Saturation);
@@ -6749,11 +7172,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -6778,6 +7203,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Saturation != 0D) {
             output.WriteRawTag(9);
@@ -6798,6 +7224,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Saturation != 0D) {
@@ -6816,6 +7243,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Color other) {
           if (other == null) {
             return;
@@ -6833,6 +7261,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -6862,6 +7291,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -6899,19 +7329,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Denoise> _parser = new pb::MessageParser<Denoise>(() => new Denoise());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Denoise> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Denoise() {
           OnConstruction();
         }
@@ -6919,6 +7353,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Denoise(Denoise other) : this() {
           strength_ = other.strength_;
           tune_ = other.tune_;
@@ -6926,6 +7361,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Denoise Clone() {
           return new Denoise(this);
         }
@@ -6938,6 +7374,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// the value, the smoother the image. 0 is no denoising. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Strength {
           get { return strength_; }
           set {
@@ -6957,6 +7394,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `grain`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Tune {
           get { return tune_; }
           set {
@@ -6965,11 +7403,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Denoise);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Denoise other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -6983,6 +7423,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Strength != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Strength);
@@ -6994,11 +7435,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -7019,6 +7462,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Strength != 0D) {
             output.WriteRawTag(9);
@@ -7035,6 +7479,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Strength != 0D) {
@@ -7050,6 +7495,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Denoise other) {
           if (other == null) {
             return;
@@ -7064,6 +7510,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -7089,6 +7536,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -7122,19 +7570,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Deblock> _parser = new pb::MessageParser<Deblock>(() => new Deblock());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Deblock> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Deblock() {
           OnConstruction();
         }
@@ -7142,6 +7594,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Deblock(Deblock other) : this() {
           strength_ = other.strength_;
           enabled_ = other.enabled_;
@@ -7149,6 +7602,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Deblock Clone() {
           return new Deblock(this);
         }
@@ -7162,6 +7616,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Strength {
           get { return strength_; }
           set {
@@ -7176,6 +7631,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Enable deblocker. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Enabled {
           get { return enabled_; }
           set {
@@ -7184,11 +7640,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Deblock);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Deblock other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -7202,6 +7660,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Strength != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Strength);
@@ -7213,11 +7672,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -7238,6 +7699,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Strength != 0D) {
             output.WriteRawTag(9);
@@ -7254,6 +7716,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Strength != 0D) {
@@ -7269,6 +7732,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Deblock other) {
           if (other == null) {
             return;
@@ -7283,6 +7747,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -7308,6 +7773,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -7341,19 +7807,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Audio> _parser = new pb::MessageParser<Audio>(() => new Audio());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Audio> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Descriptor.NestedTypes[3]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Audio() {
           OnConstruction();
         }
@@ -7361,6 +7831,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Audio(Audio other) : this() {
           lufs_ = other.lufs_;
           highBoost_ = other.highBoost_;
@@ -7369,6 +7840,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Audio Clone() {
           return new Audio(this);
         }
@@ -7390,6 +7862,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// *   0 disables normalization
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double Lufs {
           get { return lufs_; }
           set {
@@ -7404,6 +7877,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Enable boosting high frequency components. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool HighBoost {
           get { return highBoost_; }
           set {
@@ -7418,6 +7892,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Enable boosting low frequency components. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool LowBoost {
           get { return lowBoost_; }
           set {
@@ -7426,11 +7901,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Audio);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Audio other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -7445,6 +7922,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (Lufs != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(Lufs);
@@ -7457,11 +7935,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -7486,6 +7966,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (Lufs != 0D) {
             output.WriteRawTag(9);
@@ -7506,6 +7987,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (Lufs != 0D) {
@@ -7524,6 +8006,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Audio other) {
           if (other == null) {
             return;
@@ -7541,6 +8024,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -7570,6 +8054,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -7608,19 +8093,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Crop> _parser = new pb::MessageParser<Crop>(() => new Crop());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Crop> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Descriptor.NestedTypes[4]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Crop() {
           OnConstruction();
         }
@@ -7628,6 +8117,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Crop(Crop other) : this() {
           topPixels_ = other.topPixels_;
           bottomPixels_ = other.bottomPixels_;
@@ -7637,6 +8127,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Crop Clone() {
           return new Crop(this);
         }
@@ -7648,6 +8139,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to crop from the top. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int TopPixels {
           get { return topPixels_; }
           set {
@@ -7662,6 +8154,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to crop from the bottom. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BottomPixels {
           get { return bottomPixels_; }
           set {
@@ -7676,6 +8169,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to crop from the left. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int LeftPixels {
           get { return leftPixels_; }
           set {
@@ -7690,6 +8184,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to crop from the right. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int RightPixels {
           get { return rightPixels_; }
           set {
@@ -7698,11 +8193,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Crop);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Crop other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -7718,6 +8215,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (TopPixels != 0) hash ^= TopPixels.GetHashCode();
@@ -7731,11 +8229,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -7764,6 +8264,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (TopPixels != 0) {
             output.WriteRawTag(8);
@@ -7788,6 +8289,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (TopPixels != 0) {
@@ -7809,6 +8311,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Crop other) {
           if (other == null) {
             return;
@@ -7829,6 +8332,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -7862,6 +8366,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -7904,19 +8409,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Pad> _parser = new pb::MessageParser<Pad>(() => new Pad());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Pad> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.PreprocessingConfig.Descriptor.NestedTypes[5]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Pad() {
           OnConstruction();
         }
@@ -7924,6 +8433,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Pad(Pad other) : this() {
           topPixels_ = other.topPixels_;
           bottomPixels_ = other.bottomPixels_;
@@ -7933,6 +8443,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Pad Clone() {
           return new Pad(this);
         }
@@ -7944,6 +8455,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to add to the top. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int TopPixels {
           get { return topPixels_; }
           set {
@@ -7958,6 +8470,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to add to the bottom. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BottomPixels {
           get { return bottomPixels_; }
           set {
@@ -7972,6 +8485,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to add to the left. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int LeftPixels {
           get { return leftPixels_; }
           set {
@@ -7986,6 +8500,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The number of pixels to add to the right. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int RightPixels {
           get { return rightPixels_; }
           set {
@@ -7994,11 +8509,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Pad);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Pad other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -8014,6 +8531,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (TopPixels != 0) hash ^= TopPixels.GetHashCode();
@@ -8027,11 +8545,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -8060,6 +8580,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (TopPixels != 0) {
             output.WriteRawTag(8);
@@ -8084,6 +8605,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (TopPixels != 0) {
@@ -8105,6 +8627,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Pad other) {
           if (other == null) {
             return;
@@ -8125,6 +8648,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -8158,6 +8682,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -8204,19 +8729,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<VideoStream> _parser = new pb::MessageParser<VideoStream>(() => new VideoStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<VideoStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoStream() {
       OnConstruction();
     }
@@ -8224,6 +8753,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoStream(VideoStream other) : this() {
       switch (other.CodecSettingsCase) {
         case CodecSettingsOneofCase.H264:
@@ -8241,6 +8771,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public VideoStream Clone() {
       return new VideoStream(this);
     }
@@ -8251,6 +8782,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// H264 codec settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings H264 {
       get { return codecSettingsCase_ == CodecSettingsOneofCase.H264 ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H264CodecSettings) codecSettings_ : null; }
       set {
@@ -8265,6 +8797,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// H265 codec settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings H265 {
       get { return codecSettingsCase_ == CodecSettingsOneofCase.H265 ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.H265CodecSettings) codecSettings_ : null; }
       set {
@@ -8279,6 +8812,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// VP9 codec settings.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings Vp9 {
       get { return codecSettingsCase_ == CodecSettingsOneofCase.Vp9 ? (global::Google.Cloud.Video.Transcoder.V1.VideoStream.Types.Vp9CodecSettings) codecSettings_ : null; }
       set {
@@ -8297,22 +8831,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
     private CodecSettingsOneofCase codecSettingsCase_ = CodecSettingsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CodecSettingsOneofCase CodecSettingsCase {
       get { return codecSettingsCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCodecSettings() {
       codecSettingsCase_ = CodecSettingsOneofCase.None;
       codecSettings_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as VideoStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(VideoStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -8328,6 +8866,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (codecSettingsCase_ == CodecSettingsOneofCase.H264) hash ^= H264.GetHashCode();
@@ -8341,11 +8880,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -8370,6 +8911,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (codecSettingsCase_ == CodecSettingsOneofCase.H264) {
         output.WriteRawTag(10);
@@ -8390,6 +8932,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (codecSettingsCase_ == CodecSettingsOneofCase.H264) {
@@ -8408,6 +8951,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(VideoStream other) {
       if (other == null) {
         return;
@@ -8437,6 +8981,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -8481,6 +9026,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -8523,6 +9069,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the VideoStream message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// H264 codec settings.
@@ -8535,19 +9082,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<H264CodecSettings> _parser = new pb::MessageParser<H264CodecSettings>(() => new H264CodecSettings());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<H264CodecSettings> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public H264CodecSettings() {
           OnConstruction();
         }
@@ -8555,6 +9106,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public H264CodecSettings(H264CodecSettings other) : this() {
           widthPixels_ = other.widthPixels_;
           heightPixels_ = other.heightPixels_;
@@ -8587,6 +9139,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public H264CodecSettings Clone() {
           return new H264CodecSettings(this);
         }
@@ -8600,6 +9153,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// and input aspect ratio. If both are omitted, the input width is used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int WidthPixels {
           get { return widthPixels_; }
           set {
@@ -8616,6 +9170,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// and input aspect ratio. If both are omitted, the input height is used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int HeightPixels {
           get { return heightPixels_; }
           set {
@@ -8636,6 +9191,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// more information.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double FrameRate {
           get { return frameRate_; }
           set {
@@ -8651,6 +9207,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The maximum value is 800,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BitrateBps {
           get { return bitrateBps_; }
           set {
@@ -8677,6 +9234,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `yuv444p12` 12-bit HDR pixel format
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PixelFormat {
           get { return pixelFormat_; }
           set {
@@ -8696,6 +9254,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `crf` - constant rate factor
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string RateControlMode {
           get { return rateControlMode_; }
           set {
@@ -8711,6 +9270,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// quality and 36 is the most efficient compression. The default is 21.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CrfLevel {
           get { return crfLevel_; }
           set {
@@ -8726,6 +9286,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// allowed or not. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllowOpenGop {
           get { return allowOpenGop_; }
           set {
@@ -8740,6 +9301,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// than zero.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int GopFrameCount {
           get { return gopModeCase_ == GopModeOneofCase.GopFrameCount ? (int) gopMode_ : 0; }
           set {
@@ -8758,6 +9320,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `gopDuration`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration GopDuration {
           get { return gopModeCase_ == GopModeOneofCase.GopDuration ? (global::Google.Protobuf.WellKnownTypes.Duration) gopMode_ : null; }
           set {
@@ -8774,6 +9337,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool EnableTwoPass {
           get { return enableTwoPass_; }
           set {
@@ -8789,6 +9353,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// greater than zero. The default is equal to `VideoStream.bitrate_bps`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int VbvSizeBits {
           get { return vbvSizeBits_; }
           set {
@@ -8805,6 +9370,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `VideoStream.vbv_size_bits`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int VbvFullnessBits {
           get { return vbvFullnessBits_; }
           set {
@@ -8824,6 +9390,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `cabac`
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string EntropyCoder {
           get { return entropyCoder_; }
           set {
@@ -8839,6 +9406,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// on all decoders. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool BPyramid {
           get { return bPyramid_; }
           set {
@@ -8855,6 +9423,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BFrameCount {
           get { return bFrameCount_; }
           set {
@@ -8871,6 +9440,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// higher value equals a lower bitrate but smoother image. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double AqStrength {
           get { return aqStrength_; }
           set {
@@ -8896,6 +9466,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Profile {
           get { return profile_; }
           set {
@@ -8914,6 +9485,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Tune {
           get { return tune_; }
           set {
@@ -8933,6 +9505,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Preset {
           get { return preset_; }
           set {
@@ -8949,22 +9522,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
         private GopModeOneofCase gopModeCase_ = GopModeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GopModeOneofCase GopModeCase {
           get { return gopModeCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearGopMode() {
           gopModeCase_ = GopModeOneofCase.None;
           gopMode_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as H264CodecSettings);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(H264CodecSettings other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -8997,6 +9574,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (WidthPixels != 0) hash ^= WidthPixels.GetHashCode();
@@ -9027,11 +9605,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -9124,6 +9704,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (WidthPixels != 0) {
             output.WriteRawTag(8);
@@ -9212,6 +9793,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (WidthPixels != 0) {
@@ -9281,6 +9863,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(H264CodecSettings other) {
           if (other == null) {
             return;
@@ -9355,6 +9938,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -9457,6 +10041,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -9567,19 +10152,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<H265CodecSettings> _parser = new pb::MessageParser<H265CodecSettings>(() => new H265CodecSettings());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<H265CodecSettings> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[1]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public H265CodecSettings() {
           OnConstruction();
         }
@@ -9587,6 +10176,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public H265CodecSettings(H265CodecSettings other) : this() {
           widthPixels_ = other.widthPixels_;
           heightPixels_ = other.heightPixels_;
@@ -9618,6 +10208,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public H265CodecSettings Clone() {
           return new H265CodecSettings(this);
         }
@@ -9631,6 +10222,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// and input aspect ratio. If both are omitted, the input width is used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int WidthPixels {
           get { return widthPixels_; }
           set {
@@ -9647,6 +10239,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// and input aspect ratio. If both are omitted, the input height is used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int HeightPixels {
           get { return heightPixels_; }
           set {
@@ -9667,6 +10260,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// more information.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double FrameRate {
           get { return frameRate_; }
           set {
@@ -9682,6 +10276,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The maximum value is 800,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BitrateBps {
           get { return bitrateBps_; }
           set {
@@ -9708,6 +10303,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `yuv444p12` 12-bit HDR pixel format
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PixelFormat {
           get { return pixelFormat_; }
           set {
@@ -9727,6 +10323,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `crf` - constant rate factor
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string RateControlMode {
           get { return rateControlMode_; }
           set {
@@ -9742,6 +10339,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// quality and 36 is the most efficient compression. The default is 21.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CrfLevel {
           get { return crfLevel_; }
           set {
@@ -9757,6 +10355,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// allowed or not. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool AllowOpenGop {
           get { return allowOpenGop_; }
           set {
@@ -9771,6 +10370,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// than zero.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int GopFrameCount {
           get { return gopModeCase_ == GopModeOneofCase.GopFrameCount ? (int) gopMode_ : 0; }
           set {
@@ -9789,6 +10389,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `gopDuration`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration GopDuration {
           get { return gopModeCase_ == GopModeOneofCase.GopDuration ? (global::Google.Protobuf.WellKnownTypes.Duration) gopMode_ : null; }
           set {
@@ -9805,6 +10406,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `VideoStream.rate_control_mode` must be `vbr`. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool EnableTwoPass {
           get { return enableTwoPass_; }
           set {
@@ -9820,6 +10422,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// greater than zero. The default is equal to `VideoStream.bitrate_bps`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int VbvSizeBits {
           get { return vbvSizeBits_; }
           set {
@@ -9836,6 +10439,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `VideoStream.vbv_size_bits`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int VbvFullnessBits {
           get { return vbvFullnessBits_; }
           set {
@@ -9851,6 +10455,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// on all decoders. The default is `false`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool BPyramid {
           get { return bPyramid_; }
           set {
@@ -9867,6 +10472,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BFrameCount {
           get { return bFrameCount_; }
           set {
@@ -9883,6 +10489,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// higher value equals a lower bitrate but smoother image. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double AqStrength {
           get { return aqStrength_; }
           set {
@@ -9923,6 +10530,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Profile {
           get { return profile_; }
           set {
@@ -9941,6 +10549,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Tune {
           get { return tune_; }
           set {
@@ -9960,6 +10569,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Preset {
           get { return preset_; }
           set {
@@ -9976,22 +10586,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
         private GopModeOneofCase gopModeCase_ = GopModeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GopModeOneofCase GopModeCase {
           get { return gopModeCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearGopMode() {
           gopModeCase_ = GopModeOneofCase.None;
           gopMode_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as H265CodecSettings);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(H265CodecSettings other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -10023,6 +10637,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (WidthPixels != 0) hash ^= WidthPixels.GetHashCode();
@@ -10052,11 +10667,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -10145,6 +10762,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (WidthPixels != 0) {
             output.WriteRawTag(8);
@@ -10229,6 +10847,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (WidthPixels != 0) {
@@ -10295,6 +10914,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(H265CodecSettings other) {
           if (other == null) {
             return;
@@ -10366,6 +10986,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -10464,6 +11085,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -10570,19 +11192,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<Vp9CodecSettings> _parser = new pb::MessageParser<Vp9CodecSettings>(() => new Vp9CodecSettings());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<Vp9CodecSettings> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.VideoStream.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Vp9CodecSettings() {
           OnConstruction();
         }
@@ -10590,6 +11216,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Vp9CodecSettings(Vp9CodecSettings other) : this() {
           widthPixels_ = other.widthPixels_;
           heightPixels_ = other.heightPixels_;
@@ -10612,6 +11239,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public Vp9CodecSettings Clone() {
           return new Vp9CodecSettings(this);
         }
@@ -10625,6 +11253,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// and input aspect ratio. If both are omitted, the input width is used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int WidthPixels {
           get { return widthPixels_; }
           set {
@@ -10641,6 +11270,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// and input aspect ratio. If both are omitted, the input height is used.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int HeightPixels {
           get { return heightPixels_; }
           set {
@@ -10661,6 +11291,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// more information.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double FrameRate {
           get { return frameRate_; }
           set {
@@ -10676,6 +11307,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// The maximum value is 480,000,000.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int BitrateBps {
           get { return bitrateBps_; }
           set {
@@ -10702,6 +11334,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `yuv444p12` 12-bit HDR pixel format
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string PixelFormat {
           get { return pixelFormat_; }
           set {
@@ -10721,6 +11354,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// - `crf` - constant rate factor
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string RateControlMode {
           get { return rateControlMode_; }
           set {
@@ -10736,6 +11370,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// quality and 36 is the most efficient compression. The default is 21.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CrfLevel {
           get { return crfLevel_; }
           set {
@@ -10750,6 +11385,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// than zero.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int GopFrameCount {
           get { return gopModeCase_ == GopModeOneofCase.GopFrameCount ? (int) gopMode_ : 0; }
           set {
@@ -10768,6 +11404,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `gopDuration`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public global::Google.Protobuf.WellKnownTypes.Duration GopDuration {
           get { return gopModeCase_ == GopModeOneofCase.GopDuration ? (global::Google.Protobuf.WellKnownTypes.Duration) gopMode_ : null; }
           set {
@@ -10795,6 +11432,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// message.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Profile {
           get { return profile_; }
           set {
@@ -10811,22 +11449,26 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
         private GopModeOneofCase gopModeCase_ = GopModeOneofCase.None;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public GopModeOneofCase GopModeCase {
           get { return gopModeCase_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void ClearGopMode() {
           gopModeCase_ = GopModeOneofCase.None;
           gopMode_ = null;
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as Vp9CodecSettings);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(Vp9CodecSettings other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -10849,6 +11491,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (WidthPixels != 0) hash ^= WidthPixels.GetHashCode();
@@ -10869,11 +11512,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -10926,6 +11571,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (WidthPixels != 0) {
             output.WriteRawTag(8);
@@ -10974,6 +11620,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (WidthPixels != 0) {
@@ -11013,6 +11660,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(Vp9CodecSettings other) {
           if (other == null) {
             return;
@@ -11057,6 +11705,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -11119,6 +11768,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -11194,19 +11844,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<AudioStream> _parser = new pb::MessageParser<AudioStream>(() => new AudioStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AudioStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioStream() {
       OnConstruction();
     }
@@ -11214,6 +11868,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioStream(AudioStream other) : this() {
       codec_ = other.codec_;
       bitrateBps_ = other.bitrateBps_;
@@ -11225,6 +11880,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AudioStream Clone() {
       return new AudioStream(this);
     }
@@ -11245,6 +11901,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// - `eac3`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Codec {
       get { return codec_; }
       set {
@@ -11259,6 +11916,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Required. Audio bitrate in bits per second. Must be between 1 and 10,000,000.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int BitrateBps {
       get { return bitrateBps_; }
       set {
@@ -11273,6 +11931,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Number of audio channels. Must be between 1 and 6. The default is 2.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int ChannelCount {
       get { return channelCount_; }
       set {
@@ -11300,6 +11959,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// - `lfe` - Low frequency
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ChannelLayout {
       get { return channelLayout_; }
     }
@@ -11313,6 +11973,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.AudioStream.Types.AudioMapping> Mapping {
       get { return mapping_; }
     }
@@ -11324,6 +11985,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// The audio sample rate in Hertz. The default is 48000 Hertz.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int SampleRateHertz {
       get { return sampleRateHertz_; }
       set {
@@ -11332,11 +11994,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AudioStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AudioStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -11354,6 +12018,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Codec.Length != 0) hash ^= Codec.GetHashCode();
@@ -11369,11 +12034,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -11404,6 +12071,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Codec.Length != 0) {
         output.WriteRawTag(10);
@@ -11430,6 +12098,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Codec.Length != 0) {
@@ -11453,6 +12122,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AudioStream other) {
       if (other == null) {
         return;
@@ -11475,6 +12145,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -11516,6 +12187,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -11555,6 +12227,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the AudioStream message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The mapping for the `Job.edit_list` atoms with audio `EditAtom.inputs`.
@@ -11567,19 +12240,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<AudioMapping> _parser = new pb::MessageParser<AudioMapping>(() => new AudioMapping());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<AudioMapping> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.AudioStream.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AudioMapping() {
           OnConstruction();
         }
@@ -11587,6 +12264,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AudioMapping(AudioMapping other) : this() {
           atomKey_ = other.atomKey_;
           inputKey_ = other.inputKey_;
@@ -11598,6 +12276,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AudioMapping Clone() {
           return new AudioMapping(this);
         }
@@ -11610,6 +12289,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `Job.edit_list`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string AtomKey {
           get { return atomKey_; }
           set {
@@ -11624,6 +12304,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Required. The `Input.key` that identifies the input file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string InputKey {
           get { return inputKey_; }
           set {
@@ -11638,6 +12319,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Required. The zero-based index of the track in the input file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int InputTrack {
           get { return inputTrack_; }
           set {
@@ -11652,6 +12334,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Required. The zero-based index of the channel in the input audio stream.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int InputChannel {
           get { return inputChannel_; }
           set {
@@ -11666,6 +12349,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Required. The zero-based index of the channel in the output audio stream.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int OutputChannel {
           get { return outputChannel_; }
           set {
@@ -11681,6 +12365,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// positive values increase. The default is 0.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public double GainDb {
           get { return gainDb_; }
           set {
@@ -11689,11 +12374,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as AudioMapping);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(AudioMapping other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -11711,6 +12398,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (AtomKey.Length != 0) hash ^= AtomKey.GetHashCode();
@@ -11726,11 +12414,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -11767,6 +12457,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (AtomKey.Length != 0) {
             output.WriteRawTag(10);
@@ -11799,6 +12490,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (AtomKey.Length != 0) {
@@ -11826,6 +12518,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(AudioMapping other) {
           if (other == null) {
             return;
@@ -11852,6 +12545,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -11893,6 +12587,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -11947,19 +12642,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<TextStream> _parser = new pb::MessageParser<TextStream>(() => new TextStream());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TextStream> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextStream() {
       OnConstruction();
     }
@@ -11967,6 +12666,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextStream(TextStream other) : this() {
       codec_ = other.codec_;
       mapping_ = other.mapping_.Clone();
@@ -11974,6 +12674,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TextStream Clone() {
       return new TextStream(this);
     }
@@ -11993,6 +12694,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// - `webvtt`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Codec {
       get { return codec_; }
       set {
@@ -12009,16 +12711,19 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Video.Transcoder.V1.TextStream.Types.TextMapping> Mapping {
       get { return mapping_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TextStream);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TextStream other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12032,6 +12737,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Codec.Length != 0) hash ^= Codec.GetHashCode();
@@ -12043,11 +12749,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12065,6 +12773,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Codec.Length != 0) {
         output.WriteRawTag(10);
@@ -12078,6 +12787,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Codec.Length != 0) {
@@ -12091,6 +12801,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TextStream other) {
       if (other == null) {
         return;
@@ -12103,6 +12814,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12128,6 +12840,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -12151,6 +12864,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the TextStream message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The mapping for the `Job.edit_list` atoms with text `EditAtom.inputs`.
@@ -12163,19 +12877,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         private static readonly pb::MessageParser<TextMapping> _parser = new pb::MessageParser<TextMapping>(() => new TextMapping());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<TextMapping> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Video.Transcoder.V1.TextStream.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TextMapping() {
           OnConstruction();
         }
@@ -12183,6 +12901,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TextMapping(TextMapping other) : this() {
           atomKey_ = other.atomKey_;
           inputKey_ = other.inputKey_;
@@ -12191,6 +12910,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public TextMapping Clone() {
           return new TextMapping(this);
         }
@@ -12203,6 +12923,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// `Job.edit_list`.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string AtomKey {
           get { return atomKey_; }
           set {
@@ -12217,6 +12938,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Required. The `Input.key` that identifies the input file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string InputKey {
           get { return inputKey_; }
           set {
@@ -12231,6 +12953,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         /// Required. The zero-based index of the track in the input file.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int InputTrack {
           get { return inputTrack_; }
           set {
@@ -12239,11 +12962,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as TextMapping);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(TextMapping other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -12258,6 +12983,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (AtomKey.Length != 0) hash ^= AtomKey.GetHashCode();
@@ -12270,11 +12996,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           output.WriteRawMessage(this);
@@ -12299,6 +13027,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
           if (AtomKey.Length != 0) {
             output.WriteRawTag(10);
@@ -12319,6 +13048,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         #endif
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (AtomKey.Length != 0) {
@@ -12337,6 +13067,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(TextMapping other) {
           if (other == null) {
             return;
@@ -12354,6 +13085,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
           input.ReadRawMessage(this);
@@ -12383,6 +13115,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
         #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
@@ -12425,19 +13158,23 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     private static readonly pb::MessageParser<SegmentSettings> _parser = new pb::MessageParser<SegmentSettings>(() => new SegmentSettings());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SegmentSettings> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Video.Transcoder.V1.ResourcesReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SegmentSettings() {
       OnConstruction();
     }
@@ -12445,6 +13182,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SegmentSettings(SegmentSettings other) : this() {
       segmentDuration_ = other.segmentDuration_ != null ? other.segmentDuration_.Clone() : null;
       individualSegments_ = other.individualSegments_;
@@ -12452,6 +13190,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SegmentSettings Clone() {
       return new SegmentSettings(this);
     }
@@ -12466,6 +13205,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// [`gopDuration`](#videostream).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration SegmentDuration {
       get { return segmentDuration_; }
       set {
@@ -12480,6 +13220,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     /// Required. Create an individual segment file. The default is `false`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IndividualSegments {
       get { return individualSegments_; }
       set {
@@ -12488,11 +13229,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as SegmentSettings);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(SegmentSettings other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -12506,6 +13249,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (segmentDuration_ != null) hash ^= SegmentDuration.GetHashCode();
@@ -12517,11 +13261,13 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -12542,6 +13288,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (segmentDuration_ != null) {
         output.WriteRawTag(10);
@@ -12558,6 +13305,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (segmentDuration_ != null) {
@@ -12573,6 +13321,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(SegmentSettings other) {
       if (other == null) {
         return;
@@ -12590,6 +13339,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -12618,6 +13368,7 @@ namespace Google.Cloud.Video.Transcoder.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

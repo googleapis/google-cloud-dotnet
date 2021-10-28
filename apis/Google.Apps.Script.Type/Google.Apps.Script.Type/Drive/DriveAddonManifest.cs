@@ -60,19 +60,23 @@ namespace Google.Apps.Script.Type.Drive {
     private static readonly pb::MessageParser<DriveAddOnManifest> _parser = new pb::MessageParser<DriveAddOnManifest>(() => new DriveAddOnManifest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DriveAddOnManifest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Drive.DriveAddonManifestReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DriveAddOnManifest() {
       OnConstruction();
     }
@@ -80,6 +84,7 @@ namespace Google.Apps.Script.Type.Drive {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DriveAddOnManifest(DriveAddOnManifest other) : this() {
       homepageTrigger_ = other.homepageTrigger_ != null ? other.homepageTrigger_.Clone() : null;
       onItemsSelectedTrigger_ = other.onItemsSelectedTrigger_ != null ? other.onItemsSelectedTrigger_.Clone() : null;
@@ -87,6 +92,7 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DriveAddOnManifest Clone() {
       return new DriveAddOnManifest(this);
     }
@@ -99,6 +105,7 @@ namespace Google.Apps.Script.Type.Drive {
     /// `addOns.common.homepageTrigger`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.HomepageExtensionPoint HomepageTrigger {
       get { return homepageTrigger_; }
       set {
@@ -114,6 +121,7 @@ namespace Google.Apps.Script.Type.Drive {
     /// in relevant Drive view (e.g. the My Drive Doclist).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Apps.Script.Type.Drive.DriveExtensionPoint OnItemsSelectedTrigger {
       get { return onItemsSelectedTrigger_; }
       set {
@@ -122,11 +130,13 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DriveAddOnManifest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DriveAddOnManifest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -140,6 +150,7 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (homepageTrigger_ != null) hash ^= HomepageTrigger.GetHashCode();
@@ -151,11 +162,13 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -176,6 +189,7 @@ namespace Google.Apps.Script.Type.Drive {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (homepageTrigger_ != null) {
         output.WriteRawTag(10);
@@ -192,6 +206,7 @@ namespace Google.Apps.Script.Type.Drive {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (homepageTrigger_ != null) {
@@ -207,6 +222,7 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DriveAddOnManifest other) {
       if (other == null) {
         return;
@@ -227,6 +243,7 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -258,6 +275,7 @@ namespace Google.Apps.Script.Type.Drive {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -298,19 +316,23 @@ namespace Google.Apps.Script.Type.Drive {
     private static readonly pb::MessageParser<DriveExtensionPoint> _parser = new pb::MessageParser<DriveExtensionPoint>(() => new DriveExtensionPoint());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DriveExtensionPoint> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Apps.Script.Type.Drive.DriveAddonManifestReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DriveExtensionPoint() {
       OnConstruction();
     }
@@ -318,12 +340,14 @@ namespace Google.Apps.Script.Type.Drive {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DriveExtensionPoint(DriveExtensionPoint other) : this() {
       runFunction_ = other.runFunction_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DriveExtensionPoint Clone() {
       return new DriveExtensionPoint(this);
     }
@@ -336,6 +360,7 @@ namespace Google.Apps.Script.Type.Drive {
     /// activated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RunFunction {
       get { return runFunction_; }
       set {
@@ -344,11 +369,13 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DriveExtensionPoint);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DriveExtensionPoint other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -361,6 +388,7 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (RunFunction.Length != 0) hash ^= RunFunction.GetHashCode();
@@ -371,11 +399,13 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -392,6 +422,7 @@ namespace Google.Apps.Script.Type.Drive {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (RunFunction.Length != 0) {
         output.WriteRawTag(10);
@@ -404,6 +435,7 @@ namespace Google.Apps.Script.Type.Drive {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (RunFunction.Length != 0) {
@@ -416,6 +448,7 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DriveExtensionPoint other) {
       if (other == null) {
         return;
@@ -427,6 +460,7 @@ namespace Google.Apps.Script.Type.Drive {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -448,6 +482,7 @@ namespace Google.Apps.Script.Type.Drive {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

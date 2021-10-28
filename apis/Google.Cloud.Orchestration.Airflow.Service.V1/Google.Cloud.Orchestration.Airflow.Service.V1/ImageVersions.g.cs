@@ -72,19 +72,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<ListImageVersionsRequest> _parser = new pb::MessageParser<ListImageVersionsRequest>(() => new ListImageVersionsRequest());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListImageVersionsRequest> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersionsReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListImageVersionsRequest() {
       OnConstruction();
     }
@@ -92,6 +96,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListImageVersionsRequest(ListImageVersionsRequest other) : this() {
       parent_ = other.parent_;
       pageSize_ = other.pageSize_;
@@ -101,6 +106,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListImageVersionsRequest Clone() {
       return new ListImageVersionsRequest(this);
     }
@@ -113,6 +119,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// "projects/{projectId}/locations/{locationId}"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Parent {
       get { return parent_; }
       set {
@@ -127,6 +134,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The maximum number of image_versions to return.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int PageSize {
       get { return pageSize_; }
       set {
@@ -141,6 +149,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The next_page_token value returned from a previous List request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PageToken {
       get { return pageToken_; }
       set {
@@ -155,6 +164,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Whether or not image versions from old releases should be included.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IncludePastReleases {
       get { return includePastReleases_; }
       set {
@@ -163,11 +173,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListImageVersionsRequest);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListImageVersionsRequest other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -183,6 +195,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Parent.Length != 0) hash ^= Parent.GetHashCode();
@@ -196,11 +209,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -229,6 +244,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Parent.Length != 0) {
         output.WriteRawTag(10);
@@ -253,6 +269,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Parent.Length != 0) {
@@ -274,6 +291,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListImageVersionsRequest other) {
       if (other == null) {
         return;
@@ -294,6 +312,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -327,6 +346,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -368,19 +388,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<ListImageVersionsResponse> _parser = new pb::MessageParser<ListImageVersionsResponse>(() => new ListImageVersionsResponse());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ListImageVersionsResponse> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersionsReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListImageVersionsResponse() {
       OnConstruction();
     }
@@ -388,6 +412,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListImageVersionsResponse(ListImageVersionsResponse other) : this() {
       imageVersions_ = other.imageVersions_.Clone();
       nextPageToken_ = other.nextPageToken_;
@@ -395,6 +420,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ListImageVersionsResponse Clone() {
       return new ListImageVersionsResponse(this);
     }
@@ -408,6 +434,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The list of supported ImageVersions in a location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersion> ImageVersions {
       get { return imageVersions_; }
     }
@@ -419,6 +446,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The page token used to query for the next page if one exists.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string NextPageToken {
       get { return nextPageToken_; }
       set {
@@ -427,11 +455,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ListImageVersionsResponse);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ListImageVersionsResponse other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -445,6 +475,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= imageVersions_.GetHashCode();
@@ -456,11 +487,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -478,6 +511,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       imageVersions_.WriteTo(ref output, _repeated_imageVersions_codec);
       if (NextPageToken.Length != 0) {
@@ -491,6 +525,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += imageVersions_.CalculateSize(_repeated_imageVersions_codec);
@@ -504,6 +539,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ListImageVersionsResponse other) {
       if (other == null) {
         return;
@@ -516,6 +552,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -541,6 +578,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -574,19 +612,23 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     private static readonly pb::MessageParser<ImageVersion> _parser = new pb::MessageParser<ImageVersion>(() => new ImageVersion());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ImageVersion> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Orchestration.Airflow.Service.V1.ImageVersionsReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageVersion() {
       OnConstruction();
     }
@@ -594,6 +636,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageVersion(ImageVersion other) : this() {
       imageVersionId_ = other.imageVersionId_;
       isDefault_ = other.isDefault_;
@@ -605,6 +648,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ImageVersion Clone() {
       return new ImageVersion(this);
     }
@@ -617,6 +661,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// "composer-x.y.z-airflow-a.b(.c)"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ImageVersionId {
       get { return imageVersionId_; }
       set {
@@ -632,6 +677,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// environment creation if no input ImageVersion is specified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool IsDefault {
       get { return isDefault_; }
       set {
@@ -648,6 +694,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// supported python versions
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> SupportedPythonVersions {
       get { return supportedPythonVersions_; }
     }
@@ -659,6 +706,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// The date of the version release.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.Date ReleaseDate {
       get { return releaseDate_; }
       set {
@@ -673,6 +721,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// Whether it is impossible to create an environment with the image version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool CreationDisabled {
       get { return creationDisabled_; }
       set {
@@ -688,6 +737,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     /// version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool UpgradeDisabled {
       get { return upgradeDisabled_; }
       set {
@@ -696,11 +746,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ImageVersion);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ImageVersion other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -718,6 +770,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ImageVersionId.Length != 0) hash ^= ImageVersionId.GetHashCode();
@@ -733,11 +786,13 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -771,6 +826,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ImageVersionId.Length != 0) {
         output.WriteRawTag(10);
@@ -800,6 +856,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ImageVersionId.Length != 0) {
@@ -825,6 +882,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ImageVersion other) {
       if (other == null) {
         return;
@@ -852,6 +910,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -896,6 +955,7 @@ namespace Google.Cloud.Orchestration.Airflow.Service.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

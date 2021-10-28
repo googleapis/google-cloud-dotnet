@@ -69,19 +69,23 @@ namespace Google.Cloud.ServiceControl.V1 {
     private static readonly pb::MessageParser<Operation> _parser = new pb::MessageParser<Operation>(() => new Operation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Operation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.ServiceControl.V1.OperationReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Operation() {
       OnConstruction();
     }
@@ -89,6 +93,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Operation(Operation other) : this() {
       operationId_ = other.operationId_;
       operationName_ = other.operationName_;
@@ -104,6 +109,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Operation Clone() {
       return new Operation(this);
     }
@@ -123,6 +129,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// is recommended. See RFC 4122 for details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OperationId {
       get { return operationId_; }
       set {
@@ -137,6 +144,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Fully qualified name of the operation. Reserved for future use.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string OperationName {
       get { return operationName_; }
       set {
@@ -162,6 +170,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     ///     - api`_`key:API_KEY.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ConsumerId {
       get { return consumerId_; }
       set {
@@ -176,6 +185,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Required. Start time of the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -194,6 +204,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// [ServiceController.Check][google.api.servicecontrol.v1.ServiceController.Check].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -225,6 +236,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     ///        Kubernetes Engine.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Labels {
       get { return labels_; }
     }
@@ -247,6 +259,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// an invalid argument error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ServiceControl.V1.MetricValueSet> MetricValueSets {
       get { return metricValueSets_; }
     }
@@ -260,6 +273,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Represents information to be logged.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.ServiceControl.V1.LogEntry> LogEntries {
       get { return logEntries_; }
     }
@@ -271,6 +285,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// DO NOT USE. This is an experimental field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.ServiceControl.V1.Operation.Types.Importance Importance {
       get { return importance_; }
       set {
@@ -287,16 +302,19 @@ namespace Google.Cloud.ServiceControl.V1 {
     /// Unimplemented.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Protobuf.WellKnownTypes.Any> Extensions {
       get { return extensions_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Operation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Operation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -318,6 +336,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (OperationId.Length != 0) hash ^= OperationId.GetHashCode();
@@ -337,11 +356,13 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -382,6 +403,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OperationId.Length != 0) {
         output.WriteRawTag(10);
@@ -418,6 +440,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (OperationId.Length != 0) {
@@ -449,6 +472,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Operation other) {
       if (other == null) {
         return;
@@ -485,6 +509,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -548,6 +573,7 @@ namespace Google.Cloud.ServiceControl.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -609,6 +635,7 @@ namespace Google.Cloud.ServiceControl.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the Operation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Defines the importance of the data contained in the operation.

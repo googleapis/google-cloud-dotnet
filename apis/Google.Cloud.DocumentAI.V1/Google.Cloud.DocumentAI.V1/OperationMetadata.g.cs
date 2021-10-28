@@ -61,19 +61,23 @@ namespace Google.Cloud.DocumentAI.V1 {
     private static readonly pb::MessageParser<CommonOperationMetadata> _parser = new pb::MessageParser<CommonOperationMetadata>(() => new CommonOperationMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<CommonOperationMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.DocumentAI.V1.OperationMetadataReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommonOperationMetadata() {
       OnConstruction();
     }
@@ -81,6 +85,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommonOperationMetadata(CommonOperationMetadata other) : this() {
       state_ = other.state_;
       stateMessage_ = other.stateMessage_;
@@ -90,6 +95,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CommonOperationMetadata Clone() {
       return new CommonOperationMetadata(this);
     }
@@ -101,6 +107,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     /// The state of the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata.Types.State State {
       get { return state_; }
       set {
@@ -115,6 +122,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     /// A message providing more details about the current state of processing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StateMessage {
       get { return stateMessage_; }
       set {
@@ -129,6 +137,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     /// The creation time of the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreateTime {
       get { return createTime_; }
       set {
@@ -143,6 +152,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     /// The last update time of the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -151,11 +161,13 @@ namespace Google.Cloud.DocumentAI.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as CommonOperationMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(CommonOperationMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -171,6 +183,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (State != global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata.Types.State.Unspecified) hash ^= State.GetHashCode();
@@ -184,11 +197,13 @@ namespace Google.Cloud.DocumentAI.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -217,6 +232,7 @@ namespace Google.Cloud.DocumentAI.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (State != global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata.Types.State.Unspecified) {
         output.WriteRawTag(8);
@@ -241,6 +257,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (State != global::Google.Cloud.DocumentAI.V1.CommonOperationMetadata.Types.State.Unspecified) {
@@ -262,6 +279,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(CommonOperationMetadata other) {
       if (other == null) {
         return;
@@ -288,6 +306,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -327,6 +346,7 @@ namespace Google.Cloud.DocumentAI.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -364,6 +384,7 @@ namespace Google.Cloud.DocumentAI.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the CommonOperationMetadata message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// State of the longrunning operation.

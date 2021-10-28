@@ -321,19 +321,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<Device> _parser = new pb::MessageParser<Device>(() => new Device());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Device> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Device() {
       OnConstruction();
     }
@@ -341,6 +345,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Device(Device other) : this() {
       id_ = other.id_;
       name_ = other.name_;
@@ -363,6 +368,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Device Clone() {
       return new Device(this);
     }
@@ -375,6 +381,7 @@ namespace Google.Cloud.Iot.V1 {
     /// within a device registry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -393,6 +400,7 @@ namespace Google.Cloud.Iot.V1 {
     /// in the device numeric ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -408,6 +416,7 @@ namespace Google.Cloud.Iot.V1 {
     /// more compact way to identify devices, and it is globally unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ulong NumId {
       get { return numId_; }
       set {
@@ -429,6 +438,7 @@ namespace Google.Cloud.Iot.V1 {
     /// `DeviceRegistry.credentials` field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Iot.V1.DeviceCredential> Credentials {
       get { return credentials_; }
     }
@@ -444,6 +454,7 @@ namespace Google.Cloud.Iot.V1 {
     /// storage; they may be stale by a few minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastHeartbeatTime {
       get { return lastHeartbeatTime_; }
       set {
@@ -460,6 +471,7 @@ namespace Google.Cloud.Iot.V1 {
     /// minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastEventTime {
       get { return lastEventTime_; }
       set {
@@ -476,6 +488,7 @@ namespace Google.Cloud.Iot.V1 {
     /// minutes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastStateTime {
       get { return lastStateTime_; }
       set {
@@ -492,6 +505,7 @@ namespace Google.Cloud.Iot.V1 {
     /// sent through MQTT.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastConfigAckTime {
       get { return lastConfigAckTime_; }
       set {
@@ -507,6 +521,7 @@ namespace Google.Cloud.Iot.V1 {
     /// the device.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastConfigSendTime {
       get { return lastConfigSendTime_; }
       set {
@@ -523,6 +538,7 @@ namespace Google.Cloud.Iot.V1 {
     /// example, the sensor is generating bad data and needs maintenance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Blocked {
       get { return blocked_; }
       set {
@@ -539,6 +555,7 @@ namespace Google.Cloud.Iot.V1 {
     /// 'last_error_status'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastErrorTime {
       get { return lastErrorTime_; }
       set {
@@ -557,6 +574,7 @@ namespace Google.Cloud.Iot.V1 {
     /// status code other than OK.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Status LastErrorStatus {
       get { return lastErrorStatus_; }
       set {
@@ -575,6 +593,7 @@ namespace Google.Cloud.Iot.V1 {
     /// `DeviceManager.ModifyCloudToDeviceConfig` method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.DeviceConfig Config {
       get { return config_; }
       set {
@@ -590,6 +609,7 @@ namespace Google.Cloud.Iot.V1 {
     /// has been reported, this field is not present.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.DeviceState State {
       get { return state_; }
       set {
@@ -607,6 +627,7 @@ namespace Google.Cloud.Iot.V1 {
     /// DeviceRegistry.log_level will be used.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.LogLevel LogLevel {
       get { return logLevel_; }
       set {
@@ -634,6 +655,7 @@ namespace Google.Cloud.Iot.V1 {
     /// maximum number of key-value pairs is 500.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, string> Metadata {
       get { return metadata_; }
     }
@@ -645,6 +667,7 @@ namespace Google.Cloud.Iot.V1 {
     /// Gateway-related configuration and state.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.GatewayConfig GatewayConfig {
       get { return gatewayConfig_; }
       set {
@@ -653,11 +676,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Device);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Device other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -686,6 +711,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -712,11 +738,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -791,6 +819,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -861,6 +890,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -917,6 +947,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Device other) {
       if (other == null) {
         return;
@@ -1002,6 +1033,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1117,6 +1149,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1240,19 +1273,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<GatewayConfig> _parser = new pb::MessageParser<GatewayConfig>(() => new GatewayConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GatewayConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GatewayConfig() {
       OnConstruction();
     }
@@ -1260,6 +1297,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GatewayConfig(GatewayConfig other) : this() {
       gatewayType_ = other.gatewayType_;
       gatewayAuthMethod_ = other.gatewayAuthMethod_;
@@ -1269,6 +1307,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GatewayConfig Clone() {
       return new GatewayConfig(this);
     }
@@ -1280,6 +1319,7 @@ namespace Google.Cloud.Iot.V1 {
     /// Indicates whether the device is a gateway.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.GatewayType GatewayType {
       get { return gatewayType_; }
       set {
@@ -1295,6 +1335,7 @@ namespace Google.Cloud.Iot.V1 {
     /// gateway.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.GatewayAuthMethod GatewayAuthMethod {
       get { return gatewayAuthMethod_; }
       set {
@@ -1309,6 +1350,7 @@ namespace Google.Cloud.Iot.V1 {
     /// [Output only] The ID of the gateway the device accessed most recently.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LastAccessedGatewayId {
       get { return lastAccessedGatewayId_; }
       set {
@@ -1324,6 +1366,7 @@ namespace Google.Cloud.Iot.V1 {
     /// specified in `last_accessed_gateway`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastAccessedGatewayTime {
       get { return lastAccessedGatewayTime_; }
       set {
@@ -1332,11 +1375,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GatewayConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GatewayConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1352,6 +1397,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (GatewayType != global::Google.Cloud.Iot.V1.GatewayType.Unspecified) hash ^= GatewayType.GetHashCode();
@@ -1365,11 +1411,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1398,6 +1446,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (GatewayType != global::Google.Cloud.Iot.V1.GatewayType.Unspecified) {
         output.WriteRawTag(8);
@@ -1422,6 +1471,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (GatewayType != global::Google.Cloud.Iot.V1.GatewayType.Unspecified) {
@@ -1443,6 +1493,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GatewayConfig other) {
       if (other == null) {
         return;
@@ -1466,6 +1517,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1502,6 +1554,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1546,19 +1599,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<DeviceRegistry> _parser = new pb::MessageParser<DeviceRegistry>(() => new DeviceRegistry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceRegistry> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceRegistry() {
       OnConstruction();
     }
@@ -1566,6 +1623,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceRegistry(DeviceRegistry other) : this() {
       id_ = other.id_;
       name_ = other.name_;
@@ -1579,6 +1637,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceRegistry Clone() {
       return new DeviceRegistry(this);
     }
@@ -1590,6 +1649,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The identifier of this device registry. For example, `myRegistry`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -1605,6 +1665,7 @@ namespace Google.Cloud.Iot.V1 {
     /// `projects/example-project/locations/us-central1/registries/my-registry`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -1629,6 +1690,7 @@ namespace Google.Cloud.Iot.V1 {
     /// configurations may be provided.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Iot.V1.EventNotificationConfig> EventNotificationConfigs {
       get { return eventNotificationConfigs_; }
     }
@@ -1645,6 +1707,7 @@ namespace Google.Cloud.Iot.V1 {
     /// IoT Core.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.StateNotificationConfig StateNotificationConfig {
       get { return stateNotificationConfig_; }
       set {
@@ -1659,6 +1722,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The MQTT configuration for this device registry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.MqttConfig MqttConfig {
       get { return mqttConfig_; }
       set {
@@ -1673,6 +1737,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The DeviceService (HTTP) configuration for this device registry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.HttpConfig HttpConfig {
       get { return httpConfig_; }
       set {
@@ -1690,6 +1755,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The verbosity level can be overridden by Device.log_level.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.LogLevel LogLevel {
       get { return logLevel_; }
       set {
@@ -1716,16 +1782,19 @@ namespace Google.Cloud.Iot.V1 {
     /// its registry credentials are revoked, deleted, or modified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Iot.V1.RegistryCredential> Credentials {
       get { return credentials_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceRegistry);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceRegistry other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1745,6 +1814,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -1762,11 +1832,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1805,6 +1877,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Id.Length != 0) {
         output.WriteRawTag(10);
@@ -1839,6 +1912,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -1868,6 +1942,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceRegistry other) {
       if (other == null) {
         return;
@@ -1905,6 +1980,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1963,6 +2039,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2029,19 +2106,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<MqttConfig> _parser = new pb::MessageParser<MqttConfig>(() => new MqttConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<MqttConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MqttConfig() {
       OnConstruction();
     }
@@ -2049,12 +2130,14 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MqttConfig(MqttConfig other) : this() {
       mqttEnabledState_ = other.mqttEnabledState_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public MqttConfig Clone() {
       return new MqttConfig(this);
     }
@@ -2067,6 +2150,7 @@ namespace Google.Cloud.Iot.V1 {
     /// connections to this registry will fail.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.MqttState MqttEnabledState {
       get { return mqttEnabledState_; }
       set {
@@ -2075,11 +2159,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as MqttConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(MqttConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2092,6 +2178,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (MqttEnabledState != global::Google.Cloud.Iot.V1.MqttState.Unspecified) hash ^= MqttEnabledState.GetHashCode();
@@ -2102,11 +2189,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2123,6 +2212,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (MqttEnabledState != global::Google.Cloud.Iot.V1.MqttState.Unspecified) {
         output.WriteRawTag(8);
@@ -2135,6 +2225,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (MqttEnabledState != global::Google.Cloud.Iot.V1.MqttState.Unspecified) {
@@ -2147,6 +2238,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(MqttConfig other) {
       if (other == null) {
         return;
@@ -2158,6 +2250,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2179,6 +2272,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2208,19 +2302,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<HttpConfig> _parser = new pb::MessageParser<HttpConfig>(() => new HttpConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HttpConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpConfig() {
       OnConstruction();
     }
@@ -2228,12 +2326,14 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpConfig(HttpConfig other) : this() {
       httpEnabledState_ = other.httpEnabledState_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpConfig Clone() {
       return new HttpConfig(this);
     }
@@ -2246,6 +2346,7 @@ namespace Google.Cloud.Iot.V1 {
     /// Otherwise, any requests to DeviceService will fail for this registry.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.HttpState HttpEnabledState {
       get { return httpEnabledState_; }
       set {
@@ -2254,11 +2355,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HttpConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HttpConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2271,6 +2374,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (HttpEnabledState != global::Google.Cloud.Iot.V1.HttpState.Unspecified) hash ^= HttpEnabledState.GetHashCode();
@@ -2281,11 +2385,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2302,6 +2408,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (HttpEnabledState != global::Google.Cloud.Iot.V1.HttpState.Unspecified) {
         output.WriteRawTag(8);
@@ -2314,6 +2421,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (HttpEnabledState != global::Google.Cloud.Iot.V1.HttpState.Unspecified) {
@@ -2326,6 +2434,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HttpConfig other) {
       if (other == null) {
         return;
@@ -2337,6 +2446,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2358,6 +2468,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2387,19 +2498,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<EventNotificationConfig> _parser = new pb::MessageParser<EventNotificationConfig>(() => new EventNotificationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<EventNotificationConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EventNotificationConfig() {
       OnConstruction();
     }
@@ -2407,6 +2522,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EventNotificationConfig(EventNotificationConfig other) : this() {
       subfolderMatches_ = other.subfolderMatches_;
       pubsubTopicName_ = other.pubsubTopicName_;
@@ -2414,6 +2530,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public EventNotificationConfig Clone() {
       return new EventNotificationConfig(this);
     }
@@ -2428,6 +2545,7 @@ namespace Google.Cloud.Iot.V1 {
     /// subfolders are not supported for state changes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SubfolderMatches {
       get { return subfolderMatches_; }
       set {
@@ -2443,6 +2561,7 @@ namespace Google.Cloud.Iot.V1 {
     /// `projects/myProject/topics/deviceEvents`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubsubTopicName {
       get { return pubsubTopicName_; }
       set {
@@ -2451,11 +2570,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as EventNotificationConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(EventNotificationConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2469,6 +2590,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SubfolderMatches.Length != 0) hash ^= SubfolderMatches.GetHashCode();
@@ -2480,11 +2602,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2505,6 +2629,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PubsubTopicName.Length != 0) {
         output.WriteRawTag(10);
@@ -2521,6 +2646,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SubfolderMatches.Length != 0) {
@@ -2536,6 +2662,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(EventNotificationConfig other) {
       if (other == null) {
         return;
@@ -2550,6 +2677,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2575,6 +2703,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2608,19 +2737,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<StateNotificationConfig> _parser = new pb::MessageParser<StateNotificationConfig>(() => new StateNotificationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<StateNotificationConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StateNotificationConfig() {
       OnConstruction();
     }
@@ -2628,12 +2761,14 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StateNotificationConfig(StateNotificationConfig other) : this() {
       pubsubTopicName_ = other.pubsubTopicName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public StateNotificationConfig Clone() {
       return new StateNotificationConfig(this);
     }
@@ -2646,6 +2781,7 @@ namespace Google.Cloud.Iot.V1 {
     /// `projects/myProject/topics/deviceEvents`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubsubTopicName {
       get { return pubsubTopicName_; }
       set {
@@ -2654,11 +2790,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as StateNotificationConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(StateNotificationConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2671,6 +2809,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PubsubTopicName.Length != 0) hash ^= PubsubTopicName.GetHashCode();
@@ -2681,11 +2820,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2702,6 +2843,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PubsubTopicName.Length != 0) {
         output.WriteRawTag(10);
@@ -2714,6 +2856,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PubsubTopicName.Length != 0) {
@@ -2726,6 +2869,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(StateNotificationConfig other) {
       if (other == null) {
         return;
@@ -2737,6 +2881,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2758,6 +2903,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2787,19 +2933,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<RegistryCredential> _parser = new pb::MessageParser<RegistryCredential>(() => new RegistryCredential());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<RegistryCredential> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegistryCredential() {
       OnConstruction();
     }
@@ -2807,6 +2957,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegistryCredential(RegistryCredential other) : this() {
       switch (other.CredentialCase) {
         case CredentialOneofCase.PublicKeyCertificate:
@@ -2818,6 +2969,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RegistryCredential Clone() {
       return new RegistryCredential(this);
     }
@@ -2828,6 +2980,7 @@ namespace Google.Cloud.Iot.V1 {
     /// A public key certificate used to verify the device credentials.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.PublicKeyCertificate PublicKeyCertificate {
       get { return credentialCase_ == CredentialOneofCase.PublicKeyCertificate ? (global::Google.Cloud.Iot.V1.PublicKeyCertificate) credential_ : null; }
       set {
@@ -2844,22 +2997,26 @@ namespace Google.Cloud.Iot.V1 {
     }
     private CredentialOneofCase credentialCase_ = CredentialOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CredentialOneofCase CredentialCase {
       get { return credentialCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCredential() {
       credentialCase_ = CredentialOneofCase.None;
       credential_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as RegistryCredential);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(RegistryCredential other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2873,6 +3030,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (credentialCase_ == CredentialOneofCase.PublicKeyCertificate) hash ^= PublicKeyCertificate.GetHashCode();
@@ -2884,11 +3042,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2905,6 +3065,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (credentialCase_ == CredentialOneofCase.PublicKeyCertificate) {
         output.WriteRawTag(10);
@@ -2917,6 +3078,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (credentialCase_ == CredentialOneofCase.PublicKeyCertificate) {
@@ -2929,6 +3091,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(RegistryCredential other) {
       if (other == null) {
         return;
@@ -2946,6 +3109,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2972,6 +3136,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3006,19 +3171,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<X509CertificateDetails> _parser = new pb::MessageParser<X509CertificateDetails>(() => new X509CertificateDetails());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<X509CertificateDetails> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public X509CertificateDetails() {
       OnConstruction();
     }
@@ -3026,6 +3195,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public X509CertificateDetails(X509CertificateDetails other) : this() {
       issuer_ = other.issuer_;
       subject_ = other.subject_;
@@ -3037,6 +3207,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public X509CertificateDetails Clone() {
       return new X509CertificateDetails(this);
     }
@@ -3048,6 +3219,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The entity that signed the certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Issuer {
       get { return issuer_; }
       set {
@@ -3062,6 +3234,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The entity the certificate and public key belong to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Subject {
       get { return subject_; }
       set {
@@ -3076,6 +3249,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The time the certificate becomes valid.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -3090,6 +3264,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The time the certificate becomes invalid.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpiryTime {
       get { return expiryTime_; }
       set {
@@ -3104,6 +3279,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The algorithm used to sign the certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SignatureAlgorithm {
       get { return signatureAlgorithm_; }
       set {
@@ -3118,6 +3294,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The type of public key in the certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PublicKeyType {
       get { return publicKeyType_; }
       set {
@@ -3126,11 +3303,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as X509CertificateDetails);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(X509CertificateDetails other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3148,6 +3327,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Issuer.Length != 0) hash ^= Issuer.GetHashCode();
@@ -3163,11 +3343,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3204,6 +3386,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Issuer.Length != 0) {
         output.WriteRawTag(10);
@@ -3236,6 +3419,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Issuer.Length != 0) {
@@ -3263,6 +3447,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(X509CertificateDetails other) {
       if (other == null) {
         return;
@@ -3295,6 +3480,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3342,6 +3528,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3397,19 +3584,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<PublicKeyCertificate> _parser = new pb::MessageParser<PublicKeyCertificate>(() => new PublicKeyCertificate());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PublicKeyCertificate> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKeyCertificate() {
       OnConstruction();
     }
@@ -3417,6 +3608,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKeyCertificate(PublicKeyCertificate other) : this() {
       format_ = other.format_;
       certificate_ = other.certificate_;
@@ -3425,6 +3617,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKeyCertificate Clone() {
       return new PublicKeyCertificate(this);
     }
@@ -3436,6 +3629,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The certificate format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.PublicKeyCertificateFormat Format {
       get { return format_; }
       set {
@@ -3450,6 +3644,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The certificate data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Certificate {
       get { return certificate_; }
       set {
@@ -3464,6 +3659,7 @@ namespace Google.Cloud.Iot.V1 {
     /// [Output only] The certificate details. Used only for X.509 certificates.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.X509CertificateDetails X509Details {
       get { return x509Details_; }
       set {
@@ -3472,11 +3668,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PublicKeyCertificate);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PublicKeyCertificate other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3491,6 +3689,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Format != global::Google.Cloud.Iot.V1.PublicKeyCertificateFormat.UnspecifiedPublicKeyCertificateFormat) hash ^= Format.GetHashCode();
@@ -3503,11 +3702,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3532,6 +3733,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Format != global::Google.Cloud.Iot.V1.PublicKeyCertificateFormat.UnspecifiedPublicKeyCertificateFormat) {
         output.WriteRawTag(8);
@@ -3552,6 +3754,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Format != global::Google.Cloud.Iot.V1.PublicKeyCertificateFormat.UnspecifiedPublicKeyCertificateFormat) {
@@ -3570,6 +3773,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PublicKeyCertificate other) {
       if (other == null) {
         return;
@@ -3590,6 +3794,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3622,6 +3827,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3662,19 +3868,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<DeviceCredential> _parser = new pb::MessageParser<DeviceCredential>(() => new DeviceCredential());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceCredential> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceCredential() {
       OnConstruction();
     }
@@ -3682,6 +3892,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceCredential(DeviceCredential other) : this() {
       expirationTime_ = other.expirationTime_ != null ? other.expirationTime_.Clone() : null;
       switch (other.CredentialCase) {
@@ -3694,6 +3905,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceCredential Clone() {
       return new DeviceCredential(this);
     }
@@ -3714,6 +3926,7 @@ namespace Google.Cloud.Iot.V1 {
     /// registry-level certificate.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.PublicKeyCredential PublicKey {
       get { return credentialCase_ == CredentialOneofCase.PublicKey ? (global::Google.Cloud.Iot.V1.PublicKeyCredential) credential_ : null; }
       set {
@@ -3731,6 +3944,7 @@ namespace Google.Cloud.Iot.V1 {
     /// this timestamp; however, it will not be automatically deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp ExpirationTime {
       get { return expirationTime_; }
       set {
@@ -3746,22 +3960,26 @@ namespace Google.Cloud.Iot.V1 {
     }
     private CredentialOneofCase credentialCase_ = CredentialOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public CredentialOneofCase CredentialCase {
       get { return credentialCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearCredential() {
       credentialCase_ = CredentialOneofCase.None;
       credential_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceCredential);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceCredential other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3776,6 +3994,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (credentialCase_ == CredentialOneofCase.PublicKey) hash ^= PublicKey.GetHashCode();
@@ -3788,11 +4007,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3813,6 +4034,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (credentialCase_ == CredentialOneofCase.PublicKey) {
         output.WriteRawTag(18);
@@ -3829,6 +4051,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (credentialCase_ == CredentialOneofCase.PublicKey) {
@@ -3844,6 +4067,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceCredential other) {
       if (other == null) {
         return;
@@ -3867,6 +4091,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3900,6 +4125,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3941,19 +4167,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<PublicKeyCredential> _parser = new pb::MessageParser<PublicKeyCredential>(() => new PublicKeyCredential());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<PublicKeyCredential> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKeyCredential() {
       OnConstruction();
     }
@@ -3961,6 +4191,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKeyCredential(PublicKeyCredential other) : this() {
       format_ = other.format_;
       key_ = other.key_;
@@ -3968,6 +4199,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public PublicKeyCredential Clone() {
       return new PublicKeyCredential(this);
     }
@@ -3979,6 +4211,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The format of the key.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Iot.V1.PublicKeyFormat Format {
       get { return format_; }
       set {
@@ -3993,6 +4226,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The key data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Key {
       get { return key_; }
       set {
@@ -4001,11 +4235,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as PublicKeyCredential);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(PublicKeyCredential other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4019,6 +4255,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Format != global::Google.Cloud.Iot.V1.PublicKeyFormat.UnspecifiedPublicKeyFormat) hash ^= Format.GetHashCode();
@@ -4030,11 +4267,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4055,6 +4294,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Format != global::Google.Cloud.Iot.V1.PublicKeyFormat.UnspecifiedPublicKeyFormat) {
         output.WriteRawTag(8);
@@ -4071,6 +4311,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Format != global::Google.Cloud.Iot.V1.PublicKeyFormat.UnspecifiedPublicKeyFormat) {
@@ -4086,6 +4327,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(PublicKeyCredential other) {
       if (other == null) {
         return;
@@ -4100,6 +4342,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4125,6 +4368,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4158,19 +4402,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<DeviceConfig> _parser = new pb::MessageParser<DeviceConfig>(() => new DeviceConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConfig() {
       OnConstruction();
     }
@@ -4178,6 +4426,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConfig(DeviceConfig other) : this() {
       version_ = other.version_;
       cloudUpdateTime_ = other.cloudUpdateTime_ != null ? other.cloudUpdateTime_.Clone() : null;
@@ -4187,6 +4436,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceConfig Clone() {
       return new DeviceConfig(this);
     }
@@ -4201,6 +4451,7 @@ namespace Google.Cloud.Iot.V1 {
     /// specified; the response of `CreateDevice` will always have a value of 1.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long Version {
       get { return version_; }
       set {
@@ -4216,6 +4467,7 @@ namespace Google.Cloud.Iot.V1 {
     /// Cloud IoT Core. This timestamp is set by the server.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CloudUpdateTime {
       get { return cloudUpdateTime_; }
       set {
@@ -4238,6 +4490,7 @@ namespace Google.Cloud.Iot.V1 {
     /// acknowledged. This timestamp is set by Cloud IoT Core.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DeviceAckTime {
       get { return deviceAckTime_; }
       set {
@@ -4252,6 +4505,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The device configuration data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString BinaryData {
       get { return binaryData_; }
       set {
@@ -4260,11 +4514,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4280,6 +4536,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Version != 0L) hash ^= Version.GetHashCode();
@@ -4293,11 +4550,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4326,6 +4585,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Version != 0L) {
         output.WriteRawTag(8);
@@ -4350,6 +4610,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Version != 0L) {
@@ -4371,6 +4632,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceConfig other) {
       if (other == null) {
         return;
@@ -4397,6 +4659,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4436,6 +4699,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4483,19 +4747,23 @@ namespace Google.Cloud.Iot.V1 {
     private static readonly pb::MessageParser<DeviceState> _parser = new pb::MessageParser<DeviceState>(() => new DeviceState());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<DeviceState> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Iot.V1.ResourcesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceState() {
       OnConstruction();
     }
@@ -4503,6 +4771,7 @@ namespace Google.Cloud.Iot.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceState(DeviceState other) : this() {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       binaryData_ = other.binaryData_;
@@ -4510,6 +4779,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DeviceState Clone() {
       return new DeviceState(this);
     }
@@ -4522,6 +4792,7 @@ namespace Google.Cloud.Iot.V1 {
     /// IoT Core.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp UpdateTime {
       get { return updateTime_; }
       set {
@@ -4536,6 +4807,7 @@ namespace Google.Cloud.Iot.V1 {
     /// The device state data.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pb::ByteString BinaryData {
       get { return binaryData_; }
       set {
@@ -4544,11 +4816,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as DeviceState);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(DeviceState other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4562,6 +4836,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
@@ -4573,11 +4848,13 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4598,6 +4875,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (updateTime_ != null) {
         output.WriteRawTag(10);
@@ -4614,6 +4892,7 @@ namespace Google.Cloud.Iot.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (updateTime_ != null) {
@@ -4629,6 +4908,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeviceState other) {
       if (other == null) {
         return;
@@ -4646,6 +4926,7 @@ namespace Google.Cloud.Iot.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4674,6 +4955,7 @@ namespace Google.Cloud.Iot.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {

@@ -68,19 +68,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     private static readonly pb::MessageParser<AutoMlVideoClassification> _parser = new pb::MessageParser<AutoMlVideoClassification>(() => new AutoMlVideoClassification());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AutoMlVideoClassification> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutomlVideoClassificationReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlVideoClassification() {
       OnConstruction();
     }
@@ -88,12 +92,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlVideoClassification(AutoMlVideoClassification other) : this() {
       inputs_ = other.inputs_ != null ? other.inputs_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlVideoClassification Clone() {
       return new AutoMlVideoClassification(this);
     }
@@ -105,6 +111,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     /// The input parameters of this TrainingJob.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlVideoClassificationInputs Inputs {
       get { return inputs_; }
       set {
@@ -113,11 +120,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AutoMlVideoClassification);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AutoMlVideoClassification other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -130,6 +139,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (inputs_ != null) hash ^= Inputs.GetHashCode();
@@ -140,11 +150,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -161,6 +173,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (inputs_ != null) {
         output.WriteRawTag(10);
@@ -173,6 +186,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (inputs_ != null) {
@@ -185,6 +199,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AutoMlVideoClassification other) {
       if (other == null) {
         return;
@@ -199,6 +214,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -223,6 +239,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -252,19 +269,23 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     private static readonly pb::MessageParser<AutoMlVideoClassificationInputs> _parser = new pb::MessageParser<AutoMlVideoClassificationInputs>(() => new AutoMlVideoClassificationInputs());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AutoMlVideoClassificationInputs> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutomlVideoClassificationReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlVideoClassificationInputs() {
       OnConstruction();
     }
@@ -272,12 +293,14 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlVideoClassificationInputs(AutoMlVideoClassificationInputs other) : this() {
       modelType_ = other.modelType_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AutoMlVideoClassificationInputs Clone() {
       return new AutoMlVideoClassificationInputs(this);
     }
@@ -286,6 +309,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     public const int ModelTypeFieldNumber = 1;
     private global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlVideoClassificationInputs.Types.ModelType modelType_ = global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlVideoClassificationInputs.Types.ModelType.Unspecified;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlVideoClassificationInputs.Types.ModelType ModelType {
       get { return modelType_; }
       set {
@@ -294,11 +318,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AutoMlVideoClassificationInputs);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AutoMlVideoClassificationInputs other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -311,6 +337,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ModelType != global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlVideoClassificationInputs.Types.ModelType.Unspecified) hash ^= ModelType.GetHashCode();
@@ -321,11 +348,13 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -342,6 +371,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ModelType != global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlVideoClassificationInputs.Types.ModelType.Unspecified) {
         output.WriteRawTag(8);
@@ -354,6 +384,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ModelType != global::Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition.AutoMlVideoClassificationInputs.Types.ModelType.Unspecified) {
@@ -366,6 +397,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AutoMlVideoClassificationInputs other) {
       if (other == null) {
         return;
@@ -377,6 +409,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -398,6 +431,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -417,6 +451,7 @@ namespace Google.Cloud.AIPlatform.V1.Schema.TrainingJob.Definition {
     #region Nested types
     /// <summary>Container for nested types declared in the AutoMlVideoClassificationInputs message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       public enum ModelType {
         /// <summary>

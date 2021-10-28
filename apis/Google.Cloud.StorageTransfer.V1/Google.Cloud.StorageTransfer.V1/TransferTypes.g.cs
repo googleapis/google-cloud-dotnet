@@ -171,19 +171,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<GoogleServiceAccount> _parser = new pb::MessageParser<GoogleServiceAccount>(() => new GoogleServiceAccount());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GoogleServiceAccount> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleServiceAccount() {
       OnConstruction();
     }
@@ -191,6 +195,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleServiceAccount(GoogleServiceAccount other) : this() {
       accountEmail_ = other.accountEmail_;
       subjectId_ = other.subjectId_;
@@ -198,6 +203,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GoogleServiceAccount Clone() {
       return new GoogleServiceAccount(this);
     }
@@ -209,6 +215,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Email address of the service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AccountEmail {
       get { return accountEmail_; }
       set {
@@ -223,6 +230,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Unique identifier for the service account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SubjectId {
       get { return subjectId_; }
       set {
@@ -231,11 +239,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GoogleServiceAccount);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GoogleServiceAccount other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -249,6 +259,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (AccountEmail.Length != 0) hash ^= AccountEmail.GetHashCode();
@@ -260,11 +271,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -285,6 +298,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AccountEmail.Length != 0) {
         output.WriteRawTag(10);
@@ -301,6 +315,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (AccountEmail.Length != 0) {
@@ -316,6 +331,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GoogleServiceAccount other) {
       if (other == null) {
         return;
@@ -330,6 +346,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -355,6 +372,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -393,19 +411,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<AwsAccessKey> _parser = new pb::MessageParser<AwsAccessKey>(() => new AwsAccessKey());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AwsAccessKey> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AwsAccessKey() {
       OnConstruction();
     }
@@ -413,6 +435,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AwsAccessKey(AwsAccessKey other) : this() {
       accessKeyId_ = other.accessKeyId_;
       secretAccessKey_ = other.secretAccessKey_;
@@ -420,6 +443,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AwsAccessKey Clone() {
       return new AwsAccessKey(this);
     }
@@ -431,6 +455,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Required. AWS access key ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string AccessKeyId {
       get { return accessKeyId_; }
       set {
@@ -446,6 +471,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// responses.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SecretAccessKey {
       get { return secretAccessKey_; }
       set {
@@ -454,11 +480,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AwsAccessKey);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AwsAccessKey other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -472,6 +500,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (AccessKeyId.Length != 0) hash ^= AccessKeyId.GetHashCode();
@@ -483,11 +512,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -508,6 +539,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (AccessKeyId.Length != 0) {
         output.WriteRawTag(10);
@@ -524,6 +556,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (AccessKeyId.Length != 0) {
@@ -539,6 +572,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AwsAccessKey other) {
       if (other == null) {
         return;
@@ -553,6 +587,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -578,6 +613,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -614,19 +650,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<AzureCredentials> _parser = new pb::MessageParser<AzureCredentials>(() => new AzureCredentials());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AzureCredentials> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AzureCredentials() {
       OnConstruction();
     }
@@ -634,12 +674,14 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AzureCredentials(AzureCredentials other) : this() {
       sasToken_ = other.sasToken_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AzureCredentials Clone() {
       return new AzureCredentials(this);
     }
@@ -663,6 +705,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// (SAS)](https://docs.microsoft.com/en-us/azure/storage/common/storage-sas-overview).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SasToken {
       get { return sasToken_; }
       set {
@@ -671,11 +714,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AzureCredentials);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AzureCredentials other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -688,6 +733,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SasToken.Length != 0) hash ^= SasToken.GetHashCode();
@@ -698,11 +744,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -719,6 +767,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (SasToken.Length != 0) {
         output.WriteRawTag(18);
@@ -731,6 +780,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SasToken.Length != 0) {
@@ -743,6 +793,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AzureCredentials other) {
       if (other == null) {
         return;
@@ -754,6 +805,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -775,6 +827,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -810,19 +863,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<ObjectConditions> _parser = new pb::MessageParser<ObjectConditions>(() => new ObjectConditions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ObjectConditions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectConditions() {
       OnConstruction();
     }
@@ -830,6 +887,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectConditions(ObjectConditions other) : this() {
       minTimeElapsedSinceLastModification_ = other.minTimeElapsedSinceLastModification_ != null ? other.minTimeElapsedSinceLastModification_.Clone() : null;
       maxTimeElapsedSinceLastModification_ = other.maxTimeElapsedSinceLastModification_ != null ? other.maxTimeElapsedSinceLastModification_.Clone() : null;
@@ -841,6 +899,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ObjectConditions Clone() {
       return new ObjectConditions(this);
     }
@@ -860,6 +919,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// `TransferOperation`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MinTimeElapsedSinceLastModification {
       get { return minTimeElapsedSinceLastModification_; }
       set {
@@ -882,6 +942,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// `TransferOperation`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration MaxTimeElapsedSinceLastModification {
       get { return maxTimeElapsedSinceLastModification_; }
       set {
@@ -926,6 +987,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// transfers](/storage-transfer/docs/filtering-objects-from-transfers).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> IncludePrefixes {
       get { return includePrefixes_; }
     }
@@ -969,6 +1031,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// transfers](/storage-transfer/docs/filtering-objects-from-transfers).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ExcludePrefixes {
       get { return excludePrefixes_; }
     }
@@ -991,6 +1054,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// *  `last_modified_before` to the end of the day
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastModifiedSince {
       get { return lastModifiedSince_; }
       set {
@@ -1007,6 +1071,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// transferred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastModifiedBefore {
       get { return lastModifiedBefore_; }
       set {
@@ -1015,11 +1080,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ObjectConditions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ObjectConditions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1037,6 +1104,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (minTimeElapsedSinceLastModification_ != null) hash ^= MinTimeElapsedSinceLastModification.GetHashCode();
@@ -1052,11 +1120,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1087,6 +1157,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (minTimeElapsedSinceLastModification_ != null) {
         output.WriteRawTag(10);
@@ -1113,6 +1184,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (minTimeElapsedSinceLastModification_ != null) {
@@ -1136,6 +1208,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ObjectConditions other) {
       if (other == null) {
         return;
@@ -1170,6 +1243,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1223,6 +1297,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1287,19 +1362,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<GcsData> _parser = new pb::MessageParser<GcsData>(() => new GcsData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<GcsData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsData() {
       OnConstruction();
     }
@@ -1307,6 +1386,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsData(GcsData other) : this() {
       bucketName_ = other.bucketName_;
       path_ = other.path_;
@@ -1314,6 +1394,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public GcsData Clone() {
       return new GcsData(this);
     }
@@ -1326,6 +1407,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [Bucket Name Requirements](/storage/docs/naming#requirements).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BucketName {
       get { return bucketName_; }
       set {
@@ -1347,6 +1429,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [Object Name Requirements](/storage/docs/naming#objectnames).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Path {
       get { return path_; }
       set {
@@ -1355,11 +1438,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as GcsData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(GcsData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1373,6 +1458,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (BucketName.Length != 0) hash ^= BucketName.GetHashCode();
@@ -1384,11 +1470,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1409,6 +1497,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BucketName.Length != 0) {
         output.WriteRawTag(10);
@@ -1425,6 +1514,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (BucketName.Length != 0) {
@@ -1440,6 +1530,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(GcsData other) {
       if (other == null) {
         return;
@@ -1454,6 +1545,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1479,6 +1571,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1513,19 +1606,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<AwsS3Data> _parser = new pb::MessageParser<AwsS3Data>(() => new AwsS3Data());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AwsS3Data> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AwsS3Data() {
       OnConstruction();
     }
@@ -1533,6 +1630,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AwsS3Data(AwsS3Data other) : this() {
       bucketName_ = other.bucketName_;
       awsAccessKey_ = other.awsAccessKey_ != null ? other.awsAccessKey_.Clone() : null;
@@ -1542,6 +1640,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AwsS3Data Clone() {
       return new AwsS3Data(this);
     }
@@ -1555,6 +1654,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// bucket](https://docs.aws.amazon.com/AmazonS3/latest/dev/create-bucket-get-location-example.html)).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string BucketName {
       get { return bucketName_; }
       set {
@@ -1574,6 +1674,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [User credentials](/storage-transfer/docs/data-retention#user-credentials).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.AwsAccessKey AwsAccessKey {
       get { return awsAccessKey_; }
       set {
@@ -1592,6 +1693,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// a '/'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Path {
       get { return path_; }
       set {
@@ -1611,6 +1713,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// provided role using the [GoogleServiceAccount] for this project.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string RoleArn {
       get { return roleArn_; }
       set {
@@ -1619,11 +1722,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AwsS3Data);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AwsS3Data other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1639,6 +1744,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (BucketName.Length != 0) hash ^= BucketName.GetHashCode();
@@ -1652,11 +1758,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -1685,6 +1793,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (BucketName.Length != 0) {
         output.WriteRawTag(10);
@@ -1709,6 +1818,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (BucketName.Length != 0) {
@@ -1730,6 +1840,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AwsS3Data other) {
       if (other == null) {
         return;
@@ -1753,6 +1864,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -1789,6 +1901,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -1839,19 +1952,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<AzureBlobStorageData> _parser = new pb::MessageParser<AzureBlobStorageData>(() => new AzureBlobStorageData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<AzureBlobStorageData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AzureBlobStorageData() {
       OnConstruction();
     }
@@ -1859,6 +1976,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AzureBlobStorageData(AzureBlobStorageData other) : this() {
       storageAccount_ = other.storageAccount_;
       azureCredentials_ = other.azureCredentials_ != null ? other.azureCredentials_.Clone() : null;
@@ -1868,6 +1986,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public AzureBlobStorageData Clone() {
       return new AzureBlobStorageData(this);
     }
@@ -1879,6 +1998,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Required. The name of the Azure Storage account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string StorageAccount {
       get { return storageAccount_; }
       set {
@@ -1897,6 +2017,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [User credentials](/storage-transfer/docs/data-retention#user-credentials).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.AzureCredentials AzureCredentials {
       get { return azureCredentials_; }
       set {
@@ -1911,6 +2032,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Required. The container to transfer from the Azure Storage account.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Container {
       get { return container_; }
       set {
@@ -1929,6 +2051,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// a '/'.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Path {
       get { return path_; }
       set {
@@ -1937,11 +2060,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as AzureBlobStorageData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(AzureBlobStorageData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1957,6 +2082,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (StorageAccount.Length != 0) hash ^= StorageAccount.GetHashCode();
@@ -1970,11 +2096,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2003,6 +2131,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (StorageAccount.Length != 0) {
         output.WriteRawTag(10);
@@ -2027,6 +2156,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (StorageAccount.Length != 0) {
@@ -2048,6 +2178,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(AzureBlobStorageData other) {
       if (other == null) {
         return;
@@ -2071,6 +2202,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2107,6 +2239,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2190,19 +2323,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<HttpData> _parser = new pb::MessageParser<HttpData>(() => new HttpData());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<HttpData> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpData() {
       OnConstruction();
     }
@@ -2210,12 +2347,14 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpData(HttpData other) : this() {
       listUrl_ = other.listUrl_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public HttpData Clone() {
       return new HttpData(this);
     }
@@ -2229,6 +2368,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// HTTP and HTTPS schemes are supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ListUrl {
       get { return listUrl_; }
       set {
@@ -2237,11 +2377,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as HttpData);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(HttpData other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2254,6 +2396,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ListUrl.Length != 0) hash ^= ListUrl.GetHashCode();
@@ -2264,11 +2407,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2285,6 +2430,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ListUrl.Length != 0) {
         output.WriteRawTag(10);
@@ -2297,6 +2443,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ListUrl.Length != 0) {
@@ -2309,6 +2456,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(HttpData other) {
       if (other == null) {
         return;
@@ -2320,6 +2468,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2341,6 +2490,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2370,19 +2520,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<TransferOptions> _parser = new pb::MessageParser<TransferOptions>(() => new TransferOptions());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferOptions> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferOptions() {
       OnConstruction();
     }
@@ -2390,6 +2544,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferOptions(TransferOptions other) : this() {
       overwriteObjectsAlreadyExistingInSink_ = other.overwriteObjectsAlreadyExistingInSink_;
       deleteObjectsUniqueInSink_ = other.deleteObjectsUniqueInSink_;
@@ -2398,6 +2553,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferOptions Clone() {
       return new TransferOptions(this);
     }
@@ -2412,6 +2568,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// will be overwritten with the source object.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool OverwriteObjectsAlreadyExistingInSink {
       get { return overwriteObjectsAlreadyExistingInSink_; }
       set {
@@ -2430,6 +2587,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// are mutually exclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DeleteObjectsUniqueInSink {
       get { return deleteObjectsUniqueInSink_; }
       set {
@@ -2449,6 +2607,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// are mutually exclusive.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool DeleteObjectsFromSourceAfterTransfer {
       get { return deleteObjectsFromSourceAfterTransfer_; }
       set {
@@ -2457,11 +2616,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferOptions);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferOptions other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2476,6 +2637,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (OverwriteObjectsAlreadyExistingInSink != false) hash ^= OverwriteObjectsAlreadyExistingInSink.GetHashCode();
@@ -2488,11 +2650,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2517,6 +2681,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (OverwriteObjectsAlreadyExistingInSink != false) {
         output.WriteRawTag(8);
@@ -2537,6 +2702,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (OverwriteObjectsAlreadyExistingInSink != false) {
@@ -2555,6 +2721,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferOptions other) {
       if (other == null) {
         return;
@@ -2572,6 +2739,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -2601,6 +2769,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -2638,19 +2807,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<TransferSpec> _parser = new pb::MessageParser<TransferSpec>(() => new TransferSpec());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferSpec> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferSpec() {
       OnConstruction();
     }
@@ -2658,6 +2831,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferSpec(TransferSpec other) : this() {
       objectConditions_ = other.objectConditions_ != null ? other.objectConditions_.Clone() : null;
       transferOptions_ = other.transferOptions_ != null ? other.transferOptions_.Clone() : null;
@@ -2686,6 +2860,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferSpec Clone() {
       return new TransferSpec(this);
     }
@@ -2696,6 +2871,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// A Cloud Storage data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.GcsData GcsDataSink {
       get { return dataSinkCase_ == DataSinkOneofCase.GcsDataSink ? (global::Google.Cloud.StorageTransfer.V1.GcsData) dataSink_ : null; }
       set {
@@ -2710,6 +2886,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// A Cloud Storage data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.GcsData GcsDataSource {
       get { return dataSourceCase_ == DataSourceOneofCase.GcsDataSource ? (global::Google.Cloud.StorageTransfer.V1.GcsData) dataSource_ : null; }
       set {
@@ -2724,6 +2901,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// An AWS S3 data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.AwsS3Data AwsS3DataSource {
       get { return dataSourceCase_ == DataSourceOneofCase.AwsS3DataSource ? (global::Google.Cloud.StorageTransfer.V1.AwsS3Data) dataSource_ : null; }
       set {
@@ -2738,6 +2916,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// An HTTP URL data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.HttpData HttpDataSource {
       get { return dataSourceCase_ == DataSourceOneofCase.HttpDataSource ? (global::Google.Cloud.StorageTransfer.V1.HttpData) dataSource_ : null; }
       set {
@@ -2752,6 +2931,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// An Azure Blob Storage data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.AzureBlobStorageData AzureBlobStorageDataSource {
       get { return dataSourceCase_ == DataSourceOneofCase.AzureBlobStorageDataSource ? (global::Google.Cloud.StorageTransfer.V1.AzureBlobStorageData) dataSource_ : null; }
       set {
@@ -2769,6 +2949,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// objects' "last modification time" do not exclude objects in a data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.ObjectConditions ObjectConditions {
       get { return objectConditions_; }
       set {
@@ -2787,6 +2968,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.TransferOptions TransferOptions {
       get { return transferOptions_; }
       set {
@@ -2802,11 +2984,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
     private DataSinkOneofCase dataSinkCase_ = DataSinkOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataSinkOneofCase DataSinkCase {
       get { return dataSinkCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDataSink() {
       dataSinkCase_ = DataSinkOneofCase.None;
       dataSink_ = null;
@@ -2823,22 +3007,26 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
     private DataSourceOneofCase dataSourceCase_ = DataSourceOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public DataSourceOneofCase DataSourceCase {
       get { return dataSourceCase_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void ClearDataSource() {
       dataSourceCase_ = DataSourceOneofCase.None;
       dataSource_ = null;
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferSpec);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferSpec other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -2859,6 +3047,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) hash ^= GcsDataSink.GetHashCode();
@@ -2877,11 +3066,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -2922,6 +3113,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (dataSourceCase_ == DataSourceOneofCase.GcsDataSource) {
         output.WriteRawTag(10);
@@ -2958,6 +3150,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (dataSinkCase_ == DataSinkOneofCase.GcsDataSink) {
@@ -2988,6 +3181,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferSpec other) {
       if (other == null) {
         return;
@@ -3044,6 +3238,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3120,6 +3315,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3204,19 +3400,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<Schedule> _parser = new pb::MessageParser<Schedule>(() => new Schedule());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Schedule> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Schedule() {
       OnConstruction();
     }
@@ -3224,6 +3424,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Schedule(Schedule other) : this() {
       scheduleStartDate_ = other.scheduleStartDate_ != null ? other.scheduleStartDate_.Clone() : null;
       scheduleEndDate_ = other.scheduleEndDate_ != null ? other.scheduleEndDate_.Clone() : null;
@@ -3234,6 +3435,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Schedule Clone() {
       return new Schedule(this);
     }
@@ -3258,6 +3460,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// place on June 3 at midnight UTC.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.Date ScheduleStartDate {
       get { return scheduleStartDate_; }
       set {
@@ -3283,6 +3486,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     ///     through `schedule_end_date`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.Date ScheduleEndDate {
       get { return scheduleEndDate_; }
       set {
@@ -3311,6 +3515,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     ///     `schedule_end_date`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.TimeOfDay StartTimeOfDay {
       get { return startTimeOfDay_; }
       set {
@@ -3340,6 +3545,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     ///     [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] is returned.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Type.TimeOfDay EndTimeOfDay {
       get { return endTimeOfDay_; }
       set {
@@ -3356,6 +3562,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// 1 hour.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Duration RepeatInterval {
       get { return repeatInterval_; }
       set {
@@ -3364,11 +3571,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Schedule);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Schedule other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3385,6 +3594,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (scheduleStartDate_ != null) hash ^= ScheduleStartDate.GetHashCode();
@@ -3399,11 +3609,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3436,6 +3648,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (scheduleStartDate_ != null) {
         output.WriteRawTag(10);
@@ -3464,6 +3677,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (scheduleStartDate_ != null) {
@@ -3488,6 +3702,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Schedule other) {
       if (other == null) {
         return;
@@ -3526,6 +3741,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -3578,6 +3794,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -3639,19 +3856,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<TransferJob> _parser = new pb::MessageParser<TransferJob>(() => new TransferJob());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferJob> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferJob() {
       OnConstruction();
     }
@@ -3659,6 +3880,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferJob(TransferJob other) : this() {
       name_ = other.name_;
       description_ = other.description_;
@@ -3675,6 +3897,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferJob Clone() {
       return new TransferJob(this);
     }
@@ -3701,6 +3924,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -3716,6 +3940,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// bytes when Unicode-encoded.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -3730,6 +3955,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// The ID of the Google Cloud Platform Project that owns the job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -3744,6 +3970,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Transfer specification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.TransferSpec TransferSpec {
       get { return transferSpec_; }
       set {
@@ -3758,6 +3985,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Notification configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.NotificationConfig NotificationConfig {
       get { return notificationConfig_; }
       set {
@@ -3775,6 +4003,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// have a non-empty schedule.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.Schedule Schedule {
       get { return schedule_; }
       set {
@@ -3797,6 +4026,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// affect the current operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.TransferJob.Types.Status Status {
       get { return status_; }
       set {
@@ -3811,6 +4041,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Output only. The time that the transfer job was created.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp CreationTime {
       get { return creationTime_; }
       set {
@@ -3825,6 +4056,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Output only. The time that the transfer job was last modified.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp LastModificationTime {
       get { return lastModificationTime_; }
       set {
@@ -3839,6 +4071,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Output only. The time that the transfer job was deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp DeletionTime {
       get { return deletionTime_; }
       set {
@@ -3854,6 +4087,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Present if a TransferOperation has been created for this JobConfig.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string LatestOperationName {
       get { return latestOperationName_; }
       set {
@@ -3862,11 +4096,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferJob);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferJob other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -3889,6 +4125,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -3909,11 +4146,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -3970,6 +4209,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -4022,6 +4262,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -4064,6 +4305,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferJob other) {
       if (other == null) {
         return;
@@ -4123,6 +4365,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4202,6 +4445,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4279,6 +4523,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the TransferJob message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The status of the transfer job.
@@ -4321,19 +4566,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<ErrorLogEntry> _parser = new pb::MessageParser<ErrorLogEntry>(() => new ErrorLogEntry());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ErrorLogEntry> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorLogEntry() {
       OnConstruction();
     }
@@ -4341,6 +4590,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorLogEntry(ErrorLogEntry other) : this() {
       url_ = other.url_;
       errorDetails_ = other.errorDetails_.Clone();
@@ -4348,6 +4598,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorLogEntry Clone() {
       return new ErrorLogEntry(this);
     }
@@ -4360,6 +4611,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// or an object) with which the error is associated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Url {
       get { return url_; }
       set {
@@ -4376,16 +4628,19 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// A list of messages that carry the error details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ErrorDetails {
       get { return errorDetails_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ErrorLogEntry);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ErrorLogEntry other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4399,6 +4654,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Url.Length != 0) hash ^= Url.GetHashCode();
@@ -4410,11 +4666,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4432,6 +4690,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Url.Length != 0) {
         output.WriteRawTag(10);
@@ -4445,6 +4704,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Url.Length != 0) {
@@ -4458,6 +4718,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ErrorLogEntry other) {
       if (other == null) {
         return;
@@ -4470,6 +4731,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4495,6 +4757,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4529,19 +4792,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<ErrorSummary> _parser = new pb::MessageParser<ErrorSummary>(() => new ErrorSummary());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<ErrorSummary> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorSummary() {
       OnConstruction();
     }
@@ -4549,6 +4816,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorSummary(ErrorSummary other) : this() {
       errorCode_ = other.errorCode_;
       errorCount_ = other.errorCount_;
@@ -4557,6 +4825,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ErrorSummary Clone() {
       return new ErrorSummary(this);
     }
@@ -4568,6 +4837,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Required.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Rpc.Code ErrorCode {
       get { return errorCode_; }
       set {
@@ -4582,6 +4852,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Required. Count of this type of error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ErrorCount {
       get { return errorCount_; }
       set {
@@ -4601,16 +4872,19 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// error code for a single transfer operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.StorageTransfer.V1.ErrorLogEntry> ErrorLogEntries {
       get { return errorLogEntries_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as ErrorSummary);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(ErrorSummary other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -4625,6 +4899,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ErrorCode != global::Google.Rpc.Code.Ok) hash ^= ErrorCode.GetHashCode();
@@ -4637,11 +4912,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -4663,6 +4940,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ErrorCode != global::Google.Rpc.Code.Ok) {
         output.WriteRawTag(8);
@@ -4680,6 +4958,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ErrorCode != global::Google.Rpc.Code.Ok) {
@@ -4696,6 +4975,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(ErrorSummary other) {
       if (other == null) {
         return;
@@ -4711,6 +4991,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -4740,6 +5021,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -4777,19 +5059,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<TransferCounters> _parser = new pb::MessageParser<TransferCounters>(() => new TransferCounters());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferCounters> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferCounters() {
       OnConstruction();
     }
@@ -4797,6 +5083,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferCounters(TransferCounters other) : this() {
       objectsFoundFromSource_ = other.objectsFoundFromSource_;
       bytesFoundFromSource_ = other.bytesFoundFromSource_;
@@ -4818,6 +5105,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferCounters Clone() {
       return new TransferCounters(this);
     }
@@ -4831,6 +5119,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// to sync.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsFoundFromSource {
       get { return objectsFoundFromSource_; }
       set {
@@ -4847,6 +5136,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// to sync.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesFoundFromSource {
       get { return bytesFoundFromSource_; }
       set {
@@ -4861,6 +5151,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Objects found only in the data sink that are scheduled to be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsFoundOnlyFromSink {
       get { return objectsFoundOnlyFromSink_; }
       set {
@@ -4875,6 +5166,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Bytes found only in the data sink that are scheduled to be deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesFoundOnlyFromSink {
       get { return bytesFoundOnlyFromSink_; }
       set {
@@ -4890,6 +5182,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// exist in the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsFromSourceSkippedBySync {
       get { return objectsFromSourceSkippedBySync_; }
       set {
@@ -4905,6 +5198,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// exist in the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesFromSourceSkippedBySync {
       get { return bytesFromSourceSkippedBySync_; }
       set {
@@ -4919,6 +5213,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Objects that are copied to the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsCopiedToSink {
       get { return objectsCopiedToSink_; }
       set {
@@ -4933,6 +5228,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Bytes that are copied to the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesCopiedToSink {
       get { return bytesCopiedToSink_; }
       set {
@@ -4947,6 +5243,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Objects that are deleted from the data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsDeletedFromSource {
       get { return objectsDeletedFromSource_; }
       set {
@@ -4961,6 +5258,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Bytes that are deleted from the data source.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesDeletedFromSource {
       get { return bytesDeletedFromSource_; }
       set {
@@ -4975,6 +5273,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Objects that are deleted from the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsDeletedFromSink {
       get { return objectsDeletedFromSink_; }
       set {
@@ -4989,6 +5288,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Bytes that are deleted from the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesDeletedFromSink {
       get { return bytesDeletedFromSink_; }
       set {
@@ -5004,6 +5304,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// to be deleted after being transferred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsFromSourceFailed {
       get { return objectsFromSourceFailed_; }
       set {
@@ -5019,6 +5320,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// be deleted after being transferred.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesFromSourceFailed {
       get { return bytesFromSourceFailed_; }
       set {
@@ -5033,6 +5335,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Objects that failed to be deleted from the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long ObjectsFailedToDeleteFromSink {
       get { return objectsFailedToDeleteFromSink_; }
       set {
@@ -5047,6 +5350,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Bytes that failed to be deleted from the data sink.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public long BytesFailedToDeleteFromSink {
       get { return bytesFailedToDeleteFromSink_; }
       set {
@@ -5055,11 +5359,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferCounters);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferCounters other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5087,6 +5393,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ObjectsFoundFromSource != 0L) hash ^= ObjectsFoundFromSource.GetHashCode();
@@ -5112,11 +5419,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5193,6 +5502,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (ObjectsFoundFromSource != 0L) {
         output.WriteRawTag(8);
@@ -5265,6 +5575,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ObjectsFoundFromSource != 0L) {
@@ -5322,6 +5633,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferCounters other) {
       if (other == null) {
         return;
@@ -5378,6 +5690,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5459,6 +5772,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5569,19 +5883,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<NotificationConfig> _parser = new pb::MessageParser<NotificationConfig>(() => new NotificationConfig());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<NotificationConfig> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationConfig() {
       OnConstruction();
     }
@@ -5589,6 +5907,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationConfig(NotificationConfig other) : this() {
       pubsubTopic_ = other.pubsubTopic_;
       eventTypes_ = other.eventTypes_.Clone();
@@ -5597,6 +5916,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public NotificationConfig Clone() {
       return new NotificationConfig(this);
     }
@@ -5611,6 +5931,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// [INVALID_ARGUMENT][google.rpc.Code.INVALID_ARGUMENT] error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string PubsubTopic {
       get { return pubsubTopic_; }
       set {
@@ -5628,6 +5949,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// notifications for all event types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.StorageTransfer.V1.NotificationConfig.Types.EventType> EventTypes {
       get { return eventTypes_; }
     }
@@ -5639,6 +5961,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Required. The desired format of the notification message payloads.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.NotificationConfig.Types.PayloadFormat PayloadFormat {
       get { return payloadFormat_; }
       set {
@@ -5647,11 +5970,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as NotificationConfig);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(NotificationConfig other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -5666,6 +5991,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (PubsubTopic.Length != 0) hash ^= PubsubTopic.GetHashCode();
@@ -5678,11 +6004,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -5704,6 +6032,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (PubsubTopic.Length != 0) {
         output.WriteRawTag(10);
@@ -5721,6 +6050,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (PubsubTopic.Length != 0) {
@@ -5737,6 +6067,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(NotificationConfig other) {
       if (other == null) {
         return;
@@ -5752,6 +6083,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -5782,6 +6114,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -5810,6 +6143,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the NotificationConfig message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Enum for specifying event types for which notifications are to be
@@ -5877,19 +6211,23 @@ namespace Google.Cloud.StorageTransfer.V1 {
     private static readonly pb::MessageParser<TransferOperation> _parser = new pb::MessageParser<TransferOperation>(() => new TransferOperation());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<TransferOperation> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.StorageTransfer.V1.TransferTypesReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferOperation() {
       OnConstruction();
     }
@@ -5897,6 +6235,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferOperation(TransferOperation other) : this() {
       name_ = other.name_;
       projectId_ = other.projectId_;
@@ -5912,6 +6251,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public TransferOperation Clone() {
       return new TransferOperation(this);
     }
@@ -5923,6 +6263,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// A globally unique ID assigned by the system.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Name {
       get { return name_; }
       set {
@@ -5937,6 +6278,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// The ID of the Google Cloud Platform Project that owns the operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ProjectId {
       get { return projectId_; }
       set {
@@ -5951,6 +6293,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Transfer specification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.TransferSpec TransferSpec {
       get { return transferSpec_; }
       set {
@@ -5965,6 +6308,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Notification configuration.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.NotificationConfig NotificationConfig {
       get { return notificationConfig_; }
       set {
@@ -5979,6 +6323,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Start time of this transfer execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp StartTime {
       get { return startTime_; }
       set {
@@ -5993,6 +6338,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// End time of this transfer execution.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Protobuf.WellKnownTypes.Timestamp EndTime {
       get { return endTime_; }
       set {
@@ -6007,6 +6353,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Status of the transfer operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.TransferOperation.Types.Status Status {
       get { return status_; }
       set {
@@ -6021,6 +6368,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Information about the progress of the transfer operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.StorageTransfer.V1.TransferCounters Counters {
       get { return counters_; }
       set {
@@ -6037,6 +6385,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// Summarizes errors encountered with sample error log entries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.StorageTransfer.V1.ErrorSummary> ErrorBreakdowns {
       get { return errorBreakdowns_; }
     }
@@ -6048,6 +6397,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     /// The name of the transfer job that triggers this transfer operation.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string TransferJobName {
       get { return transferJobName_; }
       set {
@@ -6056,11 +6406,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as TransferOperation);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(TransferOperation other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -6082,6 +6434,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Name.Length != 0) hash ^= Name.GetHashCode();
@@ -6101,11 +6454,13 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       output.WriteRawMessage(this);
@@ -6155,6 +6510,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
       if (Name.Length != 0) {
         output.WriteRawTag(10);
@@ -6200,6 +6556,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #endif
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Name.Length != 0) {
@@ -6237,6 +6594,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TransferOperation other) {
       if (other == null) {
         return;
@@ -6288,6 +6646,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
       input.ReadRawMessage(this);
@@ -6360,6 +6719,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
 
     #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
@@ -6430,6 +6790,7 @@ namespace Google.Cloud.StorageTransfer.V1 {
     #region Nested types
     /// <summary>Container for nested types declared in the TransferOperation message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The status of a TransferOperation.
