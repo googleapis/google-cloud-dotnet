@@ -196,7 +196,7 @@ of tracing rates/qps, etc.
 If your application reacts to requests/events, then on the method that receives each of those (your listener method)
 you need to extract the trace context information from the request and ser it on the tracer.
 
-{{sample.Trace.IncomingContext}}
+{{sample:Trace.IncomingContext}}
 
 Note that we can't go into detail here as to how extract trace context information from a request/event, as that's
 dependent on the emitter of said request/event.
@@ -211,11 +211,11 @@ on tracing rates/qps, etc.
 
 For any traces to be sent to Google Cloud Trace, a span needs to be started.
 
-{{sample.Trace.Trace}}
+{{sample:Trace.Trace}}
 
 Or alternatively, using the `RunInSpan` methods.
 
-{{sample.Trace.RunInSpan}}
+{{sample:Trace.RunInSpan}}
 
 ## Troubleshooting Tracing
 
