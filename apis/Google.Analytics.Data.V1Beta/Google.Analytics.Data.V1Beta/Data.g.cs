@@ -110,67 +110,86 @@ namespace Google.Analytics.Data.V1Beta {
             "FAoMc3RhcnRfb2Zmc2V0GAIgASgFEhIKCmVuZF9vZmZzZXQYAyABKAUiTgoL",
             "R3JhbnVsYXJpdHkSGwoXR1JBTlVMQVJJVFlfVU5TUEVDSUZJRUQQABIJCgVE",
             "QUlMWRABEgoKBldFRUtMWRACEgsKB01PTlRITFkQAyIqChRDb2hvcnRSZXBv",
-            "cnRTZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIjQKEFJlc3BvbnNlTWV0",
-            "YURhdGESIAoYZGF0YV9sb3NzX2Zyb21fb3RoZXJfcm93GAMgASgIIh8KD0Rp",
-            "bWVuc2lvbkhlYWRlchIMCgRuYW1lGAEgASgJIlQKDE1ldHJpY0hlYWRlchIM",
-            "CgRuYW1lGAEgASgJEjYKBHR5cGUYAiABKA4yKC5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLk1ldHJpY1R5cGUidQoLUGl2b3RIZWFkZXISUwoXcGl2",
-            "b3RfZGltZW5zaW9uX2hlYWRlcnMYASADKAsyMi5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLlBpdm90RGltZW5zaW9uSGVhZGVyEhEKCXJvd19jb3Vu",
-            "dBgCIAEoBSJeChRQaXZvdERpbWVuc2lvbkhlYWRlchJGChBkaW1lbnNpb25f",
-            "dmFsdWVzGAEgAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5E",
-            "aW1lbnNpb25WYWx1ZSKPAQoDUm93EkYKEGRpbWVuc2lvbl92YWx1ZXMYASAD",
-            "KAsyLC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lvblZh",
-            "bHVlEkAKDW1ldHJpY192YWx1ZXMYAiADKAsyKS5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLk1ldHJpY1ZhbHVlIi4KDkRpbWVuc2lvblZhbHVlEg8K",
-            "BXZhbHVlGAEgASgJSABCCwoJb25lX3ZhbHVlIisKC01ldHJpY1ZhbHVlEg8K",
-            "BXZhbHVlGAQgASgJSABCCwoJb25lX3ZhbHVlIkoKDE51bWVyaWNWYWx1ZRIV",
-            "CgtpbnQ2NF92YWx1ZRgBIAEoA0gAEhYKDGRvdWJsZV92YWx1ZRgCIAEoAUgA",
-            "QgsKCW9uZV92YWx1ZSKTAwoNUHJvcGVydHlRdW90YRJBCg50b2tlbnNfcGVy",
-            "X2RheRgBIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUXVv",
-            "dGFTdGF0dXMSQgoPdG9rZW5zX3Blcl9ob3VyGAIgASgLMikuZ29vZ2xlLmFu",
-            "YWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJGChNjb25jdXJyZW50",
-            "X3JlcXVlc3RzGAMgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0",
-            "YS5RdW90YVN0YXR1cxJVCiJzZXJ2ZXJfZXJyb3JzX3Blcl9wcm9qZWN0X3Bl",
-            "cl9ob3VyGAQgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5R",
-            "dW90YVN0YXR1cxJcCilwb3RlbnRpYWxseV90aHJlc2hvbGRlZF9yZXF1ZXN0",
-            "c19wZXJfaG91chgFIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
-            "dGEuUXVvdGFTdGF0dXMiMgoLUXVvdGFTdGF0dXMSEAoIY29uc3VtZWQYASAB",
-            "KAUSEQoJcmVtYWluaW5nGAIgASgFIpYBChFEaW1lbnNpb25NZXRhZGF0YRIQ",
-            "CghhcGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0",
-            "aW9uGAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25hbWVzGAQgAygJEhkKEWN1",
-            "c3RvbV9kZWZpbml0aW9uGAUgASgIEhAKCGNhdGVnb3J5GAcgASgJIt8BCg5N",
-            "ZXRyaWNNZXRhZGF0YRIQCghhcGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIg",
-            "ASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25h",
-            "bWVzGAQgAygJEjYKBHR5cGUYBSABKA4yKC5nb29nbGUuYW5hbHl0aWNzLmRh",
-            "dGEudjFiZXRhLk1ldHJpY1R5cGUSEgoKZXhwcmVzc2lvbhgGIAEoCRIZChFj",
-            "dXN0b21fZGVmaW5pdGlvbhgHIAEoCBIQCghjYXRlZ29yeRgKIAEoCSLcAQoW",
-            "RGltZW5zaW9uQ29tcGF0aWJpbGl0eRJQChJkaW1lbnNpb25fbWV0YWRhdGEY",
-            "ASABKAsyLy5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLkRpbWVuc2lv",
-            "bk1ldGFkYXRhSACIAQESRwoNY29tcGF0aWJpbGl0eRgCIAEoDjIrLmdvb2ds",
-            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuQ29tcGF0aWJpbGl0eUgBiAEBQhUK",
-            "E19kaW1lbnNpb25fbWV0YWRhdGFCEAoOX2NvbXBhdGliaWxpdHki0AEKE01l",
-            "dHJpY0NvbXBhdGliaWxpdHkSSgoPbWV0cmljX21ldGFkYXRhGAEgASgLMiwu",
-            "Z29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5NZXRyaWNNZXRhZGF0YUgA",
-            "iAEBEkcKDWNvbXBhdGliaWxpdHkYAiABKA4yKy5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhLkNvbXBhdGliaWxpdHlIAYgBAUISChBfbWV0cmljX21l",
-            "dGFkYXRhQhAKDl9jb21wYXRpYmlsaXR5KmcKEU1ldHJpY0FnZ3JlZ2F0aW9u",
-            "EiIKHk1FVFJJQ19BR0dSRUdBVElPTl9VTlNQRUNJRklFRBAAEgkKBVRPVEFM",
-            "EAESCwoHTUlOSU1VTRAFEgsKB01BWElNVU0QBhIJCgVDT1VOVBAEKoECCgpN",
-            "ZXRyaWNUeXBlEhsKF01FVFJJQ19UWVBFX1VOU1BFQ0lGSUVEEAASEAoMVFlQ",
-            "RV9JTlRFR0VSEAESDgoKVFlQRV9GTE9BVBACEhAKDFRZUEVfU0VDT05EUxAE",
-            "EhUKEVRZUEVfTUlMTElTRUNPTkRTEAUSEAoMVFlQRV9NSU5VVEVTEAYSDgoK",
-            "VFlQRV9IT1VSUxAHEhEKDVRZUEVfU1RBTkRBUkQQCBIRCg1UWVBFX0NVUlJF",
-            "TkNZEAkSDQoJVFlQRV9GRUVUEAoSDgoKVFlQRV9NSUxFUxALEg8KC1RZUEVf",
-            "TUVURVJTEAwSEwoPVFlQRV9LSUxPTUVURVJTEA0qUAoNQ29tcGF0aWJpbGl0",
-            "eRIdChlDT01QQVRJQklMSVRZX1VOU1BFQ0lGSUVEEAASDgoKQ09NUEFUSUJM",
-            "RRABEhAKDElOQ09NUEFUSUJMRRACQnkKIGNvbS5nb29nbGUuYW5hbHl0aWNz",
-            "LmRhdGEudjFiZXRhQhFSZXBvcnRpbmdBcGlQcm90b1ABWkBnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2FuYWx5dGljcy9kYXRhL3Yx",
-            "YmV0YTtkYXRhYgZwcm90bzM="));
+            "cnRTZXR0aW5ncxISCgphY2N1bXVsYXRlGAEgASgIIogFChBSZXNwb25zZU1l",
+            "dGFEYXRhEiAKGGRhdGFfbG9zc19mcm9tX290aGVyX3JvdxgDIAEoCBJyChtz",
+            "Y2hlbWFfcmVzdHJpY3Rpb25fcmVzcG9uc2UYBCABKAsySC5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVz",
+            "dHJpY3Rpb25SZXNwb25zZUgAiAEBEhoKDWN1cnJlbmN5X2NvZGUYBSABKAlI",
+            "AYgBARIWCgl0aW1lX3pvbmUYBiABKAlIAogBARIZCgxlbXB0eV9yZWFzb24Y",
+            "ByABKAlIA4gBARq9AgoZU2NoZW1hUmVzdHJpY3Rpb25SZXNwb25zZRKEAQoa",
+            "YWN0aXZlX21ldHJpY19yZXN0cmljdGlvbnMYASADKAsyYC5nb29nbGUuYW5h",
+            "bHl0aWNzLmRhdGEudjFiZXRhLlJlc3BvbnNlTWV0YURhdGEuU2NoZW1hUmVz",
+            "dHJpY3Rpb25SZXNwb25zZS5BY3RpdmVNZXRyaWNSZXN0cmljdGlvbhqYAQoX",
+            "QWN0aXZlTWV0cmljUmVzdHJpY3Rpb24SGAoLbWV0cmljX25hbWUYASABKAlI",
+            "AIgBARJTChdyZXN0cmljdGVkX21ldHJpY190eXBlcxgCIAMoDjIyLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuUmVzdHJpY3RlZE1ldHJpY1R5cGVC",
+            "DgoMX21ldHJpY19uYW1lQh4KHF9zY2hlbWFfcmVzdHJpY3Rpb25fcmVzcG9u",
+            "c2VCEAoOX2N1cnJlbmN5X2NvZGVCDAoKX3RpbWVfem9uZUIPCg1fZW1wdHlf",
+            "cmVhc29uIh8KD0RpbWVuc2lvbkhlYWRlchIMCgRuYW1lGAEgASgJIlQKDE1l",
+            "dHJpY0hlYWRlchIMCgRuYW1lGAEgASgJEjYKBHR5cGUYAiABKA4yKC5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1R5cGUidQoLUGl2b3RI",
+            "ZWFkZXISUwoXcGl2b3RfZGltZW5zaW9uX2hlYWRlcnMYASADKAsyMi5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLlBpdm90RGltZW5zaW9uSGVhZGVy",
+            "EhEKCXJvd19jb3VudBgCIAEoBSJeChRQaXZvdERpbWVuc2lvbkhlYWRlchJG",
+            "ChBkaW1lbnNpb25fdmFsdWVzGAEgAygLMiwuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5EaW1lbnNpb25WYWx1ZSKPAQoDUm93EkYKEGRpbWVuc2lv",
+            "bl92YWx1ZXMYASADKAsyLC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "LkRpbWVuc2lvblZhbHVlEkAKDW1ldHJpY192YWx1ZXMYAiADKAsyKS5nb29n",
+            "bGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1ZhbHVlIi4KDkRpbWVu",
+            "c2lvblZhbHVlEg8KBXZhbHVlGAEgASgJSABCCwoJb25lX3ZhbHVlIisKC01l",
+            "dHJpY1ZhbHVlEg8KBXZhbHVlGAQgASgJSABCCwoJb25lX3ZhbHVlIkoKDE51",
+            "bWVyaWNWYWx1ZRIVCgtpbnQ2NF92YWx1ZRgBIAEoA0gAEhYKDGRvdWJsZV92",
+            "YWx1ZRgCIAEoAUgAQgsKCW9uZV92YWx1ZSKTAwoNUHJvcGVydHlRdW90YRJB",
+            "Cg50b2tlbnNfcGVyX2RheRgBIAEoCzIpLmdvb2dsZS5hbmFseXRpY3MuZGF0",
+            "YS52MWJldGEuUXVvdGFTdGF0dXMSQgoPdG9rZW5zX3Blcl9ob3VyGAIgASgL",
+            "MikuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJG",
+            "ChNjb25jdXJyZW50X3JlcXVlc3RzGAMgASgLMikuZ29vZ2xlLmFuYWx5dGlj",
+            "cy5kYXRhLnYxYmV0YS5RdW90YVN0YXR1cxJVCiJzZXJ2ZXJfZXJyb3JzX3Bl",
+            "cl9wcm9qZWN0X3Blcl9ob3VyGAQgASgLMikuZ29vZ2xlLmFuYWx5dGljcy5k",
+            "YXRhLnYxYmV0YS5RdW90YVN0YXR1cxJcCilwb3RlbnRpYWxseV90aHJlc2hv",
+            "bGRlZF9yZXF1ZXN0c19wZXJfaG91chgFIAEoCzIpLmdvb2dsZS5hbmFseXRp",
+            "Y3MuZGF0YS52MWJldGEuUXVvdGFTdGF0dXMiMgoLUXVvdGFTdGF0dXMSEAoI",
+            "Y29uc3VtZWQYASABKAUSEQoJcmVtYWluaW5nGAIgASgFIpYBChFEaW1lbnNp",
+            "b25NZXRhZGF0YRIQCghhcGlfbmFtZRgBIAEoCRIPCgd1aV9uYW1lGAIgASgJ",
+            "EhMKC2Rlc2NyaXB0aW9uGAMgASgJEhwKFGRlcHJlY2F0ZWRfYXBpX25hbWVz",
+            "GAQgAygJEhkKEWN1c3RvbV9kZWZpbml0aW9uGAUgASgIEhAKCGNhdGVnb3J5",
+            "GAcgASgJIpIDCg5NZXRyaWNNZXRhZGF0YRIQCghhcGlfbmFtZRgBIAEoCRIP",
+            "Cgd1aV9uYW1lGAIgASgJEhMKC2Rlc2NyaXB0aW9uGAMgASgJEhwKFGRlcHJl",
+            "Y2F0ZWRfYXBpX25hbWVzGAQgAygJEjYKBHR5cGUYBSABKA4yKC5nb29nbGUu",
+            "YW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJpY1R5cGUSEgoKZXhwcmVzc2lv",
+            "bhgGIAEoCRIZChFjdXN0b21fZGVmaW5pdGlvbhgHIAEoCBJTCg9ibG9ja2Vk",
+            "X3JlYXNvbnMYCCADKA4yOi5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRh",
+            "Lk1ldHJpY01ldGFkYXRhLkJsb2NrZWRSZWFzb24SEAoIY2F0ZWdvcnkYCiAB",
+            "KAkiXAoNQmxvY2tlZFJlYXNvbhIeChpCTE9DS0VEX1JFQVNPTl9VTlNQRUNJ",
+            "RklFRBAAEhYKEk5PX1JFVkVOVUVfTUVUUklDUxABEhMKD05PX0NPU1RfTUVU",
+            "UklDUxACItwBChZEaW1lbnNpb25Db21wYXRpYmlsaXR5ElAKEmRpbWVuc2lv",
+            "bl9tZXRhZGF0YRgBIAEoCzIvLmdvb2dsZS5hbmFseXRpY3MuZGF0YS52MWJl",
+            "dGEuRGltZW5zaW9uTWV0YWRhdGFIAIgBARJHCg1jb21wYXRpYmlsaXR5GAIg",
+            "ASgOMisuZ29vZ2xlLmFuYWx5dGljcy5kYXRhLnYxYmV0YS5Db21wYXRpYmls",
+            "aXR5SAGIAQFCFQoTX2RpbWVuc2lvbl9tZXRhZGF0YUIQCg5fY29tcGF0aWJp",
+            "bGl0eSLQAQoTTWV0cmljQ29tcGF0aWJpbGl0eRJKCg9tZXRyaWNfbWV0YWRh",
+            "dGEYASABKAsyLC5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhLk1ldHJp",
+            "Y01ldGFkYXRhSACIAQESRwoNY29tcGF0aWJpbGl0eRgCIAEoDjIrLmdvb2ds",
+            "ZS5hbmFseXRpY3MuZGF0YS52MWJldGEuQ29tcGF0aWJpbGl0eUgBiAEBQhIK",
+            "EF9tZXRyaWNfbWV0YWRhdGFCEAoOX2NvbXBhdGliaWxpdHkqZwoRTWV0cmlj",
+            "QWdncmVnYXRpb24SIgoeTUVUUklDX0FHR1JFR0FUSU9OX1VOU1BFQ0lGSUVE",
+            "EAASCQoFVE9UQUwQARILCgdNSU5JTVVNEAUSCwoHTUFYSU1VTRAGEgkKBUNP",
+            "VU5UEAQqgQIKCk1ldHJpY1R5cGUSGwoXTUVUUklDX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIQCgxUWVBFX0lOVEVHRVIQARIOCgpUWVBFX0ZMT0FUEAISEAoMVFlQ",
+            "RV9TRUNPTkRTEAQSFQoRVFlQRV9NSUxMSVNFQ09ORFMQBRIQCgxUWVBFX01J",
+            "TlVURVMQBhIOCgpUWVBFX0hPVVJTEAcSEQoNVFlQRV9TVEFOREFSRBAIEhEK",
+            "DVRZUEVfQ1VSUkVOQ1kQCRINCglUWVBFX0ZFRVQQChIOCgpUWVBFX01JTEVT",
+            "EAsSDwoLVFlQRV9NRVRFUlMQDBITCg9UWVBFX0tJTE9NRVRFUlMQDSpfChRS",
+            "ZXN0cmljdGVkTWV0cmljVHlwZRImCiJSRVNUUklDVEVEX01FVFJJQ19UWVBF",
+            "X1VOU1BFQ0lGSUVEEAASDQoJQ09TVF9EQVRBEAESEAoMUkVWRU5VRV9EQVRB",
+            "EAIqUAoNQ29tcGF0aWJpbGl0eRIdChlDT01QQVRJQklMSVRZX1VOU1BFQ0lG",
+            "SUVEEAASDgoKQ09NUEFUSUJMRRABEhAKDElOQ09NUEFUSUJMRRACQnkKIGNv",
+            "bS5nb29nbGUuYW5hbHl0aWNzLmRhdGEudjFiZXRhQhFSZXBvcnRpbmdBcGlQ",
+            "cm90b1ABWkBnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2FuYWx5dGljcy9kYXRhL3YxYmV0YTtkYXRhYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), typeof(global::Google.Analytics.Data.V1Beta.Compatibility), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Analytics.Data.V1Beta.MetricAggregation), typeof(global::Google.Analytics.Data.V1Beta.MetricType), typeof(global::Google.Analytics.Data.V1Beta.RestrictedMetricType), typeof(global::Google.Analytics.Data.V1Beta.Compatibility), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DateRange), global::Google.Analytics.Data.V1Beta.DateRange.Parser, new[]{ "StartDate", "EndDate", "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MinuteRange), global::Google.Analytics.Data.V1Beta.MinuteRange.Parser, new[]{ "StartMinutesAgo", "EndMinutesAgo", "Name" }, new[]{ "StartMinutesAgo", "EndMinutesAgo" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Dimension), global::Google.Analytics.Data.V1Beta.Dimension.Parser, new[]{ "Name", "DimensionExpression" }, null, null, null, null),
@@ -191,7 +210,7 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.Cohort), global::Google.Analytics.Data.V1Beta.Cohort.Parser, new[]{ "Name", "Dimension", "DateRange" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortsRange), global::Google.Analytics.Data.V1Beta.CohortsRange.Parser, new[]{ "Granularity", "StartOffset", "EndOffset" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.CohortsRange.Types.Granularity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.CohortReportSettings), global::Google.Analytics.Data.V1Beta.CohortReportSettings.Parser, new[]{ "Accumulate" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Parser, new[]{ "DataLossFromOtherRow", "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason" }, new[]{ "SchemaRestrictionResponse", "CurrencyCode", "TimeZone", "EmptyReason" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Parser, new[]{ "ActiveMetricRestrictions" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction), global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser, new[]{ "MetricName", "RestrictedMetricTypes" }, new[]{ "MetricName" }, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionHeader), global::Google.Analytics.Data.V1Beta.DimensionHeader.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricHeader), global::Google.Analytics.Data.V1Beta.MetricHeader.Parser, new[]{ "Name", "Type" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PivotHeader), global::Google.Analytics.Data.V1Beta.PivotHeader.Parser, new[]{ "PivotDimensionHeaders", "RowCount" }, null, null, null, null),
@@ -203,7 +222,7 @@ namespace Google.Analytics.Data.V1Beta {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.PropertyQuota), global::Google.Analytics.Data.V1Beta.PropertyQuota.Parser, new[]{ "TokensPerDay", "TokensPerHour", "ConcurrentRequests", "ServerErrorsPerProjectPerHour", "PotentiallyThresholdedRequestsPerHour" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.QuotaStatus), global::Google.Analytics.Data.V1Beta.QuotaStatus.Parser, new[]{ "Consumed", "Remaining" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionMetadata), global::Google.Analytics.Data.V1Beta.DimensionMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "CustomDefinition", "Category" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata), global::Google.Analytics.Data.V1Beta.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition", "Category" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata), global::Google.Analytics.Data.V1Beta.MetricMetadata.Parser, new[]{ "ApiName", "UiName", "Description", "DeprecatedApiNames", "Type", "Expression", "CustomDefinition", "BlockedReasons", "Category" }, null, new[]{ typeof(global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.DimensionCompatibility), global::Google.Analytics.Data.V1Beta.DimensionCompatibility.Parser, new[]{ "DimensionMetadata", "Compatibility" }, new[]{ "DimensionMetadata", "Compatibility" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Analytics.Data.V1Beta.MetricCompatibility), global::Google.Analytics.Data.V1Beta.MetricCompatibility.Parser, new[]{ "MetricMetadata", "Compatibility" }, new[]{ "MetricMetadata", "Compatibility" }, null, null, null)
           }));
@@ -294,6 +313,25 @@ namespace Google.Analytics.Data.V1Beta {
     /// A length in kilometers; a special floating point type.
     /// </summary>
     [pbr::OriginalName("TYPE_KILOMETERS")] TypeKilometers = 13,
+  }
+
+  /// <summary>
+  /// Categories of data that you may be restricted from viewing on certain GA4
+  /// properties.
+  /// </summary>
+  public enum RestrictedMetricType {
+    /// <summary>
+    /// Unspecified type.
+    /// </summary>
+    [pbr::OriginalName("RESTRICTED_METRIC_TYPE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Cost metrics such as `adCost`.
+    /// </summary>
+    [pbr::OriginalName("COST_DATA")] CostData = 1,
+    /// <summary>
+    /// Revenue metrics such as `purchaseRevenue`.
+    /// </summary>
+    [pbr::OriginalName("REVENUE_DATA")] RevenueData = 2,
   }
 
   /// <summary>
@@ -7253,6 +7291,10 @@ namespace Google.Analytics.Data.V1Beta {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ResponseMetaData(ResponseMetaData other) : this() {
       dataLossFromOtherRow_ = other.dataLossFromOtherRow_;
+      schemaRestrictionResponse_ = other.schemaRestrictionResponse_ != null ? other.schemaRestrictionResponse_.Clone() : null;
+      currencyCode_ = other.currencyCode_;
+      timeZone_ = other.timeZone_;
+      emptyReason_ = other.emptyReason_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -7278,6 +7320,116 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "schema_restriction_response" field.</summary>
+    public const int SchemaRestrictionResponseFieldNumber = 4;
+    private global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse schemaRestrictionResponse_;
+    /// <summary>
+    /// Describes the schema restrictions actively enforced in creating this
+    /// report. To learn more, see [Access and data-restriction
+    /// management](https://support.google.com/analytics/answer/10851388).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse SchemaRestrictionResponse {
+      get { return schemaRestrictionResponse_; }
+      set {
+        schemaRestrictionResponse_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "currency_code" field.</summary>
+    public const int CurrencyCodeFieldNumber = 5;
+    private string currencyCode_;
+    /// <summary>
+    /// The currency code used in this report. Intended to be used in formatting
+    /// currency metrics like `purchaseRevenue` for visualization. If currency_code
+    /// was specified in the request, this response parameter will echo the request
+    /// parameter; otherwise, this response parameter is the property's current
+    /// currency_code.
+    ///
+    /// Currency codes are string encodings of currency types from the ISO 4217
+    /// standard (https://en.wikipedia.org/wiki/ISO_4217); for example "USD",
+    /// "EUR", "JPY". To learn more, see
+    /// https://support.google.com/analytics/answer/9796179.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CurrencyCode {
+      get { return currencyCode_ ?? ""; }
+      set {
+        currencyCode_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "currency_code" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasCurrencyCode {
+      get { return currencyCode_ != null; }
+    }
+    /// <summary>Clears the value of the "currency_code" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearCurrencyCode() {
+      currencyCode_ = null;
+    }
+
+    /// <summary>Field number for the "time_zone" field.</summary>
+    public const int TimeZoneFieldNumber = 6;
+    private string timeZone_;
+    /// <summary>
+    /// The property's current timezone. Intended to be used to interpret
+    /// time-based dimensions like `hour` and `minute`. Formatted as strings from
+    /// the IANA Time Zone database (https://www.iana.org/time-zones); for example
+    /// "America/New_York" or "Asia/Tokyo".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string TimeZone {
+      get { return timeZone_ ?? ""; }
+      set {
+        timeZone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "time_zone" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasTimeZone {
+      get { return timeZone_ != null; }
+    }
+    /// <summary>Clears the value of the "time_zone" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearTimeZone() {
+      timeZone_ = null;
+    }
+
+    /// <summary>Field number for the "empty_reason" field.</summary>
+    public const int EmptyReasonFieldNumber = 7;
+    private string emptyReason_;
+    /// <summary>
+    /// If empty reason is specified, the report is empty for this reason.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string EmptyReason {
+      get { return emptyReason_ ?? ""; }
+      set {
+        emptyReason_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+    /// <summary>Gets whether the "empty_reason" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasEmptyReason {
+      get { return emptyReason_ != null; }
+    }
+    /// <summary>Clears the value of the "empty_reason" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearEmptyReason() {
+      emptyReason_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -7294,6 +7446,10 @@ namespace Google.Analytics.Data.V1Beta {
         return true;
       }
       if (DataLossFromOtherRow != other.DataLossFromOtherRow) return false;
+      if (!object.Equals(SchemaRestrictionResponse, other.SchemaRestrictionResponse)) return false;
+      if (CurrencyCode != other.CurrencyCode) return false;
+      if (TimeZone != other.TimeZone) return false;
+      if (EmptyReason != other.EmptyReason) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -7302,6 +7458,10 @@ namespace Google.Analytics.Data.V1Beta {
     public override int GetHashCode() {
       int hash = 1;
       if (DataLossFromOtherRow != false) hash ^= DataLossFromOtherRow.GetHashCode();
+      if (schemaRestrictionResponse_ != null) hash ^= SchemaRestrictionResponse.GetHashCode();
+      if (HasCurrencyCode) hash ^= CurrencyCode.GetHashCode();
+      if (HasTimeZone) hash ^= TimeZone.GetHashCode();
+      if (HasEmptyReason) hash ^= EmptyReason.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -7324,6 +7484,22 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(24);
         output.WriteBool(DataLossFromOtherRow);
       }
+      if (schemaRestrictionResponse_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(SchemaRestrictionResponse);
+      }
+      if (HasCurrencyCode) {
+        output.WriteRawTag(42);
+        output.WriteString(CurrencyCode);
+      }
+      if (HasTimeZone) {
+        output.WriteRawTag(50);
+        output.WriteString(TimeZone);
+      }
+      if (HasEmptyReason) {
+        output.WriteRawTag(58);
+        output.WriteString(EmptyReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -7338,6 +7514,22 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(24);
         output.WriteBool(DataLossFromOtherRow);
       }
+      if (schemaRestrictionResponse_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(SchemaRestrictionResponse);
+      }
+      if (HasCurrencyCode) {
+        output.WriteRawTag(42);
+        output.WriteString(CurrencyCode);
+      }
+      if (HasTimeZone) {
+        output.WriteRawTag(50);
+        output.WriteString(TimeZone);
+      }
+      if (HasEmptyReason) {
+        output.WriteRawTag(58);
+        output.WriteString(EmptyReason);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -7350,6 +7542,18 @@ namespace Google.Analytics.Data.V1Beta {
       int size = 0;
       if (DataLossFromOtherRow != false) {
         size += 1 + 1;
+      }
+      if (schemaRestrictionResponse_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(SchemaRestrictionResponse);
+      }
+      if (HasCurrencyCode) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CurrencyCode);
+      }
+      if (HasTimeZone) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(TimeZone);
+      }
+      if (HasEmptyReason) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(EmptyReason);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -7365,6 +7569,21 @@ namespace Google.Analytics.Data.V1Beta {
       }
       if (other.DataLossFromOtherRow != false) {
         DataLossFromOtherRow = other.DataLossFromOtherRow;
+      }
+      if (other.schemaRestrictionResponse_ != null) {
+        if (schemaRestrictionResponse_ == null) {
+          SchemaRestrictionResponse = new global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse();
+        }
+        SchemaRestrictionResponse.MergeFrom(other.SchemaRestrictionResponse);
+      }
+      if (other.HasCurrencyCode) {
+        CurrencyCode = other.CurrencyCode;
+      }
+      if (other.HasTimeZone) {
+        TimeZone = other.TimeZone;
+      }
+      if (other.HasEmptyReason) {
+        EmptyReason = other.EmptyReason;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -7383,6 +7602,25 @@ namespace Google.Analytics.Data.V1Beta {
             break;
           case 24: {
             DataLossFromOtherRow = input.ReadBool();
+            break;
+          }
+          case 34: {
+            if (schemaRestrictionResponse_ == null) {
+              SchemaRestrictionResponse = new global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse();
+            }
+            input.ReadMessage(SchemaRestrictionResponse);
+            break;
+          }
+          case 42: {
+            CurrencyCode = input.ReadString();
+            break;
+          }
+          case 50: {
+            TimeZone = input.ReadString();
+            break;
+          }
+          case 58: {
+            EmptyReason = input.ReadString();
             break;
           }
         }
@@ -7404,10 +7642,472 @@ namespace Google.Analytics.Data.V1Beta {
             DataLossFromOtherRow = input.ReadBool();
             break;
           }
+          case 34: {
+            if (schemaRestrictionResponse_ == null) {
+              SchemaRestrictionResponse = new global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse();
+            }
+            input.ReadMessage(SchemaRestrictionResponse);
+            break;
+          }
+          case 42: {
+            CurrencyCode = input.ReadString();
+            break;
+          }
+          case 50: {
+            TimeZone = input.ReadString();
+            break;
+          }
+          case 58: {
+            EmptyReason = input.ReadString();
+            break;
+          }
         }
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the ResponseMetaData message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// The schema restrictions actively enforced in creating this report. To learn
+      /// more, see [Access and data-restriction
+      /// management](https://support.google.com/analytics/answer/10851388).
+      /// </summary>
+      public sealed partial class SchemaRestrictionResponse : pb::IMessage<SchemaRestrictionResponse>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SchemaRestrictionResponse> _parser = new pb::MessageParser<SchemaRestrictionResponse>(() => new SchemaRestrictionResponse());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SchemaRestrictionResponse> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Analytics.Data.V1Beta.ResponseMetaData.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRestrictionResponse() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRestrictionResponse(SchemaRestrictionResponse other) : this() {
+          activeMetricRestrictions_ = other.activeMetricRestrictions_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SchemaRestrictionResponse Clone() {
+          return new SchemaRestrictionResponse(this);
+        }
+
+        /// <summary>Field number for the "active_metric_restrictions" field.</summary>
+        public const int ActiveMetricRestrictionsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction> _repeated_activeMetricRestrictions_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction.Parser);
+        private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction> activeMetricRestrictions_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction>();
+        /// <summary>
+        /// All restrictions actively enforced in creating the report. For example,
+        /// `purchaseRevenue` always has the restriction type `REVENUE_DATA`.
+        /// However, this active response restriction is only populated if the user's
+        /// custom role disallows access to `REVENUE_DATA`.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Types.ActiveMetricRestriction> ActiveMetricRestrictions {
+          get { return activeMetricRestrictions_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SchemaRestrictionResponse);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SchemaRestrictionResponse other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!activeMetricRestrictions_.Equals(other.activeMetricRestrictions_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= activeMetricRestrictions_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          activeMetricRestrictions_.WriteTo(output, _repeated_activeMetricRestrictions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          activeMetricRestrictions_.WriteTo(ref output, _repeated_activeMetricRestrictions_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += activeMetricRestrictions_.CalculateSize(_repeated_activeMetricRestrictions_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SchemaRestrictionResponse other) {
+          if (other == null) {
+            return;
+          }
+          activeMetricRestrictions_.Add(other.activeMetricRestrictions_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                activeMetricRestrictions_.AddEntriesFrom(input, _repeated_activeMetricRestrictions_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                activeMetricRestrictions_.AddEntriesFrom(ref input, _repeated_activeMetricRestrictions_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the SchemaRestrictionResponse message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// A metric actively restricted in creating the report.
+          /// </summary>
+          public sealed partial class ActiveMetricRestriction : pb::IMessage<ActiveMetricRestriction>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<ActiveMetricRestriction> _parser = new pb::MessageParser<ActiveMetricRestriction>(() => new ActiveMetricRestriction());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<ActiveMetricRestriction> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Analytics.Data.V1Beta.ResponseMetaData.Types.SchemaRestrictionResponse.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ActiveMetricRestriction() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ActiveMetricRestriction(ActiveMetricRestriction other) : this() {
+              metricName_ = other.metricName_;
+              restrictedMetricTypes_ = other.restrictedMetricTypes_.Clone();
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public ActiveMetricRestriction Clone() {
+              return new ActiveMetricRestriction(this);
+            }
+
+            /// <summary>Field number for the "metric_name" field.</summary>
+            public const int MetricNameFieldNumber = 1;
+            private string metricName_;
+            /// <summary>
+            /// The name of the restricted metric.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public string MetricName {
+              get { return metricName_ ?? ""; }
+              set {
+                metricName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+              }
+            }
+            /// <summary>Gets whether the "metric_name" field is set</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool HasMetricName {
+              get { return metricName_ != null; }
+            }
+            /// <summary>Clears the value of the "metric_name" field</summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void ClearMetricName() {
+              metricName_ = null;
+            }
+
+            /// <summary>Field number for the "restricted_metric_types" field.</summary>
+            public const int RestrictedMetricTypesFieldNumber = 2;
+            private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.RestrictedMetricType> _repeated_restrictedMetricTypes_codec
+                = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Analytics.Data.V1Beta.RestrictedMetricType) x);
+            private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.RestrictedMetricType> restrictedMetricTypes_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.RestrictedMetricType>();
+            /// <summary>
+            /// The reason for this metric's restriction.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.RestrictedMetricType> RestrictedMetricTypes {
+              get { return restrictedMetricTypes_; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as ActiveMetricRestriction);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(ActiveMetricRestriction other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (MetricName != other.MetricName) return false;
+              if(!restrictedMetricTypes_.Equals(other.restrictedMetricTypes_)) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (HasMetricName) hash ^= MetricName.GetHashCode();
+              hash ^= restrictedMetricTypes_.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (HasMetricName) {
+                output.WriteRawTag(10);
+                output.WriteString(MetricName);
+              }
+              restrictedMetricTypes_.WriteTo(output, _repeated_restrictedMetricTypes_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (HasMetricName) {
+                output.WriteRawTag(10);
+                output.WriteString(MetricName);
+              }
+              restrictedMetricTypes_.WriteTo(ref output, _repeated_restrictedMetricTypes_codec);
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (HasMetricName) {
+                size += 1 + pb::CodedOutputStream.ComputeStringSize(MetricName);
+              }
+              size += restrictedMetricTypes_.CalculateSize(_repeated_restrictedMetricTypes_codec);
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(ActiveMetricRestriction other) {
+              if (other == null) {
+                return;
+              }
+              if (other.HasMetricName) {
+                MetricName = other.MetricName;
+              }
+              restrictedMetricTypes_.Add(other.restrictedMetricTypes_);
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 10: {
+                    MetricName = input.ReadString();
+                    break;
+                  }
+                  case 18:
+                  case 16: {
+                    restrictedMetricTypes_.AddEntriesFrom(input, _repeated_restrictedMetricTypes_codec);
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 10: {
+                    MetricName = input.ReadString();
+                    break;
+                  }
+                  case 18:
+                  case 16: {
+                    restrictedMetricTypes_.AddEntriesFrom(ref input, _repeated_restrictedMetricTypes_codec);
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+    }
+    #endregion
 
   }
 
@@ -10308,6 +11008,7 @@ namespace Google.Analytics.Data.V1Beta {
       type_ = other.type_;
       expression_ = other.expression_;
       customDefinition_ = other.customDefinition_;
+      blockedReasons_ = other.blockedReasons_.Clone();
       category_ = other.category_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -10429,6 +11130,27 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
 
+    /// <summary>Field number for the "blocked_reasons" field.</summary>
+    public const int BlockedReasonsFieldNumber = 8;
+    private static readonly pb::FieldCodec<global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason> _repeated_blockedReasons_codec
+        = pb::FieldCodec.ForEnum(66, x => (int) x, x => (global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason) x);
+    private readonly pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason> blockedReasons_ = new pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason>();
+    /// <summary>
+    /// If reasons are specified, your access is blocked to this metric for this
+    /// property. API requests from you to this property for this metric will
+    /// succeed; however, the report will contain only zeros for this metric. API
+    /// requests with metric filters on blocked metrics will fail. If reasons are
+    /// empty, you have access to this metric.
+    ///
+    /// To learn more, see [Access and data-restriction
+    /// management](https://support.google.com/analytics/answer/10851388).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Analytics.Data.V1Beta.MetricMetadata.Types.BlockedReason> BlockedReasons {
+      get { return blockedReasons_; }
+    }
+
     /// <summary>Field number for the "category" field.</summary>
     public const int CategoryFieldNumber = 10;
     private string category_ = "";
@@ -10467,6 +11189,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (Type != other.Type) return false;
       if (Expression != other.Expression) return false;
       if (CustomDefinition != other.CustomDefinition) return false;
+      if(!blockedReasons_.Equals(other.blockedReasons_)) return false;
       if (Category != other.Category) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -10482,6 +11205,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (Type != global::Google.Analytics.Data.V1Beta.MetricType.Unspecified) hash ^= Type.GetHashCode();
       if (Expression.Length != 0) hash ^= Expression.GetHashCode();
       if (CustomDefinition != false) hash ^= CustomDefinition.GetHashCode();
+      hash ^= blockedReasons_.GetHashCode();
       if (Category.Length != 0) hash ^= Category.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -10526,6 +11250,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(56);
         output.WriteBool(CustomDefinition);
       }
+      blockedReasons_.WriteTo(output, _repeated_blockedReasons_codec);
       if (Category.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(Category);
@@ -10565,6 +11290,7 @@ namespace Google.Analytics.Data.V1Beta {
         output.WriteRawTag(56);
         output.WriteBool(CustomDefinition);
       }
+      blockedReasons_.WriteTo(ref output, _repeated_blockedReasons_codec);
       if (Category.Length != 0) {
         output.WriteRawTag(82);
         output.WriteString(Category);
@@ -10598,6 +11324,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (CustomDefinition != false) {
         size += 1 + 1;
       }
+      size += blockedReasons_.CalculateSize(_repeated_blockedReasons_codec);
       if (Category.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Category);
       }
@@ -10632,6 +11359,7 @@ namespace Google.Analytics.Data.V1Beta {
       if (other.CustomDefinition != false) {
         CustomDefinition = other.CustomDefinition;
       }
+      blockedReasons_.Add(other.blockedReasons_);
       if (other.Category.Length != 0) {
         Category = other.Category;
       }
@@ -10676,6 +11404,11 @@ namespace Google.Analytics.Data.V1Beta {
           }
           case 56: {
             CustomDefinition = input.ReadBool();
+            break;
+          }
+          case 66:
+          case 64: {
+            blockedReasons_.AddEntriesFrom(input, _repeated_blockedReasons_codec);
             break;
           }
           case 82: {
@@ -10725,6 +11458,11 @@ namespace Google.Analytics.Data.V1Beta {
             CustomDefinition = input.ReadBool();
             break;
           }
+          case 66:
+          case 64: {
+            blockedReasons_.AddEntriesFrom(ref input, _repeated_blockedReasons_codec);
+            break;
+          }
           case 82: {
             Category = input.ReadString();
             break;
@@ -10733,6 +11471,34 @@ namespace Google.Analytics.Data.V1Beta {
       }
     }
     #endif
+
+    #region Nested types
+    /// <summary>Container for nested types declared in the MetricMetadata message type.</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static partial class Types {
+      /// <summary>
+      /// Justifications for why this metric is blocked.
+      /// </summary>
+      public enum BlockedReason {
+        /// <summary>
+        /// Will never be specified in API response.
+        /// </summary>
+        [pbr::OriginalName("BLOCKED_REASON_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// If present, your access is blocked to revenue related metrics for this
+        /// property, and this metric is revenue related.
+        /// </summary>
+        [pbr::OriginalName("NO_REVENUE_METRICS")] NoRevenueMetrics = 1,
+        /// <summary>
+        /// If present, your access is blocked to cost related metrics for this
+        /// property, and this metric is cost related.
+        /// </summary>
+        [pbr::OriginalName("NO_COST_METRICS")] NoCostMetrics = 2,
+      }
+
+    }
+    #endregion
 
   }
 
