@@ -1,5 +1,9 @@
 # Version history
 
+# Version 4.3.0, released 2021-11-01
+
+No API surface changes; just releasing a stable version.
+
 # Version 4.3.0-beta08, released 2021-10-25
 
 Version 4.3.0-beta07 was not released because of CI errors.
