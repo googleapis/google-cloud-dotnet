@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -87,7 +88,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -134,7 +135,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual BigtableServiceApiClient.SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
