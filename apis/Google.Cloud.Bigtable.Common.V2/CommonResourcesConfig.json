@@ -1,7 +1,7 @@
 {
   "common_resources": [
     {
-      "type": "bigtable.googleapis.com/Table",
+      "type": "bigtableadmin.googleapis.com/Table",
       "csharp_package_name": "Google.Cloud.Bigtable.Common.V2",
       "csharp_namespace": "Google.Cloud.Bigtable.Common.V2",
       "csharp_class_name":  "TableName"
