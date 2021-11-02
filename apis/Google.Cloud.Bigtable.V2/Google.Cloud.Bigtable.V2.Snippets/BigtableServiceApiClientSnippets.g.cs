@@ -17,7 +17,6 @@
 namespace Google.Cloud.Bigtable.V2.Snippets
 {
     using Google.Api.Gax.Grpc;
-    using Google.Cloud.Bigtable.Common.V2;
     using Google.Protobuf;
     using System.Collections.Generic;
     using System.Threading.Tasks;
