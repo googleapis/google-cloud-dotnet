@@ -17,7 +17,6 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
-using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using proto = Google.Protobuf;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
@@ -360,7 +359,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual ReadRowsStream ReadRows(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ReadRowsStream ReadRows(TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
             ReadRows(new ReadRowsRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -409,7 +408,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual ReadRowsStream ReadRows(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ReadRowsStream ReadRows(TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadRows(new ReadRowsRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -467,7 +466,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual SampleRowKeysStream SampleRowKeys(TableName tableName, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -514,7 +513,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual SampleRowKeysStream SampleRowKeys(gcbcv::TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual SampleRowKeysStream SampleRowKeys(TableName tableName, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             SampleRowKeys(new SampleRowKeysRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -652,7 +651,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual MutateRowResponse MutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual MutateRowResponse MutateRow(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
             MutateRow(new MutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -682,7 +681,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<MutateRowResponse> MutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, gaxgrpc::CallSettings callSettings = null) =>
             MutateRowAsync(new MutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -712,7 +711,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<MutateRowResponse> MutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, st::CancellationToken cancellationToken) =>
             MutateRowAsync(tableName, rowKey, mutations, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -834,7 +833,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual MutateRowResponse MutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual MutateRowResponse MutateRow(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRow(new MutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -869,7 +868,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<MutateRowResponse> MutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRowAsync(new MutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -904,7 +903,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<MutateRowResponse> MutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<MutateRowResponse> MutateRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<Mutation> mutations, string appProfileId, st::CancellationToken cancellationToken) =>
             MutateRowAsync(tableName, rowKey, mutations, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -969,7 +968,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual MutateRowsStream MutateRows(gcbcv::TableName tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual MutateRowsStream MutateRows(TableName tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, gaxgrpc::CallSettings callSettings = null) =>
             MutateRows(new MutateRowsRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1032,7 +1031,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The server stream.</returns>
-        public virtual MutateRowsStream MutateRows(gcbcv::TableName tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual MutateRowsStream MutateRows(TableName tableName, scg::IEnumerable<MutateRowsRequest.Types.Entry> entries, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             MutateRows(new MutateRowsRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1241,7 +1240,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CheckAndMutateRowResponse CheckAndMutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual CheckAndMutateRowResponse CheckAndMutateRow(TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRow(new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1291,7 +1290,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRowAsync(new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1341,7 +1340,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, st::CancellationToken cancellationToken) =>
             CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1533,7 +1532,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CheckAndMutateRowResponse CheckAndMutateRow(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual CheckAndMutateRowResponse CheckAndMutateRow(TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRow(new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1588,7 +1587,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             CheckAndMutateRowAsync(new CheckAndMutateRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1643,7 +1642,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<CheckAndMutateRowResponse> CheckAndMutateRowAsync(TableName tableName, proto::ByteString rowKey, RowFilter predicateFilter, scg::IEnumerable<Mutation> trueMutations, scg::IEnumerable<Mutation> falseMutations, string appProfileId, st::CancellationToken cancellationToken) =>
             CheckAndMutateRowAsync(tableName, rowKey, predicateFilter, trueMutations, falseMutations, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1802,7 +1801,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRow(new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1836,7 +1835,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRowAsync(new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -1870,7 +1869,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, st::CancellationToken cancellationToken) =>
             ReadModifyWriteRowAsync(tableName, rowKey, rules, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2008,7 +2007,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual ReadModifyWriteRowResponse ReadModifyWriteRow(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRow(new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -2047,7 +2046,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, gaxgrpc::CallSettings callSettings = null) =>
             ReadModifyWriteRowAsync(new ReadModifyWriteRowRequest
             {
                 TableNameAsTableName = gax::GaxPreconditions.CheckNotNull(tableName, nameof(tableName)),
@@ -2086,7 +2085,7 @@ namespace Google.Cloud.Bigtable.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(gcbcv::TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<ReadModifyWriteRowResponse> ReadModifyWriteRowAsync(TableName tableName, proto::ByteString rowKey, scg::IEnumerable<ReadModifyWriteRule> rules, string appProfileId, st::CancellationToken cancellationToken) =>
             ReadModifyWriteRowAsync(tableName, rowKey, rules, appProfileId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
