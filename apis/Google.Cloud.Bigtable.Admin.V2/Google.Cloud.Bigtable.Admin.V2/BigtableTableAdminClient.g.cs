@@ -17,7 +17,6 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
-using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -1341,7 +1340,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Table GetTable(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Table GetTable(TableName name, gaxgrpc::CallSettings callSettings = null) =>
             GetTable(new GetTableRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1357,7 +1356,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Table> GetTableAsync(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Table> GetTableAsync(TableName name, gaxgrpc::CallSettings callSettings = null) =>
             GetTableAsync(new GetTableRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1373,7 +1372,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Table> GetTableAsync(gcbcv::TableName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Table> GetTableAsync(TableName name, st::CancellationToken cancellationToken) =>
             GetTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1458,7 +1457,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual void DeleteTable(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual void DeleteTable(TableName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTable(new DeleteTableRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1474,7 +1473,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteTableAsync(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task DeleteTableAsync(TableName name, gaxgrpc::CallSettings callSettings = null) =>
             DeleteTableAsync(new DeleteTableRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1490,7 +1489,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task DeleteTableAsync(gcbcv::TableName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task DeleteTableAsync(TableName name, st::CancellationToken cancellationToken) =>
             DeleteTableAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1628,7 +1627,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual Table ModifyColumnFamilies(gcbcv::TableName name, scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual Table ModifyColumnFamilies(TableName name, scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications, gaxgrpc::CallSettings callSettings = null) =>
             ModifyColumnFamilies(new ModifyColumnFamiliesRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1657,7 +1656,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(gcbcv::TableName name, scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(TableName name, scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications, gaxgrpc::CallSettings callSettings = null) =>
             ModifyColumnFamiliesAsync(new ModifyColumnFamiliesRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1686,7 +1685,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(gcbcv::TableName name, scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<Table> ModifyColumnFamiliesAsync(TableName name, scg::IEnumerable<ModifyColumnFamiliesRequest.Types.Modification> modifications, st::CancellationToken cancellationToken) =>
             ModifyColumnFamiliesAsync(name, modifications, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1825,7 +1824,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual GenerateConsistencyTokenResponse GenerateConsistencyToken(TableName name, gaxgrpc::CallSettings callSettings = null) =>
             GenerateConsistencyToken(new GenerateConsistencyTokenRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1844,7 +1843,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(gcbcv::TableName name, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(TableName name, gaxgrpc::CallSettings callSettings = null) =>
             GenerateConsistencyTokenAsync(new GenerateConsistencyTokenRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1863,7 +1862,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(gcbcv::TableName name, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<GenerateConsistencyTokenResponse> GenerateConsistencyTokenAsync(TableName name, st::CancellationToken cancellationToken) =>
             GenerateConsistencyTokenAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1976,7 +1975,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual CheckConsistencyResponse CheckConsistency(gcbcv::TableName name, string consistencyToken, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual CheckConsistencyResponse CheckConsistency(TableName name, string consistencyToken, gaxgrpc::CallSettings callSettings = null) =>
             CheckConsistency(new CheckConsistencyRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -1998,7 +1997,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(gcbcv::TableName name, string consistencyToken, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(TableName name, string consistencyToken, gaxgrpc::CallSettings callSettings = null) =>
             CheckConsistencyAsync(new CheckConsistencyRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2020,7 +2019,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(gcbcv::TableName name, string consistencyToken, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<CheckConsistencyResponse> CheckConsistencyAsync(TableName name, string consistencyToken, st::CancellationToken cancellationToken) =>
             CheckConsistencyAsync(name, consistencyToken, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2242,7 +2241,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
-        public virtual lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(gcbcv::TableName name, ClusterName cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual lro::Operation<Snapshot, SnapshotTableMetadata> SnapshotTable(TableName name, ClusterName cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
             SnapshotTable(new SnapshotTableRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2282,7 +2281,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(gcbcv::TableName name, ClusterName cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(TableName name, ClusterName cluster, string snapshotId, string description, gaxgrpc::CallSettings callSettings = null) =>
             SnapshotTableAsync(new SnapshotTableRequest
             {
                 TableName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
@@ -2322,7 +2321,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
-        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(gcbcv::TableName name, ClusterName cluster, string snapshotId, string description, st::CancellationToken cancellationToken) =>
+        public virtual stt::Task<lro::Operation<Snapshot, SnapshotTableMetadata>> SnapshotTableAsync(TableName name, ClusterName cluster, string snapshotId, string description, st::CancellationToken cancellationToken) =>
             SnapshotTableAsync(name, cluster, snapshotId, description, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
