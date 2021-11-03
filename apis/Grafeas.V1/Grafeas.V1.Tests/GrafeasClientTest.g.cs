@@ -40,7 +40,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -52,6 +52,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -73,7 +76,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -85,6 +88,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -108,7 +114,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -120,6 +126,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -141,7 +150,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -153,6 +162,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -176,7 +188,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -188,6 +200,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -209,7 +224,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -221,6 +236,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -338,7 +356,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -350,6 +368,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -372,7 +393,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -384,6 +405,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -408,7 +432,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -420,6 +444,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -442,7 +469,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -454,6 +481,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -478,7 +508,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -490,6 +520,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -512,7 +545,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -524,6 +557,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.CreateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -675,7 +711,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -687,6 +723,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -710,7 +749,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -722,6 +761,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -747,7 +789,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -759,6 +801,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -782,7 +827,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -794,6 +839,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -819,7 +867,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -831,6 +879,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrence(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -854,7 +905,7 @@ namespace Grafeas.V1.Tests
                 OccurrenceName = OccurrenceName.FromProjectOccurrence("[PROJECT]", "[OCCURRENCE]"),
                 ResourceUri = "resource_uri7af9ce14",
                 NoteName = "note_name1f6be6eb",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 Remediation = "remediation325aa33d",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
@@ -866,6 +917,9 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryOccurrence(),
                 Attestation = new AttestationOccurrence(),
                 Upgrade = new UpgradeOccurrence(),
+                Compliance = new ComplianceOccurrence(),
+                DsseAttestation = new DSSEAttestationOccurrence(),
+                Envelope = new Envelope(),
             };
             mockGrpcClient.Setup(x => x.UpdateOccurrenceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Occurrence>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -889,7 +943,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -906,6 +960,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -927,7 +983,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -944,6 +1000,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -967,7 +1025,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -984,6 +1042,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1005,7 +1065,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1022,6 +1082,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1045,7 +1107,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1062,6 +1124,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1083,7 +1147,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1100,6 +1164,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetOccurrenceNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1123,7 +1189,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1140,6 +1206,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1161,7 +1229,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1178,6 +1246,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1201,7 +1271,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1218,6 +1288,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1239,7 +1311,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1256,6 +1328,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1279,7 +1353,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1296,6 +1370,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1317,7 +1393,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1334,6 +1410,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.GetNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1452,7 +1530,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1469,6 +1547,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1492,7 +1572,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1509,6 +1589,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1534,7 +1616,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1551,6 +1633,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1574,7 +1658,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1591,6 +1675,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1616,7 +1702,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1633,6 +1719,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1656,7 +1744,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1673,6 +1761,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.CreateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1842,7 +1932,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1859,6 +1949,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1882,7 +1974,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1899,6 +1991,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1924,7 +2018,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1941,6 +2035,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -1964,7 +2060,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -1981,6 +2077,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -2006,7 +2104,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -2023,6 +2121,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNote(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);
@@ -2046,7 +2146,7 @@ namespace Grafeas.V1.Tests
                 NoteName = NoteName.FromProjectNote("[PROJECT]", "[NOTE]"),
                 ShortDescription = "short_descriptionc10c6633",
                 LongDescription = "long_description1b5f6e1a",
-                Kind = NoteKind.Image,
+                Kind = NoteKind.Upgrade,
                 RelatedUrl = { new RelatedUrl(), },
                 ExpirationTime = new wkt::Timestamp(),
                 CreateTime = new wkt::Timestamp(),
@@ -2063,6 +2163,8 @@ namespace Grafeas.V1.Tests
                 Discovery = new DiscoveryNote(),
                 Attestation = new AttestationNote(),
                 Upgrade = new UpgradeNote(),
+                Compliance = new ComplianceNote(),
+                DsseAttestation = new DSSEAttestationNote(),
             };
             mockGrpcClient.Setup(x => x.UpdateNoteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Note>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GrafeasClient client = new GrafeasClientImpl(mockGrpcClient.Object, null);

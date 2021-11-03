@@ -34,15 +34,15 @@ namespace Grafeas.V1 {
             "EgwKBG5hbWUYASABKAkSLgoMZGlzdHJpYnV0aW9uGAogAygLMhguZ3JhZmVh",
             "cy52MS5EaXN0cmlidXRpb24iSQoRUGFja2FnZU9jY3VycmVuY2USDAoEbmFt",
             "ZRgBIAEoCRImCghsb2NhdGlvbhgCIAMoCzIULmdyYWZlYXMudjEuTG9jYXRp",
-            "b24izQEKB1ZlcnNpb24SDQoFZXBvY2gYASABKAUSDAoEbmFtZRgCIAEoCRIQ",
-            "CghyZXZpc2lvbhgDIAEoCRItCgRraW5kGAQgASgOMh8uZ3JhZmVhcy52MS5W",
-            "ZXJzaW9uLlZlcnNpb25LaW5kEhEKCWZ1bGxfbmFtZRgFIAEoCSJRCgtWZXJz",
-            "aW9uS2luZBIcChhWRVJTSU9OX0tJTkRfVU5TUEVDSUZJRUQQABIKCgZOT1JN",
-            "QUwQARILCgdNSU5JTVVNEAISCwoHTUFYSU1VTRADKj4KDEFyY2hpdGVjdHVy",
-            "ZRIcChhBUkNISVRFQ1RVUkVfVU5TUEVDSUZJRUQQABIHCgNYODYQARIHCgNY",
-            "NjQQAkJRCg1pby5ncmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZw",
-            "cm90bzM="));
+            "b24i4AEKB1ZlcnNpb24SDQoFZXBvY2gYASABKAUSDAoEbmFtZRgCIAEoCRIQ",
+            "CghyZXZpc2lvbhgDIAEoCRIRCglpbmNsdXNpdmUYBiABKAgSLQoEa2luZBgE",
+            "IAEoDjIfLmdyYWZlYXMudjEuVmVyc2lvbi5WZXJzaW9uS2luZBIRCglmdWxs",
+            "X25hbWUYBSABKAkiUQoLVmVyc2lvbktpbmQSHAoYVkVSU0lPTl9LSU5EX1VO",
+            "U1BFQ0lGSUVEEAASCgoGTk9STUFMEAESCwoHTUlOSU1VTRACEgsKB01BWElN",
+            "VU0QAyo+CgxBcmNoaXRlY3R1cmUSHAoYQVJDSElURUNUVVJFX1VOU1BFQ0lG",
+            "SUVEEAASBwoDWDg2EAESBwoDWDY0EAJCUQoNaW8uZ3JhZmVhcy52MVABWjhn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMv",
+            "djE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grafeas.V1.Architecture), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -50,7 +50,7 @@ namespace Grafeas.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Location), global::Grafeas.V1.Location.Parser, new[]{ "CpeUri", "Version", "Path" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageNote), global::Grafeas.V1.PackageNote.Parser, new[]{ "Name", "Distribution" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.PackageOccurrence), global::Grafeas.V1.PackageOccurrence.Parser, new[]{ "Name", "Location" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Version), global::Grafeas.V1.Version.Parser, new[]{ "Epoch", "Name", "Revision", "Kind", "FullName" }, null, new[]{ typeof(global::Grafeas.V1.Version.Types.VersionKind) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Version), global::Grafeas.V1.Version.Parser, new[]{ "Epoch", "Name", "Revision", "Inclusive", "Kind", "FullName" }, null, new[]{ typeof(global::Grafeas.V1.Version.Types.VersionKind) }, null, null)
           }));
     }
     #endregion
@@ -1262,6 +1262,7 @@ namespace Grafeas.V1 {
       epoch_ = other.epoch_;
       name_ = other.name_;
       revision_ = other.revision_;
+      inclusive_ = other.inclusive_;
       kind_ = other.kind_;
       fullName_ = other.fullName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -1319,6 +1320,26 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "inclusive" field.</summary>
+    public const int InclusiveFieldNumber = 6;
+    private bool inclusive_;
+    /// <summary>
+    /// Whether this version is specifying part of an inclusive range. Grafeas
+    /// does not have the capability to specify version ranges; instead we have
+    /// fields that specify start version and end versions. At times this is
+    /// insufficient - we also need to specify whether the version is included in
+    /// the range or is excluded from the range. This boolean is expected to be set
+    /// to true when the version is included in a range.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Inclusive {
+      get { return inclusive_; }
+      set {
+        inclusive_ = value;
+      }
+    }
+
     /// <summary>Field number for the "kind" field.</summary>
     public const int KindFieldNumber = 4;
     private global::Grafeas.V1.Version.Types.VersionKind kind_ = global::Grafeas.V1.Version.Types.VersionKind.Unspecified;
@@ -1369,6 +1390,7 @@ namespace Grafeas.V1 {
       if (Epoch != other.Epoch) return false;
       if (Name != other.Name) return false;
       if (Revision != other.Revision) return false;
+      if (Inclusive != other.Inclusive) return false;
       if (Kind != other.Kind) return false;
       if (FullName != other.FullName) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -1381,6 +1403,7 @@ namespace Grafeas.V1 {
       if (Epoch != 0) hash ^= Epoch.GetHashCode();
       if (Name.Length != 0) hash ^= Name.GetHashCode();
       if (Revision.Length != 0) hash ^= Revision.GetHashCode();
+      if (Inclusive != false) hash ^= Inclusive.GetHashCode();
       if (Kind != global::Grafeas.V1.Version.Types.VersionKind.Unspecified) hash ^= Kind.GetHashCode();
       if (FullName.Length != 0) hash ^= FullName.GetHashCode();
       if (_unknownFields != null) {
@@ -1421,6 +1444,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(42);
         output.WriteString(FullName);
       }
+      if (Inclusive != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Inclusive);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1451,6 +1478,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(42);
         output.WriteString(FullName);
       }
+      if (Inclusive != false) {
+        output.WriteRawTag(48);
+        output.WriteBool(Inclusive);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1469,6 +1500,9 @@ namespace Grafeas.V1 {
       }
       if (Revision.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Revision);
+      }
+      if (Inclusive != false) {
+        size += 1 + 1;
       }
       if (Kind != global::Grafeas.V1.Version.Types.VersionKind.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Kind);
@@ -1496,6 +1530,9 @@ namespace Grafeas.V1 {
       }
       if (other.Revision.Length != 0) {
         Revision = other.Revision;
+      }
+      if (other.Inclusive != false) {
+        Inclusive = other.Inclusive;
       }
       if (other.Kind != global::Grafeas.V1.Version.Types.VersionKind.Unspecified) {
         Kind = other.Kind;
@@ -1538,6 +1575,10 @@ namespace Grafeas.V1 {
             FullName = input.ReadString();
             break;
           }
+          case 48: {
+            Inclusive = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1571,6 +1612,10 @@ namespace Grafeas.V1 {
           }
           case 42: {
             FullName = input.ReadString();
+            break;
+          }
+          case 48: {
+            Inclusive = input.ReadBool();
             break;
           }
         }
