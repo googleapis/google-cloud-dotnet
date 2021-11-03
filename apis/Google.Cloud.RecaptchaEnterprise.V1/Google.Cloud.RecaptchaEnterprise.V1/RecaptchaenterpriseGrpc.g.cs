@@ -93,6 +93,18 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_GetMetricsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> __Marshaller_google_cloud_recaptchaenterprise_v1_Metrics = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupMembershipsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupMembershipsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest> __Marshaller_google_cloud_recaptchaenterprise_v1_SearchRelatedAccountGroupMembershipsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse> __Marshaller_google_cloud_recaptchaenterprise_v1_SearchRelatedAccountGroupMembershipsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Assessment> __Method_CreateAssessment = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.CreateAssessmentRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Assessment>(
@@ -165,6 +177,30 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
         "GetMetrics",
         __Marshaller_google_cloud_recaptchaenterprise_v1_GetMetricsRequest,
         __Marshaller_google_cloud_recaptchaenterprise_v1_Metrics);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> __Method_ListRelatedAccountGroups = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRelatedAccountGroups",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupsRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse> __Method_ListRelatedAccountGroupMemberships = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListRelatedAccountGroupMemberships",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupMembershipsRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_ListRelatedAccountGroupMembershipsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse> __Method_SearchRelatedAccountGroupMemberships = new grpc::Method<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SearchRelatedAccountGroupMemberships",
+        __Marshaller_google_cloud_recaptchaenterprise_v1_SearchRelatedAccountGroupMembershipsRequest,
+        __Marshaller_google_cloud_recaptchaenterprise_v1_SearchRelatedAccountGroupMembershipsResponse);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -287,6 +323,42 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.Metrics> GetMetrics(global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List groups of related accounts.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> ListRelatedAccountGroups(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Get the memberships in a group of related accounts.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse> ListRelatedAccountGroupMemberships(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Search group memberships related to a given account.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse> SearchRelatedAccountGroupMemberships(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -780,6 +852,150 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetMetrics, null, options, request);
       }
+      /// <summary>
+      /// List groups of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse ListRelatedAccountGroups(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRelatedAccountGroups(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List groups of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse ListRelatedAccountGroups(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRelatedAccountGroups, null, options, request);
+      }
+      /// <summary>
+      /// List groups of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> ListRelatedAccountGroupsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRelatedAccountGroupsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List groups of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse> ListRelatedAccountGroupsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRelatedAccountGroups, null, options, request);
+      }
+      /// <summary>
+      /// Get the memberships in a group of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse ListRelatedAccountGroupMemberships(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRelatedAccountGroupMemberships(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the memberships in a group of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse ListRelatedAccountGroupMemberships(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListRelatedAccountGroupMemberships, null, options, request);
+      }
+      /// <summary>
+      /// Get the memberships in a group of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse> ListRelatedAccountGroupMembershipsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListRelatedAccountGroupMembershipsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Get the memberships in a group of related accounts.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse> ListRelatedAccountGroupMembershipsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListRelatedAccountGroupMemberships, null, options, request);
+      }
+      /// <summary>
+      /// Search group memberships related to a given account.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse SearchRelatedAccountGroupMemberships(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchRelatedAccountGroupMemberships(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Search group memberships related to a given account.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse SearchRelatedAccountGroupMemberships(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SearchRelatedAccountGroupMemberships, null, options, request);
+      }
+      /// <summary>
+      /// Search group memberships related to a given account.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse> SearchRelatedAccountGroupMembershipsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SearchRelatedAccountGroupMembershipsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Search group memberships related to a given account.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse> SearchRelatedAccountGroupMembershipsAsync(global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SearchRelatedAccountGroupMemberships, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override RecaptchaEnterpriseServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -802,7 +1018,10 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
           .AddMethod(__Method_UpdateKey, serviceImpl.UpdateKey)
           .AddMethod(__Method_DeleteKey, serviceImpl.DeleteKey)
           .AddMethod(__Method_MigrateKey, serviceImpl.MigrateKey)
-          .AddMethod(__Method_GetMetrics, serviceImpl.GetMetrics).Build();
+          .AddMethod(__Method_GetMetrics, serviceImpl.GetMetrics)
+          .AddMethod(__Method_ListRelatedAccountGroups, serviceImpl.ListRelatedAccountGroups)
+          .AddMethod(__Method_ListRelatedAccountGroupMemberships, serviceImpl.ListRelatedAccountGroupMemberships)
+          .AddMethod(__Method_SearchRelatedAccountGroupMemberships, serviceImpl.SearchRelatedAccountGroupMemberships).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -821,6 +1040,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1 {
       serviceBinder.AddMethod(__Method_DeleteKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.DeleteKeyRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteKey));
       serviceBinder.AddMethod(__Method_MigrateKey, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.MigrateKeyRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Key>(serviceImpl.MigrateKey));
       serviceBinder.AddMethod(__Method_GetMetrics, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.GetMetricsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.Metrics>(serviceImpl.GetMetrics));
+      serviceBinder.AddMethod(__Method_ListRelatedAccountGroups, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupsResponse>(serviceImpl.ListRelatedAccountGroups));
+      serviceBinder.AddMethod(__Method_ListRelatedAccountGroupMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.ListRelatedAccountGroupMembershipsResponse>(serviceImpl.ListRelatedAccountGroupMemberships));
+      serviceBinder.AddMethod(__Method_SearchRelatedAccountGroupMemberships, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsRequest, global::Google.Cloud.RecaptchaEnterprise.V1.SearchRelatedAccountGroupMembershipsResponse>(serviceImpl.SearchRelatedAccountGroupMemberships));
     }
 
   }

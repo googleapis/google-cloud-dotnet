@@ -52,10 +52,28 @@
                 "ListKeysAsync"
               ]
             },
+            "ListRelatedAccountGroupMemberships": {
+              "methods": [
+                "ListRelatedAccountGroupMemberships",
+                "ListRelatedAccountGroupMembershipsAsync"
+              ]
+            },
+            "ListRelatedAccountGroups": {
+              "methods": [
+                "ListRelatedAccountGroups",
+                "ListRelatedAccountGroupsAsync"
+              ]
+            },
             "MigrateKey": {
               "methods": [
                 "MigrateKey",
                 "MigrateKeyAsync"
+              ]
+            },
+            "SearchRelatedAccountGroupMemberships": {
+              "methods": [
+                "SearchRelatedAccountGroupMemberships",
+                "SearchRelatedAccountGroupMembershipsAsync"
               ]
             },
             "UpdateKey": {

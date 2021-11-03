@@ -57,6 +57,9 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             DeleteKeySettings = existing.DeleteKeySettings;
             MigrateKeySettings = existing.MigrateKeySettings;
             GetMetricsSettings = existing.GetMetricsSettings;
+            ListRelatedAccountGroupsSettings = existing.ListRelatedAccountGroupsSettings;
+            ListRelatedAccountGroupMembershipsSettings = existing.ListRelatedAccountGroupMembershipsSettings;
+            SearchRelatedAccountGroupMembershipsSettings = existing.SearchRelatedAccountGroupMembershipsSettings;
             OnCopy(existing);
         }
 
@@ -176,6 +179,45 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetMetricsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.ListRelatedAccountGroups</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRelatedAccountGroupsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMemberships</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.ListRelatedAccountGroupMembershipsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListRelatedAccountGroupMembershipsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMemberships</c> and
+        /// <c>RecaptchaEnterpriseServiceClient.SearchRelatedAccountGroupMembershipsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SearchRelatedAccountGroupMembershipsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="RecaptchaEnterpriseServiceSettings"/> object.</returns>
@@ -915,6 +957,396 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Metrics> GetMetricsAsync(MetricsName name, st::CancellationToken cancellationToken) =>
             GetMetricsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(ListRelatedAccountGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(ListRelatedAccountGroupsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroups(new ListRelatedAccountGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroupsAsync(new ListRelatedAccountGroupsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroups(new ListRelatedAccountGroupsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to list related account groups from, in the format
+        /// "projects/{project}".
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(gagr::ProjectName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroupsAsync(new ListRelatedAccountGroupsRequest
+            {
+                ParentAsProjectName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(ListRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(ListRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name for the related account group in the format
+        /// `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroupMemberships(new ListRelatedAccountGroupMembershipsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name for the related account group in the format
+        /// `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroupMembershipsAsync(new ListRelatedAccountGroupMembershipsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name for the related account group in the format
+        /// `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(RelatedAccountGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroupMemberships(new ListRelatedAccountGroupMembershipsRequest
+            {
+                ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name for the related account group in the format
+        /// `projects/{project}/relatedaccountgroups/{relatedaccountgroup}`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRelatedAccountGroupMembershipsAsync(new ListRelatedAccountGroupMembershipsRequest
+            {
+                ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(SearchRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(SearchRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to search related account group memberships from,
+        /// in the format "projects/{project}".
+        /// </param>
+        /// <param name="hashedAccountId">
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous CreateAssessment or AnnotateAssessment call.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(string parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to search related account group memberships from,
+        /// in the format "projects/{project}".
+        /// </param>
+        /// <param name="hashedAccountId">
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous CreateAssessment or AnnotateAssessment call.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(string parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to search related account group memberships from,
+        /// in the format "projects/{project}".
+        /// </param>
+        /// <param name="hashedAccountId">
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous CreateAssessment or AnnotateAssessment call.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public virtual gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(RelatedAccountGroupName parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchRelatedAccountGroupMemberships(new SearchRelatedAccountGroupMembershipsRequest
+            {
+                ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the project to search related account group memberships from,
+        /// in the format "projects/{project}".
+        /// </param>
+        /// <param name="hashedAccountId">
+        /// Optional. The unique stable hashed user identifier we should search connections to.
+        /// The identifier should correspond to a `hashed_account_id` provided in a
+        /// previous CreateAssessment or AnnotateAssessment call.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public virtual gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(RelatedAccountGroupName parent, proto::ByteString hashedAccountId, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            SearchRelatedAccountGroupMembershipsAsync(new SearchRelatedAccountGroupMembershipsRequest
+            {
+                ParentAsRelatedAccountGroupName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                HashedAccountId = hashedAccountId ?? proto::ByteString.Empty,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
     }
 
     /// <summary>RecaptchaEnterpriseService client wrapper implementation, for convenient use.</summary>
@@ -940,6 +1372,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         private readonly gaxgrpc::ApiCall<MigrateKeyRequest, Key> _callMigrateKey;
 
         private readonly gaxgrpc::ApiCall<GetMetricsRequest, Metrics> _callGetMetrics;
+
+        private readonly gaxgrpc::ApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse> _callListRelatedAccountGroups;
+
+        private readonly gaxgrpc::ApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse> _callListRelatedAccountGroupMemberships;
+
+        private readonly gaxgrpc::ApiCall<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse> _callSearchRelatedAccountGroupMemberships;
 
         /// <summary>
         /// Constructs a client wrapper for the RecaptchaEnterpriseService service, with the specified gRPC client and
@@ -981,6 +1419,15 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             _callGetMetrics = clientHelper.BuildApiCall<GetMetricsRequest, Metrics>(grpcClient.GetMetricsAsync, grpcClient.GetMetrics, effectiveSettings.GetMetricsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetMetrics);
             Modify_GetMetricsApiCall(ref _callGetMetrics);
+            _callListRelatedAccountGroups = clientHelper.BuildApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse>(grpcClient.ListRelatedAccountGroupsAsync, grpcClient.ListRelatedAccountGroups, effectiveSettings.ListRelatedAccountGroupsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRelatedAccountGroups);
+            Modify_ListRelatedAccountGroupsApiCall(ref _callListRelatedAccountGroups);
+            _callListRelatedAccountGroupMemberships = clientHelper.BuildApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse>(grpcClient.ListRelatedAccountGroupMembershipsAsync, grpcClient.ListRelatedAccountGroupMemberships, effectiveSettings.ListRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListRelatedAccountGroupMemberships);
+            Modify_ListRelatedAccountGroupMembershipsApiCall(ref _callListRelatedAccountGroupMemberships);
+            _callSearchRelatedAccountGroupMemberships = clientHelper.BuildApiCall<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse>(grpcClient.SearchRelatedAccountGroupMembershipsAsync, grpcClient.SearchRelatedAccountGroupMemberships, effectiveSettings.SearchRelatedAccountGroupMembershipsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSearchRelatedAccountGroupMemberships);
+            Modify_SearchRelatedAccountGroupMembershipsApiCall(ref _callSearchRelatedAccountGroupMemberships);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1004,6 +1451,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
 
         partial void Modify_GetMetricsApiCall(ref gaxgrpc::ApiCall<GetMetricsRequest, Metrics> call);
 
+        partial void Modify_ListRelatedAccountGroupsApiCall(ref gaxgrpc::ApiCall<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse> call);
+
+        partial void Modify_ListRelatedAccountGroupMembershipsApiCall(ref gaxgrpc::ApiCall<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse> call);
+
+        partial void Modify_SearchRelatedAccountGroupMembershipsApiCall(ref gaxgrpc::ApiCall<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse> call);
+
         partial void OnConstruction(RecaptchaEnterpriseService.RecaptchaEnterpriseServiceClient grpcClient, RecaptchaEnterpriseServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC RecaptchaEnterpriseService client</summary>
@@ -1026,6 +1479,12 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         partial void Modify_MigrateKeyRequest(ref MigrateKeyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetMetricsRequest(ref GetMetricsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRelatedAccountGroupsRequest(ref ListRelatedAccountGroupsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListRelatedAccountGroupMembershipsRequest(ref ListRelatedAccountGroupMembershipsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SearchRelatedAccountGroupMembershipsRequest(ref SearchRelatedAccountGroupMembershipsRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates an Assessment of the likelihood an event is legitimate.
@@ -1256,9 +1715,97 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
             Modify_GetMetricsRequest(ref request, ref callSettings);
             return _callGetMetrics.Async(request, callSettings);
         }
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroups(ListRelatedAccountGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRelatedAccountGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse, RelatedAccountGroup>(_callListRelatedAccountGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// List groups of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="RelatedAccountGroup"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListRelatedAccountGroupsResponse, RelatedAccountGroup> ListRelatedAccountGroupsAsync(ListRelatedAccountGroupsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRelatedAccountGroupsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRelatedAccountGroupsRequest, ListRelatedAccountGroupsResponse, RelatedAccountGroup>(_callListRelatedAccountGroups, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public override gax::PagedEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMemberships(ListRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRelatedAccountGroupMembershipsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership>(_callListRelatedAccountGroupMemberships, request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the memberships in a group of related accounts.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> ListRelatedAccountGroupMembershipsAsync(ListRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListRelatedAccountGroupMembershipsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListRelatedAccountGroupMembershipsRequest, ListRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership>(_callListRelatedAccountGroupMemberships, request, callSettings);
+        }
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="RelatedAccountGroupMembership"/> resources.</returns>
+        public override gax::PagedEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMemberships(SearchRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchRelatedAccountGroupMembershipsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership>(_callSearchRelatedAccountGroupMemberships, request, callSettings);
+        }
+
+        /// <summary>
+        /// Search group memberships related to a given account.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>
+        /// A pageable asynchronous sequence of <see cref="RelatedAccountGroupMembership"/> resources.
+        /// </returns>
+        public override gax::PagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership> SearchRelatedAccountGroupMembershipsAsync(SearchRelatedAccountGroupMembershipsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SearchRelatedAccountGroupMembershipsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<SearchRelatedAccountGroupMembershipsRequest, SearchRelatedAccountGroupMembershipsResponse, RelatedAccountGroupMembership>(_callSearchRelatedAccountGroupMemberships, request, callSettings);
+        }
     }
 
     public partial class ListKeysRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRelatedAccountGroupsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListRelatedAccountGroupMembershipsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class SearchRelatedAccountGroupMembershipsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1266,6 +1813,32 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Key> GetEnumerator() => Keys.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRelatedAccountGroupsResponse : gaxgrpc::IPageResponse<RelatedAccountGroup>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RelatedAccountGroup> GetEnumerator() => RelatedAccountGroups.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListRelatedAccountGroupMembershipsResponse : gaxgrpc::IPageResponse<RelatedAccountGroupMembership>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RelatedAccountGroupMembership> GetEnumerator() =>
+            RelatedAccountGroupMemberships.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class SearchRelatedAccountGroupMembershipsResponse : gaxgrpc::IPageResponse<RelatedAccountGroupMembership>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<RelatedAccountGroupMembership> GetEnumerator() =>
+            RelatedAccountGroupMemberships.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

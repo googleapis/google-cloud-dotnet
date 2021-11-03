@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -43,6 +44,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Event = new Event(),
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
+                AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -66,6 +68,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Event = new Event(),
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
+                AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -91,6 +94,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Event = new Event(),
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
+                AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -114,6 +118,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Event = new Event(),
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
+                AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -139,6 +144,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Event = new Event(),
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
+                AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -162,6 +168,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 Event = new Event(),
                 RiskAnalysis = new RiskAnalysis(),
                 TokenProperties = new TokenProperties(),
+                AccountDefenderAssessment = new AccountDefenderAssessment(),
             };
             mockGrpcClient.Setup(x => x.CreateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Assessment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecaptchaEnterpriseServiceClient client = new RecaptchaEnterpriseServiceClientImpl(mockGrpcClient.Object, null);
@@ -184,6 +191,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 {
                     AnnotateAssessmentRequest.Types.Reason.InitiatedTwoFactor,
                 },
+                HashedAccountId = proto::ByteString.CopyFromUtf8("hashed_account_id016ad986"),
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -205,6 +213,7 @@ namespace Google.Cloud.RecaptchaEnterprise.V1.Tests
                 {
                     AnnotateAssessmentRequest.Types.Reason.InitiatedTwoFactor,
                 },
+                HashedAccountId = proto::ByteString.CopyFromUtf8("hashed_account_id016ad986"),
             };
             AnnotateAssessmentResponse expectedResponse = new AnnotateAssessmentResponse { };
             mockGrpcClient.Setup(x => x.AnnotateAssessmentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AnnotateAssessmentResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
