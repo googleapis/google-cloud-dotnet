@@ -31,142 +31,150 @@ namespace Grafeas.V1 {
             "dG8aIGdvb2dsZS9wcm90b2J1Zi9maWVsZF9tYXNrLnByb3RvGh9nb29nbGUv",
             "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxncmFmZWFzL3YxL2F0dGVzdGF0",
             "aW9uLnByb3RvGhZncmFmZWFzL3YxL2J1aWxkLnByb3RvGhdncmFmZWFzL3Yx",
-            "L2NvbW1vbi5wcm90bxobZ3JhZmVhcy92MS9kZXBsb3ltZW50LnByb3RvGhpn",
-            "cmFmZWFzL3YxL2Rpc2NvdmVyeS5wcm90bxoWZ3JhZmVhcy92MS9pbWFnZS5w",
-            "cm90bxoYZ3JhZmVhcy92MS9wYWNrYWdlLnByb3RvGhhncmFmZWFzL3YxL3Vw",
-            "Z3JhZGUucHJvdG8aHmdyYWZlYXMvdjEvdnVsbmVyYWJpbGl0eS5wcm90byLY",
-            "BQoKT2NjdXJyZW5jZRIMCgRuYW1lGAEgASgJEhQKDHJlc291cmNlX3VyaRgC",
-            "IAEoCRIRCglub3RlX25hbWUYAyABKAkSIgoEa2luZBgEIAEoDjIULmdyYWZl",
-            "YXMudjEuTm90ZUtpbmQSEwoLcmVtZWRpYXRpb24YBSABKAkSLwoLY3JlYXRl",
-            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC3Vw",
-            "ZGF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBI8",
-            "Cg12dWxuZXJhYmlsaXR5GAggASgLMiMuZ3JhZmVhcy52MS5WdWxuZXJhYmls",
-            "aXR5T2NjdXJyZW5jZUgAEiwKBWJ1aWxkGAkgASgLMhsuZ3JhZmVhcy52MS5C",
-            "dWlsZE9jY3VycmVuY2VIABIsCgVpbWFnZRgKIAEoCzIbLmdyYWZlYXMudjEu",
-            "SW1hZ2VPY2N1cnJlbmNlSAASMAoHcGFja2FnZRgLIAEoCzIdLmdyYWZlYXMu",
-            "djEuUGFja2FnZU9jY3VycmVuY2VIABI2CgpkZXBsb3ltZW50GAwgASgLMiAu",
-            "Z3JhZmVhcy52MS5EZXBsb3ltZW50T2NjdXJyZW5jZUgAEjQKCWRpc2NvdmVy",
-            "eRgNIAEoCzIfLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZUgAEjgK",
-            "C2F0dGVzdGF0aW9uGA4gASgLMiEuZ3JhZmVhcy52MS5BdHRlc3RhdGlvbk9j",
-            "Y3VycmVuY2VIABIwCgd1cGdyYWRlGA8gASgLMh0uZ3JhZmVhcy52MS5VcGdy",
-            "YWRlT2NjdXJyZW5jZUgAOkfqQUQKFWdyYWZlYXMuaW8vT2NjdXJyZW5jZRIr",
-            "cHJvamVjdHMve3Byb2plY3R9L29jY3VycmVuY2VzL3tvY2N1cnJlbmNlfUIJ",
-            "CgdkZXRhaWxzIoIGCgROb3RlEgwKBG5hbWUYASABKAkSGQoRc2hvcnRfZGVz",
-            "Y3JpcHRpb24YAiABKAkSGAoQbG9uZ19kZXNjcmlwdGlvbhgDIAEoCRIiCgRr",
-            "aW5kGAQgASgOMhQuZ3JhZmVhcy52MS5Ob3RlS2luZBIrCgtyZWxhdGVkX3Vy",
-            "bBgFIAMoCzIWLmdyYWZlYXMudjEuUmVsYXRlZFVybBIzCg9leHBpcmF0aW9u",
-            "X3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEi8KC2Ny",
-            "ZWF0ZV90aW1lGAcgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIv",
-            "Cgt1cGRhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXASGgoScmVsYXRlZF9ub3RlX25hbWVzGAkgAygJEjYKDXZ1bG5lcmFiaWxp",
-            "dHkYCiABKAsyHS5ncmFmZWFzLnYxLlZ1bG5lcmFiaWxpdHlOb3RlSAASJgoF",
-            "YnVpbGQYCyABKAsyFS5ncmFmZWFzLnYxLkJ1aWxkTm90ZUgAEiYKBWltYWdl",
-            "GAwgASgLMhUuZ3JhZmVhcy52MS5JbWFnZU5vdGVIABIqCgdwYWNrYWdlGA0g",
-            "ASgLMhcuZ3JhZmVhcy52MS5QYWNrYWdlTm90ZUgAEjAKCmRlcGxveW1lbnQY",
-            "DiABKAsyGi5ncmFmZWFzLnYxLkRlcGxveW1lbnROb3RlSAASLgoJZGlzY292",
-            "ZXJ5GA8gASgLMhkuZ3JhZmVhcy52MS5EaXNjb3ZlcnlOb3RlSAASMgoLYXR0",
-            "ZXN0YXRpb24YECABKAsyGy5ncmFmZWFzLnYxLkF0dGVzdGF0aW9uTm90ZUgA",
-            "EioKB3VwZ3JhZGUYESABKAsyFy5ncmFmZWFzLnYxLlVwZ3JhZGVOb3RlSAA6",
-            "NepBMgoPZ3JhZmVhcy5pby9Ob3RlEh9wcm9qZWN0cy97cHJvamVjdH0vbm90",
-            "ZXMve25vdGV9QgYKBHR5cGUiQwoUR2V0T2NjdXJyZW5jZVJlcXVlc3QSKwoE",
-            "bmFtZRgBIAEoCUId4EEC+kEXChVncmFmZWFzLmlvL09jY3VycmVuY2UiewoW",
-            "TGlzdE9jY3VycmVuY2VzUmVxdWVzdBIqCgZwYXJlbnQYASABKAlCGuBBAvpB",
-            "FAoSZ3JhZmVhcy5pby9Qcm9qZWN0Eg4KBmZpbHRlchgCIAEoCRIRCglwYWdl",
-            "X3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJfChdMaXN0T2NjdXJy",
-            "ZW5jZXNSZXNwb25zZRIrCgtvY2N1cnJlbmNlcxgBIAMoCzIWLmdyYWZlYXMu",
-            "djEuT2NjdXJyZW5jZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiRgoXRGVs",
-            "ZXRlT2NjdXJyZW5jZVJlcXVlc3QSKwoEbmFtZRgBIAEoCUId4EEC+kEXChVn",
-            "cmFmZWFzLmlvL09jY3VycmVuY2UidgoXQ3JlYXRlT2NjdXJyZW5jZVJlcXVl",
-            "c3QSKgoGcGFyZW50GAEgASgJQhrgQQL6QRQKEmdyYWZlYXMuaW8vUHJvamVj",
-            "dBIvCgpvY2N1cnJlbmNlGAIgASgLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNl",
-            "QgPgQQIiqAEKF1VwZGF0ZU9jY3VycmVuY2VSZXF1ZXN0EisKBG5hbWUYASAB",
-            "KAlCHeBBAvpBFwoVZ3JhZmVhcy5pby9PY2N1cnJlbmNlEi8KCm9jY3VycmVu",
-            "Y2UYAiABKAsyFi5ncmFmZWFzLnYxLk9jY3VycmVuY2VCA+BBAhIvCgt1cGRh",
-            "dGVfbWFzaxgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2siNwoO",
-            "R2V0Tm90ZVJlcXVlc3QSJQoEbmFtZRgBIAEoCUIX4EEC+kERCg9ncmFmZWFz",
-            "LmlvL05vdGUiRwoYR2V0T2NjdXJyZW5jZU5vdGVSZXF1ZXN0EisKBG5hbWUY",
-            "ASABKAlCHeBBAvpBFwoVZ3JhZmVhcy5pby9PY2N1cnJlbmNlInUKEExpc3RO",
-            "b3Rlc1JlcXVlc3QSKgoGcGFyZW50GAEgASgJQhrgQQL6QRQKEmdyYWZlYXMu",
-            "aW8vUHJvamVjdBIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMgASgF",
-            "EhIKCnBhZ2VfdG9rZW4YBCABKAkiTQoRTGlzdE5vdGVzUmVzcG9uc2USHwoF",
-            "bm90ZXMYASADKAsyEC5ncmFmZWFzLnYxLk5vdGUSFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJIjoKEURlbGV0ZU5vdGVSZXF1ZXN0EiUKBG5hbWUYASABKAlC",
-            "F+BBAvpBEQoPZ3JhZmVhcy5pby9Ob3RlInoKEUNyZWF0ZU5vdGVSZXF1ZXN0",
+            "L2NvbW1vbi5wcm90bxobZ3JhZmVhcy92MS9jb21wbGlhbmNlLnByb3RvGhtn",
+            "cmFmZWFzL3YxL2RlcGxveW1lbnQucHJvdG8aGmdyYWZlYXMvdjEvZGlzY292",
+            "ZXJ5LnByb3RvGiFncmFmZWFzL3YxL2Rzc2VfYXR0ZXN0YXRpb24ucHJvdG8a",
+            "FmdyYWZlYXMvdjEvaW1hZ2UucHJvdG8aGGdyYWZlYXMvdjEvcGFja2FnZS5w",
+            "cm90bxoYZ3JhZmVhcy92MS91cGdyYWRlLnByb3RvGh5ncmFmZWFzL3YxL3Z1",
+            "bG5lcmFiaWxpdHkucHJvdG8i+wYKCk9jY3VycmVuY2USDAoEbmFtZRgBIAEo",
+            "CRIUCgxyZXNvdXJjZV91cmkYAiABKAkSEQoJbm90ZV9uYW1lGAMgASgJEiIK",
+            "BGtpbmQYBCABKA4yFC5ncmFmZWFzLnYxLk5vdGVLaW5kEhMKC3JlbWVkaWF0",
+            "aW9uGAUgASgJEi8KC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3Rv",
+            "YnVmLlRpbWVzdGFtcBIvCgt1cGRhdGVfdGltZRgHIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASPAoNdnVsbmVyYWJpbGl0eRgIIAEoCzIjLmdy",
+            "YWZlYXMudjEuVnVsbmVyYWJpbGl0eU9jY3VycmVuY2VIABIsCgVidWlsZBgJ",
+            "IAEoCzIbLmdyYWZlYXMudjEuQnVpbGRPY2N1cnJlbmNlSAASLAoFaW1hZ2UY",
+            "CiABKAsyGy5ncmFmZWFzLnYxLkltYWdlT2NjdXJyZW5jZUgAEjAKB3BhY2th",
+            "Z2UYCyABKAsyHS5ncmFmZWFzLnYxLlBhY2thZ2VPY2N1cnJlbmNlSAASNgoK",
+            "ZGVwbG95bWVudBgMIAEoCzIgLmdyYWZlYXMudjEuRGVwbG95bWVudE9jY3Vy",
+            "cmVuY2VIABI0CglkaXNjb3ZlcnkYDSABKAsyHy5ncmFmZWFzLnYxLkRpc2Nv",
+            "dmVyeU9jY3VycmVuY2VIABI4CgthdHRlc3RhdGlvbhgOIAEoCzIhLmdyYWZl",
+            "YXMudjEuQXR0ZXN0YXRpb25PY2N1cnJlbmNlSAASMAoHdXBncmFkZRgPIAEo",
+            "CzIdLmdyYWZlYXMudjEuVXBncmFkZU9jY3VycmVuY2VIABI2Cgpjb21wbGlh",
+            "bmNlGBAgASgLMiAuZ3JhZmVhcy52MS5Db21wbGlhbmNlT2NjdXJyZW5jZUgA",
+            "EkEKEGRzc2VfYXR0ZXN0YXRpb24YESABKAsyJS5ncmFmZWFzLnYxLkRTU0VB",
+            "dHRlc3RhdGlvbk9jY3VycmVuY2VIABImCghlbnZlbG9wZRgSIAEoCzIULmdy",
+            "YWZlYXMudjEuRW52ZWxvcGU6R+pBRAoVZ3JhZmVhcy5pby9PY2N1cnJlbmNl",
+            "Eitwcm9qZWN0cy97cHJvamVjdH0vb2NjdXJyZW5jZXMve29jY3VycmVuY2V9",
+            "QgkKB2RldGFpbHMi8QYKBE5vdGUSDAoEbmFtZRgBIAEoCRIZChFzaG9ydF9k",
+            "ZXNjcmlwdGlvbhgCIAEoCRIYChBsb25nX2Rlc2NyaXB0aW9uGAMgASgJEiIK",
+            "BGtpbmQYBCABKA4yFC5ncmFmZWFzLnYxLk5vdGVLaW5kEisKC3JlbGF0ZWRf",
+            "dXJsGAUgAygLMhYuZ3JhZmVhcy52MS5SZWxhdGVkVXJsEjMKD2V4cGlyYXRp",
+            "b25fdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASLwoL",
+            "Y3JlYXRlX3RpbWUYByABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "Ei8KC3VwZGF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
+            "dGFtcBIaChJyZWxhdGVkX25vdGVfbmFtZXMYCSADKAkSNgoNdnVsbmVyYWJp",
+            "bGl0eRgKIAEoCzIdLmdyYWZlYXMudjEuVnVsbmVyYWJpbGl0eU5vdGVIABIm",
+            "CgVidWlsZBgLIAEoCzIVLmdyYWZlYXMudjEuQnVpbGROb3RlSAASJgoFaW1h",
+            "Z2UYDCABKAsyFS5ncmFmZWFzLnYxLkltYWdlTm90ZUgAEioKB3BhY2thZ2UY",
+            "DSABKAsyFy5ncmFmZWFzLnYxLlBhY2thZ2VOb3RlSAASMAoKZGVwbG95bWVu",
+            "dBgOIAEoCzIaLmdyYWZlYXMudjEuRGVwbG95bWVudE5vdGVIABIuCglkaXNj",
+            "b3ZlcnkYDyABKAsyGS5ncmFmZWFzLnYxLkRpc2NvdmVyeU5vdGVIABIyCgth",
+            "dHRlc3RhdGlvbhgQIAEoCzIbLmdyYWZlYXMudjEuQXR0ZXN0YXRpb25Ob3Rl",
+            "SAASKgoHdXBncmFkZRgRIAEoCzIXLmdyYWZlYXMudjEuVXBncmFkZU5vdGVI",
+            "ABIwCgpjb21wbGlhbmNlGBIgASgLMhouZ3JhZmVhcy52MS5Db21wbGlhbmNl",
+            "Tm90ZUgAEjsKEGRzc2VfYXR0ZXN0YXRpb24YEyABKAsyHy5ncmFmZWFzLnYx",
+            "LkRTU0VBdHRlc3RhdGlvbk5vdGVIADo16kEyCg9ncmFmZWFzLmlvL05vdGUS",
+            "H3Byb2plY3RzL3twcm9qZWN0fS9ub3Rlcy97bm90ZX1CBgoEdHlwZSJDChRH",
+            "ZXRPY2N1cnJlbmNlUmVxdWVzdBIrCgRuYW1lGAEgASgJQh3gQQL6QRcKFWdy",
+            "YWZlYXMuaW8vT2NjdXJyZW5jZSJ7ChZMaXN0T2NjdXJyZW5jZXNSZXF1ZXN0",
             "EioKBnBhcmVudBgBIAEoCUIa4EEC+kEUChJncmFmZWFzLmlvL1Byb2plY3QS",
-            "FAoHbm90ZV9pZBgCIAEoCUID4EECEiMKBG5vdGUYAyABKAsyEC5ncmFmZWFz",
-            "LnYxLk5vdGVCA+BBAiKQAQoRVXBkYXRlTm90ZVJlcXVlc3QSJQoEbmFtZRgB",
-            "IAEoCUIX4EEC+kERCg9ncmFmZWFzLmlvL05vdGUSIwoEbm90ZRgCIAEoCzIQ",
-            "LmdyYWZlYXMudjEuTm90ZUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLkZpZWxkTWFzayJ6ChpMaXN0Tm90ZU9jY3VycmVu",
-            "Y2VzUmVxdWVzdBIlCgRuYW1lGAEgASgJQhfgQQL6QREKD2dyYWZlYXMuaW8v",
-            "Tm90ZRIOCgZmaWx0ZXIYAiABKAkSEQoJcGFnZV9zaXplGAMgASgFEhIKCnBh",
-            "Z2VfdG9rZW4YBCABKAkiYwobTGlzdE5vdGVPY2N1cnJlbmNlc1Jlc3BvbnNl",
-            "EisKC29jY3VycmVuY2VzGAEgAygLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNl",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSLJAQoXQmF0Y2hDcmVhdGVOb3Rl",
-            "c1JlcXVlc3QSKgoGcGFyZW50GAEgASgJQhrgQQL6QRQKEmdyYWZlYXMuaW8v",
-            "UHJvamVjdBJCCgVub3RlcxgCIAMoCzIuLmdyYWZlYXMudjEuQmF0Y2hDcmVh",
-            "dGVOb3Rlc1JlcXVlc3QuTm90ZXNFbnRyeUID4EECGj4KCk5vdGVzRW50cnkS",
-            "CwoDa2V5GAEgASgJEh8KBXZhbHVlGAIgASgLMhAuZ3JhZmVhcy52MS5Ob3Rl",
-            "OgI4ASI7ChhCYXRjaENyZWF0ZU5vdGVzUmVzcG9uc2USHwoFbm90ZXMYASAD",
-            "KAsyEC5ncmFmZWFzLnYxLk5vdGUifQodQmF0Y2hDcmVhdGVPY2N1cnJlbmNl",
-            "c1JlcXVlc3QSKgoGcGFyZW50GAEgASgJQhrgQQL6QRQKEmdyYWZlYXMuaW8v",
-            "UHJvamVjdBIwCgtvY2N1cnJlbmNlcxgCIAMoCzIWLmdyYWZlYXMudjEuT2Nj",
-            "dXJyZW5jZUID4EECIk0KHkJhdGNoQ3JlYXRlT2NjdXJyZW5jZXNSZXNwb25z",
-            "ZRIrCgtvY2N1cnJlbmNlcxgBIAMoCzIWLmdyYWZlYXMudjEuT2NjdXJyZW5j",
-            "ZTKSEAoHR3JhZmVhcxJ9Cg1HZXRPY2N1cnJlbmNlEiAuZ3JhZmVhcy52MS5H",
-            "ZXRPY2N1cnJlbmNlUmVxdWVzdBoWLmdyYWZlYXMudjEuT2NjdXJyZW5jZSIy",
-            "gtPkkwIlEiMvdjEve25hbWU9cHJvamVjdHMvKi9vY2N1cnJlbmNlcy8qfdpB",
-            "BG5hbWUSlwEKD0xpc3RPY2N1cnJlbmNlcxIiLmdyYWZlYXMudjEuTGlzdE9j",
-            "Y3VycmVuY2VzUmVxdWVzdBojLmdyYWZlYXMudjEuTGlzdE9jY3VycmVuY2Vz",
-            "UmVzcG9uc2UiO4LT5JMCJRIjL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vb2Nj",
-            "dXJyZW5jZXPaQQ1wYXJlbnQsZmlsdGVyEoMBChBEZWxldGVPY2N1cnJlbmNl",
-            "EiMuZ3JhZmVhcy52MS5EZWxldGVPY2N1cnJlbmNlUmVxdWVzdBoWLmdvb2ds",
-            "ZS5wcm90b2J1Zi5FbXB0eSIygtPkkwIlKiMvdjEve25hbWU9cHJvamVjdHMv",
-            "Ki9vY2N1cnJlbmNlcy8qfdpBBG5hbWUSnAEKEENyZWF0ZU9jY3VycmVuY2US",
-            "Iy5ncmFmZWFzLnYxLkNyZWF0ZU9jY3VycmVuY2VSZXF1ZXN0GhYuZ3JhZmVh",
-            "cy52MS5PY2N1cnJlbmNlIkuC0+STAjEiIy92MS97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L29jY3VycmVuY2VzOgpvY2N1cnJlbmNl2kERcGFyZW50LG9jY3VycmVu",
-            "Y2USwAEKFkJhdGNoQ3JlYXRlT2NjdXJyZW5jZXMSKS5ncmFmZWFzLnYxLkJh",
-            "dGNoQ3JlYXRlT2NjdXJyZW5jZXNSZXF1ZXN0GiouZ3JhZmVhcy52MS5CYXRj",
-            "aENyZWF0ZU9jY3VycmVuY2VzUmVzcG9uc2UiT4LT5JMCNCIvL3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKn0vb2NjdXJyZW5jZXM6YmF0Y2hDcmVhdGU6ASraQRJw",
-            "YXJlbnQsb2NjdXJyZW5jZXMSpgEKEFVwZGF0ZU9jY3VycmVuY2USIy5ncmFm",
-            "ZWFzLnYxLlVwZGF0ZU9jY3VycmVuY2VSZXF1ZXN0GhYuZ3JhZmVhcy52MS5P",
-            "Y2N1cnJlbmNlIlWC0+STAjEyIy92MS97bmFtZT1wcm9qZWN0cy8qL29jY3Vy",
-            "cmVuY2VzLyp9OgpvY2N1cnJlbmNl2kEbbmFtZSxvY2N1cnJlbmNlLHVwZGF0",
-            "ZV9tYXNrEoUBChFHZXRPY2N1cnJlbmNlTm90ZRIkLmdyYWZlYXMudjEuR2V0",
-            "T2NjdXJyZW5jZU5vdGVSZXF1ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlIjiC0+ST",
-            "AisSKS92MS97bmFtZT1wcm9qZWN0cy8qL29jY3VycmVuY2VzLyp9L25vdGVz",
-            "2kEEbmFtZRJlCgdHZXROb3RlEhouZ3JhZmVhcy52MS5HZXROb3RlUmVxdWVz",
-            "dBoQLmdyYWZlYXMudjEuTm90ZSIsgtPkkwIfEh0vdjEve25hbWU9cHJvamVj",
-            "dHMvKi9ub3Rlcy8qfdpBBG5hbWUSfwoJTGlzdE5vdGVzEhwuZ3JhZmVhcy52",
-            "MS5MaXN0Tm90ZXNSZXF1ZXN0Gh0uZ3JhZmVhcy52MS5MaXN0Tm90ZXNSZXNw",
-            "b25zZSI1gtPkkwIfEh0vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9ub3Rlc9pB",
-            "DXBhcmVudCxmaWx0ZXIScQoKRGVsZXRlTm90ZRIdLmdyYWZlYXMudjEuRGVs",
-            "ZXRlTm90ZVJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiLILT5JMC",
-            "HyodL3YxL3tuYW1lPXByb2plY3RzLyovbm90ZXMvKn3aQQRuYW1lEoABCgpD",
-            "cmVhdGVOb3RlEh0uZ3JhZmVhcy52MS5DcmVhdGVOb3RlUmVxdWVzdBoQLmdy",
-            "YWZlYXMudjEuTm90ZSJBgtPkkwIlIh0vdjEve3BhcmVudD1wcm9qZWN0cy8q",
-            "fS9ub3RlczoEbm90ZdpBE3BhcmVudCxub3RlX2lkLG5vdGUSogEKEEJhdGNo",
-            "Q3JlYXRlTm90ZXMSIy5ncmFmZWFzLnYxLkJhdGNoQ3JlYXRlTm90ZXNSZXF1",
-            "ZXN0GiQuZ3JhZmVhcy52MS5CYXRjaENyZWF0ZU5vdGVzUmVzcG9uc2UiQ4LT",
-            "5JMCLiIpL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vbm90ZXM6YmF0Y2hDcmVh",
-            "dGU6ASraQQxwYXJlbnQsbm90ZXMSggEKClVwZGF0ZU5vdGUSHS5ncmFmZWFz",
-            "LnYxLlVwZGF0ZU5vdGVSZXF1ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlIkOC0+ST",
-            "AiUyHS92MS97bmFtZT1wcm9qZWN0cy8qL25vdGVzLyp9OgRub3Rl2kEVbmFt",
-            "ZSxub3RlLHVwZGF0ZV9tYXNrEqcBChNMaXN0Tm90ZU9jY3VycmVuY2VzEiYu",
-            "Z3JhZmVhcy52MS5MaXN0Tm90ZU9jY3VycmVuY2VzUmVxdWVzdBonLmdyYWZl",
-            "YXMudjEuTGlzdE5vdGVPY2N1cnJlbmNlc1Jlc3BvbnNlIj+C0+STAisSKS92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL25vdGVzLyp9L29jY3VycmVuY2Vz2kELbmFt",
-            "ZSxmaWx0ZXIaI8pBIGNvbnRhaW5lcmFuYWx5c2lzLmdvb2dsZWFwaXMuY29t",
-            "QnwKDWlvLmdyYWZlYXMudjFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJv",
-            "dG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkHqQSgKEmdy",
-            "YWZlYXMuaW8vUHJvamVjdBIScHJvamVjdHMve3Byb2plY3R9YgZwcm90bzM="));
+            "DgoGZmlsdGVyGAIgASgJEhEKCXBhZ2Vfc2l6ZRgDIAEoBRISCgpwYWdlX3Rv",
+            "a2VuGAQgASgJIl8KF0xpc3RPY2N1cnJlbmNlc1Jlc3BvbnNlEisKC29jY3Vy",
+            "cmVuY2VzGAEgAygLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlEhcKD25leHRf",
+            "cGFnZV90b2tlbhgCIAEoCSJGChdEZWxldGVPY2N1cnJlbmNlUmVxdWVzdBIr",
+            "CgRuYW1lGAEgASgJQh3gQQL6QRcKFWdyYWZlYXMuaW8vT2NjdXJyZW5jZSJ2",
+            "ChdDcmVhdGVPY2N1cnJlbmNlUmVxdWVzdBIqCgZwYXJlbnQYASABKAlCGuBB",
+            "AvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0Ei8KCm9jY3VycmVuY2UYAiABKAsy",
+            "Fi5ncmFmZWFzLnYxLk9jY3VycmVuY2VCA+BBAiKoAQoXVXBkYXRlT2NjdXJy",
+            "ZW5jZVJlcXVlc3QSKwoEbmFtZRgBIAEoCUId4EEC+kEXChVncmFmZWFzLmlv",
+            "L09jY3VycmVuY2USLwoKb2NjdXJyZW5jZRgCIAEoCzIWLmdyYWZlYXMudjEu",
+            "T2NjdXJyZW5jZUID4EECEi8KC3VwZGF0ZV9tYXNrGAMgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLkZpZWxkTWFzayI3Cg5HZXROb3RlUmVxdWVzdBIlCgRuYW1l",
+            "GAEgASgJQhfgQQL6QREKD2dyYWZlYXMuaW8vTm90ZSJHChhHZXRPY2N1cnJl",
+            "bmNlTm90ZVJlcXVlc3QSKwoEbmFtZRgBIAEoCUId4EEC+kEXChVncmFmZWFz",
+            "LmlvL09jY3VycmVuY2UidQoQTGlzdE5vdGVzUmVxdWVzdBIqCgZwYXJlbnQY",
+            "ASABKAlCGuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0Eg4KBmZpbHRlchgC",
+            "IAEoCRIRCglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJN",
+            "ChFMaXN0Tm90ZXNSZXNwb25zZRIfCgVub3RlcxgBIAMoCzIQLmdyYWZlYXMu",
+            "djEuTm90ZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiOgoRRGVsZXRlTm90",
+            "ZVJlcXVlc3QSJQoEbmFtZRgBIAEoCUIX4EEC+kERCg9ncmFmZWFzLmlvL05v",
+            "dGUiegoRQ3JlYXRlTm90ZVJlcXVlc3QSKgoGcGFyZW50GAEgASgJQhrgQQL6",
+            "QRQKEmdyYWZlYXMuaW8vUHJvamVjdBIUCgdub3RlX2lkGAIgASgJQgPgQQIS",
+            "IwoEbm90ZRgDIAEoCzIQLmdyYWZlYXMudjEuTm90ZUID4EECIpABChFVcGRh",
+            "dGVOb3RlUmVxdWVzdBIlCgRuYW1lGAEgASgJQhfgQQL6QREKD2dyYWZlYXMu",
+            "aW8vTm90ZRIjCgRub3RlGAIgASgLMhAuZ3JhZmVhcy52MS5Ob3RlQgPgQQIS",
+            "LwoLdXBkYXRlX21hc2sYAyABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRN",
+            "YXNrInoKGkxpc3ROb3RlT2NjdXJyZW5jZXNSZXF1ZXN0EiUKBG5hbWUYASAB",
+            "KAlCF+BBAvpBEQoPZ3JhZmVhcy5pby9Ob3RlEg4KBmZpbHRlchgCIAEoCRIR",
+            "CglwYWdlX3NpemUYAyABKAUSEgoKcGFnZV90b2tlbhgEIAEoCSJjChtMaXN0",
+            "Tm90ZU9jY3VycmVuY2VzUmVzcG9uc2USKwoLb2NjdXJyZW5jZXMYASADKAsy",
+            "Fi5ncmFmZWFzLnYxLk9jY3VycmVuY2USFwoPbmV4dF9wYWdlX3Rva2VuGAIg",
+            "ASgJIskBChdCYXRjaENyZWF0ZU5vdGVzUmVxdWVzdBIqCgZwYXJlbnQYASAB",
+            "KAlCGuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0EkIKBW5vdGVzGAIgAygL",
+            "Mi4uZ3JhZmVhcy52MS5CYXRjaENyZWF0ZU5vdGVzUmVxdWVzdC5Ob3Rlc0Vu",
+            "dHJ5QgPgQQIaPgoKTm90ZXNFbnRyeRILCgNrZXkYASABKAkSHwoFdmFsdWUY",
+            "AiABKAsyEC5ncmFmZWFzLnYxLk5vdGU6AjgBIjsKGEJhdGNoQ3JlYXRlTm90",
+            "ZXNSZXNwb25zZRIfCgVub3RlcxgBIAMoCzIQLmdyYWZlYXMudjEuTm90ZSJ9",
+            "Ch1CYXRjaENyZWF0ZU9jY3VycmVuY2VzUmVxdWVzdBIqCgZwYXJlbnQYASAB",
+            "KAlCGuBBAvpBFAoSZ3JhZmVhcy5pby9Qcm9qZWN0EjAKC29jY3VycmVuY2Vz",
+            "GAIgAygLMhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlQgPgQQIiTQoeQmF0Y2hD",
+            "cmVhdGVPY2N1cnJlbmNlc1Jlc3BvbnNlEisKC29jY3VycmVuY2VzGAEgAygL",
+            "MhYuZ3JhZmVhcy52MS5PY2N1cnJlbmNlMpIQCgdHcmFmZWFzEn0KDUdldE9j",
+            "Y3VycmVuY2USIC5ncmFmZWFzLnYxLkdldE9jY3VycmVuY2VSZXF1ZXN0GhYu",
+            "Z3JhZmVhcy52MS5PY2N1cnJlbmNlIjKC0+STAiUSIy92MS97bmFtZT1wcm9q",
+            "ZWN0cy8qL29jY3VycmVuY2VzLyp92kEEbmFtZRKXAQoPTGlzdE9jY3VycmVu",
+            "Y2VzEiIuZ3JhZmVhcy52MS5MaXN0T2NjdXJyZW5jZXNSZXF1ZXN0GiMuZ3Jh",
+            "ZmVhcy52MS5MaXN0T2NjdXJyZW5jZXNSZXNwb25zZSI7gtPkkwIlEiMvdjEv",
+            "e3BhcmVudD1wcm9qZWN0cy8qfS9vY2N1cnJlbmNlc9pBDXBhcmVudCxmaWx0",
+            "ZXISgwEKEERlbGV0ZU9jY3VycmVuY2USIy5ncmFmZWFzLnYxLkRlbGV0ZU9j",
+            "Y3VycmVuY2VSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjKC0+ST",
+            "AiUqIy92MS97bmFtZT1wcm9qZWN0cy8qL29jY3VycmVuY2VzLyp92kEEbmFt",
+            "ZRKcAQoQQ3JlYXRlT2NjdXJyZW5jZRIjLmdyYWZlYXMudjEuQ3JlYXRlT2Nj",
+            "dXJyZW5jZVJlcXVlc3QaFi5ncmFmZWFzLnYxLk9jY3VycmVuY2UiS4LT5JMC",
+            "MSIjL3YxL3twYXJlbnQ9cHJvamVjdHMvKn0vb2NjdXJyZW5jZXM6Cm9jY3Vy",
+            "cmVuY2XaQRFwYXJlbnQsb2NjdXJyZW5jZRLAAQoWQmF0Y2hDcmVhdGVPY2N1",
+            "cnJlbmNlcxIpLmdyYWZlYXMudjEuQmF0Y2hDcmVhdGVPY2N1cnJlbmNlc1Jl",
+            "cXVlc3QaKi5ncmFmZWFzLnYxLkJhdGNoQ3JlYXRlT2NjdXJyZW5jZXNSZXNw",
+            "b25zZSJPgtPkkwI0Ii8vdjEve3BhcmVudD1wcm9qZWN0cy8qfS9vY2N1cnJl",
+            "bmNlczpiYXRjaENyZWF0ZToBKtpBEnBhcmVudCxvY2N1cnJlbmNlcxKmAQoQ",
+            "VXBkYXRlT2NjdXJyZW5jZRIjLmdyYWZlYXMudjEuVXBkYXRlT2NjdXJyZW5j",
+            "ZVJlcXVlc3QaFi5ncmFmZWFzLnYxLk9jY3VycmVuY2UiVYLT5JMCMTIjL3Yx",
+            "L3tuYW1lPXByb2plY3RzLyovb2NjdXJyZW5jZXMvKn06Cm9jY3VycmVuY2Xa",
+            "QRtuYW1lLG9jY3VycmVuY2UsdXBkYXRlX21hc2sShQEKEUdldE9jY3VycmVu",
+            "Y2VOb3RlEiQuZ3JhZmVhcy52MS5HZXRPY2N1cnJlbmNlTm90ZVJlcXVlc3Qa",
+            "EC5ncmFmZWFzLnYxLk5vdGUiOILT5JMCKxIpL3YxL3tuYW1lPXByb2plY3Rz",
+            "Lyovb2NjdXJyZW5jZXMvKn0vbm90ZXPaQQRuYW1lEmUKB0dldE5vdGUSGi5n",
+            "cmFmZWFzLnYxLkdldE5vdGVSZXF1ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlIiyC",
+            "0+STAh8SHS92MS97bmFtZT1wcm9qZWN0cy8qL25vdGVzLyp92kEEbmFtZRJ/",
+            "CglMaXN0Tm90ZXMSHC5ncmFmZWFzLnYxLkxpc3ROb3Rlc1JlcXVlc3QaHS5n",
+            "cmFmZWFzLnYxLkxpc3ROb3Rlc1Jlc3BvbnNlIjWC0+STAh8SHS92MS97cGFy",
+            "ZW50PXByb2plY3RzLyp9L25vdGVz2kENcGFyZW50LGZpbHRlchJxCgpEZWxl",
+            "dGVOb3RlEh0uZ3JhZmVhcy52MS5EZWxldGVOb3RlUmVxdWVzdBoWLmdvb2ds",
+            "ZS5wcm90b2J1Zi5FbXB0eSIsgtPkkwIfKh0vdjEve25hbWU9cHJvamVjdHMv",
+            "Ki9ub3Rlcy8qfdpBBG5hbWUSgAEKCkNyZWF0ZU5vdGUSHS5ncmFmZWFzLnYx",
+            "LkNyZWF0ZU5vdGVSZXF1ZXN0GhAuZ3JhZmVhcy52MS5Ob3RlIkGC0+STAiUi",
+            "HS92MS97cGFyZW50PXByb2plY3RzLyp9L25vdGVzOgRub3Rl2kETcGFyZW50",
+            "LG5vdGVfaWQsbm90ZRKiAQoQQmF0Y2hDcmVhdGVOb3RlcxIjLmdyYWZlYXMu",
+            "djEuQmF0Y2hDcmVhdGVOb3Rlc1JlcXVlc3QaJC5ncmFmZWFzLnYxLkJhdGNo",
+            "Q3JlYXRlTm90ZXNSZXNwb25zZSJDgtPkkwIuIikvdjEve3BhcmVudD1wcm9q",
+            "ZWN0cy8qfS9ub3RlczpiYXRjaENyZWF0ZToBKtpBDHBhcmVudCxub3RlcxKC",
+            "AQoKVXBkYXRlTm90ZRIdLmdyYWZlYXMudjEuVXBkYXRlTm90ZVJlcXVlc3Qa",
+            "EC5ncmFmZWFzLnYxLk5vdGUiQ4LT5JMCJTIdL3YxL3tuYW1lPXByb2plY3Rz",
+            "Lyovbm90ZXMvKn06BG5vdGXaQRVuYW1lLG5vdGUsdXBkYXRlX21hc2sSpwEK",
+            "E0xpc3ROb3RlT2NjdXJyZW5jZXMSJi5ncmFmZWFzLnYxLkxpc3ROb3RlT2Nj",
+            "dXJyZW5jZXNSZXF1ZXN0GicuZ3JhZmVhcy52MS5MaXN0Tm90ZU9jY3VycmVu",
+            "Y2VzUmVzcG9uc2UiP4LT5JMCKxIpL3YxL3tuYW1lPXByb2plY3RzLyovbm90",
+            "ZXMvKn0vb2NjdXJyZW5jZXPaQQtuYW1lLGZpbHRlchojykEgY29udGFpbmVy",
+            "YW5hbHlzaXMuZ29vZ2xlYXBpcy5jb21CfAoNaW8uZ3JhZmVhcy52MVABWjhn",
+            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMv",
+            "djE7Z3JhZmVhc6ICA0dSQepBKAoSZ3JhZmVhcy5pby9Qcm9qZWN0EhJwcm9q",
+            "ZWN0cy97cHJvamVjdH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.AttestationReflection.Descriptor, global::Grafeas.V1.BuildReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, global::Grafeas.V1.DeploymentReflection.Descriptor, global::Grafeas.V1.DiscoveryReflection.Descriptor, global::Grafeas.V1.ImageReflection.Descriptor, global::Grafeas.V1.PackageReflection.Descriptor, global::Grafeas.V1.UpgradeReflection.Descriptor, global::Grafeas.V1.VulnerabilityReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Grafeas.V1.AttestationReflection.Descriptor, global::Grafeas.V1.BuildReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, global::Grafeas.V1.ComplianceReflection.Descriptor, global::Grafeas.V1.DeploymentReflection.Descriptor, global::Grafeas.V1.DiscoveryReflection.Descriptor, global::Grafeas.V1.DsseAttestationReflection.Descriptor, global::Grafeas.V1.ImageReflection.Descriptor, global::Grafeas.V1.PackageReflection.Descriptor, global::Grafeas.V1.UpgradeReflection.Descriptor, global::Grafeas.V1.VulnerabilityReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Occurrence), global::Grafeas.V1.Occurrence.Parser, new[]{ "Name", "ResourceUri", "NoteName", "Kind", "Remediation", "CreateTime", "UpdateTime", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade" }, new[]{ "Details" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Note), global::Grafeas.V1.Note.Parser, new[]{ "Name", "ShortDescription", "LongDescription", "Kind", "RelatedUrl", "ExpirationTime", "CreateTime", "UpdateTime", "RelatedNoteNames", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade" }, new[]{ "Type" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Occurrence), global::Grafeas.V1.Occurrence.Parser, new[]{ "Name", "ResourceUri", "NoteName", "Kind", "Remediation", "CreateTime", "UpdateTime", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade", "Compliance", "DsseAttestation", "Envelope" }, new[]{ "Details" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.Note), global::Grafeas.V1.Note.Parser, new[]{ "Name", "ShortDescription", "LongDescription", "Kind", "RelatedUrl", "ExpirationTime", "CreateTime", "UpdateTime", "RelatedNoteNames", "Vulnerability", "Build", "Image", "Package", "Deployment", "Discovery", "Attestation", "Upgrade", "Compliance", "DsseAttestation" }, new[]{ "Type" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.GetOccurrenceRequest), global::Grafeas.V1.GetOccurrenceRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesRequest), global::Grafeas.V1.ListOccurrencesRequest.Parser, new[]{ "Parent", "Filter", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.ListOccurrencesResponse), global::Grafeas.V1.ListOccurrencesResponse.Parser, new[]{ "Occurrences", "NextPageToken" }, null, null, null, null),
@@ -236,6 +244,7 @@ namespace Grafeas.V1 {
       remediation_ = other.remediation_;
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
+      envelope_ = other.envelope_ != null ? other.envelope_.Clone() : null;
       switch (other.DetailsCase) {
         case DetailsOneofCase.Vulnerability:
           Vulnerability = other.Vulnerability.Clone();
@@ -260,6 +269,12 @@ namespace Grafeas.V1 {
           break;
         case DetailsOneofCase.Upgrade:
           Upgrade = other.Upgrade.Clone();
+          break;
+        case DetailsOneofCase.Compliance:
+          Compliance = other.Compliance.Clone();
+          break;
+        case DetailsOneofCase.DsseAttestation:
+          DsseAttestation = other.DsseAttestation.Clone();
           break;
       }
 
@@ -504,6 +519,51 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "compliance" field.</summary>
+    public const int ComplianceFieldNumber = 16;
+    /// <summary>
+    /// Describes a compliance violation on a linked resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.ComplianceOccurrence Compliance {
+      get { return detailsCase_ == DetailsOneofCase.Compliance ? (global::Grafeas.V1.ComplianceOccurrence) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.Compliance;
+      }
+    }
+
+    /// <summary>Field number for the "dsse_attestation" field.</summary>
+    public const int DsseAttestationFieldNumber = 17;
+    /// <summary>
+    /// Describes an attestation of an artifact using dsse.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.DSSEAttestationOccurrence DsseAttestation {
+      get { return detailsCase_ == DetailsOneofCase.DsseAttestation ? (global::Grafeas.V1.DSSEAttestationOccurrence) details_ : null; }
+      set {
+        details_ = value;
+        detailsCase_ = value == null ? DetailsOneofCase.None : DetailsOneofCase.DsseAttestation;
+      }
+    }
+
+    /// <summary>Field number for the "envelope" field.</summary>
+    public const int EnvelopeFieldNumber = 18;
+    private global::Grafeas.V1.Envelope envelope_;
+    /// <summary>
+    /// https://github.com/secure-systems-lab/dsse
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.Envelope Envelope {
+      get { return envelope_; }
+      set {
+        envelope_ = value;
+      }
+    }
+
     private object details_;
     /// <summary>Enum of possible cases for the "details" oneof.</summary>
     public enum DetailsOneofCase {
@@ -516,6 +576,8 @@ namespace Grafeas.V1 {
       Discovery = 13,
       Attestation = 14,
       Upgrade = 15,
+      Compliance = 16,
+      DsseAttestation = 17,
     }
     private DetailsOneofCase detailsCase_ = DetailsOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -561,6 +623,9 @@ namespace Grafeas.V1 {
       if (!object.Equals(Discovery, other.Discovery)) return false;
       if (!object.Equals(Attestation, other.Attestation)) return false;
       if (!object.Equals(Upgrade, other.Upgrade)) return false;
+      if (!object.Equals(Compliance, other.Compliance)) return false;
+      if (!object.Equals(DsseAttestation, other.DsseAttestation)) return false;
+      if (!object.Equals(Envelope, other.Envelope)) return false;
       if (DetailsCase != other.DetailsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -584,6 +649,9 @@ namespace Grafeas.V1 {
       if (detailsCase_ == DetailsOneofCase.Discovery) hash ^= Discovery.GetHashCode();
       if (detailsCase_ == DetailsOneofCase.Attestation) hash ^= Attestation.GetHashCode();
       if (detailsCase_ == DetailsOneofCase.Upgrade) hash ^= Upgrade.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.Compliance) hash ^= Compliance.GetHashCode();
+      if (detailsCase_ == DetailsOneofCase.DsseAttestation) hash ^= DsseAttestation.GetHashCode();
+      if (envelope_ != null) hash ^= Envelope.GetHashCode();
       hash ^= (int) detailsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -663,6 +731,18 @@ namespace Grafeas.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(Upgrade);
       }
+      if (detailsCase_ == DetailsOneofCase.Compliance) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Compliance);
+      }
+      if (detailsCase_ == DetailsOneofCase.DsseAttestation) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(DsseAttestation);
+      }
+      if (envelope_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Envelope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -733,6 +813,18 @@ namespace Grafeas.V1 {
         output.WriteRawTag(122);
         output.WriteMessage(Upgrade);
       }
+      if (detailsCase_ == DetailsOneofCase.Compliance) {
+        output.WriteRawTag(130, 1);
+        output.WriteMessage(Compliance);
+      }
+      if (detailsCase_ == DetailsOneofCase.DsseAttestation) {
+        output.WriteRawTag(138, 1);
+        output.WriteMessage(DsseAttestation);
+      }
+      if (envelope_ != null) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Envelope);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -788,6 +880,15 @@ namespace Grafeas.V1 {
       if (detailsCase_ == DetailsOneofCase.Upgrade) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Upgrade);
       }
+      if (detailsCase_ == DetailsOneofCase.Compliance) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Compliance);
+      }
+      if (detailsCase_ == DetailsOneofCase.DsseAttestation) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DsseAttestation);
+      }
+      if (envelope_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Envelope);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -826,6 +927,12 @@ namespace Grafeas.V1 {
           UpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdateTime.MergeFrom(other.UpdateTime);
+      }
+      if (other.envelope_ != null) {
+        if (envelope_ == null) {
+          Envelope = new global::Grafeas.V1.Envelope();
+        }
+        Envelope.MergeFrom(other.Envelope);
       }
       switch (other.DetailsCase) {
         case DetailsOneofCase.Vulnerability:
@@ -875,6 +982,18 @@ namespace Grafeas.V1 {
             Upgrade = new global::Grafeas.V1.UpgradeOccurrence();
           }
           Upgrade.MergeFrom(other.Upgrade);
+          break;
+        case DetailsOneofCase.Compliance:
+          if (Compliance == null) {
+            Compliance = new global::Grafeas.V1.ComplianceOccurrence();
+          }
+          Compliance.MergeFrom(other.Compliance);
+          break;
+        case DetailsOneofCase.DsseAttestation:
+          if (DsseAttestation == null) {
+            DsseAttestation = new global::Grafeas.V1.DSSEAttestationOccurrence();
+          }
+          DsseAttestation.MergeFrom(other.DsseAttestation);
           break;
       }
 
@@ -999,6 +1118,31 @@ namespace Grafeas.V1 {
             Upgrade = subBuilder;
             break;
           }
+          case 130: {
+            global::Grafeas.V1.ComplianceOccurrence subBuilder = new global::Grafeas.V1.ComplianceOccurrence();
+            if (detailsCase_ == DetailsOneofCase.Compliance) {
+              subBuilder.MergeFrom(Compliance);
+            }
+            input.ReadMessage(subBuilder);
+            Compliance = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Grafeas.V1.DSSEAttestationOccurrence subBuilder = new global::Grafeas.V1.DSSEAttestationOccurrence();
+            if (detailsCase_ == DetailsOneofCase.DsseAttestation) {
+              subBuilder.MergeFrom(DsseAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            DsseAttestation = subBuilder;
+            break;
+          }
+          case 146: {
+            if (envelope_ == null) {
+              Envelope = new global::Grafeas.V1.Envelope();
+            }
+            input.ReadMessage(Envelope);
+            break;
+          }
         }
       }
     #endif
@@ -1120,6 +1264,31 @@ namespace Grafeas.V1 {
             Upgrade = subBuilder;
             break;
           }
+          case 130: {
+            global::Grafeas.V1.ComplianceOccurrence subBuilder = new global::Grafeas.V1.ComplianceOccurrence();
+            if (detailsCase_ == DetailsOneofCase.Compliance) {
+              subBuilder.MergeFrom(Compliance);
+            }
+            input.ReadMessage(subBuilder);
+            Compliance = subBuilder;
+            break;
+          }
+          case 138: {
+            global::Grafeas.V1.DSSEAttestationOccurrence subBuilder = new global::Grafeas.V1.DSSEAttestationOccurrence();
+            if (detailsCase_ == DetailsOneofCase.DsseAttestation) {
+              subBuilder.MergeFrom(DsseAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            DsseAttestation = subBuilder;
+            break;
+          }
+          case 146: {
+            if (envelope_ == null) {
+              Envelope = new global::Grafeas.V1.Envelope();
+            }
+            input.ReadMessage(Envelope);
+            break;
+          }
         }
       }
     }
@@ -1197,6 +1366,12 @@ namespace Grafeas.V1 {
           break;
         case TypeOneofCase.Upgrade:
           Upgrade = other.Upgrade.Clone();
+          break;
+        case TypeOneofCase.Compliance:
+          Compliance = other.Compliance.Clone();
+          break;
+        case TypeOneofCase.DsseAttestation:
+          DsseAttestation = other.DsseAttestation.Clone();
           break;
       }
 
@@ -1466,6 +1641,36 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "compliance" field.</summary>
+    public const int ComplianceFieldNumber = 18;
+    /// <summary>
+    /// A note describing a compliance check.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.ComplianceNote Compliance {
+      get { return typeCase_ == TypeOneofCase.Compliance ? (global::Grafeas.V1.ComplianceNote) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.Compliance;
+      }
+    }
+
+    /// <summary>Field number for the "dsse_attestation" field.</summary>
+    public const int DsseAttestationFieldNumber = 19;
+    /// <summary>
+    /// A note describing a dsse attestation note.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.DSSEAttestationNote DsseAttestation {
+      get { return typeCase_ == TypeOneofCase.DsseAttestation ? (global::Grafeas.V1.DSSEAttestationNote) type_ : null; }
+      set {
+        type_ = value;
+        typeCase_ = value == null ? TypeOneofCase.None : TypeOneofCase.DsseAttestation;
+      }
+    }
+
     private object type_;
     /// <summary>Enum of possible cases for the "type" oneof.</summary>
     public enum TypeOneofCase {
@@ -1478,6 +1683,8 @@ namespace Grafeas.V1 {
       Discovery = 15,
       Attestation = 16,
       Upgrade = 17,
+      Compliance = 18,
+      DsseAttestation = 19,
     }
     private TypeOneofCase typeCase_ = TypeOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1525,6 +1732,8 @@ namespace Grafeas.V1 {
       if (!object.Equals(Discovery, other.Discovery)) return false;
       if (!object.Equals(Attestation, other.Attestation)) return false;
       if (!object.Equals(Upgrade, other.Upgrade)) return false;
+      if (!object.Equals(Compliance, other.Compliance)) return false;
+      if (!object.Equals(DsseAttestation, other.DsseAttestation)) return false;
       if (TypeCase != other.TypeCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1550,6 +1759,8 @@ namespace Grafeas.V1 {
       if (typeCase_ == TypeOneofCase.Discovery) hash ^= Discovery.GetHashCode();
       if (typeCase_ == TypeOneofCase.Attestation) hash ^= Attestation.GetHashCode();
       if (typeCase_ == TypeOneofCase.Upgrade) hash ^= Upgrade.GetHashCode();
+      if (typeCase_ == TypeOneofCase.Compliance) hash ^= Compliance.GetHashCode();
+      if (typeCase_ == TypeOneofCase.DsseAttestation) hash ^= DsseAttestation.GetHashCode();
       hash ^= (int) typeCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1631,6 +1842,14 @@ namespace Grafeas.V1 {
         output.WriteRawTag(138, 1);
         output.WriteMessage(Upgrade);
       }
+      if (typeCase_ == TypeOneofCase.Compliance) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Compliance);
+      }
+      if (typeCase_ == TypeOneofCase.DsseAttestation) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(DsseAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1703,6 +1922,14 @@ namespace Grafeas.V1 {
         output.WriteRawTag(138, 1);
         output.WriteMessage(Upgrade);
       }
+      if (typeCase_ == TypeOneofCase.Compliance) {
+        output.WriteRawTag(146, 1);
+        output.WriteMessage(Compliance);
+      }
+      if (typeCase_ == TypeOneofCase.DsseAttestation) {
+        output.WriteRawTag(154, 1);
+        output.WriteMessage(DsseAttestation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1759,6 +1986,12 @@ namespace Grafeas.V1 {
       }
       if (typeCase_ == TypeOneofCase.Upgrade) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Upgrade);
+      }
+      if (typeCase_ == TypeOneofCase.Compliance) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Compliance);
+      }
+      if (typeCase_ == TypeOneofCase.DsseAttestation) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(DsseAttestation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1852,6 +2085,18 @@ namespace Grafeas.V1 {
             Upgrade = new global::Grafeas.V1.UpgradeNote();
           }
           Upgrade.MergeFrom(other.Upgrade);
+          break;
+        case TypeOneofCase.Compliance:
+          if (Compliance == null) {
+            Compliance = new global::Grafeas.V1.ComplianceNote();
+          }
+          Compliance.MergeFrom(other.Compliance);
+          break;
+        case TypeOneofCase.DsseAttestation:
+          if (DsseAttestation == null) {
+            DsseAttestation = new global::Grafeas.V1.DSSEAttestationNote();
+          }
+          DsseAttestation.MergeFrom(other.DsseAttestation);
           break;
       }
 
@@ -1987,6 +2232,24 @@ namespace Grafeas.V1 {
             Upgrade = subBuilder;
             break;
           }
+          case 146: {
+            global::Grafeas.V1.ComplianceNote subBuilder = new global::Grafeas.V1.ComplianceNote();
+            if (typeCase_ == TypeOneofCase.Compliance) {
+              subBuilder.MergeFrom(Compliance);
+            }
+            input.ReadMessage(subBuilder);
+            Compliance = subBuilder;
+            break;
+          }
+          case 154: {
+            global::Grafeas.V1.DSSEAttestationNote subBuilder = new global::Grafeas.V1.DSSEAttestationNote();
+            if (typeCase_ == TypeOneofCase.DsseAttestation) {
+              subBuilder.MergeFrom(DsseAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            DsseAttestation = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -2117,6 +2380,24 @@ namespace Grafeas.V1 {
             }
             input.ReadMessage(subBuilder);
             Upgrade = subBuilder;
+            break;
+          }
+          case 146: {
+            global::Grafeas.V1.ComplianceNote subBuilder = new global::Grafeas.V1.ComplianceNote();
+            if (typeCase_ == TypeOneofCase.Compliance) {
+              subBuilder.MergeFrom(Compliance);
+            }
+            input.ReadMessage(subBuilder);
+            Compliance = subBuilder;
+            break;
+          }
+          case 154: {
+            global::Grafeas.V1.DSSEAttestationNote subBuilder = new global::Grafeas.V1.DSSEAttestationNote();
+            if (typeCase_ == TypeOneofCase.DsseAttestation) {
+              subBuilder.MergeFrom(DsseAttestation);
+            }
+            input.ReadMessage(subBuilder);
+            DsseAttestation = subBuilder;
             break;
           }
         }

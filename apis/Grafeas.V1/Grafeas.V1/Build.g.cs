@@ -24,18 +24,22 @@ namespace Grafeas.V1 {
     static BuildReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChZncmFmZWFzL3YxL2J1aWxkLnByb3RvEgpncmFmZWFzLnYxGhtncmFmZWFz",
-            "L3YxL3Byb3ZlbmFuY2UucHJvdG8iJAoJQnVpbGROb3RlEhcKD2J1aWxkZXJf",
-            "dmVyc2lvbhgBIAEoCSJcCg9CdWlsZE9jY3VycmVuY2USLwoKcHJvdmVuYW5j",
-            "ZRgBIAEoCzIbLmdyYWZlYXMudjEuQnVpbGRQcm92ZW5hbmNlEhgKEHByb3Zl",
-            "bmFuY2VfYnl0ZXMYAiABKAlCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3Jh",
-            "ZmVhc6ICA0dSQWIGcHJvdG8z"));
+            "ChZncmFmZWFzL3YxL2J1aWxkLnByb3RvEgpncmFmZWFzLnYxGiJncmFmZWFz",
+            "L3YxL2ludG90b19wcm92ZW5hbmNlLnByb3RvGiFncmFmZWFzL3YxL2ludG90",
+            "b19zdGF0ZW1lbnQucHJvdG8aG2dyYWZlYXMvdjEvcHJvdmVuYW5jZS5wcm90",
+            "byIkCglCdWlsZE5vdGUSFwoPYnVpbGRlcl92ZXJzaW9uGAEgASgJIswBCg9C",
+            "dWlsZE9jY3VycmVuY2USLwoKcHJvdmVuYW5jZRgBIAEoCzIbLmdyYWZlYXMu",
+            "djEuQnVpbGRQcm92ZW5hbmNlEhgKEHByb3ZlbmFuY2VfYnl0ZXMYAiABKAkS",
+            "NwoRaW50b3RvX3Byb3ZlbmFuY2UYAyABKAsyHC5ncmFmZWFzLnYxLkluVG90",
+            "b1Byb3ZlbmFuY2USNQoQaW50b3RvX3N0YXRlbWVudBgEIAEoCzIbLmdyYWZl",
+            "YXMudjEuSW5Ub3RvU3RhdGVtZW50QlEKDWlvLmdyYWZlYXMudjFQAVo4Z29v",
+            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9ncmFmZWFzL3Yx",
+            "O2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Grafeas.V1.ProvenanceReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Grafeas.V1.IntotoProvenanceReflection.Descriptor, global::Grafeas.V1.IntotoStatementReflection.Descriptor, global::Grafeas.V1.ProvenanceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildNote), global::Grafeas.V1.BuildNote.Parser, new[]{ "BuilderVersion" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildOccurrence), global::Grafeas.V1.BuildOccurrence.Parser, new[]{ "Provenance", "ProvenanceBytes" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.BuildOccurrence), global::Grafeas.V1.BuildOccurrence.Parser, new[]{ "Provenance", "ProvenanceBytes", "IntotoProvenance", "IntotoStatement" }, null, null, null, null)
           }));
     }
     #endregion
@@ -277,6 +281,8 @@ namespace Grafeas.V1 {
     public BuildOccurrence(BuildOccurrence other) : this() {
       provenance_ = other.provenance_ != null ? other.provenance_.Clone() : null;
       provenanceBytes_ = other.provenanceBytes_;
+      intotoProvenance_ = other.intotoProvenance_ != null ? other.intotoProvenance_.Clone() : null;
+      intotoStatement_ = other.intotoStatement_ != null ? other.intotoStatement_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -290,7 +296,7 @@ namespace Grafeas.V1 {
     public const int ProvenanceFieldNumber = 1;
     private global::Grafeas.V1.BuildProvenance provenance_;
     /// <summary>
-    /// Required. The actual provenance for the build.
+    /// The actual provenance for the build.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -326,6 +332,40 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "intoto_provenance" field.</summary>
+    public const int IntotoProvenanceFieldNumber = 3;
+    private global::Grafeas.V1.InTotoProvenance intotoProvenance_;
+    /// <summary>
+    /// Deprecated. See InTotoStatement for the replacement.
+    /// In-toto Provenance representation as defined in spec.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.InTotoProvenance IntotoProvenance {
+      get { return intotoProvenance_; }
+      set {
+        intotoProvenance_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "intoto_statement" field.</summary>
+    public const int IntotoStatementFieldNumber = 4;
+    private global::Grafeas.V1.InTotoStatement intotoStatement_;
+    /// <summary>
+    /// In-toto Statement representation as defined in spec.
+    /// The intoto_statement can contain any type of provenance. The serialized
+    /// payload of the statement can be stored and signed in the Occurrence's
+    /// envelope.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Grafeas.V1.InTotoStatement IntotoStatement {
+      get { return intotoStatement_; }
+      set {
+        intotoStatement_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -343,6 +383,8 @@ namespace Grafeas.V1 {
       }
       if (!object.Equals(Provenance, other.Provenance)) return false;
       if (ProvenanceBytes != other.ProvenanceBytes) return false;
+      if (!object.Equals(IntotoProvenance, other.IntotoProvenance)) return false;
+      if (!object.Equals(IntotoStatement, other.IntotoStatement)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -352,6 +394,8 @@ namespace Grafeas.V1 {
       int hash = 1;
       if (provenance_ != null) hash ^= Provenance.GetHashCode();
       if (ProvenanceBytes.Length != 0) hash ^= ProvenanceBytes.GetHashCode();
+      if (intotoProvenance_ != null) hash ^= IntotoProvenance.GetHashCode();
+      if (intotoStatement_ != null) hash ^= IntotoStatement.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -378,6 +422,14 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(ProvenanceBytes);
       }
+      if (intotoProvenance_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(IntotoProvenance);
+      }
+      if (intotoStatement_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(IntotoStatement);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -396,6 +448,14 @@ namespace Grafeas.V1 {
         output.WriteRawTag(18);
         output.WriteString(ProvenanceBytes);
       }
+      if (intotoProvenance_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(IntotoProvenance);
+      }
+      if (intotoStatement_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(IntotoStatement);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -411,6 +471,12 @@ namespace Grafeas.V1 {
       }
       if (ProvenanceBytes.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ProvenanceBytes);
+      }
+      if (intotoProvenance_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IntotoProvenance);
+      }
+      if (intotoStatement_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(IntotoStatement);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -432,6 +498,18 @@ namespace Grafeas.V1 {
       }
       if (other.ProvenanceBytes.Length != 0) {
         ProvenanceBytes = other.ProvenanceBytes;
+      }
+      if (other.intotoProvenance_ != null) {
+        if (intotoProvenance_ == null) {
+          IntotoProvenance = new global::Grafeas.V1.InTotoProvenance();
+        }
+        IntotoProvenance.MergeFrom(other.IntotoProvenance);
+      }
+      if (other.intotoStatement_ != null) {
+        if (intotoStatement_ == null) {
+          IntotoStatement = new global::Grafeas.V1.InTotoStatement();
+        }
+        IntotoStatement.MergeFrom(other.IntotoStatement);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -459,6 +537,20 @@ namespace Grafeas.V1 {
             ProvenanceBytes = input.ReadString();
             break;
           }
+          case 26: {
+            if (intotoProvenance_ == null) {
+              IntotoProvenance = new global::Grafeas.V1.InTotoProvenance();
+            }
+            input.ReadMessage(IntotoProvenance);
+            break;
+          }
+          case 34: {
+            if (intotoStatement_ == null) {
+              IntotoStatement = new global::Grafeas.V1.InTotoStatement();
+            }
+            input.ReadMessage(IntotoStatement);
+            break;
+          }
         }
       }
     #endif
@@ -483,6 +575,20 @@ namespace Grafeas.V1 {
           }
           case 18: {
             ProvenanceBytes = input.ReadString();
+            break;
+          }
+          case 26: {
+            if (intotoProvenance_ == null) {
+              IntotoProvenance = new global::Grafeas.V1.InTotoProvenance();
+            }
+            input.ReadMessage(IntotoProvenance);
+            break;
+          }
+          case 34: {
+            if (intotoStatement_ == null) {
+              IntotoStatement = new global::Grafeas.V1.InTotoStatement();
+            }
+            input.ReadMessage(IntotoStatement);
             break;
           }
         }
