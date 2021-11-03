@@ -28,12 +28,58 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         {
         }
 
+        /// <summary>
+        /// Creates INSERT command for the table created after executing the <see cref="CreateTable"/> method execution.
+        /// </summary>
+        /// <returns>The DML command to insert data into a table.</returns>
+        public string CreateInsertCommand()
+        {
+            // The emulator doesn't yet support the JSON type.
+            return $@"INSERT {TableName} (
+                              K,
+                              BoolValue,           
+                              Int64Value,          
+                              Float64Value,        
+                              StringValue,       
+                              NumericValue,        
+                              BytesValue,       
+                              TimestampValue,      
+                              DateValue,           
+                              BoolArrayValue,      
+                              Int64ArrayValue,     
+                              Float64ArrayValue,   
+                              NumericArrayValue,  
+                              StringArrayValue,    
+                              Base64ArrayValue,
+                              BytesArrayValue,     
+                              TimestampArrayValue,
+                              {(RunningOnEmulator ? "" : "JsonArrayValue,") } 
+                              DateArrayValue) VALUES(
+                              @K,
+                              @BoolValue,           
+                              @Int64Value,          
+                              @Float64Value,        
+                              @StringValue,         
+                              @NumericValue,        
+                              @BytesValue,          
+                              @TimestampValue,      
+                              @DateValue,           
+                              @BoolArrayValue,      
+                              @Int64ArrayValue,     
+                              @Float64ArrayValue,   
+                              @NumericArrayValue,   
+                              @StringArrayValue,
+                              @Base64ArrayValue,
+                              @BytesArrayValue,     
+                              @TimestampArrayValue,
+                              {(RunningOnEmulator ? "" : "@JsonArrayValue,") } 
+                              @DateArrayValue)";
+        }
+
         protected override void CreateTable()
         {
             // The emulator doesn't yet support the JSON type.
-            if (RunningOnEmulator)
-            {
-                ExecuteDdl($@"CREATE TABLE {TableName}(
+            ExecuteDdl($@"CREATE TABLE {TableName}(
                               K                   STRING(MAX) NOT NULL,
                               BoolValue           BOOL,
                               Int64Value          INT64,
@@ -48,35 +94,12 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               Float64ArrayValue   ARRAY<FLOAT64>,
                               NumericArrayValue   ARRAY<NUMERIC>,
                               StringArrayValue    ARRAY<STRING(MAX)>,
+                              Base64ArrayValue    ARRAY<BYTES(MAX)>,
                               BytesArrayValue     ARRAY<BYTES(MAX)>,
                               TimestampArrayValue ARRAY<TIMESTAMP>,
-                              DateArrayValue      ARRAY<DATE>,
+                              {(RunningOnEmulator ? "" : "JsonArrayValue      ARRAY<JSON>,") }
+                              DateArrayValue      ARRAY<DATE>
                             ) PRIMARY KEY(K)");
-            }
-            else
-            {
-                ExecuteDdl($@"CREATE TABLE {TableName}(
-                              K                   STRING(MAX) NOT NULL,
-                              BoolValue           BOOL,
-                              Int64Value          INT64,
-                              Float64Value        FLOAT64,
-                              NumericValue        NUMERIC,
-                              StringValue         STRING(MAX),
-                              BytesValue          BYTES(MAX),
-                              TimestampValue      TIMESTAMP,
-                              DateValue           DATE,
-                              JsonValue           JSON,
-                              BoolArrayValue      ARRAY<BOOL>,
-                              Int64ArrayValue     ARRAY<INT64>,
-                              Float64ArrayValue   ARRAY<FLOAT64>,
-                              NumericArrayValue   ARRAY<NUMERIC>,
-                              StringArrayValue    ARRAY<STRING(MAX)>,
-                              BytesArrayValue     ARRAY<BYTES(MAX)>,
-                              TimestampArrayValue ARRAY<TIMESTAMP>,
-                              DateArrayValue      ARRAY<DATE>,
-                              JsonArrayValue      ARRAY<JSON>,
-                            ) PRIMARY KEY(K)");
-            }
         }
     }
 }
