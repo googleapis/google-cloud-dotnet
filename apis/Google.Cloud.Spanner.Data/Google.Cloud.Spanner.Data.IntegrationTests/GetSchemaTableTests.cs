@@ -88,6 +88,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Float64ArrayValue", typeof(List<double>), SpannerDbType.ArrayOf(SpannerDbType.Float64) },
                 { "NumericArrayValue", typeof(List<SpannerNumeric>), SpannerDbType.ArrayOf(SpannerDbType.Numeric) },
                 { "StringArrayValue", typeof(List<string>), SpannerDbType.ArrayOf(SpannerDbType.String) },
+                { "Base64ArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "BytesArrayValue", typeof(List<byte[]>), SpannerDbType.ArrayOf(SpannerDbType.Bytes) },
                 { "TimestampArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Timestamp) },
                 { "DateArrayValue", typeof(List<DateTime>), SpannerDbType.ArrayOf(SpannerDbType.Date) },

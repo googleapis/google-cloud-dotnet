@@ -70,8 +70,65 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             }
         }
 
-        [Fact]
-        public async Task WriteValues()
+        private async Task ExecuteWriteNullsTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
+        {
+            var parameters = new SpannerParameterCollection
+            {
+                { "BoolValue", SpannerDbType.Bool, null },
+                { "Int64Value", SpannerDbType.Int64, null },
+                { "Float64Value", SpannerDbType.Float64, null },
+                { "StringValue", SpannerDbType.String, null },
+                { "BytesValue", SpannerDbType.Bytes, null },
+                { "TimestampValue", SpannerDbType.Timestamp, null },
+                { "DateValue", SpannerDbType.Date, null },
+                { "NumericValue", SpannerDbType.Numeric, null },
+                { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null },
+                { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), null },
+                { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), null },
+                { "StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String), null },
+                { "Base64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), null },
+                { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), null },
+                { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), null },
+                { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null },
+                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null }
+            };
+
+            // The emulator doesn't yet support the JSON type.
+            if (!_fixture.RunningOnEmulator)
+            {
+                parameters.Add("JsonValue", SpannerDbType.Json, null);
+                parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), null);
+            }
+
+            Assert.Equal(1, await insertCommand(parameters));
+            await WithLastRowAsync(reader =>
+            {
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64ArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64ArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("Base64ArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
+                Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
+                if (!_fixture.RunningOnEmulator)
+                {
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonValue")));
+                    Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonArrayValue")));
+                }
+            });
+        }
+
+        private async Task ExecuteWriteValuesTest(Func<SpannerParameterCollection, Task<int>> insertCommand)
         {
             var testTimestamp = new DateTime(2017, 3, 17, 15, 30, 0);
             var testDate = new DateTime(2017, 5, 9);
@@ -81,14 +138,20 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
             SpannerNumeric?[] nArray = { SpannerNumeric.Parse("0.0"), null, SpannerNumeric.Parse("2.0") };
             string[] jsonArray = { "{\"f1\":\"v1\"}", "{}", "[]", null };
             string[] sArray = { "abc", null, "123" };
-            string[] bArrayArray =
+            string[] base64Array =
             {
                 Convert.ToBase64String(new byte[] {0, 1, 2}),
                 null,
                 Convert.ToBase64String(new byte[] {1, 2, 3})
             };
-            DateTime?[] dtArray = {new DateTime(2017, 3, 17), null, new DateTime(2017, 5, 9)};
-            DateTime?[] tmArray = {new DateTime(2017, 3, 17, 5, 30, 0), null, new DateTime(2017, 5, 9, 12, 45, 0)};
+            byte[][] byteArray =
+            {
+                new byte[] {0, 1, 2},
+                null,
+                new byte[] {1, 2, 3}
+            };
+            DateTime?[] dtArray = { new DateTime(2017, 3, 17), null, new DateTime(2017, 5, 9) };
+            DateTime?[] tmArray = { new DateTime(2017, 3, 17, 5, 30, 0), null, new DateTime(2017, 5, 9, 12, 45, 0) };
 
             var parameters = new SpannerParameterCollection
             {
@@ -104,7 +167,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), lArray },
                 { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), dArray },
                 { "StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String), sArray },
-                { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), bArrayArray },
+                { "Base64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), base64Array },
+                { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), byteArray },
                 { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), tmArray },
                 { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), dtArray },
                 { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), nArray }
@@ -117,20 +181,18 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), jsonArray);
             }
 
-            Assert.Equal(1, await InsertAsync(parameters));
+            Assert.Equal(1, await insertCommand(parameters));
             await WithLastRowAsync(reader =>
             {
                 Assert.True(reader.GetFieldValue<bool>(reader.GetOrdinal("BoolValue")));
                 Assert.Equal(1, reader.GetFieldValue<long>(reader.GetOrdinal("Int64Value")));
-                Assert.True(
-                    Math.Abs(2.0 - reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")))
-                    < double.Epsilon);
+                Assert.Equal(2.0, reader.GetFieldValue<double>(reader.GetOrdinal("Float64Value")), 1);
                 Assert.Equal("abc", reader.GetFieldValue<string>(reader.GetOrdinal("StringValue")));
                 Assert.Equal(new byte[] { 4, 5, 6 }, reader.GetFieldValue<byte[]>(reader.GetOrdinal("BytesValue")));
                 long length = reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, null, 0, int.MaxValue);
                 Assert.Equal(3L, length);
                 var buffer = new byte[length];
-                Assert.Equal(3, reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, buffer, 0, (int) length));
+                Assert.Equal(3, reader.GetBytes(reader.GetOrdinal("BytesValue"), 0L, buffer, 0, (int)length));
                 Assert.Equal(testTimestamp, reader.GetFieldValue<DateTime>(reader.GetOrdinal("TimestampValue")));
                 Assert.Equal(testDate, reader.GetFieldValue<DateTime>(reader.GetOrdinal("DateValue")));
                 Assert.Equal(SpannerNumeric.Parse("2.0"), reader.GetFieldValue<SpannerNumeric>(reader.GetOrdinal("NumericValue")));
@@ -138,7 +200,8 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                 Assert.Equal(lArray, reader.GetFieldValue<long?[]>(reader.GetOrdinal("Int64ArrayValue")));
                 Assert.Equal(dArray, reader.GetFieldValue<double?[]>(reader.GetOrdinal("Float64ArrayValue")));
                 Assert.Equal(sArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("StringArrayValue")));
-                Assert.Equal(bArrayArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("BytesArrayValue")));
+                Assert.Equal(base64Array, reader.GetFieldValue<string[]>(reader.GetOrdinal("Base64ArrayValue")));
+                Assert.Equal(byteArray, reader.GetFieldValue<byte[][]>(reader.GetOrdinal("BytesArrayValue")));
                 Assert.Equal(tmArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("TimestampArrayValue")));
                 Assert.Equal(dtArray, reader.GetFieldValue<DateTime?[]>(reader.GetOrdinal("DateArrayValue")));
                 Assert.Equal(nArray, reader.GetFieldValue<SpannerNumeric?[]>(reader.GetOrdinal("NumericArrayValue")));
@@ -148,6 +211,28 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                     Assert.Equal(jsonArray, reader.GetFieldValue<string[]>(reader.GetOrdinal("JsonArrayValue")));
                 }
             });
+        }
+
+        [Fact]
+        public async Task WriteValues()
+        {
+            await ExecuteWriteValuesTest(InsertAsync);
+        }
+
+        [Fact]
+        public async Task WriteValuesDml()
+        {
+            await ExecuteWriteValuesTest(InsertDmlAsync);
+        }
+
+        private async Task<int> InsertDmlAsync(SpannerParameterCollection values)
+        {
+            using (var connection = _fixture.GetConnection())
+            {
+                values.Add("K", SpannerDbType.String, _lastKey = IdGenerator.FromGuid());
+                SpannerCommand cmd = connection.CreateDmlCommand(_fixture.CreateInsertCommand(), values);
+                return await cmd.ExecuteNonQueryAsync();
+            }
         }
 
         [Fact]
@@ -257,58 +342,13 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         [Fact]
         public async Task WriteNulls()
         {
-            var parameters = new SpannerParameterCollection
-            {
-                { "BoolValue", SpannerDbType.Bool, null },
-                { "Int64Value", SpannerDbType.Int64, null },
-                { "Float64Value", SpannerDbType.Float64, null },
-                { "StringValue", SpannerDbType.String, null },
-                { "BytesValue", SpannerDbType.Bytes, null },
-                { "TimestampValue", SpannerDbType.Timestamp, null },
-                { "DateValue", SpannerDbType.Date, null },
-                { "NumericValue", SpannerDbType.Numeric, null },
-                { "BoolArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bool), null },
-                { "Int64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Int64), null },
-                { "Float64ArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Float64), null },
-                { "StringArrayValue", SpannerDbType.ArrayOf(SpannerDbType.String), null },
-                { "BytesArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Bytes), null },
-                { "TimestampArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Timestamp), null },
-                { "DateArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Date), null },
-                { "NumericArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Numeric), null }
-            };
+            await ExecuteWriteNullsTest(InsertAsync);
+        }
 
-            // The emulator doesn't yet support the JSON type.
-            if (!_fixture.RunningOnEmulator)
-            {
-                parameters.Add("JsonValue", SpannerDbType.Json, null);
-                parameters.Add("JsonArrayValue", SpannerDbType.ArrayOf(SpannerDbType.Json), null);
-            }
-
-            Assert.Equal(1, await InsertAsync(parameters));
-            await WithLastRowAsync(reader =>
-            {
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64Value")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64Value")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("DateValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("BoolArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("Int64ArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("Float64ArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("StringArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("BytesArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("TimestampArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("DateArrayValue")));
-                Assert.True(reader.IsDBNull(reader.GetOrdinal("NumericArrayValue")));
-                if (!_fixture.RunningOnEmulator)
-                {
-                    Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonValue")));
-                    Assert.True(reader.IsDBNull(reader.GetOrdinal("JsonArrayValue")));
-                }
-            });
+        [Fact]
+        public async Task WriteNullsDml()
+        {
+            await ExecuteWriteNullsTest(InsertDmlAsync);
         }
 
         [Fact]
