@@ -654,6 +654,525 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         public static bool operator !=(KeyName a, KeyName b) => !(a == b);
     }
 
+    /// <summary>Resource name for the <c>RelatedAccountGroupMembership</c> resource.</summary>
+    public sealed partial class RelatedAccountGroupMembershipName : gax::IResourceName, sys::IEquatable<RelatedAccountGroupMembershipName>
+    {
+        /// <summary>The possible contents of <see cref="RelatedAccountGroupMembershipName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern
+            /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>.
+            /// </summary>
+            ProjectRelatedaccountgroupMembership = 1,
+        }
+
+        private static gax::PathTemplate s_projectRelatedaccountgroupMembership = new gax::PathTemplate("projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}");
+
+        /// <summary>
+        /// Creates a <see cref="RelatedAccountGroupMembershipName"/> containing an unparsed resource name.
+        /// </summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RelatedAccountGroupMembershipName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RelatedAccountGroupMembershipName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RelatedAccountGroupMembershipName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="RelatedAccountGroupMembershipName"/> with the pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="membershipId">The <c>Membership</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// A new instance of <see cref="RelatedAccountGroupMembershipName"/> constructed from the provided ids.
+        /// </returns>
+        public static RelatedAccountGroupMembershipName FromProjectRelatedaccountgroupMembership(string projectId, string relatedaccountgroupId, string membershipId) =>
+            new RelatedAccountGroupMembershipName(ResourceNameType.ProjectRelatedaccountgroupMembership, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), relatedaccountgroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(relatedaccountgroupId, nameof(relatedaccountgroupId)), membershipId: gax::GaxPreconditions.CheckNotNullOrEmpty(membershipId, nameof(membershipId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RelatedAccountGroupMembershipName"/> with
+        /// pattern <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="membershipId">The <c>Membership</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RelatedAccountGroupMembershipName"/> with pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>.
+        /// </returns>
+        public static string Format(string projectId, string relatedaccountgroupId, string membershipId) =>
+            FormatProjectRelatedaccountgroupMembership(projectId, relatedaccountgroupId, membershipId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RelatedAccountGroupMembershipName"/> with
+        /// pattern <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="membershipId">The <c>Membership</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="RelatedAccountGroupMembershipName"/> with pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>.
+        /// </returns>
+        public static string FormatProjectRelatedaccountgroupMembership(string projectId, string relatedaccountgroupId, string membershipId) =>
+            s_projectRelatedaccountgroupMembership.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(relatedaccountgroupId, nameof(relatedaccountgroupId)), gax::GaxPreconditions.CheckNotNullOrEmpty(membershipId, nameof(membershipId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RelatedAccountGroupMembershipName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="relatedAccountGroupMembershipName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <returns>The parsed <see cref="RelatedAccountGroupMembershipName"/> if successful.</returns>
+        public static RelatedAccountGroupMembershipName Parse(string relatedAccountGroupMembershipName) =>
+            Parse(relatedAccountGroupMembershipName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RelatedAccountGroupMembershipName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="relatedAccountGroupMembershipName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RelatedAccountGroupMembershipName"/> if successful.</returns>
+        public static RelatedAccountGroupMembershipName Parse(string relatedAccountGroupMembershipName, bool allowUnparsed) =>
+            TryParse(relatedAccountGroupMembershipName, allowUnparsed, out RelatedAccountGroupMembershipName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RelatedAccountGroupMembershipName"/>
+        /// instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="relatedAccountGroupMembershipName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RelatedAccountGroupMembershipName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string relatedAccountGroupMembershipName, out RelatedAccountGroupMembershipName result) =>
+            TryParse(relatedAccountGroupMembershipName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RelatedAccountGroupMembershipName"/>
+        /// instance; optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description>
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>
+        /// </description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="relatedAccountGroupMembershipName">
+        /// The resource name in string form. Must not be <c>null</c>.
+        /// </param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RelatedAccountGroupMembershipName"/>, or <c>null</c> if
+        /// parsing failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string relatedAccountGroupMembershipName, bool allowUnparsed, out RelatedAccountGroupMembershipName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(relatedAccountGroupMembershipName, nameof(relatedAccountGroupMembershipName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectRelatedaccountgroupMembership.TryParseName(relatedAccountGroupMembershipName, out resourceName))
+            {
+                result = FromProjectRelatedaccountgroupMembership(resourceName[0], resourceName[1], resourceName[2]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(relatedAccountGroupMembershipName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private RelatedAccountGroupMembershipName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string membershipId = null, string projectId = null, string relatedaccountgroupId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            MembershipId = membershipId;
+            ProjectId = projectId;
+            RelatedaccountgroupId = relatedaccountgroupId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RelatedAccountGroupMembershipName"/> class from the component
+        /// parts of pattern <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}/memberships/{membership}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="membershipId">The <c>Membership</c> ID. Must not be <c>null</c> or empty.</param>
+        public RelatedAccountGroupMembershipName(string projectId, string relatedaccountgroupId, string membershipId) : this(ResourceNameType.ProjectRelatedaccountgroupMembership, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), relatedaccountgroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(relatedaccountgroupId, nameof(relatedaccountgroupId)), membershipId: gax::GaxPreconditions.CheckNotNullOrEmpty(membershipId, nameof(membershipId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Membership</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string MembershipId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Relatedaccountgroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string RelatedaccountgroupId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectRelatedaccountgroupMembership: return s_projectRelatedaccountgroupMembership.Expand(ProjectId, RelatedaccountgroupId, MembershipId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as RelatedAccountGroupMembershipName);
+
+        /// <inheritdoc/>
+        public bool Equals(RelatedAccountGroupMembershipName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(RelatedAccountGroupMembershipName a, RelatedAccountGroupMembershipName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(RelatedAccountGroupMembershipName a, RelatedAccountGroupMembershipName b) => !(a == b);
+    }
+
+    /// <summary>Resource name for the <c>RelatedAccountGroup</c> resource.</summary>
+    public sealed partial class RelatedAccountGroupName : gax::IResourceName, sys::IEquatable<RelatedAccountGroupName>
+    {
+        /// <summary>The possible contents of <see cref="RelatedAccountGroupName"/>.</summary>
+        public enum ResourceNameType
+        {
+            /// <summary>An unparsed resource name.</summary>
+            Unparsed = 0,
+
+            /// <summary>
+            /// A resource name with pattern <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c>.
+            /// </summary>
+            ProjectRelatedaccountgroup = 1,
+        }
+
+        private static gax::PathTemplate s_projectRelatedaccountgroup = new gax::PathTemplate("projects/{project}/relatedaccountgroups/{relatedaccountgroup}");
+
+        /// <summary>Creates a <see cref="RelatedAccountGroupName"/> containing an unparsed resource name.</summary>
+        /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
+        /// <returns>
+        /// A new instance of <see cref="RelatedAccountGroupName"/> containing the provided
+        /// <paramref name="unparsedResourceName"/>.
+        /// </returns>
+        public static RelatedAccountGroupName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new RelatedAccountGroupName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+
+        /// <summary>
+        /// Creates a <see cref="RelatedAccountGroupName"/> with the pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// A new instance of <see cref="RelatedAccountGroupName"/> constructed from the provided ids.
+        /// </returns>
+        public static RelatedAccountGroupName FromProjectRelatedaccountgroup(string projectId, string relatedaccountgroupId) =>
+            new RelatedAccountGroupName(ResourceNameType.ProjectRelatedaccountgroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), relatedaccountgroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(relatedaccountgroupId, nameof(relatedaccountgroupId)));
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RelatedAccountGroupName"/> with pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="RelatedAccountGroupName"/> with pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c>.
+        /// </returns>
+        public static string Format(string projectId, string relatedaccountgroupId) =>
+            FormatProjectRelatedaccountgroup(projectId, relatedaccountgroupId);
+
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="RelatedAccountGroupName"/> with pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c>.
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <returns>
+        /// The string representation of this <see cref="RelatedAccountGroupName"/> with pattern
+        /// <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c>.
+        /// </returns>
+        public static string FormatProjectRelatedaccountgroup(string projectId, string relatedaccountgroupId) =>
+            s_projectRelatedaccountgroup.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(relatedaccountgroupId, nameof(relatedaccountgroupId)));
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RelatedAccountGroupName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="relatedAccountGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="RelatedAccountGroupName"/> if successful.</returns>
+        public static RelatedAccountGroupName Parse(string relatedAccountGroupName) => Parse(relatedAccountGroupName, false);
+
+        /// <summary>
+        /// Parses the given resource name string into a new <see cref="RelatedAccountGroupName"/> instance; optionally
+        /// allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="relatedAccountGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <returns>The parsed <see cref="RelatedAccountGroupName"/> if successful.</returns>
+        public static RelatedAccountGroupName Parse(string relatedAccountGroupName, bool allowUnparsed) =>
+            TryParse(relatedAccountGroupName, allowUnparsed, out RelatedAccountGroupName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RelatedAccountGroupName"/> instance.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c></description>
+        /// </item>
+        /// </list>
+        /// </remarks>
+        /// <param name="relatedAccountGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RelatedAccountGroupName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string relatedAccountGroupName, out RelatedAccountGroupName result) =>
+            TryParse(relatedAccountGroupName, false, out result);
+
+        /// <summary>
+        /// Tries to parse the given resource name string into a new <see cref="RelatedAccountGroupName"/> instance;
+        /// optionally allowing an unparseable resource name.
+        /// </summary>
+        /// <remarks>
+        /// To parse successfully, the resource name must be formatted as one of the following:
+        /// <list type="bullet">
+        /// <item>
+        /// <description><c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c></description>
+        /// </item>
+        /// </list>
+        /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
+        /// </remarks>
+        /// <param name="relatedAccountGroupName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="allowUnparsed">
+        /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
+        /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
+        /// specified.
+        /// </param>
+        /// <param name="result">
+        /// When this method returns, the parsed <see cref="RelatedAccountGroupName"/>, or <c>null</c> if parsing
+        /// failed.
+        /// </param>
+        /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
+        public static bool TryParse(string relatedAccountGroupName, bool allowUnparsed, out RelatedAccountGroupName result)
+        {
+            gax::GaxPreconditions.CheckNotNull(relatedAccountGroupName, nameof(relatedAccountGroupName));
+            gax::TemplatedResourceName resourceName;
+            if (s_projectRelatedaccountgroup.TryParseName(relatedAccountGroupName, out resourceName))
+            {
+                result = FromProjectRelatedaccountgroup(resourceName[0], resourceName[1]);
+                return true;
+            }
+            if (allowUnparsed)
+            {
+                if (gax::UnparsedResourceName.TryParse(relatedAccountGroupName, out gax::UnparsedResourceName unparsedResourceName))
+                {
+                    result = FromUnparsed(unparsedResourceName);
+                    return true;
+                }
+            }
+            result = null;
+            return false;
+        }
+
+        private RelatedAccountGroupName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null, string relatedaccountgroupId = null)
+        {
+            Type = type;
+            UnparsedResource = unparsedResourceName;
+            ProjectId = projectId;
+            RelatedaccountgroupId = relatedaccountgroupId;
+        }
+
+        /// <summary>
+        /// Constructs a new instance of a <see cref="RelatedAccountGroupName"/> class from the component parts of
+        /// pattern <c>projects/{project}/relatedaccountgroups/{relatedaccountgroup}</c>
+        /// </summary>
+        /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="relatedaccountgroupId">
+        /// The <c>Relatedaccountgroup</c> ID. Must not be <c>null</c> or empty.
+        /// </param>
+        public RelatedAccountGroupName(string projectId, string relatedaccountgroupId) : this(ResourceNameType.ProjectRelatedaccountgroup, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), relatedaccountgroupId: gax::GaxPreconditions.CheckNotNullOrEmpty(relatedaccountgroupId, nameof(relatedaccountgroupId)))
+        {
+        }
+
+        /// <summary>The <see cref="ResourceNameType"/> of the contained resource name.</summary>
+        public ResourceNameType Type { get; }
+
+        /// <summary>
+        /// The contained <see cref="gax::UnparsedResourceName"/>. Only non-<c>null</c> if this instance contains an
+        /// unparsed resource name.
+        /// </summary>
+        public gax::UnparsedResourceName UnparsedResource { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// </summary>
+        public string ProjectId { get; }
+
+        /// <summary>
+        /// The <c>Relatedaccountgroup</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed
+        /// resource name.
+        /// </summary>
+        public string RelatedaccountgroupId { get; }
+
+        /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
+        public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
+
+        /// <summary>The string representation of the resource name.</summary>
+        /// <returns>The string representation of the resource name.</returns>
+        public override string ToString()
+        {
+            switch (Type)
+            {
+                case ResourceNameType.Unparsed: return UnparsedResource.ToString();
+                case ResourceNameType.ProjectRelatedaccountgroup: return s_projectRelatedaccountgroup.Expand(ProjectId, RelatedaccountgroupId);
+                default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
+            }
+        }
+
+        /// <summary>Returns a hash code for this resource name.</summary>
+        public override int GetHashCode() => ToString().GetHashCode();
+
+        /// <inheritdoc/>
+        public override bool Equals(object obj) => Equals(obj as RelatedAccountGroupName);
+
+        /// <inheritdoc/>
+        public bool Equals(RelatedAccountGroupName other) => ToString() == other?.ToString();
+
+        /// <inheritdoc/>
+        public static bool operator ==(RelatedAccountGroupName a, RelatedAccountGroupName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+
+        /// <inheritdoc/>
+        public static bool operator !=(RelatedAccountGroupName a, RelatedAccountGroupName b) => !(a == b);
+    }
+
     public partial class CreateAssessmentRequest
     {
         /// <summary>
@@ -782,6 +1301,67 @@ namespace Google.Cloud.RecaptchaEnterprise.V1
         public gcrv::KeyName KeyName
         {
             get => string.IsNullOrEmpty(Name) ? null : gcrv::KeyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListRelatedAccountGroupMembershipsRequest
+    {
+        /// <summary>
+        /// <see cref="RelatedAccountGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public RelatedAccountGroupName ParentAsRelatedAccountGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RelatedAccountGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListRelatedAccountGroupsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SearchRelatedAccountGroupMembershipsRequest
+    {
+        /// <summary>
+        /// <see cref="RelatedAccountGroupName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public RelatedAccountGroupName ParentAsRelatedAccountGroupName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : RelatedAccountGroupName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RelatedAccountGroupMembership
+    {
+        /// <summary>
+        /// <see cref="gcrv::RelatedAccountGroupMembershipName"/>-typed view over the <see cref="Name"/> resource name
+        /// property.
+        /// </summary>
+        public gcrv::RelatedAccountGroupMembershipName RelatedAccountGroupMembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RelatedAccountGroupMembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class RelatedAccountGroup
+    {
+        /// <summary>
+        /// <see cref="gcrv::RelatedAccountGroupName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::RelatedAccountGroupName RelatedAccountGroupName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::RelatedAccountGroupName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }
