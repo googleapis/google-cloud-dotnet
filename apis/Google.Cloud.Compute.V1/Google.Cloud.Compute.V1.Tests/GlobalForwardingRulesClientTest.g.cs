@@ -48,6 +48,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
+                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =
@@ -109,6 +110,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
+                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =
@@ -172,6 +174,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
+                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =
@@ -233,6 +236,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
+                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =

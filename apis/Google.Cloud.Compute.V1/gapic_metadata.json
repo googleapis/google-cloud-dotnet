@@ -923,6 +923,21 @@
         }
       }
     },
+    "ImageFamilyViews": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ImageFamilyViewsClient",
+          "rpcs": {
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "Images": {
       "clients": {
         "grpc": {
@@ -1364,6 +1379,12 @@
               "methods": [
                 "Reset",
                 "ResetAsync"
+              ]
+            },
+            "SendDiagnosticInterrupt": {
+              "methods": [
+                "SendDiagnosticInterrupt",
+                "SendDiagnosticInterruptAsync"
               ]
             },
             "SetDeletionProtection": {
@@ -3302,6 +3323,69 @@
               "methods": [
                 "RemoveRule",
                 "RemoveRuleAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ServiceAttachments": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ServiceAttachmentsClient",
+          "rpcs": {
+            "AggregatedList": {
+              "methods": [
+                "AggregatedList",
+                "AggregatedListAsync"
+              ]
+            },
+            "Delete": {
+              "methods": [
+                "Delete",
+                "DeleteAsync"
+              ]
+            },
+            "Get": {
+              "methods": [
+                "Get",
+                "GetAsync"
+              ]
+            },
+            "GetIamPolicy": {
+              "methods": [
+                "GetIamPolicy",
+                "GetIamPolicyAsync"
+              ]
+            },
+            "Insert": {
+              "methods": [
+                "Insert",
+                "InsertAsync"
+              ]
+            },
+            "List": {
+              "methods": [
+                "List",
+                "ListAsync"
+              ]
+            },
+            "Patch": {
+              "methods": [
+                "Patch",
+                "PatchAsync"
+              ]
+            },
+            "SetIamPolicy": {
+              "methods": [
+                "SetIamPolicy",
+                "SetIamPolicyAsync"
+              ]
+            },
+            "TestIamPermissions": {
+              "methods": [
+                "TestIamPermissions",
+                "TestIamPermissionsAsync"
               ]
             }
           }

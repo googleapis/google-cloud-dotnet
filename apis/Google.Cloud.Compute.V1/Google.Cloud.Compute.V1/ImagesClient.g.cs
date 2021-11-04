@@ -550,9 +550,7 @@ namespace Google.Cloud.Compute.V1
             DeleteAsync(project, image, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -561,9 +559,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -572,9 +568,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -609,9 +603,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeprecateOperationsClient, callSettings);
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -633,9 +625,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -657,9 +647,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1647,9 +1635,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient DeprecateOperationsClient { get; }
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1664,9 +1650,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Sets the deprecation status of an image.
-        /// 
-        /// If an empty request body is given, clears the deprecation status instead.
+        /// Sets the deprecation status of an image. If an empty request body is given, clears the deprecation status instead.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

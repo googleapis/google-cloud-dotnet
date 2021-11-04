@@ -2482,6 +2482,74 @@ namespace Google.Cloud.Compute.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SendDiagnosticInterrupt</summary>
+        public void SendDiagnosticInterruptRequestObject()
+        {
+            // Snippet: SendDiagnosticInterrupt(SendDiagnosticInterruptInstanceRequest, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            SendDiagnosticInterruptInstanceRequest request = new SendDiagnosticInterruptInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                Project = "",
+            };
+            // Make the request
+            SendDiagnosticInterruptInstanceResponse response = instancesClient.SendDiagnosticInterrupt(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SendDiagnosticInterruptAsync</summary>
+        public async Task SendDiagnosticInterruptRequestObjectAsync()
+        {
+            // Snippet: SendDiagnosticInterruptAsync(SendDiagnosticInterruptInstanceRequest, CallSettings)
+            // Additional: SendDiagnosticInterruptAsync(SendDiagnosticInterruptInstanceRequest, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            SendDiagnosticInterruptInstanceRequest request = new SendDiagnosticInterruptInstanceRequest
+            {
+                Zone = "",
+                Instance = "",
+                Project = "",
+            };
+            // Make the request
+            SendDiagnosticInterruptInstanceResponse response = await instancesClient.SendDiagnosticInterruptAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SendDiagnosticInterrupt</summary>
+        public void SendDiagnosticInterrupt()
+        {
+            // Snippet: SendDiagnosticInterrupt(string, string, string, CallSettings)
+            // Create client
+            InstancesClient instancesClient = InstancesClient.Create();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            // Make the request
+            SendDiagnosticInterruptInstanceResponse response = instancesClient.SendDiagnosticInterrupt(project, zone, instance);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SendDiagnosticInterruptAsync</summary>
+        public async Task SendDiagnosticInterruptAsync()
+        {
+            // Snippet: SendDiagnosticInterruptAsync(string, string, string, CallSettings)
+            // Additional: SendDiagnosticInterruptAsync(string, string, string, CancellationToken)
+            // Create client
+            InstancesClient instancesClient = await InstancesClient.CreateAsync();
+            // Initialize request argument(s)
+            string project = "";
+            string zone = "";
+            string instance = "";
+            // Make the request
+            SendDiagnosticInterruptInstanceResponse response = await instancesClient.SendDiagnosticInterruptAsync(project, zone, instance);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetDeletionProtection</summary>
         public void SetDeletionProtectionRequestObject()
         {

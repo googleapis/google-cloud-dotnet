@@ -969,11 +969,7 @@ namespace Google.Cloud.Compute.V1
             GetAsync(project, backendService, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -982,11 +978,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -995,11 +987,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1008,11 +996,7 @@ namespace Google.Cloud.Compute.V1
             GetHealthAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="project">
         /// </param>
@@ -1033,11 +1017,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="project">
         /// </param>
@@ -1058,11 +1038,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="project">
         /// </param>
@@ -1078,7 +1054,7 @@ namespace Google.Cloud.Compute.V1
             GetHealthAsync(project, backendService, resourceGroupReferenceResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1087,7 +1063,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1096,7 +1072,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1131,7 +1107,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), InsertOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1149,7 +1125,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1167,7 +1143,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1247,7 +1223,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1256,7 +1232,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1265,7 +1241,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1300,7 +1276,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PatchOperationsClient, callSettings);
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1322,7 +1298,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1344,7 +1320,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1872,11 +1848,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1888,11 +1860,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Gets the most recent health check results for this BackendService.
-        /// 
-        /// Example request body:
-        /// 
-        /// { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
+        /// Gets the most recent health check results for this BackendService. Example request body: { "group": "/zones/us-east1-b/instanceGroups/lb-backend-example" }
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1907,7 +1875,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient InsertOperationsClient { get; }
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1922,7 +1890,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see  Backend services overview.
+        /// Creates a BackendService resource in the specified project using the data included in the request. For more information, see Backend services overview .
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1964,7 +1932,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient PatchOperationsClient { get; }
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1979,7 +1947,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Patches the specified BackendService resource with the data included in the request. For more information, see  Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
+        /// Patches the specified BackendService resource with the data included in the request. For more information, see Backend services overview. This method supports PATCH semantics and uses the JSON merge patch format and processing rules.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

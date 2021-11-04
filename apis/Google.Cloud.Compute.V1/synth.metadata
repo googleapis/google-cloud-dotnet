@@ -4,14 +4,14 @@
       "git": {
         "name": "googleapis-discovery",
         "remote": "https://github.com/googleapis/googleapis-discovery.git",
-        "sha": "34478e2969042ed837d33684360f1ee3be7d2f74"
+        "sha": "638b68a77742cb7f4af82e204c9e8c29ef9ada63"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "9bac62dbc7a1f7b19baf578d6fbb550dbaff0d49"
+        "sha": "c7e4a6154519c9976cdf2f1635b4352d4203d2aa"
       }
     }
   ]
