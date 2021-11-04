@@ -19,6 +19,7 @@ using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
+using gcl = Google.Cloud.Location;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -64,6 +65,8 @@ namespace Google.Cloud.Functions.V1
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
+            LocationsSettings = existing.LocationsSettings;
             OnCopy(existing);
         }
 
@@ -297,6 +300,12 @@ namespace Google.Cloud.Functions.V1
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
+        /// <summary>FIXME</summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
+        /// <summary>FIXME</summary>
+        public gcl::LocationsSettings LocationsSettings { get; set; } = gcl::LocationsSettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="CloudFunctionsServiceSettings"/> object.</returns>
         public CloudFunctionsServiceSettings Clone() => new CloudFunctionsServiceSettings(this);
@@ -460,6 +469,12 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>The underlying gRPC CloudFunctionsService client</summary>
         public virtual CloudFunctionsService.CloudFunctionsServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>FIXME</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
+
+        /// <summary>FIXME</summary>
+        public virtual gcl::LocationsClient LocationsClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Returns a list of functions that belong to the requested project.
@@ -1436,6 +1451,8 @@ namespace Google.Cloud.Functions.V1
             CreateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateFunctionOperationsSettings);
             UpdateFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateFunctionOperationsSettings);
             DeleteFunctionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteFunctionOperationsSettings);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
+            LocationsClient = new gcl::LocationsClientImpl(grpcClient.CreateLocationsClient(), effectiveSettings.LocationsSettings);
             _callListFunctions = clientHelper.BuildApiCall<ListFunctionsRequest, ListFunctionsResponse>(grpcClient.ListFunctionsAsync, grpcClient.ListFunctions, effectiveSettings.ListFunctionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListFunctions);
             Modify_ListFunctionsApiCall(ref _callListFunctions);
@@ -1500,6 +1517,12 @@ namespace Google.Cloud.Functions.V1
 
         /// <summary>The underlying gRPC CloudFunctionsService client</summary>
         public override CloudFunctionsService.CloudFunctionsServiceClient GrpcClient { get; }
+
+        /// <summary>FIXME</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
+
+        /// <summary>FIXME</summary>
+        public override gcl::LocationsClient LocationsClient { get; }
 
         partial void Modify_ListFunctionsRequest(ref ListFunctionsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1902,6 +1925,32 @@ namespace Google.Cloud.Functions.V1
             /// <returns>A new Operations client for the same target as this client.</returns>
             public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
                 new lro::Operations.OperationsClient(CallInvoker);
+        }
+    }
+
+    public static partial class CloudFunctionsService
+    {
+        public partial class CloudFunctionsServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
+
+            /// <summary>
+            /// Creates a new instance of <see cref="gcl::Locations.LocationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gcl::Locations.LocationsClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gcl::Locations.LocationsClient CreateLocationsClient() =>
+                new gcl::Locations.LocationsClient(CallInvoker);
         }
     }
 }
