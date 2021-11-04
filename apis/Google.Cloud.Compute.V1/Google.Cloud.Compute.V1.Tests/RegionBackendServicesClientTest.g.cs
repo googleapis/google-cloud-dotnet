@@ -77,6 +77,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "health_checksedb1f3f8",
                 },
+                Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,
@@ -140,6 +141,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "health_checksedb1f3f8",
                 },
+                Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,
@@ -205,6 +207,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "health_checksedb1f3f8",
                 },
+                Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,
@@ -268,6 +271,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "health_checksedb1f3f8",
                 },
+                Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
                 SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,

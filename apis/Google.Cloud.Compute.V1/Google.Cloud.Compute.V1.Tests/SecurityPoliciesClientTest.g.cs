@@ -47,8 +47,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new SecurityPolicyRule(),
                 },
+                AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
+                AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -78,8 +80,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new SecurityPolicyRule(),
                 },
+                AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
+                AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -111,8 +115,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new SecurityPolicyRule(),
                 },
+                AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
+                AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -142,8 +148,10 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new SecurityPolicyRule(),
                 },
+                AdaptiveProtectionConfig = new SecurityPolicyAdaptiveProtectionConfig(),
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
+                AdvancedOptionsConfig = new SecurityPolicyAdvancedOptionsConfig(),
                 SelfLink = "self_link7e87f12d",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SecurityPolicy>(stt::Task.FromResult(expectedResponse), null, null, null, null));

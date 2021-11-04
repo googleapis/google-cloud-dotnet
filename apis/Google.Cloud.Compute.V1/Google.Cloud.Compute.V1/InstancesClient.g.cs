@@ -75,6 +75,7 @@ namespace Google.Cloud.Compute.V1
             RemoveResourcePoliciesOperationsSettings = existing.RemoveResourcePoliciesOperationsSettings.Clone();
             ResetSettings = existing.ResetSettings;
             ResetOperationsSettings = existing.ResetOperationsSettings.Clone();
+            SendDiagnosticInterruptSettings = existing.SendDiagnosticInterruptSettings;
             SetDeletionProtectionSettings = existing.SetDeletionProtectionSettings;
             SetDeletionProtectionOperationsSettings = existing.SetDeletionProtectionOperationsSettings.Clone();
             SetDiskAutoDeleteSettings = existing.SetDiskAutoDeleteSettings;
@@ -542,6 +543,18 @@ namespace Google.Cloud.Compute.V1
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>InstancesClient.SendDiagnosticInterrupt</c> and <c>InstancesClient.SendDiagnosticInterruptAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SendDiagnosticInterruptSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -1594,7 +1607,7 @@ namespace Google.Cloud.Compute.V1
             AddResourcePoliciesAsync(project, zone, instance, instancesAddResourcePoliciesRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves aggregated list of all of the instances in your project across all regions and zones.
+        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1603,7 +1616,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves aggregated list of all of the instances in your project across all regions and zones.
+        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1614,7 +1627,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves aggregated list of all of the instances in your project across all regions and zones.
+        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -1638,7 +1651,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves aggregated list of all of the instances in your project across all regions and zones.
+        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -3414,6 +3427,94 @@ namespace Google.Cloud.Compute.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Operation, Operation>> ResetAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
             ResetAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SendDiagnosticInterruptInstanceResponse SendDiagnosticInterrupt(SendDiagnosticInterruptInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SendDiagnosticInterruptInstanceResponse> SendDiagnosticInterruptAsync(SendDiagnosticInterruptInstanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SendDiagnosticInterruptInstanceResponse> SendDiagnosticInterruptAsync(SendDiagnosticInterruptInstanceRequest request, st::CancellationToken cancellationToken) =>
+            SendDiagnosticInterruptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SendDiagnosticInterruptInstanceResponse SendDiagnosticInterrupt(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            SendDiagnosticInterrupt(new SendDiagnosticInterruptInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SendDiagnosticInterruptInstanceResponse> SendDiagnosticInterruptAsync(string project, string zone, string instance, gaxgrpc::CallSettings callSettings = null) =>
+            SendDiagnosticInterruptAsync(new SendDiagnosticInterruptInstanceRequest
+            {
+                Instance = gax::GaxPreconditions.CheckNotNullOrEmpty(instance, nameof(instance)),
+                Project = gax::GaxPreconditions.CheckNotNullOrEmpty(project, nameof(project)),
+                Zone = gax::GaxPreconditions.CheckNotNullOrEmpty(zone, nameof(zone)),
+            }, callSettings);
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="project">
+        /// Project ID for this request.
+        /// </param>
+        /// <param name="zone">
+        /// The name of the zone for this request.
+        /// </param>
+        /// <param name="instance">
+        /// Name of the instance scoping this request.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SendDiagnosticInterruptInstanceResponse> SendDiagnosticInterruptAsync(string project, string zone, string instance, st::CancellationToken cancellationToken) =>
+            SendDiagnosticInterruptAsync(project, zone, instance, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Sets deletion protection on the instance.
@@ -5464,7 +5565,7 @@ namespace Google.Cloud.Compute.V1
             TestIamPermissionsAsync(project, zone, resource, testPermissionsRequestResource, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5473,7 +5574,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -5482,7 +5583,7 @@ namespace Google.Cloud.Compute.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -5517,7 +5618,7 @@ namespace Google.Cloud.Compute.V1
             lro::Operation<Operation, Operation>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOperationsClient, callSettings);
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5543,7 +5644,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -5569,7 +5670,7 @@ namespace Google.Cloud.Compute.V1
             }, callSettings);
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="project">
         /// Project ID for this request.
@@ -6161,6 +6262,8 @@ namespace Google.Cloud.Compute.V1
 
         private readonly gaxgrpc::ApiCall<ResetInstanceRequest, Operation> _callReset;
 
+        private readonly gaxgrpc::ApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse> _callSendDiagnosticInterrupt;
+
         private readonly gaxgrpc::ApiCall<SetDeletionProtectionInstanceRequest, Operation> _callSetDeletionProtection;
 
         private readonly gaxgrpc::ApiCall<SetDiskAutoDeleteInstanceRequest, Operation> _callSetDiskAutoDelete;
@@ -6305,6 +6408,9 @@ namespace Google.Cloud.Compute.V1
             _callReset = clientHelper.BuildApiCall<ResetInstanceRequest, Operation>(grpcClient.ResetAsync, grpcClient.Reset, effectiveSettings.ResetSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
             Modify_ApiCall(ref _callReset);
             Modify_ResetApiCall(ref _callReset);
+            _callSendDiagnosticInterrupt = clientHelper.BuildApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse>(grpcClient.SendDiagnosticInterruptAsync, grpcClient.SendDiagnosticInterrupt, effectiveSettings.SendDiagnosticInterruptSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("instance", request => request.Instance);
+            Modify_ApiCall(ref _callSendDiagnosticInterrupt);
+            Modify_SendDiagnosticInterruptApiCall(ref _callSendDiagnosticInterrupt);
             _callSetDeletionProtection = clientHelper.BuildApiCall<SetDeletionProtectionInstanceRequest, Operation>(grpcClient.SetDeletionProtectionAsync, grpcClient.SetDeletionProtection, effectiveSettings.SetDeletionProtectionSettings).WithGoogleRequestParam("project", request => request.Project).WithGoogleRequestParam("zone", request => request.Zone).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callSetDeletionProtection);
             Modify_SetDeletionProtectionApiCall(ref _callSetDeletionProtection);
@@ -6416,6 +6522,8 @@ namespace Google.Cloud.Compute.V1
 
         partial void Modify_ResetApiCall(ref gaxgrpc::ApiCall<ResetInstanceRequest, Operation> call);
 
+        partial void Modify_SendDiagnosticInterruptApiCall(ref gaxgrpc::ApiCall<SendDiagnosticInterruptInstanceRequest, SendDiagnosticInterruptInstanceResponse> call);
+
         partial void Modify_SetDeletionProtectionApiCall(ref gaxgrpc::ApiCall<SetDeletionProtectionInstanceRequest, Operation> call);
 
         partial void Modify_SetDiskAutoDeleteApiCall(ref gaxgrpc::ApiCall<SetDiskAutoDeleteInstanceRequest, Operation> call);
@@ -6504,6 +6612,8 @@ namespace Google.Cloud.Compute.V1
         partial void Modify_RemoveResourcePoliciesInstanceRequest(ref RemoveResourcePoliciesInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ResetInstanceRequest(ref ResetInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SendDiagnosticInterruptInstanceRequest(ref SendDiagnosticInterruptInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SetDeletionProtectionInstanceRequest(ref SetDeletionProtectionInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -6616,7 +6726,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves aggregated list of all of the instances in your project across all regions and zones.
+        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -6628,7 +6738,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Retrieves aggregated list of all of the instances in your project across all regions and zones.
+        /// Retrieves an aggregated list of all of the instances in your project across all regions and zones. The performance of this method degrades when a filter is specified on a project that has a very large number of instances.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7119,6 +7229,30 @@ namespace Google.Cloud.Compute.V1
             GetZoneOperationRequest pollRequest = GetZoneOperationRequest.FromInitialResponse(response);
             request.PopulatePollRequestFields(pollRequest);
             return new lro::Operation<Operation, Operation>(response.ToLroResponse(pollRequest.ToLroOperationName()), ResetOperationsClient);
+        }
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SendDiagnosticInterruptInstanceResponse SendDiagnosticInterrupt(SendDiagnosticInterruptInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SendDiagnosticInterruptInstanceRequest(ref request, ref callSettings);
+            return _callSendDiagnosticInterrupt.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Sends diagnostic interrupt to the instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SendDiagnosticInterruptInstanceResponse> SendDiagnosticInterruptAsync(SendDiagnosticInterruptInstanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SendDiagnosticInterruptInstanceRequest(ref request, ref callSettings);
+            return _callSendDiagnosticInterrupt.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>SetDeletionProtection</c>.</summary>
@@ -7668,7 +7802,7 @@ namespace Google.Cloud.Compute.V1
         public override lro::OperationsClient UpdateOperationsClient { get; }
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -7683,7 +7817,7 @@ namespace Google.Cloud.Compute.V1
         }
 
         /// <summary>
-        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See  Updating a running instance for a list of updatable instance properties.
+        /// Updates an instance only if the necessary resources are available. This method can update only a specific set of instance properties. See Updating a running instance for a list of updatable instance properties.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>

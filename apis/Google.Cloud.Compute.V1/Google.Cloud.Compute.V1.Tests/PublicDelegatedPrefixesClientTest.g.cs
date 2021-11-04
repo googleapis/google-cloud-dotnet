@@ -47,7 +47,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 IpCidrRange = "ip_cidr_range745a04d3",
                 Region = "regionedb20d96",
-                Status = PublicDelegatedPrefix.Types.Status.Deleting,
+                Status = PublicDelegatedPrefix.Types.Status.ReadyToAnnounce,
                 PublicDelegatedSubPrefixs =
                 {
                     new PublicDelegatedPrefixPublicDelegatedSubPrefix(),
@@ -84,7 +84,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 IpCidrRange = "ip_cidr_range745a04d3",
                 Region = "regionedb20d96",
-                Status = PublicDelegatedPrefix.Types.Status.Deleting,
+                Status = PublicDelegatedPrefix.Types.Status.ReadyToAnnounce,
                 PublicDelegatedSubPrefixs =
                 {
                     new PublicDelegatedPrefixPublicDelegatedSubPrefix(),
@@ -123,7 +123,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 IpCidrRange = "ip_cidr_range745a04d3",
                 Region = "regionedb20d96",
-                Status = PublicDelegatedPrefix.Types.Status.Deleting,
+                Status = PublicDelegatedPrefix.Types.Status.ReadyToAnnounce,
                 PublicDelegatedSubPrefixs =
                 {
                     new PublicDelegatedPrefixPublicDelegatedSubPrefix(),
@@ -160,7 +160,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 IpCidrRange = "ip_cidr_range745a04d3",
                 Region = "regionedb20d96",
-                Status = PublicDelegatedPrefix.Types.Status.Deleting,
+                Status = PublicDelegatedPrefix.Types.Status.ReadyToAnnounce,
                 PublicDelegatedSubPrefixs =
                 {
                     new PublicDelegatedPrefixPublicDelegatedSubPrefix(),

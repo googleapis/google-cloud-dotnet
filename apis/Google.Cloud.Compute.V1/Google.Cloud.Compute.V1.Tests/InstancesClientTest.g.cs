@@ -990,6 +990,86 @@ namespace Google.Cloud.Compute.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void SendDiagnosticInterruptRequestObject()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SendDiagnosticInterruptInstanceRequest request = new SendDiagnosticInterruptInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+            };
+            SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
+            mockGrpcClient.Setup(x => x.SendDiagnosticInterrupt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            SendDiagnosticInterruptInstanceResponse response = client.SendDiagnosticInterrupt(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SendDiagnosticInterruptRequestObjectAsync()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SendDiagnosticInterruptInstanceRequest request = new SendDiagnosticInterruptInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+            };
+            SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
+            mockGrpcClient.Setup(x => x.SendDiagnosticInterruptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendDiagnosticInterruptInstanceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            SendDiagnosticInterruptInstanceResponse responseCallSettings = await client.SendDiagnosticInterruptAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SendDiagnosticInterruptInstanceResponse responseCancellationToken = await client.SendDiagnosticInterruptAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SendDiagnosticInterrupt()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SendDiagnosticInterruptInstanceRequest request = new SendDiagnosticInterruptInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+            };
+            SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
+            mockGrpcClient.Setup(x => x.SendDiagnosticInterrupt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            SendDiagnosticInterruptInstanceResponse response = client.SendDiagnosticInterrupt(request.Project, request.Zone, request.Instance);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SendDiagnosticInterruptAsync()
+        {
+            moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClientForZoneOperations()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SendDiagnosticInterruptInstanceRequest request = new SendDiagnosticInterruptInstanceRequest
+            {
+                Zone = "zone255f4ea8",
+                Instance = "instance99a62371",
+                Project = "projectaa6ff846",
+            };
+            SendDiagnosticInterruptInstanceResponse expectedResponse = new SendDiagnosticInterruptInstanceResponse { };
+            mockGrpcClient.Setup(x => x.SendDiagnosticInterruptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SendDiagnosticInterruptInstanceResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            InstancesClient client = new InstancesClientImpl(mockGrpcClient.Object, null);
+            SendDiagnosticInterruptInstanceResponse responseCallSettings = await client.SendDiagnosticInterruptAsync(request.Project, request.Zone, request.Instance, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SendDiagnosticInterruptInstanceResponse responseCancellationToken = await client.SendDiagnosticInterruptAsync(request.Project, request.Zone, request.Instance, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void SetIamPolicyRequestObject()
         {
             moq::Mock<Instances.InstancesClient> mockGrpcClient = new moq::Mock<Instances.InstancesClient>(moq::MockBehavior.Strict);
