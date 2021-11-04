@@ -178,7 +178,6 @@ generate_microgenerator() {
   # types can use the messages in them, but nothing will be generated.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
-    --gapic_opt=metadata \
     $SERVICE_CONFIG_OPTION \
     $SERVICE_YAML_OPTION \
     $COMMON_RESOURCES_OPTION \
@@ -232,7 +231,6 @@ generate_microgenerator_regapic() {
   # Client generation.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
-    --gapic_opt=metadata \
     $SERVICE_CONFIG_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS_DISCOVERY \
