@@ -15,7 +15,6 @@
 using Google.Api.Gax;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -28,7 +27,7 @@ namespace Google.Cloud.Diagnostics.Common
         /// <summary>
         /// The buffered items. This is not readonly as it is replaced when the buffer is flushed.
         /// </summary>
-        private List<T> _items = new List<T>();
+        private LinkedList<T> _items = new LinkedList<T>();
 
         /// <summary>The timer to automatically flush the buffer.</summary>
         private IThreadingTimer _timer;
@@ -71,15 +70,18 @@ namespace Google.Cloud.Diagnostics.Common
         protected override bool ReceiveWithSemaphoreHeld(IEnumerable<T> items)
         {
             GaxPreconditions.CheckNotNull(items, nameof(items));
-            _items.AddRange(items);
+            foreach (T item in items)
+            {
+                _items.AddLast(item);
+            }
             return false;
         }
 
         /// <inheritdoc />
         protected override IEnumerable<T> GetAndResetItemsWithSemaphoreHeld()
         {
-            IList<T> old = _items;
-            _items = new List<T>();
+            LinkedList<T> old = _items;
+            _items = new LinkedList<T>();
             return old;
         }
     }
