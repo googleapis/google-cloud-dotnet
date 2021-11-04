@@ -8183,6 +8183,9 @@ namespace Google.Cloud.Channel.V1 {
     private readonly pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter> parameters_ = new pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter>();
     /// <summary>
     /// Required. Entitlement parameters to update. You can only change editable parameters.
+    ///
+    /// To view the available Parameters for a request, refer to the
+    /// [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions] from the desired offer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8811,7 +8814,8 @@ namespace Google.Cloud.Channel.V1 {
         = pb::FieldCodec.ForMessage(26, global::Google.Cloud.Channel.V1.Parameter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter> parameters_ = new pbc::RepeatedField<global::Google.Cloud.Channel.V1.Parameter>();
     /// <summary>
-    /// Optional. Parameters needed to purchase the Offer.
+    /// Optional. Parameters needed to purchase the Offer. To view the available Parameters
+    /// refer to the [Offer.parameter_definitions][google.cloud.channel.v1.Offer.parameter_definitions] from the desired offer.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
