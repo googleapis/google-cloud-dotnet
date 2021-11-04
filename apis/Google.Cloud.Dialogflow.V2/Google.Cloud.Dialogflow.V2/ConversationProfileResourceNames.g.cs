@@ -848,6 +848,16 @@ namespace Google.Cloud.Dialogflow.V2
             get => string.IsNullOrEmpty(Name) ? null : gcdv::ConversationProfileName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="CXSecuritySettingsName"/>-typed view over the <see cref="SecuritySettings"/> resource name
+        /// property.
+        /// </summary>
+        public CXSecuritySettingsName SecuritySettingsAsCXSecuritySettingsName
+        {
+            get => string.IsNullOrEmpty(SecuritySettings) ? null : CXSecuritySettingsName.Parse(SecuritySettings, allowUnparsed: true);
+            set => SecuritySettings = value?.ToString() ?? "";
+        }
     }
 
     public partial class ListConversationProfilesRequest
