@@ -3324,6 +3324,70 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdatePhraseMatcher</summary>
+        public void UpdatePhraseMatcherRequestObject()
+        {
+            // Snippet: UpdatePhraseMatcher(UpdatePhraseMatcherRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdatePhraseMatcherRequest request = new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = new PhraseMatcher(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            PhraseMatcher response = contactCenterInsightsClient.UpdatePhraseMatcher(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePhraseMatcherAsync</summary>
+        public async Task UpdatePhraseMatcherRequestObjectAsync()
+        {
+            // Snippet: UpdatePhraseMatcherAsync(UpdatePhraseMatcherRequest, CallSettings)
+            // Additional: UpdatePhraseMatcherAsync(UpdatePhraseMatcherRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdatePhraseMatcherRequest request = new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = new PhraseMatcher(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            PhraseMatcher response = await contactCenterInsightsClient.UpdatePhraseMatcherAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePhraseMatcher</summary>
+        public void UpdatePhraseMatcher()
+        {
+            // Snippet: UpdatePhraseMatcher(PhraseMatcher, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            PhraseMatcher phraseMatcher = new PhraseMatcher();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            PhraseMatcher response = contactCenterInsightsClient.UpdatePhraseMatcher(phraseMatcher, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePhraseMatcherAsync</summary>
+        public async Task UpdatePhraseMatcherAsync()
+        {
+            // Snippet: UpdatePhraseMatcherAsync(PhraseMatcher, FieldMask, CallSettings)
+            // Additional: UpdatePhraseMatcherAsync(PhraseMatcher, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            PhraseMatcher phraseMatcher = new PhraseMatcher();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            PhraseMatcher response = await contactCenterInsightsClient.UpdatePhraseMatcherAsync(phraseMatcher, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for CalculateStats</summary>
         public void CalculateStatsRequestObject()
         {

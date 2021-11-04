@@ -2649,6 +2649,146 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void UpdatePhraseMatcherRequestObject()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdatePhraseMatcherRequest request = new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = new PhraseMatcher(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PhraseMatcher expectedResponse = new PhraseMatcher
+            {
+                PhraseMatcherName = PhraseMatcherName.FromProjectLocationPhraseMatcher("[PROJECT]", "[LOCATION]", "[PHRASE_MATCHER]"),
+                RevisionId = "revision_id8d9ae05d",
+                VersionTag = "version_tage7ed110f",
+                RevisionCreateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                Type = PhraseMatcher.Types.PhraseMatcherType.Unspecified,
+                Active = false,
+                PhraseMatchRuleGroups =
+                {
+                    new PhraseMatchRuleGroup(),
+                },
+                ActivationUpdateTime = new wkt::Timestamp(),
+                RoleMatch = ConversationParticipant.Types.Role.HumanAgent,
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdatePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            PhraseMatcher response = client.UpdatePhraseMatcher(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdatePhraseMatcherRequestObjectAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdatePhraseMatcherRequest request = new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = new PhraseMatcher(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PhraseMatcher expectedResponse = new PhraseMatcher
+            {
+                PhraseMatcherName = PhraseMatcherName.FromProjectLocationPhraseMatcher("[PROJECT]", "[LOCATION]", "[PHRASE_MATCHER]"),
+                RevisionId = "revision_id8d9ae05d",
+                VersionTag = "version_tage7ed110f",
+                RevisionCreateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                Type = PhraseMatcher.Types.PhraseMatcherType.Unspecified,
+                Active = false,
+                PhraseMatchRuleGroups =
+                {
+                    new PhraseMatchRuleGroup(),
+                },
+                ActivationUpdateTime = new wkt::Timestamp(),
+                RoleMatch = ConversationParticipant.Types.Role.HumanAgent,
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdatePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            PhraseMatcher responseCallSettings = await client.UpdatePhraseMatcherAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PhraseMatcher responseCancellationToken = await client.UpdatePhraseMatcherAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdatePhraseMatcher()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdatePhraseMatcherRequest request = new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = new PhraseMatcher(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PhraseMatcher expectedResponse = new PhraseMatcher
+            {
+                PhraseMatcherName = PhraseMatcherName.FromProjectLocationPhraseMatcher("[PROJECT]", "[LOCATION]", "[PHRASE_MATCHER]"),
+                RevisionId = "revision_id8d9ae05d",
+                VersionTag = "version_tage7ed110f",
+                RevisionCreateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                Type = PhraseMatcher.Types.PhraseMatcherType.Unspecified,
+                Active = false,
+                PhraseMatchRuleGroups =
+                {
+                    new PhraseMatchRuleGroup(),
+                },
+                ActivationUpdateTime = new wkt::Timestamp(),
+                RoleMatch = ConversationParticipant.Types.Role.HumanAgent,
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdatePhraseMatcher(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            PhraseMatcher response = client.UpdatePhraseMatcher(request.PhraseMatcher, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdatePhraseMatcherAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdatePhraseMatcherRequest request = new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = new PhraseMatcher(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PhraseMatcher expectedResponse = new PhraseMatcher
+            {
+                PhraseMatcherName = PhraseMatcherName.FromProjectLocationPhraseMatcher("[PROJECT]", "[LOCATION]", "[PHRASE_MATCHER]"),
+                RevisionId = "revision_id8d9ae05d",
+                VersionTag = "version_tage7ed110f",
+                RevisionCreateTime = new wkt::Timestamp(),
+                DisplayName = "display_name137f65c2",
+                Type = PhraseMatcher.Types.PhraseMatcherType.Unspecified,
+                Active = false,
+                PhraseMatchRuleGroups =
+                {
+                    new PhraseMatchRuleGroup(),
+                },
+                ActivationUpdateTime = new wkt::Timestamp(),
+                RoleMatch = ConversationParticipant.Types.Role.HumanAgent,
+                UpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdatePhraseMatcherAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PhraseMatcher>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            PhraseMatcher responseCallSettings = await client.UpdatePhraseMatcherAsync(request.PhraseMatcher, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PhraseMatcher responseCancellationToken = await client.UpdatePhraseMatcherAsync(request.PhraseMatcher, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void CalculateStatsRequestObject()
         {
             moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
@@ -2687,6 +2827,13 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                     },
                 },
                 ConversationCountTimeSeries = new CalculateStatsResponse.Types.TimeSeries(),
+                IssueMatchesStats =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new IssueModelLabelStats.Types.IssueStats()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -2734,6 +2881,13 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                     },
                 },
                 ConversationCountTimeSeries = new CalculateStatsResponse.Types.TimeSeries(),
+                IssueMatchesStats =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new IssueModelLabelStats.Types.IssueStats()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -2782,6 +2936,13 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                     },
                 },
                 ConversationCountTimeSeries = new CalculateStatsResponse.Types.TimeSeries(),
+                IssueMatchesStats =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new IssueModelLabelStats.Types.IssueStats()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -2828,6 +2989,13 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                     },
                 },
                 ConversationCountTimeSeries = new CalculateStatsResponse.Types.TimeSeries(),
+                IssueMatchesStats =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new IssueModelLabelStats.Types.IssueStats()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -2876,6 +3044,13 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                     },
                 },
                 ConversationCountTimeSeries = new CalculateStatsResponse.Types.TimeSeries(),
+                IssueMatchesStats =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new IssueModelLabelStats.Types.IssueStats()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateStats(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -2922,6 +3097,13 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                     },
                 },
                 ConversationCountTimeSeries = new CalculateStatsResponse.Types.TimeSeries(),
+                IssueMatchesStats =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new IssueModelLabelStats.Types.IssueStats()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.CalculateStatsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CalculateStatsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);

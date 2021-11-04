@@ -80,6 +80,7 @@ namespace Google.Cloud.ContactCenterInsights.V1
             GetPhraseMatcherSettings = existing.GetPhraseMatcherSettings;
             ListPhraseMatchersSettings = existing.ListPhraseMatchersSettings;
             DeletePhraseMatcherSettings = existing.DeletePhraseMatcherSettings;
+            UpdatePhraseMatcherSettings = existing.UpdatePhraseMatcherSettings;
             CalculateStatsSettings = existing.CalculateStatsSettings;
             GetSettingsSettings = existing.GetSettingsSettings;
             UpdateSettingsSettings = existing.UpdateSettingsSettings;
@@ -664,6 +665,25 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeletePhraseMatcherSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ContactCenterInsightsClient.UpdatePhraseMatcher</c> and
+        /// <c>ContactCenterInsightsClient.UpdatePhraseMatcherAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 10000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePhraseMatcherSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(10000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -3358,10 +3378,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
+        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3379,10 +3399,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
+        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3400,10 +3420,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
+        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3417,10 +3437,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
+        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3438,10 +3458,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
+        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3459,10 +3479,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location to create
-        /// a phrase matcher for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
-        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location
+        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
+        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
+        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3795,6 +3815,83 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeletePhraseMatcherAsync(PhraseMatcherName name, st::CancellationToken cancellationToken) =>
             DeletePhraseMatcherAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PhraseMatcher UpdatePhraseMatcher(UpdatePhraseMatcherRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhraseMatcher> UpdatePhraseMatcherAsync(UpdatePhraseMatcherRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhraseMatcher> UpdatePhraseMatcherAsync(UpdatePhraseMatcherRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePhraseMatcherAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="phraseMatcher">
+        /// Required. The new values for the phrase matcher.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PhraseMatcher UpdatePhraseMatcher(PhraseMatcher phraseMatcher, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePhraseMatcher(new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = gax::GaxPreconditions.CheckNotNull(phraseMatcher, nameof(phraseMatcher)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="phraseMatcher">
+        /// Required. The new values for the phrase matcher.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhraseMatcher> UpdatePhraseMatcherAsync(PhraseMatcher phraseMatcher, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePhraseMatcherAsync(new UpdatePhraseMatcherRequest
+            {
+                PhraseMatcher = gax::GaxPreconditions.CheckNotNull(phraseMatcher, nameof(phraseMatcher)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="phraseMatcher">
+        /// Required. The new values for the phrase matcher.
+        /// </param>
+        /// <param name="updateMask">
+        /// The list of fields to be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PhraseMatcher> UpdatePhraseMatcherAsync(PhraseMatcher phraseMatcher, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePhraseMatcherAsync(phraseMatcher, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Gets conversation statistics.
@@ -4140,6 +4237,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         private readonly gaxgrpc::ApiCall<DeletePhraseMatcherRequest, wkt::Empty> _callDeletePhraseMatcher;
 
+        private readonly gaxgrpc::ApiCall<UpdatePhraseMatcherRequest, PhraseMatcher> _callUpdatePhraseMatcher;
+
         private readonly gaxgrpc::ApiCall<CalculateStatsRequest, CalculateStatsResponse> _callCalculateStats;
 
         private readonly gaxgrpc::ApiCall<GetSettingsRequest, Settings> _callGetSettings;
@@ -4238,6 +4337,9 @@ namespace Google.Cloud.ContactCenterInsights.V1
             _callDeletePhraseMatcher = clientHelper.BuildApiCall<DeletePhraseMatcherRequest, wkt::Empty>(grpcClient.DeletePhraseMatcherAsync, grpcClient.DeletePhraseMatcher, effectiveSettings.DeletePhraseMatcherSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePhraseMatcher);
             Modify_DeletePhraseMatcherApiCall(ref _callDeletePhraseMatcher);
+            _callUpdatePhraseMatcher = clientHelper.BuildApiCall<UpdatePhraseMatcherRequest, PhraseMatcher>(grpcClient.UpdatePhraseMatcherAsync, grpcClient.UpdatePhraseMatcher, effectiveSettings.UpdatePhraseMatcherSettings).WithGoogleRequestParam("phrase_matcher.name", request => request.PhraseMatcher?.Name);
+            Modify_ApiCall(ref _callUpdatePhraseMatcher);
+            Modify_UpdatePhraseMatcherApiCall(ref _callUpdatePhraseMatcher);
             _callCalculateStats = clientHelper.BuildApiCall<CalculateStatsRequest, CalculateStatsResponse>(grpcClient.CalculateStatsAsync, grpcClient.CalculateStats, effectiveSettings.CalculateStatsSettings).WithGoogleRequestParam("location", request => request.Location);
             Modify_ApiCall(ref _callCalculateStats);
             Modify_CalculateStatsApiCall(ref _callCalculateStats);
@@ -4302,6 +4404,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
 
         partial void Modify_DeletePhraseMatcherApiCall(ref gaxgrpc::ApiCall<DeletePhraseMatcherRequest, wkt::Empty> call);
 
+        partial void Modify_UpdatePhraseMatcherApiCall(ref gaxgrpc::ApiCall<UpdatePhraseMatcherRequest, PhraseMatcher> call);
+
         partial void Modify_CalculateStatsApiCall(ref gaxgrpc::ApiCall<CalculateStatsRequest, CalculateStatsResponse> call);
 
         partial void Modify_GetSettingsApiCall(ref gaxgrpc::ApiCall<GetSettingsRequest, Settings> call);
@@ -4362,6 +4466,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         partial void Modify_ListPhraseMatchersRequest(ref ListPhraseMatchersRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeletePhraseMatcherRequest(ref DeletePhraseMatcherRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePhraseMatcherRequest(ref UpdatePhraseMatcherRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CalculateStatsRequest(ref CalculateStatsRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -4991,6 +5097,30 @@ namespace Google.Cloud.ContactCenterInsights.V1
         {
             Modify_DeletePhraseMatcherRequest(ref request, ref callSettings);
             return _callDeletePhraseMatcher.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PhraseMatcher UpdatePhraseMatcher(UpdatePhraseMatcherRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePhraseMatcherRequest(ref request, ref callSettings);
+            return _callUpdatePhraseMatcher.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates a phrase matcher.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PhraseMatcher> UpdatePhraseMatcherAsync(UpdatePhraseMatcherRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePhraseMatcherRequest(ref request, ref callSettings);
+            return _callUpdatePhraseMatcher.Async(request, callSettings);
         }
 
         /// <summary>
