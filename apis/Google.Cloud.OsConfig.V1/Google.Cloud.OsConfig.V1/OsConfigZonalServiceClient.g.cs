@@ -17,7 +17,10 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
+using lro = Google.LongRunning;
 using proto = Google.Protobuf;
+using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using grpcinter = Grpc.Core.Interceptors;
 using sys = System;
@@ -44,6 +47,17 @@ namespace Google.Cloud.OsConfig.V1
         private OsConfigZonalServiceSettings(OsConfigZonalServiceSettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            CreateOSPolicyAssignmentSettings = existing.CreateOSPolicyAssignmentSettings;
+            CreateOSPolicyAssignmentOperationsSettings = existing.CreateOSPolicyAssignmentOperationsSettings.Clone();
+            UpdateOSPolicyAssignmentSettings = existing.UpdateOSPolicyAssignmentSettings;
+            UpdateOSPolicyAssignmentOperationsSettings = existing.UpdateOSPolicyAssignmentOperationsSettings.Clone();
+            GetOSPolicyAssignmentSettings = existing.GetOSPolicyAssignmentSettings;
+            ListOSPolicyAssignmentsSettings = existing.ListOSPolicyAssignmentsSettings;
+            ListOSPolicyAssignmentRevisionsSettings = existing.ListOSPolicyAssignmentRevisionsSettings;
+            DeleteOSPolicyAssignmentSettings = existing.DeleteOSPolicyAssignmentSettings;
+            DeleteOSPolicyAssignmentOperationsSettings = existing.DeleteOSPolicyAssignmentOperationsSettings.Clone();
+            GetOSPolicyAssignmentReportSettings = existing.GetOSPolicyAssignmentReportSettings;
+            ListOSPolicyAssignmentReportsSettings = existing.ListOSPolicyAssignmentReportsSettings;
             GetInventorySettings = existing.GetInventorySettings;
             ListInventoriesSettings = existing.ListInventoriesSettings;
             GetVulnerabilityReportSettings = existing.GetVulnerabilityReportSettings;
@@ -52,6 +66,212 @@ namespace Google.Cloud.OsConfig.V1
         }
 
         partial void OnCopy(OsConfigZonalServiceSettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.CreateOSPolicyAssignment</c> and
+        /// <c>OsConfigZonalServiceClient.CreateOSPolicyAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateOSPolicyAssignmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OsConfigZonalServiceClient.CreateOSPolicyAssignment</c> and
+        /// <c>OsConfigZonalServiceClient.CreateOSPolicyAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateOSPolicyAssignmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.UpdateOSPolicyAssignment</c> and
+        /// <c>OsConfigZonalServiceClient.UpdateOSPolicyAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateOSPolicyAssignmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OsConfigZonalServiceClient.UpdateOSPolicyAssignment</c> and
+        /// <c>OsConfigZonalServiceClient.UpdateOSPolicyAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateOSPolicyAssignmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.GetOSPolicyAssignment</c> and
+        /// <c>OsConfigZonalServiceClient.GetOSPolicyAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetOSPolicyAssignmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignments</c> and
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignmentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListOSPolicyAssignmentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisions</c> and
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignmentRevisionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListOSPolicyAssignmentRevisionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.DeleteOSPolicyAssignment</c> and
+        /// <c>OsConfigZonalServiceClient.DeleteOSPolicyAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteOSPolicyAssignmentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>OsConfigZonalServiceClient.DeleteOSPolicyAssignment</c> and
+        /// <c>OsConfigZonalServiceClient.DeleteOSPolicyAssignmentAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteOSPolicyAssignmentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.GetOSPolicyAssignmentReport</c> and
+        /// <c>OsConfigZonalServiceClient.GetOSPolicyAssignmentReportAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetOSPolicyAssignmentReportSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignmentReports</c> and
+        /// <c>OsConfigZonalServiceClient.ListOSPolicyAssignmentReportsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListOSPolicyAssignmentReportsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -294,6 +514,1449 @@ namespace Google.Cloud.OsConfig.V1
 
         /// <summary>The underlying gRPC OsConfigZonalService client</summary>
         public virtual OsConfigZonalService.OsConfigZonalServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> CreateOSPolicyAssignment(CreateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> CreateOSPolicyAssignmentAsync(CreateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> CreateOSPolicyAssignmentAsync(CreateOSPolicyAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            CreateOSPolicyAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateOSPolicyAssignment</c>.</summary>
+        public virtual lro::OperationsClient CreateOSPolicyAssignmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateOSPolicyAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> PollOnceCreateOSPolicyAssignment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateOSPolicyAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateOSPolicyAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> PollOnceCreateOSPolicyAssignmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateOSPolicyAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name in the form:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="osPolicyAssignment">
+        /// Required. The OS policy assignment to be created.
+        /// </param>
+        /// <param name="osPolicyAssignmentId">
+        /// Required. The logical name of the OS policy assignment in the project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> CreateOSPolicyAssignment(string parent, OSPolicyAssignment osPolicyAssignment, string osPolicyAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOSPolicyAssignment(new CreateOSPolicyAssignmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                OsPolicyAssignment = gax::GaxPreconditions.CheckNotNull(osPolicyAssignment, nameof(osPolicyAssignment)),
+                OsPolicyAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(osPolicyAssignmentId, nameof(osPolicyAssignmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name in the form:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="osPolicyAssignment">
+        /// Required. The OS policy assignment to be created.
+        /// </param>
+        /// <param name="osPolicyAssignmentId">
+        /// Required. The logical name of the OS policy assignment in the project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> CreateOSPolicyAssignmentAsync(string parent, OSPolicyAssignment osPolicyAssignment, string osPolicyAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOSPolicyAssignmentAsync(new CreateOSPolicyAssignmentRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                OsPolicyAssignment = gax::GaxPreconditions.CheckNotNull(osPolicyAssignment, nameof(osPolicyAssignment)),
+                OsPolicyAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(osPolicyAssignmentId, nameof(osPolicyAssignmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name in the form:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="osPolicyAssignment">
+        /// Required. The OS policy assignment to be created.
+        /// </param>
+        /// <param name="osPolicyAssignmentId">
+        /// Required. The logical name of the OS policy assignment in the project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the project.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> CreateOSPolicyAssignmentAsync(string parent, OSPolicyAssignment osPolicyAssignment, string osPolicyAssignmentId, st::CancellationToken cancellationToken) =>
+            CreateOSPolicyAssignmentAsync(parent, osPolicyAssignment, osPolicyAssignmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name in the form:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="osPolicyAssignment">
+        /// Required. The OS policy assignment to be created.
+        /// </param>
+        /// <param name="osPolicyAssignmentId">
+        /// Required. The logical name of the OS policy assignment in the project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> CreateOSPolicyAssignment(gagr::LocationName parent, OSPolicyAssignment osPolicyAssignment, string osPolicyAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOSPolicyAssignment(new CreateOSPolicyAssignmentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                OsPolicyAssignment = gax::GaxPreconditions.CheckNotNull(osPolicyAssignment, nameof(osPolicyAssignment)),
+                OsPolicyAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(osPolicyAssignmentId, nameof(osPolicyAssignmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name in the form:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="osPolicyAssignment">
+        /// Required. The OS policy assignment to be created.
+        /// </param>
+        /// <param name="osPolicyAssignmentId">
+        /// Required. The logical name of the OS policy assignment in the project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the project.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> CreateOSPolicyAssignmentAsync(gagr::LocationName parent, OSPolicyAssignment osPolicyAssignment, string osPolicyAssignmentId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateOSPolicyAssignmentAsync(new CreateOSPolicyAssignmentRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                OsPolicyAssignment = gax::GaxPreconditions.CheckNotNull(osPolicyAssignment, nameof(osPolicyAssignment)),
+                OsPolicyAssignmentId = gax::GaxPreconditions.CheckNotNullOrEmpty(osPolicyAssignmentId, nameof(osPolicyAssignmentId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name in the form:
+        /// projects/{project}/locations/{location}
+        /// </param>
+        /// <param name="osPolicyAssignment">
+        /// Required. The OS policy assignment to be created.
+        /// </param>
+        /// <param name="osPolicyAssignmentId">
+        /// Required. The logical name of the OS policy assignment in the project
+        /// with the following restrictions:
+        /// 
+        /// * Must contain only lowercase letters, numbers, and hyphens.
+        /// * Must start with a letter.
+        /// * Must be between 1-63 characters.
+        /// * Must end with a number or a letter.
+        /// * Must be unique within the project.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> CreateOSPolicyAssignmentAsync(gagr::LocationName parent, OSPolicyAssignment osPolicyAssignment, string osPolicyAssignmentId, st::CancellationToken cancellationToken) =>
+            CreateOSPolicyAssignmentAsync(parent, osPolicyAssignment, osPolicyAssignmentId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> UpdateOSPolicyAssignment(UpdateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> UpdateOSPolicyAssignmentAsync(UpdateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> UpdateOSPolicyAssignmentAsync(UpdateOSPolicyAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            UpdateOSPolicyAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateOSPolicyAssignment</c>.</summary>
+        public virtual lro::OperationsClient UpdateOSPolicyAssignmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateOSPolicyAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> PollOnceUpdateOSPolicyAssignment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOSPolicyAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateOSPolicyAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> PollOnceUpdateOSPolicyAssignmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateOSPolicyAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="osPolicyAssignment">
+        /// Required. The updated OS policy assignment.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that controls which fields of the assignment should be
+        /// updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> UpdateOSPolicyAssignment(OSPolicyAssignment osPolicyAssignment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOSPolicyAssignment(new UpdateOSPolicyAssignmentRequest
+            {
+                OsPolicyAssignment = gax::GaxPreconditions.CheckNotNull(osPolicyAssignment, nameof(osPolicyAssignment)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="osPolicyAssignment">
+        /// Required. The updated OS policy assignment.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that controls which fields of the assignment should be
+        /// updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> UpdateOSPolicyAssignmentAsync(OSPolicyAssignment osPolicyAssignment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateOSPolicyAssignmentAsync(new UpdateOSPolicyAssignmentRequest
+            {
+                OsPolicyAssignment = gax::GaxPreconditions.CheckNotNull(osPolicyAssignment, nameof(osPolicyAssignment)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="osPolicyAssignment">
+        /// Required. The updated OS policy assignment.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that controls which fields of the assignment should be
+        /// updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> UpdateOSPolicyAssignmentAsync(OSPolicyAssignment osPolicyAssignment, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateOSPolicyAssignmentAsync(osPolicyAssignment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignment GetOSPolicyAssignment(GetOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignment> GetOSPolicyAssignmentAsync(GetOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignment> GetOSPolicyAssignmentAsync(GetOSPolicyAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of OS policy assignment.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignment GetOSPolicyAssignment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignment(new GetOSPolicyAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of OS policy assignment.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignment> GetOSPolicyAssignmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentAsync(new GetOSPolicyAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of OS policy assignment.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignment> GetOSPolicyAssignmentAsync(string name, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of OS policy assignment.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignment GetOSPolicyAssignment(OSPolicyAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignment(new GetOSPolicyAssignmentRequest
+            {
+                OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of OS policy assignment.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignment> GetOSPolicyAssignmentAsync(OSPolicyAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentAsync(new GetOSPolicyAssignmentRequest
+            {
+                OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of OS policy assignment.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/osPolicyAssignments/{os_policy_assignment}@{revisionId}`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignment> GetOSPolicyAssignmentAsync(OSPolicyAssignmentName name, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(ListOSPolicyAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(ListOSPolicyAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignments(new ListOSPolicyAssignmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentsAsync(new ListOSPolicyAssignmentsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignments(new ListOSPolicyAssignmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentsAsync(new ListOSPolicyAssignmentsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(ListOSPolicyAssignmentRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(ListOSPolicyAssignmentRevisionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentRevisions(new ListOSPolicyAssignmentRevisionsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(string name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentRevisionsAsync(new ListOSPolicyAssignmentRevisionsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(OSPolicyAssignmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentRevisions(new ListOSPolicyAssignmentRevisionsRequest
+            {
+                OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to list revisions for.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(OSPolicyAssignmentName name, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentRevisionsAsync(new ListOSPolicyAssignmentRevisionsRequest
+            {
+                OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata> DeleteOSPolicyAssignment(DeleteOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> DeleteOSPolicyAssignmentAsync(DeleteOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> DeleteOSPolicyAssignmentAsync(DeleteOSPolicyAssignmentRequest request, st::CancellationToken cancellationToken) =>
+            DeleteOSPolicyAssignmentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteOSPolicyAssignment</c>.</summary>
+        public virtual lro::OperationsClient DeleteOSPolicyAssignmentOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteOSPolicyAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata> PollOnceDeleteOSPolicyAssignment(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOSPolicyAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteOSPolicyAssignment</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> PollOnceDeleteOSPolicyAssignmentAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteOSPolicyAssignmentOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to be deleted
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata> DeleteOSPolicyAssignment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOSPolicyAssignment(new DeleteOSPolicyAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to be deleted
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> DeleteOSPolicyAssignmentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOSPolicyAssignmentAsync(new DeleteOSPolicyAssignmentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to be deleted
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> DeleteOSPolicyAssignmentAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteOSPolicyAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to be deleted
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata> DeleteOSPolicyAssignment(OSPolicyAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOSPolicyAssignment(new DeleteOSPolicyAssignmentRequest
+            {
+                OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to be deleted
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> DeleteOSPolicyAssignmentAsync(OSPolicyAssignmentName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteOSPolicyAssignmentAsync(new DeleteOSPolicyAssignmentRequest
+            {
+                OSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the OS policy assignment to be deleted
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> DeleteOSPolicyAssignmentAsync(OSPolicyAssignmentName name, st::CancellationToken cancellationToken) =>
+            DeleteOSPolicyAssignmentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignmentReport GetOSPolicyAssignmentReport(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest request, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentReportAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignmentReport GetOSPolicyAssignmentReport(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReport(new GetOSPolicyAssignmentReportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReportAsync(new GetOSPolicyAssignmentReportRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(string name, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual OSPolicyAssignmentReport GetOSPolicyAssignmentReport(OSPolicyAssignmentReportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReport(new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(OSPolicyAssignmentReportName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetOSPolicyAssignmentReportAsync(new GetOSPolicyAssignmentReportRequest
+            {
+                OSPolicyAssignmentReportName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. API resource name for OS policy assignment report.
+        /// 
+        /// Format:
+        /// `/projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/report`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance_id}`, either Compute Engine `instance-id` or `instance-name`
+        /// can be provided.
+        /// For `{assignment_id}`, the OSPolicyAssignment id must be provided.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(OSPolicyAssignmentReportName name, st::CancellationToken cancellationToken) =>
+            GetOSPolicyAssignmentReportAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReports(new ListOSPolicyAssignmentReportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReportsAsync(new ListOSPolicyAssignmentReportsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReports(new ListOSPolicyAssignmentReportsRequest
+            {
+                ParentAsInstanceOSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent resource name.
+        /// 
+        /// Format:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/{assignment}/reports`
+        /// 
+        /// For `{project}`, either `project-number` or `project-id` can be provided.
+        /// For `{instance}`, either `instance-name`, `instance-id`, or `-` can be
+        /// provided. If '-' is provided, the response will include
+        /// OSPolicyAssignmentReports for all instances in the project/location.
+        /// For `{assignment}`, either `assignment-id` or `-` can be provided. If '-'
+        /// is provided, the response will include OSPolicyAssignmentReports for all
+        /// OSPolicyAssignments in the project/location.
+        /// Either {instance} or {assignment} must be `-`.
+        /// 
+        /// For example:
+        /// `projects/{project}/locations/{location}/instances/{instance}/osPolicyAssignments/-/reports`
+        /// returns all reports for the instance
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/{assignment-id}/reports`
+        /// returns all the reports for the given assignment across all instances.
+        /// `projects/{project}/locations/{location}/instances/-/osPolicyAssignments/-/reports`
+        /// returns all the reports for all assignments across all instances.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(InstanceOSPolicyAssignmentName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListOSPolicyAssignmentReportsAsync(new ListOSPolicyAssignmentReportsRequest
+            {
+                ParentAsInstanceOSPolicyAssignmentName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
 
         /// <summary>
         /// Get inventory data for the specified VM instance. If the VM has no
@@ -877,6 +2540,22 @@ namespace Google.Cloud.OsConfig.V1
     /// </remarks>
     public sealed partial class OsConfigZonalServiceClientImpl : OsConfigZonalServiceClient
     {
+        private readonly gaxgrpc::ApiCall<CreateOSPolicyAssignmentRequest, lro::Operation> _callCreateOSPolicyAssignment;
+
+        private readonly gaxgrpc::ApiCall<UpdateOSPolicyAssignmentRequest, lro::Operation> _callUpdateOSPolicyAssignment;
+
+        private readonly gaxgrpc::ApiCall<GetOSPolicyAssignmentRequest, OSPolicyAssignment> _callGetOSPolicyAssignment;
+
+        private readonly gaxgrpc::ApiCall<ListOSPolicyAssignmentsRequest, ListOSPolicyAssignmentsResponse> _callListOSPolicyAssignments;
+
+        private readonly gaxgrpc::ApiCall<ListOSPolicyAssignmentRevisionsRequest, ListOSPolicyAssignmentRevisionsResponse> _callListOSPolicyAssignmentRevisions;
+
+        private readonly gaxgrpc::ApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation> _callDeleteOSPolicyAssignment;
+
+        private readonly gaxgrpc::ApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport> _callGetOSPolicyAssignmentReport;
+
+        private readonly gaxgrpc::ApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse> _callListOSPolicyAssignmentReports;
+
         private readonly gaxgrpc::ApiCall<GetInventoryRequest, Inventory> _callGetInventory;
 
         private readonly gaxgrpc::ApiCall<ListInventoriesRequest, ListInventoriesResponse> _callListInventories;
@@ -896,6 +2575,33 @@ namespace Google.Cloud.OsConfig.V1
             GrpcClient = grpcClient;
             OsConfigZonalServiceSettings effectiveSettings = settings ?? OsConfigZonalServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            CreateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateOSPolicyAssignmentOperationsSettings);
+            UpdateOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateOSPolicyAssignmentOperationsSettings);
+            DeleteOSPolicyAssignmentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteOSPolicyAssignmentOperationsSettings);
+            _callCreateOSPolicyAssignment = clientHelper.BuildApiCall<CreateOSPolicyAssignmentRequest, lro::Operation>(grpcClient.CreateOSPolicyAssignmentAsync, grpcClient.CreateOSPolicyAssignment, effectiveSettings.CreateOSPolicyAssignmentSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateOSPolicyAssignment);
+            Modify_CreateOSPolicyAssignmentApiCall(ref _callCreateOSPolicyAssignment);
+            _callUpdateOSPolicyAssignment = clientHelper.BuildApiCall<UpdateOSPolicyAssignmentRequest, lro::Operation>(grpcClient.UpdateOSPolicyAssignmentAsync, grpcClient.UpdateOSPolicyAssignment, effectiveSettings.UpdateOSPolicyAssignmentSettings).WithGoogleRequestParam("os_policy_assignment.name", request => request.OsPolicyAssignment?.Name);
+            Modify_ApiCall(ref _callUpdateOSPolicyAssignment);
+            Modify_UpdateOSPolicyAssignmentApiCall(ref _callUpdateOSPolicyAssignment);
+            _callGetOSPolicyAssignment = clientHelper.BuildApiCall<GetOSPolicyAssignmentRequest, OSPolicyAssignment>(grpcClient.GetOSPolicyAssignmentAsync, grpcClient.GetOSPolicyAssignment, effectiveSettings.GetOSPolicyAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetOSPolicyAssignment);
+            Modify_GetOSPolicyAssignmentApiCall(ref _callGetOSPolicyAssignment);
+            _callListOSPolicyAssignments = clientHelper.BuildApiCall<ListOSPolicyAssignmentsRequest, ListOSPolicyAssignmentsResponse>(grpcClient.ListOSPolicyAssignmentsAsync, grpcClient.ListOSPolicyAssignments, effectiveSettings.ListOSPolicyAssignmentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListOSPolicyAssignments);
+            Modify_ListOSPolicyAssignmentsApiCall(ref _callListOSPolicyAssignments);
+            _callListOSPolicyAssignmentRevisions = clientHelper.BuildApiCall<ListOSPolicyAssignmentRevisionsRequest, ListOSPolicyAssignmentRevisionsResponse>(grpcClient.ListOSPolicyAssignmentRevisionsAsync, grpcClient.ListOSPolicyAssignmentRevisions, effectiveSettings.ListOSPolicyAssignmentRevisionsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callListOSPolicyAssignmentRevisions);
+            Modify_ListOSPolicyAssignmentRevisionsApiCall(ref _callListOSPolicyAssignmentRevisions);
+            _callDeleteOSPolicyAssignment = clientHelper.BuildApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation>(grpcClient.DeleteOSPolicyAssignmentAsync, grpcClient.DeleteOSPolicyAssignment, effectiveSettings.DeleteOSPolicyAssignmentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteOSPolicyAssignment);
+            Modify_DeleteOSPolicyAssignmentApiCall(ref _callDeleteOSPolicyAssignment);
+            _callGetOSPolicyAssignmentReport = clientHelper.BuildApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport>(grpcClient.GetOSPolicyAssignmentReportAsync, grpcClient.GetOSPolicyAssignmentReport, effectiveSettings.GetOSPolicyAssignmentReportSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetOSPolicyAssignmentReport);
+            Modify_GetOSPolicyAssignmentReportApiCall(ref _callGetOSPolicyAssignmentReport);
+            _callListOSPolicyAssignmentReports = clientHelper.BuildApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse>(grpcClient.ListOSPolicyAssignmentReportsAsync, grpcClient.ListOSPolicyAssignmentReports, effectiveSettings.ListOSPolicyAssignmentReportsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListOSPolicyAssignmentReports);
+            Modify_ListOSPolicyAssignmentReportsApiCall(ref _callListOSPolicyAssignmentReports);
             _callGetInventory = clientHelper.BuildApiCall<GetInventoryRequest, Inventory>(grpcClient.GetInventoryAsync, grpcClient.GetInventory, effectiveSettings.GetInventorySettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInventory);
             Modify_GetInventoryApiCall(ref _callGetInventory);
@@ -913,6 +2619,22 @@ namespace Google.Cloud.OsConfig.V1
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
 
+        partial void Modify_CreateOSPolicyAssignmentApiCall(ref gaxgrpc::ApiCall<CreateOSPolicyAssignmentRequest, lro::Operation> call);
+
+        partial void Modify_UpdateOSPolicyAssignmentApiCall(ref gaxgrpc::ApiCall<UpdateOSPolicyAssignmentRequest, lro::Operation> call);
+
+        partial void Modify_GetOSPolicyAssignmentApiCall(ref gaxgrpc::ApiCall<GetOSPolicyAssignmentRequest, OSPolicyAssignment> call);
+
+        partial void Modify_ListOSPolicyAssignmentsApiCall(ref gaxgrpc::ApiCall<ListOSPolicyAssignmentsRequest, ListOSPolicyAssignmentsResponse> call);
+
+        partial void Modify_ListOSPolicyAssignmentRevisionsApiCall(ref gaxgrpc::ApiCall<ListOSPolicyAssignmentRevisionsRequest, ListOSPolicyAssignmentRevisionsResponse> call);
+
+        partial void Modify_DeleteOSPolicyAssignmentApiCall(ref gaxgrpc::ApiCall<DeleteOSPolicyAssignmentRequest, lro::Operation> call);
+
+        partial void Modify_GetOSPolicyAssignmentReportApiCall(ref gaxgrpc::ApiCall<GetOSPolicyAssignmentReportRequest, OSPolicyAssignmentReport> call);
+
+        partial void Modify_ListOSPolicyAssignmentReportsApiCall(ref gaxgrpc::ApiCall<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse> call);
+
         partial void Modify_GetInventoryApiCall(ref gaxgrpc::ApiCall<GetInventoryRequest, Inventory> call);
 
         partial void Modify_ListInventoriesApiCall(ref gaxgrpc::ApiCall<ListInventoriesRequest, ListInventoriesResponse> call);
@@ -926,6 +2648,22 @@ namespace Google.Cloud.OsConfig.V1
         /// <summary>The underlying gRPC OsConfigZonalService client</summary>
         public override OsConfigZonalService.OsConfigZonalServiceClient GrpcClient { get; }
 
+        partial void Modify_CreateOSPolicyAssignmentRequest(ref CreateOSPolicyAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateOSPolicyAssignmentRequest(ref UpdateOSPolicyAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetOSPolicyAssignmentRequest(ref GetOSPolicyAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListOSPolicyAssignmentsRequest(ref ListOSPolicyAssignmentsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListOSPolicyAssignmentRevisionsRequest(ref ListOSPolicyAssignmentRevisionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteOSPolicyAssignmentRequest(ref DeleteOSPolicyAssignmentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetOSPolicyAssignmentReportRequest(ref GetOSPolicyAssignmentReportRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListOSPolicyAssignmentReportsRequest(ref ListOSPolicyAssignmentReportsRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_GetInventoryRequest(ref GetInventoryRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListInventoriesRequest(ref ListInventoriesRequest request, ref gaxgrpc::CallSettings settings);
@@ -933,6 +2671,277 @@ namespace Google.Cloud.OsConfig.V1
         partial void Modify_GetVulnerabilityReportRequest(ref GetVulnerabilityReportRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListVulnerabilityReportsRequest(ref ListVulnerabilityReportsRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>The long-running operations client for <c>CreateOSPolicyAssignment</c>.</summary>
+        public override lro::OperationsClient CreateOSPolicyAssignmentOperationsClient { get; }
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> CreateOSPolicyAssignment(CreateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>(_callCreateOSPolicyAssignment.Sync(request, callSettings), CreateOSPolicyAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Create an OS policy assignment.
+        /// 
+        /// This method also creates the first revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> CreateOSPolicyAssignmentAsync(CreateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>(await _callCreateOSPolicyAssignment.Async(request, callSettings).ConfigureAwait(false), CreateOSPolicyAssignmentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateOSPolicyAssignment</c>.</summary>
+        public override lro::OperationsClient UpdateOSPolicyAssignmentOperationsClient { get; }
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata> UpdateOSPolicyAssignment(UpdateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>(_callUpdateOSPolicyAssignment.Sync(request, callSettings), UpdateOSPolicyAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Update an existing OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>> UpdateOSPolicyAssignmentAsync(UpdateOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<OSPolicyAssignment, OSPolicyAssignmentOperationMetadata>(await _callUpdateOSPolicyAssignment.Async(request, callSettings).ConfigureAwait(false), UpdateOSPolicyAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override OSPolicyAssignment GetOSPolicyAssignment(GetOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return _callGetOSPolicyAssignment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieve an existing OS policy assignment.
+        /// 
+        /// This method always returns the latest revision. In order to retrieve a
+        /// previous revision of the assignment, also provide the revision ID in the
+        /// `name` parameter.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<OSPolicyAssignment> GetOSPolicyAssignmentAsync(GetOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return _callGetOSPolicyAssignment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignments(ListOSPolicyAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListOSPolicyAssignmentsRequest, ListOSPolicyAssignmentsResponse, OSPolicyAssignment>(_callListOSPolicyAssignments, request, callSettings);
+        }
+
+        /// <summary>
+        /// List the OS policy assignments under the parent resource.
+        /// 
+        /// For each OS policy assignment, the latest revision is returned.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListOSPolicyAssignmentsResponse, OSPolicyAssignment> ListOSPolicyAssignmentsAsync(ListOSPolicyAssignmentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOSPolicyAssignmentsRequest, ListOSPolicyAssignmentsResponse, OSPolicyAssignment>(_callListOSPolicyAssignments, request, callSettings);
+        }
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public override gax::PagedEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisions(ListOSPolicyAssignmentRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListOSPolicyAssignmentRevisionsRequest, ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment>(_callListOSPolicyAssignmentRevisions, request, callSettings);
+        }
+
+        /// <summary>
+        /// List the OS policy assignment revisions for a given OS policy assignment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignment"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment> ListOSPolicyAssignmentRevisionsAsync(ListOSPolicyAssignmentRevisionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentRevisionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOSPolicyAssignmentRevisionsRequest, ListOSPolicyAssignmentRevisionsResponse, OSPolicyAssignment>(_callListOSPolicyAssignmentRevisions, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteOSPolicyAssignment</c>.</summary>
+        public override lro::OperationsClient DeleteOSPolicyAssignmentOperationsClient { get; }
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata> DeleteOSPolicyAssignment(DeleteOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>(_callDeleteOSPolicyAssignment.Sync(request, callSettings), DeleteOSPolicyAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete the OS policy assignment.
+        /// 
+        /// This method creates a new revision of the OS policy assignment.
+        /// 
+        /// This method returns a long running operation (LRO) that contains the
+        /// rollout details. The rollout can be cancelled by cancelling the LRO.
+        /// 
+        /// If the LRO completes and is not cancelled, all revisions associated with
+        /// the OS policy assignment are deleted.
+        /// 
+        /// For more information, see [Method:
+        /// projects.locations.osPolicyAssignments.operations.cancel](https://cloud.google.com/compute/docs/osconfig/rest/v1/projects.locations.osPolicyAssignments.operations/cancel).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>> DeleteOSPolicyAssignmentAsync(DeleteOSPolicyAssignmentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteOSPolicyAssignmentRequest(ref request, ref callSettings);
+            return new lro::Operation<wkt::Empty, OSPolicyAssignmentOperationMetadata>(await _callDeleteOSPolicyAssignment.Async(request, callSettings).ConfigureAwait(false), DeleteOSPolicyAssignmentOperationsClient);
+        }
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override OSPolicyAssignmentReport GetOSPolicyAssignmentReport(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOSPolicyAssignmentReportRequest(ref request, ref callSettings);
+            return _callGetOSPolicyAssignmentReport.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get the OS policy asssignment report for the specified Compute Engine VM
+        /// instance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<OSPolicyAssignmentReport> GetOSPolicyAssignmentReportAsync(GetOSPolicyAssignmentReportRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetOSPolicyAssignmentReportRequest(ref request, ref callSettings);
+            return _callGetOSPolicyAssignmentReport.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public override gax::PagedEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReports(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentReportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport>(_callListOSPolicyAssignmentReports, request, callSettings);
+        }
+
+        /// <summary>
+        /// List OS policy asssignment reports for all Compute Engine VM instances in
+        /// the specified zone.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="OSPolicyAssignmentReport"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport> ListOSPolicyAssignmentReportsAsync(ListOSPolicyAssignmentReportsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListOSPolicyAssignmentReportsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListOSPolicyAssignmentReportsRequest, ListOSPolicyAssignmentReportsResponse, OSPolicyAssignmentReport>(_callListOSPolicyAssignmentReports, request, callSettings);
+        }
 
         /// <summary>
         /// Get inventory data for the specified VM instance. If the VM has no
@@ -1035,12 +3044,48 @@ namespace Google.Cloud.OsConfig.V1
         }
     }
 
+    public partial class ListOSPolicyAssignmentsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListOSPolicyAssignmentRevisionsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListOSPolicyAssignmentReportsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
     public partial class ListInventoriesRequest : gaxgrpc::IPageRequest
     {
     }
 
     public partial class ListVulnerabilityReportsRequest : gaxgrpc::IPageRequest
     {
+    }
+
+    public partial class ListOSPolicyAssignmentsResponse : gaxgrpc::IPageResponse<OSPolicyAssignment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<OSPolicyAssignment> GetEnumerator() => OsPolicyAssignments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListOSPolicyAssignmentRevisionsResponse : gaxgrpc::IPageResponse<OSPolicyAssignment>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<OSPolicyAssignment> GetEnumerator() => OsPolicyAssignments.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListOSPolicyAssignmentReportsResponse : gaxgrpc::IPageResponse<OSPolicyAssignmentReport>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<OSPolicyAssignmentReport> GetEnumerator() => OsPolicyAssignmentReports.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }
 
     public partial class ListInventoriesResponse : gaxgrpc::IPageResponse<Inventory>
@@ -1057,5 +3102,19 @@ namespace Google.Cloud.OsConfig.V1
         public scg::IEnumerator<VulnerabilityReport> GetEnumerator() => VulnerabilityReports.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class OsConfigZonalService
+    {
+        public partial class OsConfigZonalServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="lro::Operations.OperationsClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>A new Operations client for the same target as this client.</returns>
+            public virtual lro::Operations.OperationsClient CreateOperationsClient() =>
+                new lro::Operations.OperationsClient(CallInvoker);
+        }
     }
 }
