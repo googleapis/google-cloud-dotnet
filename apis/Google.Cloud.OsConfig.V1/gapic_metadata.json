@@ -73,10 +73,34 @@
         "grpc": {
           "libraryClient": "OsConfigZonalServiceClient",
           "rpcs": {
+            "CreateOSPolicyAssignment": {
+              "methods": [
+                "CreateOSPolicyAssignment",
+                "CreateOSPolicyAssignmentAsync"
+              ]
+            },
+            "DeleteOSPolicyAssignment": {
+              "methods": [
+                "DeleteOSPolicyAssignment",
+                "DeleteOSPolicyAssignmentAsync"
+              ]
+            },
             "GetInventory": {
               "methods": [
                 "GetInventory",
                 "GetInventoryAsync"
+              ]
+            },
+            "GetOSPolicyAssignment": {
+              "methods": [
+                "GetOSPolicyAssignment",
+                "GetOSPolicyAssignmentAsync"
+              ]
+            },
+            "GetOSPolicyAssignmentReport": {
+              "methods": [
+                "GetOSPolicyAssignmentReport",
+                "GetOSPolicyAssignmentReportAsync"
               ]
             },
             "GetVulnerabilityReport": {
@@ -91,10 +115,34 @@
                 "ListInventoriesAsync"
               ]
             },
+            "ListOSPolicyAssignmentReports": {
+              "methods": [
+                "ListOSPolicyAssignmentReports",
+                "ListOSPolicyAssignmentReportsAsync"
+              ]
+            },
+            "ListOSPolicyAssignmentRevisions": {
+              "methods": [
+                "ListOSPolicyAssignmentRevisions",
+                "ListOSPolicyAssignmentRevisionsAsync"
+              ]
+            },
+            "ListOSPolicyAssignments": {
+              "methods": [
+                "ListOSPolicyAssignments",
+                "ListOSPolicyAssignmentsAsync"
+              ]
+            },
             "ListVulnerabilityReports": {
               "methods": [
                 "ListVulnerabilityReports",
                 "ListVulnerabilityReportsAsync"
+              ]
+            },
+            "UpdateOSPolicyAssignment": {
+              "methods": [
+                "UpdateOSPolicyAssignment",
+                "UpdateOSPolicyAssignmentAsync"
               ]
             }
           }
