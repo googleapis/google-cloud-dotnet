@@ -1541,6 +1541,24 @@
       "protoPath": "google/cloud/lifesciences/v2beta"
     },
     {
+      "id": "Google.Cloud.Location",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "listingDescription": "Support for the Google Cloud Locations mix-in API pattern",
+      "metadataType": "CORE",
+      "description": "gRPC services for the Google Cloud Locations API. This library is typically used as a dependency for other API client libraries.",
+      "tags": [
+        "locations",
+        "zones"
+      ],
+      "dependencies": {
+        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Grpc.Core": "2.38.1"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/location"
+    },
+    {
       "id": "Google.Cloud.Logging.Log4Net",
       "version": "3.3.0",
       "type": "other",
