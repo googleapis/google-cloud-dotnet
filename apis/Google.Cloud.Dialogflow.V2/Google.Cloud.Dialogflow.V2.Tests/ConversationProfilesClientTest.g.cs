@@ -50,6 +50,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -80,6 +82,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -112,6 +116,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -142,6 +148,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -174,6 +182,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -204,6 +214,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.GetConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -237,6 +249,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -268,6 +282,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -301,6 +317,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -332,6 +350,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -365,6 +385,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -396,6 +418,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -429,6 +453,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -460,6 +486,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.CreateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -493,6 +521,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -524,6 +554,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -557,6 +589,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfile(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
@@ -588,6 +622,8 @@ namespace Google.Cloud.Dialogflow.V2.Tests
                 LanguageCode = "language_code2f6c7160",
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
+                SecuritySettingsAsCXSecuritySettingsName = CXSecuritySettingsName.FromProjectLocationSecuritySettings("[PROJECT]", "[LOCATION]", "[SECURITY_SETTINGS]"),
+                TimeZone = "time_zone73f23b20",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationProfileAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ConversationProfile>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ConversationProfilesClient client = new ConversationProfilesClientImpl(mockGrpcClient.Object, null);
