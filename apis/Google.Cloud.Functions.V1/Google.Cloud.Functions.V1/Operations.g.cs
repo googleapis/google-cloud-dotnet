@@ -27,21 +27,22 @@ namespace Google.Cloud.Functions.V1 {
             "Cipnb29nbGUvY2xvdWQvZnVuY3Rpb25zL3YxL29wZXJhdGlvbnMucHJvdG8S",
             "GWdvb2dsZS5jbG91ZC5mdW5jdGlvbnMudjEaGWdvb2dsZS9wcm90b2J1Zi9h",
             "bnkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdv",
-            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i2wEKE09wZXJhdGlvbk1ldGFk",
+            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ihQIKE09wZXJhdGlvbk1ldGFk",
             "YXRhVjESDgoGdGFyZ2V0GAEgASgJEjYKBHR5cGUYAiABKA4yKC5nb29nbGUu",
             "Y2xvdWQuZnVuY3Rpb25zLnYxLk9wZXJhdGlvblR5cGUSJQoHcmVxdWVzdBgD",
             "IAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnkSEgoKdmVyc2lvbl9pZBgEIAEo",
             "AxIvCgt1cGRhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
-            "c3RhbXASEAoIYnVpbGRfaWQYBiABKAkqaQoNT3BlcmF0aW9uVHlwZRIZChVP",
-            "UEVSQVRJT05fVU5TUEVDSUZJRUQQABITCg9DUkVBVEVfRlVOQ1RJT04QARIT",
-            "Cg9VUERBVEVfRlVOQ1RJT04QAhITCg9ERUxFVEVfRlVOQ1RJT04QA0J/Ch1j",
-            "b20uZ29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MUIYRnVuY3Rpb25zT3BlcmF0",
-            "aW9uc1Byb3RvUAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvY2xvdWQvZnVuY3Rpb25zL3YxO2Z1bmN0aW9uc2IGcHJvdG8z"));
+            "c3RhbXASEAoIYnVpbGRfaWQYBiABKAkSFAoMc291cmNlX3Rva2VuGAcgASgJ",
+            "EhIKCmJ1aWxkX25hbWUYCCABKAkqaQoNT3BlcmF0aW9uVHlwZRIZChVPUEVS",
+            "QVRJT05fVU5TUEVDSUZJRUQQABITCg9DUkVBVEVfRlVOQ1RJT04QARITCg9V",
+            "UERBVEVfRlVOQ1RJT04QAhITCg9ERUxFVEVfRlVOQ1RJT04QA0J/Ch1jb20u",
+            "Z29vZ2xlLmNsb3VkLmZ1bmN0aW9ucy52MUIYRnVuY3Rpb25zT3BlcmF0aW9u",
+            "c1Byb3RvUAFaQmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvZnVuY3Rpb25zL3YxO2Z1bmN0aW9uc2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Functions.V1.OperationType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.OperationMetadataV1), global::Google.Cloud.Functions.V1.OperationMetadataV1.Parser, new[]{ "Target", "Type", "Request", "VersionId", "UpdateTime", "BuildId" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Functions.V1.OperationMetadataV1), global::Google.Cloud.Functions.V1.OperationMetadataV1.Parser, new[]{ "Target", "Type", "Request", "VersionId", "UpdateTime", "BuildId", "SourceToken", "BuildName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -116,6 +117,8 @@ namespace Google.Cloud.Functions.V1 {
       versionId_ = other.versionId_;
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       buildId_ = other.buildId_;
+      sourceToken_ = other.sourceToken_;
+      buildName_ = other.buildName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -218,6 +221,39 @@ namespace Google.Cloud.Functions.V1 {
       }
     }
 
+    /// <summary>Field number for the "source_token" field.</summary>
+    public const int SourceTokenFieldNumber = 7;
+    private string sourceToken_ = "";
+    /// <summary>
+    /// An identifier for Firebase function sources. Disclaimer: This field is only
+    /// supported for Firebase function deployments.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string SourceToken {
+      get { return sourceToken_; }
+      set {
+        sourceToken_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "build_name" field.</summary>
+    public const int BuildNameFieldNumber = 8;
+    private string buildName_ = "";
+    /// <summary>
+    /// The Cloud Build Name of the function deployment.
+    /// This field is only populated for Create and Update operations.
+    /// `projects/&lt;project-number>/locations/&lt;region>/builds/&lt;build-id>`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string BuildName {
+      get { return buildName_; }
+      set {
+        buildName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -239,6 +275,8 @@ namespace Google.Cloud.Functions.V1 {
       if (VersionId != other.VersionId) return false;
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (BuildId != other.BuildId) return false;
+      if (SourceToken != other.SourceToken) return false;
+      if (BuildName != other.BuildName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -252,6 +290,8 @@ namespace Google.Cloud.Functions.V1 {
       if (VersionId != 0L) hash ^= VersionId.GetHashCode();
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (BuildId.Length != 0) hash ^= BuildId.GetHashCode();
+      if (SourceToken.Length != 0) hash ^= SourceToken.GetHashCode();
+      if (BuildName.Length != 0) hash ^= BuildName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -294,6 +334,14 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(50);
         output.WriteString(BuildId);
       }
+      if (SourceToken.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(SourceToken);
+      }
+      if (BuildName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(BuildName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -328,6 +376,14 @@ namespace Google.Cloud.Functions.V1 {
         output.WriteRawTag(50);
         output.WriteString(BuildId);
       }
+      if (SourceToken.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(SourceToken);
+      }
+      if (BuildName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(BuildName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -355,6 +411,12 @@ namespace Google.Cloud.Functions.V1 {
       }
       if (BuildId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(BuildId);
+      }
+      if (SourceToken.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(SourceToken);
+      }
+      if (BuildName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(BuildName);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -391,6 +453,12 @@ namespace Google.Cloud.Functions.V1 {
       }
       if (other.BuildId.Length != 0) {
         BuildId = other.BuildId;
+      }
+      if (other.SourceToken.Length != 0) {
+        SourceToken = other.SourceToken;
+      }
+      if (other.BuildName.Length != 0) {
+        BuildName = other.BuildName;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -437,6 +505,14 @@ namespace Google.Cloud.Functions.V1 {
             BuildId = input.ReadString();
             break;
           }
+          case 58: {
+            SourceToken = input.ReadString();
+            break;
+          }
+          case 66: {
+            BuildName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -480,6 +556,14 @@ namespace Google.Cloud.Functions.V1 {
           }
           case 50: {
             BuildId = input.ReadString();
+            break;
+          }
+          case 58: {
+            SourceToken = input.ReadString();
+            break;
+          }
+          case 66: {
+            BuildName = input.ReadString();
             break;
           }
         }
