@@ -76,7 +76,22 @@ namespace Google.Cloud.Functions.V1.Tests
                 VpcConnector = "vpc_connectordc82c0cc",
                 VpcConnectorEgressSettings = CloudFunction.Types.VpcConnectorEgressSettings.AllTraffic,
                 IngressSettings = CloudFunction.Types.IngressSettings.AllowAll,
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                BuildWorkerPool = "build_worker_pool4c1ad1a6",
                 BuildId = "build_id2ab7699b",
+                BuildEnvironmentVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SecretEnvironmentVariables = { new SecretEnvVar(), },
+                SecretVolumes = { new SecretVolume(), },
+                SourceToken = "source_tokenecdd3693",
+                MinInstances = 445814344,
+                BuildName = "build_namead3cc4b7",
+                DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
@@ -130,7 +145,22 @@ namespace Google.Cloud.Functions.V1.Tests
                 VpcConnector = "vpc_connectordc82c0cc",
                 VpcConnectorEgressSettings = CloudFunction.Types.VpcConnectorEgressSettings.AllTraffic,
                 IngressSettings = CloudFunction.Types.IngressSettings.AllowAll,
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                BuildWorkerPool = "build_worker_pool4c1ad1a6",
                 BuildId = "build_id2ab7699b",
+                BuildEnvironmentVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SecretEnvironmentVariables = { new SecretEnvVar(), },
+                SecretVolumes = { new SecretVolume(), },
+                SourceToken = "source_tokenecdd3693",
+                MinInstances = 445814344,
+                BuildName = "build_namead3cc4b7",
+                DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
@@ -186,7 +216,22 @@ namespace Google.Cloud.Functions.V1.Tests
                 VpcConnector = "vpc_connectordc82c0cc",
                 VpcConnectorEgressSettings = CloudFunction.Types.VpcConnectorEgressSettings.AllTraffic,
                 IngressSettings = CloudFunction.Types.IngressSettings.AllowAll,
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                BuildWorkerPool = "build_worker_pool4c1ad1a6",
                 BuildId = "build_id2ab7699b",
+                BuildEnvironmentVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SecretEnvironmentVariables = { new SecretEnvVar(), },
+                SecretVolumes = { new SecretVolume(), },
+                SourceToken = "source_tokenecdd3693",
+                MinInstances = 445814344,
+                BuildName = "build_namead3cc4b7",
+                DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
@@ -240,7 +285,22 @@ namespace Google.Cloud.Functions.V1.Tests
                 VpcConnector = "vpc_connectordc82c0cc",
                 VpcConnectorEgressSettings = CloudFunction.Types.VpcConnectorEgressSettings.AllTraffic,
                 IngressSettings = CloudFunction.Types.IngressSettings.AllowAll,
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                BuildWorkerPool = "build_worker_pool4c1ad1a6",
                 BuildId = "build_id2ab7699b",
+                BuildEnvironmentVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SecretEnvironmentVariables = { new SecretEnvVar(), },
+                SecretVolumes = { new SecretVolume(), },
+                SourceToken = "source_tokenecdd3693",
+                MinInstances = 445814344,
+                BuildName = "build_namead3cc4b7",
+                DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
@@ -296,7 +356,22 @@ namespace Google.Cloud.Functions.V1.Tests
                 VpcConnector = "vpc_connectordc82c0cc",
                 VpcConnectorEgressSettings = CloudFunction.Types.VpcConnectorEgressSettings.AllTraffic,
                 IngressSettings = CloudFunction.Types.IngressSettings.AllowAll,
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                BuildWorkerPool = "build_worker_pool4c1ad1a6",
                 BuildId = "build_id2ab7699b",
+                BuildEnvironmentVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SecretEnvironmentVariables = { new SecretEnvVar(), },
+                SecretVolumes = { new SecretVolume(), },
+                SourceToken = "source_tokenecdd3693",
+                MinInstances = 445814344,
+                BuildName = "build_namead3cc4b7",
+                DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunction(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
@@ -350,7 +425,22 @@ namespace Google.Cloud.Functions.V1.Tests
                 VpcConnector = "vpc_connectordc82c0cc",
                 VpcConnectorEgressSettings = CloudFunction.Types.VpcConnectorEgressSettings.AllTraffic,
                 IngressSettings = CloudFunction.Types.IngressSettings.AllowAll,
+                KmsKeyNameAsCryptoKeyName = CryptoKeyName.FromProjectLocationKeyRingCryptoKey("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]"),
+                BuildWorkerPool = "build_worker_pool4c1ad1a6",
                 BuildId = "build_id2ab7699b",
+                BuildEnvironmentVariables =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                SecretEnvironmentVariables = { new SecretEnvVar(), },
+                SecretVolumes = { new SecretVolume(), },
+                SourceToken = "source_tokenecdd3693",
+                MinInstances = 445814344,
+                BuildName = "build_namead3cc4b7",
+                DockerRepositoryAsRepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
             };
             mockGrpcClient.Setup(x => x.GetFunctionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CloudFunction>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudFunctionsServiceClient client = new CloudFunctionsServiceClientImpl(mockGrpcClient.Object, null);
