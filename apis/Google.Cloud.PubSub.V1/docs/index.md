@@ -45,7 +45,7 @@ consideration.
 
 By default multiple gRPC channels are created on client startup, with the channel count defaulting to
 the CPU processor count as returned by `Environment.ProcessorCount`. This is to allow greater bandwidth
-than a single gRPC channel can support; the processor count is is a pragmatic choice to approximately
+than a single gRPC channel can support; the processor count is a pragmatic choice to approximately
 scale maximum throughput performance by potential machine workload.
 
 When using multiple clients on a machine with a high processor count, this may cause problems
