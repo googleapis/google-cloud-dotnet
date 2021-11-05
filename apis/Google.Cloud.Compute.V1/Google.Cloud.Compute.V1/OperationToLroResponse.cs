@@ -14,6 +14,7 @@
 
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
+using Google.Api.Gax.Grpc.Rest;
 
 // Note: this will eventually be generated in ComputeLroAdaptation.g.cs. It's the last bit of generator work we need to do.
 
@@ -41,8 +42,12 @@ namespace Google.Cloud.Compute.V1
             // Derived from [(google.cloud.operation_field) = ERROR_CODE] and [(google.cloud.operation_field) = ERROR_MESSAGE]
             if (HasHttpErrorStatusCode)
             {
-                // FIXME: Convert the HTTP status code into a suitable Rpc.Status code.
-                proto.Error = new Rpc.Status { Code = HttpErrorStatusCode, Message = HttpErrorMessage };
+                proto.Error = new Rpc.Status
+                {
+                    // gRPC status codes directly correspond to values in google.rpc.Code
+                    Code = (int) RestGrpcAdapter.ConvertHttpStatusCode(HttpErrorStatusCode),
+                    Message = HttpErrorMessage
+                };
             }
             return proto;
         }
