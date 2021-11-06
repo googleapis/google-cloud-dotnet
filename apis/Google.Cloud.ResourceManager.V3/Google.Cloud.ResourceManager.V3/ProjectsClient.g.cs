@@ -822,6 +822,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// included in the query, the it will return results that match any of the
         /// fields. Some eligible fields are:
         /// 
+        /// ```
         /// | Field                   | Description                                  |
         /// |-------------------------|----------------------------------------------|
         /// | displayName, name       | Filters by displayName.                      |
@@ -834,6 +835,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// | labels                  | Filters by label name or value.              |
         /// | labels.&amp;lt;key&amp;gt; (where *key* is the name of a label) | Filters by label
         /// name. |
+        /// ```
         /// 
         /// Search expressions are case insensitive.
         /// 
@@ -889,6 +891,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// included in the query, the it will return results that match any of the
         /// fields. Some eligible fields are:
         /// 
+        /// ```
         /// | Field                   | Description                                  |
         /// |-------------------------|----------------------------------------------|
         /// | displayName, name       | Filters by displayName.                      |
@@ -901,6 +904,7 @@ namespace Google.Cloud.ResourceManager.V3
         /// | labels                  | Filters by label name or value.              |
         /// | labels.&amp;lt;key&amp;gt; (where *key* is the name of a label) | Filters by label
         /// name. |
+        /// ```
         /// 
         /// Search expressions are case insensitive.
         /// 
