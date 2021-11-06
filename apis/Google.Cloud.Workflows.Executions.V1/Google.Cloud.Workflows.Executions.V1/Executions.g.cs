@@ -29,7 +29,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             "LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBp",
             "L2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
             "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
-            "L3RpbWVzdGFtcC5wcm90byLwBAoJRXhlY3V0aW9uEhEKBG5hbWUYASABKAlC",
+            "L3RpbWVzdGFtcC5wcm90byKfCQoJRXhlY3V0aW9uEhEKBG5hbWUYASABKAlC",
             "A+BBAxIzCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
             "bWVzdGFtcEID4EEDEjEKCGVuZF90aW1lGAMgASgLMhouZ29vZ2xlLnByb3Rv",
             "YnVmLlRpbWVzdGFtcEID4EEDEkkKBXN0YXRlGAQgASgOMjUuZ29vZ2xlLmNs",
@@ -37,62 +37,76 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             "4EEDEhAKCGFyZ3VtZW50GAUgASgJEhMKBnJlc3VsdBgGIAEoCUID4EEDEkkK",
             "BWVycm9yGAcgASgLMjUuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRp",
             "b25zLnYxLkV4ZWN1dGlvbi5FcnJvckID4EEDEiEKFHdvcmtmbG93X3Jldmlz",
-            "aW9uX2lkGAggASgJQgPgQQMaKQoFRXJyb3ISDwoHcGF5bG9hZBgBIAEoCRIP",
-            "Cgdjb250ZXh0GAIgASgJIlQKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASCgoGQUNUSVZFEAESDQoJU1VDQ0VFREVEEAISCgoGRkFJTEVEEAMSDQoJ",
-            "Q0FOQ0VMTEVEEAQ6hgHqQYIBCit3b3JrZmxvd2V4ZWN1dGlvbnMuZ29vZ2xl",
-            "YXBpcy5jb20vRXhlY3V0aW9uElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
-            "b25zL3tsb2NhdGlvbn0vd29ya2Zsb3dzL3t3b3JrZmxvd30vZXhlY3V0aW9u",
-            "cy97ZXhlY3V0aW9ufSLBAQoVTGlzdEV4ZWN1dGlvbnNSZXF1ZXN0EjkKBnBh",
-            "cmVudBgBIAEoCUIp4EEC+kEjCiF3b3JrZmxvd3MuZ29vZ2xlYXBpcy5jb20v",
-            "V29ya2Zsb3cSEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyAB",
-            "KAkSRgoEdmlldxgEIAEoDjIzLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhl",
-            "Y3V0aW9ucy52MS5FeGVjdXRpb25WaWV3QgPgQQEidgoWTGlzdEV4ZWN1dGlv",
-            "bnNSZXNwb25zZRJDCgpleGVjdXRpb25zGAEgAygLMi8uZ29vZ2xlLmNsb3Vk",
-            "LndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbhIXCg9uZXh0X3Bh",
-            "Z2VfdG9rZW4YAiABKAkinAEKFkNyZWF0ZUV4ZWN1dGlvblJlcXVlc3QSOQoG",
-            "cGFyZW50GAEgASgJQingQQL6QSMKIXdvcmtmbG93cy5nb29nbGVhcGlzLmNv",
-            "bS9Xb3JrZmxvdxJHCglleGVjdXRpb24YAiABKAsyLy5nb29nbGUuY2xvdWQu",
-            "d29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uQgPgQQIioAEKE0dl",
-            "dEV4ZWN1dGlvblJlcXVlc3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCit3b3Jr",
-            "Zmxvd2V4ZWN1dGlvbnMuZ29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uEkYKBHZp",
-            "ZXcYAiABKA4yMy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMu",
-            "djEuRXhlY3V0aW9uVmlld0ID4EEBIlsKFkNhbmNlbEV4ZWN1dGlvblJlcXVl",
-            "c3QSQQoEbmFtZRgBIAEoCUIz4EEC+kEtCit3b3JrZmxvd2V4ZWN1dGlvbnMu",
-            "Z29vZ2xlYXBpcy5jb20vRXhlY3V0aW9uKkQKDUV4ZWN1dGlvblZpZXcSHgoa",
-            "RVhFQ1VUSU9OX1ZJRVdfVU5TUEVDSUZJRUQQABIJCgVCQVNJQxABEggKBEZV",
-            "TEwQAjLDBwoKRXhlY3V0aW9ucxLYAQoOTGlzdEV4ZWN1dGlvbnMSOy5nb29n",
-            "bGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuTGlzdEV4ZWN1dGlv",
-            "bnNSZXF1ZXN0GjwuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25z",
-            "LnYxLkxpc3RFeGVjdXRpb25zUmVzcG9uc2UiS4LT5JMCPBI6L3YxL3twYXJl",
-            "bnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi93b3JrZmxvd3MvKn0vZXhlY3V0",
-            "aW9uc9pBBnBhcmVudBLiAQoPQ3JlYXRlRXhlY3V0aW9uEjwuZ29vZ2xlLmNs",
-            "b3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkNyZWF0ZUV4ZWN1dGlvblJl",
-            "cXVlc3QaLy5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEu",
-            "RXhlY3V0aW9uImCC0+STAkciOi92MS97cGFyZW50PXByb2plY3RzLyovbG9j",
-            "YXRpb25zLyovd29ya2Zsb3dzLyp9L2V4ZWN1dGlvbnM6CWV4ZWN1dGlvbtpB",
-            "EHBhcmVudCxleGVjdXRpb24SxQEKDEdldEV4ZWN1dGlvbhI5Lmdvb2dsZS5j",
-            "bG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5HZXRFeGVjdXRpb25SZXF1",
+            "aW9uX2lkGAggASgJQgPgQQMSVAoOY2FsbF9sb2dfbGV2ZWwYCSABKA4yPC5n",
+            "b29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9u",
+            "LkNhbGxMb2dMZXZlbBrKAQoRU3RhY2tUcmFjZUVsZW1lbnQSDAoEc3RlcBgB",
+            "IAEoCRIPCgdyb3V0aW5lGAIgASgJElwKCHBvc2l0aW9uGAMgASgLMkouZ29v",
+            "Z2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbi5T",
+            "dGFja1RyYWNlRWxlbWVudC5Qb3NpdGlvbho4CghQb3NpdGlvbhIMCgRsaW5l",
+            "GAEgASgDEg4KBmNvbHVtbhgCIAEoAxIOCgZsZW5ndGgYAyABKAMaYQoKU3Rh",
+            "Y2tUcmFjZRJTCghlbGVtZW50cxgBIAMoCzJBLmdvb2dsZS5jbG91ZC53b3Jr",
+            "Zmxvd3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24uU3RhY2tUcmFjZUVsZW1l",
+            "bnQaegoFRXJyb3ISDwoHcGF5bG9hZBgBIAEoCRIPCgdjb250ZXh0GAIgASgJ",
+            "Ek8KC3N0YWNrX3RyYWNlGAMgASgLMjouZ29vZ2xlLmNsb3VkLndvcmtmbG93",
+            "cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbi5TdGFja1RyYWNlIlQKBVN0YXRl",
+            "EhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZFEAESDQoJU1VDQ0VF",
+            "REVEEAISCgoGRkFJTEVEEAMSDQoJQ0FOQ0VMTEVEEAQiVgoMQ2FsbExvZ0xl",
+            "dmVsEh4KGkNBTExfTE9HX0xFVkVMX1VOU1BFQ0lGSUVEEAASEQoNTE9HX0FM",
+            "TF9DQUxMUxABEhMKD0xPR19FUlJPUlNfT05MWRACOoYB6kGCAQord29ya2Zs",
+            "b3dleGVjdXRpb25zLmdvb2dsZWFwaXMuY29tL0V4ZWN1dGlvbhJTcHJvamVj",
+            "dHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dvcmtmbG93cy97",
+            "d29ya2Zsb3d9L2V4ZWN1dGlvbnMve2V4ZWN1dGlvbn0iwQEKFUxpc3RFeGVj",
+            "dXRpb25zUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohd29ya2Zs",
+            "b3dzLmdvb2dsZWFwaXMuY29tL1dvcmtmbG93EhEKCXBhZ2Vfc2l6ZRgCIAEo",
+            "BRISCgpwYWdlX3Rva2VuGAMgASgJEkYKBHZpZXcYBCABKA4yMy5nb29nbGUu",
+            "Y2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uVmlld0ID",
+            "4EEBInYKFkxpc3RFeGVjdXRpb25zUmVzcG9uc2USQwoKZXhlY3V0aW9ucxgB",
+            "IAMoCzIvLmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5F",
+            "eGVjdXRpb24SFwoPbmV4dF9wYWdlX3Rva2VuGAIgASgJIpwBChZDcmVhdGVF",
+            "eGVjdXRpb25SZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiF3b3Jr",
+            "Zmxvd3MuZ29vZ2xlYXBpcy5jb20vV29ya2Zsb3cSRwoJZXhlY3V0aW9uGAIg",
+            "ASgLMi8uZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4",
+            "ZWN1dGlvbkID4EECIqABChNHZXRFeGVjdXRpb25SZXF1ZXN0EkEKBG5hbWUY",
+            "ASABKAlCM+BBAvpBLQord29ya2Zsb3dleGVjdXRpb25zLmdvb2dsZWFwaXMu",
+            "Y29tL0V4ZWN1dGlvbhJGCgR2aWV3GAIgASgOMjMuZ29vZ2xlLmNsb3VkLndv",
+            "cmtmbG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvblZpZXdCA+BBASJbChZD",
+            "YW5jZWxFeGVjdXRpb25SZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQor",
+            "d29ya2Zsb3dleGVjdXRpb25zLmdvb2dsZWFwaXMuY29tL0V4ZWN1dGlvbipE",
+            "Cg1FeGVjdXRpb25WaWV3Eh4KGkVYRUNVVElPTl9WSUVXX1VOU1BFQ0lGSUVE",
+            "EAASCQoFQkFTSUMQARIICgRGVUxMEAIywwcKCkV4ZWN1dGlvbnMS2AEKDkxp",
+            "c3RFeGVjdXRpb25zEjsuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRp",
+            "b25zLnYxLkxpc3RFeGVjdXRpb25zUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC53",
+            "b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5MaXN0RXhlY3V0aW9uc1Jlc3BvbnNl",
+            "IkuC0+STAjwSOi92MS97cGFyZW50PXByb2plY3RzLyovbG9jYXRpb25zLyov",
+            "d29ya2Zsb3dzLyp9L2V4ZWN1dGlvbnPaQQZwYXJlbnQS4gEKD0NyZWF0ZUV4",
+            "ZWN1dGlvbhI8Lmdvb2dsZS5jbG91ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52",
+            "MS5DcmVhdGVFeGVjdXRpb25SZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLndvcmtm",
+            "bG93cy5leGVjdXRpb25zLnYxLkV4ZWN1dGlvbiJggtPkkwJHIjovdjEve3Bh",
+            "cmVudD1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qfS9leGVj",
+            "dXRpb25zOglleGVjdXRpb27aQRBwYXJlbnQsZXhlY3V0aW9uEsUBCgxHZXRF",
+            "eGVjdXRpb24SOS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMu",
+            "djEuR2V0RXhlY3V0aW9uUmVxdWVzdBovLmdvb2dsZS5jbG91ZC53b3JrZmxv",
+            "d3MuZXhlY3V0aW9ucy52MS5FeGVjdXRpb24iSYLT5JMCPBI6L3YxL3tuYW1l",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyovd29ya2Zsb3dzLyovZXhlY3V0aW9u",
+            "cy8qfdpBBG5hbWUS1QEKD0NhbmNlbEV4ZWN1dGlvbhI8Lmdvb2dsZS5jbG91",
+            "ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MS5DYW5jZWxFeGVjdXRpb25SZXF1",
             "ZXN0Gi8uZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRpb25zLnYxLkV4",
-            "ZWN1dGlvbiJJgtPkkwI8EjovdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi93b3JrZmxvd3MvKi9leGVjdXRpb25zLyp92kEEbmFtZRLVAQoPQ2Fu",
-            "Y2VsRXhlY3V0aW9uEjwuZ29vZ2xlLmNsb3VkLndvcmtmbG93cy5leGVjdXRp",
-            "b25zLnYxLkNhbmNlbEV4ZWN1dGlvblJlcXVlc3QaLy5nb29nbGUuY2xvdWQu",
-            "d29ya2Zsb3dzLmV4ZWN1dGlvbnMudjEuRXhlY3V0aW9uIlOC0+STAkYiQS92",
-            "MS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL3dvcmtmbG93cy8qL2V4",
-            "ZWN1dGlvbnMvKn06Y2FuY2VsOgEq2kEEbmFtZRpVykEhd29ya2Zsb3dleGVj",
-            "dXRpb25zLmdvb2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
-            "cy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybULxAQooY29tLmdvb2dsZS5jbG91",
-            "ZC53b3JrZmxvd3MuZXhlY3V0aW9ucy52MUIPRXhlY3V0aW9uc1Byb3RvUAFa",
-            "Tmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "d29ya2Zsb3dzL2V4ZWN1dGlvbnMvdjE7ZXhlY3V0aW9uc+pBYQohd29ya2Zs",
-            "b3dzLmdvb2dsZWFwaXMuY29tL1dvcmtmbG93Ejxwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vd29ya2Zsb3dzL3t3b3JrZmxvd31i",
-            "BnByb3RvMw=="));
+            "ZWN1dGlvbiJTgtPkkwJGIkEvdjEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi93b3JrZmxvd3MvKi9leGVjdXRpb25zLyp9OmNhbmNlbDoBKtpBBG5h",
+            "bWUaVcpBIXdvcmtmbG93ZXhlY3V0aW9ucy5nb29nbGVhcGlzLmNvbdJBLmh0",
+            "dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1C",
+            "8QEKKGNvbS5nb29nbGUuY2xvdWQud29ya2Zsb3dzLmV4ZWN1dGlvbnMudjFC",
+            "D0V4ZWN1dGlvbnNQcm90b1ABWk5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2Nsb3VkL3dvcmtmbG93cy9leGVjdXRpb25zL3YxO2V4",
+            "ZWN1dGlvbnPqQWEKIXdvcmtmbG93cy5nb29nbGVhcGlzLmNvbS9Xb3JrZmxv",
+            "dxI8cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L3dv",
+            "cmtmbG93cy97d29ya2Zsb3d9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Workflows.Executions.V1.ExecutionView), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution), global::Google.Cloud.Workflows.Executions.V1.Execution.Parser, new[]{ "Name", "StartTime", "EndTime", "State", "Argument", "Result", "Error", "WorkflowRevisionId" }, null, new[]{ typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error.Parser, new[]{ "Payload", "Context" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution), global::Google.Cloud.Workflows.Executions.V1.Execution.Parser, new[]{ "Name", "StartTime", "EndTime", "State", "Argument", "Result", "Error", "WorkflowRevisionId", "CallLogLevel" }, null, new[]{ typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.State), typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Parser, new[]{ "Step", "Routine", "Position" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position.Parser, new[]{ "Line", "Column", "Length" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace.Parser, new[]{ "Elements" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error), global::Google.Cloud.Workflows.Executions.V1.Execution.Types.Error.Parser, new[]{ "Payload", "Context", "StackTrace" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.ListExecutionsRequest), global::Google.Cloud.Workflows.Executions.V1.ListExecutionsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "View" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.ListExecutionsResponse), global::Google.Cloud.Workflows.Executions.V1.ListExecutionsResponse.Parser, new[]{ "Executions", "NextPageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Workflows.Executions.V1.CreateExecutionRequest), global::Google.Cloud.Workflows.Executions.V1.CreateExecutionRequest.Parser, new[]{ "Parent", "Execution" }, null, null, null, null),
@@ -173,6 +187,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       result_ = other.result_;
       error_ = other.error_ != null ? other.error_.Clone() : null;
       workflowRevisionId_ = other.workflowRevisionId_;
+      callLogLevel_ = other.callLogLevel_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -250,6 +265,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
     /// <summary>
     /// Input parameters of the execution represented as a JSON string.
     /// The size limit is 32KB.
+    ///
+    /// *Note*: If you are using the REST API directly to run your workflow, you
+    /// must escape any JSON string value of `argument`. Example:
+    /// `'{"argument":"{\"firstName\":\"FIRST\",\"lastName\":\"LAST\"}"}'`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -308,6 +327,21 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
     }
 
+    /// <summary>Field number for the "call_log_level" field.</summary>
+    public const int CallLogLevelFieldNumber = 9;
+    private global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel callLogLevel_ = global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified;
+    /// <summary>
+    /// The call logging level associated to this execution.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel CallLogLevel {
+      get { return callLogLevel_; }
+      set {
+        callLogLevel_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -331,6 +365,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       if (Result != other.Result) return false;
       if (!object.Equals(Error, other.Error)) return false;
       if (WorkflowRevisionId != other.WorkflowRevisionId) return false;
+      if (CallLogLevel != other.CallLogLevel) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -346,6 +381,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       if (Result.Length != 0) hash ^= Result.GetHashCode();
       if (error_ != null) hash ^= Error.GetHashCode();
       if (WorkflowRevisionId.Length != 0) hash ^= WorkflowRevisionId.GetHashCode();
+      if (CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) hash ^= CallLogLevel.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -396,6 +432,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         output.WriteRawTag(66);
         output.WriteString(WorkflowRevisionId);
       }
+      if (CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) CallLogLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -438,6 +478,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         output.WriteRawTag(66);
         output.WriteString(WorkflowRevisionId);
       }
+      if (CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) {
+        output.WriteRawTag(72);
+        output.WriteEnum((int) CallLogLevel);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -471,6 +515,9 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
       if (WorkflowRevisionId.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(WorkflowRevisionId);
+      }
+      if (CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) CallLogLevel);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -516,6 +563,9 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
       if (other.WorkflowRevisionId.Length != 0) {
         WorkflowRevisionId = other.WorkflowRevisionId;
+      }
+      if (other.CallLogLevel != global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel.Unspecified) {
+        CallLogLevel = other.CallLogLevel;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -571,6 +621,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           }
           case 66: {
             WorkflowRevisionId = input.ReadString();
+            break;
+          }
+          case 72: {
+            CallLogLevel = (global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel) input.ReadEnum();
             break;
           }
         }
@@ -629,6 +683,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             WorkflowRevisionId = input.ReadString();
             break;
           }
+          case 72: {
+            CallLogLevel = (global::Google.Cloud.Workflows.Executions.V1.Execution.Types.CallLogLevel) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -640,7 +698,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
-      /// Describes the current state of the execution. More states may be added
+      /// Describes the current state of the execution. More states might be added
       /// in the future.
       /// </summary>
       public enum State {
@@ -667,6 +725,780 @@ namespace Google.Cloud.Workflows.Executions.V1 {
       }
 
       /// <summary>
+      /// Describes the level of platform logging to apply to calls and call
+      /// responses during workflow executions.
+      /// </summary>
+      public enum CallLogLevel {
+        /// <summary>
+        /// No call logging specified.
+        /// </summary>
+        [pbr::OriginalName("CALL_LOG_LEVEL_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Log all call steps within workflows, all call returns, and all exceptions
+        /// raised.
+        /// </summary>
+        [pbr::OriginalName("LOG_ALL_CALLS")] LogAllCalls = 1,
+        /// <summary>
+        /// Log only exceptions that are raised from call steps within workflows.
+        /// </summary>
+        [pbr::OriginalName("LOG_ERRORS_ONLY")] LogErrorsOnly = 2,
+      }
+
+      /// <summary>
+      /// A single stack element (frame) where an error occurred.
+      /// </summary>
+      public sealed partial class StackTraceElement : pb::IMessage<StackTraceElement>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StackTraceElement> _parser = new pb::MessageParser<StackTraceElement>(() => new StackTraceElement());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StackTraceElement> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StackTraceElement() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StackTraceElement(StackTraceElement other) : this() {
+          step_ = other.step_;
+          routine_ = other.routine_;
+          position_ = other.position_ != null ? other.position_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StackTraceElement Clone() {
+          return new StackTraceElement(this);
+        }
+
+        /// <summary>Field number for the "step" field.</summary>
+        public const int StepFieldNumber = 1;
+        private string step_ = "";
+        /// <summary>
+        /// The step the error occurred at.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Step {
+          get { return step_; }
+          set {
+            step_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "routine" field.</summary>
+        public const int RoutineFieldNumber = 2;
+        private string routine_ = "";
+        /// <summary>
+        /// The routine where the error occurred.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public string Routine {
+          get { return routine_; }
+          set {
+            routine_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "position" field.</summary>
+        public const int PositionFieldNumber = 3;
+        private global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position position_;
+        /// <summary>
+        /// The source position information of the stack trace element.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position Position {
+          get { return position_; }
+          set {
+            position_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StackTraceElement);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StackTraceElement other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (Step != other.Step) return false;
+          if (Routine != other.Routine) return false;
+          if (!object.Equals(Position, other.Position)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (Step.Length != 0) hash ^= Step.GetHashCode();
+          if (Routine.Length != 0) hash ^= Routine.GetHashCode();
+          if (position_ != null) hash ^= Position.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (Step.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Step);
+          }
+          if (Routine.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Routine);
+          }
+          if (position_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Position);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (Step.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(Step);
+          }
+          if (Routine.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Routine);
+          }
+          if (position_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(Position);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (Step.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Step);
+          }
+          if (Routine.Length != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeStringSize(Routine);
+          }
+          if (position_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(Position);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StackTraceElement other) {
+          if (other == null) {
+            return;
+          }
+          if (other.Step.Length != 0) {
+            Step = other.Step;
+          }
+          if (other.Routine.Length != 0) {
+            Routine = other.Routine;
+          }
+          if (other.position_ != null) {
+            if (position_ == null) {
+              Position = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position();
+            }
+            Position.MergeFrom(other.Position);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                Step = input.ReadString();
+                break;
+              }
+              case 18: {
+                Routine = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (position_ == null) {
+                  Position = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position();
+                }
+                input.ReadMessage(Position);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                Step = input.ReadString();
+                break;
+              }
+              case 18: {
+                Routine = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (position_ == null) {
+                  Position = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Types.Position();
+                }
+                input.ReadMessage(Position);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the StackTraceElement message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Position contains source position information about the stack trace
+          /// element such as line number, column number and length of the code block
+          /// in bytes.
+          /// </summary>
+          public sealed partial class Position : pb::IMessage<Position>
+          #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              , pb::IBufferMessage
+          #endif
+          {
+            private static readonly pb::MessageParser<Position> _parser = new pb::MessageParser<Position>(() => new Position());
+            private pb::UnknownFieldSet _unknownFields;
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pb::MessageParser<Position> Parser { get { return _parser; } }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public static pbr::MessageDescriptor Descriptor {
+              get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Descriptor.NestedTypes[0]; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            pbr::MessageDescriptor pb::IMessage.Descriptor {
+              get { return Descriptor; }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Position() {
+              OnConstruction();
+            }
+
+            partial void OnConstruction();
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Position(Position other) : this() {
+              line_ = other.line_;
+              column_ = other.column_;
+              length_ = other.length_;
+              _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public Position Clone() {
+              return new Position(this);
+            }
+
+            /// <summary>Field number for the "line" field.</summary>
+            public const int LineFieldNumber = 1;
+            private long line_;
+            /// <summary>
+            /// The source code line number the current instruction was generated from.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long Line {
+              get { return line_; }
+              set {
+                line_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "column" field.</summary>
+            public const int ColumnFieldNumber = 2;
+            private long column_;
+            /// <summary>
+            /// The source code column position (of the line) the current instruction
+            /// was generated from.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long Column {
+              get { return column_; }
+              set {
+                column_ = value;
+              }
+            }
+
+            /// <summary>Field number for the "length" field.</summary>
+            public const int LengthFieldNumber = 3;
+            private long length_;
+            /// <summary>
+            /// The number of bytes of source code making up this stack trace element.
+            /// </summary>
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public long Length {
+              get { return length_; }
+              set {
+                length_ = value;
+              }
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override bool Equals(object other) {
+              return Equals(other as Position);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public bool Equals(Position other) {
+              if (ReferenceEquals(other, null)) {
+                return false;
+              }
+              if (ReferenceEquals(other, this)) {
+                return true;
+              }
+              if (Line != other.Line) return false;
+              if (Column != other.Column) return false;
+              if (Length != other.Length) return false;
+              return Equals(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override int GetHashCode() {
+              int hash = 1;
+              if (Line != 0L) hash ^= Line.GetHashCode();
+              if (Column != 0L) hash ^= Column.GetHashCode();
+              if (Length != 0L) hash ^= Length.GetHashCode();
+              if (_unknownFields != null) {
+                hash ^= _unknownFields.GetHashCode();
+              }
+              return hash;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public override string ToString() {
+              return pb::JsonFormatter.ToDiagnosticString(this);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void WriteTo(pb::CodedOutputStream output) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              output.WriteRawMessage(this);
+            #else
+              if (Line != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(Line);
+              }
+              if (Column != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(Column);
+              }
+              if (Length != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(Length);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(output);
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+              if (Line != 0L) {
+                output.WriteRawTag(8);
+                output.WriteInt64(Line);
+              }
+              if (Column != 0L) {
+                output.WriteRawTag(16);
+                output.WriteInt64(Column);
+              }
+              if (Length != 0L) {
+                output.WriteRawTag(24);
+                output.WriteInt64(Length);
+              }
+              if (_unknownFields != null) {
+                _unknownFields.WriteTo(ref output);
+              }
+            }
+            #endif
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public int CalculateSize() {
+              int size = 0;
+              if (Line != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(Line);
+              }
+              if (Column != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(Column);
+              }
+              if (Length != 0L) {
+                size += 1 + pb::CodedOutputStream.ComputeInt64Size(Length);
+              }
+              if (_unknownFields != null) {
+                size += _unknownFields.CalculateSize();
+              }
+              return size;
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(Position other) {
+              if (other == null) {
+                return;
+              }
+              if (other.Line != 0L) {
+                Line = other.Line;
+              }
+              if (other.Column != 0L) {
+                Column = other.Column;
+              }
+              if (other.Length != 0L) {
+                Length = other.Length;
+              }
+              _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+            }
+
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            public void MergeFrom(pb::CodedInputStream input) {
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+              input.ReadRawMessage(this);
+            #else
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                    break;
+                  case 8: {
+                    Line = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    Column = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    Length = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            #endif
+            }
+
+            #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+            [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+            void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+              uint tag;
+              while ((tag = input.ReadTag()) != 0) {
+                switch(tag) {
+                  default:
+                    _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                    break;
+                  case 8: {
+                    Line = input.ReadInt64();
+                    break;
+                  }
+                  case 16: {
+                    Column = input.ReadInt64();
+                    break;
+                  }
+                  case 24: {
+                    Length = input.ReadInt64();
+                    break;
+                  }
+                }
+              }
+            }
+            #endif
+
+          }
+
+        }
+        #endregion
+
+      }
+
+      /// <summary>
+      /// A collection of stack elements (frames) where an error occurred.
+      /// </summary>
+      public sealed partial class StackTrace : pb::IMessage<StackTrace>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<StackTrace> _parser = new pb::MessageParser<StackTrace>(() => new StackTrace());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<StackTrace> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StackTrace() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StackTrace(StackTrace other) : this() {
+          elements_ = other.elements_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public StackTrace Clone() {
+          return new StackTrace(this);
+        }
+
+        /// <summary>Field number for the "elements" field.</summary>
+        public const int ElementsFieldNumber = 1;
+        private static readonly pb::FieldCodec<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement> _repeated_elements_codec
+            = pb::FieldCodec.ForMessage(10, global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement.Parser);
+        private readonly pbc::RepeatedField<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement> elements_ = new pbc::RepeatedField<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement>();
+        /// <summary>
+        /// An array of stack elements.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTraceElement> Elements {
+          get { return elements_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as StackTrace);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(StackTrace other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if(!elements_.Equals(other.elements_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          hash ^= elements_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          elements_.WriteTo(output, _repeated_elements_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          elements_.WriteTo(ref output, _repeated_elements_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          size += elements_.CalculateSize(_repeated_elements_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(StackTrace other) {
+          if (other == null) {
+            return;
+          }
+          elements_.Add(other.elements_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                elements_.AddEntriesFrom(input, _repeated_elements_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                elements_.AddEntriesFrom(ref input, _repeated_elements_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Error describes why the execution was abnormally terminated.
       /// </summary>
       public sealed partial class Error : pb::IMessage<Error>
@@ -683,7 +1515,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Workflows.Executions.V1.Execution.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -705,6 +1537,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         public Error(Error other) : this() {
           payload_ = other.payload_;
           context_ = other.context_;
+          stackTrace_ = other.stackTrace_ != null ? other.stackTrace_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -718,7 +1551,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         public const int PayloadFieldNumber = 1;
         private string payload_ = "";
         /// <summary>
-        /// Error payload returned by the execution, represented as a JSON string.
+        /// Error message and data returned represented as a JSON string.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -733,7 +1566,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
         public const int ContextFieldNumber = 2;
         private string context_ = "";
         /// <summary>
-        /// Human readable error context, helpful for debugging purposes.
+        /// Human-readable stack trace string.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -741,6 +1574,21 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           get { return context_; }
           set {
             context_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+          }
+        }
+
+        /// <summary>Field number for the "stack_trace" field.</summary>
+        public const int StackTraceFieldNumber = 3;
+        private global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace stackTrace_;
+        /// <summary>
+        /// Stack trace with detailed information of where error was generated.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace StackTrace {
+          get { return stackTrace_; }
+          set {
+            stackTrace_ = value;
           }
         }
 
@@ -761,6 +1609,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           }
           if (Payload != other.Payload) return false;
           if (Context != other.Context) return false;
+          if (!object.Equals(StackTrace, other.StackTrace)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -770,6 +1619,7 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           int hash = 1;
           if (Payload.Length != 0) hash ^= Payload.GetHashCode();
           if (Context.Length != 0) hash ^= Context.GetHashCode();
+          if (stackTrace_ != null) hash ^= StackTrace.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -796,6 +1646,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             output.WriteRawTag(18);
             output.WriteString(Context);
           }
+          if (stackTrace_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StackTrace);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -814,6 +1668,10 @@ namespace Google.Cloud.Workflows.Executions.V1 {
             output.WriteRawTag(18);
             output.WriteString(Context);
           }
+          if (stackTrace_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(StackTrace);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -829,6 +1687,9 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           }
           if (Context.Length != 0) {
             size += 1 + pb::CodedOutputStream.ComputeStringSize(Context);
+          }
+          if (stackTrace_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(StackTrace);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -847,6 +1708,12 @@ namespace Google.Cloud.Workflows.Executions.V1 {
           }
           if (other.Context.Length != 0) {
             Context = other.Context;
+          }
+          if (other.stackTrace_ != null) {
+            if (stackTrace_ == null) {
+              StackTrace = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace();
+            }
+            StackTrace.MergeFrom(other.StackTrace);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -871,6 +1738,13 @@ namespace Google.Cloud.Workflows.Executions.V1 {
                 Context = input.ReadString();
                 break;
               }
+              case 26: {
+                if (stackTrace_ == null) {
+                  StackTrace = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace();
+                }
+                input.ReadMessage(StackTrace);
+                break;
+              }
             }
           }
         #endif
@@ -892,6 +1766,13 @@ namespace Google.Cloud.Workflows.Executions.V1 {
               }
               case 18: {
                 Context = input.ReadString();
+                break;
+              }
+              case 26: {
+                if (stackTrace_ == null) {
+                  StackTrace = new global::Google.Cloud.Workflows.Executions.V1.Execution.Types.StackTrace();
+                }
+                input.ReadMessage(StackTrace);
                 break;
               }
             }

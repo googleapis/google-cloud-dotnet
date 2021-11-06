@@ -47,6 +47,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -74,6 +75,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -103,6 +105,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -130,6 +133,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -159,6 +163,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CreateExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -186,6 +191,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CreateExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -215,6 +221,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -242,6 +249,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -270,6 +278,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -296,6 +305,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -324,6 +334,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.GetExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -350,6 +361,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.GetExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -378,6 +390,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -404,6 +417,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -432,6 +446,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -458,6 +473,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -486,6 +502,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CancelExecution(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
@@ -512,6 +529,7 @@ namespace Google.Cloud.Workflows.Executions.V1.Tests
                 Result = "result1784a8b4",
                 Error = new Execution.Types.Error(),
                 WorkflowRevisionId = "workflow_revision_id3b9c4f02",
+                CallLogLevel = Execution.Types.CallLogLevel.LogAllCalls,
             };
             mockGrpcClient.Setup(x => x.CancelExecutionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Execution>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ExecutionsClient client = new ExecutionsClientImpl(mockGrpcClient.Object, null);
