@@ -589,6 +589,10 @@ namespace Google.Cloud.DataCatalog.V1 {
 
       /// <summary>
       /// Lists entries.
+      ///
+      /// Note: Currently, this method can list only custom entries.
+      /// To get a list of both custom and automatically created entries, use
+      /// [SearchCatalog][google.cloud.datacatalog.v1.DataCatalog.SearchCatalog].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1753,6 +1757,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists entries.
+      ///
+      /// Note: Currently, this method can list only custom entries.
+      /// To get a list of both custom and automatically created entries, use
+      /// [SearchCatalog][google.cloud.datacatalog.v1.DataCatalog.SearchCatalog].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1766,6 +1774,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists entries.
+      ///
+      /// Note: Currently, this method can list only custom entries.
+      /// To get a list of both custom and automatically created entries, use
+      /// [SearchCatalog][google.cloud.datacatalog.v1.DataCatalog.SearchCatalog].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1777,6 +1789,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists entries.
+      ///
+      /// Note: Currently, this method can list only custom entries.
+      /// To get a list of both custom and automatically created entries, use
+      /// [SearchCatalog][google.cloud.datacatalog.v1.DataCatalog.SearchCatalog].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1790,6 +1806,10 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists entries.
+      ///
+      /// Note: Currently, this method can list only custom entries.
+      /// To get a list of both custom and automatically created entries, use
+      /// [SearchCatalog][google.cloud.datacatalog.v1.DataCatalog.SearchCatalog].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

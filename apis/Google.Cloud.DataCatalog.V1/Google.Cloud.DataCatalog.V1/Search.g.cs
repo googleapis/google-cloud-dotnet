@@ -28,7 +28,7 @@ namespace Google.Cloud.DataCatalog.V1 {
             "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9hcGkvZmllbGRf",
             "YmVoYXZpb3IucHJvdG8aKGdvb2dsZS9jbG91ZC9kYXRhY2F0YWxvZy92MS9j",
             "b21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i",
-            "gwMKE1NlYXJjaENhdGFsb2dSZXN1bHQSSQoSc2VhcmNoX3Jlc3VsdF90eXBl",
+            "rgMKE1NlYXJjaENhdGFsb2dSZXN1bHQSSQoSc2VhcmNoX3Jlc3VsdF90eXBl",
             "GAEgASgOMi0uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlNlYXJjaFJl",
             "c3VsdFR5cGUSHQoVc2VhcmNoX3Jlc3VsdF9zdWJ0eXBlGAIgASgJEh4KFnJl",
             "bGF0aXZlX3Jlc291cmNlX25hbWUYAyABKAkSFwoPbGlua2VkX3Jlc291cmNl",
@@ -36,18 +36,19 @@ namespace Google.Cloud.DataCatalog.V1 {
             "LlRpbWVzdGFtcBJPChFpbnRlZ3JhdGVkX3N5c3RlbRgIIAEoDjItLmdvb2ds",
             "ZS5jbG91ZC5kYXRhY2F0YWxvZy52MS5JbnRlZ3JhdGVkU3lzdGVtQgPgQQNI",
             "ABIfChV1c2VyX3NwZWNpZmllZF9zeXN0ZW0YCSABKAlIABIcChRmdWxseV9x",
-            "dWFsaWZpZWRfbmFtZRgKIAEoCUIICgZzeXN0ZW0qZAoQU2VhcmNoUmVzdWx0",
-            "VHlwZRIiCh5TRUFSQ0hfUkVTVUxUX1RZUEVfVU5TUEVDSUZJRUQQABIJCgVF",
-            "TlRSWRABEhAKDFRBR19URU1QTEFURRACEg8KC0VOVFJZX0dST1VQEANCywEK",
-            "H2NvbS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFQAVpGZ29vZ2xlLmdv",
-            "bGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kYXRhY2F0YWxv",
-            "Zy92MTtkYXRhY2F0YWxvZ/gBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxv",
-            "Zy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6",
-            "Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "dWFsaWZpZWRfbmFtZRgKIAEoCRIUCgxkaXNwbGF5X25hbWUYDCABKAkSEwoL",
+            "ZGVzY3JpcHRpb24YDSABKAlCCAoGc3lzdGVtKmQKEFNlYXJjaFJlc3VsdFR5",
+            "cGUSIgoeU0VBUkNIX1JFU1VMVF9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFRU5U",
+            "UlkQARIQCgxUQUdfVEVNUExBVEUQAhIPCgtFTlRSWV9HUk9VUBADQssBCh9j",
+            "b20uZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFsb2cv",
+            "djE7ZGF0YWNhdGFsb2f4AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cu",
+            "VjHKAhtHb29nbGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNs",
+            "b3VkOjpEYXRhQ2F0YWxvZzo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.DataCatalog.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.SearchResultType), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogResult), global::Google.Cloud.DataCatalog.V1.SearchCatalogResult.Parser, new[]{ "SearchResultType", "SearchResultSubtype", "RelativeResourceName", "LinkedResource", "ModifyTime", "IntegratedSystem", "UserSpecifiedSystem", "FullyQualifiedName" }, new[]{ "System" }, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.SearchCatalogResult), global::Google.Cloud.DataCatalog.V1.SearchCatalogResult.Parser, new[]{ "SearchResultType", "SearchResultSubtype", "RelativeResourceName", "LinkedResource", "ModifyTime", "IntegratedSystem", "UserSpecifiedSystem", "FullyQualifiedName", "DisplayName", "Description" }, new[]{ "System" }, null, null, null)
           }));
     }
     #endregion
@@ -124,6 +125,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       linkedResource_ = other.linkedResource_;
       modifyTime_ = other.modifyTime_ != null ? other.modifyTime_.Clone() : null;
       fullyQualifiedName_ = other.fullyQualifiedName_;
+      displayName_ = other.displayName_;
+      description_ = other.description_;
       switch (other.SystemCase) {
         case SystemOneofCase.IntegratedSystem:
           IntegratedSystem = other.IntegratedSystem;
@@ -297,6 +300,37 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 12;
+    private string displayName_ = "";
+    /// <summary>
+    /// The display name of the result.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 13;
+    private string description_ = "";
+    /// <summary>
+    /// Entry description that can consist of several sentences or paragraphs that
+    /// describe entry contents.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     private object system_;
     /// <summary>Enum of possible cases for the "system" oneof.</summary>
     public enum SystemOneofCase {
@@ -341,6 +375,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (IntegratedSystem != other.IntegratedSystem) return false;
       if (UserSpecifiedSystem != other.UserSpecifiedSystem) return false;
       if (FullyQualifiedName != other.FullyQualifiedName) return false;
+      if (DisplayName != other.DisplayName) return false;
+      if (Description != other.Description) return false;
       if (SystemCase != other.SystemCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -357,6 +393,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (systemCase_ == SystemOneofCase.IntegratedSystem) hash ^= IntegratedSystem.GetHashCode();
       if (systemCase_ == SystemOneofCase.UserSpecifiedSystem) hash ^= UserSpecifiedSystem.GetHashCode();
       if (FullyQualifiedName.Length != 0) hash ^= FullyQualifiedName.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
+      if (Description.Length != 0) hash ^= Description.GetHashCode();
       hash ^= (int) systemCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -408,6 +446,14 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(82);
         output.WriteString(FullyQualifiedName);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -450,6 +496,14 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(82);
         output.WriteString(FullyQualifiedName);
       }
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(98);
+        output.WriteString(DisplayName);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -484,6 +538,12 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (FullyQualifiedName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(FullyQualifiedName);
       }
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
+      if (Description.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Description);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -516,6 +576,12 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (other.FullyQualifiedName.Length != 0) {
         FullyQualifiedName = other.FullyQualifiedName;
+      }
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
+      if (other.Description.Length != 0) {
+        Description = other.Description;
       }
       switch (other.SystemCase) {
         case SystemOneofCase.IntegratedSystem:
@@ -577,6 +643,14 @@ namespace Google.Cloud.DataCatalog.V1 {
             FullyQualifiedName = input.ReadString();
             break;
           }
+          case 98: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 106: {
+            Description = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -626,6 +700,14 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 82: {
             FullyQualifiedName = input.ReadString();
+            break;
+          }
+          case 98: {
+            DisplayName = input.ReadString();
+            break;
+          }
+          case 106: {
+            Description = input.ReadString();
             break;
           }
         }

@@ -519,7 +519,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Optional. The query string with a minimum of 3 characters and specific syntax.
     /// For more information, see
-    /// [Data Catalog search syntax](https://cloud.google.com/data-catalog/docs/how-to/search-reference).
+    /// [Data Catalog search syntax](/data-catalog/docs/how-to/search-reference).
     ///
     /// An empty query string returns all data assets (in the specified scope)
     /// that you have access to.
@@ -7688,11 +7688,16 @@ namespace Google.Cloud.DataCatalog.V1 {
     private global::Google.Protobuf.WellKnownTypes.FieldMask updateMask_;
     /// <summary>
     /// Names of fields whose values to overwrite on a tag template. Currently,
-    /// only `display_name` can be overwritten.
+    /// only `display_name` and `is_publicly_readable` can be overwritten.
     ///
     /// If this parameter is absent or empty, all modifiable fields
     /// are overwritten. If such fields are non-required and omitted in the
     /// request body, their values are emptied.
+    ///
+    /// Note: Updating the ``is_publicly_readable`` field may require up to 12
+    /// hours to take effect in search results. Additionally, it also requires
+    /// the ``tagTemplates.getIamPolicy`` and ``tagTemplates.setIamPolicy``
+    /// permissions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9477,7 +9482,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the tag template.
+    /// Required. The name of the tag template field.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

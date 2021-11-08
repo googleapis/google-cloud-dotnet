@@ -34,25 +34,26 @@ namespace Google.Cloud.DataCatalog.V1 {
             "MiYuZ29vZ2xlLmNsb3VkLmRhdGFjYXRhbG9nLnYxLlRhYmxlU3BlY0gAQgsK",
             "CXR5cGVfc3BlYyIjCghWaWV3U3BlYxIXCgp2aWV3X3F1ZXJ5GAEgASgJQgPg",
             "QQMiTAoJVGFibGVTcGVjEj8KDWdyb3VwZWRfZW50cnkYASABKAlCKOBBA/pB",
-            "IgogZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50cnkiiQEKF0JpZ1F1",
+            "IgogZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50cnkirQEKF0JpZ1F1",
             "ZXJ5RGF0ZVNoYXJkZWRTcGVjEjkKB2RhdGFzZXQYASABKAlCKOBBA/pBIgog",
             "ZGF0YWNhdGFsb2cuZ29vZ2xlYXBpcy5jb20vRW50cnkSGQoMdGFibGVfcHJl",
-            "Zml4GAIgASgJQgPgQQMSGAoLc2hhcmRfY291bnQYAyABKANCA+BBAyp7Cg9U",
-            "YWJsZVNvdXJjZVR5cGUSIQodVEFCTEVfU09VUkNFX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIRCg1CSUdRVUVSWV9WSUVXEAISEgoOQklHUVVFUllfVEFCTEUQBRIe",
-            "ChpCSUdRVUVSWV9NQVRFUklBTElaRURfVklFVxAHQssBCh9jb20uZ29vZ2xl",
-            "LmNsb3VkLmRhdGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFsb2cvdjE7ZGF0YWNh",
-            "dGFsb2f4AQGqAhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29n",
-            "bGVcQ2xvdWRcRGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRh",
-            "Q2F0YWxvZzo6VjFiBnByb3RvMw=="));
+            "Zml4GAIgASgJQgPgQQMSGAoLc2hhcmRfY291bnQYAyABKANCA+BBAxIiChVs",
+            "YXRlc3Rfc2hhcmRfcmVzb3VyY2UYBCABKAlCA+BBAyp7Cg9UYWJsZVNvdXJj",
+            "ZVR5cGUSIQodVEFCTEVfU09VUkNFX1RZUEVfVU5TUEVDSUZJRUQQABIRCg1C",
+            "SUdRVUVSWV9WSUVXEAISEgoOQklHUVVFUllfVEFCTEUQBRIeChpCSUdRVUVS",
+            "WV9NQVRFUklBTElaRURfVklFVxAHQssBCh9jb20uZ29vZ2xlLmNsb3VkLmRh",
+            "dGFjYXRhbG9nLnYxUAFaRmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvZGF0YWNhdGFsb2cvdjE7ZGF0YWNhdGFsb2f4AQGq",
+            "AhtHb29nbGUuQ2xvdWQuRGF0YUNhdGFsb2cuVjHKAhtHb29nbGVcQ2xvdWRc",
+            "RGF0YUNhdGFsb2dcVjHqAh5Hb29nbGU6OkNsb3VkOjpEYXRhQ2F0YWxvZzo6",
+            "VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.TableSourceType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.BigQueryTableSpec), global::Google.Cloud.DataCatalog.V1.BigQueryTableSpec.Parser, new[]{ "TableSourceType", "ViewSpec", "TableSpec" }, new[]{ "TypeSpec" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.ViewSpec), global::Google.Cloud.DataCatalog.V1.ViewSpec.Parser, new[]{ "ViewQuery" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.TableSpec), global::Google.Cloud.DataCatalog.V1.TableSpec.Parser, new[]{ "GroupedEntry" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec), global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec.Parser, new[]{ "Dataset", "TablePrefix", "ShardCount" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec), global::Google.Cloud.DataCatalog.V1.BigQueryDateShardedSpec.Parser, new[]{ "Dataset", "TablePrefix", "ShardCount", "LatestShardResource" }, null, null, null, null)
           }));
     }
     #endregion
@@ -860,6 +861,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       dataset_ = other.dataset_;
       tablePrefix_ = other.tablePrefix_;
       shardCount_ = other.shardCount_;
+      latestShardResource_ = other.latestShardResource_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -921,6 +923,21 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
     }
 
+    /// <summary>Field number for the "latest_shard_resource" field.</summary>
+    public const int LatestShardResourceFieldNumber = 4;
+    private string latestShardResource_ = "";
+    /// <summary>
+    /// Output only. BigQuery resource name of the latest shard.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string LatestShardResource {
+      get { return latestShardResource_; }
+      set {
+        latestShardResource_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -939,6 +956,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Dataset != other.Dataset) return false;
       if (TablePrefix != other.TablePrefix) return false;
       if (ShardCount != other.ShardCount) return false;
+      if (LatestShardResource != other.LatestShardResource) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -949,6 +967,7 @@ namespace Google.Cloud.DataCatalog.V1 {
       if (Dataset.Length != 0) hash ^= Dataset.GetHashCode();
       if (TablePrefix.Length != 0) hash ^= TablePrefix.GetHashCode();
       if (ShardCount != 0L) hash ^= ShardCount.GetHashCode();
+      if (LatestShardResource.Length != 0) hash ^= LatestShardResource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -979,6 +998,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(24);
         output.WriteInt64(ShardCount);
       }
+      if (LatestShardResource.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LatestShardResource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1001,6 +1024,10 @@ namespace Google.Cloud.DataCatalog.V1 {
         output.WriteRawTag(24);
         output.WriteInt64(ShardCount);
       }
+      if (LatestShardResource.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(LatestShardResource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1019,6 +1046,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (ShardCount != 0L) {
         size += 1 + pb::CodedOutputStream.ComputeInt64Size(ShardCount);
+      }
+      if (LatestShardResource.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(LatestShardResource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1040,6 +1070,9 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       if (other.ShardCount != 0L) {
         ShardCount = other.ShardCount;
+      }
+      if (other.LatestShardResource.Length != 0) {
+        LatestShardResource = other.LatestShardResource;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1068,6 +1101,10 @@ namespace Google.Cloud.DataCatalog.V1 {
             ShardCount = input.ReadInt64();
             break;
           }
+          case 34: {
+            LatestShardResource = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1093,6 +1130,10 @@ namespace Google.Cloud.DataCatalog.V1 {
           }
           case 24: {
             ShardCount = input.ReadInt64();
+            break;
+          }
+          case 34: {
+            LatestShardResource = input.ReadString();
             break;
           }
         }

@@ -992,8 +992,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
-        /// /&amp;gt;
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.
         /// </param>
         /// <param name="policyTag">
         /// The policy tag to create.
@@ -1011,8 +1010,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
-        /// /&amp;gt;
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.
         /// </param>
         /// <param name="policyTag">
         /// The policy tag to create.
@@ -1030,8 +1028,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
-        /// /&amp;gt;
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.
         /// </param>
         /// <param name="policyTag">
         /// The policy tag to create.
@@ -1045,8 +1042,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
-        /// /&amp;gt;
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.
         /// </param>
         /// <param name="policyTag">
         /// The policy tag to create.
@@ -1064,8 +1060,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
-        /// /&amp;gt;
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.
         /// </param>
         /// <param name="policyTag">
         /// The policy tag to create.
@@ -1083,8 +1078,7 @@ namespace Google.Cloud.DataCatalog.V1
         /// Creates a policy tag in a taxonomy.
         /// </summary>
         /// <param name="parent">
-        /// Required. Resource name of the taxonomy that the policy tag will belong to.&amp;lt;br /&amp;gt;&amp;lt;br
-        /// /&amp;gt;
+        /// Required. Resource name of the taxonomy that the policy tag will belong to.
         /// </param>
         /// <param name="policyTag">
         /// The policy tag to create.

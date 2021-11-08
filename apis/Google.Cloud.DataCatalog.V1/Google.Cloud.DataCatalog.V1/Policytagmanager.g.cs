@@ -689,8 +689,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     /// <summary>
     /// Output only. Resource name of this policy tag in the URL format.
     ///
-    /// The policy tag manager generates unique taxonomy IDs and policy tag IDs.&lt;br
-    /// />&lt;br />
+    /// The policy tag manager generates unique taxonomy IDs and policy tag IDs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2449,8 +2448,7 @@ namespace Google.Cloud.DataCatalog.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. Resource name of the taxonomy that the policy tag will belong to.&lt;br />&lt;br
-    /// />
+    /// Required. Resource name of the taxonomy that the policy tag will belong to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
