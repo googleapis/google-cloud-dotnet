@@ -55,6 +55,21 @@
           }
         }
       }
+    },
+    "SystemPolicyV1Beta1": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SystemPolicyV1Beta1Client",
+          "rpcs": {
+            "GetSystemPolicy": {
+              "methods": [
+                "GetSystemPolicy",
+                "GetSystemPolicyAsync"
+              ]
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -78,4 +78,16 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetSystemPolicyRequest
+    {
+        /// <summary>
+        /// <see cref="gcbv::PolicyName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcbv::PolicyName PolicyName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcbv::PolicyName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }
