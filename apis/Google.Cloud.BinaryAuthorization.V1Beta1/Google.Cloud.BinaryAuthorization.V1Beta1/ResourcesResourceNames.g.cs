@@ -31,9 +31,14 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
 
             /// <summary>A resource name with pattern <c>projects/{project}/policy</c>.</summary>
             Project = 1,
+
+            /// <summary>A resource name with pattern <c>locations/{location}/policy</c>.</summary>
+            Location = 2,
         }
 
         private static gax::PathTemplate s_project = new gax::PathTemplate("projects/{project}/policy");
+
+        private static gax::PathTemplate s_location = new gax::PathTemplate("locations/{location}/policy");
 
         /// <summary>Creates a <see cref="PolicyName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -48,6 +53,12 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// <returns>A new instance of <see cref="PolicyName"/> constructed from the provided ids.</returns>
         public static PolicyName FromProject(string projectId) =>
             new PolicyName(ResourceNameType.Project, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
+
+        /// <summary>Creates a <see cref="PolicyName"/> with the pattern <c>locations/{location}/policy</c>.</summary>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="PolicyName"/> constructed from the provided ids.</returns>
+        public static PolicyName FromLocation(string locationId) =>
+            new PolicyName(ResourceNameType.Location, locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="PolicyName"/> with pattern
@@ -70,10 +81,24 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         public static string FormatProject(string projectId) =>
             s_project.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)));
 
+        /// <summary>
+        /// Formats the IDs into the string representation of this <see cref="PolicyName"/> with pattern
+        /// <c>locations/{location}/policy</c>.
+        /// </summary>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>
+        /// The string representation of this <see cref="PolicyName"/> with pattern <c>locations/{location}/policy</c>.
+        /// </returns>
+        public static string FormatLocation(string locationId) =>
+            s_location.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
+
         /// <summary>Parses the given resource name string into a new <see cref="PolicyName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>projects/{project}/policy</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/policy</c></description></item>
+        /// <item><description><c>locations/{location}/policy</c></description></item>
+        /// </list>
         /// </remarks>
         /// <param name="policyName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <returns>The parsed <see cref="PolicyName"/> if successful.</returns>
@@ -85,7 +110,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>projects/{project}/policy</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/policy</c></description></item>
+        /// <item><description><c>locations/{location}/policy</c></description></item>
+        /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
         /// <param name="policyName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -103,7 +131,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>projects/{project}/policy</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/policy</c></description></item>
+        /// <item><description><c>locations/{location}/policy</c></description></item>
+        /// </list>
         /// </remarks>
         /// <param name="policyName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">
@@ -118,7 +149,10 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
-        /// <list type="bullet"><item><description><c>projects/{project}/policy</c></description></item></list>
+        /// <list type="bullet">
+        /// <item><description><c>projects/{project}/policy</c></description></item>
+        /// <item><description><c>locations/{location}/policy</c></description></item>
+        /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
         /// <param name="policyName">The resource name in string form. Must not be <c>null</c>.</param>
@@ -140,6 +174,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
                 result = FromProject(resourceName[0]);
                 return true;
             }
+            if (s_location.TryParseName(policyName, out resourceName))
+            {
+                result = FromLocation(resourceName[0]);
+                return true;
+            }
             if (allowUnparsed)
             {
                 if (gax::UnparsedResourceName.TryParse(policyName, out gax::UnparsedResourceName unparsedResourceName))
@@ -152,10 +191,11 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
             return false;
         }
 
-        private PolicyName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string projectId = null)
+        private PolicyName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
+            LocationId = locationId;
             ProjectId = projectId;
         }
 
@@ -178,7 +218,12 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
+        /// </summary>
+        public string LocationId { get; }
+
+        /// <summary>
+        /// The <c>Project</c> ID. May be <c>null</c>, depending on which resource name is contained by this instance.
         /// </summary>
         public string ProjectId { get; }
 
@@ -193,6 +238,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
                 case ResourceNameType.Project: return s_project.Expand(ProjectId);
+                case ResourceNameType.Location: return s_location.Expand(LocationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

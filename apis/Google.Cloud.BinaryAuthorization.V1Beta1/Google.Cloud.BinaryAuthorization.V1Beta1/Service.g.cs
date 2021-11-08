@@ -50,48 +50,56 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             "GAEgAygLMjIuZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFi",
             "ZXRhMS5BdHRlc3RvchIXCg9uZXh0X3BhZ2VfdG9rZW4YAiABKAkiWgoVRGVs",
             "ZXRlQXR0ZXN0b3JSZXF1ZXN0EkEKBG5hbWUYASABKAlCM+BBAvpBLQorYmlu",
-            "YXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9BdHRlc3RvcjLLCwog",
-            "QmluYXV0aHpNYW5hZ2VtZW50U2VydmljZVYxQmV0YTESqwEKCUdldFBvbGlj",
-            "eRI6Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEu",
-            "R2V0UG9saWN5UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3Jp",
-            "emF0aW9uLnYxYmV0YTEuUG9saWN5IjCC0+STAiMSIS92MWJldGExL3tuYW1l",
-            "PXByb2plY3RzLyovcG9saWN5fdpBBG5hbWUSwgEKDFVwZGF0ZVBvbGljeRI9",
-            "Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuVXBk",
-            "YXRlUG9saWN5UmVxdWVzdBowLmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3Jp",
-            "emF0aW9uLnYxYmV0YTEuUG9saWN5IkGC0+STAjIaKC92MWJldGExL3twb2xp",
-            "Y3kubmFtZT1wcm9qZWN0cy8qL3BvbGljeX06BnBvbGljedpBBnBvbGljeRLd",
-            "AQoOQ3JlYXRlQXR0ZXN0b3ISPy5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9y",
-            "aXphdGlvbi52MWJldGExLkNyZWF0ZUF0dGVzdG9yUmVxdWVzdBoyLmdvb2ds",
-            "ZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQXR0ZXN0b3Ii",
-            "VoLT5JMCMiImL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qfS9hdHRlc3Rv",
-            "cnM6CGF0dGVzdG9y2kEbcGFyZW50LGF0dGVzdG9yX2lkLGF0dGVzdG9yErYB",
-            "CgtHZXRBdHRlc3RvchI8Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0",
-            "aW9uLnYxYmV0YTEuR2V0QXR0ZXN0b3JSZXF1ZXN0GjIuZ29vZ2xlLmNsb3Vk",
-            "LmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BdHRlc3RvciI1gtPkkwIo",
-            "EiYvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2F0dGVzdG9ycy8qfdpBBG5h",
-            "bWUS0wEKDlVwZGF0ZUF0dGVzdG9yEj8uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1",
-            "dGhvcml6YXRpb24udjFiZXRhMS5VcGRhdGVBdHRlc3RvclJlcXVlc3QaMi5n",
-            "b29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkF0dGVz",
-            "dG9yIkyC0+STAjsaLy92MWJldGExL3thdHRlc3Rvci5uYW1lPXByb2plY3Rz",
-            "LyovYXR0ZXN0b3JzLyp9OghhdHRlc3RvctpBCGF0dGVzdG9yEskBCg1MaXN0",
-            "QXR0ZXN0b3JzEj4uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24u",
-            "djFiZXRhMS5MaXN0QXR0ZXN0b3JzUmVxdWVzdBo/Lmdvb2dsZS5jbG91ZC5i",
-            "aW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuTGlzdEF0dGVzdG9yc1Jlc3Bv",
-            "bnNlIjeC0+STAigSJi92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXR0",
-            "ZXN0b3Jz2kEGcGFyZW50EqABCg5EZWxldGVBdHRlc3RvchI/Lmdvb2dsZS5j",
-            "bG91ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuRGVsZXRlQXR0ZXN0",
-            "b3JSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IjWC0+STAigqJi92",
-            "MWJldGExL3tuYW1lPXByb2plY3RzLyovYXR0ZXN0b3JzLyp92kEEbmFtZRpW",
-            "ykEiYmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0dHBz",
-            "Oi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CtQIK",
-            "LGNvbS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGEx",
-            "Qh9CaW5hcnlBdXRob3JpemF0aW9uU2VydmljZVByb3RvUAFaW2dvb2dsZS5n",
-            "b2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYmluYXJ5YXV0",
-            "aG9yaXphdGlvbi92MWJldGExO2JpbmFyeWF1dGhvcml6YXRpb274AQGqAihH",
-            "b29nbGUuQ2xvdWQuQmluYXJ5QXV0aG9yaXphdGlvbi5WMUJldGExygIoR29v",
-            "Z2xlXENsb3VkXEJpbmFyeUF1dGhvcml6YXRpb25cVjFiZXRhMeoCK0dvb2ds",
-            "ZTo6Q2xvdWQ6OkJpbmFyeUF1dGhvcml6YXRpb246OlYxYmV0YTFiBnByb3Rv",
-            "Mw=="));
+            "YXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9BdHRlc3RvciJZChZH",
+            "ZXRTeXN0ZW1Qb2xpY3lSZXF1ZXN0Ej8KBG5hbWUYASABKAlCMeBBAvpBKwop",
+            "YmluYXJ5YXV0aG9yaXphdGlvbi5nb29nbGVhcGlzLmNvbS9Qb2xpY3kyywsK",
+            "IEJpbmF1dGh6TWFuYWdlbWVudFNlcnZpY2VWMUJldGExEqsBCglHZXRQb2xp",
+            "Y3kSOi5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGEx",
+            "LkdldFBvbGljeVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9y",
+            "aXphdGlvbi52MWJldGExLlBvbGljeSIwgtPkkwIjEiEvdjFiZXRhMS97bmFt",
+            "ZT1wcm9qZWN0cy8qL3BvbGljeX3aQQRuYW1lEsIBCgxVcGRhdGVQb2xpY3kS",
+            "PS5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLlVw",
+            "ZGF0ZVBvbGljeVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9y",
+            "aXphdGlvbi52MWJldGExLlBvbGljeSJBgtPkkwIyGigvdjFiZXRhMS97cG9s",
+            "aWN5Lm5hbWU9cHJvamVjdHMvKi9wb2xpY3l9OgZwb2xpY3naQQZwb2xpY3kS",
+            "3QEKDkNyZWF0ZUF0dGVzdG9yEj8uZ29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhv",
+            "cml6YXRpb24udjFiZXRhMS5DcmVhdGVBdHRlc3RvclJlcXVlc3QaMi5nb29n",
+            "bGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkF0dGVzdG9y",
+            "IlaC0+STAjIiJi92MWJldGExL3twYXJlbnQ9cHJvamVjdHMvKn0vYXR0ZXN0",
+            "b3JzOghhdHRlc3RvctpBG3BhcmVudCxhdHRlc3Rvcl9pZCxhdHRlc3RvchK2",
+            "AQoLR2V0QXR0ZXN0b3ISPC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXph",
+            "dGlvbi52MWJldGExLkdldEF0dGVzdG9yUmVxdWVzdBoyLmdvb2dsZS5jbG91",
+            "ZC5iaW5hcnlhdXRob3JpemF0aW9uLnYxYmV0YTEuQXR0ZXN0b3IiNYLT5JMC",
+            "KBImL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9hdHRlc3RvcnMvKn3aQQRu",
+            "YW1lEtMBCg5VcGRhdGVBdHRlc3RvchI/Lmdvb2dsZS5jbG91ZC5iaW5hcnlh",
+            "dXRob3JpemF0aW9uLnYxYmV0YTEuVXBkYXRlQXR0ZXN0b3JSZXF1ZXN0GjIu",
+            "Z29vZ2xlLmNsb3VkLmJpbmFyeWF1dGhvcml6YXRpb24udjFiZXRhMS5BdHRl",
+            "c3RvciJMgtPkkwI7Gi8vdjFiZXRhMS97YXR0ZXN0b3IubmFtZT1wcm9qZWN0",
+            "cy8qL2F0dGVzdG9ycy8qfToIYXR0ZXN0b3LaQQhhdHRlc3RvchLJAQoNTGlz",
+            "dEF0dGVzdG9ycxI+Lmdvb2dsZS5jbG91ZC5iaW5hcnlhdXRob3JpemF0aW9u",
+            "LnYxYmV0YTEuTGlzdEF0dGVzdG9yc1JlcXVlc3QaPy5nb29nbGUuY2xvdWQu",
+            "YmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkxpc3RBdHRlc3RvcnNSZXNw",
+            "b25zZSI3gtPkkwIoEiYvdjFiZXRhMS97cGFyZW50PXByb2plY3RzLyp9L2F0",
+            "dGVzdG9yc9pBBnBhcmVudBKgAQoORGVsZXRlQXR0ZXN0b3ISPy5nb29nbGUu",
+            "Y2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkRlbGV0ZUF0dGVz",
+            "dG9yUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eSI1gtPkkwIoKiYv",
+            "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2F0dGVzdG9ycy8qfdpBBG5hbWUa",
+            "VspBImJpbmFyeWF1dGhvcml6YXRpb24uZ29vZ2xlYXBpcy5jb23SQS5odHRw",
+            "czovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtMqgC",
+            "ChNTeXN0ZW1Qb2xpY3lWMUJldGExErgBCg9HZXRTeXN0ZW1Qb2xpY3kSQC5n",
+            "b29nbGUuY2xvdWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExLkdldFN5",
+            "c3RlbVBvbGljeVJlcXVlc3QaMC5nb29nbGUuY2xvdWQuYmluYXJ5YXV0aG9y",
+            "aXphdGlvbi52MWJldGExLlBvbGljeSIxgtPkkwIkEiIvdjFiZXRhMS97bmFt",
+            "ZT1sb2NhdGlvbnMvKi9wb2xpY3l92kEEbmFtZRpWykEiYmluYXJ5YXV0aG9y",
+            "aXphdGlvbi5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3Lmdvb2dsZWFw",
+            "aXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CtQIKLGNvbS5nb29nbGUuY2xv",
+            "dWQuYmluYXJ5YXV0aG9yaXphdGlvbi52MWJldGExQh9CaW5hcnlBdXRob3Jp",
+            "emF0aW9uU2VydmljZVByb3RvUAFaW2dvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
+            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvYmluYXJ5YXV0aG9yaXphdGlvbi92MWJl",
+            "dGExO2JpbmFyeWF1dGhvcml6YXRpb274AQGqAihHb29nbGUuQ2xvdWQuQmlu",
+            "YXJ5QXV0aG9yaXphdGlvbi5WMUJldGExygIoR29vZ2xlXENsb3VkXEJpbmFy",
+            "eUF1dGhvcml6YXRpb25cVjFiZXRhMeoCK0dvb2dsZTo6Q2xvdWQ6OkJpbmFy",
+            "eUF1dGhvcml6YXRpb246OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.BinaryAuthorization.V1Beta1.ResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -102,7 +110,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.UpdateAttestorRequest), global::Google.Cloud.BinaryAuthorization.V1Beta1.UpdateAttestorRequest.Parser, new[]{ "Attestor" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsRequest), global::Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse), global::Google.Cloud.BinaryAuthorization.V1Beta1.ListAttestorsResponse.Parser, new[]{ "Attestors", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.DeleteAttestorRequest), global::Google.Cloud.BinaryAuthorization.V1Beta1.DeleteAttestorRequest.Parser, new[]{ "Name" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.DeleteAttestorRequest), global::Google.Cloud.BinaryAuthorization.V1Beta1.DeleteAttestorRequest.Parser, new[]{ "Name" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BinaryAuthorization.V1Beta1.GetSystemPolicyRequest), global::Google.Cloud.BinaryAuthorization.V1Beta1.GetSystemPolicyRequest.Parser, new[]{ "Name" }, null, null, null, null)
           }));
     }
     #endregion
@@ -160,9 +169,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the
-    /// [policy][google.cloud.binaryauthorization.v1beta1.Policy] to retrieve, in
-    /// the format `projects/*/policy`.
+    /// Required. The resource name of the [policy][google.cloud.binaryauthorization.v1beta1.Policy] to retrieve,
+    /// in the format `projects/*/policy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -357,11 +365,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int PolicyFieldNumber = 1;
     private global::Google.Cloud.BinaryAuthorization.V1Beta1.Policy policy_;
     /// <summary>
-    /// Required. A new or updated
-    /// [policy][google.cloud.binaryauthorization.v1beta1.Policy] value. The
-    /// service will overwrite the [policy
-    /// name][google.cloud.binaryauthorization.v1beta1.Policy.name] field with the
-    /// resource name in the request URL, in the format `projects/*/policy`.
+    /// Required. A new or updated [policy][google.cloud.binaryauthorization.v1beta1.Policy] value. The service will
+    /// overwrite the [policy name][google.cloud.binaryauthorization.v1beta1.Policy.name] field with the resource name in
+    /// the request URL, in the format `projects/*/policy`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -567,8 +573,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent of this
-    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor].
+    /// Required. The parent of this [attestor][google.cloud.binaryauthorization.v1beta1.Attestor].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -583,8 +588,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int AttestorIdFieldNumber = 2;
     private string attestorId_ = "";
     /// <summary>
-    /// Required. The
-    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] ID.
+    /// Required. The [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -599,11 +603,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int AttestorFieldNumber = 3;
     private global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor attestor_;
     /// <summary>
-    /// Required. The initial
-    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The
-    /// service will overwrite the [attestor
-    /// name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with
-    /// the resource name, in the format `projects/*/attestors/*`.
+    /// Required. The initial [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The service will
+    /// overwrite the [attestor name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with the resource name,
+    /// in the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -855,9 +857,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the
-    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] to retrieve,
-    /// in the format `projects/*/attestors/*`.
+    /// Required. The name of the [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] to retrieve, in the format
+    /// `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1052,12 +1053,9 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int AttestorFieldNumber = 1;
     private global::Google.Cloud.BinaryAuthorization.V1Beta1.Attestor attestor_;
     /// <summary>
-    /// Required. The updated
-    /// [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The
-    /// service will overwrite the [attestor
-    /// name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with
-    /// the resource name in the request URL, in the format
-    /// `projects/*/attestors/*`.
+    /// Required. The updated [attestor][google.cloud.binaryauthorization.v1beta1.Attestor] value. The service will
+    /// overwrite the [attestor name][google.cloud.binaryauthorization.v1beta1.Attestor.name] field with the resource name
+    /// in the request URL, in the format `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1264,8 +1262,7 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the project associated with the
-    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], in the
-    /// format `projects/*`.
+    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor], in the format `projects/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1297,9 +1294,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private string pageToken_ = "";
     /// <summary>
     /// A token identifying a page of results the server should return. Typically,
-    /// this is the value of
-    /// [ListAttestorsResponse.next_page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsResponse.next_page_token]
-    /// returned from the previous call to the `ListAttestors` method.
+    /// this is the value of [ListAttestorsResponse.next_page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsResponse.next_page_token] returned
+    /// from the previous call to the `ListAttestors` method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1558,9 +1554,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve the next page of results. Pass this value in the
-    /// [ListAttestorsRequest.page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsRequest.page_token]
-    /// field in the subsequent call to the `ListAttestors` method to retrieve the
-    /// next page of results.
+    /// [ListAttestorsRequest.page_token][google.cloud.binaryauthorization.v1beta1.ListAttestorsRequest.page_token] field in the subsequent call to the
+    /// `ListAttestors` method to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1769,9 +1764,8 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The name of the
-    /// [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] to delete,
-    /// in the format `projects/*/attestors/*`.
+    /// Required. The name of the [attestors][google.cloud.binaryauthorization.v1beta1.Attestor] to delete, in the format
+    /// `projects/*/attestors/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1864,6 +1858,202 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(DeleteAttestorRequest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Name.Length != 0) {
+        Name = other.Name;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Name = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Request to read the current system policy.
+  /// </summary>
+  public sealed partial class GetSystemPolicyRequest : pb::IMessage<GetSystemPolicyRequest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GetSystemPolicyRequest> _parser = new pb::MessageParser<GetSystemPolicyRequest>(() => new GetSystemPolicyRequest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GetSystemPolicyRequest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.BinaryAuthorization.V1Beta1.ServiceReflection.Descriptor.MessageTypes[8]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetSystemPolicyRequest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetSystemPolicyRequest(GetSystemPolicyRequest other) : this() {
+      name_ = other.name_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GetSystemPolicyRequest Clone() {
+      return new GetSystemPolicyRequest(this);
+    }
+
+    /// <summary>Field number for the "name" field.</summary>
+    public const int NameFieldNumber = 1;
+    private string name_ = "";
+    /// <summary>
+    /// Required. The resource name, in the format `locations/*/policy`.
+    /// Note that the system policy is not associated with a project.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Name {
+      get { return name_; }
+      set {
+        name_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GetSystemPolicyRequest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GetSystemPolicyRequest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Name != other.Name) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Name.Length != 0) hash ^= Name.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Name.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Name);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Name.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Name);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GetSystemPolicyRequest other) {
       if (other == null) {
         return;
       }

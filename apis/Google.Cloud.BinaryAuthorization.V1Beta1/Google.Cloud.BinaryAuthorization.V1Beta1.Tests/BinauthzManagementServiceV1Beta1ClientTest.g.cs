@@ -54,6 +54,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -88,6 +109,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -124,6 +166,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -158,6 +221,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -194,6 +278,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -228,6 +333,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.GetPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -264,6 +390,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -298,6 +445,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -334,6 +502,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
@@ -368,6 +557,27 @@ namespace Google.Cloud.BinaryAuthorization.V1Beta1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 Description = "description2cf9da67",
                 GlobalPolicyEvaluationMode = Policy.Types.GlobalPolicyEvaluationMode.Disable,
+                KubernetesServiceAccountAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                IstioServiceIdentityAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
+                KubernetesNamespaceAdmissionRules =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new AdmissionRule()
+                    },
+                },
             };
             mockGrpcClient.Setup(x => x.UpdatePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Policy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BinauthzManagementServiceV1Beta1Client client = new BinauthzManagementServiceV1Beta1ClientImpl(mockGrpcClient.Object, null);
