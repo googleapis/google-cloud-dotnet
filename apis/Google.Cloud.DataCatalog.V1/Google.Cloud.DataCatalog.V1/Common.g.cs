@@ -25,16 +25,17 @@ namespace Google.Cloud.DataCatalog.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvZGF0YWNhdGFsb2cvdjEvY29tbW9uLnByb3RvEhtn",
-            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEqbQoQSW50ZWdyYXRlZFN5c3Rl",
-            "bRIhCh1JTlRFR1JBVEVEX1NZU1RFTV9VTlNQRUNJRklFRBAAEgwKCEJJR1FV",
-            "RVJZEAESEAoMQ0xPVURfUFVCU1VCEAISFgoSREFUQVBST0NfTUVUQVNUT1JF",
-            "EANCywEKH2NvbS5nb29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFQAVpGZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kYXRh",
-            "Y2F0YWxvZy92MTtkYXRhY2F0YWxvZ/gBAaoCG0dvb2dsZS5DbG91ZC5EYXRh",
-            "Q2F0YWxvZy5WMcoCG0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdv",
-            "b2dsZTo6Q2xvdWQ6OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjEaH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8qbQoQSW50ZWdyYXRlZFN5c3RlbRIhCh1JTlRFR1JB",
+            "VEVEX1NZU1RFTV9VTlNQRUNJRklFRBAAEgwKCEJJR1FVRVJZEAESEAoMQ0xP",
+            "VURfUFVCU1VCEAISFgoSREFUQVBST0NfTUVUQVNUT1JFEANCywEKH2NvbS5n",
+            "b29nbGUuY2xvdWQuZGF0YWNhdGFsb2cudjFQAVpGZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kYXRhY2F0YWxvZy92MTtk",
+            "YXRhY2F0YWxvZ/gBAaoCG0dvb2dsZS5DbG91ZC5EYXRhQ2F0YWxvZy5WMcoC",
+            "G0dvb2dsZVxDbG91ZFxEYXRhQ2F0YWxvZ1xWMeoCHkdvb2dsZTo6Q2xvdWQ6",
+            "OkRhdGFDYXRhbG9nOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { },
+          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.DataCatalog.V1.IntegratedSystem), }, null, null));
     }
     #endregion
