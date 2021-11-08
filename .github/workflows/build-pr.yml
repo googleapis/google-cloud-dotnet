@@ -23,7 +23,7 @@ jobs:
     - name: Set up git branches
       run: |
         git checkout -b pr-head
-        git checkout -b master ${{ github.event.pull_request.base.sha }}
+        git checkout -b main ${{ github.event.pull_request.base.sha }}
         git checkout pr-head
 
     - name: Build and test

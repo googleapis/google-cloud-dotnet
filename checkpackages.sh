@@ -10,7 +10,7 @@
 set -e
 
 # Make sure we have all the tags locally.
-git fetch --tags -f -q upstream master
+git fetch --tags -f -q upstream main
 
 FAILURES=0
 # Order by "most recent first" as those are the tags we're

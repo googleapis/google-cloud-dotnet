@@ -26,7 +26,7 @@ maybe_fail() {
 }
 
 # Find the APIs that have changed, excluding ServiceDirectory (which isn't a real API)
-apis=$(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | grep -v '^ServiceDirectory$' | uniq)
+apis=$(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | grep -v '^ServiceDirectory$' | uniq)
 
 if [[ "$apis" == "" ]]
 then
@@ -34,7 +34,7 @@ then
   exit 0
 fi
 
-git clone . tmpgit --no-local -q -b master --depth 1 --recursive
+git clone . tmpgit --no-local -q -b main --depth 1 --recursive
 
 mkdir tmpgit/old
 mkdir tmpgit/new
