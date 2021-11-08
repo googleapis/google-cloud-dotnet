@@ -1,5 +1,13 @@
 # Version history
 
+# Version 1.0.0-beta07, released 2021-11-08
+
+- [Commit ebf6fab](https://github.com/googleapis/google-cloud-dotnet/commit/ebf6fab):
+  - feat: add the `schema_restriction_response` field to the `ResponseMetaData` type that contains the schema restrictions actively enforced in creating a report
+  - feat: add the `currency_code`, `time_zone` fields to the `ResponseMetaData` type
+  - feat: add the `empty_reason` field to the `ResponseMetaData` type that contains an empty report reason, if specified
+  - feat: add the `blocked_reasons` field to the `MetricMetadata` type that contains reasons why access was blocked to a certain metric in a report, if specified
+
 # Version 1.0.0-beta06, released 2021-09-24
 
 - [Commit 75ffe93](https://github.com/googleapis/google-cloud-dotnet/commit/75ffe93):
