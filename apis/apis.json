@@ -1542,7 +1542,7 @@
     },
     {
       "id": "Google.Cloud.Location",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "listingDescription": "Support for the Google Cloud Locations mix-in API pattern",
       "metadataType": "CORE",
