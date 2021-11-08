@@ -256,23 +256,6 @@ generate_proto() {
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
 }
 
-generate_protogrpc() {
-  # Delete previously-generated files
-  delete_generated apis/$1/$1
-
-  API_SRC_DIR=$GOOGLEAPIS/$($PYTHON3 tools/getapifield.py apis/apis.json $1 protoPath)
-  $PROTOC \
-    --csharp_out=apis/$1/$1 \
-    --csharp_opt=base_namespace=$1,file_extension=.g.cs \
-    --grpc_out=apis/$1/$1 \
-    --grpc_opt=file_suffix=Grpc.g.cs \
-    -I $GOOGLEAPIS \
-    -I $CORE_PROTOS_ROOT \
-    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    $API_SRC_DIR/*.proto \
-    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
-}
-
 generate_api() {
   PACKAGE=$1
   PACKAGE_DIR=apis/$1
@@ -294,9 +277,6 @@ generate_api() {
       ;;
     proto)
       generate_proto $1
-      ;;
-    protogrpc)
-      generate_protogrpc $1
       ;;
     *)
       echo "Unknown generator: $GENERATOR"

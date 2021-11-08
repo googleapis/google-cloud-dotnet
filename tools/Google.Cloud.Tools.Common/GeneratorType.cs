@@ -20,7 +20,6 @@ namespace Google.Cloud.Tools.Common
         Gapic,
         Micro,
         Proto,
-        ProtoGrpc,
         Regapic
     }
 }
