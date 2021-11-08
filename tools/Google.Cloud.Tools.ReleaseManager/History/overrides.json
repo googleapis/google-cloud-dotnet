@@ -29,4 +29,5 @@
   "84832b8": "skip", // Regenerate with later protoc; adds GeneratedCodeAttribute
   "5105bbd": "skip", // Regenerate for retry status code documentation
   "b56517e": "skip", // Regenerate with updated protobuf
+  "8fb35a3": "skip", // Regenerate with more .g.cs extensions
 }
