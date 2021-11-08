@@ -24,9 +24,9 @@ namespace Google.Cloud.Tools.ReleaseManager
     /// </summary>
     public abstract class CommandBase : ICommand
     {
-        // The branch we're thinking of as primary (e.g. master). It may actually be some other branch for occasional
+        // The branch we're thinking of as primary (e.g. main). It may actually be some other branch for occasional
         // releases, but fundamentally it's "the current source of truth we're basing this release on".
-        internal const string PrimaryBranch = "master";
+        internal const string PrimaryBranch = "main";
 
         private readonly int _expectedArgCount;
 

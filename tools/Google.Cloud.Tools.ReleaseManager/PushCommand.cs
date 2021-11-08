@@ -142,7 +142,7 @@ namespace Google.Cloud.Tools.ReleaseManager
                 var commitMessageLines = commitMessage.Replace("\r", "").Split('\n').ToList();
                 var pullRequestLines = UnwrapLines(commitMessageLines);
 
-                var request = new NewPullRequest(pullRequestLines.First(), head, "master")
+                var request = new NewPullRequest(pullRequestLines.First(), head, "main")
                 {
                     Body = string.Join('\n', pullRequestLines.Skip(1))
                 };

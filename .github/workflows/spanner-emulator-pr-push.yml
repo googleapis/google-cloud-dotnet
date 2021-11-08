@@ -6,7 +6,7 @@ on:
     - '**[Ss]panner**'
   push:
     branches:
-      - master
+      - main
     paths:
     - '**[Ss]panner**'
 

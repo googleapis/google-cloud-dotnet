@@ -19,7 +19,7 @@ shopt -s nullglob
 # of this script, or under apis.
 # Additional arguments:
 # --notests: Just build, don't run the tests
-# --diff: Detect which APIs to build based on a diff to the master branch
+# --diff: Detect which APIs to build based on a diff to the main branch
 # --regex regex: Only build APIs that match the given regex
 # --nobuild: Just list which APIs would be built; don't run the build
 # --coverage: Run tests with coverage enabled
@@ -35,7 +35,7 @@ while (( "$#" )); do
     runtests=false
   elif [[ "$1" == "--diff" ]]
   then
-    apis+=($(git diff master --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
+    apis+=($(git diff main --name-only | grep -e 'apis/.*/' | cut -d/ -f 2 | uniq))
     diff=true
   elif [[ "$1" == "--regex" ]]
   then

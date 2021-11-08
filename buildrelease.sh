@@ -53,7 +53,7 @@ export DeterministicSourcePaths=true
 
 if [[ "$rebuild_docs" = true ]]
 then
-  git checkout master
+  git checkout main
 else
   git checkout $commit
 fi

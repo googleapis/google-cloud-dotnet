@@ -65,7 +65,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1
                 : $"<AMBIGUOUS: {string.Join(",", allNamespaces.OrderBy(x => x, StringComparer.Ordinal))}>";
         }
 
-        // Copied from https://github.com/googleapis/gapic-generator-csharp/blob/master/Google.Api.Generator/Utils/SystemExtensions.cs.
+        // Copied from https://github.com/googleapis/gapic-generator-csharp/blob/main/Google.Api.Generator/Utils/SystemExtensions.cs.
         // We can move it somewhere more common if we need to...
         private static char MaybeForceCase(char c, bool? toUpper) =>
             toUpper is bool upper ? upper ? char.ToUpperInvariant(c) : char.ToLowerInvariant(c) : c;
