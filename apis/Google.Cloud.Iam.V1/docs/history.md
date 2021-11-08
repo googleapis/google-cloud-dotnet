@@ -1,5 +1,10 @@
 # Version history
 
+# Version 2.3.0, released 2021-11-08
+
+- [Commit 753d624](https://github.com/googleapis/google-cloud-dotnet/commit/753d624): chore: Remove old "pseudo-handwritten" resource names file
+- [Commit 1b7246b](https://github.com/googleapis/google-cloud-dotnet/commit/1b7246b): feat: Regenerate Google.Cloud.Iam.V1 (as a GAPIC package)
+
 # Version 2.2.0, released 2021-05-26
 
 No API surface changes; just dependency updates.
