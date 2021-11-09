@@ -3,7 +3,7 @@
 //     source: google/cloud/redis/v1/cloud_redis.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -305,7 +305,7 @@ namespace Google.Cloud.Redis.V1 {
       }
 
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -840,7 +840,7 @@ namespace Google.Cloud.Redis.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ExportInstance, null, options, request);
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -854,7 +854,7 @@ namespace Google.Cloud.Redis.V1 {
         return FailoverInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -866,7 +866,7 @@ namespace Google.Cloud.Redis.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_FailoverInstance, null, options, request);
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -880,7 +880,7 @@ namespace Google.Cloud.Redis.V1 {
         return FailoverInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
