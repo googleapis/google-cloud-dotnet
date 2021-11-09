@@ -1,5 +1,12 @@
 # Version history
 
+# Version 4.3.1, released 2021-11-09
+
+- [Commit b1318ac](https://github.com/googleapis/google-cloud-dotnet/commit/b1318ac):
+  - fix: Respects the service client set through error reporting options.
+  - Adds missing tests for all options.
+  - Closes [issue 7448](https://github.com/googleapis/google-cloud-dotnet/issues/7448)
+
 # Version 4.3.0, released 2021-11-01
 
 No API surface changes; just releasing a stable version.
