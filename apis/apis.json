@@ -97,6 +97,7 @@
       "id": "Google.Cloud.AIPlatform.V1",
       "version": "1.0.0-beta05",
       "type": "grpc",
+      "autoGenerator": "Synthtool",
       "productName": "Cloud AI Platform",
       "productUrl": "https://cloud.google.com/ai-platform/docs/",
       "description": "Recommended Google client library to access the AI Platform API, which allows you to train high-quality custom machine learning models with minimal machine learning expertise and effort.",
@@ -191,7 +192,6 @@
     {
       "id": "Google.Cloud.Asset.V1",
       "generator": "micro",
-      "autoGenerator": "OwlBot",
       "protoPath": "google/cloud/asset/v1",
       "productName": "Google Cloud Asset Inventory",
       "productUrl": "https://cloud.google.com/resource-manager/docs/cloud-asset-inventory/overview",
@@ -603,6 +603,7 @@
       "id": "Google.Cloud.Compute.V1",
       "version": "1.0.0-beta03",
       "type": "regapic",
+      "autoGenerator": "Synthtool",
       "productName": "Compute Engine",
       "productUrl": "https://cloud.google.com/compute",
       "description": "Recommended Google client library to access the Google Cloud Compute Engine API.",
@@ -620,7 +621,6 @@
       "id": "Google.Cloud.ContactCenterInsights.V1",
       "version": "1.0.0-beta03",
       "type": "grpc",
-      "autoGenerator": "OwlBot",
       "productName": "Contact Center AI Insights",
       "productUrl": "https://cloud.google.com/contact-center/insights/docs",
       "description": "Recommended Google client library to access the Google Contact Center AI Insights API, which helps users detect and visualize patterns in their contact center data. Understanding conversational data drives business value, improves operational efficiency, and provides a voice for customer feedback.",
@@ -973,7 +973,6 @@
       "id": "Google.Cloud.Dialogflow.Cx.V3",
       "version": "1.5.0",
       "type": "grpc",
-      "autoGenerator": "OwlBot",
       "productName": "Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow/cx/docs",
       "description": "Builds conversational interfaces (for example, chatbots, and voice-powered apps and devices).",
@@ -993,7 +992,6 @@
     {
       "id": "Google.Cloud.Dialogflow.V2",
       "generator": "micro",
-      "autoGenerator": "OwlBot",
       "protoPath": "google/cloud/dialogflow/v2",
       "productName": "Google Cloud Dialogflow",
       "productUrl": "https://cloud.google.com/dialogflow-enterprise/",
@@ -1233,7 +1231,6 @@
     {
       "id": "Google.Cloud.Firestore.V1",
       "generator": "micro",
-      "autoGenerator": "OwlBot",
       "protoPath": "google/firestore/v1",
       "productName": "Firestore",
       "productUrl": "https://firebase.google.com",
@@ -2717,7 +2714,6 @@
     },
     {
       "id": "Google.Cloud.Speech.V1",
-      "autoGenerator": "OwlBot",
       "generator": "micro",
       "protoPath": "google/cloud/speech/v1",
       "productName": "Google Cloud Speech",

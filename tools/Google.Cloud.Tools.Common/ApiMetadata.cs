@@ -144,10 +144,10 @@ namespace Google.Cloud.Tools.Common
                 return AutoGenerator.Value;
             }
 
-            // Currently, default to just "synthtool if anything". Once we have confidence that
-            // we've got the OwlBot configuration right, we can return check whether there are any pre/mid/post-generation
-            // scripts, and opt into OwlBot automatically when there aren't.
-            return Generator == GeneratorType.None ? AutoGeneratorType.None : AutoGeneratorType.Synthtool;
+            // Default to OwlBot, now that almost everything supports it.
+            // Anything else should be specified explicitly.
+            // (This only applies to generated APIs, however.)
+            return Generator == GeneratorType.None ? AutoGeneratorType.None : AutoGeneratorType.OwlBot;
         }
         
         /// <summary>
