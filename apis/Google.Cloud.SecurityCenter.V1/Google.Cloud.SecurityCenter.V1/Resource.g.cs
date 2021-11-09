@@ -28,20 +28,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "dG8SHmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MRofZ29vZ2xlL2Fw",
             "aS9maWVsZF9iZWhhdmlvci5wcm90bxorZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5",
             "Y2VudGVyL3YxL2ZvbGRlci5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9u",
-            "cy5wcm90byLAAQoIUmVzb3VyY2USDAoEbmFtZRgBIAEoCRIPCgdwcm9qZWN0",
+            "cy5wcm90byLWAQoIUmVzb3VyY2USDAoEbmFtZRgBIAEoCRIPCgdwcm9qZWN0",
             "GAIgASgJEhwKFHByb2plY3RfZGlzcGxheV9uYW1lGAMgASgJEg4KBnBhcmVu",
             "dBgEIAEoCRIbChNwYXJlbnRfZGlzcGxheV9uYW1lGAUgASgJEgwKBHR5cGUY",
             "BiABKAkSPAoHZm9sZGVycxgHIAMoCzImLmdvb2dsZS5jbG91ZC5zZWN1cml0",
-            "eWNlbnRlci52MS5Gb2xkZXJCA+BBA0LpAQoiY29tLmdvb2dsZS5jbG91ZC5z",
-            "ZWN1cml0eWNlbnRlci52MUINUmVzb3VyY2VQcm90b1ABWkxnb29nbGUuZ29s",
-            "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3VyaXR5Y2Vu",
-            "dGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNlY3VyaXR5",
-            "Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVyXFYx6gIh",
-            "R29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90bzM="));
+            "eWNlbnRlci52MS5Gb2xkZXJCA+BBAxIUCgxkaXNwbGF5X25hbWUYCCABKAlC",
+            "6QEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFCDVJlc291",
+            "cmNlUHJvdG9QAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoC",
+            "Hkdvb2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91",
+            "ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5",
+            "Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FolderReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Resource), global::Google.Cloud.SecurityCenter.V1.Resource.Parser, new[]{ "Name", "Project", "ProjectDisplayName", "Parent", "ParentDisplayName", "Type", "Folders" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Resource), global::Google.Cloud.SecurityCenter.V1.Resource.Parser, new[]{ "Name", "Project", "ProjectDisplayName", "Parent", "ParentDisplayName", "Type", "Folders", "DisplayName" }, null, null, null, null)
           }));
     }
     #endregion
@@ -92,6 +93,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       parentDisplayName_ = other.parentDisplayName_;
       type_ = other.type_;
       folders_ = other.folders_.Clone();
+      displayName_ = other.displayName_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -208,6 +210,21 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return folders_; }
     }
 
+    /// <summary>Field number for the "display_name" field.</summary>
+    public const int DisplayNameFieldNumber = 8;
+    private string displayName_ = "";
+    /// <summary>
+    /// The human readable name of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string DisplayName {
+      get { return displayName_; }
+      set {
+        displayName_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -230,6 +247,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (ParentDisplayName != other.ParentDisplayName) return false;
       if (Type != other.Type) return false;
       if(!folders_.Equals(other.folders_)) return false;
+      if (DisplayName != other.DisplayName) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -244,6 +262,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (ParentDisplayName.Length != 0) hash ^= ParentDisplayName.GetHashCode();
       if (Type.Length != 0) hash ^= Type.GetHashCode();
       hash ^= folders_.GetHashCode();
+      if (DisplayName.Length != 0) hash ^= DisplayName.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -287,6 +306,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(Type);
       }
       folders_.WriteTo(output, _repeated_folders_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -322,6 +345,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteString(Type);
       }
       folders_.WriteTo(ref output, _repeated_folders_codec);
+      if (DisplayName.Length != 0) {
+        output.WriteRawTag(66);
+        output.WriteString(DisplayName);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -351,6 +378,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Type);
       }
       size += folders_.CalculateSize(_repeated_folders_codec);
+      if (DisplayName.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(DisplayName);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -382,6 +412,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         Type = other.Type;
       }
       folders_.Add(other.folders_);
+      if (other.DisplayName.Length != 0) {
+        DisplayName = other.DisplayName;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -425,6 +458,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             folders_.AddEntriesFrom(input, _repeated_folders_codec);
             break;
           }
+          case 66: {
+            DisplayName = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -466,6 +503,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 58: {
             folders_.AddEntriesFrom(ref input, _repeated_folders_codec);
+            break;
+          }
+          case 66: {
+            DisplayName = input.ReadString();
             break;
           }
         }
