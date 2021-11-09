@@ -3,7 +3,7 @@
 //     source: google/cloud/redis/v1beta1/cloud_redis.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
   /// * As such, Redis instances are resources of the form:
   ///   `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
   ///
-  /// Note that location_id must be refering to a GCP `region`; for example:
+  /// Note that location_id must be referring to a GCP `region`; for example:
   /// * `projects/redpepper-1290/locations/us-central1/instances/my-redis`
   /// </summary>
   public static partial class CloudRedis
@@ -224,7 +224,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       ///
       /// The creation is executed asynchronously and callers may check the returned
       /// operation to track its progress. Once the operation is completed the Redis
-      /// instance will be fully functional. Completed longrunning.Operation will
+      /// instance will be fully functional. The completed longrunning.Operation will
       /// contain the new instance object in the response field.
       ///
       /// The returned operation is automatically deleted after a few hours, so there
@@ -305,7 +305,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
 
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -495,7 +495,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       ///
       /// The creation is executed asynchronously and callers may check the returned
       /// operation to track its progress. Once the operation is completed the Redis
-      /// instance will be fully functional. Completed longrunning.Operation will
+      /// instance will be fully functional. The completed longrunning.Operation will
       /// contain the new instance object in the response field.
       ///
       /// The returned operation is automatically deleted after a few hours, so there
@@ -519,7 +519,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       ///
       /// The creation is executed asynchronously and callers may check the returned
       /// operation to track its progress. Once the operation is completed the Redis
-      /// instance will be fully functional. Completed longrunning.Operation will
+      /// instance will be fully functional. The completed longrunning.Operation will
       /// contain the new instance object in the response field.
       ///
       /// The returned operation is automatically deleted after a few hours, so there
@@ -541,7 +541,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       ///
       /// The creation is executed asynchronously and callers may check the returned
       /// operation to track its progress. Once the operation is completed the Redis
-      /// instance will be fully functional. Completed longrunning.Operation will
+      /// instance will be fully functional. The completed longrunning.Operation will
       /// contain the new instance object in the response field.
       ///
       /// The returned operation is automatically deleted after a few hours, so there
@@ -565,7 +565,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       ///
       /// The creation is executed asynchronously and callers may check the returned
       /// operation to track its progress. Once the operation is completed the Redis
-      /// instance will be fully functional. Completed longrunning.Operation will
+      /// instance will be fully functional. The completed longrunning.Operation will
       /// contain the new instance object in the response field.
       ///
       /// The returned operation is automatically deleted after a few hours, so there
@@ -840,7 +840,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return CallInvoker.AsyncUnaryCall(__Method_ExportInstance, null, options, request);
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -854,7 +854,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return FailoverInstance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -866,7 +866,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return CallInvoker.BlockingUnaryCall(__Method_FailoverInstance, null, options, request);
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -880,7 +880,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         return FailoverInstanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Initiates a failover of the master node to current replica node for a
+      /// Initiates a failover of the primary node to current replica node for a
       /// specific STANDARD tier Cloud Memorystore for Redis instance.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
