@@ -1172,6 +1172,7 @@ namespace Google.Cloud.Redis.V1
         /// *   `labels`
         /// *   `memorySizeGb`
         /// *   `redisConfig`
+        /// *   `replica_count`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1202,6 +1203,7 @@ namespace Google.Cloud.Redis.V1
         /// *   `labels`
         /// *   `memorySizeGb`
         /// *   `redisConfig`
+        /// *   `replica_count`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1232,6 +1234,7 @@ namespace Google.Cloud.Redis.V1
         /// *   `labels`
         /// *   `memorySizeGb`
         /// *   `redisConfig`
+        /// *   `replica_count`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1707,7 +1710,7 @@ namespace Google.Cloud.Redis.V1
             ExportInstanceAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1717,7 +1720,7 @@ namespace Google.Cloud.Redis.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1727,7 +1730,7 @@ namespace Google.Cloud.Redis.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1763,7 +1766,7 @@ namespace Google.Cloud.Redis.V1
             lro::Operation<Instance, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), FailoverInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1785,7 +1788,7 @@ namespace Google.Cloud.Redis.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1807,7 +1810,7 @@ namespace Google.Cloud.Redis.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1825,7 +1828,7 @@ namespace Google.Cloud.Redis.V1
             FailoverInstanceAsync(name, dataProtectionMode, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1847,7 +1850,7 @@ namespace Google.Cloud.Redis.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1869,7 +1872,7 @@ namespace Google.Cloud.Redis.V1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -2426,7 +2429,7 @@ namespace Google.Cloud.Redis.V1
         public override lro::OperationsClient FailoverInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2439,7 +2442,7 @@ namespace Google.Cloud.Redis.V1
         }
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
