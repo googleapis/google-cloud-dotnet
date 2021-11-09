@@ -385,7 +385,7 @@ namespace Google.Cloud.Redis.V1Beta1
     /// * As such, Redis instances are resources of the form:
     /// `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
     /// 
-    /// Note that location_id must be refering to a GCP `region`; for example:
+    /// Note that location_id must be referring to a GCP `region`; for example:
     /// * `projects/redpepper-1290/locations/us-central1/instances/my-redis`
     /// </remarks>
     public abstract partial class CloudRedisClient
@@ -771,7 +771,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -791,7 +791,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -811,7 +811,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -857,7 +857,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -899,7 +899,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -941,7 +941,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -978,7 +978,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -1020,7 +1020,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -1062,7 +1062,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -1172,6 +1172,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// *   `labels`
         /// *   `memorySizeGb`
         /// *   `redisConfig`
+        /// *   `replica_count`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1202,6 +1203,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// *   `labels`
         /// *   `memorySizeGb`
         /// *   `redisConfig`
+        /// *   `replica_count`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1232,6 +1234,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// *   `labels`
         /// *   `memorySizeGb`
         /// *   `redisConfig`
+        /// *   `replica_count`
         /// </param>
         /// <param name="instance">
         /// Required. Update description.
@@ -1707,7 +1710,7 @@ namespace Google.Cloud.Redis.V1Beta1
             ExportInstanceAsync(name, outputConfig, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1717,7 +1720,7 @@ namespace Google.Cloud.Redis.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1727,7 +1730,7 @@ namespace Google.Cloud.Redis.V1Beta1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1763,7 +1766,7 @@ namespace Google.Cloud.Redis.V1Beta1
             lro::Operation<Instance, wkt::Any>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), FailoverInstanceOperationsClient, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1785,7 +1788,7 @@ namespace Google.Cloud.Redis.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1807,7 +1810,7 @@ namespace Google.Cloud.Redis.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1825,7 +1828,7 @@ namespace Google.Cloud.Redis.V1Beta1
             FailoverInstanceAsync(name, dataProtectionMode, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1847,7 +1850,7 @@ namespace Google.Cloud.Redis.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -1869,7 +1872,7 @@ namespace Google.Cloud.Redis.V1Beta1
             }, callSettings);
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="name">
@@ -2054,7 +2057,7 @@ namespace Google.Cloud.Redis.V1Beta1
     /// * As such, Redis instances are resources of the form:
     /// `/projects/{project_id}/locations/{location_id}/instances/{instance_id}`
     /// 
-    /// Note that location_id must be refering to a GCP `region`; for example:
+    /// Note that location_id must be referring to a GCP `region`; for example:
     /// * `projects/redpepper-1290/locations/us-central1/instances/my-redis`
     /// </remarks>
     public sealed partial class CloudRedisClientImpl : CloudRedisClient
@@ -2242,7 +2245,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -2265,7 +2268,7 @@ namespace Google.Cloud.Redis.V1Beta1
         /// 
         /// The creation is executed asynchronously and callers may check the returned
         /// operation to track its progress. Once the operation is completed the Redis
-        /// instance will be fully functional. Completed longrunning.Operation will
+        /// instance will be fully functional. The completed longrunning.Operation will
         /// contain the new instance object in the response field.
         /// 
         /// The returned operation is automatically deleted after a few hours, so there
@@ -2426,7 +2429,7 @@ namespace Google.Cloud.Redis.V1Beta1
         public override lro::OperationsClient FailoverInstanceOperationsClient { get; }
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2439,7 +2442,7 @@ namespace Google.Cloud.Redis.V1Beta1
         }
 
         /// <summary>
-        /// Initiates a failover of the master node to current replica node for a
+        /// Initiates a failover of the primary node to current replica node for a
         /// specific STANDARD tier Cloud Memorystore for Redis instance.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>

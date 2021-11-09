@@ -30,133 +30,142 @@ namespace Google.Cloud.Redis.V1Beta1 {
             "bGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291",
             "cmNlLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9ucy5wcm90",
             "bxogZ29vZ2xlL3Byb3RvYnVmL2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8ihAoKCEluc3RhbmNlEhEKBG5hbWUY",
-            "ASABKAlCA+BBAhIUCgxkaXNwbGF5X25hbWUYAiABKAkSQAoGbGFiZWxzGAMg",
-            "AygLMjAuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2UuTGFi",
-            "ZWxzRW50cnkSGAoLbG9jYXRpb25faWQYBCABKAlCA+BBARIkChdhbHRlcm5h",
-            "dGl2ZV9sb2NhdGlvbl9pZBgFIAEoCUID4EEBEhoKDXJlZGlzX3ZlcnNpb24Y",
-            "ByABKAlCA+BBARIeChFyZXNlcnZlZF9pcF9yYW5nZRgJIAEoCUID4EEBEhEK",
-            "BGhvc3QYCiABKAlCA+BBAxIRCgRwb3J0GAsgASgFQgPgQQMSIAoTY3VycmVu",
-            "dF9sb2NhdGlvbl9pZBgMIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGA0gASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj4KBXN0YXRlGA4g",
-            "ASgOMiouZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2UuU3Rh",
-            "dGVCA+BBAxIbCg5zdGF0dXNfbWVzc2FnZRgPIAEoCUID4EEDElIKDXJlZGlz",
-            "X2NvbmZpZ3MYECADKAsyNi5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5J",
-            "bnN0YW5jZS5SZWRpc0NvbmZpZ3NFbnRyeUID4EEBEjwKBHRpZXIYESABKA4y",
-            "KS5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZS5UaWVyQgPg",
-            "QQISGwoObWVtb3J5X3NpemVfZ2IYEiABKAVCA+BBAhIfChJhdXRob3JpemVk",
-            "X25ldHdvcmsYFCABKAlCA+BBARIlChhwZXJzaXN0ZW5jZV9pYW1faWRlbnRp",
-            "dHkYFSABKAlCA+BBAxJLCgxjb25uZWN0X21vZGUYFiABKA4yMC5nb29nbGUu",
-            "Y2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZS5Db25uZWN0TW9kZUID4EEB",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAEaMwoRUmVkaXNDb25maWdzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASKUAQoFU3RhdGUSFQoRU1RBVEVfVU5TUEVDSUZJRUQQABIM",
-            "CghDUkVBVElORxABEgkKBVJFQURZEAISDAoIVVBEQVRJTkcQAxIMCghERUxF",
-            "VElORxAEEg0KCVJFUEFJUklORxAFEg8KC01BSU5URU5BTkNFEAYSDQoJSU1Q",
-            "T1JUSU5HEAgSEAoMRkFJTElOR19PVkVSEAoiOAoEVGllchIUChBUSUVSX1VO",
-            "U1BFQ0lGSUVEEAASCQoFQkFTSUMQARIPCgtTVEFOREFSRF9IQRADIlsKC0Nv",
-            "bm5lY3RNb2RlEhwKGENPTk5FQ1RfTU9ERV9VTlNQRUNJRklFRBAAEhIKDkRJ",
-            "UkVDVF9QRUVSSU5HEAESGgoWUFJJVkFURV9TRVJWSUNFX0FDQ0VTUxACOmDq",
-            "QV0KHXJlZGlzLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEjxwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5zdGFuY2VzL3tpbnN0",
-            "YW5jZX0ieAoUTGlzdEluc3RhbmNlc1JlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
-            "QingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIR",
-            "CglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCSJ+ChVMaXN0",
-            "SW5zdGFuY2VzUmVzcG9uc2USNwoJaW5zdGFuY2VzGAEgAygLMiQuZ29vZ2xl",
-            "LmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2USFwoPbmV4dF9wYWdlX3Rv",
-            "a2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIkkKEkdldEluc3RhbmNl",
-            "UmVxdWVzdBIzCgRuYW1lGAEgASgJQiXgQQL6QR8KHXJlZGlzLmdvb2dsZWFw",
-            "aXMuY29tL0luc3RhbmNlIqkBChVDcmVhdGVJbnN0YW5jZVJlcXVlc3QSOQoG",
-            "cGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNv",
-            "bS9Mb2NhdGlvbhIYCgtpbnN0YW5jZV9pZBgCIAEoCUID4EECEjsKCGluc3Rh",
-            "bmNlGAMgASgLMiQuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFu",
-            "Y2VCA+BBAiKKAQoVVXBkYXRlSW5zdGFuY2VSZXF1ZXN0EjQKC3VwZGF0ZV9t",
-            "YXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EECEjsK",
-            "CGluc3RhbmNlGAIgASgLMiQuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEu",
-            "SW5zdGFuY2VCA+BBAiJpChZVcGdyYWRlSW5zdGFuY2VSZXF1ZXN0EjMKBG5h",
-            "bWUYASABKAlCJeBBAvpBHwodcmVkaXMuZ29vZ2xlYXBpcy5jb20vSW5zdGFu",
-            "Y2USGgoNcmVkaXNfdmVyc2lvbhgCIAEoCUID4EECIkwKFURlbGV0ZUluc3Rh",
-            "bmNlUmVxdWVzdBIzCgRuYW1lGAEgASgJQiXgQQL6QR8KHXJlZGlzLmdvb2ds",
-            "ZWFwaXMuY29tL0luc3RhbmNlIh0KCUdjc1NvdXJjZRIQCgN1cmkYASABKAlC",
-            "A+BBAiJUCgtJbnB1dENvbmZpZxI7CgpnY3Nfc291cmNlGAEgASgLMiUuZ29v",
-            "Z2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuR2NzU291cmNlSABCCAoGc291cmNl",
-            "Im4KFUltcG9ydEluc3RhbmNlUmVxdWVzdBIRCgRuYW1lGAEgASgJQgPgQQIS",
-            "QgoMaW5wdXRfY29uZmlnGAMgASgLMicuZ29vZ2xlLmNsb3VkLnJlZGlzLnYx",
-            "YmV0YTEuSW5wdXRDb25maWdCA+BBAiIiCg5HY3NEZXN0aW5hdGlvbhIQCgN1",
-            "cmkYASABKAlCA+BBAiJkCgxPdXRwdXRDb25maWcSRQoPZ2NzX2Rlc3RpbmF0",
-            "aW9uGAEgASgLMiouZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuR2NzRGVz",
-            "dGluYXRpb25IAEINCgtkZXN0aW5hdGlvbiJwChVFeHBvcnRJbnN0YW5jZVJl",
-            "cXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEkQKDW91dHB1dF9jb25maWcYAyAB",
-            "KAsyKC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5PdXRwdXRDb25maWdC",
-            "A+BBAiKhAgoXRmFpbG92ZXJJbnN0YW5jZVJlcXVlc3QSMwoEbmFtZRgBIAEo",
-            "CUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0YW5jZRJpChRk",
-            "YXRhX3Byb3RlY3Rpb25fbW9kZRgCIAEoDjJGLmdvb2dsZS5jbG91ZC5yZWRp",
-            "cy52MWJldGExLkZhaWxvdmVySW5zdGFuY2VSZXF1ZXN0LkRhdGFQcm90ZWN0",
-            "aW9uTW9kZUID4EEBImYKEkRhdGFQcm90ZWN0aW9uTW9kZRIkCiBEQVRBX1BS",
-            "T1RFQ1RJT05fTU9ERV9VTlNQRUNJRklFRBAAEhUKEUxJTUlURURfREFUQV9M",
-            "T1NTEAESEwoPRk9SQ0VfREFUQV9MT1NTEAIi0wEKEExvY2F0aW9uTWV0YWRh",
-            "dGESXgoPYXZhaWxhYmxlX3pvbmVzGAEgAygLMkAuZ29vZ2xlLmNsb3VkLnJl",
-            "ZGlzLnYxYmV0YTEuTG9jYXRpb25NZXRhZGF0YS5BdmFpbGFibGVab25lc0Vu",
-            "dHJ5QgPgQQMaXwoTQXZhaWxhYmxlWm9uZXNFbnRyeRILCgNrZXkYASABKAkS",
-            "NwoFdmFsdWUYAiABKAsyKC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5a",
-            "b25lTWV0YWRhdGE6AjgBIg4KDFpvbmVNZXRhZGF0YTKpEQoKQ2xvdWRSZWRp",
-            "cxK5AQoNTGlzdEluc3RhbmNlcxIwLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJl",
-            "dGExLkxpc3RJbnN0YW5jZXNSZXF1ZXN0GjEuZ29vZ2xlLmNsb3VkLnJlZGlz",
-            "LnYxYmV0YTEuTGlzdEluc3RhbmNlc1Jlc3BvbnNlIkOC0+STAjQSMi92MWJl",
-            "dGExL3twYXJlbnQ9cHJvamVjdHMvKi9sb2NhdGlvbnMvKn0vaW5zdGFuY2Vz",
-            "2kEGcGFyZW50EqYBCgtHZXRJbnN0YW5jZRIuLmdvb2dsZS5jbG91ZC5yZWRp",
-            "cy52MWJldGExLkdldEluc3RhbmNlUmVxdWVzdBokLmdvb2dsZS5jbG91ZC5y",
-            "ZWRpcy52MWJldGExLkluc3RhbmNlIkGC0+STAjQSMi92MWJldGExL3tuYW1l",
-            "PXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp92kEEbmFtZRKE",
-            "AgoOQ3JlYXRlSW5zdGFuY2USMS5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRh",
-            "MS5DcmVhdGVJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcu",
-            "T3BlcmF0aW9uIp8BgtPkkwI+IjIvdjFiZXRhMS97cGFyZW50PXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyp9L2luc3RhbmNlczoIaW5zdGFuY2XaQRtwYXJlbnQs",
-            "aW5zdGFuY2VfaWQsaW5zdGFuY2XKQToKI2dvb2dsZS5jbG91ZC5yZWRpcy52",
-            "MWJldGExLkluc3RhbmNlEhNnb29nbGUucHJvdG9idWYuQW55EoYCCg5VcGRh",
-            "dGVJbnN0YW5jZRIxLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLlVwZGF0",
-            "ZUluc3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRp",
-            "b24ioQGC0+STAkcyOy92MWJldGExL3tpbnN0YW5jZS5uYW1lPXByb2plY3Rz",
-            "LyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9OghpbnN0YW5jZdpBFHVwZGF0",
-            "ZV9tYXNrLGluc3RhbmNlykE6CiNnb29nbGUuY2xvdWQucmVkaXMudjFiZXRh",
-            "MS5JbnN0YW5jZRITZ29vZ2xlLnByb3RvYnVmLkFueRL+AQoPVXBncmFkZUlu",
-            "c3RhbmNlEjIuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuVXBncmFkZUlu",
-            "c3RhbmNlUmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24i",
-            "lwGC0+STAj8iOi92MWJldGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
-            "LyovaW5zdGFuY2VzLyp9OnVwZ3JhZGU6ASraQRJuYW1lLHJlZGlzX3ZlcnNp",
-            "b27KQToKI2dvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlEhNn",
-            "b29nbGUucHJvdG9idWYuQW55EvoBCg5JbXBvcnRJbnN0YW5jZRIxLmdvb2ds",
-            "ZS5jbG91ZC5yZWRpcy52MWJldGExLkltcG9ydEluc3RhbmNlUmVxdWVzdBod",
-            "Lmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24ilQGC0+STAj4iOS92MWJl",
-            "dGExL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp9",
-            "OmltcG9ydDoBKtpBEW5hbWUsaW5wdXRfY29uZmlnykE6CiNnb29nbGUuY2xv",
-            "dWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZRITZ29vZ2xlLnByb3RvYnVmLkFu",
-            "eRL7AQoORXhwb3J0SW5zdGFuY2USMS5nb29nbGUuY2xvdWQucmVkaXMudjFi",
-            "ZXRhMS5FeHBvcnRJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5p",
-            "bmcuT3BlcmF0aW9uIpYBgtPkkwI+IjkvdjFiZXRhMS97bmFtZT1wcm9qZWN0",
-            "cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTpleHBvcnQ6ASraQRJuYW1l",
-            "LG91dHB1dF9jb25maWfKQToKI2dvb2dsZS5jbG91ZC5yZWRpcy52MWJldGEx",
-            "Lkluc3RhbmNlEhNnb29nbGUucHJvdG9idWYuQW55EogCChBGYWlsb3Zlcklu",
-            "c3RhbmNlEjMuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuRmFpbG92ZXJJ",
-            "bnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9u",
-            "Ip8BgtPkkwJAIjsvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2luc3RhbmNlcy8qfTpmYWlsb3ZlcjoBKtpBGW5hbWUsZGF0YV9wcm90",
-            "ZWN0aW9uX21vZGXKQToKI2dvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLklu",
-            "c3RhbmNlEhNnb29nbGUucHJvdG9idWYuQW55EtQBCg5EZWxldGVJbnN0YW5j",
-            "ZRIxLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkRlbGV0ZUluc3RhbmNl",
-            "UmVxdWVzdBodLmdvb2dsZS5sb25ncnVubmluZy5PcGVyYXRpb24icILT5JMC",
-            "NCoyL3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0",
-            "YW5jZXMvKn3aQQRuYW1lykEsChVnb29nbGUucHJvdG9idWYuRW1wdHkSE2dv",
-            "b2dsZS5wcm90b2J1Zi5BbnkaSMpBFHJlZGlzLmdvb2dsZWFwaXMuY29t0kEu",
-            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9y",
-            "bUJ/Ch5jb20uZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTFCGkNsb3VkUmVk",
-            "aXNTZXJ2aWNlQmV0YVByb3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvcmVkaXMvdjFiZXRhMTtyZWRpc2IGcHJv",
-            "dG8z"));
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8iLgoITm9kZUluZm8SDwoCaWQYASAB",
+            "KAlCA+BBAxIRCgR6b25lGAIgASgJQgPgQQMi3gwKCEluc3RhbmNlEhEKBG5h",
+            "bWUYASABKAlCA+BBAhIUCgxkaXNwbGF5X25hbWUYAiABKAkSQAoGbGFiZWxz",
+            "GAMgAygLMjAuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2Uu",
+            "TGFiZWxzRW50cnkSGAoLbG9jYXRpb25faWQYBCABKAlCA+BBARIkChdhbHRl",
+            "cm5hdGl2ZV9sb2NhdGlvbl9pZBgFIAEoCUID4EEBEhoKDXJlZGlzX3ZlcnNp",
+            "b24YByABKAlCA+BBARIeChFyZXNlcnZlZF9pcF9yYW5nZRgJIAEoCUID4EEB",
+            "EhEKBGhvc3QYCiABKAlCA+BBAxIRCgRwb3J0GAsgASgFQgPgQQMSIAoTY3Vy",
+            "cmVudF9sb2NhdGlvbl9pZBgMIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGA0g",
+            "ASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEj4KBXN0YXRl",
+            "GA4gASgOMiouZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2Uu",
+            "U3RhdGVCA+BBAxIbCg5zdGF0dXNfbWVzc2FnZRgPIAEoCUID4EEDElIKDXJl",
+            "ZGlzX2NvbmZpZ3MYECADKAsyNi5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRh",
+            "MS5JbnN0YW5jZS5SZWRpc0NvbmZpZ3NFbnRyeUID4EEBEjwKBHRpZXIYESAB",
+            "KA4yKS5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZS5UaWVy",
+            "QgPgQQISGwoObWVtb3J5X3NpemVfZ2IYEiABKAVCA+BBAhIfChJhdXRob3Jp",
+            "emVkX25ldHdvcmsYFCABKAlCA+BBARIlChhwZXJzaXN0ZW5jZV9pYW1faWRl",
+            "bnRpdHkYFSABKAlCA+BBAxJLCgxjb25uZWN0X21vZGUYFiABKA4yMC5nb29n",
+            "bGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZS5Db25uZWN0TW9kZUID",
+            "4EEBEhoKDXJlcGxpY2FfY291bnQYHyABKAVCA+BBARI4CgVub2RlcxggIAMo",
+            "CzIkLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLk5vZGVJbmZvQgPgQQMS",
+            "GgoNcmVhZF9lbmRwb2ludBghIAEoCUID4EEDEh8KEnJlYWRfZW5kcG9pbnRf",
+            "cG9ydBgiIAEoBUID4EEDElYKEnJlYWRfcmVwbGljYXNfbW9kZRgjIAEoDjI1",
+            "Lmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlLlJlYWRSZXBs",
+            "aWNhc01vZGVCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
+            "dmFsdWUYAiABKAk6AjgBGjMKEVJlZGlzQ29uZmlnc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAEilAEKBVN0YXRlEhUKEVNUQVRFX1VO",
+            "U1BFQ0lGSUVEEAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCFVQREFU",
+            "SU5HEAMSDAoIREVMRVRJTkcQBBINCglSRVBBSVJJTkcQBRIPCgtNQUlOVEVO",
+            "QU5DRRAGEg0KCUlNUE9SVElORxAIEhAKDEZBSUxJTkdfT1ZFUhAKIjgKBFRp",
+            "ZXISFAoQVElFUl9VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESDwoLU1RBTkRB",
+            "UkRfSEEQAyJbCgtDb25uZWN0TW9kZRIcChhDT05ORUNUX01PREVfVU5TUEVD",
+            "SUZJRUQQABISCg5ESVJFQ1RfUEVFUklORxABEhoKFlBSSVZBVEVfU0VSVklD",
+            "RV9BQ0NFU1MQAiJtChBSZWFkUmVwbGljYXNNb2RlEiIKHlJFQURfUkVQTElD",
+            "QVNfTU9ERV9VTlNQRUNJRklFRBAAEhoKFlJFQURfUkVQTElDQVNfRElTQUJM",
+            "RUQQARIZChVSRUFEX1JFUExJQ0FTX0VOQUJMRUQQAjpg6kFdCh1yZWRpcy5n",
+            "b29nbGVhcGlzLmNvbS9JbnN0YW5jZRI8cHJvamVjdHMve3Byb2plY3R9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L2luc3RhbmNlcy97aW5zdGFuY2V9IngKFExp",
+            "c3RJbnN0YW5jZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFs",
+            "b2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXpl",
+            "GAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkifgoVTGlzdEluc3RhbmNlc1Jl",
+            "c3BvbnNlEjcKCWluc3RhbmNlcxgBIAMoCzIkLmdvb2dsZS5jbG91ZC5yZWRp",
+            "cy52MWJldGExLkluc3RhbmNlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIT",
+            "Cgt1bnJlYWNoYWJsZRgDIAMoCSJJChJHZXRJbnN0YW5jZVJlcXVlc3QSMwoE",
+            "bmFtZRgBIAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9JbnN0",
+            "YW5jZSKpAQoVQ3JlYXRlSW5zdGFuY2VSZXF1ZXN0EjkKBnBhcmVudBgBIAEo",
+            "CUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24S",
+            "GAoLaW5zdGFuY2VfaWQYAiABKAlCA+BBAhI7CghpbnN0YW5jZRgDIAEoCzIk",
+            "Lmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlQgPgQQIiigEK",
+            "FVVwZGF0ZUluc3RhbmNlUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIa",
+            "Lmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBAhI7CghpbnN0YW5jZRgC",
+            "IAEoCzIkLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkluc3RhbmNlQgPg",
+            "QQIiaQoWVXBncmFkZUluc3RhbmNlUmVxdWVzdBIzCgRuYW1lGAEgASgJQiXg",
+            "QQL6QR8KHXJlZGlzLmdvb2dsZWFwaXMuY29tL0luc3RhbmNlEhoKDXJlZGlz",
+            "X3ZlcnNpb24YAiABKAlCA+BBAiJMChVEZWxldGVJbnN0YW5jZVJlcXVlc3QS",
+            "MwoEbmFtZRgBIAEoCUIl4EEC+kEfCh1yZWRpcy5nb29nbGVhcGlzLmNvbS9J",
+            "bnN0YW5jZSIdCglHY3NTb3VyY2USEAoDdXJpGAEgASgJQgPgQQIiVAoLSW5w",
+            "dXRDb25maWcSOwoKZ2NzX3NvdXJjZRgBIAEoCzIlLmdvb2dsZS5jbG91ZC5y",
+            "ZWRpcy52MWJldGExLkdjc1NvdXJjZUgAQggKBnNvdXJjZSJuChVJbXBvcnRJ",
+            "bnN0YW5jZVJlcXVlc3QSEQoEbmFtZRgBIAEoCUID4EECEkIKDGlucHV0X2Nv",
+            "bmZpZxgDIAEoCzInLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLklucHV0",
+            "Q29uZmlnQgPgQQIiIgoOR2NzRGVzdGluYXRpb24SEAoDdXJpGAEgASgJQgPg",
+            "QQIiZAoMT3V0cHV0Q29uZmlnEkUKD2djc19kZXN0aW5hdGlvbhgBIAEoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkdjc0Rlc3RpbmF0aW9uSABC",
+            "DQoLZGVzdGluYXRpb24icAoVRXhwb3J0SW5zdGFuY2VSZXF1ZXN0EhEKBG5h",
+            "bWUYASABKAlCA+BBAhJECg1vdXRwdXRfY29uZmlnGAMgASgLMiguZ29vZ2xl",
+            "LmNsb3VkLnJlZGlzLnYxYmV0YTEuT3V0cHV0Q29uZmlnQgPgQQIioQIKF0Zh",
+            "aWxvdmVySW5zdGFuY2VSZXF1ZXN0EjMKBG5hbWUYASABKAlCJeBBAvpBHwod",
+            "cmVkaXMuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USaQoUZGF0YV9wcm90ZWN0",
+            "aW9uX21vZGUYAiABKA4yRi5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5G",
+            "YWlsb3Zlckluc3RhbmNlUmVxdWVzdC5EYXRhUHJvdGVjdGlvbk1vZGVCA+BB",
+            "ASJmChJEYXRhUHJvdGVjdGlvbk1vZGUSJAogREFUQV9QUk9URUNUSU9OX01P",
+            "REVfVU5TUEVDSUZJRUQQABIVChFMSU1JVEVEX0RBVEFfTE9TUxABEhMKD0ZP",
+            "UkNFX0RBVEFfTE9TUxACItMBChBMb2NhdGlvbk1ldGFkYXRhEl4KD2F2YWls",
+            "YWJsZV96b25lcxgBIAMoCzJALmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGEx",
+            "LkxvY2F0aW9uTWV0YWRhdGEuQXZhaWxhYmxlWm9uZXNFbnRyeUID4EEDGl8K",
+            "E0F2YWlsYWJsZVpvbmVzRW50cnkSCwoDa2V5GAEgASgJEjcKBXZhbHVlGAIg",
+            "ASgLMiguZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuWm9uZU1ldGFkYXRh",
+            "OgI4ASIOCgxab25lTWV0YWRhdGEyqREKCkNsb3VkUmVkaXMSuQEKDUxpc3RJ",
+            "bnN0YW5jZXMSMC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5MaXN0SW5z",
+            "dGFuY2VzUmVxdWVzdBoxLmdvb2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkxp",
+            "c3RJbnN0YW5jZXNSZXNwb25zZSJDgtPkkwI0EjIvdjFiZXRhMS97cGFyZW50",
+            "PXByb2plY3RzLyovbG9jYXRpb25zLyp9L2luc3RhbmNlc9pBBnBhcmVudBKm",
+            "AQoLR2V0SW5zdGFuY2USLi5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5H",
+            "ZXRJbnN0YW5jZVJlcXVlc3QaJC5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRh",
+            "MS5JbnN0YW5jZSJBgtPkkwI0EjIvdjFiZXRhMS97bmFtZT1wcm9qZWN0cy8q",
+            "L2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfdpBBG5hbWUShAIKDkNyZWF0ZUlu",
+            "c3RhbmNlEjEuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuQ3JlYXRlSW5z",
+            "dGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKf",
+            "AYLT5JMCPiIyL3YxYmV0YTEve3BhcmVudD1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qfS9pbnN0YW5jZXM6CGluc3RhbmNl2kEbcGFyZW50LGluc3RhbmNlX2lk",
+            "LGluc3RhbmNlykE6CiNnb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0",
+            "YW5jZRITZ29vZ2xlLnByb3RvYnVmLkFueRKGAgoOVXBkYXRlSW5zdGFuY2US",
+            "MS5nb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5VcGRhdGVJbnN0YW5jZVJl",
+            "cXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIqEBgtPkkwJH",
+            "MjsvdjFiZXRhMS97aW5zdGFuY2UubmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2luc3RhbmNlcy8qfToIaW5zdGFuY2XaQRR1cGRhdGVfbWFzayxpbnN0",
+            "YW5jZcpBOgojZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuSW5zdGFuY2US",
+            "E2dvb2dsZS5wcm90b2J1Zi5BbnkS/gEKD1VwZ3JhZGVJbnN0YW5jZRIyLmdv",
+            "b2dsZS5jbG91ZC5yZWRpcy52MWJldGExLlVwZ3JhZGVJbnN0YW5jZVJlcXVl",
+            "c3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uIpcBgtPkkwI/Ijov",
+            "djFiZXRhMS97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNl",
+            "cy8qfTp1cGdyYWRlOgEq2kESbmFtZSxyZWRpc192ZXJzaW9uykE6CiNnb29n",
+            "bGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZRITZ29vZ2xlLnByb3Rv",
+            "YnVmLkFueRL6AQoOSW1wb3J0SW5zdGFuY2USMS5nb29nbGUuY2xvdWQucmVk",
+            "aXMudjFiZXRhMS5JbXBvcnRJbnN0YW5jZVJlcXVlc3QaHS5nb29nbGUubG9u",
+            "Z3J1bm5pbmcuT3BlcmF0aW9uIpUBgtPkkwI+IjkvdjFiZXRhMS97bmFtZT1w",
+            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qL2luc3RhbmNlcy8qfTppbXBvcnQ6ASra",
+            "QRFuYW1lLGlucHV0X2NvbmZpZ8pBOgojZ29vZ2xlLmNsb3VkLnJlZGlzLnYx",
+            "YmV0YTEuSW5zdGFuY2USE2dvb2dsZS5wcm90b2J1Zi5BbnkS+wEKDkV4cG9y",
+            "dEluc3RhbmNlEjEuZ29vZ2xlLmNsb3VkLnJlZGlzLnYxYmV0YTEuRXhwb3J0",
+            "SW5zdGFuY2VSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
+            "biKWAYLT5JMCPiI5L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
+            "bnMvKi9pbnN0YW5jZXMvKn06ZXhwb3J0OgEq2kESbmFtZSxvdXRwdXRfY29u",
+            "ZmlnykE6CiNnb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZRIT",
+            "Z29vZ2xlLnByb3RvYnVmLkFueRKIAgoQRmFpbG92ZXJJbnN0YW5jZRIzLmdv",
+            "b2dsZS5jbG91ZC5yZWRpcy52MWJldGExLkZhaWxvdmVySW5zdGFuY2VSZXF1",
+            "ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlvbiKfAYLT5JMCQCI7",
+            "L3YxYmV0YTEve25hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9pbnN0YW5j",
+            "ZXMvKn06ZmFpbG92ZXI6ASraQRluYW1lLGRhdGFfcHJvdGVjdGlvbl9tb2Rl",
+            "ykE6CiNnb29nbGUuY2xvdWQucmVkaXMudjFiZXRhMS5JbnN0YW5jZRITZ29v",
+            "Z2xlLnByb3RvYnVmLkFueRLUAQoORGVsZXRlSW5zdGFuY2USMS5nb29nbGUu",
+            "Y2xvdWQucmVkaXMudjFiZXRhMS5EZWxldGVJbnN0YW5jZVJlcXVlc3QaHS5n",
+            "b29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0aW9uInCC0+STAjQqMi92MWJldGEx",
+            "L3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovaW5zdGFuY2VzLyp92kEE",
+            "bmFtZcpBLAoVZ29vZ2xlLnByb3RvYnVmLkVtcHR5EhNnb29nbGUucHJvdG9i",
+            "dWYuQW55GkjKQRRyZWRpcy5nb29nbGVhcGlzLmNvbdJBLmh0dHBzOi8vd3d3",
+            "Lmdvb2dsZWFwaXMuY29tL2F1dGgvY2xvdWQtcGxhdGZvcm1CfwoeY29tLmdv",
+            "b2dsZS5jbG91ZC5yZWRpcy52MWJldGExQhpDbG91ZFJlZGlzU2VydmljZUJl",
+            "dGFQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2Nsb3VkL3JlZGlzL3YxYmV0YTE7cmVkaXNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.Instance), global::Google.Cloud.Redis.V1Beta1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity", "ConnectMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.NodeInfo), global::Google.Cloud.Redis.V1Beta1.NodeInfo.Parser, new[]{ "Id", "Zone" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.Instance), global::Google.Cloud.Redis.V1Beta1.Instance.Parser, new[]{ "Name", "DisplayName", "Labels", "LocationId", "AlternativeLocationId", "RedisVersion", "ReservedIpRange", "Host", "Port", "CurrentLocationId", "CreateTime", "State", "StatusMessage", "RedisConfigs", "Tier", "MemorySizeGb", "AuthorizedNetwork", "PersistenceIamIdentity", "ConnectMode", "ReplicaCount", "Nodes", "ReadEndpoint", "ReadEndpointPort", "ReadReplicasMode" }, null, new[]{ typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.State), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.Tier), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode), typeof(global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest), global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse), global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse.Parser, new[]{ "Instances", "NextPageToken", "Unreachable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest), global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest.Parser, new[]{ "Name" }, null, null, null, null),
@@ -180,6 +189,241 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
   #region Messages
   /// <summary>
+  /// Node specific properties.
+  /// </summary>
+  public sealed partial class NodeInfo : pb::IMessage<NodeInfo>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<NodeInfo> _parser = new pb::MessageParser<NodeInfo>(() => new NodeInfo());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<NodeInfo> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[0]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeInfo() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeInfo(NodeInfo other) : this() {
+      id_ = other.id_;
+      zone_ = other.zone_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public NodeInfo Clone() {
+      return new NodeInfo(this);
+    }
+
+    /// <summary>Field number for the "id" field.</summary>
+    public const int IdFieldNumber = 1;
+    private string id_ = "";
+    /// <summary>
+    /// Output only. Node identifying string. e.g. 'node-0', 'node-1'
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Id {
+      get { return id_; }
+      set {
+        id_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "zone" field.</summary>
+    public const int ZoneFieldNumber = 2;
+    private string zone_ = "";
+    /// <summary>
+    /// Output only. Location of the node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Zone {
+      get { return zone_; }
+      set {
+        zone_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as NodeInfo);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(NodeInfo other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Id != other.Id) return false;
+      if (Zone != other.Zone) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Id.Length != 0) hash ^= Id.GetHashCode();
+      if (Zone.Length != 0) hash ^= Zone.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Zone.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Zone);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Zone.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Zone);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Id.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Id);
+      }
+      if (Zone.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Zone);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(NodeInfo other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Id.Length != 0) {
+        Id = other.Id;
+      }
+      if (other.Zone.Length != 0) {
+        Zone = other.Zone;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Zone = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Zone = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A Google Cloud Redis instance.
   /// </summary>
   public sealed partial class Instance : pb::IMessage<Instance>
@@ -196,7 +440,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[0]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -235,6 +479,11 @@ namespace Google.Cloud.Redis.V1Beta1 {
       authorizedNetwork_ = other.authorizedNetwork_;
       persistenceIamIdentity_ = other.persistenceIamIdentity_;
       connectMode_ = other.connectMode_;
+      replicaCount_ = other.replicaCount_;
+      nodes_ = other.nodes_.Clone();
+      readEndpoint_ = other.readEndpoint_;
+      readEndpointPort_ = other.readEndpointPort_;
+      readReplicasMode_ = other.readReplicasMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -255,8 +504,10 @@ namespace Google.Cloud.Redis.V1Beta1 {
     /// Note: Redis instances are managed and addressed at regional level so
     /// location_id here refers to a GCP region; however, users may choose which
     /// specific zone (or collection of zones for cross-zone instances) an instance
-    /// should be provisioned in. Refer to [location_id][google.cloud.redis.v1beta1.Instance.location_id] and
-    /// [alternative_location_id][google.cloud.redis.v1beta1.Instance.alternative_location_id] fields for more details.
+    /// should be provisioned in. Refer to
+    /// [location_id][google.cloud.redis.v1beta1.Instance.location_id] and
+    /// [alternative_location_id][google.cloud.redis.v1beta1.Instance.alternative_location_id]
+    /// fields for more details.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -301,10 +552,10 @@ namespace Google.Cloud.Redis.V1Beta1 {
     private string locationId_ = "";
     /// <summary>
     /// Optional. The zone where the instance will be provisioned. If not provided,
-    /// the service will choose a zone for the instance. For STANDARD_HA tier,
-    /// instances will be created across two zones for protection against zonal
-    /// failures. If [alternative_location_id][google.cloud.redis.v1beta1.Instance.alternative_location_id] is also provided, it must be
-    /// different from [location_id][google.cloud.redis.v1beta1.Instance.location_id].
+    /// the service will choose a zone from the specified region for the instance.
+    /// For standard tier, additional nodes will be added across multiple zones for
+    /// protection against zonal failures. If specified, at least one node will be
+    /// provisioned in this zone.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -319,9 +570,11 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int AlternativeLocationIdFieldNumber = 5;
     private string alternativeLocationId_ = "";
     /// <summary>
-    /// Optional. Only applicable to STANDARD_HA tier which protects the instance
-    /// against zonal failures by provisioning it across two zones. If provided, it
-    /// must be a different zone from the one provided in [location_id][google.cloud.redis.v1beta1.Instance.location_id].
+    /// Optional. If specified, at least one node will be provisioned in this zone
+    /// in addition to the zone specified in location_id. Only applicable to
+    /// standard tier. If provided, it must be a different zone from the one
+    /// provided in [location_id]. Additional nodes beyond the first 2 will be
+    /// placed in zones selected by the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -343,6 +596,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     ///  *   `REDIS_3_2` for Redis 3.2 compatibility
     ///  *   `REDIS_4_0` for Redis 4.0 compatibility (default)
     ///  *   `REDIS_5_0` for Redis 5.0 compatibility
+    ///  *   `REDIS_6_X` for Redis 6.x compatibility
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -357,10 +611,14 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int ReservedIpRangeFieldNumber = 9;
     private string reservedIpRange_ = "";
     /// <summary>
-    /// Optional. The CIDR range of internal addresses that are reserved for this
-    /// instance. If not provided, the service will choose an unused /29 block,
-    /// for example, 10.0.0.0/29 or 192.168.0.0/29. Ranges must be unique
-    /// and non-overlapping with existing subnets in an authorized network.
+    /// Optional. For DIRECT_PEERING mode, the CIDR range of internal addresses
+    /// that are reserved for this instance. Range must
+    /// be unique and non-overlapping with existing subnets in an authorized
+    /// network. For PRIVATE_SERVICE_ACCESS mode, the name of one allocated IP
+    /// address ranges associated with this private service access connection.
+    /// If not provided, the service will choose an unused /29 block, for
+    /// example, 10.0.0.0/29 or 192.168.0.0/29. For READ_REPLICAS_ENABLED
+    /// the default block size is /28.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -376,7 +634,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     private string host_ = "";
     /// <summary>
     /// Output only. Hostname or IP address of the exposed Redis endpoint used by
-    /// clients to connect to the service.
+    ///  clients to connect to the service.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -406,11 +664,9 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int CurrentLocationIdFieldNumber = 12;
     private string currentLocationId_ = "";
     /// <summary>
-    /// Output only. The current zone where the Redis endpoint is placed. For Basic
-    /// Tier instances, this will always be the same as the [location_id][google.cloud.redis.v1beta1.Instance.location_id]
-    /// provided by the user at creation time. For Standard Tier instances,
-    /// this can be either [location_id][google.cloud.redis.v1beta1.Instance.location_id] or [alternative_location_id][google.cloud.redis.v1beta1.Instance.alternative_location_id] and can
-    /// change after a failover event.
+    /// Output only. The current zone where the Redis primary node is located. In
+    /// basic tier, this will always be the same as [location_id]. In
+    /// standard tier, this can be the zone of any node in the instance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -571,9 +827,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
     public const int ConnectModeFieldNumber = 22;
     private global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode connectMode_ = global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified;
     /// <summary>
-    /// Optional. The connect mode of Redis instance.
-    /// If not provided, default one will be used.
-    /// Current default: DIRECT_PEERING.
+    /// Optional. The network connect mode of the Redis instance.
+    /// If not provided, the connect mode defaults to DIRECT_PEERING.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -581,6 +836,86 @@ namespace Google.Cloud.Redis.V1Beta1 {
       get { return connectMode_; }
       set {
         connectMode_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "replica_count" field.</summary>
+    public const int ReplicaCountFieldNumber = 31;
+    private int replicaCount_;
+    /// <summary>
+    /// Optional. The number of replica nodes. Valid range for standard tier
+    /// is [1-5] and defaults to 1. Valid value for basic tier is 0 and defaults
+    /// to 0.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ReplicaCount {
+      get { return replicaCount_; }
+      set {
+        replicaCount_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "nodes" field.</summary>
+    public const int NodesFieldNumber = 32;
+    private static readonly pb::FieldCodec<global::Google.Cloud.Redis.V1Beta1.NodeInfo> _repeated_nodes_codec
+        = pb::FieldCodec.ForMessage(258, global::Google.Cloud.Redis.V1Beta1.NodeInfo.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.Redis.V1Beta1.NodeInfo> nodes_ = new pbc::RepeatedField<global::Google.Cloud.Redis.V1Beta1.NodeInfo>();
+    /// <summary>
+    /// Output only. Info per node.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.Redis.V1Beta1.NodeInfo> Nodes {
+      get { return nodes_; }
+    }
+
+    /// <summary>Field number for the "read_endpoint" field.</summary>
+    public const int ReadEndpointFieldNumber = 33;
+    private string readEndpoint_ = "";
+    /// <summary>
+    /// Output only. Hostname or IP address of the exposed readonly Redis
+    /// endpoint. Standard tier only. Targets all healthy replica nodes in
+    /// instance. Replication is asynchronous and replica nodes will exhibit some
+    /// lag behind the primary. Write requests must target 'host'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ReadEndpoint {
+      get { return readEndpoint_; }
+      set {
+        readEndpoint_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "read_endpoint_port" field.</summary>
+    public const int ReadEndpointPortFieldNumber = 34;
+    private int readEndpointPort_;
+    /// <summary>
+    /// Output only. The port number of the exposed readonly redis
+    /// endpoint. Standard tier only. Write requests should target 'port'.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int ReadEndpointPort {
+      get { return readEndpointPort_; }
+      set {
+        readEndpointPort_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "read_replicas_mode" field.</summary>
+    public const int ReadReplicasModeFieldNumber = 35;
+    private global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode readReplicasMode_ = global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode.Unspecified;
+    /// <summary>
+    /// Optional. Read replica mode.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode ReadReplicasMode {
+      get { return readReplicasMode_; }
+      set {
+        readReplicasMode_ = value;
       }
     }
 
@@ -618,6 +953,11 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (AuthorizedNetwork != other.AuthorizedNetwork) return false;
       if (PersistenceIamIdentity != other.PersistenceIamIdentity) return false;
       if (ConnectMode != other.ConnectMode) return false;
+      if (ReplicaCount != other.ReplicaCount) return false;
+      if(!nodes_.Equals(other.nodes_)) return false;
+      if (ReadEndpoint != other.ReadEndpoint) return false;
+      if (ReadEndpointPort != other.ReadEndpointPort) return false;
+      if (ReadReplicasMode != other.ReadReplicasMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -644,6 +984,11 @@ namespace Google.Cloud.Redis.V1Beta1 {
       if (AuthorizedNetwork.Length != 0) hash ^= AuthorizedNetwork.GetHashCode();
       if (PersistenceIamIdentity.Length != 0) hash ^= PersistenceIamIdentity.GetHashCode();
       if (ConnectMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified) hash ^= ConnectMode.GetHashCode();
+      if (ReplicaCount != 0) hash ^= ReplicaCount.GetHashCode();
+      hash ^= nodes_.GetHashCode();
+      if (ReadEndpoint.Length != 0) hash ^= ReadEndpoint.GetHashCode();
+      if (ReadEndpointPort != 0) hash ^= ReadEndpointPort.GetHashCode();
+      if (ReadReplicasMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode.Unspecified) hash ^= ReadReplicasMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -732,6 +1077,23 @@ namespace Google.Cloud.Redis.V1Beta1 {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) ConnectMode);
       }
+      if (ReplicaCount != 0) {
+        output.WriteRawTag(248, 1);
+        output.WriteInt32(ReplicaCount);
+      }
+      nodes_.WriteTo(output, _repeated_nodes_codec);
+      if (ReadEndpoint.Length != 0) {
+        output.WriteRawTag(138, 2);
+        output.WriteString(ReadEndpoint);
+      }
+      if (ReadEndpointPort != 0) {
+        output.WriteRawTag(144, 2);
+        output.WriteInt32(ReadEndpointPort);
+      }
+      if (ReadReplicasMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode.Unspecified) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) ReadReplicasMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -812,6 +1174,23 @@ namespace Google.Cloud.Redis.V1Beta1 {
         output.WriteRawTag(176, 1);
         output.WriteEnum((int) ConnectMode);
       }
+      if (ReplicaCount != 0) {
+        output.WriteRawTag(248, 1);
+        output.WriteInt32(ReplicaCount);
+      }
+      nodes_.WriteTo(ref output, _repeated_nodes_codec);
+      if (ReadEndpoint.Length != 0) {
+        output.WriteRawTag(138, 2);
+        output.WriteString(ReadEndpoint);
+      }
+      if (ReadEndpointPort != 0) {
+        output.WriteRawTag(144, 2);
+        output.WriteInt32(ReadEndpointPort);
+      }
+      if (ReadReplicasMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode.Unspecified) {
+        output.WriteRawTag(152, 2);
+        output.WriteEnum((int) ReadReplicasMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -874,6 +1253,19 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if (ConnectMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ConnectMode);
+      }
+      if (ReplicaCount != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(ReplicaCount);
+      }
+      size += nodes_.CalculateSize(_repeated_nodes_codec);
+      if (ReadEndpoint.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(ReadEndpoint);
+      }
+      if (ReadEndpointPort != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeInt32Size(ReadEndpointPort);
+      }
+      if (ReadReplicasMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) ReadReplicasMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -942,6 +1334,19 @@ namespace Google.Cloud.Redis.V1Beta1 {
       }
       if (other.ConnectMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode.Unspecified) {
         ConnectMode = other.ConnectMode;
+      }
+      if (other.ReplicaCount != 0) {
+        ReplicaCount = other.ReplicaCount;
+      }
+      nodes_.Add(other.nodes_);
+      if (other.ReadEndpoint.Length != 0) {
+        ReadEndpoint = other.ReadEndpoint;
+      }
+      if (other.ReadEndpointPort != 0) {
+        ReadEndpointPort = other.ReadEndpointPort;
+      }
+      if (other.ReadReplicasMode != global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode.Unspecified) {
+        ReadReplicasMode = other.ReadReplicasMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1035,6 +1440,26 @@ namespace Google.Cloud.Redis.V1Beta1 {
           }
           case 176: {
             ConnectMode = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode) input.ReadEnum();
+            break;
+          }
+          case 248: {
+            ReplicaCount = input.ReadInt32();
+            break;
+          }
+          case 258: {
+            nodes_.AddEntriesFrom(input, _repeated_nodes_codec);
+            break;
+          }
+          case 266: {
+            ReadEndpoint = input.ReadString();
+            break;
+          }
+          case 272: {
+            ReadEndpointPort = input.ReadInt32();
+            break;
+          }
+          case 280: {
+            ReadReplicasMode = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode) input.ReadEnum();
             break;
           }
         }
@@ -1131,6 +1556,26 @@ namespace Google.Cloud.Redis.V1Beta1 {
             ConnectMode = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.ConnectMode) input.ReadEnum();
             break;
           }
+          case 248: {
+            ReplicaCount = input.ReadInt32();
+            break;
+          }
+          case 258: {
+            nodes_.AddEntriesFrom(ref input, _repeated_nodes_codec);
+            break;
+          }
+          case 266: {
+            ReadEndpoint = input.ReadString();
+            break;
+          }
+          case 272: {
+            ReadEndpointPort = input.ReadInt32();
+            break;
+          }
+          case 280: {
+            ReadReplicasMode = (global::Google.Cloud.Redis.V1Beta1.Instance.Types.ReadReplicasMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1212,14 +1657,36 @@ namespace Google.Cloud.Redis.V1Beta1 {
         /// </summary>
         [pbr::OriginalName("CONNECT_MODE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// Connect via directly peering with memorystore redis hosted service.
+        /// Connect via direct peering to the Memorystore for Redis hosted service.
         /// </summary>
         [pbr::OriginalName("DIRECT_PEERING")] DirectPeering = 1,
         /// <summary>
-        /// Connect with google via private service access and share connection
-        /// across google managed services.
+        /// Connect your Memorystore for Redis instance using Private Service
+        /// Access. Private services access provides an IP address range for multiple
+        /// Google Cloud services, including Memorystore.
         /// </summary>
         [pbr::OriginalName("PRIVATE_SERVICE_ACCESS")] PrivateServiceAccess = 2,
+      }
+
+      /// <summary>
+      /// Read replicas mode.
+      /// </summary>
+      public enum ReadReplicasMode {
+        /// <summary>
+        /// If not set, Memorystore for Redis backend will pick the mode based on
+        /// other fields in the request.
+        /// </summary>
+        [pbr::OriginalName("READ_REPLICAS_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// If disabled, read endpoint will not be provided and the instance cannot
+        /// scale up or down the number of replicas.
+        /// </summary>
+        [pbr::OriginalName("READ_REPLICAS_DISABLED")] ReadReplicasDisabled = 1,
+        /// <summary>
+        /// If enabled, read endpoint will be provided and the instance can scale
+        /// up and down the number of replicas.
+        /// </summary>
+        [pbr::OriginalName("READ_REPLICAS_ENABLED")] ReadReplicasEnabled = 2,
       }
 
     }
@@ -1228,7 +1695,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
+  /// Request for
+  /// [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
   /// </summary>
   public sealed partial class ListInstancesRequest : pb::IMessage<ListInstancesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1244,7 +1712,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1319,7 +1787,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
     private string pageToken_ = "";
     /// <summary>
     /// The `next_page_token` value returned from a previous
-    /// [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances] request, if any.
+    /// [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances]
+    /// request, if any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1512,7 +1981,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Response for [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
+  /// Response for
+  /// [ListInstances][google.cloud.redis.v1beta1.CloudRedis.ListInstances].
   /// </summary>
   public sealed partial class ListInstancesResponse : pb::IMessage<ListInstancesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1528,7 +1998,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1571,11 +2041,12 @@ namespace Google.Cloud.Redis.V1Beta1 {
     ///
     /// If the `location_id` in the parent field of the request is "-", all regions
     /// available to the project are queried, and the results aggregated.
-    /// If in such an aggregated query a location is unavailable, a dummy Redis
-    /// entry is included in the response with the `name` field set to a value of
-    /// the form `projects/{project_id}/locations/{location_id}/instances/`- and
-    /// the `status` field set to ERROR and `status_message` field set to "location
-    /// not available for ListInstances".
+    /// If in such an aggregated query a location is unavailable, a placeholder
+    /// Redis entry is included in the response with the `name` field set to a
+    /// value of the form
+    /// `projects/{project_id}/locations/{location_id}/instances/`- and the
+    /// `status` field set to ERROR and `status_message` field set to "location not
+    /// available for ListInstances".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1791,7 +2262,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1972,7 +2443,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [CreateInstance][google.cloud.redis.v1beta1.CloudRedis.CreateInstance].
+  /// Request for
+  /// [CreateInstance][google.cloud.redis.v1beta1.CloudRedis.CreateInstance].
   /// </summary>
   public sealed partial class CreateInstanceRequest : pb::IMessage<CreateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1988,7 +2460,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2265,7 +2737,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [UpdateInstance][google.cloud.redis.v1beta1.CloudRedis.UpdateInstance].
+  /// Request for
+  /// [UpdateInstance][google.cloud.redis.v1beta1.CloudRedis.UpdateInstance].
   /// </summary>
   public sealed partial class UpdateInstanceRequest : pb::IMessage<UpdateInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2281,7 +2754,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2324,6 +2797,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     ///  *   `labels`
     ///  *   `memorySizeGb`
     ///  *   `redisConfig`
+    ///  *   `replica_count`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2526,7 +3000,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [UpgradeInstance][google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance].
+  /// Request for
+  /// [UpgradeInstance][google.cloud.redis.v1beta1.CloudRedis.UpgradeInstance].
   /// </summary>
   public sealed partial class UpgradeInstanceRequest : pb::IMessage<UpgradeInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2542,7 +3017,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[6]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2763,7 +3238,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [DeleteInstance][google.cloud.redis.v1beta1.CloudRedis.DeleteInstance].
+  /// Request for
+  /// [DeleteInstance][google.cloud.redis.v1beta1.CloudRedis.DeleteInstance].
   /// </summary>
   public sealed partial class DeleteInstanceRequest : pb::IMessage<DeleteInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2779,7 +3255,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[7]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2976,7 +3452,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[8]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[9]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3171,7 +3647,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[9]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[10]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3409,7 +3885,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3655,7 +4131,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3851,7 +4327,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[12]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[13]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4089,7 +4565,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[13]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[14]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4319,7 +4795,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
   }
 
   /// <summary>
-  /// Request for [Failover][google.cloud.redis.v1beta1.CloudRedis.FailoverInstance].
+  /// Request for
+  /// [Failover][google.cloud.redis.v1beta1.CloudRedis.FailoverInstance].
   /// </summary>
   public sealed partial class FailoverInstanceRequest : pb::IMessage<FailoverInstanceRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4335,7 +4812,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[14]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[15]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4571,7 +5048,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
         /// <summary>
         /// Instance failover will be protected with data loss control. More
         /// specifically, the failover will only be performed if the current
-        /// replication offset diff between master and replica is under a certain
+        /// replication offset diff between primary and replica is under a certain
         /// threshold.
         /// </summary>
         [pbr::OriginalName("LIMITED_DATA_LOSS")] LimitedDataLoss = 1,
@@ -4606,7 +5083,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[15]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[16]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4794,7 +5271,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[16]; }
+      get { return global::Google.Cloud.Redis.V1Beta1.CloudRedisReflection.Descriptor.MessageTypes[17]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
