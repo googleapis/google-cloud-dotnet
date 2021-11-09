@@ -1284,8 +1284,10 @@ namespace Google.Cloud.Gaming.V1 {
   /// If only cron_spec + cron_job_duration are specified, the event is effective
   /// starting at the local time specified by cron_spec, and is recurring.
   ///
-  ///   start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time
-  ///   cron job: cron spec start time + duration
+  /// ```
+  /// start_time|-------[cron job]-------[cron job]-------[cron job]---|end_time
+  /// cron job: cron spec start time + duration
+  /// ```
   /// </summary>
   public sealed partial class Schedule : pb::IMessage<Schedule>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
