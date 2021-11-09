@@ -1468,6 +1468,26 @@
       "protoPath": "google/cloud/iap/v1"
     },
     {
+      "id": "Google.Cloud.Ids.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Cloud IDS",
+      "productUrl": "https://cloud.google.com/intrusion-detection-system",
+      "description": "Recommended Google client library to access the Google Cloud IDS API. Cloud IDS (Cloud Intrusion Detection System) detects malware, spyware, command-and-control attacks, and other network-based threats.",
+      "tags": [
+        "security",
+        "intrusion",
+        "malware",
+        "spyware",
+        "threats"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/ids/v1"
+    },
+    {
       "id": "Google.Cloud.Iot.V1",
       "version": "1.2.0",
       "type": "grpc",
