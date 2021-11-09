@@ -137,7 +137,7 @@ namespace Google.Cloud.Tools.Common
         /// Determines the autogenerator type for this API based on what's explicitly configured,
         /// and sensible defaults otherwise.
         /// </summary>
-        public AutoGeneratorType DetermineAutoGeneratorType(string apiDirectory)
+        public AutoGeneratorType DetermineAutoGeneratorType()
         {
             if (AutoGenerator != null)
             {

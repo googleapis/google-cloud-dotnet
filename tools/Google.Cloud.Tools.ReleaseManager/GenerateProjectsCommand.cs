@@ -489,7 +489,7 @@ namespace Google.Cloud.Tools.ReleaseManager
         private static void GenerateSynthConfiguration(string apiRoot, ApiMetadata api)
         {
             var synthFile = Path.Combine(apiRoot, "synth.py");
-            if (api.DetermineAutoGeneratorType(apiRoot) != AutoGeneratorType.Synthtool)
+            if (api.DetermineAutoGeneratorType() != AutoGeneratorType.Synthtool)
             {
                 // Clean up any previous synth configuration
                 File.Delete(synthFile);
@@ -533,7 +533,7 @@ shell.run(
         private static void GenerateOwlBotConfiguration(string apiRoot, ApiMetadata api)
         {
             var owlBotConfigFile = Path.Combine(apiRoot, ".OwlBot.yaml");
-            if (api.DetermineAutoGeneratorType(apiRoot) != AutoGeneratorType.OwlBot)
+            if (api.DetermineAutoGeneratorType() != AutoGeneratorType.OwlBot)
             {
                 // Clean up any previous synth configuration
                 File.Delete(owlBotConfigFile);
