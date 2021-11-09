@@ -19,6 +19,7 @@ using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.Type;
 using Google.Cloud.Logging.V2;
 using Google.Protobuf.WellKnownTypes;
+using Grpc.Core;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
@@ -657,12 +658,12 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
-        public async Task Logging_Labels()
+        public async Task Logging_Factory_Labels()
         {
             string testId = IdGenerator.FromGuid();
             DateTime startTime = DateTime.UtcNow;
 
-            using (var server = GetTestServer<WarningWithLabelsLoggerTestApplication>())
+            using (var server = GetTestServer<WarningWithLabelsFactoryLoggerTestApplication>())
             using (var client = server.CreateClient())
             {
                 await client.GetAsync($"/Main/Warning/{testId}");
@@ -675,6 +676,27 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.Equal("some-value", entry.Labels["some-key"]);
                 Assert.Equal("Hello, World!", entry.Labels["Foo"]);
                 Assert.Equal("Hello, World!", entry.Labels["Bar"]);
+                Assert.NotEmpty(entry.Labels["trace_identifier"]);
+            });
+        }
+
+        [Fact]
+        public async Task Logging_Builder_Labels()
+        {
+            string testId = IdGenerator.FromGuid();
+            DateTime startTime = DateTime.UtcNow;
+
+            using (var server = GetTestServer<WarningWithLabelsBuilderLoggerTestApplication>())
+            using (var client = server.CreateClient())
+            {
+                await client.GetAsync($"/Main/Warning/{testId}");
+            }
+
+            _fixture.AddValidator(testId, results =>
+            {
+                var entry = results.Single();
+                Assert.Equal(2, entry.Labels.Count);
+                Assert.Equal("some-value", entry.Labels["some-key"]);
                 Assert.NotEmpty(entry.Labels["trace_identifier"]);
             });
         }
@@ -809,6 +831,21 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Assert.False(jsonFields["serviceContext"].StructValue.Fields.ContainsKey("service"));
                 Assert.Equal("v1.0.0-alpha01", jsonFields["serviceContext"].StructValue.Fields["version"].StringValue);
             });
+        }
+
+        [Fact]
+        public async Task Logging_CustomClient()
+        {
+            string testId = IdGenerator.FromGuid();
+            DateTime startTime = DateTime.UtcNow;
+
+            using var server = GetTestServer<NoBufferWarningCustomClientLoggerTestApplication>();
+            using var client = server.CreateClient();
+
+            // We are using a client with a bad credential.
+            var exception = await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/Main/Warning/{testId}"));            
+            var rpcException = Assert.IsType<RpcException>(exception.InnerException);
+            Assert.Equal(StatusCode.Unauthenticated, rpcException.StatusCode);
         }
     }
 
@@ -987,7 +1024,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     /// An application that has a <see cref="GoogleLogger"/> and a <see cref="Common.ILogEntryLabelProvider"/>,
     /// that accept all logs of level warning or above.
     /// </summary>
-    public class WarningWithLabelsLoggerTestApplication : LoggerTestApplication
+    public class WarningWithLabelsFactoryLoggerTestApplication : LoggerTestApplication
     {
         public override void ConfigureServices(IServiceCollection services)
         {
@@ -1012,6 +1049,24 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 #pragma warning restore CS0618 // Type or member is obsolete
     }
 
+    public class WarningWithLabelsBuilderLoggerTestApplication : LoggerTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            LoggingExtensions.AddLogEntryLabelProviderSingleton<TraceIdLogEntryLabelProvider>(services);
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(
+                    logLevel: LogLevel.Warning,
+                    labels: new Dictionary<string, string> { { "some-key", "some-value" } },
+                    bufferOptions: BufferOptions.NoBuffer()),
+                ProjectId = _projectId
+            }));
+
+            base.ConfigureServices(services);
+        }
+    }
+
     public class DiagnosticsOutputLoggerTestApplication : LoggerTestApplication
     {
         public override void ConfigureServices(IServiceCollection services)
@@ -1024,6 +1079,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 Options = LoggingOptions.Create(logLevel: LogLevel.Warning, bufferOptions: BufferOptions.NoBuffer()),
                 ProjectId = _projectId,
                 LoggerDiagnosticsOutput = writer
+            }));
+            base.ConfigureServices(services);
+        }
+    }
+
+    public class NoBufferWarningCustomClientLoggerTestApplication : LoggerTestApplication
+    {
+        public override void ConfigureServices(IServiceCollection services)
+        {
+            services.AddLogging(builder => builder.AddGoogle(new LoggingServiceOptions
+            {
+                Options = LoggingOptions.Create(
+                    logLevel: LogLevel.Warning,
+                    bufferOptions: BufferOptions.NoBuffer(),
+                    retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
+                ProjectId = _projectId,
+                Client = new LoggingServiceV2ClientBuilder
+                {
+                    TokenAccessMethod = (uri, cancellation) => Task.FromResult("very-bad-token")
+                }.Build()
             }));
             base.ConfigureServices(services);
         }

@@ -15,6 +15,8 @@
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
+using Google.Cloud.Trace.V1;
+using Grpc.Core;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -89,6 +91,45 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 trace.Spans.First(s => s.Name == uri), TraceEntryData.HttpGetSuccessLabels);
 
             AssertNoTraceHeaders(response);
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_TraceFallbackPredicate(Action<IWebHostBuilder> testServerConfigurator)
+        {
+            var tracedId = $"fallback{_testId}";
+            var tracedUri = $"/Trace/{nameof(TraceController.Trace)}/{tracedId}";
+            var tracedChildSpanName = EntryData.GetMessage(nameof(TraceController.Trace), tracedId);
+            var nonTracedUri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
+
+            using var server = GetTestServer<TraceTestFallbackPredicate>(testServerConfigurator);
+            using var client = server.CreateClient();
+            var nonTracedTask = client.GetAsync(nonTracedUri);
+            var tracedTask = client.GetAsync(tracedUri);
+            await Task.WhenAll(nonTracedTask, tracedTask);
+
+            Assert.Null(TraceEntryPolling.NoEntry.GetTrace(nonTracedUri, _startTime, expectTrace: false));
+
+            var trace = TraceEntryPolling.Default.GetTrace(tracedUri, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, tracedUri, tracedChildSpanName);
+            TraceEntryVerifiers.AssertSpanLabelsContains(
+                trace.Spans.First(s => s.Name == tracedUri), TraceEntryData.HttpGetSuccessLabels);
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_CustomClient(Action<IWebHostBuilder> testServerConfigurator)
+        {
+            var uri = $"/Trace/{nameof(TraceController.Trace)}/{_testId}";
+
+            using var server = GetTestServer<TraceTestCustomClient>(testServerConfigurator);
+            using var client = server.CreateClient();
+
+            // We are using a client with a bad credential.
+            var exception = await Assert.ThrowsAsync<HttpRequestException>(() => client.GetAsync(uri));
+            var rpcException = Assert.IsType<RpcException>(exception.InnerException.InnerException);
+            Assert.Equal(StatusCode.Unauthenticated, rpcException.StatusCode);
         }
 
         [Theory]
@@ -604,7 +645,28 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public override double GetSampleRate() => 1_000_000;
         public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
     }
-    
+
+    public class TraceTestFallbackPredicate : AbstractTraceTestApplication
+    {
+        public override double GetSampleRate() => double.PositiveInfinity;
+        public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
+        public override RetryOptions GetRetryOptions() => RetryOptions.NoRetry(ExceptionHandling.Propagate);
+        public override TraceDecisionPredicate GetTraceDecisionPredicate() => TraceDecisionPredicate.Create(request => request.Path.ToString().Contains("fallback"));
+    }
+
+    public class TraceTestCustomClient : AbstractTraceTestApplication
+    {
+        public override double GetSampleRate() => double.PositiveInfinity;
+        public override BufferOptions GetBufferOptions() => BufferOptions.NoBuffer();
+        public override RetryOptions GetRetryOptions() => RetryOptions.NoRetry(ExceptionHandling.Propagate);
+        public override TraceServiceClient GetTraceServiceClient() =>
+            new TraceServiceClientBuilder
+            {
+                TokenAccessMethod = (uri, cancellation) => Task.FromResult("very_fake_token")
+            }.Build();
+        
+    }
+
     /// <summary>
     /// A web application to test <see cref="CloudTraceMiddleware"/> and associated classes.
     /// This app does not use a buffer and will sample 1,000,000 QPS.
@@ -675,6 +737,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         public virtual RetryOptions GetRetryOptions() => null;
 
+        public virtual TraceDecisionPredicate GetTraceDecisionPredicate() => null;
+
+        public virtual TraceServiceClient GetTraceServiceClient() => null;
+
         public override void ConfigureServices(IServiceCollection services)
         {
             services.AddGoogleTraceForAspNetCore(new AspNetCoreTraceOptions
@@ -682,8 +748,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 ServiceOptions = new Common.TraceServiceOptions
                 {
                     ProjectId = TestEnvironment.GetTestProjectId(),
-                    Options = TraceOptions.Create(GetSampleRate(), GetBufferOptions(), GetRetryOptions())
-                }
+                    Options = TraceOptions.Create(GetSampleRate(), GetBufferOptions(), GetRetryOptions()),
+                    Client = GetTraceServiceClient(),
+                },
+                TraceFallbackPredicate = GetTraceDecisionPredicate()
             });
 
             services
