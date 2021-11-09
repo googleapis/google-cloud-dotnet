@@ -16,13 +16,12 @@ using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
 using Google.Cloud.Logging.V2;
+using Grpc.Core;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.TestHost;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Xunit;
 
@@ -37,12 +36,9 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
     using static TestServerHelpers;
     using TraceOptions = Common.TraceOptions;
 
-    public class ErrorReportingTest : IClassFixture<LogValidatingFixture>, IDisposable
+    public class ErrorReportingTest : IClassFixture<LogValidatingFixture>
     {
         private readonly string _testId;
-
-        private readonly TestServer _server;
-        private readonly HttpClient _client;
 
         // The only way to validate trace context information on an error entry
         // is to check the corresponding log entry.
@@ -57,8 +53,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
             _testId = IdGenerator.FromDateTime();
 
-            _server = GetTestServer<ErrorReportingTestApplication>();
-            _client = _server.CreateClient();
+            
 
             _fixture = fixture;
         }
@@ -75,7 +70,10 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task ManualLog()
         {
-            var response = await _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchLog)}/{_testId}");
+            using var server = GetTestServer<ErrorReportingTestApplication>();
+            using var client = server.CreateClient();
+
+            var response = await client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchLog)}/{_testId}");
 
             Assert.Equal(HttpStatusCode.OK, response.StatusCode);
 
@@ -90,10 +88,25 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         }
 
         [Fact]
+        public async Task ManualLog_CustomClient()
+        {
+            using var server = GetTestServer<ErrorReportingCustomClientTestApplication>();
+            using var client = server.CreateClient();
+
+            // We are using a client with a bad credential.
+            var exception = await Assert.ThrowsAsync<AggregateException>(() => client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowCatchLog)}/{_testId}"));
+            var rpcException = Assert.IsType<RpcException>(exception.InnerException);
+            Assert.Equal(StatusCode.Unauthenticated, rpcException.StatusCode);
+        }
+
+        [Fact]
         public async Task LogsException()
         {
+            using var server = GetTestServer<ErrorReportingTestApplication>();
+            using var client = server.CreateClient();
+
             await Assert.ThrowsAsync<Exception>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
+                client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}"));
 
             _fixture.AddValidator(_testId, results =>
             {
@@ -108,14 +121,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         [Fact]
         public async Task LogsMultipleExceptions()
         {
+            using var server = GetTestServer<ErrorReportingTestApplication>();
+            using var client = server.CreateClient();
+
             await Assert.ThrowsAsync<Exception>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_0"));
+                client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_0"));
             await Assert.ThrowsAsync<ArgumentException>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsArgumentException)}/{_testId}"));
+                client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsArgumentException)}/{_testId}"));
             await Assert.ThrowsAsync<Exception>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_1"));
+                client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_1"));
             await Assert.ThrowsAsync<Exception>(() =>
-                _client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_2"));
+                client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{_testId}_2"));
 
             _fixture.AddValidator(_testId, results =>
             {
@@ -131,12 +147,6 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                 var argumentExceptionEvent = errorEvents.Where(e => e.Message.Contains(nameof(ErrorReportingController.ThrowsArgumentException))).Single();
                 ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(argumentExceptionEvent, _testId, nameof(ErrorReportingController.ThrowsArgumentException));
             });
-        }
-
-        public void Dispose()
-        {
-            _client.Dispose();
-            _server.Dispose();
         }
 
         /// <summary>
@@ -164,7 +174,33 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
                         ServiceName = EntryData.Service,
                         Version = EntryData.Version,
                         // This is just so that our validator finds the log entries associated to errors.
-                        Options = ErrorReportingOptions.CreateInstance(logName: "aspnetcore")
+                        Options = ErrorReportingOptions.CreateInstance(
+                            logName: "aspnetcore",
+                            bufferOptions: BufferOptions.NoBuffer(),
+                            retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
+                    }));
+        }
+
+        private class ErrorReportingCustomClientTestApplication : BaseStartup
+        {
+            private static string ProjectId = TestEnvironment.GetTestProjectId();
+
+            public override void ConfigureServices(IServiceCollection services) =>
+                base.ConfigureServices(services
+                    .AddGoogleErrorReportingForAspNetCore(new Common.ErrorReportingServiceOptions
+                    {
+                        ProjectId = ProjectId,
+                        ServiceName = EntryData.Service,
+                        Version = EntryData.Version,
+                        Client = new LoggingServiceV2ClientBuilder
+                        {
+                            TokenAccessMethod = (uri, cancellation) => Task.FromResult("very_bad_token")
+                        }.Build(),
+                        // This is just so that our validator finds the log entries associated to errors.
+                        Options = ErrorReportingOptions.CreateInstance(
+                            logName: "aspnetcore",
+                            bufferOptions: BufferOptions.NoBuffer(),
+                            retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))
                     }));
         }
     }

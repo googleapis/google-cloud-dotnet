@@ -26,6 +26,6 @@ namespace Google.Cloud.Diagnostics.Common
         /// </summary>
         public static IServiceCollection AddGoogleErrorReporting(this IServiceCollection services, ErrorReportingServiceOptions options = null) =>
             services.AddSingleton(serviceProvider =>
-                ContextExceptionLogger.Create(options?.ProjectId, options?.ServiceName, options?.Version, options?.Options, serviceProvider));
+                ContextExceptionLogger.Create(options, serviceProvider));
     }
 }
