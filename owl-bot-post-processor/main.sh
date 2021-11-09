@@ -87,11 +87,18 @@ copy_one_api() {
   mkdir -p "$PACKAGE_DIR"
   cp -rf $STAGING_DIR/* "$PACKAGE_DIR"
 
+  # Copy the GAPIC metadata file if there is one
+  if [[ -f $STAGING_DIR/gapic_metadata.json ]]
+  then
+    cp $STAGING_DIR/gapic_metadata.json $PACKAGE_DIR
+  fi
+
   # Clean out the staging directory.
   rm -rf "$STAGING_DIR"
 
   # The following code was copied from generate_api().
-  if [[ -f $PACKAGE_DIR/postgeneration.patch ]]; then
+  if [[ -f $PACKAGE_DIR/postgeneration.patch ]]
+  then
     echo "Applying post-generation patch for $PACKAGE"
     (
       cd $PACKAGE_DIR
