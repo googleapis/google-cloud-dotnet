@@ -8901,7 +8901,7 @@ namespace Google.Cloud.SecurityCenter.V1P1Beta1 {
     /// <summary>
     /// The FieldMask to use when updating the settings resource.
     ///
-    ///  If empty all mutable fields will be updated.
+    /// If empty all mutable fields will be updated.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
