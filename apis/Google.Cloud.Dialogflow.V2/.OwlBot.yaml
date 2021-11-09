@@ -25,3 +25,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Dialogflow.V2/Google.Cloud.Dialogflow.V2.Tests
     - source: /google/cloud/dialogflow/v2/.*-csharp/Google.Cloud.Dialogflow.V2.Snippets
       dest: /owl-bot-staging/Google.Cloud.Dialogflow.V2/Google.Cloud.Dialogflow.V2.Snippets
+    - source: /google/cloud/dialogflow/v2/.*-csharp/gapic_metadata.json
+      dest: /owl-bot-staging/Google.Cloud.Dialogflow.V2/gapic_metadata.json
