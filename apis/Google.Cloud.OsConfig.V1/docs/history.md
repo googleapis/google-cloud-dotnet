@@ -1,5 +1,9 @@
 # Version history
 
+# Version 1.6.0, released 2021-11-10
+
+- [Commit 8f1e976](https://github.com/googleapis/google-cloud-dotnet/commit/8f1e976): feat: OSConfig: add OS policy assignment rpcs
+
 # Version 1.5.0, released 2021-10-20
 
 - [Commit 5cd7c96](https://github.com/googleapis/google-cloud-dotnet/commit/5cd7c96): feat: Update osconfig v1 and v1alpha RecurringSchedule.Frequency with DAILY frequency
