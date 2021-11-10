@@ -218,7 +218,7 @@
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Assured Workloads",
       "productUrl": "https://cloud.google.com/assured-workloads/docs",
@@ -228,7 +228,9 @@
         "compilance"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.3.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Google.LongRunning": "2.3.0",
+        "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
       "protoPath": "google/cloud/assuredworkloads/v1"
