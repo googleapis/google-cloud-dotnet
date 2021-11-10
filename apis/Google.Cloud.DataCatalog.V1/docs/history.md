@@ -1,5 +1,13 @@
 # Version history
 
+# Version 1.6.0, released 2021-11-10
+
+- [Commit ceba2bb](https://github.com/googleapis/google-cloud-dotnet/commit/ceba2bb): docs: Improved formatting
+- [Commit 355a879](https://github.com/googleapis/google-cloud-dotnet/commit/355a879):
+  - feat: Added BigQueryDateShardedSpec.latest_shard_resource field
+  - feat: Added SearchCatalogResult.display_name field
+  - feat: Added SearchCatalogResult.description field
+
 # Version 1.5.0, released 2021-09-24
 
 - [Commit 4d51dc2](https://github.com/googleapis/google-cloud-dotnet/commit/4d51dc2): build: change links to make them absolute

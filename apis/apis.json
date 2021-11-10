@@ -666,7 +666,7 @@
       "protoPath": "google/cloud/datacatalog/v1",
       "productName": "Data Catalog",
       "productUrl": "https://cloud.google.com/data-catalog/docs",
-      "version": "1.5.0",
+      "version": "1.6.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Data Catalog API. Data Catalog is a fully managed and highly scalable data discovery and metadata management service.",
       "tags": [
@@ -675,7 +675,7 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.Cloud.Iam.V1": "2.2.0",
+        "Google.Cloud.Iam.V1": "2.3.0",
         "Grpc.Core": "2.38.1"
       }
     },
