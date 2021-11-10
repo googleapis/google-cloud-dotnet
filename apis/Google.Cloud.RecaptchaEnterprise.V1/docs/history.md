@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.5.0, released 2021-11-10
+
+- [Commit fcce878](https://github.com/googleapis/google-cloud-dotnet/commit/fcce878):
+  - feat: add reCAPTCHA Enterprise account defender API methods
+  - This adds the following API methods to support the Preview release of reCAPTCHA Enterprise account defender: ListRelatedAccountGroups, ListRelatedAccountGroupMemberships, and SearchRelatedAccountGroupMemberships. Additionally it modifies the existing createAssessment API method to add a new hashed_account_id parameter along with AccountDefenderAssessment return value.
+
 # Version 1.4.0, released 2021-09-24
 
 - [Commit 20d6309](https://github.com/googleapis/google-cloud-dotnet/commit/20d6309): feat: add GetMetrics and MigrateKey methods to reCAPTCHA enterprise API
