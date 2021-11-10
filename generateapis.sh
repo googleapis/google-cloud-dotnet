@@ -13,9 +13,8 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 OUTDIR=tmp
 
 # If there's a preconfig file, we assume it has everything we need. We'll
-# set both GOOGLEAPIs and GOOGLEAPIS_DISCOVERY based on that, using
-# values that will clearly indicate the cause of the failure if a "missing"
-# repo is tried.
+# set both GOOGLEAPIs based on that, using a value that will clearly
+# indicate the cause of the failure if a "missing" repo is tried.
 if [[ "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
 then
   declare -r GOOGLEAPIS=$(python - <<END
@@ -39,33 +38,12 @@ else
   declare -r GOOGLEAPIS="$PWD/googleapis"
 fi
 
-# Handle either a locally-fetched googleapis-discovery, or
-# one specified in a preconfig file.
-if [[ "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
-then
-  declare -r GOOGLEAPIS_DISCOVERY=$(python - <<END
-import json
-with open('$SYNTHTOOL_PRECONFIG_FILE') as json_file:
-  data = json.load(json_file)
-  repos = data['preclonedRepos']
-  if 'https://github.com/googleapis/googleapis-discovery.git' in repos:
-    print(repos['https://github.com/googleapis/googleapis-discovery.git'])
-  else:
-    print('attempt_to_use_googleapis-discovery_when_not_configured')
-END
-  )
-else
-  declare -r GOOGLEAPIS_DISCOVERY="$PWD/googleapis-discovery"
-fi
-
 # Allow pre/post-generation scripts to know where to find the repos
 export GOOGLEAPIS
-export GOOGLEAPIS_DISCOVERY
 
 fetch_github_repos() {
   # We assume that if there's a preconfig file, we're running in autosynth
-  # and don't need to fetch either. (And if we're using the old SYNTHTOOL_GOOGLEAPIS
-  # environment variable, we're not building discovery.)
+  # and don't need to fetch either.
   if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" || "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
   then
     return 0
@@ -78,13 +56,6 @@ fetch_github_repos() {
     # Auto-detect whether we're cloning the public or private googleapis repo.
     git remote -v | grep -q google-cloud-dotnet-private && repo=googleapis-private || repo=googleapis
     git clone https://github.com/googleapis/${repo} $GOOGLEAPIS --depth 1
-  fi
-
-  if [ -d "$GOOGLEAPIS_DISCOVERY" ]
-  then
-    git -C $GOOGLEAPIS_DISCOVERY pull -q
-  else
-    git clone https://github.com/googleapis/googleapis-discovery $GOOGLEAPIS_DISCOVERY --depth 1
   fi
 }
 
@@ -191,56 +162,6 @@ generate_microgenerator() {
   cp -r $API_TMP_DIR $API_OUT_DIR
 }
 
-# TODO: Use a common function for both kinds of generation
-generate_microgenerator_regapic() {
-  PACKAGE_ID=$1
-  API_TMP_DIR=$OUTDIR/$PACKAGE_ID
-  PRODUCTION_PACKAGE_DIR=$API_TMP_DIR/$PACKAGE_ID
-  GRPC_GENERATION_DIR=$API_TMP_DIR/grpc-$PACKAGE_ID
-  API_OUT_DIR=apis
-  API_SRC_DIR=$GOOGLEAPIS_DISCOVERY/$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID protoPath)
-
-  # Delete previously-generated files
-  delete_generated apis/$1/$1
-  delete_generated apis/$1/$1.Tests
-  delete_generated apis/$1/$1.Snippets
-
-  mkdir -p $PRODUCTION_PACKAGE_DIR
-  
-  # Message and service generation.
-  $PROTOC \
-    --csharp_out=$PRODUCTION_PACKAGE_DIR \
-    --csharp_opt=base_namespace=$1,file_extension=.g.cs \
-    --grpc_out=$PRODUCTION_PACKAGE_DIR \
-    --grpc_opt=file_suffix=Grpc.g.cs \
-    --plugin=protoc-gen-grpc=$GRPC_PLUGIN \
-    -I $GOOGLEAPIS_DISCOVERY \
-    -I $GOOGLEAPIS \
-    -I $CORE_PROTOS_ROOT \
-    $(find $API_SRC_DIR -name '*.proto') \
-    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
-
-  # Client generation.
-  $PROTOC \
-    --gapic_out=$API_TMP_DIR \
-    $SERVICE_CONFIG_OPTION \
-    --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
-    -I $GOOGLEAPIS_DISCOVERY \
-    -I $GOOGLEAPIS \
-    -I $CORE_PROTOS_ROOT \
-    $(find $API_SRC_DIR -name '*.proto') \
-    2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
-
-  # Remove the newly generated standalone snippets until they are ready for surfacing.
-  rm -rf $API_TMP_DIR/$1.StandaloneSnippets
-
-  # We generate our own project files
-  rm $(find tmp -name '*.csproj')
-  
-  # Copy the rest into the right place
-  cp -r $API_TMP_DIR $API_OUT_DIR
-}
-
 generate_proto() {
   # Delete previously-generated files
   delete_generated apis/$1/$1
@@ -271,9 +192,6 @@ generate_api() {
   case "$GENERATOR" in
     micro)
       generate_microgenerator $1
-      ;;
-    regapic)
-      generate_microgenerator_regapic $1
       ;;
     proto)
       generate_proto $1
@@ -308,32 +226,8 @@ generate_api() {
 
   if [[ -f $PACKAGE_DIR/synth.py ]]
   then
-    # Record the commit in synth.metadata, using either googleapis or googleapis-discovery
-    # depending on the generator.
-    if [[ "$GENERATOR" == "regapic" ]]
-    then
-      cat > $PACKAGE_DIR/synth.metadata <<END
-{
-  "sources": [
-    {
-      "git": {
-        "name": "googleapis-discovery",
-        "remote": "https://github.com/googleapis/googleapis-discovery.git",
-        "sha": "$(git -C $GOOGLEAPIS_DISCOVERY rev-parse HEAD)"
-      }
-    },
-    {
-      "git": {
-        "name": "googleapis",
-        "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "$(git -C $GOOGLEAPIS rev-parse HEAD)"
-      }
-    }
-  ]
-}
-END
-    else
-      cat > $PACKAGE_DIR/synth.metadata <<END
+    # Record the commit in synth.metadata
+    cat > $PACKAGE_DIR/synth.metadata <<END
 {
   "sources": [
     {
@@ -346,7 +240,6 @@ END
   ]
 }
 END
-    fi
   fi
 }
 

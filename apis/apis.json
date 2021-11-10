@@ -614,7 +614,7 @@
         "Google.Api.Gax.Grpc": "3.6.0-beta03",
         "Google.LongRunning": "2.3.0"
       },
-      "generator": "regapic",
+      "generator": "micro",
       "protoPath": "google/cloud/compute/v1"
     },
     {

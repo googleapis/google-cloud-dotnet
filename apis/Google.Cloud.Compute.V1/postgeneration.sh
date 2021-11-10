@@ -3,7 +3,7 @@
 set -e
 
 # Undo the changes made in pregeneration.sh
-git -C $GOOGLEAPIS_DISCOVERY checkout google/cloud/compute/v1
+git -C $GOOGLEAPIS checkout google/cloud/compute/v1
 
 # Fix up Grpc.Core parts
 # We have a hand-written piece at the moment for the adapter.
