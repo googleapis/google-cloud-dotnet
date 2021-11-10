@@ -607,7 +607,7 @@
     },
     {
       "id": "Google.Cloud.Compute.V1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "regapic",
       "autoGenerator": "Synthtool",
       "productName": "Compute Engine",

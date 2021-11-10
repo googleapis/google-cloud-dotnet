@@ -1,5 +1,10 @@
 # Version history
 
+# Version 1.0.0-beta04, released 2021-11-10
+
+- [Commit 41d3129](https://github.com/googleapis/google-cloud-dotnet/commit/41d3129): fix: Convert HTTP status codes to gRPC status codes when converting LROs
+
+This also updates the GAX dependency to 3.6.0-beta03.
 # Version 1.0.0-beta03, released 2021-10-14
 
 - [Commit 77a75b3](https://github.com/googleapis/google-cloud-dotnet/commit/77a75b3): feat!: Generate idiomatic LROs for Google.Cloud.Compute.V1
