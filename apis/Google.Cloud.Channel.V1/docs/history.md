@@ -1,5 +1,10 @@
 # Version history
 
+# Version 1.5.0, released 2021-11-10
+
+- [Commit 8f5d443](https://github.com/googleapis/google-cloud-dotnet/commit/8f5d443): docs: clarified usage of entitlement parameters
+- [Commit bf3d935](https://github.com/googleapis/google-cloud-dotnet/commit/bf3d935): feat: add resource type to ChannelPartnerLink
+
 # Version 1.4.0, released 2021-09-24
 
 - [Commit 7210495](https://github.com/googleapis/google-cloud-dotnet/commit/7210495):
