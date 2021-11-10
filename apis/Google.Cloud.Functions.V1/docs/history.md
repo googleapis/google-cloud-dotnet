@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.3.0, released 2021-11-10
+
+- [Commit 2b667d4](https://github.com/googleapis/google-cloud-dotnet/commit/2b667d4):
+  - feat: Secret Manager integration fields 'secret_environment_variables' and 'secret_volumes' added
+  - feat: CMEK integration fields 'kms_key_name' and 'docker_repository' added
+
 # Version 1.2.0, released 2021-09-23
 
 - [Commit d4815e4](https://github.com/googleapis/google-cloud-dotnet/commit/d4815e4): feat: add SecurityLevel option on HttpsTrigger
