@@ -1,5 +1,10 @@
 # Version history
 
+# Version 1.6.0, released 2021-11-10
+
+- [Commit 36bae8f](https://github.com/googleapis/google-cloud-dotnet/commit/36bae8f):
+  - feat: added API for changelogs
+  - docs: clarified semantic of the streaming APIs
 # Version 1.5.0, released 2021-10-12
 
 - [Commit 74b880a](https://github.com/googleapis/google-cloud-dotnet/commit/74b880a):
