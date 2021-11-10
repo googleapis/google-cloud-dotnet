@@ -2265,12 +2265,12 @@
       "protoPath": "google/cloud/redis/v1",
       "productName": "Google Cloud Memorystore for Redis",
       "productUrl": "https://cloud.google.com/memorystore/",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "description": "Recommended Google client library to administer Cloud Memorystore for Redis.",
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.LongRunning": "2.2.0",
+        "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
       "tags": [

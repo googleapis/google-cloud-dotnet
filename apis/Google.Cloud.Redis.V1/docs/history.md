@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.4.0, released 2021-11-10
+
+- [Commit a7e87ee](https://github.com/googleapis/google-cloud-dotnet/commit/a7e87ee): feat: Support Multiple Read Replicas when creating Instance
+
 # Version 2.3.0, released 2021-09-01
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
