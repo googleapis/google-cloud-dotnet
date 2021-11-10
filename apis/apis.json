@@ -95,7 +95,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
-      "version": "1.0.0-beta05",
+      "version": "1.0.0",
       "type": "grpc",
       "autoGenerator": "Synthtool",
       "productName": "Cloud AI Platform",
@@ -106,9 +106,9 @@
         "ml"
       ],
       "dependencies": {
-        "Google.Cloud.AutoML.V1": "2.3.0",
-        "Google.Cloud.DataLabeling.V1Beta1": "1.0.0-beta03",
-        "Google.LongRunning": "2.3.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Google.LongRunning": "2.3.0",
+        "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
       "protoPath": "google/cloud/aiplatform/v1"

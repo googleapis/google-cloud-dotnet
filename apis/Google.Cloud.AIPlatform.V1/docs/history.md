@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.0.0, released 2021-11-10
+
+- [Commit 68f7900](https://github.com/googleapis/google-cloud-dotnet/commit/68f7900): feat: Adds support for `google.protobuf.Value` pipeline parameters in the `parameter_values` field
+
+First GA release. Note that the dependencies on Google.Cloud.AutoML.V1 and Google.Cloud.DataLabeling.V1Beta1 have been removed in this release.
+
 # Version 1.0.0-beta05, released 2021-10-20
 
 - [Commit 43bcfc3](https://github.com/googleapis/google-cloud-dotnet/commit/43bcfc3):
