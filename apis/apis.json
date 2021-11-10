@@ -495,7 +495,7 @@
     },
     {
       "id": "Google.Cloud.BinaryAuthorization.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Binary Authorization",
       "productUrl": "https://cloud.google.com/binary-authorization/docs/reference/rpc",
@@ -508,7 +508,9 @@
         "kubernetes"
       ],
       "dependencies": {
-        "Grafeas.V1": "2.3.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Grafeas.V1": "2.3.0",
+        "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
       "protoPath": "google/cloud/binaryauthorization/v1"
