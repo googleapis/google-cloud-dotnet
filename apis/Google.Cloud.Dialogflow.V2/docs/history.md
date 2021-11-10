@@ -1,5 +1,12 @@
 # Version history
 
+# Version 3.7.0, released 2021-11-10
+
+- [Commit 6699f2e](https://github.com/googleapis/google-cloud-dotnet/commit/6699f2e): feat: added support to configure security settings, language code and time zone on conversation profile
+- [Commit dd18efd](https://github.com/googleapis/google-cloud-dotnet/commit/dd18efd):
+  - docs: clarified meaning of the legacy editions
+  - docs: clarified semantic of the streaming APIs
+
 # Version 3.6.0, released 2021-10-12
 
 - [Commit 03f91a3](https://github.com/googleapis/google-cloud-dotnet/commit/03f91a3): docs: recommend AnalyzeContent for future users
