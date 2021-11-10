@@ -172,6 +172,12 @@
                 "UpdateIssueModelAsync"
               ]
             },
+            "UpdatePhraseMatcher": {
+              "methods": [
+                "UpdatePhraseMatcher",
+                "UpdatePhraseMatcherAsync"
+              ]
+            },
             "UpdateSettings": {
               "methods": [
                 "UpdateSettings",

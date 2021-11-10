@@ -68,6 +68,48 @@
         }
       }
     },
+    "Changelogs": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ChangelogsClient",
+          "rpcs": {
+            "GetChangelog": {
+              "methods": [
+                "GetChangelog",
+                "GetChangelogAsync"
+              ]
+            },
+            "ListChangelogs": {
+              "methods": [
+                "ListChangelogs",
+                "ListChangelogsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "Deployments": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "DeploymentsClient",
+          "rpcs": {
+            "GetDeployment": {
+              "methods": [
+                "GetDeployment",
+                "GetDeploymentAsync"
+              ]
+            },
+            "ListDeployments": {
+              "methods": [
+                "ListDeployments",
+                "ListDeploymentsAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "EntityTypes": {
       "clients": {
         "grpc": {
@@ -122,6 +164,12 @@
               "methods": [
                 "DeleteEnvironment",
                 "DeleteEnvironmentAsync"
+              ]
+            },
+            "DeployFlow": {
+              "methods": [
+                "DeployFlow",
+                "DeployFlowAsync"
               ]
             },
             "GetEnvironment": {
