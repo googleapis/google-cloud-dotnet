@@ -106,8 +106,6 @@
         "ml"
       ],
       "dependencies": {
-        "Google.Cloud.AutoML.V1": "2.3.0",
-        "Google.Cloud.DataLabeling.V1Beta1": "1.0.0-beta03",
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
