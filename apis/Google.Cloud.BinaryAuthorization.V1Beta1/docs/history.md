@@ -1,5 +1,12 @@
 # Version history
 
+# Version 1.0.0-beta05, released 2021-11-10
+
+- [Commit b85ccc6](https://github.com/googleapis/google-cloud-dotnet/commit/b85ccc6):
+  - feat: add new admission rule types to Policy
+  - feat: update SignatureAlgorithm enum to match algorithm names in KMS
+  - feat: add SystemPolicyV1Beta1 service
+
 # Version 1.0.0-beta04, released 2021-09-23
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
