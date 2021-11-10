@@ -621,7 +621,7 @@
     },
     {
       "id": "Google.Cloud.ContactCenterInsights.V1",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Contact Center AI Insights",
       "productUrl": "https://cloud.google.com/contact-center/insights/docs",
@@ -632,7 +632,9 @@
         "feedback"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.3.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Google.LongRunning": "2.3.0",
+        "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
       "protoPath": "google/cloud/contactcenterinsights/v1"
