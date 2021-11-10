@@ -19,7 +19,6 @@ namespace Google.Cloud.Tools.Common
         None,
         Gapic,
         Micro,
-        Proto,
-        Regapic
+        Proto
     }
 }
