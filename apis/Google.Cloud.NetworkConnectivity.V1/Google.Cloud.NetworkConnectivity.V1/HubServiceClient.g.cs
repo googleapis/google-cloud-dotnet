@@ -764,7 +764,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new hub.
         /// </param>
         /// <param name="hubId">
-        /// Optional. A unique identifier for the hub.
+        /// Required. A unique identifier for the hub.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -772,7 +772,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateHub(new CreateHubRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                HubId = hubId ?? "",
+                HubId = gax::GaxPreconditions.CheckNotNullOrEmpty(hubId, nameof(hubId)),
                 Hub = gax::GaxPreconditions.CheckNotNull(hub, nameof(hub)),
             }, callSettings);
 
@@ -786,7 +786,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new hub.
         /// </param>
         /// <param name="hubId">
-        /// Optional. A unique identifier for the hub.
+        /// Required. A unique identifier for the hub.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -794,7 +794,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateHubAsync(new CreateHubRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                HubId = hubId ?? "",
+                HubId = gax::GaxPreconditions.CheckNotNullOrEmpty(hubId, nameof(hubId)),
                 Hub = gax::GaxPreconditions.CheckNotNull(hub, nameof(hub)),
             }, callSettings);
 
@@ -808,7 +808,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new hub.
         /// </param>
         /// <param name="hubId">
-        /// Optional. A unique identifier for the hub.
+        /// Required. A unique identifier for the hub.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -825,7 +825,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new hub.
         /// </param>
         /// <param name="hubId">
-        /// Optional. A unique identifier for the hub.
+        /// Required. A unique identifier for the hub.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -833,7 +833,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateHub(new CreateHubRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                HubId = hubId ?? "",
+                HubId = gax::GaxPreconditions.CheckNotNullOrEmpty(hubId, nameof(hubId)),
                 Hub = gax::GaxPreconditions.CheckNotNull(hub, nameof(hub)),
             }, callSettings);
 
@@ -847,7 +847,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new hub.
         /// </param>
         /// <param name="hubId">
-        /// Optional. A unique identifier for the hub.
+        /// Required. A unique identifier for the hub.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -855,7 +855,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateHubAsync(new CreateHubRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                HubId = hubId ?? "",
+                HubId = gax::GaxPreconditions.CheckNotNullOrEmpty(hubId, nameof(hubId)),
                 Hub = gax::GaxPreconditions.CheckNotNull(hub, nameof(hub)),
             }, callSettings);
 
@@ -869,7 +869,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new hub.
         /// </param>
         /// <param name="hubId">
-        /// Optional. A unique identifier for the hub.
+        /// Required. A unique identifier for the hub.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1404,7 +1404,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new spoke.
         /// </param>
         /// <param name="spokeId">
-        /// Optional. Unique id for the spoke to create.
+        /// Required. Unique id for the spoke to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1412,7 +1412,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpoke(new CreateSpokeRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                SpokeId = spokeId ?? "",
+                SpokeId = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeId, nameof(spokeId)),
                 Spoke = gax::GaxPreconditions.CheckNotNull(spoke, nameof(spoke)),
             }, callSettings);
 
@@ -1426,7 +1426,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new spoke.
         /// </param>
         /// <param name="spokeId">
-        /// Optional. Unique id for the spoke to create.
+        /// Required. Unique id for the spoke to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1434,7 +1434,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpokeAsync(new CreateSpokeRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
-                SpokeId = spokeId ?? "",
+                SpokeId = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeId, nameof(spokeId)),
                 Spoke = gax::GaxPreconditions.CheckNotNull(spoke, nameof(spoke)),
             }, callSettings);
 
@@ -1448,7 +1448,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new spoke.
         /// </param>
         /// <param name="spokeId">
-        /// Optional. Unique id for the spoke to create.
+        /// Required. Unique id for the spoke to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1465,7 +1465,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new spoke.
         /// </param>
         /// <param name="spokeId">
-        /// Optional. Unique id for the spoke to create.
+        /// Required. Unique id for the spoke to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1473,7 +1473,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpoke(new CreateSpokeRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                SpokeId = spokeId ?? "",
+                SpokeId = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeId, nameof(spokeId)),
                 Spoke = gax::GaxPreconditions.CheckNotNull(spoke, nameof(spoke)),
             }, callSettings);
 
@@ -1487,7 +1487,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new spoke.
         /// </param>
         /// <param name="spokeId">
-        /// Optional. Unique id for the spoke to create.
+        /// Required. Unique id for the spoke to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1495,7 +1495,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
             CreateSpokeAsync(new CreateSpokeRequest
             {
                 ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
-                SpokeId = spokeId ?? "",
+                SpokeId = gax::GaxPreconditions.CheckNotNullOrEmpty(spokeId, nameof(spokeId)),
                 Spoke = gax::GaxPreconditions.CheckNotNull(spoke, nameof(spoke)),
             }, callSettings);
 
@@ -1509,7 +1509,7 @@ namespace Google.Cloud.NetworkConnectivity.V1
         /// Required. The initial values for a new spoke.
         /// </param>
         /// <param name="spokeId">
-        /// Optional. Unique id for the spoke to create.
+        /// Required. Unique id for the spoke to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>

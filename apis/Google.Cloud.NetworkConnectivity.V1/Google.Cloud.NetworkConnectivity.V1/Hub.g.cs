@@ -72,7 +72,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "ASABKAlCLuBBAvpBKAombmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlz",
             "LmNvbS9IdWIitwEKEENyZWF0ZUh1YlJlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
             "QingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIT",
-            "CgZodWJfaWQYAiABKAlCA+BBARI6CgNodWIYAyABKAsyKC5nb29nbGUuY2xv",
+            "CgZodWJfaWQYAiABKAlCA+BBAhI6CgNodWIYAyABKAsyKC5nb29nbGUuY2xv",
             "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5IdWJCA+BBAhIXCgpyZXF1ZXN0",
             "X2lkGAQgASgJQgPgQQEinQEKEFVwZGF0ZUh1YlJlcXVlc3QSNAoLdXBkYXRl",
             "X21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQES",
@@ -90,7 +90,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "BG5hbWUYASABKAlCMOBBAvpBKgoobmV0d29ya2Nvbm5lY3Rpdml0eS5nb29n",
             "bGVhcGlzLmNvbS9TcG9rZSK/AQoSQ3JlYXRlU3Bva2VSZXF1ZXN0EjkKBnBh",
             "cmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
-            "TG9jYXRpb24SFQoIc3Bva2VfaWQYAiABKAlCA+BBARI+CgVzcG9rZRgDIAEo",
+            "TG9jYXRpb24SFQoIc3Bva2VfaWQYAiABKAlCA+BBAhI+CgVzcG9rZRgDIAEo",
             "CzIqLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLlNwb2tl",
             "QgPgQQISFwoKcmVxdWVzdF9pZBgEIAEoCUID4EEBIqMBChJVcGRhdGVTcG9r",
             "ZVJlcXVlc3QSNAoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9i",
@@ -228,8 +228,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
 
   #region Messages
   /// <summary>
-  /// A hub is essentially a collection of spokes. A single hub can contain spokes
-  /// from multiple regions. However, all of a hub's spokes must be associated with
+  /// A hub is a collection of spokes. A single hub can contain spokes from
+  /// multiple regions. However, all of a hub's spokes must be associated with
   /// resources that reside in the same VPC network.
   /// </summary>
   public sealed partial class Hub : pb::IMessage<Hub>
@@ -712,7 +712,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// RoutingsVPC contains information about a VPC network that is associated with
+  /// RoutingVPC contains information about the VPC network that is associated with
   /// a hub's spokes.
   /// </summary>
   public sealed partial class RoutingVPC : pb::IMessage<RoutingVPC>
@@ -763,7 +763,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int UriFieldNumber = 1;
     private string uri_ = "";
     /// <summary>
-    /// The URI of a VPC network.
+    /// The URI of the VPC network.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1054,7 +1054,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int HubFieldNumber = 6;
     private string hub_ = "";
     /// <summary>
-    /// Immutable. The URI of the hub that this spoke is attached to.
+    /// Immutable. The name of the hub that this spoke is attached to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2423,7 +2423,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int HubIdFieldNumber = 2;
     private string hubId_ = "";
     /// <summary>
-    /// Optional. A unique identifier for the hub.
+    /// Required. A unique identifier for the hub.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4122,7 +4122,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public const int SpokeIdFieldNumber = 2;
     private string spokeId_ = "";
     /// <summary>
-    /// Optional. Unique id for the spoke to create.
+    /// Required. Unique id for the spoke to create.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
