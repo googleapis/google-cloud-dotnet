@@ -58,10 +58,9 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
             foreach (var commit in repo.Head.Commits)
             {
-                if (commitPredicate(commit))
-                {
-                    pendingCommits.Add(new GitCommit(commit));
-                }
+                // If we've found the commit that tagged a version, then all subsequent commits
+                // (potentially including this one, if it contains a change - unusual though that is)
+                // are part of that version, until we hit the next version-tagging commit.
                 if (versionsCommitId.TryGetValue(commit.Id, out string version) && !version.StartsWith("0."))
                 {
                     yield return new Release(currentVersion, currentTagCommit, pendingCommits);
@@ -69,6 +68,10 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                     pendingCommits.Clear();
                     currentTagCommit = commit;
                     currentVersion = StructuredVersion.FromString(version);
+                }
+                if (commitPredicate(commit))
+                {
+                    pendingCommits.Add(new GitCommit(commit));
                 }
             }
 
