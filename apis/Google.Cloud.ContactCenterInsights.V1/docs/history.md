@@ -1,5 +1,17 @@
 # Version history
 
+# Version 1.0.0, released 2021-11-10
+
+First GA release.
+
+- [Commit 6cf6933](https://github.com/googleapis/google-cloud-dotnet/commit/6cf6933):
+  - feat: Add ability to update phrase matchers
+  - feat: Add issue model stats to time series
+  - feat: Add display name to issue model stats
+- [Commit f7c2450](https://github.com/googleapis/google-cloud-dotnet/commit/f7c2450):
+  - feat: deprecate issue_matches
+  - docs: if conversation medium is unspecified, it will default to PHONE_CALL
+
 # Version 1.0.0-beta03, released 2021-09-29
 
 - [Commit ddab19e](https://github.com/googleapis/google-cloud-dotnet/commit/ddab19e):
