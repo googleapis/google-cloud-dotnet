@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.8.0, released 2021-11-10
+
+- [Commit 9292121](https://github.com/googleapis/google-cloud-dotnet/commit/9292121): feat: Added resource type and display_name field to the FindingResult, and supported them in the filter for ListFindings and GroupFindings. Also added display_name to the resource which is surfaced in NotificationMessage
+
 # Version 2.7.0, released 2021-10-12
 
 - [Commit e1080c9](https://github.com/googleapis/google-cloud-dotnet/commit/e1080c9):

@@ -2469,12 +2469,12 @@
       "protoPath": "google/cloud/securitycenter/v1",
       "productName": "Google Cloud Security Command Center",
       "productUrl": "https://cloud.google.com/security-command-center/",
-      "version": "2.7.0",
+      "version": "2.8.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Security Command Center API, which helps security teams gather data, identify threats, and act on them before they result in business damage or loss.",
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.Cloud.Iam.V1": "2.2.0",
+        "Google.Cloud.Iam.V1": "2.3.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
