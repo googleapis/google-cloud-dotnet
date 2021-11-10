@@ -1,5 +1,9 @@
 # Version history
 
+# Version 2.7.0, released 2021-11-10
+
+- [Commit 9b6c247](https://github.com/googleapis/google-cloud-dotnet/commit/9b6c247): feat: add support for Raw PKCS[issue 1](https://github.com/googleapis/google-cloud-dotnet/issues/1) signing keys
+
 # Version 2.6.0, released 2021-10-12
 
 - [Commit 19b3652](https://github.com/googleapis/google-cloud-dotnet/commit/19b3652): feat: add RPC retry information for MacSign, MacVerify, and GenerateRandomBytes
