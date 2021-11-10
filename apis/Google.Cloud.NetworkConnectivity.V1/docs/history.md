@@ -1,5 +1,11 @@
 # Version history
 
+# Version 1.0.0, released 2021-11-10
+
+First GA release.
+
+No API surface changes; just dependency updates.
+
 # Version 1.0.0-beta02, released 2021-09-23
 
 - [Commit c64998e](https://github.com/googleapis/google-cloud-dotnet/commit/c64998e):

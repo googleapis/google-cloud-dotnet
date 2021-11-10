@@ -1827,7 +1827,7 @@
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0",
       "type": "grpc",
       "productName": "Network Connectivity",
       "productUrl": "https://cloud.google.com/network-connectivity/docs/",
@@ -1838,7 +1838,9 @@
         "vpc"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.3.0"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Google.LongRunning": "2.3.0",
+        "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
       "protoPath": "google/cloud/networkconnectivity/v1"
