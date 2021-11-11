@@ -608,7 +608,6 @@
       "id": "Google.Cloud.Compute.V1",
       "version": "1.0.0-beta04",
       "type": "regapic",
-      "autoGenerator": "Synthtool",
       "productName": "Compute Engine",
       "productUrl": "https://cloud.google.com/compute",
       "description": "Recommended Google client library to access the Google Cloud Compute Engine API.",
