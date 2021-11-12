@@ -1,4 +1,4 @@
-## Package names
+# Package names
 
 The package names for the Google Cloud Client Libraries for .NET take
 multiple forms. Here are a few examples:

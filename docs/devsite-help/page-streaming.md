@@ -1,4 +1,3 @@
-
 # Page streaming
 
 ## Introduction
