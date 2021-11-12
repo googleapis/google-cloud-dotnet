@@ -29,6 +29,191 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedSecurityCenterClientSnippets
     {
+        /// <summary>Snippet for BulkMuteFindings</summary>
+        public void BulkMuteFindingsRequestObject()
+        {
+            // Snippet: BulkMuteFindings(BulkMuteFindingsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            BulkMuteFindingsRequest request = new BulkMuteFindingsRequest
+            {
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Filter = "",
+            };
+            // Make the request
+            Operation<BulkMuteFindingsResponse, Empty> response = securityCenterClient.BulkMuteFindings(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkMuteFindingsResponse, Empty> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkMuteFindingsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkMuteFindingsResponse, Empty> retrievedResponse = securityCenterClient.PollOnceBulkMuteFindings(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkMuteFindingsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkMuteFindingsAsync</summary>
+        public async Task BulkMuteFindingsRequestObjectAsync()
+        {
+            // Snippet: BulkMuteFindingsAsync(BulkMuteFindingsRequest, CallSettings)
+            // Additional: BulkMuteFindingsAsync(BulkMuteFindingsRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            BulkMuteFindingsRequest request = new BulkMuteFindingsRequest
+            {
+                ParentAsResourceName = new UnparsedResourceName("a/wildcard/resource"),
+                Filter = "",
+            };
+            // Make the request
+            Operation<BulkMuteFindingsResponse, Empty> response = await securityCenterClient.BulkMuteFindingsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkMuteFindingsResponse, Empty> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkMuteFindingsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkMuteFindingsResponse, Empty> retrievedResponse = await securityCenterClient.PollOnceBulkMuteFindingsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkMuteFindingsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkMuteFindings</summary>
+        public void BulkMuteFindings()
+        {
+            // Snippet: BulkMuteFindings(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "a/wildcard/resource";
+            // Make the request
+            Operation<BulkMuteFindingsResponse, Empty> response = securityCenterClient.BulkMuteFindings(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkMuteFindingsResponse, Empty> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkMuteFindingsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkMuteFindingsResponse, Empty> retrievedResponse = securityCenterClient.PollOnceBulkMuteFindings(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkMuteFindingsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkMuteFindingsAsync</summary>
+        public async Task BulkMuteFindingsAsync()
+        {
+            // Snippet: BulkMuteFindingsAsync(string, CallSettings)
+            // Additional: BulkMuteFindingsAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "a/wildcard/resource";
+            // Make the request
+            Operation<BulkMuteFindingsResponse, Empty> response = await securityCenterClient.BulkMuteFindingsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkMuteFindingsResponse, Empty> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkMuteFindingsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkMuteFindingsResponse, Empty> retrievedResponse = await securityCenterClient.PollOnceBulkMuteFindingsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkMuteFindingsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkMuteFindings</summary>
+        public void BulkMuteFindingsResourceNames()
+        {
+            // Snippet: BulkMuteFindings(IResourceName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            IResourceName parent = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Operation<BulkMuteFindingsResponse, Empty> response = securityCenterClient.BulkMuteFindings(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkMuteFindingsResponse, Empty> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            BulkMuteFindingsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkMuteFindingsResponse, Empty> retrievedResponse = securityCenterClient.PollOnceBulkMuteFindings(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkMuteFindingsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for BulkMuteFindingsAsync</summary>
+        public async Task BulkMuteFindingsResourceNamesAsync()
+        {
+            // Snippet: BulkMuteFindingsAsync(IResourceName, CallSettings)
+            // Additional: BulkMuteFindingsAsync(IResourceName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            IResourceName parent = new UnparsedResourceName("a/wildcard/resource");
+            // Make the request
+            Operation<BulkMuteFindingsResponse, Empty> response = await securityCenterClient.BulkMuteFindingsAsync(parent);
+
+            // Poll until the returned long-running operation is complete
+            Operation<BulkMuteFindingsResponse, Empty> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            BulkMuteFindingsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<BulkMuteFindingsResponse, Empty> retrievedResponse = await securityCenterClient.PollOnceBulkMuteFindingsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                BulkMuteFindingsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateSource</summary>
         public void CreateSourceRequestObject()
         {
@@ -221,6 +406,283 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfigRequestObject()
+        {
+            // Snippet: CreateMuteConfig(CreateMuteConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "",
+            };
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfigRequestObjectAsync()
+        {
+            // Snippet: CreateMuteConfigAsync(CreateMuteConfigRequest, CallSettings)
+            // Additional: CreateMuteConfigAsync(CreateMuteConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "",
+            };
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig1()
+        {
+            // Snippet: CreateMuteConfig(string, MuteConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig1Async()
+        {
+            // Snippet: CreateMuteConfigAsync(string, MuteConfig, CallSettings)
+            // Additional: CreateMuteConfigAsync(string, MuteConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig1ResourceNames1()
+        {
+            // Snippet: CreateMuteConfig(OrganizationName, MuteConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig1ResourceNames1Async()
+        {
+            // Snippet: CreateMuteConfigAsync(OrganizationName, MuteConfig, CallSettings)
+            // Additional: CreateMuteConfigAsync(OrganizationName, MuteConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig1ResourceNames2()
+        {
+            // Snippet: CreateMuteConfig(FolderName, MuteConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig1ResourceNames2Async()
+        {
+            // Snippet: CreateMuteConfigAsync(FolderName, MuteConfig, CallSettings)
+            // Additional: CreateMuteConfigAsync(FolderName, MuteConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig1ResourceNames3()
+        {
+            // Snippet: CreateMuteConfig(ProjectName, MuteConfig, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig1ResourceNames3Async()
+        {
+            // Snippet: CreateMuteConfigAsync(ProjectName, MuteConfig, CallSettings)
+            // Additional: CreateMuteConfigAsync(ProjectName, MuteConfig, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            MuteConfig muteConfig = new MuteConfig();
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig2()
+        {
+            // Snippet: CreateMuteConfig(string, MuteConfig, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig2Async()
+        {
+            // Snippet: CreateMuteConfigAsync(string, MuteConfig, string, CallSettings)
+            // Additional: CreateMuteConfigAsync(string, MuteConfig, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig2ResourceNames1()
+        {
+            // Snippet: CreateMuteConfig(OrganizationName, MuteConfig, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig2ResourceNames1Async()
+        {
+            // Snippet: CreateMuteConfigAsync(OrganizationName, MuteConfig, string, CallSettings)
+            // Additional: CreateMuteConfigAsync(OrganizationName, MuteConfig, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig2ResourceNames2()
+        {
+            // Snippet: CreateMuteConfig(FolderName, MuteConfig, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig2ResourceNames2Async()
+        {
+            // Snippet: CreateMuteConfigAsync(FolderName, MuteConfig, string, CallSettings)
+            // Additional: CreateMuteConfigAsync(FolderName, MuteConfig, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfig</summary>
+        public void CreateMuteConfig2ResourceNames3()
+        {
+            // Snippet: CreateMuteConfig(ProjectName, MuteConfig, string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = securityCenterClient.CreateMuteConfig(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateMuteConfigAsync</summary>
+        public async Task CreateMuteConfig2ResourceNames3Async()
+        {
+            // Snippet: CreateMuteConfigAsync(ProjectName, MuteConfig, string, CallSettings)
+            // Additional: CreateMuteConfigAsync(ProjectName, MuteConfig, string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            MuteConfig muteConfig = new MuteConfig();
+            string muteConfigId = "";
+            // Make the request
+            MuteConfig response = await securityCenterClient.CreateMuteConfigAsync(parent, muteConfig, muteConfigId);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateNotificationConfig</summary>
         public void CreateNotificationConfigRequestObject()
         {
@@ -375,6 +837,93 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             NotificationConfig notificationConfig = new NotificationConfig();
             // Make the request
             NotificationConfig response = await securityCenterClient.CreateNotificationConfigAsync(parent, notificationConfig);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMuteConfig</summary>
+        public void DeleteMuteConfigRequestObject()
+        {
+            // Snippet: DeleteMuteConfig(DeleteMuteConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            // Make the request
+            securityCenterClient.DeleteMuteConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMuteConfigAsync</summary>
+        public async Task DeleteMuteConfigRequestObjectAsync()
+        {
+            // Snippet: DeleteMuteConfigAsync(DeleteMuteConfigRequest, CallSettings)
+            // Additional: DeleteMuteConfigAsync(DeleteMuteConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            // Make the request
+            await securityCenterClient.DeleteMuteConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMuteConfig</summary>
+        public void DeleteMuteConfig()
+        {
+            // Snippet: DeleteMuteConfig(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/muteConfigs/[MUTE_CONFIG]";
+            // Make the request
+            securityCenterClient.DeleteMuteConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMuteConfigAsync</summary>
+        public async Task DeleteMuteConfigAsync()
+        {
+            // Snippet: DeleteMuteConfigAsync(string, CallSettings)
+            // Additional: DeleteMuteConfigAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/muteConfigs/[MUTE_CONFIG]";
+            // Make the request
+            await securityCenterClient.DeleteMuteConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMuteConfig</summary>
+        public void DeleteMuteConfigResourceNames()
+        {
+            // Snippet: DeleteMuteConfig(MuteConfigName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            MuteConfigName name = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]");
+            // Make the request
+            securityCenterClient.DeleteMuteConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteMuteConfigAsync</summary>
+        public async Task DeleteMuteConfigResourceNamesAsync()
+        {
+            // Snippet: DeleteMuteConfigAsync(MuteConfigName, CallSettings)
+            // Additional: DeleteMuteConfigAsync(MuteConfigName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            MuteConfigName name = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]");
+            // Make the request
+            await securityCenterClient.DeleteMuteConfigAsync(name);
             // End snippet
         }
 
@@ -551,6 +1100,93 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             IResourceName resource = new UnparsedResourceName("a/wildcard/resource");
             // Make the request
             Policy response = await securityCenterClient.GetIamPolicyAsync(resource);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMuteConfig</summary>
+        public void GetMuteConfigRequestObject()
+        {
+            // Snippet: GetMuteConfig(GetMuteConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            // Make the request
+            MuteConfig response = securityCenterClient.GetMuteConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMuteConfigAsync</summary>
+        public async Task GetMuteConfigRequestObjectAsync()
+        {
+            // Snippet: GetMuteConfigAsync(GetMuteConfigRequest, CallSettings)
+            // Additional: GetMuteConfigAsync(GetMuteConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            // Make the request
+            MuteConfig response = await securityCenterClient.GetMuteConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMuteConfig</summary>
+        public void GetMuteConfig()
+        {
+            // Snippet: GetMuteConfig(string, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/muteConfigs/[MUTE_CONFIG]";
+            // Make the request
+            MuteConfig response = securityCenterClient.GetMuteConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMuteConfigAsync</summary>
+        public async Task GetMuteConfigAsync()
+        {
+            // Snippet: GetMuteConfigAsync(string, CallSettings)
+            // Additional: GetMuteConfigAsync(string, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/muteConfigs/[MUTE_CONFIG]";
+            // Make the request
+            MuteConfig response = await securityCenterClient.GetMuteConfigAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMuteConfig</summary>
+        public void GetMuteConfigResourceNames()
+        {
+            // Snippet: GetMuteConfig(MuteConfigName, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            MuteConfigName name = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]");
+            // Make the request
+            MuteConfig response = securityCenterClient.GetMuteConfig(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetMuteConfigAsync</summary>
+        public async Task GetMuteConfigResourceNamesAsync()
+        {
+            // Snippet: GetMuteConfigAsync(MuteConfigName, CallSettings)
+            // Additional: GetMuteConfigAsync(MuteConfigName, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            MuteConfigName name = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]");
+            // Make the request
+            MuteConfig response = await securityCenterClient.GetMuteConfigAsync(name);
             // End snippet
         }
 
@@ -1410,6 +2046,462 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // Do something with the page of items
             Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
             foreach (ListFindingsResponse.Types.ListFindingsResult item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigsRequestObject()
+        {
+            // Snippet: ListMuteConfigs(ListMuteConfigsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsRequestObjectAsync()
+        {
+            // Snippet: ListMuteConfigsAsync(ListMuteConfigsRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ListMuteConfigsRequest request = new ListMuteConfigsRequest
+            {
+                ParentAsOrganizationName = OrganizationName.FromOrganization("[ORGANIZATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigs()
+        {
+            // Snippet: ListMuteConfigs(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsAsync()
+        {
+            // Snippet: ListMuteConfigsAsync(string, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "organizations/[ORGANIZATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigsResourceNames1()
+        {
+            // Snippet: ListMuteConfigs(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsResourceNames1Async()
+        {
+            // Snippet: ListMuteConfigsAsync(OrganizationName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            OrganizationName parent = OrganizationName.FromOrganization("[ORGANIZATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigsResourceNames2()
+        {
+            // Snippet: ListMuteConfigs(FolderName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsResourceNames2Async()
+        {
+            // Snippet: ListMuteConfigsAsync(FolderName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FolderName parent = FolderName.FromFolder("[FOLDER]");
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigs</summary>
+        public void ListMuteConfigsResourceNames3()
+        {
+            // Snippet: ListMuteConfigs(ProjectName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigs(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (MuteConfig item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListMuteConfigsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListMuteConfigsAsync</summary>
+        public async Task ListMuteConfigsResourceNames3Async()
+        {
+            // Snippet: ListMuteConfigsAsync(ProjectName, string, int?, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            PagedAsyncEnumerable<ListMuteConfigsResponse, MuteConfig> response = securityCenterClient.ListMuteConfigsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((MuteConfig item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListMuteConfigsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (MuteConfig item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<MuteConfig> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (MuteConfig item in singlePage)
             {
                 // Do something with each item
                 Console.WriteLine(item);
@@ -2433,6 +3525,99 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for SetMute</summary>
+        public void SetMuteRequestObject()
+        {
+            // Snippet: SetMute(SetMuteRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unspecified,
+            };
+            // Make the request
+            Finding response = securityCenterClient.SetMute(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMuteAsync</summary>
+        public async Task SetMuteRequestObjectAsync()
+        {
+            // Snippet: SetMuteAsync(SetMuteRequest, CallSettings)
+            // Additional: SetMuteAsync(SetMuteRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unspecified,
+            };
+            // Make the request
+            Finding response = await securityCenterClient.SetMuteAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMute</summary>
+        public void SetMute()
+        {
+            // Snippet: SetMute(string, Finding.Types.Mute, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/sources/[SOURCE]/findings/[FINDING]";
+            Finding.Types.Mute mute = Finding.Types.Mute.Unspecified;
+            // Make the request
+            Finding response = securityCenterClient.SetMute(name, mute);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMuteAsync</summary>
+        public async Task SetMuteAsync()
+        {
+            // Snippet: SetMuteAsync(string, Finding.Types.Mute, CallSettings)
+            // Additional: SetMuteAsync(string, Finding.Types.Mute, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "organizations/[ORGANIZATION]/sources/[SOURCE]/findings/[FINDING]";
+            Finding.Types.Mute mute = Finding.Types.Mute.Unspecified;
+            // Make the request
+            Finding response = await securityCenterClient.SetMuteAsync(name, mute);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMute</summary>
+        public void SetMuteResourceNames()
+        {
+            // Snippet: SetMute(FindingName, Finding.Types.Mute, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            FindingName name = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
+            Finding.Types.Mute mute = Finding.Types.Mute.Unspecified;
+            // Make the request
+            Finding response = securityCenterClient.SetMute(name, mute);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SetMuteAsync</summary>
+        public async Task SetMuteResourceNamesAsync()
+        {
+            // Snippet: SetMuteAsync(FindingName, Finding.Types.Mute, CallSettings)
+            // Additional: SetMuteAsync(FindingName, Finding.Types.Mute, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            FindingName name = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]");
+            Finding.Types.Mute mute = Finding.Types.Mute.Unspecified;
+            // Make the request
+            Finding response = await securityCenterClient.SetMuteAsync(name, mute);
+            // End snippet
+        }
+
         /// <summary>Snippet for SetIamPolicy</summary>
         public void SetIamPolicyRequestObject()
         {
@@ -2678,6 +3863,70 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             Finding finding = new Finding();
             // Make the request
             Finding response = await securityCenterClient.UpdateFindingAsync(finding);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMuteConfig</summary>
+        public void UpdateMuteConfigRequestObject()
+        {
+            // Snippet: UpdateMuteConfig(UpdateMuteConfigRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            UpdateMuteConfigRequest request = new UpdateMuteConfigRequest
+            {
+                MuteConfig = new MuteConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            MuteConfig response = securityCenterClient.UpdateMuteConfig(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMuteConfigAsync</summary>
+        public async Task UpdateMuteConfigRequestObjectAsync()
+        {
+            // Snippet: UpdateMuteConfigAsync(UpdateMuteConfigRequest, CallSettings)
+            // Additional: UpdateMuteConfigAsync(UpdateMuteConfigRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateMuteConfigRequest request = new UpdateMuteConfigRequest
+            {
+                MuteConfig = new MuteConfig(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            MuteConfig response = await securityCenterClient.UpdateMuteConfigAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMuteConfig</summary>
+        public void UpdateMuteConfig()
+        {
+            // Snippet: UpdateMuteConfig(MuteConfig, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            MuteConfig muteConfig = new MuteConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            MuteConfig response = securityCenterClient.UpdateMuteConfig(muteConfig, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMuteConfigAsync</summary>
+        public async Task UpdateMuteConfigAsync()
+        {
+            // Snippet: UpdateMuteConfigAsync(MuteConfig, FieldMask, CallSettings)
+            // Additional: UpdateMuteConfigAsync(MuteConfig, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            MuteConfig muteConfig = new MuteConfig();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            MuteConfig response = await securityCenterClient.UpdateMuteConfigAsync(muteConfig, updateMask);
             // End snippet
         }
 

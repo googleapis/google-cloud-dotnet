@@ -213,9 +213,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -255,9 +258,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -299,9 +305,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -341,9 +350,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -385,9 +397,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -427,15 +442,568 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
             Finding responseCallSettings = await client.CreateFindingAsync(request.ParentAsSourceName, request.FindingId, request.Finding, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.CreateFindingAsync(request.ParentAsSourceName, request.FindingId, request.Finding, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig1()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.Parent, request.MuteConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig1Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig1ResourceNames1()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.ParentAsOrganizationName, request.MuteConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig1ResourceNames1Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig1ResourceNames2()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.ParentAsFolderName, request.MuteConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig1ResourceNames2Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig1ResourceNames3()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.ParentAsProjectName, request.MuteConfig);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig1ResourceNames3Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig2()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.Parent, request.MuteConfig, request.MuteConfigId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig2Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.Parent, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig2ResourceNames1()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.ParentAsOrganizationName, request.MuteConfig, request.MuteConfigId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig2ResourceNames1Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsOrganizationName, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig2ResourceNames2()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.ParentAsFolderName, request.MuteConfig, request.MuteConfigId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig2ResourceNames2Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsFolderName, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateMuteConfig2ResourceNames3()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.CreateMuteConfig(request.ParentAsProjectName, request.MuteConfig, request.MuteConfigId);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateMuteConfig2ResourceNames3Async()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateMuteConfigRequest request = new CreateMuteConfigRequest
+            {
+                ParentAsOrganizationName = gagr::OrganizationName.FromOrganization("[ORGANIZATION]"),
+                MuteConfig = new MuteConfig(),
+                MuteConfigId = "mute_config_id3601727e",
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.CreateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, request.MuteConfigId, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.CreateMuteConfigAsync(request.ParentAsProjectName, request.MuteConfig, request.MuteConfigId, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -707,6 +1275,105 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void DeleteMuteConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMuteConfig(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMuteConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMuteConfigAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteMuteConfig()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMuteConfig(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMuteConfigAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMuteConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMuteConfigAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteMuteConfigResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            client.DeleteMuteConfig(request.MuteConfigName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteMuteConfigResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteMuteConfigRequest request = new DeleteMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteMuteConfigAsync(request.MuteConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteMuteConfigAsync(request.MuteConfigName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void DeleteNotificationConfigRequestObject()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
@@ -959,6 +1626,180 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
             gciv::Policy responseCallSettings = await client.GetIamPolicyAsync(request.ResourceAsResourceName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             gciv::Policy responseCancellationToken = await client.GetIamPolicyAsync(request.ResourceAsResourceName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMuteConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.GetMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.GetMuteConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMuteConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.GetMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.GetMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.GetMuteConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMuteConfig()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.GetMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.GetMuteConfig(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMuteConfigAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.GetMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.GetMuteConfigAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.GetMuteConfigAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetMuteConfigResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.GetMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.GetMuteConfig(request.MuteConfigName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetMuteConfigResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetMuteConfigRequest request = new GetMuteConfigRequest
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.GetMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.GetMuteConfigAsync(request.MuteConfigName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.GetMuteConfigAsync(request.MuteConfigName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -1426,9 +2267,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1468,9 +2312,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1512,9 +2359,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1554,9 +2404,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1598,9 +2451,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -1640,15 +2496,288 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
             Finding responseCallSettings = await client.SetFindingStateAsync(request.FindingName, request.State, request.StartTime, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.SetFindingStateAsync(request.FindingName, request.State, request.StartTime, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetMuteRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unmuted,
+            };
+            Finding expectedResponse = new Finding
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Parent = "parent7858e4d0",
+                ResourceName = "resource_name8cc2e687",
+                State = Finding.Types.State.Unspecified,
+                Category = "category2f35efc4",
+                ExternalUri = "external_uri54bd3365",
+                SourceProperties =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+                SecurityMarks = new SecurityMarks(),
+                EventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
+                FindingClass = Finding.Types.FindingClass.Observation,
+                Indicator = new Indicator(),
+                Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
+            };
+            mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            Finding response = client.SetMute(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetMuteRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unmuted,
+            };
+            Finding expectedResponse = new Finding
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Parent = "parent7858e4d0",
+                ResourceName = "resource_name8cc2e687",
+                State = Finding.Types.State.Unspecified,
+                Category = "category2f35efc4",
+                ExternalUri = "external_uri54bd3365",
+                SourceProperties =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+                SecurityMarks = new SecurityMarks(),
+                EventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
+                FindingClass = Finding.Types.FindingClass.Observation,
+                Indicator = new Indicator(),
+                Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
+            };
+            mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            Finding responseCallSettings = await client.SetMuteAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Finding responseCancellationToken = await client.SetMuteAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetMute()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unmuted,
+            };
+            Finding expectedResponse = new Finding
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Parent = "parent7858e4d0",
+                ResourceName = "resource_name8cc2e687",
+                State = Finding.Types.State.Unspecified,
+                Category = "category2f35efc4",
+                ExternalUri = "external_uri54bd3365",
+                SourceProperties =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+                SecurityMarks = new SecurityMarks(),
+                EventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
+                FindingClass = Finding.Types.FindingClass.Observation,
+                Indicator = new Indicator(),
+                Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
+            };
+            mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            Finding response = client.SetMute(request.Name, request.Mute);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetMuteAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unmuted,
+            };
+            Finding expectedResponse = new Finding
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Parent = "parent7858e4d0",
+                ResourceName = "resource_name8cc2e687",
+                State = Finding.Types.State.Unspecified,
+                Category = "category2f35efc4",
+                ExternalUri = "external_uri54bd3365",
+                SourceProperties =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+                SecurityMarks = new SecurityMarks(),
+                EventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
+                FindingClass = Finding.Types.FindingClass.Observation,
+                Indicator = new Indicator(),
+                Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
+            };
+            mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            Finding responseCallSettings = await client.SetMuteAsync(request.Name, request.Mute, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Finding responseCancellationToken = await client.SetMuteAsync(request.Name, request.Mute, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SetMuteResourceNames()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unmuted,
+            };
+            Finding expectedResponse = new Finding
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Parent = "parent7858e4d0",
+                ResourceName = "resource_name8cc2e687",
+                State = Finding.Types.State.Unspecified,
+                Category = "category2f35efc4",
+                ExternalUri = "external_uri54bd3365",
+                SourceProperties =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+                SecurityMarks = new SecurityMarks(),
+                EventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
+                FindingClass = Finding.Types.FindingClass.Observation,
+                Indicator = new Indicator(),
+                Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
+            };
+            mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            Finding response = client.SetMute(request.FindingName, request.Mute);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SetMuteResourceNamesAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            SetMuteRequest request = new SetMuteRequest
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Mute = Finding.Types.Mute.Unmuted,
+            };
+            Finding expectedResponse = new Finding
+            {
+                FindingName = FindingName.FromOrganizationSourceFinding("[ORGANIZATION]", "[SOURCE]", "[FINDING]"),
+                Parent = "parent7858e4d0",
+                ResourceName = "resource_name8cc2e687",
+                State = Finding.Types.State.Unspecified,
+                Category = "category2f35efc4",
+                ExternalUri = "external_uri54bd3365",
+                SourceProperties =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new wkt::Value()
+                    },
+                },
+                SecurityMarks = new SecurityMarks(),
+                EventTime = new wkt::Timestamp(),
+                CreateTime = new wkt::Timestamp(),
+                Severity = Finding.Types.Severity.Medium,
+                CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
+                FindingClass = Finding.Types.FindingClass.Observation,
+                Indicator = new Indicator(),
+                Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
+            };
+            mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            Finding responseCallSettings = await client.SetMuteAsync(request.FindingName, request.Mute, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Finding responseCancellationToken = await client.SetMuteAsync(request.FindingName, request.Mute, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -2013,9 +3142,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2054,9 +3186,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2096,9 +3231,12 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
@@ -2136,15 +3274,138 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 Severity = Finding.Types.Severity.Medium,
                 CanonicalName = "canonical_name5e3d81e6",
+                Mute = Finding.Types.Mute.Unmuted,
                 FindingClass = Finding.Types.FindingClass.Observation,
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
+                MuteUpdateTime = new wkt::Timestamp(),
+                MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
             Finding responseCallSettings = await client.UpdateFindingAsync(request.Finding, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Finding responseCancellationToken = await client.UpdateFindingAsync(request.Finding, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateMuteConfigRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateMuteConfigRequest request = new UpdateMuteConfigRequest
+            {
+                MuteConfig = new MuteConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.UpdateMuteConfig(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateMuteConfigRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateMuteConfigRequest request = new UpdateMuteConfigRequest
+            {
+                MuteConfig = new MuteConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.UpdateMuteConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.UpdateMuteConfigAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateMuteConfig()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateMuteConfigRequest request = new UpdateMuteConfigRequest
+            {
+                MuteConfig = new MuteConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMuteConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig response = client.UpdateMuteConfig(request.MuteConfig, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateMuteConfigAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateMuteConfigRequest request = new UpdateMuteConfigRequest
+            {
+                MuteConfig = new MuteConfig(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            MuteConfig expectedResponse = new MuteConfig
+            {
+                MuteConfigName = MuteConfigName.FromOrganizationMuteConfig("[ORGANIZATION]", "[MUTE_CONFIG]"),
+#pragma warning disable CS0612
+                DisplayName = "display_name137f65c2",
+#pragma warning restore CS0612
+                Description = "description2cf9da67",
+                Filter = "filtere47ac9b2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                MostRecentEditor = "most_recent_editor37631565",
+            };
+            mockGrpcClient.Setup(x => x.UpdateMuteConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MuteConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            MuteConfig responseCallSettings = await client.UpdateMuteConfigAsync(request.MuteConfig, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            MuteConfig responseCancellationToken = await client.UpdateMuteConfigAsync(request.MuteConfig, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
