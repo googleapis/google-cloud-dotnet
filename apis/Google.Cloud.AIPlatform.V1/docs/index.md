@@ -20,7 +20,7 @@ given project in the `us-central1` region.
 
 {{sample:Readme.Endpoint}}
 
-# Constructing schema values
+## Constructing schema values
 
 Various aspects of the API use schemas which are represented using
 `Google.Protobuf.WellKnownTypes.Value`, which is a generic

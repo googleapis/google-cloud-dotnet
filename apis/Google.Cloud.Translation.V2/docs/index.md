@@ -19,7 +19,7 @@ Common operations are exposed via the
 [TranslationClient](obj/api/Google.Cloud.Translation.V2.TranslationClient.yml) and 
 [AdvancedTranslationClient](obj/api/Google.Cloud.Translation.V2.AdvancedTranslationClient.yml) classes.
 
-# Client life-cycle management
+## Client life-cycle management
 
 In many cases you don't need to worry about disposing of
 `TranslationClient` and `AdvancedTranslationClient` objects, and can create them reasonably freely -
@@ -30,7 +30,7 @@ client objects, please dispose of them to help with timely resource
 clean-up. See [the resource clean-up guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis) for more
 details.
 
-# Sample code
+## Sample code
 
 ## Translating a single item of text
 

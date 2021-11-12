@@ -40,7 +40,7 @@ See the
 [EmulatorDetection](obj/api/Google.Cloud.Datastore.V1.EmulatorDetection.yml)
 enum for details of the other possible values.
 
-# Sample code
+## Sample code
 
 ## Inserting data
 

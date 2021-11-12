@@ -16,7 +16,7 @@ below in the sample code. More complex scenarios are considered further down thi
 Note that the audio data should be mono rather than stereo, and the
 format needs to be explicitly specified in the request.
 
-# Sample code
+## Sample code
 
 ## Constructing a RecognitionAudio object
 
@@ -30,7 +30,7 @@ instances to be constructed from files, streams, byte arrays and URIs.
 
 {{sample:SpeechClient.Recognize}}
 
-# Immediate, long-running and streaming operations
+## Immediate, long-running and streaming operations
 
 The underlying RPC API contains three modes of operation.
 

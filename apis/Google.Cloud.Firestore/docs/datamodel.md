@@ -11,7 +11,7 @@ It aims to make it simple for you to work with the data, whether you're creating
 This page is primarily aimed at explaining how document data can be used with the .NET library. See
 the [user guide](userguide.md) for more details around the relationship between documents and collections.
 
-# Data types
+## Data types
 
 A document is essentially a map, from field names to field values. Firestore supports multiple types of data for fields.
 For interoperability, some Firestore data types map onto multiple .NET types. The table below shows these types, and the default .NET
@@ -330,7 +330,7 @@ registry for the `FirestoreDb` used to create and retrieve documents.
 
 {{sample:DataModel.EnumSerializeByName}}
 
-# Value tuples
+## Value tuples
 
 C# 7 introduced a feature around the `System.ValueTuple` generic structs which are part of
 the framework. When using [attributed properties](#mapping-with-attributed-classes), the built-in
@@ -355,7 +355,7 @@ There are some limitations on this feature:
 These restrictions primarily exist for simplicity of the implementation, and the feature may be expanded
 later to lift some of them.
 
-# Sentinel values
+## Sentinel values
 
 So far all the values we've looked at have been known by the C# code. There are additional *sentinel values* available which behave slightly differently.
 

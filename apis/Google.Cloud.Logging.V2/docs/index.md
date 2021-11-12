@@ -14,12 +14,12 @@ If you wish to use the log4net integration, install the
 
 {{auth}}
 
-# Support from third party libraries
+## Support from third party libraries
 
 - [Logary](https://github.com/logary/logary) supports Google Stackdriver logging. Install the [NuGet package](https://www.nuget.org/packages/Logary.Targets.Stackdriver) and see [instructions on the project homepage](https://github.com/logary/logary#stackdriver-target).
 - [Serilog](https://serilog.net/) supports Google Stackdriver Logging. Install the [NuGet package](https://www.nuget.org/packages/Serilog.Sinks.GoogleCloudLogging/) `Serilog.Sinks.GoogleCloudLogging` and [configure options](https://github.com/manigandham/serilog-sinks-googlecloudlogging).
 
-# Raw RPC API
+## Raw RPC API
 
 If required, this package provides a low-level abstraciton over the
 raw RPC API.

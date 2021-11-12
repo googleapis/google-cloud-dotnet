@@ -67,7 +67,7 @@ This can be useful if you only need to use some of the observability components.
 Optional parameters on `AddGoogleDiagnosticsForAspNetCore` are also available to specify options for each
 of the components (logging, tracing and error reporting).
 
-# Error Reporting
+## Error Reporting
 
 The error reporting component allows you to create error reports from exceptions thrown in your application.
 You can explicitly log exceptions you have caught, but the component will also log exceptions that haven't been
@@ -88,7 +88,7 @@ You can also log exceptions explicitly.
 
 {{sample:ErrorReporting.LogExceptions}}
 
-# Logging
+## Logging
 
 Configuring and using Google Cloud Logging in ASP.NET Core 3+ applications is very similar to doing so in a
 non ASP.NET Core application. See the
@@ -115,7 +115,7 @@ will get injected on construction.
 
 {{sample:Logging.Logging}}
 
-# Tracing
+## Tracing
 
 The tracing component allows you to trace your application and send traces to Google Cloud Trace.
 

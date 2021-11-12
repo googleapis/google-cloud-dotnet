@@ -14,7 +14,7 @@
 
 {{client-construction}}
 
-# Sample code
+## Sample code
 
 ## Creating a job
 
