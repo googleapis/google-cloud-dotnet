@@ -22,13 +22,13 @@ For customization of credentials and other settings, create a
 `FirestoreDbBuilder`, set the appropriate properties, and call
 `Build` to create a `FirestoreDb`.
 
-# Sample code
+## Sample code
 
 {{sample:Index.GettingStarted}}
 
 See the [user guide](userguide.md) for more samples.
 
-# Connecting to the emulator
+## Connecting to the emulator
 
 To connect to the [Firestore
 Emulator](https://cloud.google.com/sdk/gcloud/reference/beta/emulators/firestore/),

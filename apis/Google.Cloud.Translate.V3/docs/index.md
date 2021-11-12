@@ -14,6 +14,6 @@
 
 {{client-construction}}
 
-# Sample code
+## Sample code
 
 {{sample:TranslationServiceClient.GettingStarted}}

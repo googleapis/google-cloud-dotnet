@@ -20,7 +20,7 @@ images, but convenience methods are provided for common cases of
 working with a single image, and for performing a single annotation
 operation on a single image.
 
-# Sample code
+## Sample code
 
 ## Constructing an Image object
 

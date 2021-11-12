@@ -22,7 +22,7 @@ and [Document.FromHtml](obj/api/Google.Cloud.Language.V1.Document.yml#Google_Clo
 to construct instances from text available in your application, or
 you can specify a Google Cloud Storage URI.
 
-# Sample code
+## Sample code
 
 ## Analyze sentiment in a document
 

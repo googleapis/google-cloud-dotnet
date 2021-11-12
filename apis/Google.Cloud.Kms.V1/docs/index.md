@@ -14,7 +14,7 @@
 
 {{client-construction}}
 
-# Sample code
+## Sample code
 
 This example lists all the key rings in the "global" location for a specific project.
 

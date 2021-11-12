@@ -16,7 +16,7 @@ Common operations are exposed via the
 class, and additional wrapper classes are present to make operations
 with datasets, tables and query results simpler.
 
-# Client life-cycle management
+## Client life-cycle management
 
 In many cases you don't need to worry about disposing of
 `BigQueryClient` objects, and can create them reasonably freely -
@@ -27,7 +27,7 @@ client objects, please dispose of them to help with timely resource
 clean-up. See [the resource clean-up guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis) for more
 details.
 
-# Sample code
+## Sample code
 
 ## Querying
 

@@ -21,7 +21,7 @@ of setting CommandText manually.
 
 See examples below:
 
-# Sample code
+## Sample code
 
 Once you have created your Google Cloud Project and Spanner Instance using the web console,
 you can start using the ADO.NET provider to create and modify a Cloud Spanner database.

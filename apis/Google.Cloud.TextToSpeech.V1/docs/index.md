@@ -14,6 +14,6 @@
 
 {{client-construction}}
 
-# Sample code
+## Sample code
 
 [!code-cs[](obj/snippets/Google.Cloud.TextToSpeech.V1.TextToSpeechClient.txt#SynthesizeSpeech)]

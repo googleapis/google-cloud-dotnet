@@ -14,11 +14,11 @@ Common operations are exposed via the
 [BigtableClient](obj/api/Google.Cloud.Bigtable.V2.BigtableClient.yml)
 class.
 
-# Sample code
+## Sample code
 
 {{sample:BigtableClient.Overview}}
 
-# Client life-cycle management
+## Client life-cycle management
 
 By default, clients share an internally managed Grpc.Gcp.GcpCallInvoker to
 establish gRPC channels with the Bigtable service using default credentials.
@@ -35,7 +35,7 @@ BigtableClient.
 
 {{sample:BigtableServiceApiSettings.CallInvokerSharing}}
 
-# Non-default credentials
+## Non-default credentials
 
 If you would like to create clients which share a GcpCallInvoker but do not
 use the default credentials, this can easily be done by manually creating a

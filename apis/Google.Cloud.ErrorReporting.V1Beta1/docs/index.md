@@ -23,7 +23,7 @@ Reporting API directly.
 
 {{client-construction}}
 
-# Sample code using the Error Reporting API directly
+## Sample code using the Error Reporting API directly
 
 ## Report an error
 
