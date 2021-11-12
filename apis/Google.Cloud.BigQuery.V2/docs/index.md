@@ -9,7 +9,7 @@ It wraps the `Google.Apis.Bigquery.v2` generated library, providing a higher-lev
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 Common operations are exposed via the
 [BigQueryClient](obj/api/Google.Cloud.BigQuery.V2.BigQueryClient.yml)

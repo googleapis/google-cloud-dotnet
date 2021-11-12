@@ -10,7 +10,7 @@ Logging](https://cloud.google.com/logging/) with
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 See the [configuration guide](configuration.md) for details of all GoogleStackdriverAppender configuration options.
 

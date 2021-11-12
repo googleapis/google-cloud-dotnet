@@ -16,7 +16,7 @@ apply for access.
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 {{client-classes}}
 

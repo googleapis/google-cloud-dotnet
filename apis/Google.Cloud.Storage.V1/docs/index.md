@@ -9,7 +9,7 @@ It wraps the `Google.Apis.Storage.v1` generated library, providing a higher-leve
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 Common operations are exposed via the
 [StorageClient](obj/api/Google.Cloud.Storage.V1.StorageClient.yml) class.

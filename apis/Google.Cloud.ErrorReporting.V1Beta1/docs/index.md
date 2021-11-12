@@ -17,7 +17,7 @@ Reporting API directly.
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 {{client-classes}}
 

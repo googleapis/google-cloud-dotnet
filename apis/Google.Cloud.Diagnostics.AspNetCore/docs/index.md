@@ -43,7 +43,7 @@ for the permissions needed for Tracing.
 > `Google.Cloud.Diagnostics.Common.ErrorReportingOptions` classes.
 > Here you can read more about [CPU allocation in Google Cloud Run](https://cloud.google.com/run/docs/tips/general#background-activity).
 
-# Getting started
+## Getting started
 
 The easiest way to configure Google Cloud Diagnostics is using the `AddGoogleDiagnosticsForAspNetCore`
 overloaded extension method on `IServiceCollection`.

@@ -42,7 +42,7 @@ for the permissions needed for Tracing.
 > You can read more about .NET dependency injection in non ASP.NET Core applications in the
 > [Microsoft documentation](https://docs.microsoft.com/en-us/dotnet/core/extensions/dependency-injection-usage).
 
-# Getting started
+## Getting started
 
 The easiest way to configure Google Cloud Diagnostics is using the `AddGoogleDiagnostics` extension
 methods on `IServiceCollection`.

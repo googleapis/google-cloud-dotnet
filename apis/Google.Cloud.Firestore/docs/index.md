@@ -8,7 +8,7 @@
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 Everything starts with [FirestoreDb](obj/api/Google.Cloud.Firestore.FirestoreDb.yml).
 Create an instance using the `Create` or `CreateAsync` methods, passing in your Google Cloud project ID.
