@@ -1,11 +1,11 @@
 # Version history
 
-# Version 1.6.0, released 2021-11-10
+## Version 1.6.0, released 2021-11-10
 
 - [Commit 36bae8f](https://github.com/googleapis/google-cloud-dotnet/commit/36bae8f):
   - feat: added API for changelogs
   - docs: clarified semantic of the streaming APIs
-# Version 1.5.0, released 2021-10-12
+## Version 1.5.0, released 2021-10-12
 
 - [Commit 74b880a](https://github.com/googleapis/google-cloud-dotnet/commit/74b880a):
   - feat: added deployment API
@@ -15,7 +15,7 @@
   - feat: update gapic-generator-csharp to 1.3.11
   - feat: update rules_gapic to 0.8.0
 
-# Version 1.4.0, released 2021-09-23
+## Version 1.4.0, released 2021-09-23
 
 - [Commit 6b21a68](https://github.com/googleapis/google-cloud-dotnet/commit/6b21a68):
   - docs: clarified some LRO types
@@ -24,7 +24,7 @@
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 - [Commit 992c711](https://github.com/googleapis/google-cloud-dotnet/commit/992c711): feat: added support for DLP templates; expose `Locations` service to get/list avaliable locations of Dialogflow products
 
-# Version 1.3.0, released 2021-08-10
+## Version 1.3.0, released 2021-08-10
 
 - [Commit c2e92a3](https://github.com/googleapis/google-cloud-dotnet/commit/c2e92a3):
   - feat: add advanced settings for agent level
@@ -33,7 +33,7 @@
   - feat: add language code for streaming recognition result and flow versions for query parameters
   - docs: deprecate legacy logging settings
 
-# Version 1.2.0, released 2021-06-22
+## Version 1.2.0, released 2021-06-22
 
 - [Commit 9e5afc5](https://github.com/googleapis/google-cloud-dotnet/commit/9e5afc5):
   - feat!: mark agent.default_language_code as required
@@ -44,7 +44,7 @@
 - [Commit d2778b1](https://github.com/googleapis/google-cloud-dotnet/commit/d2778b1): docs: clarified documentation for security settings docs: clarified documentation for session parameters
 - [Commit e48e2f5](https://github.com/googleapis/google-cloud-dotnet/commit/e48e2f5): feat: add support for service directory webhooks
 
-# Version 1.1.0, released 2021-04-29
+## Version 1.1.0, released 2021-04-29
 
 - [Commit 4f8b084](https://github.com/googleapis/google-cloud-dotnet/commit/4f8b084):
   - feat: Expose supported languages of the agent
@@ -72,10 +72,10 @@
 - [Commit 41e91ab](https://github.com/googleapis/google-cloud-dotnet/commit/41e91ab): docs: test cases doc update
 - [Commit 2711bfe](https://github.com/googleapis/google-cloud-dotnet/commit/2711bfe): feat: added support for test cases and agent validation
 
-# Version 1.0.0, released 2021-01-20
+## Version 1.0.0, released 2021-01-20
 
 - [Commit 3ff57b5](https://github.com/googleapis/google-cloud-dotnet/commit/3ff57b5): feat: add experiment and API docs: update comments on parameters and agent
 
-# Version 1.0.0-beta01, released 2020-12-14
+## Version 1.0.0-beta01, released 2020-12-14
 
 Initial release.

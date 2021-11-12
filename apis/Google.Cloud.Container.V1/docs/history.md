@@ -1,22 +1,22 @@
 # Version history
 
-# Version 2.6.0, released 2021-08-19
+## Version 2.6.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 2.5.0, released 2021-08-10
+## Version 2.5.0, released 2021-08-10
 
 - [Commit 28e502a](https://github.com/googleapis/google-cloud-dotnet/commit/28e502a): feat: allow updating security group on existing clusters
 
-# Version 2.4.0, released 2021-06-22
+## Version 2.4.0, released 2021-06-22
 
 - [Commit 10470bb](https://github.com/googleapis/google-cloud-dotnet/commit/10470bb): feat: support for NodeAutoprovisioning ImageType
 
-# Version 2.3.0, released 2021-05-25
+## Version 2.3.0, released 2021-05-25
 
 - [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
 
-# Version 2.2.0, released 2020-11-19
+## Version 2.2.0, released 2020-11-19
 
 - [Commit 3a8598f](https://github.com/googleapis/google-cloud-dotnet/commit/3a8598f):
   - fix: deprecate SetLocations; use UpdateCluster
@@ -43,7 +43,7 @@
   - feat: support for specifying node disk size and type
   - docs: many minor documentation clarifications
 
-# Version 2.1.0, released 2020-10-14
+## Version 2.1.0, released 2020-10-14
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
@@ -54,23 +54,23 @@
 - [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
 - [Commit dfe20a4](https://github.com/googleapis/google-cloud-dotnet/commit/dfe20a4): docs: display resource name patterns in code font.
 
-# Version 2.0.0, released 2020-03-17
+## Version 2.0.0, released 2020-03-17
 
 No API surface changes compared with 2.0.0-beta01, just dependency
 and implementation changes.
 
-# Version 2.0.0-beta01, released 2020-02-18
+## Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
 guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
 for details of changes to both GAX and code generation.
 
-# Version 1.1.0, released 2019-12-09
+## Version 1.1.0, released 2019-12-09
 
 - Some retry settings are now obsolete, and will be removed in the next major version
 - Added support for many cluster options
 - Added ListUsableSubnetworks methods
 
-# Version 1.0.0, released 2019-07-10
+## Version 1.0.0, released 2019-07-10
 
 Initial GA release.

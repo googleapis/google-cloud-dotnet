@@ -1,14 +1,14 @@
 # Version history
 
-# Version 3.3.0, released 2021-10-14
+## Version 3.3.0, released 2021-10-14
 
 - [Commit 7c1e526](https://github.com/googleapis/google-cloud-dotnet/commit/7c1e526): feat: add Dataproc Serverless for Spark Batches API
 
-# Version 3.2.0, released 2021-08-19
+## Version 3.2.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 3.1.0, released 2021-04-29
+## Version 3.1.0, released 2021-04-29
 
 - [Commit d429843](https://github.com/googleapis/google-cloud-dotnet/commit/d429843):
   - feat: The new start and stop cluster methods.
@@ -22,7 +22,7 @@
   - feat: Components for DOCKER, DRUID, FLINK, HBASE, RANGER, and SOLR
   - feat: The ability to specify a DAG timeout for workflows.
 
-# Version 3.0.0, released 2020-11-17
+## Version 3.0.0, released 2020-11-17
 
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
 - [Commit baae3ab](https://github.com/googleapis/google-cloud-dotnet/commit/baae3ab): docs: change relative URLs to absolute URLs to fix broken links.
@@ -35,7 +35,7 @@
 
 Please note the breaking change compared with 2.1.0, in terms of long-running operation response/metadata types.
 
-# Version 2.1.0, released 2020-05-04
+## Version 2.1.0, released 2020-05-04
 
 - [Commit cdd7342](https://github.com/googleapis/google-cloud-dotnet/commit/cdd7342): docs: change relative URLs to absolute URLs to fix broken links.
 - [Commit e644610](https://github.com/googleapis/google-cloud-dotnet/commit/e644610):
@@ -46,7 +46,7 @@ Please note the breaking change compared with 2.1.0, in terms of long-running op
 - [Commit edebc2b](https://github.com/googleapis/google-cloud-dotnet/commit/edebc2b): fix Dataproc: add missing `REQUIRED` annotation.
 - [Commit bd045c2](https://github.com/googleapis/google-cloud-dotnet/commit/bd045c2): Adds resource name overloads for autoscaling policy operations
 
-# Version 2.0.0, released 2020-03-17
+## Version 2.0.0, released 2020-03-17
 
 - [Commit c120b77](https://github.com/googleapis/google-cloud-dotnet/commit/c120b77):
   - Feature: SparkR and Presto job support
@@ -58,7 +58,7 @@ Note that the breaking change here was expected;
 RegionOrLocationName didn't represent the name of a real resource,
 and we now have better options for handling parents of resources with multiple patterns.
 
-# Version 2.0.0-beta01, released 2020-02-18
+## Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
 guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
@@ -68,11 +68,11 @@ Additional changes:
 
 - [Commit a629906](https://github.com/googleapis/google-cloud-dotnet/commit/a629906): Adds AutoscalingPolicyClient.
 
-# Version 1.1.0, released 2019-12-09
+## Version 1.1.0, released 2019-12-09
 
 - [Commit 4e38a24](https://github.com/googleapis/google-cloud-dotnet/commit/4e38a24): Autoscaling and security configuration
 - [Commit 50658e2](https://github.com/googleapis/google-cloud-dotnet/commit/50658e2): Add resource name format methods
 
-# Version 1.0.0, released 2019-07-10
+## Version 1.0.0, released 2019-07-10
 
 Initial GA release.

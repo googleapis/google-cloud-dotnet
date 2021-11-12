@@ -1,34 +1,34 @@
 # Version history
 
-# Version 4.3.1, released 2021-11-09
+## Version 4.3.1, released 2021-11-09
 
 No API surface changes; just dependency updates.
 
-# Version 4.3.0, released 2021-11-01
+## Version 4.3.0, released 2021-11-01
 
 No API surface changes; just releasing a stable version.
 
-# Version 4.3.0-beta08, released 2021-10-25
+## Version 4.3.0-beta08, released 2021-10-25
 
 Version 4.3.0-beta07 was not released because of CI errors.
 
 No API surface changes; just dependency updates.
 
-# Version 4.3.0-beta07, released 2021-10-20
+## Version 4.3.0-beta07, released 2021-10-20
 
 No API surface changes; just dependency updates.
 
-# Version 4.3.0-beta06, released 2021-10-13
+## Version 4.3.0-beta06, released 2021-10-13
 
 Versions 4.3.0-beta04 and 4.3.0-beta05 were not released because of CI errors.
 This version contains all changes described for the unreleased version 4.3.0-beta04.
 
-# Version 4.3.0-beta05, released 2021-10-13
+## Version 4.3.0-beta05, released 2021-10-13
 
 Version 4.3.0-beta04 was not released because of a CI error.
 This version contains all changes described for the unreleased version 4.3.0-beta04.
 
-# Version 4.3.0-beta04, released 2021-10-12
+## Version 4.3.0-beta04, released 2021-10-12
 
 - [Commit 03eb674](https://github.com/googleapis/google-cloud-dotnet/commit/03eb674):
   - refactor: Add better extension methods for Google Diagnostics.
@@ -51,18 +51,18 @@ This version contains all changes described for the unreleased version 4.3.0-bet
   - Move non ASP.NET core snippets to Common.
   - Delete in XML docs samples that quickly get outdated. We have snippets.
 
-# Version 4.3.0-beta03, released 2021-07-22
+## Version 4.3.0-beta03, released 2021-07-22
 
 No API surface changes; just publishing docs from 4.3.0-beta02.
 
-# Version 4.3.0-beta02, released 2021-07-22
+## Version 4.3.0-beta02, released 2021-07-22
 
 - [Commit c682904](https://github.com/googleapis/google-cloud-dotnet/commit/c682904):
   - feat: Adds trace context information to error log entries.
   - Closes [issue 5360](https://github.com/googleapis/google-cloud-dotnet/issues/5360)
 - [Commit 1245ded](https://github.com/googleapis/google-cloud-dotnet/commit/1245ded): fix: Fully qualifies all alternative types/members for obsolete ones. Fixes [issue 6672](https://github.com/googleapis/google-cloud-dotnet/issues/6672)
 
-# Version 4.3.0-beta01, released 2021-06-24
+## Version 4.3.0-beta01, released 2021-06-24
 
 - [Commit 60e8cd8](https://github.com/googleapis/google-cloud-dotnet/commit/60e8cd8):
   - feat: Copies GoogleLogger to Common. This allows easier use of GoogleLogger in non ASP.NET Core applications.
@@ -98,26 +98,26 @@ Note: changing a generic type parameter constraint in
 `LabelProviderExtensions` is notionally a breaking change, but due
 to how it will be used, we don't expect it to actually break any customers.
 
-# Version 4.2.0, released 2020-12-07
+## Version 4.2.0, released 2020-12-07
 
 No API changes since 4.2.0-beta02; just a stable release of the changes since 4.1.0.
 
-# Version 4.2.0-beta02, released 2020-10-12
+## Version 4.2.0-beta02, released 2020-10-12
 
 - [Commit 1cd4ee6](https://github.com/googleapis/google-cloud-dotnet/commit/1cd4ee6): build: Removes ASP.NET Core unused dependencies from Diagnostics* packages. Towards [issue 4750](https://github.com/googleapis/google-cloud-dotnet/issues/4750).
 
-# Version 4.2.0-beta01, released 2020-09-29
+## Version 4.2.0-beta01, released 2020-09-29
 
 - [Commit 5710321](https://github.com/googleapis/google-cloud-dotnet/commit/5710321): feat: Adds GoogleTraceProvider to be used by Logging when Tracing is not configured. Closes [issue 5359](https://github.com/googleapis/google-cloud-dotnet/issues/5359).
 - [Commit f46b1c6](https://github.com/googleapis/google-cloud-dotnet/commit/f46b1c6): fix: Corrects Span ID format for adding to Log Entries. Fixes [issue 5358](https://github.com/googleapis/google-cloud-dotnet/issues/5358).
 - [Commit 924c503](https://github.com/googleapis/google-cloud-dotnet/commit/924c503): docs: Adds documentation about environments that limit background activities. Closes [issue 5275](https://github.com/googleapis/google-cloud-dotnet/issues/5275).
 - [Commit 7480149](https://github.com/googleapis/google-cloud-dotnet/commit/7480149): fix: Sets LogEntry.TraceSampled to true if tracing information is adding to the entry. Fixes [issue 5307](https://github.com/googleapis/google-cloud-dotnet/issues/5307).
 
-# Version 4.1.0, released 2020-08-18
+## Version 4.1.0, released 2020-08-18
 
 No changes compared with 4.1.0-beta01
 
-# Version 4.1.0-beta01, released 2020-08-03
+## Version 4.1.0-beta01, released 2020-08-03
 
 - [Commit 587cafd](https://github.com/googleapis/google-cloud-dotnet/commit/587cafd): Makes Tracing rate limiter treat overflow values as always/never trace.
 - [Commit b6dcc51](https://github.com/googleapis/google-cloud-dotnet/commit/b6dcc51):
@@ -132,16 +132,16 @@ No changes compared with 4.1.0-beta01
   -   * Fixes [issue 5190](https://github.com/googleapis/google-cloud-dotnet/issues/5190)
 - [Commit 1509482](https://github.com/googleapis/google-cloud-dotnet/commit/1509482): Fixes [issue 5028](https://github.com/googleapis/google-cloud-dotnet/issues/5028): Adds options to specify service context values for GoogleLogger.
 
-# Version 4.0.0, released 2020-03-18
+## Version 4.0.0, released 2020-03-18
 
 No API surface changes compared with 4.0.0-beta02, just dependency
 and implementation changes.
 
-# Version 4.0.0-beta02, released 2020-03-10
+## Version 4.0.0-beta02, released 2020-03-10
 
 - [Commit 5bc0cf5](https://github.com/googleapis/google-cloud-dotnet/commit/5bc0cf5): GoogleExceptionLogger accepts null HttpContext.
 
-# Version 4.0.0-beta01, released 2020-02-19
+## Version 4.0.0-beta01, released 2020-02-19
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
 guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
@@ -150,7 +150,7 @@ for details of changes to both GAX and code generation.
 There are no direct API surface changes in *this* package, but the
 changes in dependencies can still cause breaking changes.
 
-# Version 3.0.0, released 2019-12-16
+## Version 3.0.0, released 2019-12-16
 
 This is the last version of this package to depend on GAX 2.x and
 Grpc.Core 1.x. We expect to release a new version depending on GAX
@@ -177,7 +177,7 @@ New features since 2.0.0:
 - Add trace IDs to log entries if they are available.
 - Optionally write out log target information to a TextWriter on initialization
 
-# Version 2.0.0, released 2017-11-27
+## Version 2.0.0, released 2017-11-27
 
 New features since 1.0.0:
 
@@ -185,6 +185,6 @@ New features since 1.0.0:
 - Support for recommended way of adding logging providers in ASP.NET Core 2.0
 - Support for .Net Framework 4.6.
 
-# Version 1.0.0, released 2017-08-25
+## Version 1.0.0, released 2017-08-25
 
 Initial Release

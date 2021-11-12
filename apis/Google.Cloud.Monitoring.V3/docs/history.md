@@ -1,6 +1,6 @@
 # Version history
 
-# Version 2.4.0, released 2021-10-14
+## Version 2.4.0, released 2021-10-14
 
 - [Commit 556147f](https://github.com/googleapis/google-cloud-dotnet/commit/556147f):
   - fix: Reintroduce deprecated field/enum for backward compatibility
@@ -13,7 +13,7 @@
   - fix!: mark required fields in QueryTimeSeriesRequest as required
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 2.3.0, released 2021-04-29
+## Version 2.3.0, released 2021-04-29
 
 - [Commit 770bd47](https://github.com/googleapis/google-cloud-dotnet/commit/770bd47):
   - feat: Added support for Monitoring Query Language: https://cloud.google.com/monitoring/mql
@@ -25,21 +25,21 @@
   - fix: Extended the default deadline for UpdateGroup to 180s.
   - feat: Added support for secondary aggregation when querying metrics.
 
-# Version 2.2.0, released 2020-10-22
+## Version 2.2.0, released 2020-10-22
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
 - [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
 - [Commit f83bdf1](https://github.com/googleapis/google-cloud-dotnet/commit/f83bdf1): fix: Apply timeouts to RPCs without retry
 
-# Version 2.1.0, released 2020-06-15
+## Version 2.1.0, released 2020-06-15
 
 - [Commit 4389faa](https://github.com/googleapis/google-cloud-dotnet/commit/4389faa): docs: Change relative URLs to absolute URLs to fix broken links.
 - [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
 
 (No API surface changes relative to 2.1.0-beta01.)
 
-# Version 2.1.0-beta01, released 2020-05-06
+## Version 2.1.0-beta01, released 2020-05-06
 
 - [Commit 9c1f9d6](https://github.com/googleapis/google-cloud-dotnet/commit/9c1f9d6):
   - feat: Update public client library for Cloud Monitoring to introduce new Uptime check feature.
@@ -49,18 +49,18 @@
     and the end time of the previous one from the one microsecond to one millisecond.
     This will enable some resource savings for in-memory storage.
 
-# Version 2.0.0, released 2020-03-18
+## Version 2.0.0, released 2020-03-18
 
 No API surface changes compared with 2.0.0-beta01, just dependency
 and implementation changes.
 
-# Version 2.0.0-beta01, released 2020-02-18
+## Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
 guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
 for details of changes to both GAX and code generation.
 
-# Version 1.2.0, released 2019-12-10
+## Version 1.2.0, released 2019-12-10
 
 - [Commit 1258244](https://github.com/googleapis/google-cloud-dotnet/commit/1258244): Multiple new features, including a new service (ServiceMonitoringService).
 - [Commit 84915b4](https://github.com/googleapis/google-cloud-dotnet/commit/84915b4): Additions:
@@ -75,7 +75,7 @@ for details of changes to both GAX and code generation.
 - [Commit e5b2e69](https://github.com/googleapis/google-cloud-dotnet/commit/e5b2e69): Adds support for verifying notification channels
 - [Commit 50658e2](https://github.com/googleapis/google-cloud-dotnet/commit/50658e2): Add format methods for all resource name types
 
-# Version 1.1.0, released 2019-07-10
+## Version 1.1.0, released 2019-07-10
 
 New RPCs, with supporting classes and properties:
 
@@ -87,6 +87,6 @@ New RPCs, with supporting classes and properties:
 
 Additionally, there are new overloads due to code generator updates.
 
-# Version 1.0.0, released 2017-09-22
+## Version 1.0.0, released 2017-09-22
 
 Initial GA release.

@@ -1,6 +1,6 @@
 # Version history
 
-# Version 1.0.0, released 2021-11-10
+## Version 1.0.0, released 2021-11-10
 
 First GA release.
 
@@ -12,14 +12,14 @@ First GA release.
   - feat: deprecate issue_matches
   - docs: if conversation medium is unspecified, it will default to PHONE_CALL
 
-# Version 1.0.0-beta03, released 2021-09-29
+## Version 1.0.0-beta03, released 2021-09-29
 
 - [Commit ddab19e](https://github.com/googleapis/google-cloud-dotnet/commit/ddab19e):
   - feat: add metadata from dialogflow related to transcript segment
   - feat: add sentiment data for transcript segment
   - feat: add obfuscated if from dialogflow
 
-# Version 1.0.0-beta02, released 2021-09-23
+## Version 1.0.0-beta02, released 2021-09-23
 
 - [Commit 37fa769](https://github.com/googleapis/google-cloud-dotnet/commit/37fa769):
   - feat: filter is used to filter conversations used for issue model training
@@ -31,6 +31,6 @@ First GA release.
   - feat: support Dialogflow and user-specified participant IDs
   - docs: update pubsub_notification_settings docs
 
-# Version 1.0.0-beta01, released 2021-08-10
+## Version 1.0.0-beta01, released 2021-08-10
 
 Initial release.

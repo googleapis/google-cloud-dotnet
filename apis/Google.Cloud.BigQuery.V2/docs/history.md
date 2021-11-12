@@ -1,20 +1,20 @@
 # Version history
 
-# Version 2.3.0, released 2021-08-10
+## Version 2.3.0, released 2021-08-10
 
 - [Commit d51544c](https://github.com/googleapis/google-cloud-dotnet/commit/d51544c): In GetOrCreate methods, retry "get" operation if "create" fails due to conflict. Fixes [issue 6902](https://github.com/googleapis/google-cloud-dotnet/issues/6902)
 
-# Version 2.2.0, released 2021-05-05
+## Version 2.2.0, released 2021-05-05
 
 - [Commit a07ebae](https://github.com/googleapis/google-cloud-dotnet/commit/a07ebae): feat: Model extract jobs.
 - [Commit 648196d](https://github.com/googleapis/google-cloud-dotnet/commit/648196d): Fix BigQueryInsertStatus bullet point descriptions
 
-# Version 2.1.0, released 2020-09-23
+## Version 2.1.0, released 2020-09-23
 
 - [Commit 14be654](https://github.com/googleapis/google-cloud-dotnet/commit/14be654): feat: Disable pretty printing in BigQuery unless explicitly requested. Fixes [issue 5330](https://github.com/googleapis/google-cloud-dotnet/issues/5330).
 - [Commit 909f568](https://github.com/googleapis/google-cloud-dotnet/commit/909f568): docs: Clarify the scopes used by BigQueryClient.Create and CreateAsync
 
-# Version 2.0.0, released 2020-06-04
+## Version 2.0.0, released 2020-06-04
 
 - [Commit 0970dff](https://github.com/googleapis/google-cloud-dotnet/commit/0970dff): Fix: Propagates some cancellation tokens that weren't being propagated before.
 - [Commit e9e6a47](https://github.com/googleapis/google-cloud-dotnet/commit/e9e6a47): Binary breaking change: Adds missing CancellationToken parameter on BigQueryDataset.DeleteModelAsync.
@@ -25,15 +25,15 @@
   - This is entirely for the sake of performance. Benchmark results are approximately 10x better.
   - Fixes [issue 4975](https://github.com/googleapis/google-cloud-dotnet/issues/4975)
 
-# Version 2.0.0-beta04, released 2020-04-07
+## Version 2.0.0-beta04, released 2020-04-07
 
 - [Commit f58fa79](https://github.com/googleapis/google-cloud-dotnet/commit/f58fa79): Makes BigQueryRow.TimestampConverter accept pre 1970 dates. Fixes [issue 4821](https://github.com/googleapis/google-cloud-dotnet/issues/4821).
 
-# Version 2.0.0-beta03, released 2020-03-30
+## Version 2.0.0-beta03, released 2020-03-30
 
 - [Commit 7ab60e1](https://github.com/googleapis/google-cloud-dotnet/commit/7ab60e1): Fixes ReadPage and ReadPageAsync incorrect PageToken when starting again. Fixes [issue 4678](https://github.com/googleapis/google-cloud-dotnet/issues/4678).
 
-# Version 2.0.0-beta02, released 2020-03-18
+## Version 2.0.0-beta02, released 2020-03-18
 
 - [Commit 2b4c06f](https://github.com/googleapis/google-cloud-dotnet/commit/2b4c06f):
   - Table creation breaking change:
@@ -52,7 +52,7 @@
   
 In addition to the above changes, this release now targets GAX 3.0.0 (GA).
 
-# Version 2.0.0-beta01, released 2020-02-20
+## Version 2.0.0-beta01, released 2020-02-20
 
 Breaking changes:
 
@@ -84,7 +84,7 @@ Specific commits:
 - [Commit ade13ba](https://github.com/googleapis/google-cloud-dotnet/commit/ade13ba): Support ParentJobId filtering when listing Jobs.
 - [Commit ebeece5](https://github.com/googleapis/google-cloud-dotnet/commit/ebeece5): Parse timestamp JSON values as decimal instead of double. Fixes [issue 4031](https://github.com/googleapis/google-cloud-dotnet/issues/4031).
 
-# Version 1.4.0, released 2019-12-16
+## Version 1.4.0, released 2019-12-16
 
 New features since 1.3.0:
 
@@ -101,7 +101,7 @@ New features since 1.3.0:
 - Reimplemented query handling using GetQueryResults RPC instead of ListRows,
   resulting in a performance improvement
 
-# Version 1.3.0, released 2019-02-07
+## Version 1.3.0, released 2019-02-07
 
 New features since 1.2.0:
 
@@ -118,19 +118,19 @@ New features since 1.2.0:
 - Support for supplying page tokens to all list operations
 - Public constructors for BigQueryTable etc, for improved testability
 
-# Version 1.2.0, released 2018-04-09
+## Version 1.2.0, released 2018-04-09
 
 New features since 1.1.0:
 
 - Support for geo-regionalization for data sets and jobs
 
-# Version 1.1.0, released 2018-03-06
+## Version 1.1.0, released 2018-03-06
 
 New features since 1.0.0:
 
 - Support for [customer managed encryption](https://cloud.google.com/bigquery/docs/customer-managed-encryption)
   (Cloud KMS)
 
-# Version 1.0.0, released 2017-12-07
+## Version 1.0.0, released 2017-12-07
 
 Initial release.

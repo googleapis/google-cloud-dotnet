@@ -1,20 +1,20 @@
 # Version history
 
-# Version 2.0.0-beta06, released 2021-09-01
+## Version 2.0.0-beta06, released 2021-09-01
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 2.0.0-beta05, released 2021-05-26
+## Version 2.0.0-beta05, released 2021-05-26
 
 - [Commit 3dfe0cf](https://github.com/googleapis/google-cloud-dotnet/commit/3dfe0cf): feat: add canonical_name and folder fields
 
-# Version 2.0.0-beta04, released 2020-11-18
+## Version 2.0.0-beta04, released 2020-11-18
 
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
 - [Commit 28fa21a](https://github.com/googleapis/google-cloud-dotnet/commit/28fa21a): docs: updated description of finding severity field
 - [Commit 6696f32](https://github.com/googleapis/google-cloud-dotnet/commit/6696f32): docs: Clarified that event_time can also be considered as the "update time" for a Finding. It also captures when a Finding was updated. The previous wording could've been interpreted as only the creation time.
 
-# Version 2.0.0-beta03, released 2020-08-17
+## Version 2.0.0-beta03, released 2020-08-17
 
 - [Commit 95b05fe](https://github.com/googleapis/google-cloud-dotnet/commit/95b05fe):
   - feat: Added field severity to findings
@@ -39,19 +39,19 @@
 - [Commit 0dfc53b](https://github.com/googleapis/google-cloud-dotnet/commit/0dfc53b):
   - docs: fix broken link to policy reference documentation.
 
-# Version 2.0.0-beta02, released 2020-03-19
+## Version 2.0.0-beta02, released 2020-03-19
 
 - [Commit 8746b2d](https://github.com/googleapis/google-cloud-dotnet/commit/8746b2d): Amended retry configuration
 
 No API surface changes compared with 2.0.0-beta01, just dependency
 and implementation changes.
 
-# Version 2.0.0-beta01, released 2020-02-18
+## Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
 guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
 for details of changes to both GAX and code generation.
 
-# Version 1.0.0-beta01, released 2020-02-07
+## Version 1.0.0-beta01, released 2020-02-07
 
 Initial beta release.

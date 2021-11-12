@@ -1,6 +1,6 @@
 # Version history
 
-# Version 1.4.0, released 2021-09-23
+## Version 1.4.0, released 2021-09-23
 
 - [Commit e84109d](https://github.com/googleapis/google-cloud-dotnet/commit/e84109d):
   - feat: Add script field to BuildStep message
@@ -8,7 +8,7 @@
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 - [Commit 26753cf](https://github.com/googleapis/google-cloud-dotnet/commit/26753cf): feat: Add ability to configure BuildTriggers to create Builds that require approval before executing and ApproveBuild API to approve or reject pending Builds
 
-# Version 1.3.0, released 2021-07-29
+## Version 1.3.0, released 2021-07-29
 
 - [Commit 0ded664](https://github.com/googleapis/google-cloud-dotnet/commit/0ded664): docs: Add a new build phase `SETUPBUILD` for timing information
 - [Commit cf7e645](https://github.com/googleapis/google-cloud-dotnet/commit/cf7e645): feat: Implementation of Build Failure Info
@@ -21,14 +21,14 @@ as that API wasn't implemented on the back-end, we're not bumping
 the major version: we don't expect customers were actually referring
 to the old messages in their code.
 
-# Version 1.2.0, released 2021-06-22
+## Version 1.2.0, released 2021-06-22
 
 - [Commit 8c80969](https://github.com/googleapis/google-cloud-dotnet/commit/8c80969):
   - feat: Implementation of Source Manifests
     - Added message StorageSourceManifest as an option for the Source message
     - Added StorageSourceManifest field to the SourceProvenance message
 
-# Version 1.1.0, released 2021-04-29
+## Version 1.1.0, released 2021-04-29
 
 - [Commit f4e1ad2](https://github.com/googleapis/google-cloud-dotnet/commit/f4e1ad2): feat: Add fields for Pub/Sub triggers
 - [Commit f3ab04e](https://github.com/googleapis/google-cloud-dotnet/commit/f3ab04e):
@@ -41,10 +41,10 @@ to the old messages in their code.
   - feat: Add `COMMENTS_ENABLED_FOR_EXTERNAL_CONTRIBUTORS_ONLY` for corresponding comment control behavior with triggered builds.
   - feat: Add `E2_HIGHCPU_8` and `E2_HIGHCPU_32` machine types.
 
-# Version 1.0.0, released 2021-03-02
+## Version 1.0.0, released 2021-03-02
 
 No API surface changes since 1.0.0-beta01.
 
-# Version 1.0.0-beta01, released 2021-01-06
+## Version 1.0.0-beta01, released 2021-01-06
 
 Initial release.
