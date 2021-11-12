@@ -31,7 +31,7 @@ Here emulator configuration presence is usually interpreted as
 that in the future there will be other conventions for
 configuring emulators.
 
-For example, the following code creates a PubSub `SubscriberApiClient`
+For example, the following code creates a PubSub `SubscriberServiceApiClient`
 that will connect to the PubSub emulator if the
 `PUBSUB_EMULATOR_HOST` environment variable is set, but will
 otherwise connect to the production environment.

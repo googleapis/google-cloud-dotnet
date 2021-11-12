@@ -13,10 +13,7 @@
 // limitations under the License.
 
 using Google.Api.Gax;
-using Google.Api.Gax.ResourceNames;
 using Google.Cloud.PubSub.V1;
-using Grpc.Core;
-using System;
 
 namespace Google.Cloud.Docs.Snippets
 {
@@ -25,10 +22,10 @@ namespace Google.Cloud.Docs.Snippets
         public void ClientBuilderSupport()
         {
             // Sample: ClientBuilderSupport
-            SubscriptionName subscription = SubscriptionName.FromProjectSubscription("projectId", "subscriptionId");
-            SubscriberClient.ClientCreationSettings clientCreationSettings = new SubscriberClient.ClientCreationSettings()
-                .WithEmulatorDetection(EmulatorDetection.EmulatorOrProduction);
-            SubscriberClient client = SubscriberClient.Create(subscription, clientCreationSettings);
+            SubscriberServiceApiClient client = new SubscriberServiceApiClientBuilder
+            {
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+            }.Build();
             // End sample
         }
 
