@@ -8,7 +8,7 @@
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 [PublisherServiceApiClient](obj/api/Google.Cloud.PubSub.V1.PublisherServiceApiClient.yml) and
 [SubscriberServiceApiClient](obj/api/Google.Cloud.PubSub.V1.SubscriberServiceApiClient.yml)
@@ -25,7 +25,7 @@ or Cloud Functions, where servers do not use any CPU between requests,
 the `PublisherServiceApiClient` and `SubscriberServiceApiClient` classes
 should be used instead.
 
-# Sample code
+## Sample code
 
 Using [PublisherClient](obj/api/Google.Cloud.PubSub.V1.PublisherClient.yml) and [SubscriberClient](obj/api/Google.Cloud.PubSub.V1.SubscriberClient.yml) for message publishing and subscribing:
 
@@ -36,7 +36,7 @@ Using [PublisherServiceApiClient](obj/api/Google.Cloud.PubSub.V1.PublisherServic
 
 {{sample:SubscriberServiceApiClient.Overview}}
 
-# Performance considerations and default settings
+## Performance considerations and default settings
 
 `PublisherClient` and `SubscriberClient` are optimized for high-throughput high-performance scenarios,
 and default settings have been chosen with this in mind;
@@ -52,7 +52,7 @@ When using multiple clients on a machine with a high processor count, this may c
 with TCP connection exhaustion. Set the relevant `ClientCreationSettings.ClientCount` to a low value
 (`1` is suitable for low or moderate throughput requirements) to mitigate this.
 
-# Coding considerations
+## Coding considerations
 
 `PublisherClient` and `SubscriberClient` are expensive to create, so when regularly publishing or
 subscribing to the same topic or subscription then a singleton client instance should be created and
@@ -74,7 +74,7 @@ restart listening for messages with `StartAsync(...)` again. Due to the expense 
 instance, it is recommended that a singleton client per topic is used for the lifetime of the
 application.
 
-# Using the emulator
+## Using the emulator
 
 To connect to a [Pub/Sub
 Emulator](https://cloud.google.com/pubsub/docs/emulator), set the
@@ -86,6 +86,14 @@ which client type you are constructing:
 - `PublisherServiceApiClientBuilder` (for `PublisherServiceApiClient`)
 - `SubscriberServiceApiClientBuilder` (for `SubscriberServiceApiClient`)
 
-See the [FAQ
-entry](https://googleapis.github.io/google-cloud-dotnet/docs/faq.html#how-can-i-use-emulators)
-for more details.
+`SubscriberClient` example:
+
+{{sample:SubscriberClient.Emulator}}
+
+`SubscriberServiceApiClientBuilder` example:
+
+{{sample:SubscriberServiceApiClient.Emulator}}
+
+See the [help
+article](https://cloud.google.com/dotnet/docs/reference/help/emulators)
+for more details about emulator support in the .NET Google Cloud client libraries.
