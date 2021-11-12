@@ -35,13 +35,11 @@ namespace Google.Cloud.Tools.Snippets
         {
             // Sample: Emulator
             // [START pubsub_use_emulator]
-            // For example, "localhost:8615"
-            string emulatorHostAndPort = Environment.GetEnvironmentVariable("PUBSUB_EMULATOR_HOST");
-
+            // If `PUBSUB_EMULATOR_HOST` is set, your code will detect and 
+            // use the emulator instead of the real service.
             PublisherServiceApiClient client = new PublisherServiceApiClientBuilder
             {
-                Endpoint = emulatorHostAndPort,
-                ChannelCredentials = ChannelCredentials.Insecure
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
             }.Build();
             client.CreateTopic(new TopicName("project", "topic"));
             foreach (var topic in client.ListTopics(new ProjectName("project")))
