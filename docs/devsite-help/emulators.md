@@ -1,4 +1,6 @@
-## Emulator support
+# Emulator support
+
+## ClientBuilder dedicated support
 
 Some APIs (such as Datastore and PubSub) provide emulators in the
 [Cloud SDK](https://cloud.google.com/sdk/). Client libraries in some
@@ -29,12 +31,28 @@ Here emulator configuration presence is usually interpreted as
 that in the future there will be other conventions for
 configuring emulators.
 
+For example, the following code creates a PubSub `SubscriberApiClient`
+that will connect to the PubSub emulator if the
+`PUBSUB_EMULATOR_HOST` environment variable is set, but will
+otherwise connect to the production environment.
+
+[!code-cs[](../examples/help.Emulator.txt#ClientBuilderSupport)]
+
+Note that the PubSub `SubscriberClient` and `PublisherClient`
+classes don't have builders. Instead, they have nested
+`ClientCreationSettings` with emulator detection. The following code
+connects to the PubSub emulator for a `SubscriberClient`:
+
+[!code-cs[](../examples/help.Emulator.txt#SubscriberClient)]
+
+## Manually connecting to an emulator
+
 If you need to connect to an emulator directly (for example because
 it is not yet supported in the library for the API you're using),
 simply use the appropriate client builder, set the endpoint to the
 host and port the emulator is listening on, and set the credentials to
 to `ChannelCredentials.Insecure`.
 
-Example for PubSub:
+Example for PubSub (although the techniques above are preferred):
 
 [!code-cs[](../examples/help.Faq.txt#Emulator)]
