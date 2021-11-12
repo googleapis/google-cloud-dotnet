@@ -29,7 +29,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     {
         private static readonly string[] PreambleLines = new[] { "# Version history", "" };
         private const string MarkdownFile = "history.md";
-        private static readonly Regex SectionHeader = new Regex(@"# Version (.*), released \d{4}-\d{2}-\d{2}");
+        private static readonly Regex SectionHeader = new Regex(@"## Version (.*), released \d{4}-\d{2}-\d{2}");
 
         /// <summary>
         /// The sections within the history file, in file order (reverse chronological).
@@ -124,7 +124,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
                 Lines = new List<string>();
 
-                Lines.Add($"# Version {Version}, released {release.ReleaseDate:yyyy-MM-dd}");
+                Lines.Add($"## Version {Version}, released {release.ReleaseDate:yyyy-MM-dd}");
                 Lines.Add("");
                 if (Version.Equals(s_expectedInitialReleaseVersion))
                 {
