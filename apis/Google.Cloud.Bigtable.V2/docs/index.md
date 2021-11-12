@@ -8,7 +8,7 @@
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 Common operations are exposed via the
 [BigtableClient](obj/api/Google.Cloud.Bigtable.V2.BigtableClient.yml)

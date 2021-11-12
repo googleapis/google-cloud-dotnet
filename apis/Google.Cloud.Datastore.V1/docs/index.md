@@ -8,7 +8,7 @@
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 See the [Datastore Quickstart](https://cloud.google.com/datastore/docs/quickstart) for an introduction with runnable code samples.
 

@@ -13,7 +13,7 @@ Alternatively, you can create a client using an API key. This is primarily
 supported to enable smooth migration from earlier client libraries; using
 OAuth2 as above is the preferred authentication mechanism.
 
-# Getting started
+## Getting started
 
 Common operations are exposed via the
 [TranslationClient](obj/api/Google.Cloud.Translation.V2.TranslationClient.yml) and 

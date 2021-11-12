@@ -9,7 +9,7 @@ Logging](https://cloud.google.com/logging/) with [NLog](http://nlog-project.org/
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 ## Console app
 

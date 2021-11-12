@@ -8,7 +8,7 @@
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 The simplest option is to use the synchronous, one-shot API as shown
 below in the sample code. More complex scenarios are considered further down this page.

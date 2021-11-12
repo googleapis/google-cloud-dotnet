@@ -12,7 +12,7 @@ should be used for Cloud Spanner instance administration, such as creating or de
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 Operations generally follow ADO.NET conventions.
 However Cloud Spanner does not support DML (eg. "INSERT INTO ..."). Therefore you should

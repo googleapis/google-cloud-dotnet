@@ -8,7 +8,7 @@
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 {{client-classes}}
 
