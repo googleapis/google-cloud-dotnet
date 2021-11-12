@@ -32,7 +32,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "dHlfbWFya3MucHJvdG8aMmdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92",
             "MS92dWxuZXJhYmlsaXR5LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0",
             "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29n",
-            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIokKCgdGaW5kaW5nEgwKBG5hbWUY",
+            "bGUvYXBpL2Fubm90YXRpb25zLnByb3RvIt0LCgdGaW5kaW5nEgwKBG5hbWUY",
             "ASABKAkSDgoGcGFyZW50GAIgASgJEhUKDXJlc291cmNlX25hbWUYAyABKAkS",
             "PAoFc3RhdGUYBCABKA4yLS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIu",
             "djEuRmluZGluZy5TdGF0ZRIQCghjYXRlZ29yeRgFIAEoCRIUCgxleHRlcm5h",
@@ -44,33 +44,38 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Ei8KC2NyZWF0ZV90aW1lGAogASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVz",
             "dGFtcBJCCghzZXZlcml0eRgMIAEoDjIwLmdvb2dsZS5jbG91ZC5zZWN1cml0",
             "eWNlbnRlci52MS5GaW5kaW5nLlNldmVyaXR5EhYKDmNhbm9uaWNhbF9uYW1l",
-            "GA4gASgJEksKDWZpbmRpbmdfY2xhc3MYESABKA4yNC5nb29nbGUuY2xvdWQu",
-            "c2VjdXJpdHljZW50ZXIudjEuRmluZGluZy5GaW5kaW5nQ2xhc3MSPAoJaW5k",
-            "aWNhdG9yGBIgASgLMikuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYx",
-            "LkluZGljYXRvchJECg12dWxuZXJhYmlsaXR5GBQgASgLMi0uZ29vZ2xlLmNs",
-            "b3VkLnNlY3VyaXR5Y2VudGVyLnYxLlZ1bG5lcmFiaWxpdHkaTwoVU291cmNl",
-            "UHJvcGVydGllc0VudHJ5EgsKA2tleRgBIAEoCRIlCgV2YWx1ZRgCIAEoCzIW",
-            "Lmdvb2dsZS5wcm90b2J1Zi5WYWx1ZToCOAEiOAoFU3RhdGUSFQoRU1RBVEVf",
-            "VU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJTkFDVElWRRACIlEKCFNl",
-            "dmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASDAoIQ1JJVElDQUwQ",
-            "ARIICgRISUdIEAISCgoGTUVESVVNEAMSBwoDTE9XEAQicwoMRmluZGluZ0Ns",
-            "YXNzEh0KGUZJTkRJTkdfQ0xBU1NfVU5TUEVDSUZJRUQQABIKCgZUSFJFQVQQ",
-            "ARIRCg1WVUxORVJBQklMSVRZEAISFAoQTUlTQ09ORklHVVJBVElPThADEg8K",
-            "C09CU0VSVkFUSU9OEAQ62wHqQdcBCiVzZWN1cml0eWNlbnRlci5nb29nbGVh",
-            "cGlzLmNvbS9GaW5kaW5nEkBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259",
-            "L3NvdXJjZXMve3NvdXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9EjRmb2xkZXJz",
-            "L3tmb2xkZXJ9L3NvdXJjZXMve3NvdXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9",
-            "EjZwcm9qZWN0cy97cHJvamVjdH0vc291cmNlcy97c291cmNlfS9maW5kaW5n",
-            "cy97ZmluZGluZ31C2gEKImNvbS5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50",
-            "ZXIudjFQAVpMZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
-            "cy9jbG91ZC9zZWN1cml0eWNlbnRlci92MTtzZWN1cml0eWNlbnRlcqoCHkdv",
-            "b2dsZS5DbG91ZC5TZWN1cml0eUNlbnRlci5WMcoCHkdvb2dsZVxDbG91ZFxT",
-            "ZWN1cml0eUNlbnRlclxWMeoCIUdvb2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2Vu",
-            "dGVyOjpWMWIGcHJvdG8z"));
+            "GA4gASgJEjoKBG11dGUYDyABKA4yLC5nb29nbGUuY2xvdWQuc2VjdXJpdHlj",
+            "ZW50ZXIudjEuRmluZGluZy5NdXRlEksKDWZpbmRpbmdfY2xhc3MYESABKA4y",
+            "NC5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRmluZGluZy5GaW5k",
+            "aW5nQ2xhc3MSPAoJaW5kaWNhdG9yGBIgASgLMikuZ29vZ2xlLmNsb3VkLnNl",
+            "Y3VyaXR5Y2VudGVyLnYxLkluZGljYXRvchJECg12dWxuZXJhYmlsaXR5GBQg",
+            "ASgLMi0uZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLlZ1bG5lcmFi",
+            "aWxpdHkSOQoQbXV0ZV91cGRhdGVfdGltZRgVIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5UaW1lc3RhbXBCA+BBAxIWCg5tdXRlX2luaXRpYXRvchgcIAEoCRpP",
+            "ChVTb3VyY2VQcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEgASgJEiUKBXZhbHVl",
+            "GAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4ASI4CgVTdGF0ZRIV",
+            "ChFTVEFURV9VTlNQRUNJRklFRBAAEgoKBkFDVElWRRABEgwKCElOQUNUSVZF",
+            "EAIiUQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIMCghD",
+            "UklUSUNBTBABEggKBEhJR0gQAhIKCgZNRURJVU0QAxIHCgNMT1cQBCJDCgRN",
+            "dXRlEhQKEE1VVEVfVU5TUEVDSUZJRUQQABIJCgVNVVRFRBABEgsKB1VOTVVU",
+            "RUQQAhINCglVTkRFRklORUQQBCJzCgxGaW5kaW5nQ2xhc3MSHQoZRklORElO",
+            "R19DTEFTU19VTlNQRUNJRklFRBAAEgoKBlRIUkVBVBABEhEKDVZVTE5FUkFC",
+            "SUxJVFkQAhIUChBNSVNDT05GSUdVUkFUSU9OEAMSDwoLT0JTRVJWQVRJT04Q",
+            "BDrbAepB1wEKJXNlY3VyaXR5Y2VudGVyLmdvb2dsZWFwaXMuY29tL0ZpbmRp",
+            "bmcSQG9yZ2FuaXphdGlvbnMve29yZ2FuaXphdGlvbn0vc291cmNlcy97c291",
+            "cmNlfS9maW5kaW5ncy97ZmluZGluZ30SNGZvbGRlcnMve2ZvbGRlcn0vc291",
+            "cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ30SNnByb2plY3RzL3tw",
+            "cm9qZWN0fS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5kaW5nfULa",
+            "AQoiY29tLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNlbnRlci52MVABWkxnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL3NlY3Vy",
+            "aXR5Y2VudGVyL3YxO3NlY3VyaXR5Y2VudGVyqgIeR29vZ2xlLkNsb3VkLlNl",
+            "Y3VyaXR5Q2VudGVyLlYxygIeR29vZ2xlXENsb3VkXFNlY3VyaXR5Q2VudGVy",
+            "XFYx6gIhR29vZ2xlOjpDbG91ZDo6U2VjdXJpdHlDZW50ZXI6OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.VulnerabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "FindingClass", "Indicator", "Vulnerability" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "MuteInitiator" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
     #endregion
@@ -132,9 +137,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       severity_ = other.severity_;
       canonicalName_ = other.canonicalName_;
+      mute_ = other.mute_;
       findingClass_ = other.findingClass_;
       indicator_ = other.indicator_ != null ? other.indicator_.Clone() : null;
       vulnerability_ = other.vulnerability_ != null ? other.vulnerability_.Clone() : null;
+      muteUpdateTime_ = other.muteUpdateTime_ != null ? other.muteUpdateTime_.Clone() : null;
+      muteInitiator_ = other.muteInitiator_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -355,6 +363,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "mute" field.</summary>
+    public const int MuteFieldNumber = 15;
+    private global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute mute_ = global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified;
+    /// <summary>
+    /// Indicates the mute state of a finding (either unspecified, muted, unmuted
+    /// or undefined).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute Mute {
+      get { return mute_; }
+      set {
+        mute_ = value;
+      }
+    }
+
     /// <summary>Field number for the "finding_class" field.</summary>
     public const int FindingClassFieldNumber = 17;
     private global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass findingClass_ = global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified;
@@ -406,6 +430,38 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
     }
 
+    /// <summary>Field number for the "mute_update_time" field.</summary>
+    public const int MuteUpdateTimeFieldNumber = 21;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp muteUpdateTime_;
+    /// <summary>
+    /// Output only. The most recent time this finding was muted or unmuted.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp MuteUpdateTime {
+      get { return muteUpdateTime_; }
+      set {
+        muteUpdateTime_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "mute_initiator" field.</summary>
+    public const int MuteInitiatorFieldNumber = 28;
+    private string muteInitiator_ = "";
+    /// <summary>
+    /// First known as mute_annotation. Records additional information about the
+    /// mute operation e.g. mute config that muted the finding, user who muted the
+    /// finding, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MuteInitiator {
+      get { return muteInitiator_; }
+      set {
+        muteInitiator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -433,9 +489,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (Severity != other.Severity) return false;
       if (CanonicalName != other.CanonicalName) return false;
+      if (Mute != other.Mute) return false;
       if (FindingClass != other.FindingClass) return false;
       if (!object.Equals(Indicator, other.Indicator)) return false;
       if (!object.Equals(Vulnerability, other.Vulnerability)) return false;
+      if (!object.Equals(MuteUpdateTime, other.MuteUpdateTime)) return false;
+      if (MuteInitiator != other.MuteInitiator) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -455,9 +514,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (Severity != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity.Unspecified) hash ^= Severity.GetHashCode();
       if (CanonicalName.Length != 0) hash ^= CanonicalName.GetHashCode();
+      if (Mute != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) hash ^= Mute.GetHashCode();
       if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) hash ^= FindingClass.GetHashCode();
       if (indicator_ != null) hash ^= Indicator.GetHashCode();
       if (vulnerability_ != null) hash ^= Vulnerability.GetHashCode();
+      if (muteUpdateTime_ != null) hash ^= MuteUpdateTime.GetHashCode();
+      if (MuteInitiator.Length != 0) hash ^= MuteInitiator.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -521,6 +583,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(114);
         output.WriteString(CanonicalName);
       }
+      if (Mute != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Mute);
+      }
       if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) FindingClass);
@@ -532,6 +598,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (vulnerability_ != null) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(Vulnerability);
+      }
+      if (muteUpdateTime_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(MuteUpdateTime);
+      }
+      if (MuteInitiator.Length != 0) {
+        output.WriteRawTag(226, 1);
+        output.WriteString(MuteInitiator);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
@@ -588,6 +662,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteRawTag(114);
         output.WriteString(CanonicalName);
       }
+      if (Mute != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Mute);
+      }
       if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
         output.WriteRawTag(136, 1);
         output.WriteEnum((int) FindingClass);
@@ -599,6 +677,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (vulnerability_ != null) {
         output.WriteRawTag(162, 1);
         output.WriteMessage(Vulnerability);
+      }
+      if (muteUpdateTime_ != null) {
+        output.WriteRawTag(170, 1);
+        output.WriteMessage(MuteUpdateTime);
+      }
+      if (MuteInitiator.Length != 0) {
+        output.WriteRawTag(226, 1);
+        output.WriteString(MuteInitiator);
       }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
@@ -644,6 +730,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (CanonicalName.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(CanonicalName);
       }
+      if (Mute != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Mute);
+      }
       if (FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
         size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) FindingClass);
       }
@@ -652,6 +741,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
       if (vulnerability_ != null) {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(Vulnerability);
+      }
+      if (muteUpdateTime_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(MuteUpdateTime);
+      }
+      if (MuteInitiator.Length != 0) {
+        size += 2 + pb::CodedOutputStream.ComputeStringSize(MuteInitiator);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -708,6 +803,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (other.CanonicalName.Length != 0) {
         CanonicalName = other.CanonicalName;
       }
+      if (other.Mute != global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute.Unspecified) {
+        Mute = other.Mute;
+      }
       if (other.FindingClass != global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass.Unspecified) {
         FindingClass = other.FindingClass;
       }
@@ -722,6 +820,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
           Vulnerability = new global::Google.Cloud.SecurityCenter.V1.Vulnerability();
         }
         Vulnerability.MergeFrom(other.Vulnerability);
+      }
+      if (other.muteUpdateTime_ != null) {
+        if (muteUpdateTime_ == null) {
+          MuteUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        MuteUpdateTime.MergeFrom(other.MuteUpdateTime);
+      }
+      if (other.MuteInitiator.Length != 0) {
+        MuteInitiator = other.MuteInitiator;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -795,6 +902,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             CanonicalName = input.ReadString();
             break;
           }
+          case 120: {
+            Mute = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute) input.ReadEnum();
+            break;
+          }
           case 136: {
             FindingClass = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) input.ReadEnum();
             break;
@@ -811,6 +922,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
               Vulnerability = new global::Google.Cloud.SecurityCenter.V1.Vulnerability();
             }
             input.ReadMessage(Vulnerability);
+            break;
+          }
+          case 170: {
+            if (muteUpdateTime_ == null) {
+              MuteUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(MuteUpdateTime);
+            break;
+          }
+          case 226: {
+            MuteInitiator = input.ReadString();
             break;
           }
         }
@@ -885,6 +1007,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
             CanonicalName = input.ReadString();
             break;
           }
+          case 120: {
+            Mute = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute) input.ReadEnum();
+            break;
+          }
           case 136: {
             FindingClass = (global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) input.ReadEnum();
             break;
@@ -901,6 +1027,17 @@ namespace Google.Cloud.SecurityCenter.V1 {
               Vulnerability = new global::Google.Cloud.SecurityCenter.V1.Vulnerability();
             }
             input.ReadMessage(Vulnerability);
+            break;
+          }
+          case 170: {
+            if (muteUpdateTime_ == null) {
+              MuteUpdateTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(MuteUpdateTime);
+            break;
+          }
+          case 226: {
+            MuteInitiator = input.ReadString();
             break;
           }
         }
@@ -997,6 +1134,28 @@ namespace Google.Cloud.SecurityCenter.V1 {
         /// is not able to access data, execute code, or create resources.
         /// </summary>
         [pbr::OriginalName("LOW")] Low = 4,
+      }
+
+      /// <summary>
+      /// Mute state a finding can be in.
+      /// </summary>
+      public enum Mute {
+        /// <summary>
+        /// Unspecified.
+        /// </summary>
+        [pbr::OriginalName("MUTE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Finding has been muted.
+        /// </summary>
+        [pbr::OriginalName("MUTED")] D = 1,
+        /// <summary>
+        /// Finding has been unmuted.
+        /// </summary>
+        [pbr::OriginalName("UNMUTED")] Unmuted = 2,
+        /// <summary>
+        /// Finding has never been muted/unmuted.
+        /// </summary>
+        [pbr::OriginalName("UNDEFINED")] Undefined = 4,
       }
 
       /// <summary>

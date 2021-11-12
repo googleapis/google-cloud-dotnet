@@ -64,6 +64,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest> __Marshaller_google_cloud_securitycenter_v1_BulkMuteFindingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest> __Marshaller_google_cloud_securitycenter_v1_CreateSourceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Source> __Marshaller_google_cloud_securitycenter_v1_Source = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.Source.Parser));
@@ -72,17 +76,25 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.Finding> __Marshaller_google_cloud_securitycenter_v1_Finding = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.Finding.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest> __Marshaller_google_cloud_securitycenter_v1_CreateMuteConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.MuteConfig> __Marshaller_google_cloud_securitycenter_v1_MuteConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.MuteConfig.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_CreateNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Marshaller_google_cloud_securitycenter_v1_NotificationConfig = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.NotificationConfig.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest.Parser));
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteMuteConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_DeleteNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.GetIamPolicyRequest> __Marshaller_google_iam_v1_GetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.GetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.Policy> __Marshaller_google_iam_v1_Policy = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.Policy.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest> __Marshaller_google_cloud_securitycenter_v1_GetMuteConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_GetNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -108,6 +120,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse> __Marshaller_google_cloud_securitycenter_v1_ListFindingsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest> __Marshaller_google_cloud_securitycenter_v1_ListMuteConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse> __Marshaller_google_cloud_securitycenter_v1_ListMuteConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest> __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> __Marshaller_google_cloud_securitycenter_v1_ListNotificationConfigsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse.Parser));
@@ -118,9 +134,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest> __Marshaller_google_cloud_securitycenter_v1_RunAssetDiscoveryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest> __Marshaller_google_cloud_securitycenter_v1_SetFindingStateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SetMuteRequest> __Marshaller_google_cloud_securitycenter_v1_SetMuteRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.SetMuteRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -129,6 +145,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateFindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateMuteConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateNotificationConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -139,6 +157,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateSecurityMarksRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateSecurityMarksRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.SecurityMarks> __Marshaller_google_cloud_securitycenter_v1_SecurityMarks = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.SecurityMarks.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation> __Method_BulkMuteFindings = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "BulkMuteFindings",
+        __Marshaller_google_cloud_securitycenter_v1_BulkMuteFindingsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source> __Method_CreateSource = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(
@@ -157,12 +183,28 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_Finding);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig> __Method_CreateMuteConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateMuteConfig",
+        __Marshaller_google_cloud_securitycenter_v1_CreateMuteConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_MuteConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Method_CreateNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(
         grpc::MethodType.Unary,
         __ServiceName,
         "CreateNotificationConfig",
         __Marshaller_google_cloud_securitycenter_v1_CreateNotificationConfigRequest,
         __Marshaller_google_cloud_securitycenter_v1_NotificationConfig);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteMuteConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteMuteConfig",
+        __Marshaller_google_cloud_securitycenter_v1_DeleteMuteConfigRequest,
+        __Marshaller_google_protobuf_Empty);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
@@ -179,6 +221,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "GetIamPolicy",
         __Marshaller_google_iam_v1_GetIamPolicyRequest,
         __Marshaller_google_iam_v1_Policy);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig> __Method_GetMuteConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetMuteConfig",
+        __Marshaller_google_cloud_securitycenter_v1_GetMuteConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_MuteConfig);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Method_GetNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(
@@ -237,6 +287,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_ListFindingsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse> __Method_ListMuteConfigs = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListMuteConfigs",
+        __Marshaller_google_cloud_securitycenter_v1_ListMuteConfigsRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ListMuteConfigsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse> __Method_ListNotificationConfigs = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -269,6 +327,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         __Marshaller_google_cloud_securitycenter_v1_Finding);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.SetMuteRequest, global::Google.Cloud.SecurityCenter.V1.Finding> __Method_SetMute = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.SetMuteRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "SetMute",
+        __Marshaller_google_cloud_securitycenter_v1_SetMuteRequest,
+        __Marshaller_google_cloud_securitycenter_v1_Finding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -291,6 +357,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "UpdateFinding",
         __Marshaller_google_cloud_securitycenter_v1_UpdateFindingRequest,
         __Marshaller_google_cloud_securitycenter_v1_Finding);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig> __Method_UpdateMuteConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateMuteConfig",
+        __Marshaller_google_cloud_securitycenter_v1_UpdateMuteConfigRequest,
+        __Marshaller_google_cloud_securitycenter_v1_MuteConfig);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig> __Method_UpdateNotificationConfig = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(
@@ -335,6 +409,20 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public abstract partial class SecurityCenterBase
     {
       /// <summary>
+      /// Kicks off an LRO to bulk mute findings for a parent based on a filter. The
+      /// parent can be either an organization, folder or project. The findings
+      /// matched by the filter will be muted after the LRO is done.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> BulkMuteFindings(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a source.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -360,6 +448,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Creates a mute config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.MuteConfig> CreateMuteConfig(global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a notification config.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -367,6 +467,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> CreateNotificationConfig(global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes an existing mute config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMuteConfig(global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -391,6 +503,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.Policy> GetIamPolicy(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a mute config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.MuteConfig> GetMuteConfig(global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -490,6 +614,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Lists mute configs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse> ListMuteConfigs(global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Lists notification configs.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -543,6 +679,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       }
 
       /// <summary>
+      /// Updates the mute state of a finding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.Finding> SetMute(global::Google.Cloud.SecurityCenter.V1.SetMuteRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Sets the access control policy on the specified Source.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -575,6 +723,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.Finding> UpdateFinding(global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a mute config.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.MuteConfig> UpdateMuteConfig(global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -658,6 +818,62 @@ namespace Google.Cloud.SecurityCenter.V1 {
       {
       }
 
+      /// <summary>
+      /// Kicks off an LRO to bulk mute findings for a parent based on a filter. The
+      /// parent can be either an organization, folder or project. The findings
+      /// matched by the filter will be muted after the LRO is done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkMuteFindings(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkMuteFindings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Kicks off an LRO to bulk mute findings for a parent based on a filter. The
+      /// parent can be either an organization, folder or project. The findings
+      /// matched by the filter will be muted after the LRO is done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation BulkMuteFindings(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_BulkMuteFindings, null, options, request);
+      }
+      /// <summary>
+      /// Kicks off an LRO to bulk mute findings for a parent based on a filter. The
+      /// parent can be either an organization, folder or project. The findings
+      /// matched by the filter will be muted after the LRO is done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkMuteFindingsAsync(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return BulkMuteFindingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Kicks off an LRO to bulk mute findings for a parent based on a filter. The
+      /// parent can be either an organization, folder or project. The findings
+      /// matched by the filter will be muted after the LRO is done.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> BulkMuteFindingsAsync(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_BulkMuteFindings, null, options, request);
+      }
       /// <summary>
       /// Creates a source.
       /// </summary>
@@ -759,6 +975,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_CreateFinding, null, options, request);
       }
       /// <summary>
+      /// Creates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.MuteConfig CreateMuteConfig(global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMuteConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.MuteConfig CreateMuteConfig(global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateMuteConfig, null, options, request);
+      }
+      /// <summary>
+      /// Creates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.MuteConfig> CreateMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateMuteConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.MuteConfig> CreateMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateMuteConfig, null, options, request);
+      }
+      /// <summary>
       /// Creates a notification config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -805,6 +1069,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.NotificationConfig> CreateNotificationConfigAsync(global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateNotificationConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMuteConfig(global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMuteConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteMuteConfig(global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteMuteConfig, null, options, request);
+      }
+      /// <summary>
+      /// Deletes an existing mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteMuteConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes an existing mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteMuteConfig, null, options, request);
       }
       /// <summary>
       /// Deletes a notification config.
@@ -901,6 +1213,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Iam.V1.Policy> GetIamPolicyAsync(global::Google.Cloud.Iam.V1.GetIamPolicyRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetIamPolicy, null, options, request);
+      }
+      /// <summary>
+      /// Gets a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.MuteConfig GetMuteConfig(global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMuteConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.MuteConfig GetMuteConfig(global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetMuteConfig, null, options, request);
+      }
+      /// <summary>
+      /// Gets a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.MuteConfig> GetMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetMuteConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.MuteConfig> GetMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetMuteConfig, null, options, request);
       }
       /// <summary>
       /// Gets a notification config.
@@ -1279,6 +1639,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListFindings, null, options, request);
       }
       /// <summary>
+      /// Lists mute configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse ListMuteConfigs(global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMuteConfigs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists mute configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse ListMuteConfigs(global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListMuteConfigs, null, options, request);
+      }
+      /// <summary>
+      /// Lists mute configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse> ListMuteConfigsAsync(global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListMuteConfigsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists mute configs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse> ListMuteConfigsAsync(global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListMuteConfigs, null, options, request);
+      }
+      /// <summary>
       /// Lists notification configs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1491,6 +1899,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_SetFindingState, null, options, request);
       }
       /// <summary>
+      /// Updates the mute state of a finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.Finding SetMute(global::Google.Cloud.SecurityCenter.V1.SetMuteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetMute(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the mute state of a finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.Finding SetMute(global::Google.Cloud.SecurityCenter.V1.SetMuteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_SetMute, null, options, request);
+      }
+      /// <summary>
+      /// Updates the mute state of a finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.Finding> SetMuteAsync(global::Google.Cloud.SecurityCenter.V1.SetMuteRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return SetMuteAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the mute state of a finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.Finding> SetMuteAsync(global::Google.Cloud.SecurityCenter.V1.SetMuteRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_SetMute, null, options, request);
+      }
+      /// <summary>
       /// Sets the access control policy on the specified Source.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -1637,6 +2093,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.Finding> UpdateFindingAsync(global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateFinding, null, options, request);
+      }
+      /// <summary>
+      /// Updates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.MuteConfig UpdateMuteConfig(global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMuteConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.MuteConfig UpdateMuteConfig(global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateMuteConfig, null, options, request);
+      }
+      /// <summary>
+      /// Updates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.MuteConfig> UpdateMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateMuteConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a mute config.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.MuteConfig> UpdateMuteConfigAsync(global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateMuteConfig, null, options, request);
       }
       /// <summary>
       ///
@@ -1852,11 +2356,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public static grpc::ServerServiceDefinition BindService(SecurityCenterBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_BulkMuteFindings, serviceImpl.BulkMuteFindings)
           .AddMethod(__Method_CreateSource, serviceImpl.CreateSource)
           .AddMethod(__Method_CreateFinding, serviceImpl.CreateFinding)
+          .AddMethod(__Method_CreateMuteConfig, serviceImpl.CreateMuteConfig)
           .AddMethod(__Method_CreateNotificationConfig, serviceImpl.CreateNotificationConfig)
+          .AddMethod(__Method_DeleteMuteConfig, serviceImpl.DeleteMuteConfig)
           .AddMethod(__Method_DeleteNotificationConfig, serviceImpl.DeleteNotificationConfig)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
+          .AddMethod(__Method_GetMuteConfig, serviceImpl.GetMuteConfig)
           .AddMethod(__Method_GetNotificationConfig, serviceImpl.GetNotificationConfig)
           .AddMethod(__Method_GetOrganizationSettings, serviceImpl.GetOrganizationSettings)
           .AddMethod(__Method_GetSource, serviceImpl.GetSource)
@@ -1864,13 +2372,16 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_GroupFindings, serviceImpl.GroupFindings)
           .AddMethod(__Method_ListAssets, serviceImpl.ListAssets)
           .AddMethod(__Method_ListFindings, serviceImpl.ListFindings)
+          .AddMethod(__Method_ListMuteConfigs, serviceImpl.ListMuteConfigs)
           .AddMethod(__Method_ListNotificationConfigs, serviceImpl.ListNotificationConfigs)
           .AddMethod(__Method_ListSources, serviceImpl.ListSources)
           .AddMethod(__Method_RunAssetDiscovery, serviceImpl.RunAssetDiscovery)
           .AddMethod(__Method_SetFindingState, serviceImpl.SetFindingState)
+          .AddMethod(__Method_SetMute, serviceImpl.SetMute)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
           .AddMethod(__Method_UpdateFinding, serviceImpl.UpdateFinding)
+          .AddMethod(__Method_UpdateMuteConfig, serviceImpl.UpdateMuteConfig)
           .AddMethod(__Method_UpdateNotificationConfig, serviceImpl.UpdateNotificationConfig)
           .AddMethod(__Method_UpdateOrganizationSettings, serviceImpl.UpdateOrganizationSettings)
           .AddMethod(__Method_UpdateSource, serviceImpl.UpdateSource)
@@ -1884,11 +2395,15 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, SecurityCenterBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_BulkMuteFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest, global::Google.LongRunning.Operation>(serviceImpl.BulkMuteFindings));
       serviceBinder.AddMethod(__Method_CreateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.CreateSource));
       serviceBinder.AddMethod(__Method_CreateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.CreateFinding));
+      serviceBinder.AddMethod(__Method_CreateMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.CreateMuteConfig));
       serviceBinder.AddMethod(__Method_CreateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.CreateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.CreateNotificationConfig));
+      serviceBinder.AddMethod(__Method_DeleteMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteMuteConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMuteConfig));
       serviceBinder.AddMethod(__Method_DeleteNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.DeleteNotificationConfigRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteNotificationConfig));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
+      serviceBinder.AddMethod(__Method_GetMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.GetMuteConfig));
       serviceBinder.AddMethod(__Method_GetNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.GetNotificationConfig));
       serviceBinder.AddMethod(__Method_GetOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.GetOrganizationSettings));
       serviceBinder.AddMethod(__Method_GetSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GetSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.GetSource));
@@ -1896,13 +2411,16 @@ namespace Google.Cloud.SecurityCenter.V1 {
       serviceBinder.AddMethod(__Method_GroupFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.GroupFindingsRequest, global::Google.Cloud.SecurityCenter.V1.GroupFindingsResponse>(serviceImpl.GroupFindings));
       serviceBinder.AddMethod(__Method_ListAssets, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListAssetsRequest, global::Google.Cloud.SecurityCenter.V1.ListAssetsResponse>(serviceImpl.ListAssets));
       serviceBinder.AddMethod(__Method_ListFindings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListFindingsRequest, global::Google.Cloud.SecurityCenter.V1.ListFindingsResponse>(serviceImpl.ListFindings));
+      serviceBinder.AddMethod(__Method_ListMuteConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListMuteConfigsResponse>(serviceImpl.ListMuteConfigs));
       serviceBinder.AddMethod(__Method_ListNotificationConfigs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsRequest, global::Google.Cloud.SecurityCenter.V1.ListNotificationConfigsResponse>(serviceImpl.ListNotificationConfigs));
       serviceBinder.AddMethod(__Method_ListSources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.ListSourcesRequest, global::Google.Cloud.SecurityCenter.V1.ListSourcesResponse>(serviceImpl.ListSources));
       serviceBinder.AddMethod(__Method_RunAssetDiscovery, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryRequest, global::Google.LongRunning.Operation>(serviceImpl.RunAssetDiscovery));
       serviceBinder.AddMethod(__Method_SetFindingState, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.SetFindingStateRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.SetFindingState));
+      serviceBinder.AddMethod(__Method_SetMute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.SetMuteRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.SetMute));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
       serviceBinder.AddMethod(__Method_UpdateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.UpdateFinding));
+      serviceBinder.AddMethod(__Method_UpdateMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.UpdateMuteConfig));
       serviceBinder.AddMethod(__Method_UpdateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.UpdateNotificationConfig));
       serviceBinder.AddMethod(__Method_UpdateOrganizationSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateOrganizationSettingsRequest, global::Google.Cloud.SecurityCenter.V1.OrganizationSettings>(serviceImpl.UpdateOrganizationSettings));
       serviceBinder.AddMethod(__Method_UpdateSource, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateSourceRequest, global::Google.Cloud.SecurityCenter.V1.Source>(serviceImpl.UpdateSource));
