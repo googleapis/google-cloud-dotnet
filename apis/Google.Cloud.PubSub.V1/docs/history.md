@@ -1,35 +1,35 @@
 # Version history
 
-# Version 2.7.0, released 2021-09-23
+## Version 2.7.0, released 2021-09-23
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 - [Commit 4cc3e58](https://github.com/googleapis/google-cloud-dotnet/commit/4cc3e58): feat: Add topic retention options
 
-# Version 2.6.0, released 2021-08-10
+## Version 2.6.0, released 2021-08-10
 
 - [Commit 61c5c17](https://github.com/googleapis/google-cloud-dotnet/commit/61c5c17): chore: Remove unused fields in PublisherClient
 - [Commit c75f979](https://github.com/googleapis/google-cloud-dotnet/commit/c75f979): Update PubSub ConfigureAwait warning disablement
 - [Commit 5fede56](https://github.com/googleapis/google-cloud-dotnet/commit/5fede56): feat: Add method signature for Subscriber.Pull without the deprecated return_immediately field.
 - [Commit 887ec05](https://github.com/googleapis/google-cloud-dotnet/commit/887ec05): feat: Adding subscription properties to streaming pull response in third party pubsub.proto.
 
-# Version 2.5.0, released 2021-05-26
+## Version 2.5.0, released 2021-05-26
 
 - [Commit 3717e0d](https://github.com/googleapis/google-cloud-dotnet/commit/3717e0d): Regenerate all APIs with generator change for deprecation
 - [Commit 5022a1e](https://github.com/googleapis/google-cloud-dotnet/commit/5022a1e): Use CopySettingsForEmulator in PubSub clients
 - [Commit 8e6076e](https://github.com/googleapis/google-cloud-dotnet/commit/8e6076e): docs: Remove experimental note for schema APIs
 
-# Version 2.4.0, released 2021-02-24
+## Version 2.4.0, released 2021-02-24
 
 - [Commit a43730c](https://github.com/googleapis/google-cloud-dotnet/commit/a43730c): fix: PublisherClient required credentials even when using the emulator. Fixes [issue 5973](https://github.com/googleapis/google-cloud-dotnet/issues/5973)
 - [Commit 071ea6f](https://github.com/googleapis/google-cloud-dotnet/commit/071ea6f): Add sync Create() method to PublisherClient and SubscriberClient ([issue 5895](https://github.com/googleapis/google-cloud-dotnet/issues/5895))
 
-# Version 2.3.0, released 2021-01-25
+## Version 2.3.0, released 2021-01-25
 
 - [Commit 68db70f](https://github.com/googleapis/google-cloud-dotnet/commit/68db70f): fix: Fix error where the lease-extension-delay could be negative. Fixes [issue 5866](https://github.com/googleapis/google-cloud-dotnet/issues/5866)
 - [Commit d856a51](https://github.com/googleapis/google-cloud-dotnet/commit/d856a51): feat: add schema service
 - [Commit 66574a8](https://github.com/googleapis/google-cloud-dotnet/commit/66574a8): feat: Provide emulator detection in PublisherClient/SubscriberClient
 
-# Version 2.2.0, released 2020-12-02
+## Version 2.2.0, released 2020-12-02
 
 - [Commit 0ce91bb](https://github.com/googleapis/google-cloud-dotnet/commit/0ce91bb): feat: Enable server side flow control by default with the option to turn it off (see below)
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
@@ -43,7 +43,7 @@ with server side flow control can disable it by setting
 `SubscriberClient.Settings.UseLegacyFlowControl`# to `true` which
 will result in the enforcement of client side flow control only.
 
-# Version 2.1.0, released 2020-08-03
+## Version 2.1.0, released 2020-08-03
 
 - [Commit 330b04e](https://github.com/googleapis/google-cloud-dotnet/commit/330b04e): Fix: PubSub methods will now be retried appropriately. Fixes [issue 5225](https://github.com/googleapis/google-cloud-dotnet/issues/5225)
 - [Commit 0cd128c](https://github.com/googleapis/google-cloud-dotnet/commit/0cd128c): docs: Remove experimental warning for ordering keys properties. ([issue 5219](https://github.com/googleapis/google-cloud-dotnet/issues/5219))
@@ -59,7 +59,7 @@ will result in the enforcement of client side flow control only.
 - [Commit 777b926](https://github.com/googleapis/google-cloud-dotnet/commit/777b926): docs: Removing the experimental tag from dead letter policy related fields.
 - [Commit 8cd3929](https://github.com/googleapis/google-cloud-dotnet/commit/8cd3929): docs: Removing experimental tag from DeadLetterPolicy for Cloud Pub/Sub.
 
-# Version 2.0.0, released 2020-04-09
+## Version 2.0.0, released 2020-04-09
 
 - [Commit 26de65c](https://github.com/googleapis/google-cloud-dotnet/commit/26de65c): Fix: Fix comment around default AckDeadline
 - [Commit b872180](https://github.com/googleapis/google-cloud-dotnet/commit/b872180): docs: treat a dummy example URL as a string literal instead of a link
@@ -67,7 +67,7 @@ will result in the enforcement of client side flow control only.
 
 First GA release targeting GAX 3.0.0.
 
-# Version 2.0.0-beta02, released 2020-03-18
+## Version 2.0.0-beta02, released 2020-03-18
 
 - [Commit 2096b6d](https://github.com/googleapis/google-cloud-dotnet/commit/2096b6d): Feature: Subscription.RetryPolicy
 - [Commit e4226b7](https://github.com/googleapis/google-cloud-dotnet/commit/e4226b7):
@@ -78,7 +78,7 @@ First GA release targeting GAX 3.0.0.
 
 Additionally, dependencies have been updated to target GAX 3.0.0.
 
-# Version 2.0.0-beta01, released 2020-02-18
+## Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
 guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
@@ -88,12 +88,12 @@ Additional significant changes in this release:
 
 - [Commit 173b019](https://github.com/googleapis/google-cloud-dotnet/commit/173b019): Dead-letter queue support in subscriber client
 
-# Version 1.2.0-beta01, released 2020-01-06
+## Version 1.2.0-beta01, released 2020-01-06
 
 - [Commit d859592](https://github.com/googleapis/google-cloud-dotnet/commit/d859592): Fully enable ordering-keys ([issue 3921](https://github.com/googleapis/google-cloud-dotnet/issues/3921))
 - [Commit e13ab00](https://github.com/googleapis/google-cloud-dotnet/commit/e13ab00): Update default settings; add maximum total lease extension ([issue 3920](https://github.com/googleapis/google-cloud-dotnet/issues/3920))
 
-# Version 1.1.0, released 2019-12-10
+## Version 1.1.0, released 2019-12-10
 
 Note that support is present in the code for ordering keys, but it's currently disabled; it will be enabled in a future release.
 
@@ -113,6 +113,6 @@ Note that support is present in the code for ordering keys, but it's currently d
 - [Commit 61cd808](https://github.com/googleapis/google-cloud-dotnet/commit/61cd808): Avoid unobserved InvalidOperationException in AsyncSingleRecvQueue ([issue 2785](https://github.com/googleapis/google-cloud-dotnet/issues/2785)). Fixes [issue 2763](https://github.com/googleapis/google-cloud-dotnet/issues/2763)
 - [Commit 1d0c50c](https://github.com/googleapis/google-cloud-dotnet/commit/1d0c50c): Adds ExpirationPolicy
 
-# Version 1.0.0, released 2018-10-08
+## Version 1.0.0, released 2018-10-08
 
 Initial GA release.

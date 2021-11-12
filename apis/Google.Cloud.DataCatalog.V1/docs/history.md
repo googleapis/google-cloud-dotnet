@@ -1,6 +1,6 @@
 # Version history
 
-# Version 1.6.0, released 2021-11-10
+## Version 1.6.0, released 2021-11-10
 
 - [Commit ceba2bb](https://github.com/googleapis/google-cloud-dotnet/commit/ceba2bb): docs: Improved formatting
 - [Commit 355a879](https://github.com/googleapis/google-cloud-dotnet/commit/355a879):
@@ -8,15 +8,15 @@
   - feat: Added SearchCatalogResult.display_name field
   - feat: Added SearchCatalogResult.description field
 
-# Version 1.5.0, released 2021-09-24
+## Version 1.5.0, released 2021-09-24
 
 - [Commit 4d51dc2](https://github.com/googleapis/google-cloud-dotnet/commit/4d51dc2): build: change links to make them absolute
 
-# Version 1.4.0, released 2021-08-19
+## Version 1.4.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 1.3.0, released 2021-08-10
+## Version 1.3.0, released 2021-08-10
 
 - [Commit 2fc3992](https://github.com/googleapis/google-cloud-dotnet/commit/2fc3992):
   - feat: Added support for BigQuery connections entries
@@ -28,7 +28,7 @@
   - feat: Added support for rich text tags
   - docs: Documentation improvements
 
-# Version 1.2.0, released 2021-05-05
+## Version 1.2.0, released 2021-05-05
 
 - [Commit 29c9961](https://github.com/googleapis/google-cloud-dotnet/commit/29c9961): docs: reformat comments in PolicyTagManager definition
 - [Commit afadcef](https://github.com/googleapis/google-cloud-dotnet/commit/afadcef):
@@ -38,7 +38,7 @@
   - feat: added DATAPROC_METASTORE integrated system along with new entry types: DATABASE and SERVICE
   - docs: Documentation improvements
 
-# Version 1.1.0, released 2020-10-14
+## Version 1.1.0, released 2020-10-14
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
@@ -52,11 +52,11 @@
   - docs: fixed documentation links. ([issue 4858](https://github.com/googleapis/google-cloud-dotnet/issues/4858))
   - feat: search catalog support for restricted locations, and reporting unreachable locations
 
-# Version 1.0.0, released 2020-04-08
+## Version 1.0.0, released 2020-04-08
 
 No API surface changes since 1.0.0-beta01.
 
-# Version 1.0.0-beta01, released 2020-03-27
+## Version 1.0.0-beta01, released 2020-03-27
 
 Initial beta release.
 

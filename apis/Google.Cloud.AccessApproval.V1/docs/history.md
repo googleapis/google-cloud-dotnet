@@ -1,23 +1,23 @@
 # Version history
 
-# Version 1.2.0, released 2021-08-19
+## Version 1.2.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 1.1.0, released 2021-05-25
+## Version 1.1.0, released 2021-05-25
 
 No API surface changes; just dependency updates.
 
-# Version 1.0.0, released 2021-01-18
+## Version 1.0.0, released 2021-01-18
 
 No API changes since 1.0.0-beta02.
 
-# Version 1.0.0-beta02, released 2020-12-09
+## Version 1.0.0-beta02, released 2020-12-09
 
 - [Commit d093233](https://github.com/googleapis/google-cloud-dotnet/commit/d093233): fix!: Regenerate Google.Cloud.AccessApproval.V1
 
 BREAKING CHANGE: The gRPC "raw" client classes are renamed compared with beta01. However, beta01 would be unable to make any RPCs due to incorrect generation.
 
-# Version 1.0.0-beta01, released 2020-12-07
+## Version 1.0.0-beta01, released 2020-12-07
 
 Initial release.

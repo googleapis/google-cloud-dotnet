@@ -1,17 +1,17 @@
 # Version history
 
-# Version 3.3.0, released 2021-08-18
+## Version 3.3.0, released 2021-08-18
 
 - [Commit d9a3648](https://github.com/googleapis/google-cloud-dotnet/commit/d9a3648): fix: Fix Firestore and Datastore for self-signed JWTs
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 3.2.0, released 2021-05-05
+## Version 3.2.0, released 2021-05-05
 
 - [Commit 8bb2981](https://github.com/googleapis/google-cloud-dotnet/commit/8bb2981): Use CopySettingsForEmulator in DatastoreDbBuilder
 
 No API surface changes, but CopySettingsForEmulator ensures that any UserAgent or GrpcAdapter set in the client builder is also used in the emulator.
 
-# Version 3.1.0, released 2020-09-28
+## Version 3.1.0, released 2020-09-28
 
 - [Commit 0790924](https://github.com/googleapis/google-cloud-dotnet/commit/0790924): fix: Add gRPC compatibility constructors
 - [Commit a009b4b](https://github.com/googleapis/google-cloud-dotnet/commit/a009b4b): fix: Specify insecure credentials when connecting to the emulator. Fixes [issue 5365](https://github.com/googleapis/google-cloud-dotnet/issues/5365).
@@ -22,12 +22,12 @@ No API surface changes, but CopySettingsForEmulator ensures that any UserAgent o
 - [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
 - [Commit 03279b9](https://github.com/googleapis/google-cloud-dotnet/commit/03279b9): docs: Fix documentation for string_value. The value does not have to be at least 1MB, but rather, at most 1MB.
 
-# Version 3.0.0, released 2020-03-17
+## Version 3.0.0, released 2020-03-17
 
 No API surface changes compared with 3.0.0-beta01, just dependency
 and implementation changes.
 
-# Version 3.0.0-beta01, released 2020-02-18
+## Version 3.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
 guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
@@ -39,23 +39,23 @@ Additional breaking changes not covered in the guide:
   namespace, and the previous `ProductionOrEmulator` value within
   it has been renamed to `EmulatorOrProduction`.
 
-# Version 2.2.0, released 2019-12-09
+## Version 2.2.0, released 2019-12-09
 
 - Implement DatastoreDbBuilder for easy configuration, including emulator support
 - Multiple code generation improvements
 - Some retry-based settings are now obsolete, and will be removed in the next major release
 
-# Version 2.1.0, released 2018-02-01
+## Version 2.1.0, released 2018-02-01
 
 - [Commit 3730474](https://github.com/googleapis/google-cloud-dotnet/commit/3730474): Implement Datastore transaction options in DatastoreDb.
 - [Commit 6287f81](https://github.com/googleapis/google-cloud-dotnet/commit/6287f81): Added transaction options to underlying API
 
-# Version 2.0.0, released 2017-06-22
+## Version 2.0.0, released 2017-06-22
 
 - [Commit 04c3fdc](https://github.com/googleapis/google-cloud-dotnet/commit/04c3fdc): Retry setting changes
 - [Commit 49e0362](https://github.com/googleapis/google-cloud-dotnet/commit/49e0362): ConfigureAwait fixes
 - Dependency on GAX updated to v2
 
-# Version 1.0.0, released 2017-03-30
+## Version 1.0.0, released 2017-03-30
 
 Initial GA release.

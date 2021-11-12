@@ -1,21 +1,21 @@
 # Version history
 
-# Version 1.5.0, released 2021-11-10
+## Version 1.5.0, released 2021-11-10
 
 - [Commit 8f5d443](https://github.com/googleapis/google-cloud-dotnet/commit/8f5d443): docs: clarified usage of entitlement parameters
 - [Commit bf3d935](https://github.com/googleapis/google-cloud-dotnet/commit/bf3d935): feat: add resource type to ChannelPartnerLink
 
-# Version 1.4.0, released 2021-09-24
+## Version 1.4.0, released 2021-09-24
 
 - [Commit 7210495](https://github.com/googleapis/google-cloud-dotnet/commit/7210495):
   - feat: add API ImportCustomer for Cloud Channel API
   - docs: update comments for a few fields
 
-# Version 1.3.0, released 2021-08-19
+## Version 1.3.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 1.2.0, released 2021-06-22
+## Version 1.2.0, released 2021-06-22
 
 - [Commit 01c154e](https://github.com/googleapis/google-cloud-dotnet/commit/01c154e):
   - feat: Add/Update API definitions for Cloud Channel API, including
@@ -24,7 +24,7 @@
   - * Add a new LookupOffer RPC and LookupOfferRequest proto.
   - * Add a new enum value LICENSE_CAP_CHANGED to enum EntitlementEvent.Type.
 
-# Version 1.1.0, released 2021-04-29
+## Version 1.1.0, released 2021-04-29
 
 - [Commit 8f5a62b](https://github.com/googleapis/google-cloud-dotnet/commit/8f5a62b):
   - docs: Update documentation comments to match tone and style with the rest of Cloud documentation.
@@ -32,7 +32,7 @@
   - feat: Enabled support for boolean as an allowed parameter value.
   - feat: Added legacy_sku field to TransferableSku.
 
-# Version 1.0.0, released 2021-03-03
+## Version 1.0.0, released 2021-03-03
 
 - [Commit 1620a3a](https://github.com/googleapis/google-cloud-dotnet/commit/1620a3a):
   - feat: addition of billing_account field on Plan
@@ -45,6 +45,6 @@
 The breaking change to TransferableSkus was due to the fields having
 accidentally been included despite deprecation in previews.
 
-# Version 1.0.0-beta01, released 2021-01-13
+## Version 1.0.0-beta01, released 2021-01-13
 
 Initial release.

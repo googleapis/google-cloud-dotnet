@@ -1,17 +1,17 @@
 # Version history
 
-# Version 4.3.1, released 2021-11-09
+## Version 4.3.1, released 2021-11-09
 
 - [Commit b1318ac](https://github.com/googleapis/google-cloud-dotnet/commit/b1318ac):
   - fix: Respects the service client set through error reporting options.
   - Adds missing tests for all options.
   - Closes [issue 7448](https://github.com/googleapis/google-cloud-dotnet/issues/7448)
 
-# Version 4.3.0, released 2021-11-01
+## Version 4.3.0, released 2021-11-01
 
 No API surface changes; just releasing a stable version.
 
-# Version 4.3.0-beta08, released 2021-10-25
+## Version 4.3.0-beta08, released 2021-10-25
 
 Version 4.3.0-beta07 was not released because of CI errors.
 This version also contains the changes described for the unreleased version 4.3.0-beta07.
@@ -31,21 +31,21 @@ This version also contains the changes described for the unreleased version 4.3.
   - Diagnostics, by default, ignores logging exceptions.
   - To reproduce the issue this commit fixes both scope validation and Diagnostis exception propagation needed to be enabled.
 
-# Version 4.3.0-beta07, released 2021-10-20
+## Version 4.3.0-beta07, released 2021-10-20
 
 - [Commit 6e34e22](https://github.com/googleapis/google-cloud-dotnet/commit/6e34e22): refactor: Fully standardize error reporting options.
 
-# Version 4.3.0-beta06, released 2021-10-13
+## Version 4.3.0-beta06, released 2021-10-13
 
 Versions 4.3.0-beta04 and 4.3.0-beta05 were not released because of CI errors.
 This version contains all changes described for the unreleased version 4.3.0-beta04.
 
-# Version 4.3.0-beta05, released 2021-10-13
+## Version 4.3.0-beta05, released 2021-10-13
 
 Version 4.3.0-beta04 was not released because of a CI error.
 This version contains all changes described for the unreleased version 4.3.0-beta04.
 
-# Version 4.3.0-beta04, released 2021-10-12
+## Version 4.3.0-beta04, released 2021-10-12
 
 - [Commit 6c3117a](https://github.com/googleapis/google-cloud-dotnet/commit/6c3117a): process: Add the correct license header.
 - [Commit 03eb674](https://github.com/googleapis/google-cloud-dotnet/commit/03eb674):
@@ -69,18 +69,18 @@ This version contains all changes described for the unreleased version 4.3.0-bet
   - Move non ASP.NET core snippets to Common.
   - Delete in XML docs samples that quickly get outdated. We have snippets.
 
-# Version 4.3.0-beta03, released 2021-07-22
+## Version 4.3.0-beta03, released 2021-07-22
 
 No API surface changes; just publishing docs from 4.3.0-beta02.
 
-# Version 4.3.0-beta02, released 2021-07-22
+## Version 4.3.0-beta02, released 2021-07-22
 
 - [Commit c682904](https://github.com/googleapis/google-cloud-dotnet/commit/c682904):
   - feat: Adds trace context information to error log entries.
   - Closes [issue 5360](https://github.com/googleapis/google-cloud-dotnet/issues/5360)
 - [Commit 1245ded](https://github.com/googleapis/google-cloud-dotnet/commit/1245ded): fix: Fully qualifies all alternative types/members for obsolete ones. Fixes [issue 6672](https://github.com/googleapis/google-cloud-dotnet/issues/6672)
 
-# Version 4.3.0-beta01, released 2021-06-24
+## Version 4.3.0-beta01, released 2021-06-24
 
 Note: Starting from this version, this package will be augmented so that it can be used for loggin, tracing and error reporting
 to Google Cloud in non ASP.NET Core applications.
@@ -123,7 +123,7 @@ Note: changing a generic type parameter constraint in
 `LabelProviderExtensions` is notionally a breaking change, but due
 to how it will be used, we don't expect it to actually break any customers.
 
-# Version 4.2.0, released 2020-12-07 and earlier
+## Version 4.2.0, released 2020-12-07 and earlier
 
 This package is not usually intended for direct consumption; it's a
 dependency of other packages. The release histories of those

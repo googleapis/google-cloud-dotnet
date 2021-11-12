@@ -1,29 +1,29 @@
 # Version history
 
-# Version 1.0.0-beta06, released 2021-09-01
+## Version 1.0.0-beta06, released 2021-09-01
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
 
-# Version 1.0.0-beta05, released 2021-07-27
+## Version 1.0.0-beta05, released 2021-07-27
 
 - [Commit 14795e6](https://github.com/googleapis/google-cloud-dotnet/commit/14795e6): feat: Update Service Directory v1beta1 protos to include VPC Network field, and create/modify timestamp fields.
 
-# Version 1.0.0-beta04, released 2021-05-26
+## Version 1.0.0-beta04, released 2021-05-26
 
 No API surface changes; just dependency updates.
 
-# Version 1.0.0-beta03, released 2020-11-18
+## Version 1.0.0-beta03, released 2020-11-18
 
 - [Commit 0ca05f5](https://github.com/googleapis/google-cloud-dotnet/commit/0ca05f5): chore: Regenerate all APIs using protoc 3.13 and Grpc.Tools 2.31
 - [Commit 6bde7a3](https://github.com/googleapis/google-cloud-dotnet/commit/6bde7a3): docs: Regenerate all APIs with service comments in client documentation
 - [Commit 947a573](https://github.com/googleapis/google-cloud-dotnet/commit/947a573): docs: Regenerate all clients with more explicit documentation
 
-# Version 1.0.0-beta02, released 2020-03-19
+## Version 1.0.0-beta02, released 2020-03-19
 
 No API surface changes compared with 1.0.0-beta01, just dependency
 and implementation changes.
 
-# Version 1.0.0-beta01, released 2020-03-11
+## Version 1.0.0-beta01, released 2020-03-11
 
 Initial beta release.
 
