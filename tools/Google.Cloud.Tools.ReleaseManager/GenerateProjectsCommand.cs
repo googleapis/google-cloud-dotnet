@@ -475,7 +475,7 @@ namespace Google.Cloud.Tools.ReleaseManager
 
 {{auth}}
 
-# Getting started
+## Getting started
 
 {{client-classes}}
 

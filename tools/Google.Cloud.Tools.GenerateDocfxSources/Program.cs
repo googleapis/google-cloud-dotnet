@@ -289,7 +289,7 @@ $@"Note:
 This documentation is for version `{ api.Version}` of the library.
 Some samples may not work with other versions.";
             string installation =
-$@"# Installation
+$@"## Installation
 
 Install the `{api.Id}` package from NuGet. Add it to
 your project in the normal way (for example by right-clicking on the
@@ -304,7 +304,7 @@ pre-release version (`{api.Version}`) of `{api.Id}`.";
             }
 
             string auth =
-@"# Authentication
+@"## Authentication
 
 When running on Google Cloud Platform, no action needs to be taken to authenticate.
 
