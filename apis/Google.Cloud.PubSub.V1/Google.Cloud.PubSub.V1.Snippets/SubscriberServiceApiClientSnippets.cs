@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Api.Gax.Grpc;
 using Google.Api.Gax.ResourceNames;
 using Google.Cloud.ClientTesting;
@@ -347,6 +348,17 @@ namespace Google.Cloud.PubSub.V1.Snippets
 
             await pullingTask;
             // End snippet
+        }
+
+        [Fact]
+        public void Emulator()
+        {
+            // Sample: Emulator
+            SubscriberServiceApiClient subscriber = new SubscriberServiceApiClientBuilder
+            {
+                EmulatorDetection = EmulatorDetection.EmulatorOrProduction
+            }.Build();
+            // End sample
         }
     }
 }
