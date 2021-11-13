@@ -286,11 +286,11 @@ namespace Google.Cloud.TextToSpeech.V1
         /// Optional. Recommended.
         /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
         /// specified, the ListVoices call will only return voices that can be used to
-        /// synthesize this language_code. E.g. when specifying "en-NZ", you will get
-        /// supported "en-\*" voices; when specifying "no", you will get supported
-        /// "no-\*" (Norwegian) and "nb-\*" (Norwegian Bokmal) voices; specifying "zh"
-        /// will also get supported "cmn-\*" voices; specifying "zh-hk" will also get
-        /// supported "yue-\*" voices.
+        /// synthesize this language_code. E.g. when specifying `"en-NZ"`, you will get
+        /// supported `"en-\*"` voices; when specifying `"no"`, you will get supported
+        /// `"no-\*"` (Norwegian) and `"nb-\*"` (Norwegian Bokmal) voices; specifying
+        /// `"zh"` will also get supported `"cmn-\*"` voices; specifying `"zh-hk"` will
+        /// also get supported `"yue-\*"` voices.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -307,11 +307,11 @@ namespace Google.Cloud.TextToSpeech.V1
         /// Optional. Recommended.
         /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
         /// specified, the ListVoices call will only return voices that can be used to
-        /// synthesize this language_code. E.g. when specifying "en-NZ", you will get
-        /// supported "en-\*" voices; when specifying "no", you will get supported
-        /// "no-\*" (Norwegian) and "nb-\*" (Norwegian Bokmal) voices; specifying "zh"
-        /// will also get supported "cmn-\*" voices; specifying "zh-hk" will also get
-        /// supported "yue-\*" voices.
+        /// synthesize this language_code. E.g. when specifying `"en-NZ"`, you will get
+        /// supported `"en-\*"` voices; when specifying `"no"`, you will get supported
+        /// `"no-\*"` (Norwegian) and `"nb-\*"` (Norwegian Bokmal) voices; specifying
+        /// `"zh"` will also get supported `"cmn-\*"` voices; specifying `"zh-hk"` will
+        /// also get supported `"yue-\*"` voices.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -328,11 +328,11 @@ namespace Google.Cloud.TextToSpeech.V1
         /// Optional. Recommended.
         /// [BCP-47](https://www.rfc-editor.org/rfc/bcp/bcp47.txt) language tag. If
         /// specified, the ListVoices call will only return voices that can be used to
-        /// synthesize this language_code. E.g. when specifying "en-NZ", you will get
-        /// supported "en-\*" voices; when specifying "no", you will get supported
-        /// "no-\*" (Norwegian) and "nb-\*" (Norwegian Bokmal) voices; specifying "zh"
-        /// will also get supported "cmn-\*" voices; specifying "zh-hk" will also get
-        /// supported "yue-\*" voices.
+        /// synthesize this language_code. E.g. when specifying `"en-NZ"`, you will get
+        /// supported `"en-\*"` voices; when specifying `"no"`, you will get supported
+        /// `"no-\*"` (Norwegian) and `"nb-\*"` (Norwegian Bokmal) voices; specifying
+        /// `"zh"` will also get supported `"cmn-\*"` voices; specifying `"zh-hk"` will
+        /// also get supported `"yue-\*"` voices.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
