@@ -34,7 +34,7 @@ uses of `TenantOrProjectName` with `TenantName` or `ProjectName`.
 ## Version 2.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
-guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
+guide](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax2)
 for details of changes to both GAX and code generation.
 
 (This API has changed significantly over time, and the history before this point is tricky to backfill.)

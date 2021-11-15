@@ -14,7 +14,7 @@ and implementation changes.
 This is the first prerelease targeting GAX v3. The immediate API
 surface hasn't changed from 1.2.0, but there can still be transitive
 breaking changes via the dependencies. Please see the [breaking
-changes guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
+changes guide](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax2)
 for details of changes for GAX, noting that gRPC-specific changes
 are irrelevant to this package.
 
