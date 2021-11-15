@@ -24,7 +24,7 @@ but be aware that this *can* causes issues with memory and network
 connection usage. We advise you to reuse a single client object if
 possible; if your architecture requires you to frequently create new
 client objects, please dispose of them to help with timely resource
-clean-up. See [the resource clean-up guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis) for more
+clean-up. See [the resource clean-up guide](https://cloud.google.com/dotnet/docs/reference/help/cleanup#rest-based-apis) for more
 details.
 
 ## Sample code

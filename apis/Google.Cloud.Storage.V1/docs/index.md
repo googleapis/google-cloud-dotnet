@@ -26,7 +26,7 @@ the simplest option.
 If your architecture requires you to frequently create new client
 objects, please dispose of them to help with timely resource
 clean-up. See [the resource clean-up
-guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/cleanup.html#rest-based-apis)
+guide](https://cloud.google.com/dotnet/docs/reference/help/cleanup#rest-based-apis)
 for more details.
 
 ## Sample code
