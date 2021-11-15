@@ -4,7 +4,7 @@
 [![GitHub Actions status](https://img.shields.io/github/workflow/status/googleapis/google-cloud-dotnet/Build%20push)](https://github.com/googleapis/google-cloud-dotnet/actions?query=workflow%3A%22Build+push%22)
 
 * [Homepage](https://cloud.google.com/dotnet/)
-* [API Documentation](http://googleapis.github.io/google-cloud-dotnet/docs/)
+* [API Documentation](https://cloud.google.com/dotnet/docs/reference/)
 
 # Available APIs
 
@@ -235,7 +235,7 @@ Next, choose a method for authenticating API requests from within your project:
 ## Supported platforms
 
 See the [Supported Platforms
-documentation](https://googleapis.github.io/google-cloud-dotnet/docs/guides/platforms.html)
+documentation](https://cloud.google.com/dotnet/docs/reference/help/platforms)
 for details on where the Google Cloud Libraries for .NET are
 supported.
 
@@ -248,7 +248,7 @@ represents the version of the underlying API; the version number for
 the package itself indicates the status of the client library.
 
 See the [Versioning
-documentation](https://googleapis.github.io/google-cloud-dotnet/docs/guides/versioning.html)
+documentation](https://cloud.google.com/dotnet/docs/reference/help/versioning)
 for more details.
 
 ## License
