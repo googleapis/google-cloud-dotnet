@@ -2998,7 +2998,7 @@
     },
     {
       "id": "Google.Cloud.VMMigration.V1",
-      "version": "1.0.0-beta00",
+      "version": "1.0.0-beta01",
       "type": "grpc",
       "productName": "VM Migration",
       "productUrl": "https://cloud.google.com/migrate/compute-engine/docs/",
