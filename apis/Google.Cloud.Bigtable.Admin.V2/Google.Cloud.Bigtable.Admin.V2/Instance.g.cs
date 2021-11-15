@@ -41,44 +41,60 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             "ChBUWVBFX1VOU1BFQ0lGSUVEEAASDgoKUFJPRFVDVElPThABEg8KC0RFVkVM",
             "T1BNRU5UEAI6U+pBUAolYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9J",
             "bnN0YW5jZRIncHJvamVjdHMve3Byb2plY3R9L2luc3RhbmNlcy97aW5zdGFu",
-            "Y2V9ItIECgdDbHVzdGVyEhEKBG5hbWUYASABKAlCA+BBAxI4Cghsb2NhdGlv",
-            "bhgCIAEoCUIm+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24SOwoFc3RhdGUYAyABKA4yJy5nb29nbGUuYmlndGFibGUuYWRtaW4udjIu",
-            "Q2x1c3Rlci5TdGF0ZUID4EEDEhgKC3NlcnZlX25vZGVzGAQgASgFQgPgQQIS",
-            "QwoUZGVmYXVsdF9zdG9yYWdlX3R5cGUYBSABKA4yJS5nb29nbGUuYmlndGFi",
-            "bGUuYWRtaW4udjIuU3RvcmFnZVR5cGUSUgoRZW5jcnlwdGlvbl9jb25maWcY",
-            "BiABKAsyMi5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQ2x1c3Rlci5FbmNy",
-            "eXB0aW9uQ29uZmlnQgPgQQUaUAoQRW5jcnlwdGlvbkNvbmZpZxI8CgxrbXNf",
-            "a2V5X25hbWUYASABKAlCJvpBIwohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20v",
-            "Q3J5cHRvS2V5IlEKBVN0YXRlEhMKD1NUQVRFX05PVF9LTk9XThAAEgkKBVJF",
-            "QURZEAESDAoIQ1JFQVRJTkcQAhIMCghSRVNJWklORxADEgwKCERJU0FCTEVE",
-            "EAQ6ZepBYgokYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9DbHVzdGVy",
-            "Ejpwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0vY2x1",
-            "c3RlcnMve2NsdXN0ZXJ9IogECgpBcHBQcm9maWxlEgwKBG5hbWUYASABKAkS",
-            "DAoEZXRhZxgCIAEoCRITCgtkZXNjcmlwdGlvbhgDIAEoCRJnCh1tdWx0aV9j",
-            "bHVzdGVyX3JvdXRpbmdfdXNlX2FueRgFIAEoCzI+Lmdvb2dsZS5iaWd0YWJs",
-            "ZS5hZG1pbi52Mi5BcHBQcm9maWxlLk11bHRpQ2x1c3RlclJvdXRpbmdVc2VB",
-            "bnlIABJbChZzaW5nbGVfY2x1c3Rlcl9yb3V0aW5nGAYgASgLMjkuZ29vZ2xl",
-            "LmJpZ3RhYmxlLmFkbWluLnYyLkFwcFByb2ZpbGUuU2luZ2xlQ2x1c3RlclJv",
-            "dXRpbmdIABowChlNdWx0aUNsdXN0ZXJSb3V0aW5nVXNlQW55EhMKC2NsdXN0",
-            "ZXJfaWRzGAEgAygJGk4KFFNpbmdsZUNsdXN0ZXJSb3V0aW5nEhIKCmNsdXN0",
-            "ZXJfaWQYASABKAkSIgoaYWxsb3dfdHJhbnNhY3Rpb25hbF93cml0ZXMYAiAB",
-            "KAg6b+pBbAonYmlndGFibGVhZG1pbi5nb29nbGVhcGlzLmNvbS9BcHBQcm9m",
-            "aWxlEkFwcm9qZWN0cy97cHJvamVjdH0vaW5zdGFuY2VzL3tpbnN0YW5jZX0v",
-            "YXBwUHJvZmlsZXMve2FwcF9wcm9maWxlfUIQCg5yb3V0aW5nX3BvbGljeULQ",
-            "AgocY29tLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52MkINSW5zdGFuY2VQcm90",
-            "b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Jp",
-            "Z3RhYmxlL2FkbWluL3YyO2FkbWluqgIeR29vZ2xlLkNsb3VkLkJpZ3RhYmxl",
-            "LkFkbWluLlYyygIeR29vZ2xlXENsb3VkXEJpZ3RhYmxlXEFkbWluXFYy6gIi",
-            "R29vZ2xlOjpDbG91ZDo6QmlndGFibGU6OkFkbWluOjpWMupBeAohY2xvdWRr",
-            "bXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9qZWN0cy97cHJvamVj",
-            "dH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mve2tleV9yaW5nfS9j",
-            "cnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIGcHJvdG8z"));
+            "Y2V9IjUKEkF1dG9zY2FsaW5nVGFyZ2V0cxIfChdjcHVfdXRpbGl6YXRpb25f",
+            "cGVyY2VudBgCIAEoBSJPChFBdXRvc2NhbGluZ0xpbWl0cxIcCg9taW5fc2Vy",
+            "dmVfbm9kZXMYASABKAVCA+BBAhIcCg9tYXhfc2VydmVfbm9kZXMYAiABKAVC",
+            "A+BBAiLOBwoHQ2x1c3RlchIRCgRuYW1lGAEgASgJQgPgQQMSOAoIbG9jYXRp",
+            "b24YAiABKAlCJvpBIwohbG9jYXRpb25zLmdvb2dsZWFwaXMuY29tL0xvY2F0",
+            "aW9uEjsKBXN0YXRlGAMgASgOMicuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYy",
+            "LkNsdXN0ZXIuU3RhdGVCA+BBAxITCgtzZXJ2ZV9ub2RlcxgEIAEoBRJJCg5j",
+            "bHVzdGVyX2NvbmZpZxgHIAEoCzIvLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52",
+            "Mi5DbHVzdGVyLkNsdXN0ZXJDb25maWdIABJDChRkZWZhdWx0X3N0b3JhZ2Vf",
+            "dHlwZRgFIAEoDjIlLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5TdG9yYWdl",
+            "VHlwZRJSChFlbmNyeXB0aW9uX2NvbmZpZxgGIAEoCzIyLmdvb2dsZS5iaWd0",
+            "YWJsZS5hZG1pbi52Mi5DbHVzdGVyLkVuY3J5cHRpb25Db25maWdCA+BBBRq4",
+            "AQoYQ2x1c3RlckF1dG9zY2FsaW5nQ29uZmlnEkwKEmF1dG9zY2FsaW5nX2xp",
+            "bWl0cxgBIAEoCzIrLmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BdXRvc2Nh",
+            "bGluZ0xpbWl0c0ID4EECEk4KE2F1dG9zY2FsaW5nX3RhcmdldHMYAiABKAsy",
+            "LC5nb29nbGUuYmlndGFibGUuYWRtaW4udjIuQXV0b3NjYWxpbmdUYXJnZXRz",
+            "QgPgQQIabwoNQ2x1c3RlckNvbmZpZxJeChpjbHVzdGVyX2F1dG9zY2FsaW5n",
+            "X2NvbmZpZxgBIAEoCzI6Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5DbHVz",
+            "dGVyLkNsdXN0ZXJBdXRvc2NhbGluZ0NvbmZpZxpQChBFbmNyeXB0aW9uQ29u",
+            "ZmlnEjwKDGttc19rZXlfbmFtZRgBIAEoCUIm+kEjCiFjbG91ZGttcy5nb29n",
+            "bGVhcGlzLmNvbS9DcnlwdG9LZXkiUQoFU3RhdGUSEwoPU1RBVEVfTk9UX0tO",
+            "T1dOEAASCQoFUkVBRFkQARIMCghDUkVBVElORxACEgwKCFJFU0laSU5HEAMS",
+            "DAoIRElTQUJMRUQQBDpl6kFiCiRiaWd0YWJsZWFkbWluLmdvb2dsZWFwaXMu",
+            "Y29tL0NsdXN0ZXISOnByb2plY3RzL3twcm9qZWN0fS9pbnN0YW5jZXMve2lu",
+            "c3RhbmNlfS9jbHVzdGVycy97Y2x1c3Rlcn1CCAoGY29uZmlnIogECgpBcHBQ",
+            "cm9maWxlEgwKBG5hbWUYASABKAkSDAoEZXRhZxgCIAEoCRITCgtkZXNjcmlw",
+            "dGlvbhgDIAEoCRJnCh1tdWx0aV9jbHVzdGVyX3JvdXRpbmdfdXNlX2FueRgF",
+            "IAEoCzI+Lmdvb2dsZS5iaWd0YWJsZS5hZG1pbi52Mi5BcHBQcm9maWxlLk11",
+            "bHRpQ2x1c3RlclJvdXRpbmdVc2VBbnlIABJbChZzaW5nbGVfY2x1c3Rlcl9y",
+            "b3V0aW5nGAYgASgLMjkuZ29vZ2xlLmJpZ3RhYmxlLmFkbWluLnYyLkFwcFBy",
+            "b2ZpbGUuU2luZ2xlQ2x1c3RlclJvdXRpbmdIABowChlNdWx0aUNsdXN0ZXJS",
+            "b3V0aW5nVXNlQW55EhMKC2NsdXN0ZXJfaWRzGAEgAygJGk4KFFNpbmdsZUNs",
+            "dXN0ZXJSb3V0aW5nEhIKCmNsdXN0ZXJfaWQYASABKAkSIgoaYWxsb3dfdHJh",
+            "bnNhY3Rpb25hbF93cml0ZXMYAiABKAg6b+pBbAonYmlndGFibGVhZG1pbi5n",
+            "b29nbGVhcGlzLmNvbS9BcHBQcm9maWxlEkFwcm9qZWN0cy97cHJvamVjdH0v",
+            "aW5zdGFuY2VzL3tpbnN0YW5jZX0vYXBwUHJvZmlsZXMve2FwcF9wcm9maWxl",
+            "fUIQCg5yb3V0aW5nX3BvbGljeULQAgocY29tLmdvb2dsZS5iaWd0YWJsZS5h",
+            "ZG1pbi52MkINSW5zdGFuY2VQcm90b1ABWj1nb29nbGUuZ29sYW5nLm9yZy9n",
+            "ZW5wcm90by9nb29nbGVhcGlzL2JpZ3RhYmxlL2FkbWluL3YyO2FkbWluqgIe",
+            "R29vZ2xlLkNsb3VkLkJpZ3RhYmxlLkFkbWluLlYyygIeR29vZ2xlXENsb3Vk",
+            "XEJpZ3RhYmxlXEFkbWluXFYy6gIiR29vZ2xlOjpDbG91ZDo6QmlndGFibGU6",
+            "OkFkbWluOjpWMupBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRv",
+            "S2V5ElNwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "a2V5UmluZ3Mve2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fWIG",
+            "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Bigtable.Admin.V2.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance), global::Google.Cloud.Bigtable.Admin.V2.Instance.Parser, new[]{ "Name", "DisplayName", "State", "Type", "Labels", "CreateTime" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.State), typeof(global::Google.Cloud.Bigtable.Admin.V2.Instance.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "DefaultStorageType", "EncryptionConfig" }, null, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets), global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets.Parser, new[]{ "CpuUtilizationPercent" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits), global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits.Parser, new[]{ "MinServeNodes", "MaxServeNodes" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Parser, new[]{ "Name", "Location", "State", "ServeNodes", "ClusterConfig", "DefaultStorageType", "EncryptionConfig" }, new[]{ "Config" }, new[]{ typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig.Parser, new[]{ "AutoscalingLimits", "AutoscalingTargets" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig.Parser, new[]{ "ClusterAutoscalingConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig), global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Parser, new[]{ "Name", "Etag", "Description", "MultiClusterRoutingUseAny", "SingleClusterRouting" }, new[]{ "RoutingPolicy" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.MultiClusterRoutingUseAny.Parser, new[]{ "ClusterIds" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting), global::Google.Cloud.Bigtable.Admin.V2.AppProfile.Types.SingleClusterRouting.Parser, new[]{ "ClusterId", "AllowTransactionalWrites" }, null, null, null, null)})
           }));
@@ -555,6 +571,438 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
   }
 
   /// <summary>
+  /// The Autoscaling targets for a Cluster. These determine the recommended nodes.
+  /// </summary>
+  public sealed partial class AutoscalingTargets : pb::IMessage<AutoscalingTargets>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutoscalingTargets> _parser = new pb::MessageParser<AutoscalingTargets>(() => new AutoscalingTargets());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutoscalingTargets> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[1]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingTargets() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingTargets(AutoscalingTargets other) : this() {
+      cpuUtilizationPercent_ = other.cpuUtilizationPercent_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingTargets Clone() {
+      return new AutoscalingTargets(this);
+    }
+
+    /// <summary>Field number for the "cpu_utilization_percent" field.</summary>
+    public const int CpuUtilizationPercentFieldNumber = 2;
+    private int cpuUtilizationPercent_;
+    /// <summary>
+    /// The cpu utilization that the Autoscaler should be trying to achieve.
+    /// This number is on a scale from 0 (no utilization) to
+    /// 100 (total utilization).
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CpuUtilizationPercent {
+      get { return cpuUtilizationPercent_; }
+      set {
+        cpuUtilizationPercent_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutoscalingTargets);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutoscalingTargets other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (CpuUtilizationPercent != other.CpuUtilizationPercent) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (CpuUtilizationPercent != 0) hash ^= CpuUtilizationPercent.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (CpuUtilizationPercent != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(CpuUtilizationPercent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (CpuUtilizationPercent != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(CpuUtilizationPercent);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (CpuUtilizationPercent != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(CpuUtilizationPercent);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutoscalingTargets other) {
+      if (other == null) {
+        return;
+      }
+      if (other.CpuUtilizationPercent != 0) {
+        CpuUtilizationPercent = other.CpuUtilizationPercent;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 16: {
+            CpuUtilizationPercent = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 16: {
+            CpuUtilizationPercent = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Limits for the number of nodes a Cluster can autoscale up/down to.
+  /// </summary>
+  public sealed partial class AutoscalingLimits : pb::IMessage<AutoscalingLimits>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<AutoscalingLimits> _parser = new pb::MessageParser<AutoscalingLimits>(() => new AutoscalingLimits());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<AutoscalingLimits> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingLimits() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingLimits(AutoscalingLimits other) : this() {
+      minServeNodes_ = other.minServeNodes_;
+      maxServeNodes_ = other.maxServeNodes_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public AutoscalingLimits Clone() {
+      return new AutoscalingLimits(this);
+    }
+
+    /// <summary>Field number for the "min_serve_nodes" field.</summary>
+    public const int MinServeNodesFieldNumber = 1;
+    private int minServeNodes_;
+    /// <summary>
+    /// Required. Minimum number of nodes to scale down to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MinServeNodes {
+      get { return minServeNodes_; }
+      set {
+        minServeNodes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "max_serve_nodes" field.</summary>
+    public const int MaxServeNodesFieldNumber = 2;
+    private int maxServeNodes_;
+    /// <summary>
+    /// Required. Maximum number of nodes to scale up to.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int MaxServeNodes {
+      get { return maxServeNodes_; }
+      set {
+        maxServeNodes_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as AutoscalingLimits);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(AutoscalingLimits other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MinServeNodes != other.MinServeNodes) return false;
+      if (MaxServeNodes != other.MaxServeNodes) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MinServeNodes != 0) hash ^= MinServeNodes.GetHashCode();
+      if (MaxServeNodes != 0) hash ^= MaxServeNodes.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MinServeNodes != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MinServeNodes);
+      }
+      if (MaxServeNodes != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxServeNodes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MinServeNodes != 0) {
+        output.WriteRawTag(8);
+        output.WriteInt32(MinServeNodes);
+      }
+      if (MaxServeNodes != 0) {
+        output.WriteRawTag(16);
+        output.WriteInt32(MaxServeNodes);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MinServeNodes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MinServeNodes);
+      }
+      if (MaxServeNodes != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeInt32Size(MaxServeNodes);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(AutoscalingLimits other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MinServeNodes != 0) {
+        MinServeNodes = other.MinServeNodes;
+      }
+      if (other.MaxServeNodes != 0) {
+        MaxServeNodes = other.MaxServeNodes;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 8: {
+            MinServeNodes = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            MaxServeNodes = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 8: {
+            MinServeNodes = input.ReadInt32();
+            break;
+          }
+          case 16: {
+            MaxServeNodes = input.ReadInt32();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// A resizable group of nodes in a particular cloud location, capable
   /// of serving all [Tables][google.bigtable.admin.v2.Table] in the parent
   /// [Instance][google.bigtable.admin.v2.Instance].
@@ -573,7 +1021,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[1]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -599,6 +1047,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serveNodes_ = other.serveNodes_;
       defaultStorageType_ = other.defaultStorageType_;
       encryptionConfig_ = other.encryptionConfig_ != null ? other.encryptionConfig_.Clone() : null;
+      switch (other.ConfigCase) {
+        case ConfigOneofCase.ClusterConfig:
+          ClusterConfig = other.ClusterConfig.Clone();
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -662,8 +1116,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     public const int ServeNodesFieldNumber = 4;
     private int serveNodes_;
     /// <summary>
-    /// Required. The number of nodes allocated to this cluster. More nodes enable
-    /// higher throughput and more consistent performance.
+    /// The number of nodes allocated to this cluster. More nodes enable higher
+    /// throughput and more consistent performance.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -671,6 +1125,21 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       get { return serveNodes_; }
       set {
         serveNodes_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "cluster_config" field.</summary>
+    public const int ClusterConfigFieldNumber = 7;
+    /// <summary>
+    /// Configuration for this cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig ClusterConfig {
+      get { return configCase_ == ConfigOneofCase.ClusterConfig ? (global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig) config_ : null; }
+      set {
+        config_ = value;
+        configCase_ = value == null ? ConfigOneofCase.None : ConfigOneofCase.ClusterConfig;
       }
     }
 
@@ -706,6 +1175,26 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
     }
 
+    private object config_;
+    /// <summary>Enum of possible cases for the "config" oneof.</summary>
+    public enum ConfigOneofCase {
+      None = 0,
+      ClusterConfig = 7,
+    }
+    private ConfigOneofCase configCase_ = ConfigOneofCase.None;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ConfigOneofCase ConfigCase {
+      get { return configCase_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearConfig() {
+      configCase_ = ConfigOneofCase.None;
+      config_ = null;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -725,8 +1214,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Location != other.Location) return false;
       if (State != other.State) return false;
       if (ServeNodes != other.ServeNodes) return false;
+      if (!object.Equals(ClusterConfig, other.ClusterConfig)) return false;
       if (DefaultStorageType != other.DefaultStorageType) return false;
       if (!object.Equals(EncryptionConfig, other.EncryptionConfig)) return false;
+      if (ConfigCase != other.ConfigCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -738,8 +1229,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       if (Location.Length != 0) hash ^= Location.GetHashCode();
       if (State != global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.State.NotKnown) hash ^= State.GetHashCode();
       if (ServeNodes != 0) hash ^= ServeNodes.GetHashCode();
+      if (configCase_ == ConfigOneofCase.ClusterConfig) hash ^= ClusterConfig.GetHashCode();
       if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) hash ^= DefaultStorageType.GetHashCode();
       if (encryptionConfig_ != null) hash ^= EncryptionConfig.GetHashCode();
+      hash ^= (int) configCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -782,6 +1275,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(EncryptionConfig);
       }
+      if (configCase_ == ConfigOneofCase.ClusterConfig) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ClusterConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -816,6 +1313,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         output.WriteRawTag(50);
         output.WriteMessage(EncryptionConfig);
       }
+      if (configCase_ == ConfigOneofCase.ClusterConfig) {
+        output.WriteRawTag(58);
+        output.WriteMessage(ClusterConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -837,6 +1338,9 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       if (ServeNodes != 0) {
         size += 1 + pb::CodedOutputStream.ComputeInt32Size(ServeNodes);
+      }
+      if (configCase_ == ConfigOneofCase.ClusterConfig) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClusterConfig);
       }
       if (DefaultStorageType != global::Google.Cloud.Bigtable.Admin.V2.StorageType.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) DefaultStorageType);
@@ -877,6 +1381,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         }
         EncryptionConfig.MergeFrom(other.EncryptionConfig);
       }
+      switch (other.ConfigCase) {
+        case ConfigOneofCase.ClusterConfig:
+          if (ClusterConfig == null) {
+            ClusterConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig();
+          }
+          ClusterConfig.MergeFrom(other.ClusterConfig);
+          break;
+      }
+
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
@@ -919,6 +1432,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
             input.ReadMessage(EncryptionConfig);
             break;
           }
+          case 58: {
+            global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig();
+            if (configCase_ == ConfigOneofCase.ClusterConfig) {
+              subBuilder.MergeFrom(ClusterConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ClusterConfig = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -959,6 +1481,15 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
               EncryptionConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.EncryptionConfig();
             }
             input.ReadMessage(EncryptionConfig);
+            break;
+          }
+          case 58: {
+            global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig subBuilder = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterConfig();
+            if (configCase_ == ConfigOneofCase.ClusterConfig) {
+              subBuilder.MergeFrom(ClusterConfig);
+            }
+            input.ReadMessage(subBuilder);
+            ClusterConfig = subBuilder;
             break;
           }
         }
@@ -1005,6 +1536,463 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
 
       /// <summary>
+      /// Autoscaling config for a cluster.
+      /// </summary>
+      public sealed partial class ClusterAutoscalingConfig : pb::IMessage<ClusterAutoscalingConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ClusterAutoscalingConfig> _parser = new pb::MessageParser<ClusterAutoscalingConfig>(() => new ClusterAutoscalingConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ClusterAutoscalingConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Cluster.Descriptor.NestedTypes[0]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClusterAutoscalingConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClusterAutoscalingConfig(ClusterAutoscalingConfig other) : this() {
+          autoscalingLimits_ = other.autoscalingLimits_ != null ? other.autoscalingLimits_.Clone() : null;
+          autoscalingTargets_ = other.autoscalingTargets_ != null ? other.autoscalingTargets_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClusterAutoscalingConfig Clone() {
+          return new ClusterAutoscalingConfig(this);
+        }
+
+        /// <summary>Field number for the "autoscaling_limits" field.</summary>
+        public const int AutoscalingLimitsFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits autoscalingLimits_;
+        /// <summary>
+        /// Required. Autoscaling limits for this cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits AutoscalingLimits {
+          get { return autoscalingLimits_; }
+          set {
+            autoscalingLimits_ = value;
+          }
+        }
+
+        /// <summary>Field number for the "autoscaling_targets" field.</summary>
+        public const int AutoscalingTargetsFieldNumber = 2;
+        private global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets autoscalingTargets_;
+        /// <summary>
+        /// Required. Autoscaling targets for this cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets AutoscalingTargets {
+          get { return autoscalingTargets_; }
+          set {
+            autoscalingTargets_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ClusterAutoscalingConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ClusterAutoscalingConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(AutoscalingLimits, other.AutoscalingLimits)) return false;
+          if (!object.Equals(AutoscalingTargets, other.AutoscalingTargets)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (autoscalingLimits_ != null) hash ^= AutoscalingLimits.GetHashCode();
+          if (autoscalingTargets_ != null) hash ^= AutoscalingTargets.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (autoscalingLimits_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AutoscalingLimits);
+          }
+          if (autoscalingTargets_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(AutoscalingTargets);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (autoscalingLimits_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(AutoscalingLimits);
+          }
+          if (autoscalingTargets_ != null) {
+            output.WriteRawTag(18);
+            output.WriteMessage(AutoscalingTargets);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (autoscalingLimits_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingLimits);
+          }
+          if (autoscalingTargets_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoscalingTargets);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ClusterAutoscalingConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.autoscalingLimits_ != null) {
+            if (autoscalingLimits_ == null) {
+              AutoscalingLimits = new global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits();
+            }
+            AutoscalingLimits.MergeFrom(other.AutoscalingLimits);
+          }
+          if (other.autoscalingTargets_ != null) {
+            if (autoscalingTargets_ == null) {
+              AutoscalingTargets = new global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets();
+            }
+            AutoscalingTargets.MergeFrom(other.AutoscalingTargets);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (autoscalingLimits_ == null) {
+                  AutoscalingLimits = new global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits();
+                }
+                input.ReadMessage(AutoscalingLimits);
+                break;
+              }
+              case 18: {
+                if (autoscalingTargets_ == null) {
+                  AutoscalingTargets = new global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets();
+                }
+                input.ReadMessage(AutoscalingTargets);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (autoscalingLimits_ == null) {
+                  AutoscalingLimits = new global::Google.Cloud.Bigtable.Admin.V2.AutoscalingLimits();
+                }
+                input.ReadMessage(AutoscalingLimits);
+                break;
+              }
+              case 18: {
+                if (autoscalingTargets_ == null) {
+                  AutoscalingTargets = new global::Google.Cloud.Bigtable.Admin.V2.AutoscalingTargets();
+                }
+                input.ReadMessage(AutoscalingTargets);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
+      /// Configuration for a cluster.
+      /// </summary>
+      public sealed partial class ClusterConfig : pb::IMessage<ClusterConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ClusterConfig> _parser = new pb::MessageParser<ClusterConfig>(() => new ClusterConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ClusterConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Cluster.Descriptor.NestedTypes[1]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClusterConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClusterConfig(ClusterConfig other) : this() {
+          clusterAutoscalingConfig_ = other.clusterAutoscalingConfig_ != null ? other.clusterAutoscalingConfig_.Clone() : null;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ClusterConfig Clone() {
+          return new ClusterConfig(this);
+        }
+
+        /// <summary>Field number for the "cluster_autoscaling_config" field.</summary>
+        public const int ClusterAutoscalingConfigFieldNumber = 1;
+        private global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig clusterAutoscalingConfig_;
+        /// <summary>
+        /// Autoscaling configuration for this cluster.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig ClusterAutoscalingConfig {
+          get { return clusterAutoscalingConfig_; }
+          set {
+            clusterAutoscalingConfig_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ClusterConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ClusterConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (!object.Equals(ClusterAutoscalingConfig, other.ClusterAutoscalingConfig)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (clusterAutoscalingConfig_ != null) hash ^= ClusterAutoscalingConfig.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (clusterAutoscalingConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ClusterAutoscalingConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (clusterAutoscalingConfig_ != null) {
+            output.WriteRawTag(10);
+            output.WriteMessage(ClusterAutoscalingConfig);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (clusterAutoscalingConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ClusterAutoscalingConfig);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ClusterConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.clusterAutoscalingConfig_ != null) {
+            if (clusterAutoscalingConfig_ == null) {
+              ClusterAutoscalingConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig();
+            }
+            ClusterAutoscalingConfig.MergeFrom(other.ClusterAutoscalingConfig);
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 10: {
+                if (clusterAutoscalingConfig_ == null) {
+                  ClusterAutoscalingConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig();
+                }
+                input.ReadMessage(ClusterAutoscalingConfig);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                if (clusterAutoscalingConfig_ == null) {
+                  ClusterAutoscalingConfig = new global::Google.Cloud.Bigtable.Admin.V2.Cluster.Types.ClusterAutoscalingConfig();
+                }
+                input.ReadMessage(ClusterAutoscalingConfig);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Cloud Key Management Service (Cloud KMS) settings for a CMEK-protected
       /// cluster.
       /// </summary>
@@ -1022,7 +2010,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Bigtable.Admin.V2.Cluster.Descriptor.NestedTypes[0]; }
+          get { return global::Google.Cloud.Bigtable.Admin.V2.Cluster.Descriptor.NestedTypes[2]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1230,7 +2218,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.Bigtable.Admin.V2.InstanceReflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

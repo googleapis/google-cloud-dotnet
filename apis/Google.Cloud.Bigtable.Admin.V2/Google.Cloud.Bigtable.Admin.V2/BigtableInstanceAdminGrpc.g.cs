@@ -3,7 +3,7 @@
 //     source: google/bigtable/admin/v2/bigtable_instance_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -93,6 +93,8 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest> __Marshaller_google_bigtable_admin_v2_ListClustersRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse> __Marshaller_google_bigtable_admin_v2_ListClustersResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest> __Marshaller_google_bigtable_admin_v2_PartialUpdateClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest> __Marshaller_google_bigtable_admin_v2_DeleteClusterRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -201,6 +203,14 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest, global::Google.LongRunning.Operation> __Method_PartialUpdateCluster = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PartialUpdateCluster",
+        __Marshaller_google_bigtable_admin_v2_PartialUpdateClusterRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteCluster = new grpc::Method<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -284,6 +294,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
     {
       /// <summary>
       /// Create an instance within a project.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -359,6 +375,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
       /// <summary>
       /// Creates a cluster within an instance.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -395,12 +417,39 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
       /// <summary>
       /// Updates a cluster within an instance.
+      ///
+      /// Note that UpdateCluster does not support updating
+      /// cluster_config.cluster_autoscaling_config. In order to update it, you
+      /// must use PartialUpdateCluster.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateCluster(global::Google.Cloud.Bigtable.Admin.V2.Cluster request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Partially updates a cluster within a project. This method is the preferred
+      /// way to update a Cluster.
+      ///
+      /// To enable and update autoscaling, set
+      /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+      /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+      /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+      /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+      /// also specify both in the update_mask.
+      ///
+      /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+      /// and explicitly set a serve_node count via the update_mask.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> PartialUpdateCluster(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -546,6 +595,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
 
       /// <summary>
       /// Create an instance within a project.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -559,6 +614,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Create an instance within a project.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -570,6 +631,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Create an instance within a project.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -583,6 +650,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Create an instance within a project.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -846,6 +919,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Creates a cluster within an instance.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -859,6 +938,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Creates a cluster within an instance.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -870,6 +955,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Creates a cluster within an instance.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -883,6 +974,12 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Creates a cluster within an instance.
+      ///
+      /// Note that exactly one of Cluster.serve_nodes and
+      /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+      /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+      /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+      /// enabled.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -990,6 +1087,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Updates a cluster within an instance.
+      ///
+      /// Note that UpdateCluster does not support updating
+      /// cluster_config.cluster_autoscaling_config. In order to update it, you
+      /// must use PartialUpdateCluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1003,6 +1104,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Updates a cluster within an instance.
+      ///
+      /// Note that UpdateCluster does not support updating
+      /// cluster_config.cluster_autoscaling_config. In order to update it, you
+      /// must use PartialUpdateCluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1014,6 +1119,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Updates a cluster within an instance.
+      ///
+      /// Note that UpdateCluster does not support updating
+      /// cluster_config.cluster_autoscaling_config. In order to update it, you
+      /// must use PartialUpdateCluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1027,6 +1136,10 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       }
       /// <summary>
       /// Updates a cluster within an instance.
+      ///
+      /// Note that UpdateCluster does not support updating
+      /// cluster_config.cluster_autoscaling_config. In order to update it, you
+      /// must use PartialUpdateCluster.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1035,6 +1148,98 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.Cluster request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateCluster, null, options, request);
+      }
+      /// <summary>
+      /// Partially updates a cluster within a project. This method is the preferred
+      /// way to update a Cluster.
+      ///
+      /// To enable and update autoscaling, set
+      /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+      /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+      /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+      /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+      /// also specify both in the update_mask.
+      ///
+      /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+      /// and explicitly set a serve_node count via the update_mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PartialUpdateCluster(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PartialUpdateCluster(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Partially updates a cluster within a project. This method is the preferred
+      /// way to update a Cluster.
+      ///
+      /// To enable and update autoscaling, set
+      /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+      /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+      /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+      /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+      /// also specify both in the update_mask.
+      ///
+      /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+      /// and explicitly set a serve_node count via the update_mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation PartialUpdateCluster(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PartialUpdateCluster, null, options, request);
+      }
+      /// <summary>
+      /// Partially updates a cluster within a project. This method is the preferred
+      /// way to update a Cluster.
+      ///
+      /// To enable and update autoscaling, set
+      /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+      /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+      /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+      /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+      /// also specify both in the update_mask.
+      ///
+      /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+      /// and explicitly set a serve_node count via the update_mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PartialUpdateClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PartialUpdateClusterAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Partially updates a cluster within a project. This method is the preferred
+      /// way to update a Cluster.
+      ///
+      /// To enable and update autoscaling, set
+      /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+      /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+      /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+      /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+      /// also specify both in the update_mask.
+      ///
+      /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+      /// and explicitly set a serve_node count via the update_mask.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> PartialUpdateClusterAsync(global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PartialUpdateCluster, null, options, request);
       }
       /// <summary>
       /// Deletes a cluster from an instance.
@@ -1500,6 +1705,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
           .AddMethod(__Method_GetCluster, serviceImpl.GetCluster)
           .AddMethod(__Method_ListClusters, serviceImpl.ListClusters)
           .AddMethod(__Method_UpdateCluster, serviceImpl.UpdateCluster)
+          .AddMethod(__Method_PartialUpdateCluster, serviceImpl.PartialUpdateCluster)
           .AddMethod(__Method_DeleteCluster, serviceImpl.DeleteCluster)
           .AddMethod(__Method_CreateAppProfile, serviceImpl.CreateAppProfile)
           .AddMethod(__Method_GetAppProfile, serviceImpl.GetAppProfile)
@@ -1528,6 +1734,7 @@ namespace Google.Cloud.Bigtable.Admin.V2 {
       serviceBinder.AddMethod(__Method_GetCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetClusterRequest, global::Google.Cloud.Bigtable.Admin.V2.Cluster>(serviceImpl.GetCluster));
       serviceBinder.AddMethod(__Method_ListClusters, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.ListClustersRequest, global::Google.Cloud.Bigtable.Admin.V2.ListClustersResponse>(serviceImpl.ListClusters));
       serviceBinder.AddMethod(__Method_UpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.Cluster, global::Google.LongRunning.Operation>(serviceImpl.UpdateCluster));
+      serviceBinder.AddMethod(__Method_PartialUpdateCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.PartialUpdateClusterRequest, global::Google.LongRunning.Operation>(serviceImpl.PartialUpdateCluster));
       serviceBinder.AddMethod(__Method_DeleteCluster, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.DeleteClusterRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteCluster));
       serviceBinder.AddMethod(__Method_CreateAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.CreateAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(serviceImpl.CreateAppProfile));
       serviceBinder.AddMethod(__Method_GetAppProfile, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Bigtable.Admin.V2.GetAppProfileRequest, global::Google.Cloud.Bigtable.Admin.V2.AppProfile>(serviceImpl.GetAppProfile));

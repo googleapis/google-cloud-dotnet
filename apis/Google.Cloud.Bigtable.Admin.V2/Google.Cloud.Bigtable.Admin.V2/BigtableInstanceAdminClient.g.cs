@@ -64,6 +64,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
             ListClustersSettings = existing.ListClustersSettings;
             UpdateClusterSettings = existing.UpdateClusterSettings;
             UpdateClusterOperationsSettings = existing.UpdateClusterOperationsSettings.Clone();
+            PartialUpdateClusterSettings = existing.PartialUpdateClusterSettings;
+            PartialUpdateClusterOperationsSettings = existing.PartialUpdateClusterOperationsSettings.Clone();
             DeleteClusterSettings = existing.DeleteClusterSettings;
             CreateAppProfileSettings = existing.CreateAppProfileSettings;
             GetAppProfileSettings = existing.GetAppProfileSettings;
@@ -334,6 +336,46 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>BigtableInstanceAdminClient.PartialUpdateCluster</c> and
+        /// <c>BigtableInstanceAdminClient.PartialUpdateClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 2</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>
+        /// Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>,
+        /// <see cref="grpccore::StatusCode.DeadlineExceeded"/>.
+        /// </description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PartialUpdateClusterSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 2, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>BigtableInstanceAdminClient.PartialUpdateCluster</c> and
+        /// <c>BigtableInstanceAdminClient.PartialUpdateClusterAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings PartialUpdateClusterOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -694,6 +736,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -703,6 +751,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -712,6 +766,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -747,6 +807,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the project in which to create the new instance.
@@ -784,6 +850,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the project in which to create the new instance.
@@ -821,6 +893,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the project in which to create the new instance.
@@ -849,6 +927,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the project in which to create the new instance.
@@ -886,6 +970,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the project in which to create the new instance.
@@ -923,6 +1013,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the project in which to create the new instance.
@@ -1430,6 +1526,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1439,6 +1541,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1448,6 +1556,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1483,6 +1597,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the instance in which to create the new cluster.
@@ -1510,6 +1630,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the instance in which to create the new cluster.
@@ -1537,6 +1663,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the instance in which to create the new cluster.
@@ -1559,6 +1691,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the instance in which to create the new cluster.
@@ -1586,6 +1724,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the instance in which to create the new cluster.
@@ -1613,6 +1757,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="parent">
         /// Required. The unique name of the instance in which to create the new cluster.
@@ -1869,6 +2019,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Updates a cluster within an instance.
+        /// 
+        /// Note that UpdateCluster does not support updating
+        /// cluster_config.cluster_autoscaling_config. In order to update it, you
+        /// must use PartialUpdateCluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1878,6 +2032,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Updates a cluster within an instance.
+        /// 
+        /// Note that UpdateCluster does not support updating
+        /// cluster_config.cluster_autoscaling_config. In order to update it, you
+        /// must use PartialUpdateCluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1887,6 +2045,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Updates a cluster within an instance.
+        /// 
+        /// Note that UpdateCluster does not support updating
+        /// cluster_config.cluster_autoscaling_config. In order to update it, you
+        /// must use PartialUpdateCluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1919,6 +2081,179 @@ namespace Google.Cloud.Bigtable.Admin.V2
         /// <returns>A task representing the result of polling the operation.</returns>
         public virtual stt::Task<lro::Operation<Cluster, UpdateClusterMetadata>> PollOnceUpdateClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
             lro::Operation<Cluster, UpdateClusterMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, PartialUpdateClusterMetadata> PartialUpdateCluster(PartialUpdateClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, PartialUpdateClusterMetadata>> PartialUpdateClusterAsync(PartialUpdateClusterRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, PartialUpdateClusterMetadata>> PartialUpdateClusterAsync(PartialUpdateClusterRequest request, st::CancellationToken cancellationToken) =>
+            PartialUpdateClusterAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>PartialUpdateCluster</c>.</summary>
+        public virtual lro::OperationsClient PartialUpdateClusterOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>PartialUpdateCluster</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Cluster, PartialUpdateClusterMetadata> PollOncePartialUpdateCluster(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, PartialUpdateClusterMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PartialUpdateClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>PartialUpdateCluster</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, PartialUpdateClusterMetadata>> PollOncePartialUpdateClusterAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Cluster, PartialUpdateClusterMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), PartialUpdateClusterOperationsClient, callSettings);
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="cluster">
+        /// Required. The Cluster which contains the partial updates to be applied, subject to
+        /// the update_mask.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The subset of Cluster fields which should be replaced.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Cluster, PartialUpdateClusterMetadata> PartialUpdateCluster(Cluster cluster, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            PartialUpdateCluster(new PartialUpdateClusterRequest
+            {
+                Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="cluster">
+        /// Required. The Cluster which contains the partial updates to be applied, subject to
+        /// the update_mask.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The subset of Cluster fields which should be replaced.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, PartialUpdateClusterMetadata>> PartialUpdateClusterAsync(Cluster cluster, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            PartialUpdateClusterAsync(new PartialUpdateClusterRequest
+            {
+                Cluster = gax::GaxPreconditions.CheckNotNull(cluster, nameof(cluster)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+            }, callSettings);
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="cluster">
+        /// Required. The Cluster which contains the partial updates to be applied, subject to
+        /// the update_mask.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. The subset of Cluster fields which should be replaced.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Cluster, PartialUpdateClusterMetadata>> PartialUpdateClusterAsync(Cluster cluster, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            PartialUpdateClusterAsync(cluster, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Deletes a cluster from an instance.
@@ -3140,6 +3475,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         private readonly gaxgrpc::ApiCall<Cluster, lro::Operation> _callUpdateCluster;
 
+        private readonly gaxgrpc::ApiCall<PartialUpdateClusterRequest, lro::Operation> _callPartialUpdateCluster;
+
         private readonly gaxgrpc::ApiCall<DeleteClusterRequest, wkt::Empty> _callDeleteCluster;
 
         private readonly gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> _callCreateAppProfile;
@@ -3173,6 +3510,7 @@ namespace Google.Cloud.Bigtable.Admin.V2
             PartialUpdateInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateInstanceOperationsSettings);
             CreateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateClusterOperationsSettings);
             UpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateClusterOperationsSettings);
+            PartialUpdateClusterOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.PartialUpdateClusterOperationsSettings);
             UpdateAppProfileOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateAppProfileOperationsSettings);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstance);
@@ -3204,6 +3542,9 @@ namespace Google.Cloud.Bigtable.Admin.V2
             _callUpdateCluster = clientHelper.BuildApiCall<Cluster, lro::Operation>(grpcClient.UpdateClusterAsync, grpcClient.UpdateCluster, effectiveSettings.UpdateClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callUpdateCluster);
             Modify_UpdateClusterApiCall(ref _callUpdateCluster);
+            _callPartialUpdateCluster = clientHelper.BuildApiCall<PartialUpdateClusterRequest, lro::Operation>(grpcClient.PartialUpdateClusterAsync, grpcClient.PartialUpdateCluster, effectiveSettings.PartialUpdateClusterSettings).WithGoogleRequestParam("cluster.name", request => request.Cluster?.Name);
+            Modify_ApiCall(ref _callPartialUpdateCluster);
+            Modify_PartialUpdateClusterApiCall(ref _callPartialUpdateCluster);
             _callDeleteCluster = clientHelper.BuildApiCall<DeleteClusterRequest, wkt::Empty>(grpcClient.DeleteClusterAsync, grpcClient.DeleteCluster, effectiveSettings.DeleteClusterSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteCluster);
             Modify_DeleteClusterApiCall(ref _callDeleteCluster);
@@ -3256,6 +3597,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_UpdateClusterApiCall(ref gaxgrpc::ApiCall<Cluster, lro::Operation> call);
 
+        partial void Modify_PartialUpdateClusterApiCall(ref gaxgrpc::ApiCall<PartialUpdateClusterRequest, lro::Operation> call);
+
         partial void Modify_DeleteClusterApiCall(ref gaxgrpc::ApiCall<DeleteClusterRequest, wkt::Empty> call);
 
         partial void Modify_CreateAppProfileApiCall(ref gaxgrpc::ApiCall<CreateAppProfileRequest, AppProfile> call);
@@ -3299,6 +3642,8 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         partial void Modify_Cluster(ref Cluster request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_PartialUpdateClusterRequest(ref PartialUpdateClusterRequest request, ref gaxgrpc::CallSettings settings);
+
         partial void Modify_DeleteClusterRequest(ref DeleteClusterRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateAppProfileRequest(ref CreateAppProfileRequest request, ref gaxgrpc::CallSettings settings);
@@ -3322,6 +3667,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3334,6 +3685,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Create an instance within a project.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3478,6 +3835,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3490,6 +3853,12 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Creates a cluster within an instance.
+        /// 
+        /// Note that exactly one of Cluster.serve_nodes and
+        /// Cluster.cluster_config.cluster_autoscaling_config can be set. If
+        /// serve_nodes is set to non-zero, then the cluster is manually scaled. If
+        /// cluster_config.cluster_autoscaling_config is non-empty, then autoscaling is
+        /// enabled.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3553,6 +3922,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Updates a cluster within an instance.
+        /// 
+        /// Note that UpdateCluster does not support updating
+        /// cluster_config.cluster_autoscaling_config. In order to update it, you
+        /// must use PartialUpdateCluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3565,6 +3938,10 @@ namespace Google.Cloud.Bigtable.Admin.V2
 
         /// <summary>
         /// Updates a cluster within an instance.
+        /// 
+        /// Note that UpdateCluster does not support updating
+        /// cluster_config.cluster_autoscaling_config. In order to update it, you
+        /// must use PartialUpdateCluster.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -3573,6 +3950,55 @@ namespace Google.Cloud.Bigtable.Admin.V2
         {
             Modify_Cluster(ref request, ref callSettings);
             return new lro::Operation<Cluster, UpdateClusterMetadata>(await _callUpdateCluster.Async(request, callSettings).ConfigureAwait(false), UpdateClusterOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>PartialUpdateCluster</c>.</summary>
+        public override lro::OperationsClient PartialUpdateClusterOperationsClient { get; }
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Cluster, PartialUpdateClusterMetadata> PartialUpdateCluster(PartialUpdateClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PartialUpdateClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, PartialUpdateClusterMetadata>(_callPartialUpdateCluster.Sync(request, callSettings), PartialUpdateClusterOperationsClient);
+        }
+
+        /// <summary>
+        /// Partially updates a cluster within a project. This method is the preferred
+        /// way to update a Cluster.
+        /// 
+        /// To enable and update autoscaling, set
+        /// cluster_config.cluster_autoscaling_config. When autoscaling is enabled,
+        /// serve_nodes is treated as an OUTPUT_ONLY field, meaning that updates to it
+        /// are ignored. Note that an update cannot simultaneously set serve_nodes to
+        /// non-zero and cluster_config.cluster_autoscaling_config to non-empty, and
+        /// also specify both in the update_mask.
+        /// 
+        /// To disable autoscaling, clear cluster_config.cluster_autoscaling_config,
+        /// and explicitly set a serve_node count via the update_mask.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Cluster, PartialUpdateClusterMetadata>> PartialUpdateClusterAsync(PartialUpdateClusterRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PartialUpdateClusterRequest(ref request, ref callSettings);
+            return new lro::Operation<Cluster, PartialUpdateClusterMetadata>(await _callPartialUpdateCluster.Async(request, callSettings).ConfigureAwait(false), PartialUpdateClusterOperationsClient);
         }
 
         /// <summary>
