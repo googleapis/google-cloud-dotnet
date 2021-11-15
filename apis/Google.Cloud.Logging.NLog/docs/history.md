@@ -35,7 +35,7 @@ changes.
 ## Version 3.0.0-beta01, released 2020-02-18
 
 This is the first prerelease targeting GAX v3. Please see the [breaking changes
-guide](https://googleapis.github.io/google-cloud-dotnet/docs/guides/breaking-gax2.html)
+guide](https://cloud.google.com/dotnet/docs/reference/help/breaking-gax2)
 for details of changes to both GAX and code generation.
 
 This package has not taken any direct breaking changes, but has a major version number change due to its dependencies.
