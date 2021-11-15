@@ -584,6 +584,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ServeNodes = -1708916177,
                 DefaultStorageType = StorageType.Ssd,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
+                ClusterConfig = new Cluster.Types.ClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -609,6 +610,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ServeNodes = -1708916177,
                 DefaultStorageType = StorageType.Ssd,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
+                ClusterConfig = new Cluster.Types.ClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -636,6 +638,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ServeNodes = -1708916177,
                 DefaultStorageType = StorageType.Ssd,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
+                ClusterConfig = new Cluster.Types.ClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -661,6 +664,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ServeNodes = -1708916177,
                 DefaultStorageType = StorageType.Ssd,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
+                ClusterConfig = new Cluster.Types.ClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -688,6 +692,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ServeNodes = -1708916177,
                 DefaultStorageType = StorageType.Ssd,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
+                ClusterConfig = new Cluster.Types.ClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
@@ -713,6 +718,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
                 ServeNodes = -1708916177,
                 DefaultStorageType = StorageType.Ssd,
                 EncryptionConfig = new Cluster.Types.EncryptionConfig(),
+                ClusterConfig = new Cluster.Types.ClusterConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigtableInstanceAdminClient client = new BigtableInstanceAdminClientImpl(mockGrpcClient.Object, null);
