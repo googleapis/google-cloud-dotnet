@@ -16,6 +16,7 @@
 
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gcbcv = Google.Cloud.Bigtable.Common.V2;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -48,7 +49,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -90,7 +91,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -130,7 +131,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -168,7 +169,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -208,7 +209,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -246,7 +247,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -280,12 +281,12 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTableRequest request = new GetTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 View = Table.Types.View.NameOnly,
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -317,12 +318,12 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTableRequest request = new GetTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 View = Table.Types.View.NameOnly,
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -356,11 +357,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTableRequest request = new GetTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -392,11 +393,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTableRequest request = new GetTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -430,11 +431,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTableRequest request = new GetTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -466,11 +467,11 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetTableRequest request = new GetTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -504,7 +505,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteTableRequest request = new DeleteTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -520,7 +521,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteTableRequest request = new DeleteTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -537,7 +538,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteTableRequest request = new DeleteTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -553,7 +554,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteTableRequest request = new DeleteTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -570,7 +571,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteTableRequest request = new DeleteTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTable(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -586,7 +587,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DeleteTableRequest request = new DeleteTableRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             wkt::Empty expectedResponse = new wkt::Empty { };
             mockGrpcClient.Setup(x => x.DeleteTableAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -603,7 +604,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ModifyColumnFamiliesRequest request = new ModifyColumnFamiliesRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Modifications =
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
@@ -611,7 +612,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -643,7 +644,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ModifyColumnFamiliesRequest request = new ModifyColumnFamiliesRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Modifications =
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
@@ -651,7 +652,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -685,7 +686,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ModifyColumnFamiliesRequest request = new ModifyColumnFamiliesRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Modifications =
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
@@ -693,7 +694,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -725,7 +726,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ModifyColumnFamiliesRequest request = new ModifyColumnFamiliesRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Modifications =
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
@@ -733,7 +734,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -767,7 +768,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ModifyColumnFamiliesRequest request = new ModifyColumnFamiliesRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Modifications =
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
@@ -775,7 +776,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -807,7 +808,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             ModifyColumnFamiliesRequest request = new ModifyColumnFamiliesRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 Modifications =
                 {
                     new ModifyColumnFamiliesRequest.Types.Modification(),
@@ -815,7 +816,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             };
             Table expectedResponse = new Table
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ClusterStates =
                 {
                     {
@@ -849,7 +850,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DropRowRangeRequest request = new DropRowRangeRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKeyPrefix = proto::ByteString.CopyFromUtf8("row_key_prefixb7d03808"),
                 DeleteAllDataFromTable = true,
             };
@@ -867,7 +868,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             DropRowRangeRequest request = new DropRowRangeRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 RowKeyPrefix = proto::ByteString.CopyFromUtf8("row_key_prefixb7d03808"),
                 DeleteAllDataFromTable = true,
             };
@@ -886,7 +887,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConsistencyTokenRequest request = new GenerateConsistencyTokenRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             GenerateConsistencyTokenResponse expectedResponse = new GenerateConsistencyTokenResponse
             {
@@ -906,7 +907,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConsistencyTokenRequest request = new GenerateConsistencyTokenRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             GenerateConsistencyTokenResponse expectedResponse = new GenerateConsistencyTokenResponse
             {
@@ -928,7 +929,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConsistencyTokenRequest request = new GenerateConsistencyTokenRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             GenerateConsistencyTokenResponse expectedResponse = new GenerateConsistencyTokenResponse
             {
@@ -948,7 +949,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConsistencyTokenRequest request = new GenerateConsistencyTokenRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             GenerateConsistencyTokenResponse expectedResponse = new GenerateConsistencyTokenResponse
             {
@@ -970,7 +971,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConsistencyTokenRequest request = new GenerateConsistencyTokenRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             GenerateConsistencyTokenResponse expectedResponse = new GenerateConsistencyTokenResponse
             {
@@ -990,7 +991,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConsistencyTokenRequest request = new GenerateConsistencyTokenRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
             };
             GenerateConsistencyTokenResponse expectedResponse = new GenerateConsistencyTokenResponse
             {
@@ -1012,7 +1013,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CheckConsistencyRequest request = new CheckConsistencyRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
@@ -1030,7 +1031,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CheckConsistencyRequest request = new CheckConsistencyRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
@@ -1050,7 +1051,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CheckConsistencyRequest request = new CheckConsistencyRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
@@ -1068,7 +1069,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CheckConsistencyRequest request = new CheckConsistencyRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
@@ -1088,7 +1089,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CheckConsistencyRequest request = new CheckConsistencyRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
@@ -1106,7 +1107,7 @@ namespace Google.Cloud.Bigtable.Admin.V2.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             CheckConsistencyRequest request = new CheckConsistencyRequest
             {
-                TableName = TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
+                TableName = gcbcv::TableName.FromProjectInstanceTable("[PROJECT]", "[INSTANCE]", "[TABLE]"),
                 ConsistencyToken = "consistency_token7d99a6b3",
             };
             CheckConsistencyResponse expectedResponse = new CheckConsistencyResponse { Consistent = false, };
