@@ -962,6 +962,183 @@
         }
       }
     },
+    "TensorboardService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "TensorboardServiceClient",
+          "rpcs": {
+            "BatchCreateTensorboardRuns": {
+              "methods": [
+                "BatchCreateTensorboardRuns",
+                "BatchCreateTensorboardRunsAsync"
+              ]
+            },
+            "BatchCreateTensorboardTimeSeries": {
+              "methods": [
+                "BatchCreateTensorboardTimeSeries",
+                "BatchCreateTensorboardTimeSeriesAsync"
+              ]
+            },
+            "BatchReadTensorboardTimeSeriesData": {
+              "methods": [
+                "BatchReadTensorboardTimeSeriesData",
+                "BatchReadTensorboardTimeSeriesDataAsync"
+              ]
+            },
+            "CreateTensorboard": {
+              "methods": [
+                "CreateTensorboard",
+                "CreateTensorboardAsync"
+              ]
+            },
+            "CreateTensorboardExperiment": {
+              "methods": [
+                "CreateTensorboardExperiment",
+                "CreateTensorboardExperimentAsync"
+              ]
+            },
+            "CreateTensorboardRun": {
+              "methods": [
+                "CreateTensorboardRun",
+                "CreateTensorboardRunAsync"
+              ]
+            },
+            "CreateTensorboardTimeSeries": {
+              "methods": [
+                "CreateTensorboardTimeSeries",
+                "CreateTensorboardTimeSeriesAsync"
+              ]
+            },
+            "DeleteTensorboard": {
+              "methods": [
+                "DeleteTensorboard",
+                "DeleteTensorboardAsync"
+              ]
+            },
+            "DeleteTensorboardExperiment": {
+              "methods": [
+                "DeleteTensorboardExperiment",
+                "DeleteTensorboardExperimentAsync"
+              ]
+            },
+            "DeleteTensorboardRun": {
+              "methods": [
+                "DeleteTensorboardRun",
+                "DeleteTensorboardRunAsync"
+              ]
+            },
+            "DeleteTensorboardTimeSeries": {
+              "methods": [
+                "DeleteTensorboardTimeSeries",
+                "DeleteTensorboardTimeSeriesAsync"
+              ]
+            },
+            "ExportTensorboardTimeSeriesData": {
+              "methods": [
+                "ExportTensorboardTimeSeriesData",
+                "ExportTensorboardTimeSeriesDataAsync"
+              ]
+            },
+            "GetTensorboard": {
+              "methods": [
+                "GetTensorboard",
+                "GetTensorboardAsync"
+              ]
+            },
+            "GetTensorboardExperiment": {
+              "methods": [
+                "GetTensorboardExperiment",
+                "GetTensorboardExperimentAsync"
+              ]
+            },
+            "GetTensorboardRun": {
+              "methods": [
+                "GetTensorboardRun",
+                "GetTensorboardRunAsync"
+              ]
+            },
+            "GetTensorboardTimeSeries": {
+              "methods": [
+                "GetTensorboardTimeSeries",
+                "GetTensorboardTimeSeriesAsync"
+              ]
+            },
+            "ListTensorboardExperiments": {
+              "methods": [
+                "ListTensorboardExperiments",
+                "ListTensorboardExperimentsAsync"
+              ]
+            },
+            "ListTensorboardRuns": {
+              "methods": [
+                "ListTensorboardRuns",
+                "ListTensorboardRunsAsync"
+              ]
+            },
+            "ListTensorboardTimeSeries": {
+              "methods": [
+                "ListTensorboardTimeSeries",
+                "ListTensorboardTimeSeriesAsync"
+              ]
+            },
+            "ListTensorboards": {
+              "methods": [
+                "ListTensorboards",
+                "ListTensorboardsAsync"
+              ]
+            },
+            "ReadTensorboardBlobData": {
+              "methods": [
+                "ReadTensorboardBlobData",
+                "ReadTensorboardBlobDataAsync"
+              ]
+            },
+            "ReadTensorboardTimeSeriesData": {
+              "methods": [
+                "ReadTensorboardTimeSeriesData",
+                "ReadTensorboardTimeSeriesDataAsync"
+              ]
+            },
+            "UpdateTensorboard": {
+              "methods": [
+                "UpdateTensorboard",
+                "UpdateTensorboardAsync"
+              ]
+            },
+            "UpdateTensorboardExperiment": {
+              "methods": [
+                "UpdateTensorboardExperiment",
+                "UpdateTensorboardExperimentAsync"
+              ]
+            },
+            "UpdateTensorboardRun": {
+              "methods": [
+                "UpdateTensorboardRun",
+                "UpdateTensorboardRunAsync"
+              ]
+            },
+            "UpdateTensorboardTimeSeries": {
+              "methods": [
+                "UpdateTensorboardTimeSeries",
+                "UpdateTensorboardTimeSeriesAsync"
+              ]
+            },
+            "WriteTensorboardExperimentData": {
+              "methods": [
+                "WriteTensorboardExperimentData",
+                "WriteTensorboardExperimentDataAsync"
+              ]
+            },
+            "WriteTensorboardRunData": {
+              "methods": [
+                "WriteTensorboardRunData",
+                "WriteTensorboardRunDataAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
     "VizierService": {
       "clients": {
         "grpc": {

@@ -280,5 +280,14 @@ namespace Google.Cloud.AIPlatform.V1
             get => string.IsNullOrEmpty(Network) ? null : NetworkName.Parse(Network, allowUnparsed: true);
             set => Network = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="TensorboardName"/>-typed view over the <see cref="Tensorboard"/> resource name property.
+        /// </summary>
+        public TensorboardName TensorboardAsTensorboardName
+        {
+            get => string.IsNullOrEmpty(Tensorboard) ? null : TensorboardName.Parse(Tensorboard, allowUnparsed: true);
+            set => Tensorboard = value?.ToString() ?? "";
+        }
     }
 }
