@@ -27,50 +27,53 @@ namespace Google.Cloud.TextToSpeech.V1 {
             "Cixnb29nbGUvY2xvdWQvdGV4dHRvc3BlZWNoL3YxL2Nsb3VkX3R0cy5wcm90",
             "bxIcZ29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MRocZ29vZ2xlL2FwaS9h",
             "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
-            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8iLwoRTGlzdFZvaWNlc1Jl",
-            "cXVlc3QSGgoNbGFuZ3VhZ2VfY29kZRgBIAEoCUID4EEBIkkKEkxpc3RWb2lj",
-            "ZXNSZXNwb25zZRIzCgZ2b2ljZXMYASADKAsyIy5nb29nbGUuY2xvdWQudGV4",
-            "dHRvc3BlZWNoLnYxLlZvaWNlIpQBCgVWb2ljZRIWCg5sYW5ndWFnZV9jb2Rl",
-            "cxgBIAMoCRIMCgRuYW1lGAIgASgJEkIKC3NzbWxfZ2VuZGVyGAMgASgOMi0u",
-            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5Tc21sVm9pY2VHZW5kZXIS",
-            "IQoZbmF0dXJhbF9zYW1wbGVfcmF0ZV9oZXJ0ehgEIAEoBSLpAQoXU3ludGhl",
-            "c2l6ZVNwZWVjaFJlcXVlc3QSQAoFaW5wdXQYASABKAsyLC5nb29nbGUuY2xv",
-            "dWQudGV4dHRvc3BlZWNoLnYxLlN5bnRoZXNpc0lucHV0QgPgQQISRgoFdm9p",
-            "Y2UYAiABKAsyMi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNl",
-            "U2VsZWN0aW9uUGFyYW1zQgPgQQISRAoMYXVkaW9fY29uZmlnGAMgASgLMiku",
-            "Z29vZ2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MS5BdWRpb0NvbmZpZ0ID4EEC",
-            "IkAKDlN5bnRoZXNpc0lucHV0Eg4KBHRleHQYASABKAlIABIOCgRzc21sGAIg",
-            "ASgJSABCDgoMaW5wdXRfc291cmNlIoQBChRWb2ljZVNlbGVjdGlvblBhcmFt",
-            "cxIaCg1sYW5ndWFnZV9jb2RlGAEgASgJQgPgQQISDAoEbmFtZRgCIAEoCRJC",
-            "Cgtzc21sX2dlbmRlchgDIAEoDjItLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVl",
-            "Y2gudjEuU3NtbFZvaWNlR2VuZGVyIvEBCgtBdWRpb0NvbmZpZxJICg5hdWRp",
-            "b19lbmNvZGluZxgBIAEoDjIrLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gu",
-            "djEuQXVkaW9FbmNvZGluZ0ID4EECEh0KDXNwZWFraW5nX3JhdGUYAiABKAFC",
-            "BuBBBOBBARIVCgVwaXRjaBgDIAEoAUIG4EEE4EEBEh4KDnZvbHVtZV9nYWlu",
-            "X2RiGAQgASgBQgbgQQTgQQESHgoRc2FtcGxlX3JhdGVfaGVydHoYBSABKAVC",
-            "A+BBARIiChJlZmZlY3RzX3Byb2ZpbGVfaWQYBiADKAlCBuBBBOBBASIxChhT",
-            "eW50aGVzaXplU3BlZWNoUmVzcG9uc2USFQoNYXVkaW9fY29udGVudBgBIAEo",
-            "DCpXCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5T",
-            "UEVDSUZJRUQQABIICgRNQUxFEAESCgoGRkVNQUxFEAISCwoHTkVVVFJBTBAD",
-            "KlQKDUF1ZGlvRW5jb2RpbmcSHgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJ",
-            "RUQQABIMCghMSU5FQVIxNhABEgcKA01QMxACEgwKCE9HR19PUFVTEAMytAMK",
-            "DFRleHRUb1NwZWVjaBKTAQoKTGlzdFZvaWNlcxIvLmdvb2dsZS5jbG91ZC50",
-            "ZXh0dG9zcGVlY2gudjEuTGlzdFZvaWNlc1JlcXVlc3QaMC5nb29nbGUuY2xv",
-            "dWQudGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXNwb25zZSIigtPkkwIM",
-            "EgovdjEvdm9pY2Vz2kENbGFuZ3VhZ2VfY29kZRK8AQoQU3ludGhlc2l6ZVNw",
-            "ZWVjaBI1Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhlc2l6",
-            "ZVNwZWVjaFJlcXVlc3QaNi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
-            "LlN5bnRoZXNpemVTcGVlY2hSZXNwb25zZSI5gtPkkwIYIhMvdjEvdGV4dDpz",
-            "eW50aGVzaXplOgEq2kEYaW5wdXQsdm9pY2UsYXVkaW9fY29uZmlnGk/KQRt0",
-            "ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29n",
-            "bGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQuQBCiBjb20uZ29vZ2xl",
-            "LmNsb3VkLnRleHR0b3NwZWVjaC52MUIRVGV4dFRvU3BlZWNoUHJvdG9QAVpI",
-            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC90",
-            "ZXh0dG9zcGVlY2gvdjE7dGV4dHRvc3BlZWNo+AEBqgIcR29vZ2xlLkNsb3Vk",
-            "LlRleHRUb1NwZWVjaC5WMcoCHEdvb2dsZVxDbG91ZFxUZXh0VG9TcGVlY2hc",
-            "VjHqAh9Hb29nbGU6OkNsb3VkOjpUZXh0VG9TcGVlY2g6OlYxYgZwcm90bzM="));
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
+            "b3VyY2UucHJvdG8iLwoRTGlzdFZvaWNlc1JlcXVlc3QSGgoNbGFuZ3VhZ2Vf",
+            "Y29kZRgBIAEoCUID4EEBIkkKEkxpc3RWb2ljZXNSZXNwb25zZRIzCgZ2b2lj",
+            "ZXMYASADKAsyIy5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNl",
+            "IpQBCgVWb2ljZRIWCg5sYW5ndWFnZV9jb2RlcxgBIAMoCRIMCgRuYW1lGAIg",
+            "ASgJEkIKC3NzbWxfZ2VuZGVyGAMgASgOMi0uZ29vZ2xlLmNsb3VkLnRleHR0",
+            "b3NwZWVjaC52MS5Tc21sVm9pY2VHZW5kZXISIQoZbmF0dXJhbF9zYW1wbGVf",
+            "cmF0ZV9oZXJ0ehgEIAEoBSLpAQoXU3ludGhlc2l6ZVNwZWVjaFJlcXVlc3QS",
+            "QAoFaW5wdXQYASABKAsyLC5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNoLnYx",
+            "LlN5bnRoZXNpc0lucHV0QgPgQQISRgoFdm9pY2UYAiABKAsyMi5nb29nbGUu",
+            "Y2xvdWQudGV4dHRvc3BlZWNoLnYxLlZvaWNlU2VsZWN0aW9uUGFyYW1zQgPg",
+            "QQISRAoMYXVkaW9fY29uZmlnGAMgASgLMikuZ29vZ2xlLmNsb3VkLnRleHR0",
+            "b3NwZWVjaC52MS5BdWRpb0NvbmZpZ0ID4EECIkAKDlN5bnRoZXNpc0lucHV0",
+            "Eg4KBHRleHQYASABKAlIABIOCgRzc21sGAIgASgJSABCDgoMaW5wdXRfc291",
+            "cmNlIoQBChRWb2ljZVNlbGVjdGlvblBhcmFtcxIaCg1sYW5ndWFnZV9jb2Rl",
+            "GAEgASgJQgPgQQISDAoEbmFtZRgCIAEoCRJCCgtzc21sX2dlbmRlchgDIAEo",
+            "DjItLmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3NtbFZvaWNlR2Vu",
+            "ZGVyIvEBCgtBdWRpb0NvbmZpZxJICg5hdWRpb19lbmNvZGluZxgBIAEoDjIr",
+            "Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuQXVkaW9FbmNvZGluZ0ID",
+            "4EECEh0KDXNwZWFraW5nX3JhdGUYAiABKAFCBuBBBOBBARIVCgVwaXRjaBgD",
+            "IAEoAUIG4EEE4EEBEh4KDnZvbHVtZV9nYWluX2RiGAQgASgBQgbgQQTgQQES",
+            "HgoRc2FtcGxlX3JhdGVfaGVydHoYBSABKAVCA+BBARIiChJlZmZlY3RzX3By",
+            "b2ZpbGVfaWQYBiADKAlCBuBBBOBBASIxChhTeW50aGVzaXplU3BlZWNoUmVz",
+            "cG9uc2USFQoNYXVkaW9fY29udGVudBgBIAEoDCpXCg9Tc21sVm9pY2VHZW5k",
+            "ZXISIQodU1NNTF9WT0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIICgRNQUxF",
+            "EAESCgoGRkVNQUxFEAISCwoHTkVVVFJBTBADKmkKDUF1ZGlvRW5jb2RpbmcS",
+            "HgoaQVVESU9fRU5DT0RJTkdfVU5TUEVDSUZJRUQQABIMCghMSU5FQVIxNhAB",
+            "EgcKA01QMxACEgwKCE9HR19PUFVTEAMSCQoFTVVMQVcQBRIICgRBTEFXEAYy",
+            "tAMKDFRleHRUb1NwZWVjaBKTAQoKTGlzdFZvaWNlcxIvLmdvb2dsZS5jbG91",
+            "ZC50ZXh0dG9zcGVlY2gudjEuTGlzdFZvaWNlc1JlcXVlc3QaMC5nb29nbGUu",
+            "Y2xvdWQudGV4dHRvc3BlZWNoLnYxLkxpc3RWb2ljZXNSZXNwb25zZSIigtPk",
+            "kwIMEgovdjEvdm9pY2Vz2kENbGFuZ3VhZ2VfY29kZRK8AQoQU3ludGhlc2l6",
+            "ZVNwZWVjaBI1Lmdvb2dsZS5jbG91ZC50ZXh0dG9zcGVlY2gudjEuU3ludGhl",
+            "c2l6ZVNwZWVjaFJlcXVlc3QaNi5nb29nbGUuY2xvdWQudGV4dHRvc3BlZWNo",
+            "LnYxLlN5bnRoZXNpemVTcGVlY2hSZXNwb25zZSI5gtPkkwIYIhMvdjEvdGV4",
+            "dDpzeW50aGVzaXplOgEq2kEYaW5wdXQsdm9pY2UsYXVkaW9fY29uZmlnGk/K",
+            "QRt0ZXh0dG9zcGVlY2guZ29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5n",
+            "b29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtQrwCCiBjb20uZ29v",
+            "Z2xlLmNsb3VkLnRleHR0b3NwZWVjaC52MUIRVGV4dFRvU3BlZWNoUHJvdG9Q",
+            "AVpIZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91",
+            "ZC90ZXh0dG9zcGVlY2gvdjE7dGV4dHRvc3BlZWNo+AEBqgIcR29vZ2xlLkNs",
+            "b3VkLlRleHRUb1NwZWVjaC5WMcoCHEdvb2dsZVxDbG91ZFxUZXh0VG9TcGVl",
+            "Y2hcVjHqAh9Hb29nbGU6OkNsb3VkOjpUZXh0VG9TcGVlY2g6OlYx6kFVChth",
+            "dXRvbWwuZ29vZ2xlYXBpcy5jb20vTW9kZWwSNnByb2plY3RzL3twcm9qZWN0",
+            "fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9tb2RlbHMve21vZGVsfWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.TextToSpeech.V1.SsmlVoiceGender), typeof(global::Google.Cloud.TextToSpeech.V1.AudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest), global::Google.Cloud.TextToSpeech.V1.ListVoicesRequest.Parser, new[]{ "LanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse), global::Google.Cloud.TextToSpeech.V1.ListVoicesResponse.Parser, new[]{ "Voices" }, null, null, null, null),
@@ -108,7 +111,7 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// </summary>
     [pbr::OriginalName("FEMALE")] Female = 2,
     /// <summary>
-    /// A gender-neutral voice.
+    /// A gender-neutral voice. This voice is not yet supported.
     /// </summary>
     [pbr::OriginalName("NEUTRAL")] Neutral = 3,
   }
@@ -138,6 +141,16 @@ namespace Google.Cloud.TextToSpeech.V1 {
     /// than MP3 while using approximately the same bitrate.
     /// </summary>
     [pbr::OriginalName("OGG_OPUS")] OggOpus = 3,
+    /// <summary>
+    /// 8-bit samples that compand 14-bit audio samples using G.711 PCMU/mu-law.
+    /// Audio content returned as MULAW also contains a WAV header.
+    /// </summary>
+    [pbr::OriginalName("MULAW")] Mulaw = 5,
+    /// <summary>
+    /// 8-bit samples that compand 14-bit audio samples using G.711 PCMU/A-law.
+    /// Audio content returned as ALAW also contains a WAV header.
+    /// </summary>
+    [pbr::OriginalName("ALAW")] Alaw = 6,
   }
 
   #endregion
