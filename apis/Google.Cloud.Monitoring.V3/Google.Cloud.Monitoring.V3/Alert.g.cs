@@ -30,7 +30,7 @@ namespace Google.Cloud.Monitoring.V3 {
             "L3YzL2NvbW1vbi5wcm90bxoqZ29vZ2xlL21vbml0b3JpbmcvdjMvbXV0YXRp",
             "b25fcmVjb3JkLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
             "dG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxoXZ29vZ2xlL3Jw",
-            "Yy9zdGF0dXMucHJvdG8itBcKC0FsZXJ0UG9saWN5EgwKBG5hbWUYASABKAkS",
+            "Yy9zdGF0dXMucHJvdG8i4xcKC0FsZXJ0UG9saWN5EgwKBG5hbWUYASABKAkS",
             "FAoMZGlzcGxheV9uYW1lGAIgASgJEkYKDWRvY3VtZW50YXRpb24YDSABKAsy",
             "Ly5nb29nbGUubW9uaXRvcmluZy52My5BbGVydFBvbGljeS5Eb2N1bWVudGF0",
             "aW9uEkYKC3VzZXJfbGFiZWxzGBAgAygLMjEuZ29vZ2xlLm1vbml0b3Jpbmcu",
@@ -84,24 +84,25 @@ namespace Google.Cloud.Monitoring.V3 {
             "aXRpb259ElBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2FsZXJ0UG9s",
             "aWNpZXMve2FsZXJ0X3BvbGljeX0vY29uZGl0aW9ucy97Y29uZGl0aW9ufRJE",
             "Zm9sZGVycy97Zm9sZGVyfS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9",
-            "L2NvbmRpdGlvbnMve2NvbmRpdGlvbn0SASpCCwoJY29uZGl0aW9uGrsBCg1B",
+            "L2NvbmRpdGlvbnMve2NvbmRpdGlvbn0SASpCCwoJY29uZGl0aW9uGuoBCg1B",
             "bGVydFN0cmF0ZWd5EmYKF25vdGlmaWNhdGlvbl9yYXRlX2xpbWl0GAEgASgL",
             "MkUuZ29vZ2xlLm1vbml0b3JpbmcudjMuQWxlcnRQb2xpY3kuQWxlcnRTdHJh",
-            "dGVneS5Ob3RpZmljYXRpb25SYXRlTGltaXQaQgoVTm90aWZpY2F0aW9uUmF0",
-            "ZUxpbWl0EikKBnBlcmlvZBgBIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJh",
-            "dGlvbhoxCg9Vc2VyTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
-            "GAIgASgJOgI4ASJhChVDb25kaXRpb25Db21iaW5lclR5cGUSFwoTQ09NQklO",
-            "RV9VTlNQRUNJRklFRBAAEgcKA0FORBABEgYKAk9SEAISHgoaQU5EX1dJVEhf",
-            "TUFUQ0hJTkdfUkVTT1VSQ0UQAzrJAepBxQEKJW1vbml0b3JpbmcuZ29vZ2xl",
-            "YXBpcy5jb20vQWxlcnRQb2xpY3kSL3Byb2plY3RzL3twcm9qZWN0fS9hbGVy",
-            "dFBvbGljaWVzL3thbGVydF9wb2xpY3l9Ejlvcmdhbml6YXRpb25zL3tvcmdh",
-            "bml6YXRpb259L2FsZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0SLWZvbGRl",
-            "cnMve2ZvbGRlcn0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fRIBKkLC",
-            "AQoYY29tLmdvb2dsZS5tb25pdG9yaW5nLnYzQgpBbGVydFByb3RvUAFaPmdv",
-            "b2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvbW9uaXRvcmlu",
-            "Zy92Mzttb25pdG9yaW5nqgIaR29vZ2xlLkNsb3VkLk1vbml0b3JpbmcuVjPK",
-            "AhpHb29nbGVcQ2xvdWRcTW9uaXRvcmluZ1xWM+oCHUdvb2dsZTo6Q2xvdWQ6",
-            "Ok1vbml0b3Jpbmc6OlYzYgZwcm90bzM="));
+            "dGVneS5Ob3RpZmljYXRpb25SYXRlTGltaXQSLQoKYXV0b19jbG9zZRgDIAEo",
+            "CzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvbhpCChVOb3RpZmljYXRpb25S",
+            "YXRlTGltaXQSKQoGcGVyaW9kGAEgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1",
+            "cmF0aW9uGjEKD1VzZXJMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoFdmFs",
+            "dWUYAiABKAk6AjgBImEKFUNvbmRpdGlvbkNvbWJpbmVyVHlwZRIXChNDT01C",
+            "SU5FX1VOU1BFQ0lGSUVEEAASBwoDQU5EEAESBgoCT1IQAhIeChpBTkRfV0lU",
+            "SF9NQVRDSElOR19SRVNPVVJDRRADOskB6kHFAQolbW9uaXRvcmluZy5nb29n",
+            "bGVhcGlzLmNvbS9BbGVydFBvbGljeRIvcHJvamVjdHMve3Byb2plY3R9L2Fs",
+            "ZXJ0UG9saWNpZXMve2FsZXJ0X3BvbGljeX0SOW9yZ2FuaXphdGlvbnMve29y",
+            "Z2FuaXphdGlvbn0vYWxlcnRQb2xpY2llcy97YWxlcnRfcG9saWN5fRItZm9s",
+            "ZGVycy97Zm9sZGVyfS9hbGVydFBvbGljaWVzL3thbGVydF9wb2xpY3l9EgEq",
+            "QsIBChhjb20uZ29vZ2xlLm1vbml0b3JpbmcudjNCCkFsZXJ0UHJvdG9QAVo+",
+            "Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9tb25pdG9y",
+            "aW5nL3YzO21vbml0b3JpbmeqAhpHb29nbGUuQ2xvdWQuTW9uaXRvcmluZy5W",
+            "M8oCGkdvb2dsZVxDbG91ZFxNb25pdG9yaW5nXFYz6gIdR29vZ2xlOjpDbG91",
+            "ZDo6TW9uaXRvcmluZzo6VjNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Monitoring.V3.CommonReflection.Descriptor, global::Google.Cloud.Monitoring.V3.MutationRecordReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -111,7 +112,7 @@ namespace Google.Cloud.Monitoring.V3 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MetricAbsence.Parser, new[]{ "Filter", "Aggregations", "Duration", "Trigger" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.LogMatch.Parser, new[]{ "Filter", "LabelExtractors" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.Condition.Types.MonitoringQueryLanguageCondition.Parser, new[]{ "Query", "Duration", "Trigger" }, null, null, null, null)}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Parser, new[]{ "NotificationRateLimit", "AutoClose" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit), global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit.Parser, new[]{ "Period" }, null, null, null, null)}),
             null, })
           }));
     }
@@ -3359,6 +3360,7 @@ namespace Google.Cloud.Monitoring.V3 {
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public AlertStrategy(AlertStrategy other) : this() {
           notificationRateLimit_ = other.notificationRateLimit_ != null ? other.notificationRateLimit_.Clone() : null;
+          autoClose_ = other.autoClose_ != null ? other.autoClose_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3385,6 +3387,22 @@ namespace Google.Cloud.Monitoring.V3 {
           }
         }
 
+        /// <summary>Field number for the "auto_close" field.</summary>
+        public const int AutoCloseFieldNumber = 3;
+        private global::Google.Protobuf.WellKnownTypes.Duration autoClose_;
+        /// <summary>
+        /// If an alert policy that was active has no data for this long, any open
+        /// incidents will close
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Protobuf.WellKnownTypes.Duration AutoClose {
+          get { return autoClose_; }
+          set {
+            autoClose_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3401,6 +3419,7 @@ namespace Google.Cloud.Monitoring.V3 {
             return true;
           }
           if (!object.Equals(NotificationRateLimit, other.NotificationRateLimit)) return false;
+          if (!object.Equals(AutoClose, other.AutoClose)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3409,6 +3428,7 @@ namespace Google.Cloud.Monitoring.V3 {
         public override int GetHashCode() {
           int hash = 1;
           if (notificationRateLimit_ != null) hash ^= NotificationRateLimit.GetHashCode();
+          if (autoClose_ != null) hash ^= AutoClose.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3431,6 +3451,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(10);
             output.WriteMessage(NotificationRateLimit);
           }
+          if (autoClose_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(AutoClose);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
@@ -3445,6 +3469,10 @@ namespace Google.Cloud.Monitoring.V3 {
             output.WriteRawTag(10);
             output.WriteMessage(NotificationRateLimit);
           }
+          if (autoClose_ != null) {
+            output.WriteRawTag(26);
+            output.WriteMessage(AutoClose);
+          }
           if (_unknownFields != null) {
             _unknownFields.WriteTo(ref output);
           }
@@ -3457,6 +3485,9 @@ namespace Google.Cloud.Monitoring.V3 {
           int size = 0;
           if (notificationRateLimit_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(NotificationRateLimit);
+          }
+          if (autoClose_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(AutoClose);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3475,6 +3506,12 @@ namespace Google.Cloud.Monitoring.V3 {
               NotificationRateLimit = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit();
             }
             NotificationRateLimit.MergeFrom(other.NotificationRateLimit);
+          }
+          if (other.autoClose_ != null) {
+            if (autoClose_ == null) {
+              AutoClose = new global::Google.Protobuf.WellKnownTypes.Duration();
+            }
+            AutoClose.MergeFrom(other.AutoClose);
           }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
@@ -3498,6 +3535,13 @@ namespace Google.Cloud.Monitoring.V3 {
                 input.ReadMessage(NotificationRateLimit);
                 break;
               }
+              case 26: {
+                if (autoClose_ == null) {
+                  AutoClose = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(AutoClose);
+                break;
+              }
             }
           }
         #endif
@@ -3518,6 +3562,13 @@ namespace Google.Cloud.Monitoring.V3 {
                   NotificationRateLimit = new global::Google.Cloud.Monitoring.V3.AlertPolicy.Types.AlertStrategy.Types.NotificationRateLimit();
                 }
                 input.ReadMessage(NotificationRateLimit);
+                break;
+              }
+              case 26: {
+                if (autoClose_ == null) {
+                  AutoClose = new global::Google.Protobuf.WellKnownTypes.Duration();
+                }
+                input.ReadMessage(AutoClose);
                 break;
               }
             }
