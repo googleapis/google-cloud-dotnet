@@ -390,5 +390,147 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Tests
             await client.DeleteVersionAsync(request.VersionName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void CompareVersionsRequestObject()
+        {
+            moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                TargetVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            CompareVersionsResponse expectedResponse = new CompareVersionsResponse
+            {
+                BaseVersionContentJson = "base_version_content_json6279f098",
+                TargetVersionContentJson = "target_version_content_jsonf76c0cf2",
+                CompareTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CompareVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            CompareVersionsResponse response = client.CompareVersions(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CompareVersionsRequestObjectAsync()
+        {
+            moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                TargetVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                LanguageCode = "language_code2f6c7160",
+            };
+            CompareVersionsResponse expectedResponse = new CompareVersionsResponse
+            {
+                BaseVersionContentJson = "base_version_content_json6279f098",
+                TargetVersionContentJson = "target_version_content_jsonf76c0cf2",
+                CompareTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CompareVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompareVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            CompareVersionsResponse responseCallSettings = await client.CompareVersionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompareVersionsResponse responseCancellationToken = await client.CompareVersionsAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CompareVersions()
+        {
+            moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+            };
+            CompareVersionsResponse expectedResponse = new CompareVersionsResponse
+            {
+                BaseVersionContentJson = "base_version_content_json6279f098",
+                TargetVersionContentJson = "target_version_content_jsonf76c0cf2",
+                CompareTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CompareVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            CompareVersionsResponse response = client.CompareVersions(request.BaseVersion);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CompareVersionsAsync()
+        {
+            moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+            };
+            CompareVersionsResponse expectedResponse = new CompareVersionsResponse
+            {
+                BaseVersionContentJson = "base_version_content_json6279f098",
+                TargetVersionContentJson = "target_version_content_jsonf76c0cf2",
+                CompareTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CompareVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompareVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            CompareVersionsResponse responseCallSettings = await client.CompareVersionsAsync(request.BaseVersion, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompareVersionsResponse responseCancellationToken = await client.CompareVersionsAsync(request.BaseVersion, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CompareVersionsResourceNames()
+        {
+            moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+            };
+            CompareVersionsResponse expectedResponse = new CompareVersionsResponse
+            {
+                BaseVersionContentJson = "base_version_content_json6279f098",
+                TargetVersionContentJson = "target_version_content_jsonf76c0cf2",
+                CompareTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CompareVersions(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            CompareVersionsResponse response = client.CompareVersions(request.BaseVersionAsVersionName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CompareVersionsResourceNamesAsync()
+        {
+            moq::Mock<Versions.VersionsClient> mockGrpcClient = new moq::Mock<Versions.VersionsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+            };
+            CompareVersionsResponse expectedResponse = new CompareVersionsResponse
+            {
+                BaseVersionContentJson = "base_version_content_json6279f098",
+                TargetVersionContentJson = "target_version_content_jsonf76c0cf2",
+                CompareTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.CompareVersionsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CompareVersionsResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            VersionsClient client = new VersionsClientImpl(mockGrpcClient.Object, null);
+            CompareVersionsResponse responseCallSettings = await client.CompareVersionsAsync(request.BaseVersionAsVersionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            CompareVersionsResponse responseCancellationToken = await client.CompareVersionsAsync(request.BaseVersionAsVersionName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

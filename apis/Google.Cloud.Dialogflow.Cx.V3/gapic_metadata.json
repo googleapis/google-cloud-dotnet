@@ -646,6 +646,12 @@
         "grpc": {
           "libraryClient": "VersionsClient",
           "rpcs": {
+            "CompareVersions": {
+              "methods": [
+                "CompareVersions",
+                "CompareVersionsAsync"
+              ]
+            },
             "CreateVersion": {
               "methods": [
                 "CreateVersion",

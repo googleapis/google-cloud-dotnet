@@ -365,4 +365,25 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CompareVersionsRequest
+    {
+        /// <summary>
+        /// <see cref="VersionName"/>-typed view over the <see cref="BaseVersion"/> resource name property.
+        /// </summary>
+        public VersionName BaseVersionAsVersionName
+        {
+            get => string.IsNullOrEmpty(BaseVersion) ? null : VersionName.Parse(BaseVersion, allowUnparsed: true);
+            set => BaseVersion = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="VersionName"/>-typed view over the <see cref="TargetVersion"/> resource name property.
+        /// </summary>
+        public VersionName TargetVersionAsVersionName
+        {
+            get => string.IsNullOrEmpty(TargetVersion) ? null : VersionName.Parse(TargetVersion, allowUnparsed: true);
+            set => TargetVersion = value?.ToString() ?? "";
+        }
+    }
 }

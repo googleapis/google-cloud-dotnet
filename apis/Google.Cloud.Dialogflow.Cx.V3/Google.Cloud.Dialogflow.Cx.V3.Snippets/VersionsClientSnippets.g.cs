@@ -914,5 +914,96 @@ namespace Google.Cloud.Dialogflow.Cx.V3.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for CompareVersions</summary>
+        public void CompareVersionsRequestObject()
+        {
+            // Snippet: CompareVersions(CompareVersionsRequest, CallSettings)
+            // Create client
+            VersionsClient versionsClient = VersionsClient.Create();
+            // Initialize request argument(s)
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                TargetVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            CompareVersionsResponse response = versionsClient.CompareVersions(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompareVersionsAsync</summary>
+        public async Task CompareVersionsRequestObjectAsync()
+        {
+            // Snippet: CompareVersionsAsync(CompareVersionsRequest, CallSettings)
+            // Additional: CompareVersionsAsync(CompareVersionsRequest, CancellationToken)
+            // Create client
+            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            // Initialize request argument(s)
+            CompareVersionsRequest request = new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                TargetVersionAsVersionName = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]"),
+                LanguageCode = "",
+            };
+            // Make the request
+            CompareVersionsResponse response = await versionsClient.CompareVersionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompareVersions</summary>
+        public void CompareVersions()
+        {
+            // Snippet: CompareVersions(string, CallSettings)
+            // Create client
+            VersionsClient versionsClient = VersionsClient.Create();
+            // Initialize request argument(s)
+            string baseVersion = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/flows/[FLOW]/versions/[VERSION]";
+            // Make the request
+            CompareVersionsResponse response = versionsClient.CompareVersions(baseVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompareVersionsAsync</summary>
+        public async Task CompareVersionsAsync()
+        {
+            // Snippet: CompareVersionsAsync(string, CallSettings)
+            // Additional: CompareVersionsAsync(string, CancellationToken)
+            // Create client
+            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            // Initialize request argument(s)
+            string baseVersion = "projects/[PROJECT]/locations/[LOCATION]/agents/[AGENT]/flows/[FLOW]/versions/[VERSION]";
+            // Make the request
+            CompareVersionsResponse response = await versionsClient.CompareVersionsAsync(baseVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompareVersions</summary>
+        public void CompareVersionsResourceNames()
+        {
+            // Snippet: CompareVersions(VersionName, CallSettings)
+            // Create client
+            VersionsClient versionsClient = VersionsClient.Create();
+            // Initialize request argument(s)
+            VersionName baseVersion = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]");
+            // Make the request
+            CompareVersionsResponse response = versionsClient.CompareVersions(baseVersion);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CompareVersionsAsync</summary>
+        public async Task CompareVersionsResourceNamesAsync()
+        {
+            // Snippet: CompareVersionsAsync(VersionName, CallSettings)
+            // Additional: CompareVersionsAsync(VersionName, CancellationToken)
+            // Create client
+            VersionsClient versionsClient = await VersionsClient.CreateAsync();
+            // Initialize request argument(s)
+            VersionName baseVersion = VersionName.FromProjectLocationAgentFlowVersion("[PROJECT]", "[LOCATION]", "[AGENT]", "[FLOW]", "[VERSION]");
+            // Make the request
+            CompareVersionsResponse response = await versionsClient.CompareVersionsAsync(baseVersion);
+            // End snippet
+        }
     }
 }

@@ -54,6 +54,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             DeleteVersionSettings = existing.DeleteVersionSettings;
             LoadVersionSettings = existing.LoadVersionSettings;
             LoadVersionOperationsSettings = existing.LoadVersionOperationsSettings.Clone();
+            CompareVersionsSettings = existing.CompareVersionsSettings;
             OnCopy(existing);
         }
 
@@ -202,6 +203,24 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>VersionsClient.CompareVersions</c> and <c>VersionsClient.CompareVersionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CompareVersionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="VersionsSettings"/> object.</returns>
@@ -366,7 +385,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public virtual Versions.VersionsClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -375,7 +395,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -384,12 +405,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all versions for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all
+        /// versions for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -410,12 +432,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all versions for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all
+        /// versions for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -436,12 +459,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all versions for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all
+        /// versions for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -462,12 +486,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all versions for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to list all
+        /// versions for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -519,8 +544,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version].
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -535,8 +560,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version].
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -551,8 +576,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version].
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -564,8 +589,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version].
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -580,8 +605,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version].
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -596,8 +621,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// </summary>
         /// <param name="name">
         /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version].
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -605,13 +630,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             GetVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -621,13 +648,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -637,13 +666,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -679,19 +710,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             lro::Operation<Version, CreateVersionOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateVersionOperationsClient, callSettings);
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
+        /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -706,19 +739,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
+        /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -733,19 +768,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
+        /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -756,19 +793,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             CreateVersionAsync(parent, version, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
+        /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -783,19 +822,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
+        /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -810,19 +851,21 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             }, callSettings);
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="parent">
-        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an [Version][google.cloud.dialogflow.cx.v3.Version] for.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;`.
+        /// Required. The [Flow][google.cloud.dialogflow.cx.v3.Flow] to create an
+        /// [Version][google.cloud.dialogflow.cx.v3.Version] for. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;`.
         /// </param>
         /// <param name="version">
         /// Required. The version to create.
@@ -866,8 +909,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Required. The version to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to control which fields get updated. Currently only `description`
-        /// and `display_name` can be updated.
+        /// Required. The mask to control which fields get updated. Currently only
+        /// `description` and `display_name` can be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -885,8 +928,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Required. The version to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to control which fields get updated. Currently only `description`
-        /// and `display_name` can be updated.
+        /// Required. The mask to control which fields get updated. Currently only
+        /// `description` and `display_name` can be updated.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -904,8 +947,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Required. The version to update.
         /// </param>
         /// <param name="updateMask">
-        /// Required. The mask to control which fields get updated. Currently only `description`
-        /// and `display_name` can be updated.
+        /// Required. The mask to control which fields get updated. Currently only
+        /// `description` and `display_name` can be updated.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -943,9 +986,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Deletes the specified [Version][google.cloud.dialogflow.cx.v3.Version].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
+        /// to delete. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -959,9 +1002,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Deletes the specified [Version][google.cloud.dialogflow.cx.v3.Version].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
+        /// to delete. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -975,9 +1018,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Deletes the specified [Version][google.cloud.dialogflow.cx.v3.Version].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
+        /// to delete. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -988,9 +1031,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Deletes the specified [Version][google.cloud.dialogflow.cx.v3.Version].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
+        /// to delete. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1004,9 +1047,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Deletes the specified [Version][google.cloud.dialogflow.cx.v3.Version].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
+        /// to delete. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1020,9 +1063,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// Deletes the specified [Version][google.cloud.dialogflow.cx.v3.Version].
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version] to delete.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The name of the [Version][google.cloud.dialogflow.cx.v3.Version]
+        /// to delete. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1122,9 +1165,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
+        /// to draft flow. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1147,9 +1190,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
+        /// to draft flow. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1172,9 +1215,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
+        /// to draft flow. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1194,9 +1237,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
+        /// to draft flow. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1219,9 +1262,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
+        /// to draft flow. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1244,14 +1287,143 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         /// message](https://developers.google.com/protocol-buffers/docs/reference/google.protobuf#empty)
         /// </summary>
         /// <param name="name">
-        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded to draft flow.
-        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;/agents/&amp;lt;Agent
-        /// ID&amp;gt;/flows/&amp;lt;Flow ID&amp;gt;/versions/&amp;lt;Version ID&amp;gt;`.
+        /// Required. The [Version][google.cloud.dialogflow.cx.v3.Version] to be loaded
+        /// to draft flow. Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Struct>> LoadVersionAsync(VersionName name, st::CancellationToken cancellationToken) =>
             LoadVersionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompareVersionsResponse CompareVersions(CompareVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompareVersionsResponse> CompareVersionsAsync(CompareVersionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompareVersionsResponse> CompareVersionsAsync(CompareVersionsRequest request, st::CancellationToken cancellationToken) =>
+            CompareVersionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="baseVersion">
+        /// Required. Name of the base flow version to compare with the target version.
+        /// Use version ID `0` to indicate the draft version of the specified flow.
+        /// 
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompareVersionsResponse CompareVersions(string baseVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CompareVersions(new CompareVersionsRequest
+            {
+                BaseVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(baseVersion, nameof(baseVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="baseVersion">
+        /// Required. Name of the base flow version to compare with the target version.
+        /// Use version ID `0` to indicate the draft version of the specified flow.
+        /// 
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompareVersionsResponse> CompareVersionsAsync(string baseVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CompareVersionsAsync(new CompareVersionsRequest
+            {
+                BaseVersion = gax::GaxPreconditions.CheckNotNullOrEmpty(baseVersion, nameof(baseVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="baseVersion">
+        /// Required. Name of the base flow version to compare with the target version.
+        /// Use version ID `0` to indicate the draft version of the specified flow.
+        /// 
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompareVersionsResponse> CompareVersionsAsync(string baseVersion, st::CancellationToken cancellationToken) =>
+            CompareVersionsAsync(baseVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="baseVersion">
+        /// Required. Name of the base flow version to compare with the target version.
+        /// Use version ID `0` to indicate the draft version of the specified flow.
+        /// 
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual CompareVersionsResponse CompareVersions(VersionName baseVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CompareVersions(new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = gax::GaxPreconditions.CheckNotNull(baseVersion, nameof(baseVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="baseVersion">
+        /// Required. Name of the base flow version to compare with the target version.
+        /// Use version ID `0` to indicate the draft version of the specified flow.
+        /// 
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompareVersionsResponse> CompareVersionsAsync(VersionName baseVersion, gaxgrpc::CallSettings callSettings = null) =>
+            CompareVersionsAsync(new CompareVersionsRequest
+            {
+                BaseVersionAsVersionName = gax::GaxPreconditions.CheckNotNull(baseVersion, nameof(baseVersion)),
+            }, callSettings);
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="baseVersion">
+        /// Required. Name of the base flow version to compare with the target version.
+        /// Use version ID `0` to indicate the draft version of the specified flow.
+        /// 
+        /// Format:
+        /// `projects/&amp;lt;ProjectID&amp;gt;/locations/&amp;lt;LocationID&amp;gt;/agents/&amp;lt;AgentID&amp;gt;/flows/&amp;lt;FlowID&amp;gt;/versions/&amp;lt;VersionID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<CompareVersionsResponse> CompareVersionsAsync(VersionName baseVersion, st::CancellationToken cancellationToken) =>
+            CompareVersionsAsync(baseVersion, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Versions client wrapper implementation, for convenient use.</summary>
@@ -1271,6 +1443,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         private readonly gaxgrpc::ApiCall<DeleteVersionRequest, wkt::Empty> _callDeleteVersion;
 
         private readonly gaxgrpc::ApiCall<LoadVersionRequest, lro::Operation> _callLoadVersion;
+
+        private readonly gaxgrpc::ApiCall<CompareVersionsRequest, CompareVersionsResponse> _callCompareVersions;
 
         /// <summary>
         /// Constructs a client wrapper for the Versions service, with the specified gRPC client and settings.
@@ -1302,6 +1476,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3
             _callLoadVersion = clientHelper.BuildApiCall<LoadVersionRequest, lro::Operation>(grpcClient.LoadVersionAsync, grpcClient.LoadVersion, effectiveSettings.LoadVersionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callLoadVersion);
             Modify_LoadVersionApiCall(ref _callLoadVersion);
+            _callCompareVersions = clientHelper.BuildApiCall<CompareVersionsRequest, CompareVersionsResponse>(grpcClient.CompareVersionsAsync, grpcClient.CompareVersions, effectiveSettings.CompareVersionsSettings).WithGoogleRequestParam("base_version", request => request.BaseVersion);
+            Modify_ApiCall(ref _callCompareVersions);
+            Modify_CompareVersionsApiCall(ref _callCompareVersions);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1318,6 +1495,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         partial void Modify_DeleteVersionApiCall(ref gaxgrpc::ApiCall<DeleteVersionRequest, wkt::Empty> call);
 
         partial void Modify_LoadVersionApiCall(ref gaxgrpc::ApiCall<LoadVersionRequest, lro::Operation> call);
+
+        partial void Modify_CompareVersionsApiCall(ref gaxgrpc::ApiCall<CompareVersionsRequest, CompareVersionsResponse> call);
 
         partial void OnConstruction(Versions.VersionsClient grpcClient, VersionsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -1336,8 +1515,11 @@ namespace Google.Cloud.Dialogflow.Cx.V3
 
         partial void Modify_LoadVersionRequest(ref LoadVersionRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_CompareVersionsRequest(ref CompareVersionsRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1349,7 +1531,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Returns the list of all versions in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1388,13 +1571,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         public override lro::OperationsClient CreateVersionOperationsClient { get; }
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1407,13 +1592,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         }
 
         /// <summary>
-        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+        /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+        /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
         /// 
         /// This method is a [long-running
         /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
         /// The returned `Operation` type has the following method-specific fields:
         /// 
-        /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+        /// - `metadata`:
+        /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
         /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1516,6 +1703,30 @@ namespace Google.Cloud.Dialogflow.Cx.V3
         {
             Modify_LoadVersionRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, wkt::Struct>(await _callLoadVersion.Async(request, callSettings).ConfigureAwait(false), LoadVersionOperationsClient);
+        }
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override CompareVersionsResponse CompareVersions(CompareVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CompareVersionsRequest(ref request, ref callSettings);
+            return _callCompareVersions.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Compares the specified base version with target version.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<CompareVersionsResponse> CompareVersionsAsync(CompareVersionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CompareVersionsRequest(ref request, ref callSettings);
+            return _callCompareVersions.Async(request, callSettings);
         }
     }
 

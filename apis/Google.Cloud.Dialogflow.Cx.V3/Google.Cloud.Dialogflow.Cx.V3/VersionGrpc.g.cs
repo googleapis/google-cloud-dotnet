@@ -83,6 +83,10 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.LoadVersionRequest> __Marshaller_google_cloud_dialogflow_cx_v3_LoadVersionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.LoadVersionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest> __Marshaller_google_cloud_dialogflow_cx_v3_CompareVersionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse> __Marshaller_google_cloud_dialogflow_cx_v3_CompareVersionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListVersionsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListVersionsResponse> __Method_ListVersions = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.ListVersionsRequest, global::Google.Cloud.Dialogflow.Cx.V3.ListVersionsResponse>(
@@ -132,6 +136,14 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         __Marshaller_google_cloud_dialogflow_cx_v3_LoadVersionRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest, global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse> __Method_CompareVersions = new grpc::Method<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest, global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CompareVersions",
+        __Marshaller_google_cloud_dialogflow_cx_v3_CompareVersionsRequest,
+        __Marshaller_google_cloud_dialogflow_cx_v3_CompareVersionsResponse);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -143,7 +155,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public abstract partial class VersionsBase
     {
       /// <summary>
-      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -167,13 +180,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`:
+      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -230,6 +245,18 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Compares the specified base version with target version.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse> CompareVersions(global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for Versions</summary>
@@ -260,7 +287,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -273,7 +301,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -284,7 +313,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListVersions, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -297,7 +327,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -356,13 +387,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetVersion, null, options, request);
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`:
+      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -376,13 +409,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`:
+      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -394,13 +429,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateVersion, null, options, request);
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`:
+      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -414,13 +451,15 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
+      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`:
+      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -611,6 +650,54 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_LoadVersion, null, options, request);
       }
+      /// <summary>
+      /// Compares the specified base version with target version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse CompareVersions(global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CompareVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Compares the specified base version with target version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse CompareVersions(global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CompareVersions, null, options, request);
+      }
+      /// <summary>
+      /// Compares the specified base version with target version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse> CompareVersionsAsync(global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CompareVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Compares the specified base version with target version.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse> CompareVersionsAsync(global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CompareVersions, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override VersionsClient NewInstance(ClientBaseConfiguration configuration)
@@ -630,7 +717,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           .AddMethod(__Method_CreateVersion, serviceImpl.CreateVersion)
           .AddMethod(__Method_UpdateVersion, serviceImpl.UpdateVersion)
           .AddMethod(__Method_DeleteVersion, serviceImpl.DeleteVersion)
-          .AddMethod(__Method_LoadVersion, serviceImpl.LoadVersion).Build();
+          .AddMethod(__Method_LoadVersion, serviceImpl.LoadVersion)
+          .AddMethod(__Method_CompareVersions, serviceImpl.CompareVersions).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -646,6 +734,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       serviceBinder.AddMethod(__Method_UpdateVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.UpdateVersionRequest, global::Google.Cloud.Dialogflow.Cx.V3.Version>(serviceImpl.UpdateVersion));
       serviceBinder.AddMethod(__Method_DeleteVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.DeleteVersionRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteVersion));
       serviceBinder.AddMethod(__Method_LoadVersion, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.LoadVersionRequest, global::Google.LongRunning.Operation>(serviceImpl.LoadVersion));
+      serviceBinder.AddMethod(__Method_CompareVersions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsRequest, global::Google.Cloud.Dialogflow.Cx.V3.CompareVersionsResponse>(serviceImpl.CompareVersions));
     }
 
   }
