@@ -34,12 +34,15 @@ copy_one_api() {
   PACKAGE_DIR=apis/$1
 
   # We don't expect googleapis-gen to contain the right (or potentially
-  # even valid) code for APIs which have pre/mid-generation tweak scripts.
-  # It's not clear whether they'll even be fully generated in googleapis-gen,
-  # but for now we can still use OwlBot to notice that something has changed,
+  # even valid) code for APIs which have pre/mid-generation tweak scripts,
+  # or custom resource configurations - or a few other corner cases.
+  # Some APIs may not even be fully generated in googleapis-gen.
+  # We can still use OwlBot to notice that something has changed,
   # and simply running our local generation script against the right commit
-  # for googleapis/googleapis.
-  if [[ -f $PACKAGE_DIR/pregeneration.sh || -f $PACKAGE_DIR/midmicrogeneration.sh ]]
+  # for googleapis/googleapis. The project generator determines whether any
+  # given API requires regeneration here, and creates a marker .OwlBot-ForceRegeneration.txt
+  # file if so.
+  if [[ -f $PACKAGE_DIR/.OwlBot-ForceRegeneration.txt ]]
   then
     # Determine the commit for googleapis to use based on the Source-Link in
     # the comment from the last commit in the local directory.

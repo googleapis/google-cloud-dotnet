@@ -36,3 +36,7 @@ Fields:
 - `commonResourceConfig`: Path to a file providing additional common
   resource configuration, augmenting the root `CommonResourcesConfig.json` file. Typically multiple APIs (e.g. all of
   the Spanner APIs) will refer to the same file in a common package, containing the resource names described in the config file.
+- `forceOwlBotRegeneration`: The reason why the OwlBot postprocessor
+  should regenerate this API locally, for corner cases. (Custom
+  resource configuration and pre/mid-processor tweaks are handled
+  automatically.)
