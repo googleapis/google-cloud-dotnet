@@ -1,0 +1,2 @@
+API requires pre/mid-generation tweaks.
+API uses a custom resources configuration.
