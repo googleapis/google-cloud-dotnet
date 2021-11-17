@@ -533,9 +533,12 @@ shell.run(
         private static void GenerateOwlBotConfiguration(string apiRoot, ApiMetadata api)
         {
             var owlBotConfigFile = Path.Combine(apiRoot, ".OwlBot.yaml");
+            var owlBotForceRegenerationFile = Path.Combine(apiRoot, ".OwlBot-ForceRegeneration.txt");
+            // We will recreate this if necessary.
+            File.Delete(owlBotForceRegenerationFile);
             if (api.DetermineAutoGeneratorType() != AutoGeneratorType.OwlBot)
             {
-                // Clean up any previous synth configuration
+                // Clean up any previous OwlBot configuration
                 File.Delete(owlBotConfigFile);
                 return;
             }
@@ -571,6 +574,25 @@ deep-copy-regex:
       dest: /owl-bot-staging/{api.Id}/gapic_metadata.json
 ";
             File.WriteAllText(owlBotConfigFile, content);
+
+            var forceRegenerationReasons = new List<string>();
+            if (File.Exists(Path.Combine(apiRoot, "pregeneration.sh")) ||
+                File.Exists(Path.Combine(apiRoot, "midmicrogeneration.sh")))
+            {
+                forceRegenerationReasons.Add("API requires pre/mid-generation tweaks.");
+            }
+            if (api.CommonResourcesConfig is object)
+            {
+                forceRegenerationReasons.Add("API uses a custom resources configuration.");
+            }
+            if (api.ForceOwlBotRegeneration is string reason)
+            {
+                forceRegenerationReasons.Add(reason);
+            }
+            if (forceRegenerationReasons.Any())
+            {
+                File.WriteAllLines(owlBotForceRegenerationFile, forceRegenerationReasons);
+            }
         }
 
         /// <summary>
