@@ -426,9 +426,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
   /// Request message for bulk findings update.
   ///
   /// Note:
-  ///     1. If multiple bulk update requests match the same resource, the order in
+  /// 1. If multiple bulk update requests match the same resource, the order in
   /// which they get executed is not defined.
-  ///     2. Once a bulk operation is started, there is no way to stop it.
+  /// 2. Once a bulk operation is started, there is no way to stop it.
   /// </summary>
   public sealed partial class BulkMuteFindingsRequest : pb::IMessage<BulkMuteFindingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
