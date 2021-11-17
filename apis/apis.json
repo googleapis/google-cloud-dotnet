@@ -2059,7 +2059,8 @@
         "Google.Api.CommonProtos": "2.3.0",
         "Google.Api.Gax": "3.5.0"
       },
-      "noVersionHistory": true
+      "noVersionHistory": true,
+      "forceOwlBotRegeneration": "OsLogin Common proto is generated in the wrong place."
     },
     {
       "id": "Google.Cloud.OsLogin.V1",
@@ -2078,7 +2079,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.OsLogin.Common": "project",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be."
     },
     {
       "id": "Google.Cloud.OsLogin.V1Beta",
@@ -2098,7 +2100,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.OsLogin.Common": "project",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be."
     },
     {
       "id": "Google.Cloud.PhishingProtection.V1Beta1",
@@ -2819,7 +2822,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/talent/v4"
+      "protoPath": "google/cloud/talent/v4",
+      "forceOwlBotRegeneration": "Google.Cloud.Common proto is generated and copied when it shouldn't be."
     },
     {
       "id": "Google.Cloud.Talent.V4Beta1",
