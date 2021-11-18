@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.4.0, released 2021-11-18
+
+- [Commit fc5df69](https://github.com/googleapis/google-cloud-dotnet/commit/fc5df69):
+  - feat: Add Mulaw and Alaw values to AudioEncoding
+  - feat: Generate a resource name for Model
+- [Commit 6b42688](https://github.com/googleapis/google-cloud-dotnet/commit/6b42688): docs: fix docstring formatting
+
 ## Version 2.3.0, released 2021-09-06
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
