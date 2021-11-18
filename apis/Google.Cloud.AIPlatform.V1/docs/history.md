@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.1.0, released 2021-11-18
+
+- [Commit 0d5a6b7](https://github.com/googleapis/google-cloud-dotnet/commit/0d5a6b7):
+  - feat:Tensorboard v1 protos release
+  - feat:Exposing a field for v1 CustomJob-Tensorboard integration.
+
 ## Version 1.0.0, released 2021-11-10
 
 - [Commit 68f7900](https://github.com/googleapis/google-cloud-dotnet/commit/68f7900): feat: Adds support for `google.protobuf.Value` pipeline parameters in the `parameter_values` field
