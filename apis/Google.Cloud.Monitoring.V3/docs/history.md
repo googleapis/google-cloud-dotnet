@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.5.0, released 2021-11-18
+
+- [Commit b8a8fbd](https://github.com/googleapis/google-cloud-dotnet/commit/b8a8fbd): feat: Added support for auto-close configurations
+
 ## Version 2.4.0, released 2021-10-14
 
 - [Commit 556147f](https://github.com/googleapis/google-cloud-dotnet/commit/556147f):
