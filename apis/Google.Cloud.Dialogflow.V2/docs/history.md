@@ -1,5 +1,9 @@
 # Version history
 
+## Version 3.8.0, released 2021-11-18
+
+- [Commit d033f77](https://github.com/googleapis/google-cloud-dotnet/commit/d033f77): feat: support document metadata filter in article suggestion and smart reply model in human agent assistant
+
 ## Version 3.7.0, released 2021-11-10
 
 - [Commit 6699f2e](https://github.com/googleapis/google-cloud-dotnet/commit/6699f2e): feat: added support to configure security settings, language code and time zone on conversation profile
