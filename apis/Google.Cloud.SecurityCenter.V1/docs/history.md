@@ -1,5 +1,10 @@
 # Version history
 
+## Version 2.9.0, released 2021-11-18
+
+- [Commit 7408292](https://github.com/googleapis/google-cloud-dotnet/commit/7408292): docs: fix docstring formatting
+- [Commit 15d6b9a](https://github.com/googleapis/google-cloud-dotnet/commit/15d6b9a): feat: Added mute related APIs, proto messages and fields
+
 ## Version 2.8.0, released 2021-11-10
 
 - [Commit 9292121](https://github.com/googleapis/google-cloud-dotnet/commit/9292121): feat: Added resource type and display_name field to the FindingResult, and supported them in the filter for ListFindings and GroupFindings. Also added display_name to the resource which is surfaced in NotificationMessage
