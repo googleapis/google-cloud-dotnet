@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.7.0, released 2021-11-18
+
+- [Commit 042a99f](https://github.com/googleapis/google-cloud-dotnet/commit/042a99f):
+  - feat: allow setting custom CA for generic webhooks and release CompareVersions API
+  - docs: clarify DLP template reader usage
+
 ## Version 1.6.0, released 2021-11-10
 
 - [Commit 36bae8f](https://github.com/googleapis/google-cloud-dotnet/commit/36bae8f):
