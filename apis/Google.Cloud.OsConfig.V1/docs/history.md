@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.7.0, released 2021-11-18
+
+- [Commit aaeed36](https://github.com/googleapis/google-cloud-dotnet/commit/aaeed36): feat: Add details of items affected by a vulnerability
+
 ## Version 1.6.0, released 2021-11-10
 
 - [Commit 8f1e976](https://github.com/googleapis/google-cloud-dotnet/commit/8f1e976): feat: OSConfig: add OS policy assignment rpcs
