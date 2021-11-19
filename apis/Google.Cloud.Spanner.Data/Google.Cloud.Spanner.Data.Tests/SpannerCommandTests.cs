@@ -96,7 +96,7 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.Equal(command.CommandText, command2.CommandText);
             Assert.Equal(command.Parameters.Count, command2.Parameters.Count);
             Assert.NotSame(command.Parameters, command2.Parameters);
-            Assert.True(command.Parameters.SequenceEqual(command2.Parameters));
+            Assert.True(command.Parameters.SequenceEqual(command2.Parameters, new SpannerParameterEqualityComparer()));
         }
 
         [Fact]
