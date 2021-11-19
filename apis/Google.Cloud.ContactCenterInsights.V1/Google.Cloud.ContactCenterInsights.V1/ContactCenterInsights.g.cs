@@ -805,8 +805,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// <summary>
     /// A map associating each issue resource name with its respective number of
     /// matches in the set of conversations. Key has the format:
-    /// `projects/&lt;Project ID>/locations/&lt;Location ID>/issueModels/&lt;Issue Model
-    /// ID>/issues/&lt;Issue ID>`
+    /// `projects/&lt;Project-ID>/locations/&lt;Location-ID>/issueModels/&lt;Issue-Model-ID>/issues/&lt;Issue-ID>`
     /// Deprecated, use `issue_matches_stats` field instead.
     /// </summary>
     [global::System.ObsoleteAttribute]
@@ -824,7 +823,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// <summary>
     /// A map associating each issue resource name with its respective number of
     /// matches in the set of conversations. Key has the format:
-    /// `projects/&lt;ProjectID>/locations/&lt;LocationID>/issueModels/&lt;IssueModelID>/issues/&lt;IssueID>`
+    /// `projects/&lt;Project-ID>/locations/&lt;Location-ID>/issueModels/&lt;Issue-Model-ID>/issues/&lt;Issue-ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2002,8 +2001,8 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     /// component of the conversation's resource name. If no ID is specified, a
     /// server-generated ID will be used.
     ///
-    /// This value should be 4-32 characters and must match the regular
-    /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+    /// This value should be 4-64 characters and must match the regular
+    /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5130,9 +5129,9 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         public const int DatasetFieldNumber = 1;
         private string dataset_ = "";
         /// <summary>
-        /// Required. The name of the BigQuery dataset that the snapshot result
-        /// should be exported to. If this dataset does not exist, the export call
-        /// returns an INVALID_ARGUMENT error.
+        /// Required. The name of the BigQuery dataset that the snapshot result should be
+        /// exported to. If this dataset does not exist, the export call returns an
+        /// INVALID_ARGUMENT error.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10286,10 +10285,10 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The parent resource of the phrase matcher. Required. The location
-    /// to create a phrase matcher for. Format: `projects/&lt;Project
-    /// ID>/locations/&lt;Location ID>` or `projects/&lt;Project
-    /// Number>/locations/&lt;Location ID>`
+    /// Required. The parent resource of the phrase matcher. Required. The location to create
+    /// a phrase matcher for.
+    /// Format: `projects/&lt;Project ID>/locations/&lt;Location ID>` or
+    /// `projects/&lt;Project Number>/locations/&lt;Location ID>`
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
