@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using System;
+using System.Collections.Generic;
 using System.Linq;
 using Xunit;
 
@@ -103,5 +104,48 @@ namespace Google.Cloud.Spanner.Data.Tests
             Assert.False(collection.IsSynchronized);
             Assert.False(collection.IsReadOnly);
         }
+
+        [Fact]
+        public void Clone()
+        {
+            var param1 = new SpannerParameter("Param1", SpannerDbType.Int64, 1L);
+            var param2 = new SpannerParameter("Param2", SpannerDbType.String, "original");
+            var original = new SpannerParameterCollection(new []{param1, param2});
+            var clone = original.Clone();
+            
+            // The values in the clone should initially be equal to the original collection.
+            Assert.True(original.SequenceEqual(clone, new SpannerParameterEqualityComparer()));
+
+            // Change the original parameters.
+            // This should be reflected in the original collection, but not in the clone.
+            param1.Value = 2L;
+            param2.Value = "new value";
+            Assert.False(original.SequenceEqual(clone, new SpannerParameterEqualityComparer()));
+            
+            // Verify that the changed parameter values were set on the instances in the original collection.
+            Assert.Equal(2L, original[0].Value);
+            Assert.Equal("new value", original[1].Value);
+            // Verify that the cloned collection still has the original value.
+            Assert.Equal(1L, clone[0].Value);
+            Assert.Equal("original", clone[1].Value);
+        }
+    }
+
+    internal class SpannerParameterEqualityComparer : IEqualityComparer<SpannerParameter>
+    {
+        public bool Equals(SpannerParameter x, SpannerParameter y)
+        {
+            if (x == null && y == null)
+            {
+                return true;
+            }
+            if (x == null || y == null)
+            {
+                return false;
+            }
+            return Equals(x.ParameterName, y.ParameterName) && Equals(x.DbType, y.DbType) && Equals(x.Value, y.Value);
+        }
+
+        public int GetHashCode(SpannerParameter obj) => obj.GetHashCode();
     }
 }
