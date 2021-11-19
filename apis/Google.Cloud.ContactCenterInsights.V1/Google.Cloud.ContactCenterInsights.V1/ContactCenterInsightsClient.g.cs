@@ -946,8 +946,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// component of the conversation's resource name. If no ID is specified, a
         /// server-generated ID will be used.
         /// 
-        /// This value should be 4-32 characters and must match the regular
-        /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -973,8 +973,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// component of the conversation's resource name. If no ID is specified, a
         /// server-generated ID will be used.
         /// 
-        /// This value should be 4-32 characters and must match the regular
-        /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1000,8 +1000,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// component of the conversation's resource name. If no ID is specified, a
         /// server-generated ID will be used.
         /// 
-        /// This value should be 4-32 characters and must match the regular
-        /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1022,8 +1022,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// component of the conversation's resource name. If no ID is specified, a
         /// server-generated ID will be used.
         /// 
-        /// This value should be 4-32 characters and must match the regular
-        /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1049,8 +1049,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// component of the conversation's resource name. If no ID is specified, a
         /// server-generated ID will be used.
         /// 
-        /// This value should be 4-32 characters and must match the regular
-        /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1076,8 +1076,8 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// component of the conversation's resource name. If no ID is specified, a
         /// server-generated ID will be used.
         /// 
-        /// This value should be 4-32 characters and must match the regular
-        /// expression /^[a-z0-9-]{4,32}$/. Valid characters are /[a-z][0-9]-/
+        /// This value should be 4-64 characters and must match the regular
+        /// expression `^[a-z0-9-]{4,64}$`. Valid characters are `[a-z][0-9]-`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -3378,10 +3378,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location
-        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
-        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
-        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location to create
+        /// a phrase matcher for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
+        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3399,10 +3399,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location
-        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
-        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
-        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location to create
+        /// a phrase matcher for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
+        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3420,10 +3420,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location
-        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
-        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
-        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location to create
+        /// a phrase matcher for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
+        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3437,10 +3437,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location
-        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
-        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
-        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location to create
+        /// a phrase matcher for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
+        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3458,10 +3458,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location
-        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
-        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
-        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location to create
+        /// a phrase matcher for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
+        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
@@ -3479,10 +3479,10 @@ namespace Google.Cloud.ContactCenterInsights.V1
         /// Creates a phrase matcher.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource of the phrase matcher. Required. The location
-        /// to create a phrase matcher for. Format: `projects/&amp;lt;Project
-        /// ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or `projects/&amp;lt;Project
-        /// Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
+        /// Required. The parent resource of the phrase matcher. Required. The location to create
+        /// a phrase matcher for.
+        /// Format: `projects/&amp;lt;Project ID&amp;gt;/locations/&amp;lt;Location ID&amp;gt;` or
+        /// `projects/&amp;lt;Project Number&amp;gt;/locations/&amp;lt;Location ID&amp;gt;`
         /// </param>
         /// <param name="phraseMatcher">
         /// Required. The phrase matcher resource to create.
