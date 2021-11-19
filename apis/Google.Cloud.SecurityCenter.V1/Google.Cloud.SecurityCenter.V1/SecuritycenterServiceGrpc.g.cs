@@ -144,6 +144,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateExternalSystemRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.ExternalSystem> __Marshaller_google_cloud_securitycenter_v1_ExternalSystem = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.ExternalSystem.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateFindingRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest> __Marshaller_google_cloud_securitycenter_v1_UpdateMuteConfigRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest.Parser));
@@ -349,6 +353,14 @@ namespace Google.Cloud.SecurityCenter.V1 {
         "TestIamPermissions",
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest, global::Google.Cloud.SecurityCenter.V1.ExternalSystem> __Method_UpdateExternalSystem = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest, global::Google.Cloud.SecurityCenter.V1.ExternalSystem>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateExternalSystem",
+        __Marshaller_google_cloud_securitycenter_v1_UpdateExternalSystemRequest,
+        __Marshaller_google_cloud_securitycenter_v1_ExternalSystem);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding> __Method_UpdateFinding = new grpc::Method<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(
@@ -710,6 +722,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> TestIamPermissions(global::Google.Cloud.Iam.V1.TestIamPermissionsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates external system. This is for a given finding.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.SecurityCenter.V1.ExternalSystem> UpdateExternalSystem(global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2043,6 +2067,54 @@ namespace Google.Cloud.SecurityCenter.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
       /// <summary>
+      /// Updates external system. This is for a given finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ExternalSystem UpdateExternalSystem(global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExternalSystem(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates external system. This is for a given finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.SecurityCenter.V1.ExternalSystem UpdateExternalSystem(global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateExternalSystem, null, options, request);
+      }
+      /// <summary>
+      /// Updates external system. This is for a given finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ExternalSystem> UpdateExternalSystemAsync(global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateExternalSystemAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates external system. This is for a given finding.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.SecurityCenter.V1.ExternalSystem> UpdateExternalSystemAsync(global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateExternalSystem, null, options, request);
+      }
+      /// <summary>
       /// Creates or updates a finding. The corresponding source must exist for a
       /// finding creation to succeed.
       /// </summary>
@@ -2380,6 +2452,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
           .AddMethod(__Method_SetMute, serviceImpl.SetMute)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_UpdateExternalSystem, serviceImpl.UpdateExternalSystem)
           .AddMethod(__Method_UpdateFinding, serviceImpl.UpdateFinding)
           .AddMethod(__Method_UpdateMuteConfig, serviceImpl.UpdateMuteConfig)
           .AddMethod(__Method_UpdateNotificationConfig, serviceImpl.UpdateNotificationConfig)
@@ -2419,6 +2492,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       serviceBinder.AddMethod(__Method_SetMute, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.SetMuteRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.SetMute));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_UpdateExternalSystem, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateExternalSystemRequest, global::Google.Cloud.SecurityCenter.V1.ExternalSystem>(serviceImpl.UpdateExternalSystem));
       serviceBinder.AddMethod(__Method_UpdateFinding, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateFindingRequest, global::Google.Cloud.SecurityCenter.V1.Finding>(serviceImpl.UpdateFinding));
       serviceBinder.AddMethod(__Method_UpdateMuteConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateMuteConfigRequest, global::Google.Cloud.SecurityCenter.V1.MuteConfig>(serviceImpl.UpdateMuteConfig));
       serviceBinder.AddMethod(__Method_UpdateNotificationConfig, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.SecurityCenter.V1.UpdateNotificationConfigRequest, global::Google.Cloud.SecurityCenter.V1.NotificationConfig>(serviceImpl.UpdateNotificationConfig));

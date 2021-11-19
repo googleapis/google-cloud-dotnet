@@ -154,6 +154,12 @@
                 "TestIamPermissionsAsync"
               ]
             },
+            "UpdateExternalSystem": {
+              "methods": [
+                "UpdateExternalSystem",
+                "UpdateExternalSystemAsync"
+              ]
+            },
             "UpdateFinding": {
               "methods": [
                 "UpdateFinding",

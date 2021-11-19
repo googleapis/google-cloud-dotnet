@@ -3804,6 +3804,70 @@ namespace Google.Cloud.SecurityCenter.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for UpdateExternalSystem</summary>
+        public void UpdateExternalSystemRequestObject()
+        {
+            // Snippet: UpdateExternalSystem(UpdateExternalSystemRequest, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            UpdateExternalSystemRequest request = new UpdateExternalSystemRequest
+            {
+                ExternalSystem = new ExternalSystem(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ExternalSystem response = securityCenterClient.UpdateExternalSystem(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalSystemAsync</summary>
+        public async Task UpdateExternalSystemRequestObjectAsync()
+        {
+            // Snippet: UpdateExternalSystemAsync(UpdateExternalSystemRequest, CallSettings)
+            // Additional: UpdateExternalSystemAsync(UpdateExternalSystemRequest, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateExternalSystemRequest request = new UpdateExternalSystemRequest
+            {
+                ExternalSystem = new ExternalSystem(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ExternalSystem response = await securityCenterClient.UpdateExternalSystemAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalSystem</summary>
+        public void UpdateExternalSystem()
+        {
+            // Snippet: UpdateExternalSystem(ExternalSystem, FieldMask, CallSettings)
+            // Create client
+            SecurityCenterClient securityCenterClient = SecurityCenterClient.Create();
+            // Initialize request argument(s)
+            ExternalSystem externalSystem = new ExternalSystem();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ExternalSystem response = securityCenterClient.UpdateExternalSystem(externalSystem, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateExternalSystemAsync</summary>
+        public async Task UpdateExternalSystemAsync()
+        {
+            // Snippet: UpdateExternalSystemAsync(ExternalSystem, FieldMask, CallSettings)
+            // Additional: UpdateExternalSystemAsync(ExternalSystem, FieldMask, CancellationToken)
+            // Create client
+            SecurityCenterClient securityCenterClient = await SecurityCenterClient.CreateAsync();
+            // Initialize request argument(s)
+            ExternalSystem externalSystem = new ExternalSystem();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ExternalSystem response = await securityCenterClient.UpdateExternalSystemAsync(externalSystem, updateMask);
+            // End snippet
+        }
+
         /// <summary>Snippet for UpdateFinding</summary>
         public void UpdateFindingRequestObject()
         {

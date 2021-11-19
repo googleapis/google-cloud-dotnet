@@ -218,6 +218,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -263,6 +270,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -310,6 +324,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -355,6 +376,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -402,6 +430,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -447,6 +482,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.CreateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2272,6 +2314,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2317,6 +2366,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2364,6 +2420,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2409,6 +2472,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2456,6 +2526,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingState(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2501,6 +2578,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetFindingStateAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2547,6 +2631,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2591,6 +2682,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2637,6 +2735,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2681,6 +2786,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -2727,6 +2839,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetMute(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -2771,6 +2890,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.SetMuteAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3113,6 +3239,122 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void UpdateExternalSystemRequestObject()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateExternalSystemRequest request = new UpdateExternalSystemRequest
+            {
+                ExternalSystem = new ExternalSystem(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            ExternalSystem expectedResponse = new ExternalSystem
+            {
+                ExternalSystemName = ExternalSystemName.FromOrganizationSourceFindingExternalsystem("[ORGANIZATION]", "[SOURCE]", "[FINDING]", "[EXTERNALSYSTEM]"),
+                Assignees =
+                {
+                    "assigneesaba0197f",
+                },
+                ExternalUid = "external_uidbb635729",
+                Status = "status5444cb9a",
+                ExternalSystemUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateExternalSystem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            ExternalSystem response = client.UpdateExternalSystem(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateExternalSystemRequestObjectAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateExternalSystemRequest request = new UpdateExternalSystemRequest
+            {
+                ExternalSystem = new ExternalSystem(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            ExternalSystem expectedResponse = new ExternalSystem
+            {
+                ExternalSystemName = ExternalSystemName.FromOrganizationSourceFindingExternalsystem("[ORGANIZATION]", "[SOURCE]", "[FINDING]", "[EXTERNALSYSTEM]"),
+                Assignees =
+                {
+                    "assigneesaba0197f",
+                },
+                ExternalUid = "external_uidbb635729",
+                Status = "status5444cb9a",
+                ExternalSystemUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateExternalSystemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExternalSystem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            ExternalSystem responseCallSettings = await client.UpdateExternalSystemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ExternalSystem responseCancellationToken = await client.UpdateExternalSystemAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateExternalSystem()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateExternalSystemRequest request = new UpdateExternalSystemRequest
+            {
+                ExternalSystem = new ExternalSystem(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            ExternalSystem expectedResponse = new ExternalSystem
+            {
+                ExternalSystemName = ExternalSystemName.FromOrganizationSourceFindingExternalsystem("[ORGANIZATION]", "[SOURCE]", "[FINDING]", "[EXTERNALSYSTEM]"),
+                Assignees =
+                {
+                    "assigneesaba0197f",
+                },
+                ExternalUid = "external_uidbb635729",
+                Status = "status5444cb9a",
+                ExternalSystemUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateExternalSystem(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            ExternalSystem response = client.UpdateExternalSystem(request.ExternalSystem, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateExternalSystemAsync()
+        {
+            moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateExternalSystemRequest request = new UpdateExternalSystemRequest
+            {
+                ExternalSystem = new ExternalSystem(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            ExternalSystem expectedResponse = new ExternalSystem
+            {
+                ExternalSystemName = ExternalSystemName.FromOrganizationSourceFindingExternalsystem("[ORGANIZATION]", "[SOURCE]", "[FINDING]", "[EXTERNALSYSTEM]"),
+                Assignees =
+                {
+                    "assigneesaba0197f",
+                },
+                ExternalUid = "external_uidbb635729",
+                Status = "status5444cb9a",
+                ExternalSystemUpdateTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.UpdateExternalSystemAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ExternalSystem>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            SecurityCenterClient client = new SecurityCenterClientImpl(mockGrpcClient.Object, null);
+            ExternalSystem responseCallSettings = await client.UpdateExternalSystemAsync(request.ExternalSystem, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ExternalSystem responseCancellationToken = await client.UpdateExternalSystemAsync(request.ExternalSystem, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void UpdateFindingRequestObject()
         {
             moq::Mock<SecurityCenter.SecurityCenterClient> mockGrpcClient = new moq::Mock<SecurityCenter.SecurityCenterClient>(moq::MockBehavior.Strict);
@@ -3147,6 +3389,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3191,6 +3440,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -3236,6 +3492,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFinding(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -3279,6 +3542,13 @@ namespace Google.Cloud.SecurityCenter.V1.Tests
                 Indicator = new Indicator(),
                 Vulnerability = new Vulnerability(),
                 MuteUpdateTime = new wkt::Timestamp(),
+                ExternalSystems =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new ExternalSystem()
+                    },
+                },
                 MuteInitiator = "mute_initiator3bd7566e",
             };
             mockGrpcClient.Setup(x => x.UpdateFindingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Finding>(stt::Task.FromResult(expectedResponse), null, null, null, null));
