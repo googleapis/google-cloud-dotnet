@@ -74,6 +74,7 @@ namespace Google.Cloud.SecurityCenter.V1
             SetMuteSettings = existing.SetMuteSettings;
             SetIamPolicySettings = existing.SetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            UpdateExternalSystemSettings = existing.UpdateExternalSystemSettings;
             UpdateFindingSettings = existing.UpdateFindingSettings;
             UpdateMuteConfigSettings = existing.UpdateMuteConfigSettings;
             UpdateNotificationConfigSettings = existing.UpdateNotificationConfigSettings;
@@ -512,6 +513,18 @@ namespace Google.Cloud.SecurityCenter.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.DeadlineExceeded, grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>SecurityCenterClient.UpdateExternalSystem</c> and <c>SecurityCenterClient.UpdateExternalSystemAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateExternalSystemSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -4583,6 +4596,89 @@ namespace Google.Cloud.SecurityCenter.V1
             TestIamPermissionsAsync(resource, permissions, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalSystem UpdateExternalSystem(UpdateExternalSystemRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalSystem> UpdateExternalSystemAsync(UpdateExternalSystemRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalSystem> UpdateExternalSystemAsync(UpdateExternalSystemRequest request, st::CancellationToken cancellationToken) =>
+            UpdateExternalSystemAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="externalSystem">
+        /// Required. The external system resource to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The FieldMask to use when updating the external system resource.
+        /// 
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ExternalSystem UpdateExternalSystem(ExternalSystem externalSystem, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExternalSystem(new UpdateExternalSystemRequest
+            {
+                ExternalSystem = gax::GaxPreconditions.CheckNotNull(externalSystem, nameof(externalSystem)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="externalSystem">
+        /// Required. The external system resource to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The FieldMask to use when updating the external system resource.
+        /// 
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalSystem> UpdateExternalSystemAsync(ExternalSystem externalSystem, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateExternalSystemAsync(new UpdateExternalSystemRequest
+            {
+                ExternalSystem = gax::GaxPreconditions.CheckNotNull(externalSystem, nameof(externalSystem)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="externalSystem">
+        /// Required. The external system resource to update.
+        /// </param>
+        /// <param name="updateMask">
+        /// The FieldMask to use when updating the external system resource.
+        /// 
+        /// If empty all mutable fields will be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ExternalSystem> UpdateExternalSystemAsync(ExternalSystem externalSystem, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateExternalSystemAsync(externalSystem, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Creates or updates a finding. The corresponding source must exist for a
         /// finding creation to succeed.
         /// </summary>
@@ -5133,6 +5229,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
+        private readonly gaxgrpc::ApiCall<UpdateExternalSystemRequest, ExternalSystem> _callUpdateExternalSystem;
+
         private readonly gaxgrpc::ApiCall<UpdateFindingRequest, Finding> _callUpdateFinding;
 
         private readonly gaxgrpc::ApiCall<UpdateMuteConfigRequest, MuteConfig> _callUpdateMuteConfig;
@@ -5229,6 +5327,9 @@ namespace Google.Cloud.SecurityCenter.V1
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callUpdateExternalSystem = clientHelper.BuildApiCall<UpdateExternalSystemRequest, ExternalSystem>(grpcClient.UpdateExternalSystemAsync, grpcClient.UpdateExternalSystem, effectiveSettings.UpdateExternalSystemSettings).WithGoogleRequestParam("external_system.name", request => request.ExternalSystem?.Name);
+            Modify_ApiCall(ref _callUpdateExternalSystem);
+            Modify_UpdateExternalSystemApiCall(ref _callUpdateExternalSystem);
             _callUpdateFinding = clientHelper.BuildApiCall<UpdateFindingRequest, Finding>(grpcClient.UpdateFindingAsync, grpcClient.UpdateFinding, effectiveSettings.UpdateFindingSettings).WithGoogleRequestParam("finding.name", request => request.Finding?.Name);
             Modify_ApiCall(ref _callUpdateFinding);
             Modify_UpdateFindingApiCall(ref _callUpdateFinding);
@@ -5300,6 +5401,8 @@ namespace Google.Cloud.SecurityCenter.V1
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_UpdateExternalSystemApiCall(ref gaxgrpc::ApiCall<UpdateExternalSystemRequest, ExternalSystem> call);
+
         partial void Modify_UpdateFindingApiCall(ref gaxgrpc::ApiCall<UpdateFindingRequest, Finding> call);
 
         partial void Modify_UpdateMuteConfigApiCall(ref gaxgrpc::ApiCall<UpdateMuteConfigRequest, MuteConfig> call);
@@ -5364,6 +5467,8 @@ namespace Google.Cloud.SecurityCenter.V1
         partial void Modify_SetIamPolicyRequest(ref gciv::SetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateExternalSystemRequest(ref UpdateExternalSystemRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UpdateFindingRequest(ref UpdateFindingRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -5999,6 +6104,30 @@ namespace Google.Cloud.SecurityCenter.V1
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ExternalSystem UpdateExternalSystem(UpdateExternalSystemRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExternalSystemRequest(ref request, ref callSettings);
+            return _callUpdateExternalSystem.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates external system. This is for a given finding.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ExternalSystem> UpdateExternalSystemAsync(UpdateExternalSystemRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateExternalSystemRequest(ref request, ref callSettings);
+            return _callUpdateExternalSystem.Async(request, callSettings);
         }
 
         /// <summary>
