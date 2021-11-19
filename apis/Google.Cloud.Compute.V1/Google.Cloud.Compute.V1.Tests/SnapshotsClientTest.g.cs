@@ -50,7 +50,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 ChainName = "chain_name66f3d828",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
+                Status = "status5444cb9a",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {
@@ -69,7 +69,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
                 SatisfiesPzs = false,
-                StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
+                StorageBytesStatus = "storage_bytes_statusfdb1e9b2",
                 Labels =
                 {
                     {
@@ -109,7 +109,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 ChainName = "chain_name66f3d828",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
+                Status = "status5444cb9a",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {
@@ -128,7 +128,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
                 SatisfiesPzs = false,
-                StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
+                StorageBytesStatus = "storage_bytes_statusfdb1e9b2",
                 Labels =
                 {
                     {
@@ -170,7 +170,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 ChainName = "chain_name66f3d828",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
+                Status = "status5444cb9a",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {
@@ -189,7 +189,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
                 SatisfiesPzs = false,
-                StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
+                StorageBytesStatus = "storage_bytes_statusfdb1e9b2",
                 Labels =
                 {
                     {
@@ -229,7 +229,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 ChainName = "chain_name66f3d828",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Snapshot.Types.Status.Deleting,
+                Status = "status5444cb9a",
                 DiskSizeGb = 7103353205508136450L,
                 StorageLocations =
                 {
@@ -248,7 +248,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 SelfLink = "self_link7e87f12d",
                 AutoCreated = true,
                 SatisfiesPzs = false,
-                StorageBytesStatus = Snapshot.Types.StorageBytesStatus.UndefinedStorageBytesStatus,
+                StorageBytesStatus = "storage_bytes_statusfdb1e9b2",
                 Labels =
                 {
                     {

@@ -56,7 +56,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UrlMap = "url_map3ccdbf57",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                QuicOverride = TargetHttpsProxy.Types.QuicOverride.UndefinedQuicOverride,
+                QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
@@ -94,7 +94,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UrlMap = "url_map3ccdbf57",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                QuicOverride = TargetHttpsProxy.Types.QuicOverride.UndefinedQuicOverride,
+                QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetHttpsProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
@@ -134,7 +134,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UrlMap = "url_map3ccdbf57",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                QuicOverride = TargetHttpsProxy.Types.QuicOverride.UndefinedQuicOverride,
+                QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);
@@ -172,7 +172,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 UrlMap = "url_map3ccdbf57",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                QuicOverride = TargetHttpsProxy.Types.QuicOverride.UndefinedQuicOverride,
+                QuicOverride = "quic_override6404d0e0",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetHttpsProxy>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetHttpsProxiesClient client = new TargetHttpsProxiesClientImpl(mockGrpcClient.Object, null);

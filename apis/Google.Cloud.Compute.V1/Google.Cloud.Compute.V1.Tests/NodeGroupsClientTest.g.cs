@@ -46,7 +46,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Status = NodeGroup.Types.Status.Ready,
+                Status = "status5444cb9a",
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
@@ -54,7 +54,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
+                MaintenancePolicy = "maintenance_policy80cc92a6",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -82,7 +82,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Status = NodeGroup.Types.Status.Ready,
+                Status = "status5444cb9a",
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
@@ -90,7 +90,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
+                MaintenancePolicy = "maintenance_policy80cc92a6",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -120,7 +120,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Status = NodeGroup.Types.Status.Ready,
+                Status = "status5444cb9a",
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
@@ -128,7 +128,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
+                MaintenancePolicy = "maintenance_policy80cc92a6",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);
@@ -156,7 +156,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Size = -1218396681,
                 Zone = "zone255f4ea8",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                Status = NodeGroup.Types.Status.Ready,
+                Status = "status5444cb9a",
                 MaintenanceWindow = new NodeGroupMaintenanceWindow(),
                 AutoscalingPolicy = new NodeGroupAutoscalingPolicy(),
                 Fingerprint = "fingerprint009e6052",
@@ -164,7 +164,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 LocationHint = "location_hint666f366c",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                MaintenancePolicy = NodeGroup.Types.MaintenancePolicy.Unspecified,
+                MaintenancePolicy = "maintenance_policy80cc92a6",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<NodeGroup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             NodeGroupsClient client = new NodeGroupsClientImpl(mockGrpcClient.Object, null);

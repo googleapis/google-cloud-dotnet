@@ -48,7 +48,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
+                PscConnectionStatus = "psc_connection_status437a3762",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =
@@ -58,11 +58,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 PscConnectionId = 1768355415909345202UL,
-                IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
+                IpVersion = "ip_versionde91b460",
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
                 ServiceName = "service_named5df05d5",
-                LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 ServiceLabel = "service_label5f95d0c0",
                 Description = "description2cf9da67",
                 AllPorts = false,
@@ -71,7 +71,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
-                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
+                IPProtocol = "I_p_protocold854c15f",
                 AllowGlobalAccess = false,
                 Labels =
                 {
@@ -80,7 +80,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
+                NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GlobalForwardingRulesClient client = new GlobalForwardingRulesClientImpl(mockGrpcClient.Object, null);
@@ -110,7 +110,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
+                PscConnectionStatus = "psc_connection_status437a3762",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =
@@ -120,11 +120,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 PscConnectionId = 1768355415909345202UL,
-                IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
+                IpVersion = "ip_versionde91b460",
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
                 ServiceName = "service_named5df05d5",
-                LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 ServiceLabel = "service_label5f95d0c0",
                 Description = "description2cf9da67",
                 AllPorts = false,
@@ -133,7 +133,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
-                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
+                IPProtocol = "I_p_protocold854c15f",
                 AllowGlobalAccess = false,
                 Labels =
                 {
@@ -142,7 +142,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
+                NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ForwardingRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GlobalForwardingRulesClient client = new GlobalForwardingRulesClientImpl(mockGrpcClient.Object, null);
@@ -174,7 +174,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
+                PscConnectionStatus = "psc_connection_status437a3762",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =
@@ -184,11 +184,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 PscConnectionId = 1768355415909345202UL,
-                IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
+                IpVersion = "ip_versionde91b460",
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
                 ServiceName = "service_named5df05d5",
-                LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 ServiceLabel = "service_label5f95d0c0",
                 Description = "description2cf9da67",
                 AllPorts = false,
@@ -197,7 +197,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
-                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
+                IPProtocol = "I_p_protocold854c15f",
                 AllowGlobalAccess = false,
                 Labels =
                 {
@@ -206,7 +206,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
+                NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             GlobalForwardingRulesClient client = new GlobalForwardingRulesClientImpl(mockGrpcClient.Object, null);
@@ -236,7 +236,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 IsMirroringCollector = false,
                 Region = "regionedb20d96",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                PscConnectionStatus = ForwardingRule.Types.PscConnectionStatus.UndefinedPscConnectionStatus,
+                PscConnectionStatus = "psc_connection_status437a3762",
                 Target = "targetaefbae42",
                 PortRange = "port_ranged4420f7d",
                 ServiceDirectoryRegistrations =
@@ -246,11 +246,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 PscConnectionId = 1768355415909345202UL,
-                IpVersion = ForwardingRule.Types.IpVersion.UndefinedIpVersion,
+                IpVersion = "ip_versionde91b460",
                 BackendService = "backend_serviceed490d45",
                 Subnetwork = "subnetworkf55bf572",
                 ServiceName = "service_named5df05d5",
-                LoadBalancingScheme = ForwardingRule.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 ServiceLabel = "service_label5f95d0c0",
                 Description = "description2cf9da67",
                 AllPorts = false,
@@ -259,7 +259,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new MetadataFilter(),
                 },
-                IPProtocol = ForwardingRule.Types.IPProtocol.Udp,
+                IPProtocol = "I_p_protocold854c15f",
                 AllowGlobalAccess = false,
                 Labels =
                 {
@@ -268,7 +268,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkTier = ForwardingRule.Types.NetworkTier.Standard,
+                NetworkTier = "network_tiere6fea951",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ForwardingRule>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             GlobalForwardingRulesClient client = new GlobalForwardingRulesClientImpl(mockGrpcClient.Object, null);

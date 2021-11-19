@@ -57,7 +57,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "health_checksedb1f3f8",
                 },
                 SelfLink = "self_link7e87f12d",
-                SessionAffinity = TargetPool.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -96,7 +96,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "health_checksedb1f3f8",
                 },
                 SelfLink = "self_link7e87f12d",
-                SessionAffinity = TargetPool.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -137,7 +137,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "health_checksedb1f3f8",
                 },
                 SelfLink = "self_link7e87f12d",
-                SessionAffinity = TargetPool.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);
@@ -176,7 +176,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "health_checksedb1f3f8",
                 },
                 SelfLink = "self_link7e87f12d",
-                SessionAffinity = TargetPool.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetPool>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetPoolsClient client = new TargetPoolsClientImpl(mockGrpcClient.Object, null);

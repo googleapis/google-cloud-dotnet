@@ -48,7 +48,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                RedundancyType = ExternalVpnGateway.Types.RedundancyType.UndefinedRedundancyType,
+                RedundancyType = "redundancy_type9eb42ca0",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Labels =
@@ -87,7 +87,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                RedundancyType = ExternalVpnGateway.Types.RedundancyType.UndefinedRedundancyType,
+                RedundancyType = "redundancy_type9eb42ca0",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Labels =
@@ -128,7 +128,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                RedundancyType = ExternalVpnGateway.Types.RedundancyType.UndefinedRedundancyType,
+                RedundancyType = "redundancy_type9eb42ca0",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Labels =
@@ -167,7 +167,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                RedundancyType = ExternalVpnGateway.Types.RedundancyType.UndefinedRedundancyType,
+                RedundancyType = "redundancy_type9eb42ca0",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Labels =

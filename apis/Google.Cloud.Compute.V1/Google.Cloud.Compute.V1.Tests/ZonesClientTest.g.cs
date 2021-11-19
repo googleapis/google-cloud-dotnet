@@ -47,7 +47,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "available_cpu_platforms1e56dc3a",
                 },
-                Status = Zone.Types.Status.Up,
+                Status = "status5444cb9a",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
@@ -80,7 +80,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "available_cpu_platforms1e56dc3a",
                 },
-                Status = Zone.Types.Status.Up,
+                Status = "status5444cb9a",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
@@ -115,7 +115,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "available_cpu_platforms1e56dc3a",
                 },
-                Status = Zone.Types.Status.Up,
+                Status = "status5444cb9a",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),
@@ -148,7 +148,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "available_cpu_platforms1e56dc3a",
                 },
-                Status = Zone.Types.Status.Up,
+                Status = "status5444cb9a",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
                 Deprecated = new DeprecationStatus(),

@@ -43,7 +43,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                ProxyHeader = "proxy_headercff40018",
                 SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {
@@ -76,7 +76,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                ProxyHeader = "proxy_headercff40018",
                 SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {
@@ -111,7 +111,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                ProxyHeader = "proxy_headercff40018",
                 SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {
@@ -144,7 +144,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                ProxyHeader = TargetSslProxy.Types.ProxyHeader.UndefinedProxyHeader,
+                ProxyHeader = "proxy_headercff40018",
                 SslPolicy = "ssl_policybf005a65",
                 SslCertificates =
                 {

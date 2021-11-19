@@ -47,7 +47,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 VpnGatewayInterface = 1166485993,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Status = VpnTunnel.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 IkeVersion = 485306612,
                 PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =
@@ -96,7 +96,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 VpnGatewayInterface = 1166485993,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Status = VpnTunnel.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 IkeVersion = 485306612,
                 PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =
@@ -147,7 +147,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 VpnGatewayInterface = 1166485993,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Status = VpnTunnel.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 IkeVersion = 485306612,
                 PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =
@@ -196,7 +196,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 VpnGatewayInterface = 1166485993,
                 Region = "regionedb20d96",
                 Router = "routerd55c39f3",
-                Status = VpnTunnel.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 IkeVersion = 485306612,
                 PeerGcpGateway = "peer_gcp_gateway613039db",
                 LocalTrafficSelector =

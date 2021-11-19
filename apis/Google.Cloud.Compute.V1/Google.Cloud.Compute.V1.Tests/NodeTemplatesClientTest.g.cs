@@ -46,9 +46,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Disks = { new LocalDisk(), },
                 Region = "regionedb20d96",
-                Status = NodeTemplate.Types.Status.Ready,
+                Status = "status5444cb9a",
                 ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
+                CpuOvercommitType = "cpu_overcommit_type8fdfbfa8",
                 Accelerators =
                 {
                     new AcceleratorConfig(),
@@ -92,9 +92,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Disks = { new LocalDisk(), },
                 Region = "regionedb20d96",
-                Status = NodeTemplate.Types.Status.Ready,
+                Status = "status5444cb9a",
                 ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
+                CpuOvercommitType = "cpu_overcommit_type8fdfbfa8",
                 Accelerators =
                 {
                     new AcceleratorConfig(),
@@ -140,9 +140,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Disks = { new LocalDisk(), },
                 Region = "regionedb20d96",
-                Status = NodeTemplate.Types.Status.Ready,
+                Status = "status5444cb9a",
                 ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
+                CpuOvercommitType = "cpu_overcommit_type8fdfbfa8",
                 Accelerators =
                 {
                     new AcceleratorConfig(),
@@ -186,9 +186,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Disks = { new LocalDisk(), },
                 Region = "regionedb20d96",
-                Status = NodeTemplate.Types.Status.Ready,
+                Status = "status5444cb9a",
                 ServerBinding = new ServerBinding(),
-                CpuOvercommitType = NodeTemplate.Types.CpuOvercommitType.UndefinedCpuOvercommitType,
+                CpuOvercommitType = "cpu_overcommit_type8fdfbfa8",
                 Accelerators =
                 {
                     new AcceleratorConfig(),

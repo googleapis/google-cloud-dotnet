@@ -56,7 +56,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Fingerprint = "fingerprint009e6052",
                 ProducerForwardingRule = "producer_forwarding_rule8732a25d",
-                ConnectionPreference = ServiceAttachment.Types.ConnectionPreference.AcceptAutomatic,
+                ConnectionPreference = "connection_preference328ae231",
                 EnableProxyProtocol = true,
                 NatSubnets =
                 {
@@ -106,7 +106,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Fingerprint = "fingerprint009e6052",
                 ProducerForwardingRule = "producer_forwarding_rule8732a25d",
-                ConnectionPreference = ServiceAttachment.Types.ConnectionPreference.AcceptAutomatic,
+                ConnectionPreference = "connection_preference328ae231",
                 EnableProxyProtocol = true,
                 NatSubnets =
                 {
@@ -158,7 +158,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Fingerprint = "fingerprint009e6052",
                 ProducerForwardingRule = "producer_forwarding_rule8732a25d",
-                ConnectionPreference = ServiceAttachment.Types.ConnectionPreference.AcceptAutomatic,
+                ConnectionPreference = "connection_preference328ae231",
                 EnableProxyProtocol = true,
                 NatSubnets =
                 {
@@ -208,7 +208,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 },
                 Fingerprint = "fingerprint009e6052",
                 ProducerForwardingRule = "producer_forwarding_rule8732a25d",
-                ConnectionPreference = ServiceAttachment.Types.ConnectionPreference.AcceptAutomatic,
+                ConnectionPreference = "connection_preference328ae231",
                 EnableProxyProtocol = true,
                 NatSubnets =
                 {

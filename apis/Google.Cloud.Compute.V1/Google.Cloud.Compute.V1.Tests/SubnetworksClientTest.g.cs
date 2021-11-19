@@ -43,11 +43,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Role = Subnetwork.Types.Role.Active,
+                Role = "role64e9a729",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 IpCidrRange = "ip_cidr_range745a04d3",
-                State = Subnetwork.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 SecondaryIpRanges =
                 {
                     new SubnetworkSecondaryRange(),
@@ -58,14 +58,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
-                Purpose = Subnetwork.Types.Purpose.PrivateServiceConnect,
+                Purpose = "purposebb6b064d",
                 LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
-                StackType = Subnetwork.Types.StackType.Ipv4Ipv6,
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Ipv6AccessType = Subnetwork.Types.Ipv6AccessType.External,
+                Ipv6AccessType = "ipv6_access_type7faa3985",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -90,11 +90,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Role = Subnetwork.Types.Role.Active,
+                Role = "role64e9a729",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 IpCidrRange = "ip_cidr_range745a04d3",
-                State = Subnetwork.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 SecondaryIpRanges =
                 {
                     new SubnetworkSecondaryRange(),
@@ -105,14 +105,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
-                Purpose = Subnetwork.Types.Purpose.PrivateServiceConnect,
+                Purpose = "purposebb6b064d",
                 LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
-                StackType = Subnetwork.Types.StackType.Ipv4Ipv6,
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Ipv6AccessType = Subnetwork.Types.Ipv6AccessType.External,
+                Ipv6AccessType = "ipv6_access_type7faa3985",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subnetwork>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -139,11 +139,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Role = Subnetwork.Types.Role.Active,
+                Role = "role64e9a729",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 IpCidrRange = "ip_cidr_range745a04d3",
-                State = Subnetwork.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 SecondaryIpRanges =
                 {
                     new SubnetworkSecondaryRange(),
@@ -154,14 +154,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
-                Purpose = Subnetwork.Types.Purpose.PrivateServiceConnect,
+                Purpose = "purposebb6b064d",
                 LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
-                StackType = Subnetwork.Types.StackType.Ipv4Ipv6,
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Ipv6AccessType = Subnetwork.Types.Ipv6AccessType.External,
+                Ipv6AccessType = "ipv6_access_type7faa3985",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
@@ -186,11 +186,11 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                Role = Subnetwork.Types.Role.Active,
+                Role = "role64e9a729",
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Subnetwork.Types.PrivateIpv6GoogleAccess.EnableOutboundVmAccessToGoogle,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 IpCidrRange = "ip_cidr_range745a04d3",
-                State = Subnetwork.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 SecondaryIpRanges =
                 {
                     new SubnetworkSecondaryRange(),
@@ -201,14 +201,14 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Fingerprint = "fingerprint009e6052",
                 Ipv6CidrRange = "ipv6_cidr_range0b2dc35f",
-                Purpose = Subnetwork.Types.Purpose.PrivateServiceConnect,
+                Purpose = "purposebb6b064d",
                 LogConfig = new SubnetworkLogConfig(),
                 PrivateIpGoogleAccess = false,
                 Description = "description2cf9da67",
-                StackType = Subnetwork.Types.StackType.Ipv4Ipv6,
+                StackType = "stack_type3a495e39",
                 SelfLink = "self_link7e87f12d",
                 GatewayAddress = "gateway_address39dbeaef",
-                Ipv6AccessType = Subnetwork.Types.Ipv6AccessType.External,
+                Ipv6AccessType = "ipv6_access_type7faa3985",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Subnetwork>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             SubnetworksClient client = new SubnetworksClientImpl(mockGrpcClient.Object, null);
