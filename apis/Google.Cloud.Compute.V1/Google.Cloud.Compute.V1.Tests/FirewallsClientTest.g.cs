@@ -51,7 +51,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "source_service_accounts462c1c37",
                 },
-                Direction = Firewall.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Allowed = { new Allowed(), },
                 SourceRanges =
                 {
@@ -108,7 +108,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "source_service_accounts462c1c37",
                 },
-                Direction = Firewall.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Allowed = { new Allowed(), },
                 SourceRanges =
                 {
@@ -167,7 +167,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "source_service_accounts462c1c37",
                 },
-                Direction = Firewall.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Allowed = { new Allowed(), },
                 SourceRanges =
                 {
@@ -224,7 +224,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "source_service_accounts462c1c37",
                 },
-                Direction = Firewall.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Allowed = { new Allowed(), },
                 SourceRanges =
                 {

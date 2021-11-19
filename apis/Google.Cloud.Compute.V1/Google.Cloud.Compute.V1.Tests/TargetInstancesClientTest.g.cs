@@ -49,7 +49,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                NatPolicy = TargetInstance.Types.NatPolicy.NoNat,
+                NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);
@@ -80,7 +80,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                NatPolicy = TargetInstance.Types.NatPolicy.NoNat,
+                NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetInstance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);
@@ -113,7 +113,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                NatPolicy = TargetInstance.Types.NatPolicy.NoNat,
+                NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);
@@ -144,7 +144,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Network = "networkd22ce091",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
-                NatPolicy = TargetInstance.Types.NatPolicy.NoNat,
+                NatPolicy = "nat_policy8dd30c47",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TargetInstance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             TargetInstancesClient client = new TargetInstancesClientImpl(mockGrpcClient.Object, null);

@@ -46,7 +46,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new LicenseCodeLicenseAlias(),
                 },
-                State = LicenseCode.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
             };
@@ -77,7 +77,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new LicenseCodeLicenseAlias(),
                 },
-                State = LicenseCode.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
             };
@@ -110,7 +110,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new LicenseCodeLicenseAlias(),
                 },
-                State = LicenseCode.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
             };
@@ -141,7 +141,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     new LicenseCodeLicenseAlias(),
                 },
-                State = LicenseCode.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
             };

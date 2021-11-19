@@ -42,13 +42,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                MinTlsVersion = SslPolicy.Types.MinTlsVersion.Tls12,
+                MinTlsVersion = "min_tls_versionf843e251",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 CustomFeatures =
                 {
                     "custom_features19916d63",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
@@ -80,13 +80,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                MinTlsVersion = SslPolicy.Types.MinTlsVersion.Tls12,
+                MinTlsVersion = "min_tls_versionf843e251",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 CustomFeatures =
                 {
                     "custom_features19916d63",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
@@ -120,13 +120,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                MinTlsVersion = SslPolicy.Types.MinTlsVersion.Tls12,
+                MinTlsVersion = "min_tls_versionf843e251",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 CustomFeatures =
                 {
                     "custom_features19916d63",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",
@@ -158,13 +158,13 @@ namespace Google.Cloud.Compute.V1.Tests
                 Id = 11672635353343658936UL,
                 Kind = "kindf7aa39d9",
                 Name = "name1c9368b0",
-                MinTlsVersion = SslPolicy.Types.MinTlsVersion.Tls12,
+                MinTlsVersion = "min_tls_versionf843e251",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 CustomFeatures =
                 {
                     "custom_features19916d63",
                 },
-                Profile = SslPolicy.Types.Profile.UndefinedProfile,
+                Profile = "profile1b48977d",
                 Fingerprint = "fingerprint009e6052",
                 Description = "description2cf9da67",
                 SelfLink = "self_link7e87f12d",

@@ -44,7 +44,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -53,7 +53,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -79,7 +79,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -88,7 +88,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -116,7 +116,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -125,7 +125,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -151,7 +151,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -160,7 +160,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -188,7 +188,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -197,7 +197,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -223,7 +223,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -232,7 +232,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -260,7 +260,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -269,7 +269,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHost(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);
@@ -295,7 +295,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Quotas = { new Quota(), },
                 CommonInstanceMetadata = new Metadata(),
-                XpnProjectStatus = Project.Types.XpnProjectStatus.Host,
+                XpnProjectStatus = "xpn_project_status547f92f1",
                 DefaultServiceAccount = "default_service_accountdf12b0f2",
                 UsageExportLocation = new UsageExportLocation(),
                 Description = "description2cf9da67",
@@ -304,7 +304,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 {
                     "enabled_featuresf1f398e0",
                 },
-                DefaultNetworkTier = Project.Types.DefaultNetworkTier.Premium,
+                DefaultNetworkTier = "default_network_tier69d9d1a9",
             };
             mockGrpcClient.Setup(x => x.GetXpnHostAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Project>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ProjectsClient client = new ProjectsClientImpl(mockGrpcClient.Object, null);

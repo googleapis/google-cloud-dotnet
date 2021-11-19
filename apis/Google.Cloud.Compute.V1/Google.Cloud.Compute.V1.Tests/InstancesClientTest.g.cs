@@ -51,7 +51,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Instance.Types.PrivateIpv6GoogleAccess.InheritFromSubnetwork,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 NetworkInterfaces =
                 {
                     new NetworkInterface(),
@@ -62,7 +62,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ReservationAffinity = new ReservationAffinity(),
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Instance.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",
@@ -128,7 +128,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Instance.Types.PrivateIpv6GoogleAccess.InheritFromSubnetwork,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 NetworkInterfaces =
                 {
                     new NetworkInterface(),
@@ -139,7 +139,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ReservationAffinity = new ReservationAffinity(),
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Instance.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",
@@ -207,7 +207,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Instance.Types.PrivateIpv6GoogleAccess.InheritFromSubnetwork,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 NetworkInterfaces =
                 {
                     new NetworkInterface(),
@@ -218,7 +218,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ReservationAffinity = new ReservationAffinity(),
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Instance.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",
@@ -284,7 +284,7 @@ namespace Google.Cloud.Compute.V1.Tests
                     "resource_policiesdff15734",
                 },
                 CreationTimestamp = "creation_timestamp235e59a1",
-                PrivateIpv6GoogleAccess = Instance.Types.PrivateIpv6GoogleAccess.InheritFromSubnetwork,
+                PrivateIpv6GoogleAccess = "private_ipv6_google_access0dc5c953",
                 NetworkInterfaces =
                 {
                     new NetworkInterface(),
@@ -295,7 +295,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 ReservationAffinity = new ReservationAffinity(),
                 ShieldedInstanceIntegrityPolicy = new ShieldedInstanceIntegrityPolicy(),
                 LabelFingerprint = "label_fingerprint06ccff3a",
-                Status = Instance.Types.Status.Provisioning,
+                Status = "status5444cb9a",
                 MachineType = "machine_type68ce40fa",
                 Fingerprint = "fingerprint009e6052",
                 Hostname = "hostnamef4ac9708",

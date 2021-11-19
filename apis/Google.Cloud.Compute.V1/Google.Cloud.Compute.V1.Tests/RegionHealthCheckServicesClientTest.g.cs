@@ -50,7 +50,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
-                HealthStatusAggregationPolicy = HealthCheckService.Types.HealthStatusAggregationPolicy.UndefinedHealthStatusAggregationPolicy,
+                HealthStatusAggregationPolicy = "health_status_aggregation_policy3f437d39",
                 NotificationEndpoints =
                 {
                     "notification_endpoints507ebc27",
@@ -92,7 +92,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
-                HealthStatusAggregationPolicy = HealthCheckService.Types.HealthStatusAggregationPolicy.UndefinedHealthStatusAggregationPolicy,
+                HealthStatusAggregationPolicy = "health_status_aggregation_policy3f437d39",
                 NotificationEndpoints =
                 {
                     "notification_endpoints507ebc27",
@@ -136,7 +136,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
-                HealthStatusAggregationPolicy = HealthCheckService.Types.HealthStatusAggregationPolicy.UndefinedHealthStatusAggregationPolicy,
+                HealthStatusAggregationPolicy = "health_status_aggregation_policy3f437d39",
                 NotificationEndpoints =
                 {
                     "notification_endpoints507ebc27",
@@ -178,7 +178,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Region = "regionedb20d96",
                 Fingerprint = "fingerprint009e6052",
-                HealthStatusAggregationPolicy = HealthCheckService.Types.HealthStatusAggregationPolicy.UndefinedHealthStatusAggregationPolicy,
+                HealthStatusAggregationPolicy = "health_status_aggregation_policy3f437d39",
                 NotificationEndpoints =
                 {
                     "notification_endpoints507ebc27",

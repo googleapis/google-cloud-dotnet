@@ -53,7 +53,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkEndpointType = NetworkEndpointGroup.Types.NetworkEndpointType.InternetFqdnPort,
+                NetworkEndpointType = "network_endpoint_typecc2da78a",
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 Subnetwork = "subnetworkf55bf572",
@@ -96,7 +96,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkEndpointType = NetworkEndpointGroup.Types.NetworkEndpointType.InternetFqdnPort,
+                NetworkEndpointType = "network_endpoint_typecc2da78a",
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 Subnetwork = "subnetworkf55bf572",
@@ -141,7 +141,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkEndpointType = NetworkEndpointGroup.Types.NetworkEndpointType.InternetFqdnPort,
+                NetworkEndpointType = "network_endpoint_typecc2da78a",
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 Subnetwork = "subnetworkf55bf572",
@@ -184,7 +184,7 @@ namespace Google.Cloud.Compute.V1.Tests
                         "value60c16320"
                     },
                 },
-                NetworkEndpointType = NetworkEndpointGroup.Types.NetworkEndpointType.InternetFqdnPort,
+                NetworkEndpointType = "network_endpoint_typecc2da78a",
                 Region = "regionedb20d96",
                 Network = "networkd22ce091",
                 Subnetwork = "subnetworkf55bf572",

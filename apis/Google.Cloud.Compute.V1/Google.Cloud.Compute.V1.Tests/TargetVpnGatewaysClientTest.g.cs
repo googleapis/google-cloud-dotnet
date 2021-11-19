@@ -46,7 +46,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Tunnels = { "tunnelsf736a212", },
                 Region = "regionedb20d96",
-                Status = TargetVpnGateway.Types.Status.Ready,
+                Status = "status5444cb9a",
                 Network = "networkd22ce091",
                 ForwardingRules =
                 {
@@ -81,7 +81,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Tunnels = { "tunnelsf736a212", },
                 Region = "regionedb20d96",
-                Status = TargetVpnGateway.Types.Status.Ready,
+                Status = "status5444cb9a",
                 Network = "networkd22ce091",
                 ForwardingRules =
                 {
@@ -118,7 +118,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Tunnels = { "tunnelsf736a212", },
                 Region = "regionedb20d96",
-                Status = TargetVpnGateway.Types.Status.Ready,
+                Status = "status5444cb9a",
                 Network = "networkd22ce091",
                 ForwardingRules =
                 {
@@ -153,7 +153,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 Tunnels = { "tunnelsf736a212", },
                 Region = "regionedb20d96",
-                Status = TargetVpnGateway.Types.Status.Ready,
+                Status = "status5444cb9a",
                 Network = "networkd22ce091",
                 ForwardingRules =
                 {

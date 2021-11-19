@@ -409,7 +409,7 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Kind = "kindf7aa39d9",
                 Match = new FirewallPolicyRuleMatcher(),
-                Direction = FirewallPolicyRule.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Action = "action09558c41",
                 Disabled = false,
                 EnableLogging = false,
@@ -446,7 +446,7 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Kind = "kindf7aa39d9",
                 Match = new FirewallPolicyRuleMatcher(),
-                Direction = FirewallPolicyRule.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Action = "action09558c41",
                 Disabled = false,
                 EnableLogging = false,
@@ -484,7 +484,7 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Kind = "kindf7aa39d9",
                 Match = new FirewallPolicyRuleMatcher(),
-                Direction = FirewallPolicyRule.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Action = "action09558c41",
                 Disabled = false,
                 EnableLogging = false,
@@ -520,7 +520,7 @@ namespace Google.Cloud.Compute.V1.Tests
             {
                 Kind = "kindf7aa39d9",
                 Match = new FirewallPolicyRuleMatcher(),
-                Direction = FirewallPolicyRule.Types.Direction.Ingress,
+                Direction = "direction7bc372ef",
                 Action = "action09558c41",
                 Disabled = false,
                 EnableLogging = false,

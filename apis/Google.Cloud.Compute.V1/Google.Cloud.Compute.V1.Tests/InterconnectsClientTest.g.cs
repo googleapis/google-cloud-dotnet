@@ -46,12 +46,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 NocContactEmail = "noc_contact_email1d95c1b6",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 RequestedLinkCount = 2020560861,
-                State = Interconnect.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 CircuitInfos =
                 {
                     new InterconnectCircuitInfo(),
                 },
-                OperationalStatus = Interconnect.Types.OperationalStatus.UndefinedOperationalStatus,
+                OperationalStatus = "operational_status14a476d9",
                 PeerIpAddress = "peer_ip_address07617b81",
                 ExpectedOutages =
                 {
@@ -68,8 +68,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 AdminEnabled = true,
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                InterconnectType = Interconnect.Types.InterconnectType.Partner,
-                LinkType = Interconnect.Types.LinkType.UndefinedLinkType,
+                InterconnectType = "interconnect_type87ba691d",
+                LinkType = "link_type65f7baf6",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -98,12 +98,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 NocContactEmail = "noc_contact_email1d95c1b6",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 RequestedLinkCount = 2020560861,
-                State = Interconnect.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 CircuitInfos =
                 {
                     new InterconnectCircuitInfo(),
                 },
-                OperationalStatus = Interconnect.Types.OperationalStatus.UndefinedOperationalStatus,
+                OperationalStatus = "operational_status14a476d9",
                 PeerIpAddress = "peer_ip_address07617b81",
                 ExpectedOutages =
                 {
@@ -120,8 +120,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 AdminEnabled = true,
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                InterconnectType = Interconnect.Types.InterconnectType.Partner,
-                LinkType = Interconnect.Types.LinkType.UndefinedLinkType,
+                InterconnectType = "interconnect_type87ba691d",
+                LinkType = "link_type65f7baf6",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Interconnect>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -152,12 +152,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 NocContactEmail = "noc_contact_email1d95c1b6",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 RequestedLinkCount = 2020560861,
-                State = Interconnect.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 CircuitInfos =
                 {
                     new InterconnectCircuitInfo(),
                 },
-                OperationalStatus = Interconnect.Types.OperationalStatus.UndefinedOperationalStatus,
+                OperationalStatus = "operational_status14a476d9",
                 PeerIpAddress = "peer_ip_address07617b81",
                 ExpectedOutages =
                 {
@@ -174,8 +174,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 AdminEnabled = true,
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                InterconnectType = Interconnect.Types.InterconnectType.Partner,
-                LinkType = Interconnect.Types.LinkType.UndefinedLinkType,
+                InterconnectType = "interconnect_type87ba691d",
+                LinkType = "link_type65f7baf6",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.Get(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -204,12 +204,12 @@ namespace Google.Cloud.Compute.V1.Tests
                 NocContactEmail = "noc_contact_email1d95c1b6",
                 CreationTimestamp = "creation_timestamp235e59a1",
                 RequestedLinkCount = 2020560861,
-                State = Interconnect.Types.State.UndefinedState,
+                State = "state2e9ed39e",
                 CircuitInfos =
                 {
                     new InterconnectCircuitInfo(),
                 },
-                OperationalStatus = Interconnect.Types.OperationalStatus.UndefinedOperationalStatus,
+                OperationalStatus = "operational_status14a476d9",
                 PeerIpAddress = "peer_ip_address07617b81",
                 ExpectedOutages =
                 {
@@ -226,8 +226,8 @@ namespace Google.Cloud.Compute.V1.Tests
                 AdminEnabled = true,
                 SelfLink = "self_link7e87f12d",
                 SatisfiesPzs = false,
-                InterconnectType = Interconnect.Types.InterconnectType.Partner,
-                LinkType = Interconnect.Types.LinkType.UndefinedLinkType,
+                InterconnectType = "interconnect_type87ba691d",
+                LinkType = "link_type65f7baf6",
                 GoogleReferenceId = "google_reference_id815b6ab4",
             };
             mockGrpcClient.Setup(x => x.GetAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Interconnect>(stt::Task.FromResult(expectedResponse), null, null, null, null));

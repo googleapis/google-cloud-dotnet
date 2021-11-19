@@ -53,9 +53,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 PortName = "port_namebaaa4cd4",
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
-                Protocol = BackendService.Types.Protocol.Udp,
+                Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),
@@ -64,7 +64,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EnableCDN = false,
                 LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
-                LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 AffinityCookieTtlSec = -328985636,
                 CustomResponseHeaders =
                 {
@@ -79,7 +79,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
-                SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
                 SecuritySettings = new SecuritySettings(),
                 Backends = { new Backend(), },
             };
@@ -116,9 +116,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 PortName = "port_namebaaa4cd4",
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
-                Protocol = BackendService.Types.Protocol.Udp,
+                Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),
@@ -127,7 +127,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EnableCDN = false,
                 LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
-                LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 AffinityCookieTtlSec = -328985636,
                 CustomResponseHeaders =
                 {
@@ -142,7 +142,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
-                SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
                 SecuritySettings = new SecuritySettings(),
                 Backends = { new Backend(), },
             };
@@ -181,9 +181,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 PortName = "port_namebaaa4cd4",
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
-                Protocol = BackendService.Types.Protocol.Udp,
+                Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),
@@ -192,7 +192,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EnableCDN = false,
                 LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
-                LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 AffinityCookieTtlSec = -328985636,
                 CustomResponseHeaders =
                 {
@@ -207,7 +207,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
-                SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
                 SecuritySettings = new SecuritySettings(),
                 Backends = { new Backend(), },
             };
@@ -244,9 +244,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 PortName = "port_namebaaa4cd4",
                 MaxStreamDuration = new Duration(),
                 TimeoutSec = -1529270667,
-                Protocol = BackendService.Types.Protocol.Udp,
+                Protocol = "protocola08b7881",
                 FailoverPolicy = new BackendServiceFailoverPolicy(),
-                LocalityLbPolicy = BackendService.Types.LocalityLbPolicy.UndefinedLocalityLbPolicy,
+                LocalityLbPolicy = "locality_lb_policyc8722098",
                 Region = "regionedb20d96",
                 SecurityPolicy = "security_policy76596315",
                 CdnPolicy = new BackendServiceCdnPolicy(),
@@ -255,7 +255,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 EnableCDN = false,
                 LogConfig = new BackendServiceLogConfig(),
                 OutlierDetection = new OutlierDetection(),
-                LoadBalancingScheme = BackendService.Types.LoadBalancingScheme.UndefinedLoadBalancingScheme,
+                LoadBalancingScheme = "load_balancing_scheme21346104",
                 AffinityCookieTtlSec = -328985636,
                 CustomResponseHeaders =
                 {
@@ -270,7 +270,7 @@ namespace Google.Cloud.Compute.V1.Tests
                 Subsetting = new Subsetting(),
                 SelfLink = "self_link7e87f12d",
                 ConnectionDraining = new ConnectionDraining(),
-                SessionAffinity = BackendService.Types.SessionAffinity.GeneratedCookie,
+                SessionAffinity = "session_affinitye702dadf",
                 SecuritySettings = new SecuritySettings(),
                 Backends = { new Backend(), },
             };

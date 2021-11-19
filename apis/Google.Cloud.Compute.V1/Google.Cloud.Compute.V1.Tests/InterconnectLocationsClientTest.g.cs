@@ -44,9 +44,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 SupportsPzs = false,
                 FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                Continent = "continent4ee8200e",
                 AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
+                Status = "status5444cb9a",
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
@@ -82,9 +82,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 SupportsPzs = false,
                 FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                Continent = "continent4ee8200e",
                 AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
+                Status = "status5444cb9a",
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
@@ -122,9 +122,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 SupportsPzs = false,
                 FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                Continent = "continent4ee8200e",
                 AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
+                Status = "status5444cb9a",
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
@@ -160,9 +160,9 @@ namespace Google.Cloud.Compute.V1.Tests
                 CreationTimestamp = "creation_timestamp235e59a1",
                 SupportsPzs = false,
                 FacilityProviderFacilityId = "facility_provider_facility_id936c09db",
-                Continent = InterconnectLocation.Types.Continent.CAfrica,
+                Continent = "continent4ee8200e",
                 AvailabilityZone = "availability_zone1778d0ba",
-                Status = InterconnectLocation.Types.Status.Closed,
+                Status = "status5444cb9a",
                 RegionInfos =
                 {
                     new InterconnectLocationRegionInfo(),
