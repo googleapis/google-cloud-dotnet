@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.ClientTesting"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.Tests", "Google.Cloud.Compute.V1.Tests\Google.Cloud.Compute.V1.Tests.csproj", "{8B297C1A-12A9-462F-A1B2-2681114B1C76}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.IntegrationTests", "Google.Cloud.Compute.V1.IntegrationTests\Google.Cloud.Compute.V1.IntegrationTests.csproj", "{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Google.Cloud.Compute.V1.IntegrationTests", "Google.Cloud.Compute.V1.IntegrationTests\Google.Cloud.Compute.V1.IntegrationTests.csproj", "{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Google.Cloud.Compute.V1.EnumConstantGenerator", "Google.Cloud.Compute.V1.EnumConstantGenerator\Google.Cloud.Compute.V1.EnumConstantGenerator.csproj", "{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|x64.Build.0 = Release|Any CPU
 		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|x86.ActiveCfg = Release|Any CPU
 		{96C6DBED-B6FF-4868-8DC7-18D8BA39C6E9}.Release|x86.Build.0 = Release|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Debug|x64.Build.0 = Debug|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Debug|x86.Build.0 = Debug|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Release|x64.ActiveCfg = Release|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Release|x64.Build.0 = Release|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Release|x86.ActiveCfg = Release|Any CPU
+		{4E21AB53-5F35-46E1-9F1A-ADA111FFC786}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
