@@ -57,7 +57,8 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                         {
                             AutoDelete = true,
                             Boot = true,
-                            Type = AttachedDisk.Types.Type.Persistent,
+                            // TODO: Use enum helpers when they're available.
+                            Type = "PERSISTENT",
                             InitializeParams = new AttachedDiskInitializeParams {SourceImage = diskImage}
                         }
                     },
@@ -146,7 +147,8 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     {
                         AutoDelete = true,
                         Boot = true,
-                        Type = AttachedDisk.Types.Type.Persistent,
+                        // TODO: Use enum helpers when they're available.
+                        Type = "PERSISTENT",
                         InitializeParams = new AttachedDiskInitializeParams
                         {
                             SourceImage = "projects/debian-cloud/global/images/family/debian-10"
