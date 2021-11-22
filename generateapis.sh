@@ -77,7 +77,7 @@ generate_microgenerator() {
   delete_generated apis/$1/$1.Snippets
 
   # If there's exactly one service config file, pass it in. Otherwise, omit it.
-  GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*.json)
+  GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*_grpc_service_config.json)
   SERVICE_CONFIG_OPTION=
   if [[ -f "$GRPC_SERVICE_CONFIG" ]]
   then
