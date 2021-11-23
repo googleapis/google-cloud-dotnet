@@ -13,45 +13,16 @@
 // limitations under the License.
 
 using Google.Apis.Logging;
-using Google.Cloud.PubSub.V1;
+using Google.Cloud.Scheduler.V1;
 using Google.Cloud.Translation.V2;
-using static Google.Apis.Http.ConfigurableMessageHandler;
-using Grpc.Core;
-using System;
-using Google.Api.Gax.ResourceNames;
 using Google.Cloud.Vision.V1;
 using System.Collections.Generic;
-using Google.Cloud.Scheduler.V1;
-
-// Unfortunately Scheduler now has a TopicName class too; this is just an unfortunate combination of APIs
-// to pick snippets from.
-using TopicName = Google.Cloud.PubSub.V1.TopicName;
+using static Google.Apis.Http.ConfigurableMessageHandler;
 
 namespace Google.Cloud.Tools.Snippets
 {
     public class FaqSnippets
     {
-        public void Emulator()
-        {
-            // Sample: Emulator
-            // [START pubsub_use_emulator]
-            // For example, "localhost:8615"
-            string emulatorHostAndPort = Environment.GetEnvironmentVariable("PUBSUB_EMULATOR_HOST");
-
-            PublisherServiceApiClient client = new PublisherServiceApiClientBuilder
-            {
-                Endpoint = emulatorHostAndPort,
-                ChannelCredentials = ChannelCredentials.Insecure
-            }.Build();
-            client.CreateTopic(new TopicName("project", "topic"));
-            foreach (var topic in client.ListTopics(new ProjectName("project")))
-            {
-                Console.WriteLine(topic.Name);
-            }
-            // [END pubsub_use_emulator]
-            // End sample
-        }
-        
         public void RestLogging()
         {
             // Sample: RestLogging

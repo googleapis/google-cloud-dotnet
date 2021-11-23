@@ -14,6 +14,8 @@
 
 using Google.Api.Gax;
 using Google.Cloud.PubSub.V1;
+using Grpc.Core;
+using System;
 
 namespace Google.Cloud.Docs.Snippets
 {
@@ -38,8 +40,19 @@ namespace Google.Cloud.Docs.Snippets
             SubscriberClient client = SubscriberClient.Create(subscription, clientCreationSettings);
             // End sample
         }
-        
-        // Note: the "manual connection" snippet is in FaqSnippets.cs. We can move it here at some point,
-        // but it means that at least temporarily, links to the source code would be broken.
+
+        public void ManualConnection()
+        {
+            // Sample: ManualConnection
+            // For example, "localhost:8615"
+            string emulatorHostAndPort = Environment.GetEnvironmentVariable("PUBSUB_EMULATOR_HOST");
+
+            PublisherServiceApiClient client = new PublisherServiceApiClientBuilder
+            {
+                Endpoint = emulatorHostAndPort,
+                ChannelCredentials = ChannelCredentials.Insecure
+            }.Build();
+            // End sample
+        }
     }
 }
