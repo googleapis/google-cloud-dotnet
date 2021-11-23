@@ -61,8 +61,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                 {
                     Name = addressName,
                     Region = region,
-                    // TODO: Use enum helpers when they're available.
-                    NetworkTier = "PREMIUM"
+                    NetworkTier = ComputeEnumConstants.Address.NetworkTier.Premium
                 };
 
                 var insertOperation = addressesClient.Insert(projectId, region, addressResource);
