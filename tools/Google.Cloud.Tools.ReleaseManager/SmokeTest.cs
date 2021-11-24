@@ -237,8 +237,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             if (resultType.IsGenericType && resultType.GetGenericTypeDefinition().FullName == "Google.Api.Gax.Grpc.GrpcPagedEnumerable`3")
             {
                 Console.WriteLine($"Result is paged, with an item type of {resultType.GetGenericArguments()[2].Name}");
-                Console.WriteLine("Fetching results.");
-                var results = ((IEnumerable) result).Cast<object>().ToList();
+                Console.WriteLine("Fetching at most 10 items from the result.");
+                var results = ((IEnumerable) result).Cast<object>().Take(10).ToList();
                 foreach (var item in results)
                 {
                     Console.WriteLine(item);
