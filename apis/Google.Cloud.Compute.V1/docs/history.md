@@ -1,5 +1,12 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2021-12-01
+
+- [Commit 5f323c1](https://github.com/googleapis/google-cloud-dotnet/commit/5f323c1): fix: make parent_id fields required compute move and insert methods ([issue 686](https://github.com/googleapis/google-cloud-dotnet/issues/686))
+- [Commit f8f4704](https://github.com/googleapis/google-cloud-dotnet/commit/f8f4704): feat: Add classes with generated constants for enums for Compute
+- [Commit 238f43c](https://github.com/googleapis/google-cloud-dotnet/commit/238f43c): feat: Add helper methods for converting Compute enum values
+- [Commit 5d969a2](https://github.com/googleapis/google-cloud-dotnet/commit/5d969a2): feat: Switch to string enums for compute ([issue 685](https://github.com/googleapis/google-cloud-dotnet/issues/685))
+
 ## Version 1.0.0-beta04, released 2021-11-10
 
 - [Commit 41d3129](https://github.com/googleapis/google-cloud-dotnet/commit/41d3129): fix: Convert HTTP status codes to gRPC status codes when converting LROs
