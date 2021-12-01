@@ -1,5 +1,12 @@
 # Version history
 
+## Version 3.13.0, released 2021-12-01
+
+- [Commit 02b16d7](https://github.com/googleapis/google-cloud-dotnet/commit/02b16d7): fix: clone each SpannerParameter when cloning a parameter collection
+- [Commit c653720](https://github.com/googleapis/google-cloud-dotnet/commit/c653720): feat: add support for DataReader.GetBytes ([issue 7395](https://github.com/googleapis/google-cloud-dotnet/issues/7395))
+- [Commit 9bc116d](https://github.com/googleapis/google-cloud-dotnet/commit/9bc116d): fix: allow setting parameter size to the same as the current value ([issue 7401](https://github.com/googleapis/google-cloud-dotnet/issues/7401))
+- [Commit 0666123](https://github.com/googleapis/google-cloud-dotnet/commit/0666123): feat: Spanner Read API
+
 ## Version 3.12.0, released 2021-08-24
 
 - [Commit 7c6a6f1](https://github.com/googleapis/google-cloud-dotnet/commit/7c6a6f1): feat: add support for JSON data type in Spanner ([issue 6390](https://github.com/googleapis/google-cloud-dotnet/issues/6390))
