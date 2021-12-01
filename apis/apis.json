@@ -2626,7 +2626,7 @@
       "protoPath": "google/spanner/admin/database/v1",
       "productName": "Google Cloud Spanner Database Administration",
       "productUrl": "https://cloud.google.com/spanner/",
-      "version": "3.12.0",
+      "version": "3.13.0",
       "commonResourcesConfig": "apis/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Spanner Database Admin API.",
@@ -2635,9 +2635,9 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.Cloud.Iam.V1": "2.2.0",
+        "Google.Cloud.Iam.V1": "2.3.0",
         "Google.Cloud.Spanner.Common.V1": "project",
-        "Google.LongRunning": "2.2.0",
+        "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
       "noVersionHistory": true
@@ -2648,7 +2648,7 @@
       "protoPath": "google/spanner/admin/instance/v1",
       "productName": "Google Cloud Spanner Instance Administration",
       "productUrl": "https://cloud.google.com/spanner/",
-      "version": "3.12.0",
+      "version": "3.13.0",
       "commonResourcesConfig": "apis/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Spanner Instance Admin API.",
@@ -2657,9 +2657,9 @@
       ],
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.Cloud.Iam.V1": "2.2.0",
+        "Google.Cloud.Iam.V1": "2.3.0",
         "Google.Cloud.Spanner.Common.V1": "project",
-        "Google.LongRunning": "2.2.0",
+        "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
       "noVersionHistory": true
@@ -2668,7 +2668,7 @@
       "id": "Google.Cloud.Spanner.Data",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
-      "version": "3.12.0",
+      "version": "3.13.0",
       "type": "other",
       "metadataType": "INTEGRATION",
       "description": "Google ADO.NET Provider for Google Cloud Spanner.",
@@ -2695,7 +2695,7 @@
       "id": "Google.Cloud.Spanner.Common.V1",
       "type": "other",
       "targetFrameworks": "netstandard2.0;net461",
-      "version": "3.12.0",
+      "version": "3.13.0",
       "description": "Common resource names used by all Spanner V1 APIs",
       "tags": [
         "Spanner"
@@ -2711,7 +2711,7 @@
       "protoPath": "google/spanner/v1",
       "productName": "Google Cloud Spanner",
       "productUrl": "https://cloud.google.com/spanner/",
-      "version": "3.12.0",
+      "version": "3.13.0",
       "commonResourcesConfig": "apis/Google.Cloud.Spanner.Common.V1/CommonResourcesConfig.json",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
