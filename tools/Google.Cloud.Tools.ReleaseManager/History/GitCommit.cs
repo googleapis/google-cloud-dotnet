@@ -28,7 +28,6 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     internal class GitCommit
     {
-        private const string AutosynthEmail = "yoshi-automation@google.com";
         private static readonly Regex OwlBotEmailRegex = new Regex(@".*gcf-owl-bot\[bot\]@users\.noreply\.github\.com");
 
         /// <summary>
@@ -62,13 +61,13 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
             var messageLines = SplitCommitMessage(message);
 
-            // Autosynth includes helpful metadata about the original internal and googleapis commit.
+            // OwlBot includes helpful metadata about the original internal and googleapis commit.
             // The googleapis commit can be useful in terms of having better formatting of release notes,
             // but either way, we should skip "Committer" lines and anything after "PiperOrigin-RevId".
-            if (_libGit2Commit.Author.Email == AutosynthEmail || OwlBotEmailRegex.IsMatch(_libGit2Commit.Author.Email))
+            if (OwlBotEmailRegex.IsMatch(_libGit2Commit.Author.Email))
             {
                 var sourceLink = messageLines.FirstOrDefault(line => line.StartsWith("Source-Link: https://github.com/googleapis/googleapis/"));
-                // Work around autosynth putting everything on one line
+                // Work around Bazel Bot putting everything on one line: go back to the googleapis commit.
                 if (sourceLink is object)
                 {
                     var commit = sourceLink.Split('/').Last();

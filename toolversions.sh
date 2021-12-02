@@ -20,18 +20,6 @@ declare -r REPORTGENERATOR=$TOOL_PACKAGES/ReportGenerator.$REPORTGENERATOR_VERSI
 
 declare -r PROTOBUF_TOOLS_ROOT=$TOOL_PACKAGES/Google.Protobuf.Tools.$PROTOC_VERSION
 
-if [[ "$KOKORO_GIT_COMMIT" != "" ]]; then declare -r RUNNING_ON_KOKORO=true; fi
-
-# Bit of a hack... assume that if we're running on Kokoro, we should be able to use the cache...
-# TODO: Remove this, and create the cache in the autosynth script instead, perhaps.
-if [[ $RUNNING_ON_KOKORO == "true" ]]
-then
-  mkdir -p ~/.cache/synthtool
-fi
-
-# Detect a synthtool cache, used for other repos that we clone and build from.
-if [[ -d ~/.cache/synthtool ]]; then declare -r SYNTHTOOL_CACHE=~/.cache/synthtool; fi
-
 # Try to detect Python 3. It's quite different between Windows and Linux.
 if which python > /dev/null && python --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3=python
 elif which py > /dev/null && py -3 --version 2>&1 | grep -q "Python 3"; then declare -r PYTHON3="py -3"
@@ -120,38 +108,29 @@ install_microgenerator() {
   if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
   then
     declare -r GENERATOR_ROOT=$CSHARP_GENERATOR_DIR
-  elif [[ "$SYNTHTOOL_CACHE" != "" ]]
-  then
-    declare -r GENERATOR_ROOT=$SYNTHTOOL_CACHE/gapic-generator-csharp
   else
     declare -r GENERATOR_ROOT=$REPO_ROOT/gapic-generator-csharp
   fi
   
   export GAPIC_PLUGIN=$GENERATOR_ROOT/Google.Api.Generator/bin/Release/netcoreapp3.1/$RUNTIME/publish/Google.Api.Generator$EXTENSION
   
-  if [[ $RUNNING_ON_KOKORO == "true" && -f $GAPIC_PLUGIN ]]
+  if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
   then
-    echo "Skipping microgenerator fetch/build: already built, and running on Kokoro"
+    echo "Skipping microgenerator fetch: an existing directory for the generator has been specified"
+  elif [ -d $GENERATOR_ROOT ]
+  then
+    git -C $GENERATOR_ROOT fetch -q --tags
+    git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
   else
-    if [[ "$CSHARP_GENERATOR_DIR" != "" ]]
-    then
-      echo "Skipping microgenerator fetch: an existing directory for the generator has been specified"
-    # TODO: Use a specific tag, or even a NuGet package eventually
-    elif [ -d $GENERATOR_ROOT ]
-    then
-      git -C $GENERATOR_ROOT fetch -q --tags
-      git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
-    else
-      git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -q
-      git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
-    fi
-
-    # The dotnet restore step isn't generally required when cloning from elsewhere,
-    # but helps when running a local generator. (It does no harm even when not required.)
-    (cd $GENERATOR_ROOT; \
-     dotnet restore -v quiet; \
-     dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
+    git clone https://github.com/googleapis/gapic-generator-csharp $GENERATOR_ROOT -q
+    git -C $GENERATOR_ROOT checkout -q v$GAPIC_GENERATOR_VERSION
   fi
+
+  # The dotnet restore step isn't generally required when cloning from elsewhere,
+  # but helps when running a local generator. (It does no harm even when not required.)
+  (cd $GENERATOR_ROOT; \
+   dotnet restore -v quiet; \
+   dotnet publish -v quiet -nologo -clp:NoSummary -c Release --self-contained --runtime=$RUNTIME Google.Api.Generator)
 }
 
 install_grpc() {

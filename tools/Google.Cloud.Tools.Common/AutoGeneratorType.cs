@@ -26,13 +26,8 @@ namespace Google.Cloud.Tools.Common
         None = 0,
 
         /// <summary>
-        /// Maintenance via Synthtool/Autosynth. See https://github.com/googleapis/synthtool
-        /// </summary>
-        Synthtool = 1,
-
-        /// <summary>
         /// Maintenance via OwlBot.
         /// </summary>
-        OwlBot = 2
+        OwlBot = 1
     }
 }

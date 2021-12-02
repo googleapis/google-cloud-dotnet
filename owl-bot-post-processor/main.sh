@@ -61,10 +61,10 @@ copy_one_api() {
     # Check out the commit
     git -C $STAGING_DIR/googleapis checkout $GOOGLEAPIS_COMMIT
     
-    # The generation script uses the SYNTHTOOL_GOOGLEAPIS environment variable:
+    # The generation script uses the GOOGLEAPIS_DIR environment variable:
     # if the variable is present, it's expected to be googleapis/googleapis at
     # the appropriate commit (which is exactly what we've got)
-    SYNTHTOOL_GOOGLEAPIS=$PWD/$STAGING_DIR/googleapis ./generateapis.sh $PACKAGE
+    GOOGLEAPIS_DIR=$PWD/$STAGING_DIR/googleapis ./generateapis.sh $PACKAGE
     
     # If that worked, we can remove the staging directory for this API completely;
     # we're done (but there may be other APIs).

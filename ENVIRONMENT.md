@@ -64,9 +64,9 @@ The version of the .NET Core SDK required is specified in
 
 ## Python 3 (3.6+)
 
-This is required for synthtool and other aspects of API generation
-(generateapis.sh). It expected to be available via just `python`, `py
-3` or `python3`.
+This is required for some aspects of API generation
+(generateapis.sh). It expected to be available via just `python`,
+`py 3` or `python3`.
 
 It's expected that `pip` is also installed.
 
