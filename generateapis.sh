@@ -8,32 +8,12 @@ declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 # This script generates all APIs from the googleapis/googleapis github repository,
 # using the code generator from googleapis/gapic-generator-csharp.
 # It will fetch both repositories if necessary.
-# (For REGAPIC APIs, it fetches googleapis/googleapis-discovery)
 
 OUTDIR=tmp
 
-# If there's a preconfig file, we assume it has everything we need. We'll
-# set both GOOGLEAPIs based on that, using a value that will clearly
-# indicate the cause of the failure if a "missing" repo is tried.
-if [[ "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
+if [[ "$GOOGLEAPIS_DIR" != "" ]]
 then
-  declare -r GOOGLEAPIS=$(python - <<END
-import json
-with open('$SYNTHTOOL_PRECONFIG_FILE') as json_file:
-  data = json.load(json_file)
-  repos = data['preclonedRepos']
-  if 'https://github.com/googleapis/googleapis.git' in repos:
-    print(repos['https://github.com/googleapis/googleapis.git'])
-  else:
-    print('attempt_to_use_googleapis_when_not_configured')
-END
-  )
-elif [[ "$SYNTHTOOL_GOOGLEAPIS" != "" ]]
-then
-  declare -r GOOGLEAPIS="$SYNTHTOOL_GOOGLEAPIS"
-elif [[ "$SYNTHTOOL_CACHE" != "" ]]
-then
-  declare -r GOOGLEAPIS="$SYNTHTOOL_CACHE/googleapis"
+  declare -r GOOGLEAPIS="$GOOGLEAPIS_DIR"
 else
   declare -r GOOGLEAPIS="$PWD/googleapis"
 fi
@@ -42,9 +22,9 @@ fi
 export GOOGLEAPIS
 
 fetch_github_repos() {
-  # We assume that if there's a preconfig file, we're running in autosynth
-  # and don't need to fetch either.
-  if [[ "$SYNTHTOOL_GOOGLEAPIS" != "" || "$SYNTHTOOL_PRECONFIG_FILE" != "" ]]
+  # We assume that if the directory has been explicitly specified, we don't need
+  # to fetch it.
+  if [[ "$GOOGLEAPIS_DIR" != "" ]]
   then
     return 0
   fi
@@ -128,14 +108,6 @@ generate_microgenerator() {
     (cd $API_OUT_DIR/$1; ./midmicrogeneration.sh)
   fi
 
-  # Add in any common protos that are available. Due to the way autosynth
-  # runs, this should not fail if it runs against an older version of googleapis.
-  COMMON_PROTOS=
-  if [[ -d $GOOGLEAPIS/google/cloud/common ]]
-  then
-    COMMON_PROTOS="$COMMON_PROTOS $GOOGLEAPIS/google/cloud/common/*.proto"
-  fi
-
   # Client generation. This needs the common resources proto as a reference,
   # but it won't generate anything for it.
   # The Cloud Common protos are likewise included so that operation result/metadata
@@ -147,7 +119,7 @@ generate_microgenerator() {
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
     -I $GOOGLEAPIS \
     -I $CORE_PROTOS_ROOT \
-    $COMMON_PROTOS \
+    $GOOGLEAPIS/google/cloud/common/*.proto \
     $(find $API_SRC_DIR -name '*.proto') \
     $COMMON_RESOURCES_PROTO \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
@@ -222,24 +194,6 @@ generate_api() {
       echo "API $1 has broken namespace declarations"
       exit 1
     fi
-  fi
-
-  if [[ -f $PACKAGE_DIR/synth.py ]]
-  then
-    # Record the commit in synth.metadata
-    cat > $PACKAGE_DIR/synth.metadata <<END
-{
-  "sources": [
-    {
-      "git": {
-        "name": "googleapis",
-        "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "$(git -C $GOOGLEAPIS rev-parse HEAD)"
-      }
-    }
-  ]
-}
-END
   fi
 }
 
