@@ -1207,5 +1207,194 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for MutateDeployedIndex</summary>
+        public void MutateDeployedIndexRequestObject()
+        {
+            // Snippet: MutateDeployedIndex(MutateDeployedIndexRequest, CallSettings)
+            // Create client
+            IndexEndpointServiceClient indexEndpointServiceClient = IndexEndpointServiceClient.Create();
+            // Initialize request argument(s)
+            MutateDeployedIndexRequest request = new MutateDeployedIndexRequest
+            {
+                IndexEndpointAsIndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
+                DeployedIndex = new DeployedIndex(),
+            };
+            // Make the request
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = indexEndpointServiceClient.MutateDeployedIndex(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MutateDeployedIndexResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> retrievedResponse = indexEndpointServiceClient.PollOnceMutateDeployedIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedIndexResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedIndexAsync</summary>
+        public async Task MutateDeployedIndexRequestObjectAsync()
+        {
+            // Snippet: MutateDeployedIndexAsync(MutateDeployedIndexRequest, CallSettings)
+            // Additional: MutateDeployedIndexAsync(MutateDeployedIndexRequest, CancellationToken)
+            // Create client
+            IndexEndpointServiceClient indexEndpointServiceClient = await IndexEndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            MutateDeployedIndexRequest request = new MutateDeployedIndexRequest
+            {
+                IndexEndpointAsIndexEndpointName = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]"),
+                DeployedIndex = new DeployedIndex(),
+            };
+            // Make the request
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = await indexEndpointServiceClient.MutateDeployedIndexAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MutateDeployedIndexResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> retrievedResponse = await indexEndpointServiceClient.PollOnceMutateDeployedIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedIndexResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedIndex</summary>
+        public void MutateDeployedIndex()
+        {
+            // Snippet: MutateDeployedIndex(string, DeployedIndex, CallSettings)
+            // Create client
+            IndexEndpointServiceClient indexEndpointServiceClient = IndexEndpointServiceClient.Create();
+            // Initialize request argument(s)
+            string indexEndpoint = "projects/[PROJECT]/locations/[LOCATION]/indexEndpoints/[INDEX_ENDPOINT]";
+            DeployedIndex deployedIndex = new DeployedIndex();
+            // Make the request
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = indexEndpointServiceClient.MutateDeployedIndex(indexEndpoint, deployedIndex);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MutateDeployedIndexResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> retrievedResponse = indexEndpointServiceClient.PollOnceMutateDeployedIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedIndexResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedIndexAsync</summary>
+        public async Task MutateDeployedIndexAsync()
+        {
+            // Snippet: MutateDeployedIndexAsync(string, DeployedIndex, CallSettings)
+            // Additional: MutateDeployedIndexAsync(string, DeployedIndex, CancellationToken)
+            // Create client
+            IndexEndpointServiceClient indexEndpointServiceClient = await IndexEndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string indexEndpoint = "projects/[PROJECT]/locations/[LOCATION]/indexEndpoints/[INDEX_ENDPOINT]";
+            DeployedIndex deployedIndex = new DeployedIndex();
+            // Make the request
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = await indexEndpointServiceClient.MutateDeployedIndexAsync(indexEndpoint, deployedIndex);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MutateDeployedIndexResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> retrievedResponse = await indexEndpointServiceClient.PollOnceMutateDeployedIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedIndexResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedIndex</summary>
+        public void MutateDeployedIndexResourceNames()
+        {
+            // Snippet: MutateDeployedIndex(IndexEndpointName, DeployedIndex, CallSettings)
+            // Create client
+            IndexEndpointServiceClient indexEndpointServiceClient = IndexEndpointServiceClient.Create();
+            // Initialize request argument(s)
+            IndexEndpointName indexEndpoint = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]");
+            DeployedIndex deployedIndex = new DeployedIndex();
+            // Make the request
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = indexEndpointServiceClient.MutateDeployedIndex(indexEndpoint, deployedIndex);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            MutateDeployedIndexResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> retrievedResponse = indexEndpointServiceClient.PollOnceMutateDeployedIndex(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedIndexResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for MutateDeployedIndexAsync</summary>
+        public async Task MutateDeployedIndexResourceNamesAsync()
+        {
+            // Snippet: MutateDeployedIndexAsync(IndexEndpointName, DeployedIndex, CallSettings)
+            // Additional: MutateDeployedIndexAsync(IndexEndpointName, DeployedIndex, CancellationToken)
+            // Create client
+            IndexEndpointServiceClient indexEndpointServiceClient = await IndexEndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            IndexEndpointName indexEndpoint = IndexEndpointName.FromProjectLocationIndexEndpoint("[PROJECT]", "[LOCATION]", "[INDEX_ENDPOINT]");
+            DeployedIndex deployedIndex = new DeployedIndex();
+            // Make the request
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> response = await indexEndpointServiceClient.MutateDeployedIndexAsync(indexEndpoint, deployedIndex);
+
+            // Poll until the returned long-running operation is complete
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            MutateDeployedIndexResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> retrievedResponse = await indexEndpointServiceClient.PollOnceMutateDeployedIndexAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                MutateDeployedIndexResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

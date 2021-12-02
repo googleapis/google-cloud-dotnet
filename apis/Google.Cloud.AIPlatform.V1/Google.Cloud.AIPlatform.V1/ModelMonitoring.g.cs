@@ -85,21 +85,21 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZWN0aXZlQ29uZmlnLkV4cGxhbmF0aW9uQ29uZmlnLkV4cGxhbmF0aW9uQmFz",
             "ZWxpbmUuUHJlZGljdGlvbkZvcm1hdCJOChBQcmVkaWN0aW9uRm9ybWF0EiEK",
             "HVBSRURJQ1RJT05fRk9STUFUX1VOU1BFQ0lGSUVEEAASCQoFSlNPTkwQAhIM",
-            "CghCSUdRVUVSWRADQg0KC2Rlc3RpbmF0aW9uIrUBChpNb2RlbE1vbml0b3Jp",
+            "CghCSUdRVUVSWRADQg0KC2Rlc3RpbmF0aW9uIs0BChpNb2RlbE1vbml0b3Jp",
             "bmdBbGVydENvbmZpZxJlChJlbWFpbF9hbGVydF9jb25maWcYASABKAsyRy5n",
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Nb2RlbE1vbml0b3JpbmdBbGVy",
-            "dENvbmZpZy5FbWFpbEFsZXJ0Q29uZmlnSAAaJwoQRW1haWxBbGVydENvbmZp",
-            "ZxITCgt1c2VyX2VtYWlscxgBIAMoCUIHCgVhbGVydCIvCg9UaHJlc2hvbGRD",
-            "b25maWcSDwoFdmFsdWUYASABKAFIAEILCgl0aHJlc2hvbGQinAEKEFNhbXBs",
-            "aW5nU3RyYXRlZ3kSXQoUcmFuZG9tX3NhbXBsZV9jb25maWcYASABKAsyPy5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5TYW1wbGluZ1N0cmF0ZWd5LlJh",
-            "bmRvbVNhbXBsZUNvbmZpZxopChJSYW5kb21TYW1wbGVDb25maWcSEwoLc2Ft",
-            "cGxlX3JhdGUYASABKAFC2AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MUIUTW9kZWxNb25pdG9yaW5nUHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5v",
-            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3YxO2Fp",
-            "cGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2ds",
-            "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
-            "Zm9ybTo6VjFiBnByb3RvMw=="));
+            "dENvbmZpZy5FbWFpbEFsZXJ0Q29uZmlnSAASFgoOZW5hYmxlX2xvZ2dpbmcY",
+            "AiABKAgaJwoQRW1haWxBbGVydENvbmZpZxITCgt1c2VyX2VtYWlscxgBIAMo",
+            "CUIHCgVhbGVydCIvCg9UaHJlc2hvbGRDb25maWcSDwoFdmFsdWUYASABKAFI",
+            "AEILCgl0aHJlc2hvbGQinAEKEFNhbXBsaW5nU3RyYXRlZ3kSXQoUcmFuZG9t",
+            "X3NhbXBsZV9jb25maWcYASABKAsyPy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
+            "bS52MS5TYW1wbGluZ1N0cmF0ZWd5LlJhbmRvbVNhbXBsZUNvbmZpZxopChJS",
+            "YW5kb21TYW1wbGVDb25maWcSEwoLc2FtcGxlX3JhdGUYASABKAFC2AEKHmNv",
+            "bS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIUTW9kZWxNb25pdG9yaW5n",
+            "UHJvdG9QAVpEZ29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9jbG91ZC9haXBsYXRmb3JtL3YxO2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xv",
+            "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
+            "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -107,7 +107,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig.Parser, new[]{ "SkewThresholds", "AttributionScoreSkewThresholds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.PredictionDriftDetectionConfig.Parser, new[]{ "DriftThresholds", "AttributionScoreDriftThresholds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Parser, new[]{ "EnableFeatureAttributes", "ExplanationBaseline" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Parser, new[]{ "Gcs", "Bigquery", "PredictionFormat" }, new[]{ "Destination" }, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig.Types.ExplanationBaseline.Types.PredictionFormat) }, null, null)})}),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Parser, new[]{ "EmailAlertConfig" }, new[]{ "Alert" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig.Parser, new[]{ "UserEmails" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Parser, new[]{ "EmailAlertConfig", "EnableLogging" }, new[]{ "Alert" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringAlertConfig.Types.EmailAlertConfig.Parser, new[]{ "UserEmails" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ThresholdConfig), global::Google.Cloud.AIPlatform.V1.ThresholdConfig.Parser, new[]{ "Value" }, new[]{ "Threshold" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SamplingStrategy), global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Parser, new[]{ "RandomSampleConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Types.RandomSampleConfig), global::Google.Cloud.AIPlatform.V1.SamplingStrategy.Types.RandomSampleConfig.Parser, new[]{ "SampleRate" }, null, null, null, null)})
           }));
@@ -216,7 +216,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int ExplanationConfigFieldNumber = 5;
     private global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.ExplanationConfig explanationConfig_;
     /// <summary>
-    /// The config for integrated with Explainable AI.
+    /// The config for integrating with Vertex Explainable AI.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1387,8 +1387,8 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
-      /// The config for integrated with Explainable AI. Only applicable if the Model
-      /// has explanation_spec populated.
+      /// The config for integrating with Vertex Explainable AI. Only applicable if
+      /// the Model has explanation_spec populated.
       /// </summary>
       public sealed partial class ExplanationConfig : pb::IMessage<ExplanationConfig>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1439,8 +1439,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         public const int EnableFeatureAttributesFieldNumber = 1;
         private bool enableFeatureAttributes_;
         /// <summary>
-        /// If want to analyze the Explainable AI feature attribute scores or not.
-        /// If set to true, Vertex AI will log the feature attributions from
+        /// If want to analyze the Vertex Explainable AI feature attribute scores or
+        /// not. If set to true, Vertex AI will log the feature attributions from
         /// explain response and do the skew/drift detection for them.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2008,7 +2008,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// Next ID: 2
+  /// Next ID: 3
   /// </summary>
   public sealed partial class ModelMonitoringAlertConfig : pb::IMessage<ModelMonitoringAlertConfig>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2044,6 +2044,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public ModelMonitoringAlertConfig(ModelMonitoringAlertConfig other) : this() {
+      enableLogging_ = other.enableLogging_;
       switch (other.AlertCase) {
         case AlertOneofCase.EmailAlertConfig:
           EmailAlertConfig = other.EmailAlertConfig.Clone();
@@ -2071,6 +2072,25 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         alert_ = value;
         alertCase_ = value == null ? AlertOneofCase.None : AlertOneofCase.EmailAlertConfig;
+      }
+    }
+
+    /// <summary>Field number for the "enable_logging" field.</summary>
+    public const int EnableLoggingFieldNumber = 2;
+    private bool enableLogging_;
+    /// <summary>
+    /// Dump the anomalies to Cloud Logging. The anomalies will be put to json
+    /// payload encoded from proto
+    /// [google.cloud.aiplatform.logging.ModelMonitoringAnomaliesLogEntry][].
+    /// This can be further sinked to Pub/Sub or any other services supported
+    /// by Cloud Logging.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableLogging {
+      get { return enableLogging_; }
+      set {
+        enableLogging_ = value;
       }
     }
 
@@ -2110,6 +2130,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return true;
       }
       if (!object.Equals(EmailAlertConfig, other.EmailAlertConfig)) return false;
+      if (EnableLogging != other.EnableLogging) return false;
       if (AlertCase != other.AlertCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2119,6 +2140,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (alertCase_ == AlertOneofCase.EmailAlertConfig) hash ^= EmailAlertConfig.GetHashCode();
+      if (EnableLogging != false) hash ^= EnableLogging.GetHashCode();
       hash ^= (int) alertCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2142,6 +2164,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(EmailAlertConfig);
       }
+      if (EnableLogging != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnableLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2156,6 +2182,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(EmailAlertConfig);
       }
+      if (EnableLogging != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(EnableLogging);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2169,6 +2199,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (alertCase_ == AlertOneofCase.EmailAlertConfig) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(EmailAlertConfig);
       }
+      if (EnableLogging != false) {
+        size += 1 + 1;
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2180,6 +2213,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     public void MergeFrom(ModelMonitoringAlertConfig other) {
       if (other == null) {
         return;
+      }
+      if (other.EnableLogging != false) {
+        EnableLogging = other.EnableLogging;
       }
       switch (other.AlertCase) {
         case AlertOneofCase.EmailAlertConfig:
@@ -2214,6 +2250,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             EmailAlertConfig = subBuilder;
             break;
           }
+          case 16: {
+            EnableLogging = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -2236,6 +2276,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             EmailAlertConfig = subBuilder;
+            break;
+          }
+          case 16: {
+            EnableLogging = input.ReadBool();
             break;
           }
         }

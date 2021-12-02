@@ -83,6 +83,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.DeployIndexRequest> __Marshaller_google_cloud_aiplatform_v1_DeployIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.DeployIndexRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.UndeployIndexRequest> __Marshaller_google_cloud_aiplatform_v1_UndeployIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.UndeployIndexRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest> __Marshaller_google_cloud_aiplatform_v1_MutateDeployedIndexRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateIndexEndpointRequest, global::Google.LongRunning.Operation> __Method_CreateIndexEndpoint = new grpc::Method<global::Google.Cloud.AIPlatform.V1.CreateIndexEndpointRequest, global::Google.LongRunning.Operation>(
@@ -138,6 +140,14 @@ namespace Google.Cloud.AIPlatform.V1 {
         __ServiceName,
         "UndeployIndex",
         __Marshaller_google_cloud_aiplatform_v1_UndeployIndexRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest, global::Google.LongRunning.Operation> __Method_MutateDeployedIndex = new grpc::Method<global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "MutateDeployedIndex",
+        __Marshaller_google_cloud_aiplatform_v1_MutateDeployedIndexRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -233,6 +243,18 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UndeployIndex(global::Google.Cloud.AIPlatform.V1.UndeployIndexRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update an existing DeployedIndex under an IndexEndpoint.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> MutateDeployedIndex(global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -614,6 +636,54 @@ namespace Google.Cloud.AIPlatform.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UndeployIndex, null, options, request);
       }
+      /// <summary>
+      /// Update an existing DeployedIndex under an IndexEndpoint.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MutateDeployedIndex(global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MutateDeployedIndex(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an existing DeployedIndex under an IndexEndpoint.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation MutateDeployedIndex(global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_MutateDeployedIndex, null, options, request);
+      }
+      /// <summary>
+      /// Update an existing DeployedIndex under an IndexEndpoint.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MutateDeployedIndexAsync(global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return MutateDeployedIndexAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an existing DeployedIndex under an IndexEndpoint.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> MutateDeployedIndexAsync(global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_MutateDeployedIndex, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override IndexEndpointServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -634,7 +704,8 @@ namespace Google.Cloud.AIPlatform.V1 {
           .AddMethod(__Method_UpdateIndexEndpoint, serviceImpl.UpdateIndexEndpoint)
           .AddMethod(__Method_DeleteIndexEndpoint, serviceImpl.DeleteIndexEndpoint)
           .AddMethod(__Method_DeployIndex, serviceImpl.DeployIndex)
-          .AddMethod(__Method_UndeployIndex, serviceImpl.UndeployIndex).Build();
+          .AddMethod(__Method_UndeployIndex, serviceImpl.UndeployIndex)
+          .AddMethod(__Method_MutateDeployedIndex, serviceImpl.MutateDeployedIndex).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -651,6 +722,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       serviceBinder.AddMethod(__Method_DeleteIndexEndpoint, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeleteIndexEndpointRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteIndexEndpoint));
       serviceBinder.AddMethod(__Method_DeployIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.DeployIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.DeployIndex));
       serviceBinder.AddMethod(__Method_UndeployIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.UndeployIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.UndeployIndex));
+      serviceBinder.AddMethod(__Method_MutateDeployedIndex, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.AIPlatform.V1.MutateDeployedIndexRequest, global::Google.LongRunning.Operation>(serviceImpl.MutateDeployedIndex));
     }
 
   }

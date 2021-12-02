@@ -1051,9 +1051,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.Value>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForMessage(18, global::Google.Cloud.AIPlatform.V1.Value.Parser), 10);
         private readonly pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.Value> parameters_ = new pbc::MapField<string, global::Google.Cloud.AIPlatform.V1.Value>();
         /// <summary>
-        /// Deprecated. Use [RuntimeConfig.parameter_values] instead. The runtime
+        /// Deprecated. Use [RuntimeConfig.parameter_values][google.cloud.aiplatform.v1.PipelineJob.RuntimeConfig.parameter_values] instead. The runtime
         /// parameters of the PipelineJob. The parameters will be passed into
         /// [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec] to replace the placeholders at runtime.
+        /// This field is used by pipelines built using
+        /// `PipelineJob.pipeline_spec.schema_version` 2.0.0 or lower, such as
+        /// pipelines built using Kubeflow Pipelines SDK 1.8 or lower.
         /// </summary>
         [global::System.ObsoleteAttribute]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1091,7 +1094,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// <summary>
         /// The runtime parameters of the PipelineJob. The parameters will be
         /// passed into [PipelineJob.pipeline_spec][google.cloud.aiplatform.v1.PipelineJob.pipeline_spec] to replace the placeholders
-        /// at runtime.
+        /// at runtime. This field is used by pipelines built using
+        /// `PipelineJob.pipeline_spec.schema_version` 2.1.0, such as pipelines built
+        /// using Kubeflow Pipelines SDK 1.9 or higher and the v2 DSL.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

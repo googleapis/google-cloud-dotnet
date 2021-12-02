@@ -29,57 +29,60 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aMGdv",
             "b2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRpb25fc3BlYy5wcm90",
             "bxosZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZXhwbGFuYXRpb24ucHJv",
-            "dG8aMmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL21hY2hpbmVfcmVzb3Vy",
-            "Y2VzLnByb3RvGkBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tb2RlbF9k",
-            "ZXBsb3ltZW50X21vbml0b3Jpbmdfam9iLnByb3RvGjFnb29nbGUvY2xvdWQv",
-            "YWlwbGF0Zm9ybS92MS9tb2RlbF9tb25pdG9yaW5nLnByb3RvGh9nb29nbGUv",
-            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRp",
-            "b25zLnByb3RvItAGCghFbmRwb2ludBIRCgRuYW1lGAEgASgJQgPgQQMSGQoM",
-            "ZGlzcGxheV9uYW1lGAIgASgJQgPgQQISEwoLZGVzY3JpcHRpb24YAyABKAkS",
-            "RwoPZGVwbG95ZWRfbW9kZWxzGAQgAygLMikuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuRGVwbG95ZWRNb2RlbEID4EEDEk0KDXRyYWZmaWNfc3BsaXQY",
-            "BSADKAsyNi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmRwb2ludC5U",
-            "cmFmZmljU3BsaXRFbnRyeRIMCgRldGFnGAYgASgJEkAKBmxhYmVscxgHIAMo",
-            "CzIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuZHBvaW50LkxhYmVs",
-            "c0VudHJ5EjQKC2NyZWF0ZV90aW1lGAggASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAkgASgLMhouZ29vZ2xl",
-            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkMKD2VuY3J5cHRpb25fc3BlYxgK",
-            "IAEoCzIqLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkVuY3J5cHRpb25T",
-            "cGVjEjQKB25ldHdvcmsYDSABKAlCI/pBIAoeY29tcHV0ZS5nb29nbGVhcGlz",
-            "LmNvbS9OZXR3b3JrEmcKH21vZGVsX2RlcGxveW1lbnRfbW9uaXRvcmluZ19q",
-            "b2IYDiABKAlCPuBBA/pBOAo2YWlwbGF0Zm9ybS5nb29nbGVhcGlzLmNvbS9N",
-            "b2RlbERlcGxveW1lbnRNb25pdG9yaW5nSm9iGjMKEVRyYWZmaWNTcGxpdEVu",
-            "dHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoBToCOAEaLQoLTGFiZWxz",
-            "RW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4ATpl6kFiCiJh",
-            "aXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL0VuZHBvaW50Ejxwcm9qZWN0cy97",
-            "cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vZW5kcG9pbnRzL3tlbmRw",
-            "b2ludH0iygQKDURlcGxveWVkTW9kZWwSTQoTZGVkaWNhdGVkX3Jlc291cmNl",
-            "cxgHIAEoCzIuLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkRlZGljYXRl",
-            "ZFJlc291cmNlc0gAEk0KE2F1dG9tYXRpY19yZXNvdXJjZXMYCCABKAsyLi5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BdXRvbWF0aWNSZXNvdXJjZXNI",
-            "ABIPCgJpZBgBIAEoCUID4EEDEjYKBW1vZGVsGAIgASgJQifgQQL6QSEKH2Fp",
-            "cGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vTW9kZWwSFAoMZGlzcGxheV9uYW1l",
-            "GAMgASgJEjQKC2NyZWF0ZV90aW1lGAYgASgLMhouZ29vZ2xlLnByb3RvYnVm",
-            "LlRpbWVzdGFtcEID4EEDEkUKEGV4cGxhbmF0aW9uX3NwZWMYCSABKAsyKy5n",
-            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBsYW5hdGlvblNwZWMSFwoP",
-            "c2VydmljZV9hY2NvdW50GAsgASgJEiEKGWRpc2FibGVfY29udGFpbmVyX2xv",
-            "Z2dpbmcYDyABKAgSHQoVZW5hYmxlX2FjY2Vzc19sb2dnaW5nGA0gASgIEkwK",
-            "EXByaXZhdGVfZW5kcG9pbnRzGA4gASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuUHJpdmF0ZUVuZHBvaW50c0ID4EEDQhYKFHByZWRpY3Rpb25f",
-            "cmVzb3VyY2VzIm4KEFByaXZhdGVFbmRwb2ludHMSHQoQcHJlZGljdF9odHRw",
-            "X3VyaRgBIAEoCUID4EEDEh0KEGV4cGxhaW5faHR0cF91cmkYAiABKAlCA+BB",
-            "AxIcCg9oZWFsdGhfaHR0cF91cmkYAyABKAlCA+BBA0LRAQoeY29tLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxQg1FbmRwb2ludFByb3RvUAFaRGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYWlwbGF0",
-            "Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNsb3VkLkFJUGxhdGZvcm0u",
-            "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
-            "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "dG8aI2dvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2lvLnByb3RvGjJnb29n",
+            "bGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNlcy5wcm90",
+            "bxpAZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbW9kZWxfZGVwbG95bWVu",
+            "dF9tb25pdG9yaW5nX2pvYi5wcm90bxoxZ29vZ2xlL2Nsb3VkL2FpcGxhdGZv",
+            "cm0vdjEvbW9kZWxfbW9uaXRvcmluZy5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
+            "byL4BgoIRW5kcG9pbnQSEQoEbmFtZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlf",
+            "bmFtZRgCIAEoCUID4EECEhMKC2Rlc2NyaXB0aW9uGAMgASgJEkcKD2RlcGxv",
+            "eWVkX21vZGVscxgEIAMoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
+            "LkRlcGxveWVkTW9kZWxCA+BBAxJNCg10cmFmZmljX3NwbGl0GAUgAygLMjYu",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRW5kcG9pbnQuVHJhZmZpY1Nw",
+            "bGl0RW50cnkSDAoEZXRhZxgGIAEoCRJACgZsYWJlbHMYByADKAsyMC5nb29n",
+            "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmRwb2ludC5MYWJlbHNFbnRyeRI0",
+            "CgtjcmVhdGVfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
+            "bXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1",
+            "Zi5UaW1lc3RhbXBCA+BBAxJDCg9lbmNyeXB0aW9uX3NwZWMYCiABKAsyKi5n",
+            "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FbmNyeXB0aW9uU3BlYxI0Cgdu",
+            "ZXR3b3JrGA0gASgJQiP6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0",
+            "d29yaxImCh5lbmFibGVfcHJpdmF0ZV9zZXJ2aWNlX2Nvbm5lY3QYESABKAgS",
+            "ZwofbW9kZWxfZGVwbG95bWVudF9tb25pdG9yaW5nX2pvYhgOIAEoCUI+4EED",
+            "+kE4CjZhaXBsYXRmb3JtLmdvb2dsZWFwaXMuY29tL01vZGVsRGVwbG95bWVu",
+            "dE1vbml0b3JpbmdKb2IaMwoRVHJhZmZpY1NwbGl0RW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgFOgI4ARotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
+            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOmXqQWIKImFpcGxhdGZvcm0uZ29v",
+            "Z2xlYXBpcy5jb20vRW5kcG9pbnQSPHByb2plY3RzL3twcm9qZWN0fS9sb2Nh",
+            "dGlvbnMve2xvY2F0aW9ufS9lbmRwb2ludHMve2VuZHBvaW50fSLKBAoNRGVw",
+            "bG95ZWRNb2RlbBJNChNkZWRpY2F0ZWRfcmVzb3VyY2VzGAcgASgLMi4uZ29v",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRGVkaWNhdGVkUmVzb3VyY2VzSAAS",
+            "TQoTYXV0b21hdGljX3Jlc291cmNlcxgIIAEoCzIuLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkF1dG9tYXRpY1Jlc291cmNlc0gAEg8KAmlkGAEgASgJ",
+            "QgPgQQUSNgoFbW9kZWwYAiABKAlCJ+BBAvpBIQofYWlwbGF0Zm9ybS5nb29n",
+            "bGVhcGlzLmNvbS9Nb2RlbBIUCgxkaXNwbGF5X25hbWUYAyABKAkSNAoLY3Jl",
+            "YXRlX3RpbWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPg",
+            "QQMSRQoQZXhwbGFuYXRpb25fc3BlYxgJIAEoCzIrLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkV4cGxhbmF0aW9uU3BlYxIXCg9zZXJ2aWNlX2FjY291",
+            "bnQYCyABKAkSIQoZZGlzYWJsZV9jb250YWluZXJfbG9nZ2luZxgPIAEoCBId",
+            "ChVlbmFibGVfYWNjZXNzX2xvZ2dpbmcYDSABKAgSTAoRcHJpdmF0ZV9lbmRw",
+            "b2ludHMYDiABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5Qcml2",
+            "YXRlRW5kcG9pbnRzQgPgQQNCFgoUcHJlZGljdGlvbl9yZXNvdXJjZXMijwEK",
+            "EFByaXZhdGVFbmRwb2ludHMSHQoQcHJlZGljdF9odHRwX3VyaRgBIAEoCUID",
+            "4EEDEh0KEGV4cGxhaW5faHR0cF91cmkYAiABKAlCA+BBAxIcCg9oZWFsdGhf",
+            "aHR0cF91cmkYAyABKAlCA+BBAxIfChJzZXJ2aWNlX2F0dGFjaG1lbnQYBCAB",
+            "KAlCA+BBA0LRAQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQg1F",
+            "bmRwb2ludFByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dv",
+            "b2dsZWFwaXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29v",
+            "Z2xlLkNsb3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0",
+            "Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "ModelDeploymentMonitoringJob" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Endpoint), global::Google.Cloud.AIPlatform.V1.Endpoint.Parser, new[]{ "Name", "DisplayName", "Description", "DeployedModels", "TrafficSplit", "Etag", "Labels", "CreateTime", "UpdateTime", "EncryptionSpec", "Network", "EnablePrivateServiceConnect", "ModelDeploymentMonitoringJob" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeployedModel), global::Google.Cloud.AIPlatform.V1.DeployedModel.Parser, new[]{ "DedicatedResources", "AutomaticResources", "Id", "Model", "DisplayName", "CreateTime", "ExplanationSpec", "ServiceAccount", "DisableContainerLogging", "EnableAccessLogging", "PrivateEndpoints" }, new[]{ "PredictionResources" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PrivateEndpoints), global::Google.Cloud.AIPlatform.V1.PrivateEndpoints.Parser, new[]{ "PredictHttpUri", "ExplainHttpUri", "HealthHttpUri", "ServiceAttachment" }, null, null, null, null)
           }));
     }
     #endregion
@@ -135,6 +138,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       updateTime_ = other.updateTime_ != null ? other.updateTime_.Clone() : null;
       encryptionSpec_ = other.encryptionSpec_ != null ? other.encryptionSpec_.Clone() : null;
       network_ = other.network_;
+      enablePrivateServiceConnect_ = other.enablePrivateServiceConnect_;
       modelDeploymentMonitoringJob_ = other.modelDeploymentMonitoringJob_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -323,6 +327,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Private services access must already be configured for the network. If left
     /// unspecified, the Endpoint is not peered with any network.
     ///
+    /// Only one of the fields, [network][google.cloud.aiplatform.v1.Endpoint.network] or
+    /// [enable_private_service_connect][google.cloud.aiplatform.v1.Endpoint.enable_private_service_connect],
+    /// can be set.
+    ///
     /// [Format](https://cloud.google.com/compute/docs/reference/rest/v1/networks/insert):
     /// `projects/{project}/global/networks/{network}`.
     /// Where `{project}` is a project number, as in `12345`, and `{network}` is
@@ -334,6 +342,25 @@ namespace Google.Cloud.AIPlatform.V1 {
       get { return network_; }
       set {
         network_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "enable_private_service_connect" field.</summary>
+    public const int EnablePrivateServiceConnectFieldNumber = 17;
+    private bool enablePrivateServiceConnect_;
+    /// <summary>
+    /// If true, expose the Endpoint via private service connect.
+    ///
+    /// Only one of the fields, [network][google.cloud.aiplatform.v1.Endpoint.network] or
+    /// [enable_private_service_connect][google.cloud.aiplatform.v1.Endpoint.enable_private_service_connect],
+    /// can be set.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnablePrivateServiceConnect {
+      get { return enablePrivateServiceConnect_; }
+      set {
+        enablePrivateServiceConnect_ = value;
       }
     }
 
@@ -381,6 +408,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(UpdateTime, other.UpdateTime)) return false;
       if (!object.Equals(EncryptionSpec, other.EncryptionSpec)) return false;
       if (Network != other.Network) return false;
+      if (EnablePrivateServiceConnect != other.EnablePrivateServiceConnect) return false;
       if (ModelDeploymentMonitoringJob != other.ModelDeploymentMonitoringJob) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -400,6 +428,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (updateTime_ != null) hash ^= UpdateTime.GetHashCode();
       if (encryptionSpec_ != null) hash ^= EncryptionSpec.GetHashCode();
       if (Network.Length != 0) hash ^= Network.GetHashCode();
+      if (EnablePrivateServiceConnect != false) hash ^= EnablePrivateServiceConnect.GetHashCode();
       if (ModelDeploymentMonitoringJob.Length != 0) hash ^= ModelDeploymentMonitoringJob.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -458,6 +487,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(114);
         output.WriteString(ModelDeploymentMonitoringJob);
       }
+      if (EnablePrivateServiceConnect != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(EnablePrivateServiceConnect);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -507,6 +540,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(114);
         output.WriteString(ModelDeploymentMonitoringJob);
       }
+      if (EnablePrivateServiceConnect != false) {
+        output.WriteRawTag(136, 1);
+        output.WriteBool(EnablePrivateServiceConnect);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -543,6 +580,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (Network.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Network);
+      }
+      if (EnablePrivateServiceConnect != false) {
+        size += 2 + 1;
       }
       if (ModelDeploymentMonitoringJob.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(ModelDeploymentMonitoringJob);
@@ -594,6 +634,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.Network.Length != 0) {
         Network = other.Network;
+      }
+      if (other.EnablePrivateServiceConnect != false) {
+        EnablePrivateServiceConnect = other.EnablePrivateServiceConnect;
       }
       if (other.ModelDeploymentMonitoringJob.Length != 0) {
         ModelDeploymentMonitoringJob = other.ModelDeploymentMonitoringJob;
@@ -670,6 +713,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             ModelDeploymentMonitoringJob = input.ReadString();
             break;
           }
+          case 136: {
+            EnablePrivateServiceConnect = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -740,6 +787,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 114: {
             ModelDeploymentMonitoringJob = input.ReadString();
+            break;
+          }
+          case 136: {
+            EnablePrivateServiceConnect = input.ReadBool();
             break;
           }
         }
@@ -849,7 +900,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int IdFieldNumber = 1;
     private string id_ = "";
     /// <summary>
-    /// Output only. The ID of the DeployedModel.
+    /// Immutable. The ID of the DeployedModel. If not provided upon deployment, Vertex AI
+    /// will generate a value for this ID.
+    ///
+    /// This value should be 1-10 characters, and valid characters are /[0-9]/.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1462,8 +1516,11 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
-  /// PrivateEndpoints is used to provide paths for users to send
-  /// requests via private services access.
+  /// PrivateEndpoints proto is used to provide paths for users to send
+  /// requests privately.
+  /// To send request via private service access, use predict_http_uri,
+  /// explain_http_uri or health_http_uri. To send request via private service
+  /// connect, use service_attachment.
   /// </summary>
   public sealed partial class PrivateEndpoints : pb::IMessage<PrivateEndpoints>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1502,6 +1559,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       predictHttpUri_ = other.predictHttpUri_;
       explainHttpUri_ = other.explainHttpUri_;
       healthHttpUri_ = other.healthHttpUri_;
+      serviceAttachment_ = other.serviceAttachment_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1556,6 +1614,22 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "service_attachment" field.</summary>
+    public const int ServiceAttachmentFieldNumber = 4;
+    private string serviceAttachment_ = "";
+    /// <summary>
+    /// Output only. The name of the service attachment resource. Populated if private service
+    /// connect is enabled.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ServiceAttachment {
+      get { return serviceAttachment_; }
+      set {
+        serviceAttachment_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1574,6 +1648,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (PredictHttpUri != other.PredictHttpUri) return false;
       if (ExplainHttpUri != other.ExplainHttpUri) return false;
       if (HealthHttpUri != other.HealthHttpUri) return false;
+      if (ServiceAttachment != other.ServiceAttachment) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1584,6 +1659,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (PredictHttpUri.Length != 0) hash ^= PredictHttpUri.GetHashCode();
       if (ExplainHttpUri.Length != 0) hash ^= ExplainHttpUri.GetHashCode();
       if (HealthHttpUri.Length != 0) hash ^= HealthHttpUri.GetHashCode();
+      if (ServiceAttachment.Length != 0) hash ^= ServiceAttachment.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1614,6 +1690,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(26);
         output.WriteString(HealthHttpUri);
       }
+      if (ServiceAttachment.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ServiceAttachment);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1636,6 +1716,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(26);
         output.WriteString(HealthHttpUri);
       }
+      if (ServiceAttachment.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(ServiceAttachment);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1654,6 +1738,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (HealthHttpUri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(HealthHttpUri);
+      }
+      if (ServiceAttachment.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ServiceAttachment);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1675,6 +1762,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (other.HealthHttpUri.Length != 0) {
         HealthHttpUri = other.HealthHttpUri;
+      }
+      if (other.ServiceAttachment.Length != 0) {
+        ServiceAttachment = other.ServiceAttachment;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1703,6 +1793,10 @@ namespace Google.Cloud.AIPlatform.V1 {
             HealthHttpUri = input.ReadString();
             break;
           }
+          case 34: {
+            ServiceAttachment = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -1728,6 +1822,10 @@ namespace Google.Cloud.AIPlatform.V1 {
           }
           case 26: {
             HealthHttpUri = input.ReadString();
+            break;
+          }
+          case 34: {
+            ServiceAttachment = input.ReadString();
             break;
           }
         }

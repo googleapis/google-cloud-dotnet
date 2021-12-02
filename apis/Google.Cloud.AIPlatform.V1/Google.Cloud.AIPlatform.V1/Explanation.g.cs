@@ -52,36 +52,41 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5YcmFpQXR0cmlidXRpb25IABIN",
             "CgV0b3BfaxgEIAEoBRIyCg5vdXRwdXRfaW5kaWNlcxgFIAEoCzIaLmdvb2ds",
             "ZS5wcm90b2J1Zi5MaXN0VmFsdWVCCAoGbWV0aG9kIjQKGVNhbXBsZWRTaGFw",
-            "bGV5QXR0cmlidXRpb24SFwoKcGF0aF9jb3VudBgBIAEoBUID4EECIoMBCh5J",
+            "bGV5QXR0cmlidXRpb24SFwoKcGF0aF9jb3VudBgBIAEoBUID4EECItEBCh5J",
             "bnRlZ3JhdGVkR3JhZGllbnRzQXR0cmlidXRpb24SFwoKc3RlcF9jb3VudBgB",
             "IAEoBUID4EECEkgKEnNtb290aF9ncmFkX2NvbmZpZxgCIAEoCzIsLmdvb2ds",
-            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNtb290aEdyYWRDb25maWcidAoPWHJh",
-            "aUF0dHJpYnV0aW9uEhcKCnN0ZXBfY291bnQYASABKAVCA+BBAhJIChJzbW9v",
-            "dGhfZ3JhZF9jb25maWcYAiABKAsyLC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5TbW9vdGhHcmFkQ29uZmlnIqkBChBTbW9vdGhHcmFkQ29uZmlnEhUK",
-            "C25vaXNlX3NpZ21hGAEgASgCSAASTAoTZmVhdHVyZV9ub2lzZV9zaWdtYRgC",
-            "IAEoCzItLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkZlYXR1cmVOb2lz",
-            "ZVNpZ21hSAASGgoSbm9pc3lfc2FtcGxlX2NvdW50GAMgASgFQhQKEkdyYWRp",
-            "ZW50Tm9pc2VTaWdtYSKhAQoRRmVhdHVyZU5vaXNlU2lnbWESVwoLbm9pc2Vf",
-            "c2lnbWEYASADKAsyQi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GZWF0",
-            "dXJlTm9pc2VTaWdtYS5Ob2lzZVNpZ21hRm9yRmVhdHVyZRozChROb2lzZVNp",
-            "Z21hRm9yRmVhdHVyZRIMCgRuYW1lGAEgASgJEg0KBXNpZ21hGAIgASgCIqsB",
-            "ChdFeHBsYW5hdGlvblNwZWNPdmVycmlkZRJFCgpwYXJhbWV0ZXJzGAEgASgL",
-            "MjEuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwbGFuYXRpb25QYXJh",
-            "bWV0ZXJzEkkKCG1ldGFkYXRhGAIgASgLMjcuZ29vZ2xlLmNsb3VkLmFpcGxh",
-            "dGZvcm0udjEuRXhwbGFuYXRpb25NZXRhZGF0YU92ZXJyaWRlIr8CChtFeHBs",
-            "YW5hdGlvbk1ldGFkYXRhT3ZlcnJpZGUSWAoGaW5wdXRzGAEgAygLMkMuZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwbGFuYXRpb25NZXRhZGF0YU92",
-            "ZXJyaWRlLklucHV0c0VudHJ5QgPgQQIaSAoVSW5wdXRNZXRhZGF0YU92ZXJy",
-            "aWRlEi8KD2lucHV0X2Jhc2VsaW5lcxgBIAMoCzIWLmdvb2dsZS5wcm90b2J1",
-            "Zi5WYWx1ZRp8CgtJbnB1dHNFbnRyeRILCgNrZXkYASABKAkSXAoFdmFsdWUY",
-            "AiABKAsyTS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBsYW5hdGlv",
-            "bk1ldGFkYXRhT3ZlcnJpZGUuSW5wdXRNZXRhZGF0YU92ZXJyaWRlOgI4AULU",
-            "AQoeY29tLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxQhBFeHBsYW5hdGlv",
-            "blByb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvYWlwbGF0Zm9ybS92MTthaXBsYXRmb3JtqgIaR29vZ2xlLkNs",
-            "b3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
-            "MeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
+            "ZS5jbG91ZC5haXBsYXRmb3JtLnYxLlNtb290aEdyYWRDb25maWcSTAoUYmx1",
+            "cl9iYXNlbGluZV9jb25maWcYAyABKAsyLi5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5CbHVyQmFzZWxpbmVDb25maWciwgEKD1hyYWlBdHRyaWJ1dGlv",
+            "bhIXCgpzdGVwX2NvdW50GAEgASgFQgPgQQISSAoSc21vb3RoX2dyYWRfY29u",
+            "ZmlnGAIgASgLMiwuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuU21vb3Ro",
+            "R3JhZENvbmZpZxJMChRibHVyX2Jhc2VsaW5lX2NvbmZpZxgDIAEoCzIuLmdv",
+            "b2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkJsdXJCYXNlbGluZUNvbmZpZyKp",
+            "AQoQU21vb3RoR3JhZENvbmZpZxIVCgtub2lzZV9zaWdtYRgBIAEoAkgAEkwK",
+            "E2ZlYXR1cmVfbm9pc2Vfc2lnbWEYAiABKAsyLS5nb29nbGUuY2xvdWQuYWlw",
+            "bGF0Zm9ybS52MS5GZWF0dXJlTm9pc2VTaWdtYUgAEhoKEm5vaXN5X3NhbXBs",
+            "ZV9jb3VudBgDIAEoBUIUChJHcmFkaWVudE5vaXNlU2lnbWEioQEKEUZlYXR1",
+            "cmVOb2lzZVNpZ21hElcKC25vaXNlX3NpZ21hGAEgAygLMkIuZ29vZ2xlLmNs",
+            "b3VkLmFpcGxhdGZvcm0udjEuRmVhdHVyZU5vaXNlU2lnbWEuTm9pc2VTaWdt",
+            "YUZvckZlYXR1cmUaMwoUTm9pc2VTaWdtYUZvckZlYXR1cmUSDAoEbmFtZRgB",
+            "IAEoCRINCgVzaWdtYRgCIAEoAiIsChJCbHVyQmFzZWxpbmVDb25maWcSFgoO",
+            "bWF4X2JsdXJfc2lnbWEYASABKAIiqwEKF0V4cGxhbmF0aW9uU3BlY092ZXJy",
+            "aWRlEkUKCnBhcmFtZXRlcnMYASABKAsyMS5nb29nbGUuY2xvdWQuYWlwbGF0",
+            "Zm9ybS52MS5FeHBsYW5hdGlvblBhcmFtZXRlcnMSSQoIbWV0YWRhdGEYAiAB",
+            "KAsyNy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5FeHBsYW5hdGlvbk1l",
+            "dGFkYXRhT3ZlcnJpZGUivwIKG0V4cGxhbmF0aW9uTWV0YWRhdGFPdmVycmlk",
+            "ZRJYCgZpbnB1dHMYASADKAsyQy5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52",
+            "MS5FeHBsYW5hdGlvbk1ldGFkYXRhT3ZlcnJpZGUuSW5wdXRzRW50cnlCA+BB",
+            "AhpIChVJbnB1dE1ldGFkYXRhT3ZlcnJpZGUSLwoPaW5wdXRfYmFzZWxpbmVz",
+            "GAEgAygLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlGnwKC0lucHV0c0VudHJ5",
+            "EgsKA2tleRgBIAEoCRJcCgV2YWx1ZRgCIAEoCzJNLmdvb2dsZS5jbG91ZC5h",
+            "aXBsYXRmb3JtLnYxLkV4cGxhbmF0aW9uTWV0YWRhdGFPdmVycmlkZS5JbnB1",
+            "dE1ldGFkYXRhT3ZlcnJpZGU6AjgBQtQBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
+            "cGxhdGZvcm0udjFCEEV4cGxhbmF0aW9uUHJvdG9QAVpEZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9haXBsYXRmb3JtL3Yx",
+            "O2FpcGxhdGZvcm2qAhpHb29nbGUuQ2xvdWQuQUlQbGF0Zm9ybS5WMcoCGkdv",
+            "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
+            "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationMetadataReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -91,10 +96,11 @@ namespace Google.Cloud.AIPlatform.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationSpec), global::Google.Cloud.AIPlatform.V1.ExplanationSpec.Parser, new[]{ "Parameters", "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationParameters), global::Google.Cloud.AIPlatform.V1.ExplanationParameters.Parser, new[]{ "SampledShapleyAttribution", "IntegratedGradientsAttribution", "XraiAttribution", "TopK", "OutputIndices" }, new[]{ "Method" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SampledShapleyAttribution), global::Google.Cloud.AIPlatform.V1.SampledShapleyAttribution.Parser, new[]{ "PathCount" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IntegratedGradientsAttribution), global::Google.Cloud.AIPlatform.V1.IntegratedGradientsAttribution.Parser, new[]{ "StepCount", "SmoothGradConfig" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.XraiAttribution), global::Google.Cloud.AIPlatform.V1.XraiAttribution.Parser, new[]{ "StepCount", "SmoothGradConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.IntegratedGradientsAttribution), global::Google.Cloud.AIPlatform.V1.IntegratedGradientsAttribution.Parser, new[]{ "StepCount", "SmoothGradConfig", "BlurBaselineConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.XraiAttribution), global::Google.Cloud.AIPlatform.V1.XraiAttribution.Parser, new[]{ "StepCount", "SmoothGradConfig", "BlurBaselineConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SmoothGradConfig), global::Google.Cloud.AIPlatform.V1.SmoothGradConfig.Parser, new[]{ "NoiseSigma", "FeatureNoiseSigma", "NoisySampleCount" }, new[]{ "GradientNoiseSigma" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureNoiseSigma), global::Google.Cloud.AIPlatform.V1.FeatureNoiseSigma.Parser, new[]{ "NoiseSigma" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FeatureNoiseSigma.Types.NoiseSigmaForFeature), global::Google.Cloud.AIPlatform.V1.FeatureNoiseSigma.Types.NoiseSigmaForFeature.Parser, new[]{ "Name", "Sigma" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig), global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig.Parser, new[]{ "MaxBlurSigma" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationSpecOverride), global::Google.Cloud.AIPlatform.V1.ExplanationSpecOverride.Parser, new[]{ "Parameters", "Metadata" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadataOverride), global::Google.Cloud.AIPlatform.V1.ExplanationMetadataOverride.Parser, new[]{ "Inputs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadataOverride.Types.InputMetadataOverride), global::Google.Cloud.AIPlatform.V1.ExplanationMetadataOverride.Types.InputMetadataOverride.Parser, new[]{ "InputBaselines" }, null, null, null, null),
             null, })
@@ -1964,6 +1970,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public IntegratedGradientsAttribution(IntegratedGradientsAttribution other) : this() {
       stepCount_ = other.stepCount_;
       smoothGradConfig_ = other.smoothGradConfig_ != null ? other.smoothGradConfig_.Clone() : null;
+      blurBaselineConfig_ = other.blurBaselineConfig_ != null ? other.blurBaselineConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2012,6 +2019,26 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "blur_baseline_config" field.</summary>
+    public const int BlurBaselineConfigFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig blurBaselineConfig_;
+    /// <summary>
+    /// Config for IG with blur baseline.
+    ///
+    /// When enabled, a linear path from the maximally blurred image to the input
+    /// image is created. Using a blurred baseline instead of zero (black image) is
+    /// motivated by the BlurIG approach explained here:
+    /// https://arxiv.org/abs/2004.03383
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig BlurBaselineConfig {
+      get { return blurBaselineConfig_; }
+      set {
+        blurBaselineConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2029,6 +2056,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (StepCount != other.StepCount) return false;
       if (!object.Equals(SmoothGradConfig, other.SmoothGradConfig)) return false;
+      if (!object.Equals(BlurBaselineConfig, other.BlurBaselineConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2038,6 +2066,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (StepCount != 0) hash ^= StepCount.GetHashCode();
       if (smoothGradConfig_ != null) hash ^= SmoothGradConfig.GetHashCode();
+      if (blurBaselineConfig_ != null) hash ^= BlurBaselineConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2064,6 +2093,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(SmoothGradConfig);
       }
+      if (blurBaselineConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BlurBaselineConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2082,6 +2115,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(SmoothGradConfig);
       }
+      if (blurBaselineConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BlurBaselineConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2097,6 +2134,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (smoothGradConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SmoothGradConfig);
+      }
+      if (blurBaselineConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BlurBaselineConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2118,6 +2158,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           SmoothGradConfig = new global::Google.Cloud.AIPlatform.V1.SmoothGradConfig();
         }
         SmoothGradConfig.MergeFrom(other.SmoothGradConfig);
+      }
+      if (other.blurBaselineConfig_ != null) {
+        if (blurBaselineConfig_ == null) {
+          BlurBaselineConfig = new global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig();
+        }
+        BlurBaselineConfig.MergeFrom(other.BlurBaselineConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2145,6 +2191,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(SmoothGradConfig);
             break;
           }
+          case 26: {
+            if (blurBaselineConfig_ == null) {
+              BlurBaselineConfig = new global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig();
+            }
+            input.ReadMessage(BlurBaselineConfig);
+            break;
+          }
         }
       }
     #endif
@@ -2169,6 +2222,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               SmoothGradConfig = new global::Google.Cloud.AIPlatform.V1.SmoothGradConfig();
             }
             input.ReadMessage(SmoothGradConfig);
+            break;
+          }
+          case 26: {
+            if (blurBaselineConfig_ == null) {
+              BlurBaselineConfig = new global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig();
+            }
+            input.ReadMessage(BlurBaselineConfig);
             break;
           }
         }
@@ -2222,6 +2282,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     public XraiAttribution(XraiAttribution other) : this() {
       stepCount_ = other.stepCount_;
       smoothGradConfig_ = other.smoothGradConfig_ != null ? other.smoothGradConfig_.Clone() : null;
+      blurBaselineConfig_ = other.blurBaselineConfig_ != null ? other.blurBaselineConfig_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2270,6 +2331,26 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
     }
 
+    /// <summary>Field number for the "blur_baseline_config" field.</summary>
+    public const int BlurBaselineConfigFieldNumber = 3;
+    private global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig blurBaselineConfig_;
+    /// <summary>
+    /// Config for XRAI with blur baseline.
+    ///
+    /// When enabled, a linear path from the maximally blurred image to the input
+    /// image is created. Using a blurred baseline instead of zero (black image) is
+    /// motivated by the BlurIG approach explained here:
+    /// https://arxiv.org/abs/2004.03383
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig BlurBaselineConfig {
+      get { return blurBaselineConfig_; }
+      set {
+        blurBaselineConfig_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -2287,6 +2368,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (StepCount != other.StepCount) return false;
       if (!object.Equals(SmoothGradConfig, other.SmoothGradConfig)) return false;
+      if (!object.Equals(BlurBaselineConfig, other.BlurBaselineConfig)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2296,6 +2378,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       int hash = 1;
       if (StepCount != 0) hash ^= StepCount.GetHashCode();
       if (smoothGradConfig_ != null) hash ^= SmoothGradConfig.GetHashCode();
+      if (blurBaselineConfig_ != null) hash ^= BlurBaselineConfig.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2322,6 +2405,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(SmoothGradConfig);
       }
+      if (blurBaselineConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BlurBaselineConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2340,6 +2427,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(SmoothGradConfig);
       }
+      if (blurBaselineConfig_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(BlurBaselineConfig);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2355,6 +2446,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (smoothGradConfig_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(SmoothGradConfig);
+      }
+      if (blurBaselineConfig_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(BlurBaselineConfig);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2376,6 +2470,12 @@ namespace Google.Cloud.AIPlatform.V1 {
           SmoothGradConfig = new global::Google.Cloud.AIPlatform.V1.SmoothGradConfig();
         }
         SmoothGradConfig.MergeFrom(other.SmoothGradConfig);
+      }
+      if (other.blurBaselineConfig_ != null) {
+        if (blurBaselineConfig_ == null) {
+          BlurBaselineConfig = new global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig();
+        }
+        BlurBaselineConfig.MergeFrom(other.BlurBaselineConfig);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2403,6 +2503,13 @@ namespace Google.Cloud.AIPlatform.V1 {
             input.ReadMessage(SmoothGradConfig);
             break;
           }
+          case 26: {
+            if (blurBaselineConfig_ == null) {
+              BlurBaselineConfig = new global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig();
+            }
+            input.ReadMessage(BlurBaselineConfig);
+            break;
+          }
         }
       }
     #endif
@@ -2427,6 +2534,13 @@ namespace Google.Cloud.AIPlatform.V1 {
               SmoothGradConfig = new global::Google.Cloud.AIPlatform.V1.SmoothGradConfig();
             }
             input.ReadMessage(SmoothGradConfig);
+            break;
+          }
+          case 26: {
+            if (blurBaselineConfig_ == null) {
+              BlurBaselineConfig = new global::Google.Cloud.AIPlatform.V1.BlurBaselineConfig();
+            }
+            input.ReadMessage(BlurBaselineConfig);
             break;
           }
         }
@@ -3217,6 +3331,209 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
 
   /// <summary>
+  /// Config for blur baseline.
+  ///
+  /// When enabled, a linear path from the maximally blurred image to the input
+  /// image is created. Using a blurred baseline instead of zero (black image) is
+  /// motivated by the BlurIG approach explained here:
+  /// https://arxiv.org/abs/2004.03383
+  /// </summary>
+  public sealed partial class BlurBaselineConfig : pb::IMessage<BlurBaselineConfig>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<BlurBaselineConfig> _parser = new pb::MessageParser<BlurBaselineConfig>(() => new BlurBaselineConfig());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<BlurBaselineConfig> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor.MessageTypes[10]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BlurBaselineConfig() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BlurBaselineConfig(BlurBaselineConfig other) : this() {
+      maxBlurSigma_ = other.maxBlurSigma_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public BlurBaselineConfig Clone() {
+      return new BlurBaselineConfig(this);
+    }
+
+    /// <summary>Field number for the "max_blur_sigma" field.</summary>
+    public const int MaxBlurSigmaFieldNumber = 1;
+    private float maxBlurSigma_;
+    /// <summary>
+    /// The standard deviation of the blur kernel for the blurred baseline. The
+    /// same blurring parameter is used for both the height and the width
+    /// dimension. If not set, the method defaults to the zero (i.e. black for
+    /// images) baseline.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public float MaxBlurSigma {
+      get { return maxBlurSigma_; }
+      set {
+        maxBlurSigma_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as BlurBaselineConfig);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(BlurBaselineConfig other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.Equals(MaxBlurSigma, other.MaxBlurSigma)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MaxBlurSigma != 0F) hash ^= pbc::ProtobufEqualityComparers.BitwiseSingleEqualityComparer.GetHashCode(MaxBlurSigma);
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MaxBlurSigma != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(MaxBlurSigma);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MaxBlurSigma != 0F) {
+        output.WriteRawTag(13);
+        output.WriteFloat(MaxBlurSigma);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MaxBlurSigma != 0F) {
+        size += 1 + 4;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(BlurBaselineConfig other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MaxBlurSigma != 0F) {
+        MaxBlurSigma = other.MaxBlurSigma;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 13: {
+            MaxBlurSigma = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 13: {
+            MaxBlurSigma = input.ReadFloat();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// The [ExplanationSpec][google.cloud.aiplatform.v1.ExplanationSpec] entries that can be overridden at
   /// [online explanation][google.cloud.aiplatform.v1.PredictionService.Explain] time.
   /// </summary>
@@ -3234,7 +3551,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor.MessageTypes[10]; }
+      get { return global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor.MessageTypes[11]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -3490,7 +3807,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor.MessageTypes[11]; }
+      get { return global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor.MessageTypes[12]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

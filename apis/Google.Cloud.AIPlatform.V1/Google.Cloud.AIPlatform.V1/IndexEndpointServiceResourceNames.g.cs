@@ -90,4 +90,16 @@ namespace Google.Cloud.AIPlatform.V1
             set => IndexEndpoint = value?.ToString() ?? "";
         }
     }
+
+    public partial class MutateDeployedIndexRequest
+    {
+        /// <summary>
+        /// <see cref="IndexEndpointName"/>-typed view over the <see cref="IndexEndpoint"/> resource name property.
+        /// </summary>
+        public IndexEndpointName IndexEndpointAsIndexEndpointName
+        {
+            get => string.IsNullOrEmpty(IndexEndpoint) ? null : IndexEndpointName.Parse(IndexEndpoint, allowUnparsed: true);
+            set => IndexEndpoint = value?.ToString() ?? "";
+        }
+    }
 }

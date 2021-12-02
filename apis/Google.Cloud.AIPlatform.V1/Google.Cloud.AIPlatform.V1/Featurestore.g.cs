@@ -64,7 +64,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// Vertex Feature Store provides a centralized repository for organizing,
+  /// Vertex AI Feature Store provides a centralized repository for organizing,
   /// storing, and serving ML features. The Featurestore is a top-level container
   /// for your features and their values.
   /// </summary>

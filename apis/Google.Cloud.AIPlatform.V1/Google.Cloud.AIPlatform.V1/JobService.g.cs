@@ -6510,7 +6510,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private string deployedModelId_ = "";
     /// <summary>
     /// Required. The DeployedModel ID of the
-    /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+    /// [ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
