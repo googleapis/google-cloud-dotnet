@@ -58,6 +58,8 @@ namespace Google.Cloud.AIPlatform.V1
             DeployIndexOperationsSettings = existing.DeployIndexOperationsSettings.Clone();
             UndeployIndexSettings = existing.UndeployIndexSettings;
             UndeployIndexOperationsSettings = existing.UndeployIndexOperationsSettings.Clone();
+            MutateDeployedIndexSettings = existing.MutateDeployedIndexSettings;
+            MutateDeployedIndexOperationsSettings = existing.MutateDeployedIndexOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -220,6 +222,37 @@ namespace Google.Cloud.AIPlatform.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings UndeployIndexOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>IndexEndpointServiceClient.MutateDeployedIndex</c> and
+        /// <c>IndexEndpointServiceClient.MutateDeployedIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings MutateDeployedIndexSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>IndexEndpointServiceClient.MutateDeployedIndex</c> and
+        /// <c>IndexEndpointServiceClient.MutateDeployedIndexAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings MutateDeployedIndexOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -1360,6 +1393,184 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<UndeployIndexResponse, UndeployIndexOperationMetadata>> UndeployIndexAsync(IndexEndpointName indexEndpoint, string deployedIndexId, st::CancellationToken cancellationToken) =>
             UndeployIndexAsync(indexEndpoint, deployedIndexId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> MutateDeployedIndex(MutateDeployedIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> MutateDeployedIndexAsync(MutateDeployedIndexRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> MutateDeployedIndexAsync(MutateDeployedIndexRequest request, st::CancellationToken cancellationToken) =>
+            MutateDeployedIndexAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>MutateDeployedIndex</c>.</summary>
+        public virtual lro::OperationsClient MutateDeployedIndexOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>MutateDeployedIndex</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> PollOnceMutateDeployedIndex(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MutateDeployedIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>MutateDeployedIndex</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> PollOnceMutateDeployedIndexAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), MutateDeployedIndexOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="indexEndpoint">
+        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
+        /// Format:
+        /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+        /// </param>
+        /// <param name="deployedIndex">
+        /// Required. The DeployedIndex to be updated within the IndexEndpoint.
+        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
+        /// and [DeployedIndex][dedicated_resources]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> MutateDeployedIndex(string indexEndpoint, DeployedIndex deployedIndex, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedIndex(new MutateDeployedIndexRequest
+            {
+                IndexEndpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(indexEndpoint, nameof(indexEndpoint)),
+                DeployedIndex = gax::GaxPreconditions.CheckNotNull(deployedIndex, nameof(deployedIndex)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="indexEndpoint">
+        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
+        /// Format:
+        /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+        /// </param>
+        /// <param name="deployedIndex">
+        /// Required. The DeployedIndex to be updated within the IndexEndpoint.
+        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
+        /// and [DeployedIndex][dedicated_resources]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> MutateDeployedIndexAsync(string indexEndpoint, DeployedIndex deployedIndex, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedIndexAsync(new MutateDeployedIndexRequest
+            {
+                IndexEndpoint = gax::GaxPreconditions.CheckNotNullOrEmpty(indexEndpoint, nameof(indexEndpoint)),
+                DeployedIndex = gax::GaxPreconditions.CheckNotNull(deployedIndex, nameof(deployedIndex)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="indexEndpoint">
+        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
+        /// Format:
+        /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+        /// </param>
+        /// <param name="deployedIndex">
+        /// Required. The DeployedIndex to be updated within the IndexEndpoint.
+        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
+        /// and [DeployedIndex][dedicated_resources]
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> MutateDeployedIndexAsync(string indexEndpoint, DeployedIndex deployedIndex, st::CancellationToken cancellationToken) =>
+            MutateDeployedIndexAsync(indexEndpoint, deployedIndex, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="indexEndpoint">
+        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
+        /// Format:
+        /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+        /// </param>
+        /// <param name="deployedIndex">
+        /// Required. The DeployedIndex to be updated within the IndexEndpoint.
+        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
+        /// and [DeployedIndex][dedicated_resources]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> MutateDeployedIndex(IndexEndpointName indexEndpoint, DeployedIndex deployedIndex, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedIndex(new MutateDeployedIndexRequest
+            {
+                IndexEndpointAsIndexEndpointName = gax::GaxPreconditions.CheckNotNull(indexEndpoint, nameof(indexEndpoint)),
+                DeployedIndex = gax::GaxPreconditions.CheckNotNull(deployedIndex, nameof(deployedIndex)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="indexEndpoint">
+        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
+        /// Format:
+        /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+        /// </param>
+        /// <param name="deployedIndex">
+        /// Required. The DeployedIndex to be updated within the IndexEndpoint.
+        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
+        /// and [DeployedIndex][dedicated_resources]
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> MutateDeployedIndexAsync(IndexEndpointName indexEndpoint, DeployedIndex deployedIndex, gaxgrpc::CallSettings callSettings = null) =>
+            MutateDeployedIndexAsync(new MutateDeployedIndexRequest
+            {
+                IndexEndpointAsIndexEndpointName = gax::GaxPreconditions.CheckNotNull(indexEndpoint, nameof(indexEndpoint)),
+                DeployedIndex = gax::GaxPreconditions.CheckNotNull(deployedIndex, nameof(deployedIndex)),
+            }, callSettings);
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="indexEndpoint">
+        /// Required. The name of the IndexEndpoint resource into which to deploy an Index.
+        /// Format:
+        /// `projects/{project}/locations/{location}/indexEndpoints/{index_endpoint}`
+        /// </param>
+        /// <param name="deployedIndex">
+        /// Required. The DeployedIndex to be updated within the IndexEndpoint.
+        /// Currently, the updatable fields are [DeployedIndex][automatic_resources]
+        /// and [DeployedIndex][dedicated_resources]
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> MutateDeployedIndexAsync(IndexEndpointName indexEndpoint, DeployedIndex deployedIndex, st::CancellationToken cancellationToken) =>
+            MutateDeployedIndexAsync(indexEndpoint, deployedIndex, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>IndexEndpointService client wrapper implementation, for convenient use.</summary>
@@ -1382,6 +1593,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         private readonly gaxgrpc::ApiCall<UndeployIndexRequest, lro::Operation> _callUndeployIndex;
 
+        private readonly gaxgrpc::ApiCall<MutateDeployedIndexRequest, lro::Operation> _callMutateDeployedIndex;
+
         /// <summary>
         /// Constructs a client wrapper for the IndexEndpointService service, with the specified gRPC client and
         /// settings.
@@ -1397,6 +1610,7 @@ namespace Google.Cloud.AIPlatform.V1
             DeleteIndexEndpointOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteIndexEndpointOperationsSettings);
             DeployIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeployIndexOperationsSettings);
             UndeployIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UndeployIndexOperationsSettings);
+            MutateDeployedIndexOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.MutateDeployedIndexOperationsSettings);
             _callCreateIndexEndpoint = clientHelper.BuildApiCall<CreateIndexEndpointRequest, lro::Operation>(grpcClient.CreateIndexEndpointAsync, grpcClient.CreateIndexEndpoint, effectiveSettings.CreateIndexEndpointSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateIndexEndpoint);
             Modify_CreateIndexEndpointApiCall(ref _callCreateIndexEndpoint);
@@ -1418,6 +1632,9 @@ namespace Google.Cloud.AIPlatform.V1
             _callUndeployIndex = clientHelper.BuildApiCall<UndeployIndexRequest, lro::Operation>(grpcClient.UndeployIndexAsync, grpcClient.UndeployIndex, effectiveSettings.UndeployIndexSettings).WithGoogleRequestParam("index_endpoint", request => request.IndexEndpoint);
             Modify_ApiCall(ref _callUndeployIndex);
             Modify_UndeployIndexApiCall(ref _callUndeployIndex);
+            _callMutateDeployedIndex = clientHelper.BuildApiCall<MutateDeployedIndexRequest, lro::Operation>(grpcClient.MutateDeployedIndexAsync, grpcClient.MutateDeployedIndex, effectiveSettings.MutateDeployedIndexSettings).WithGoogleRequestParam("index_endpoint", request => request.IndexEndpoint);
+            Modify_ApiCall(ref _callMutateDeployedIndex);
+            Modify_MutateDeployedIndexApiCall(ref _callMutateDeployedIndex);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1437,6 +1654,8 @@ namespace Google.Cloud.AIPlatform.V1
 
         partial void Modify_UndeployIndexApiCall(ref gaxgrpc::ApiCall<UndeployIndexRequest, lro::Operation> call);
 
+        partial void Modify_MutateDeployedIndexApiCall(ref gaxgrpc::ApiCall<MutateDeployedIndexRequest, lro::Operation> call);
+
         partial void OnConstruction(IndexEndpointService.IndexEndpointServiceClient grpcClient, IndexEndpointServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC IndexEndpointService client</summary>
@@ -1455,6 +1674,8 @@ namespace Google.Cloud.AIPlatform.V1
         partial void Modify_DeployIndexRequest(ref DeployIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_UndeployIndexRequest(ref UndeployIndexRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_MutateDeployedIndexRequest(ref MutateDeployedIndexRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>The long-running operations client for <c>CreateIndexEndpoint</c>.</summary>
         public override lro::OperationsClient CreateIndexEndpointOperationsClient { get; }
@@ -1640,6 +1861,33 @@ namespace Google.Cloud.AIPlatform.V1
         {
             Modify_UndeployIndexRequest(ref request, ref callSettings);
             return new lro::Operation<UndeployIndexResponse, UndeployIndexOperationMetadata>(await _callUndeployIndex.Async(request, callSettings).ConfigureAwait(false), UndeployIndexOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>MutateDeployedIndex</c>.</summary>
+        public override lro::OperationsClient MutateDeployedIndexOperationsClient { get; }
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata> MutateDeployedIndex(MutateDeployedIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MutateDeployedIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>(_callMutateDeployedIndex.Sync(request, callSettings), MutateDeployedIndexOperationsClient);
+        }
+
+        /// <summary>
+        /// Update an existing DeployedIndex under an IndexEndpoint.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>> MutateDeployedIndexAsync(MutateDeployedIndexRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_MutateDeployedIndexRequest(ref request, ref callSettings);
+            return new lro::Operation<MutateDeployedIndexResponse, MutateDeployedIndexOperationMetadata>(await _callMutateDeployedIndex.Async(request, callSettings).ConfigureAwait(false), MutateDeployedIndexOperationsClient);
         }
     }
 

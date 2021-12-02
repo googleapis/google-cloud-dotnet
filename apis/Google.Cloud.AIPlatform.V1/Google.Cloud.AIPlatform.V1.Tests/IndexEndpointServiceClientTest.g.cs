@@ -57,6 +57,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -94,6 +95,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -133,6 +135,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -170,6 +173,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -209,6 +213,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -246,6 +251,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.GetIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -286,6 +292,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -324,6 +331,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -364,6 +372,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpoint(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);
@@ -402,6 +411,7 @@ namespace Google.Cloud.AIPlatform.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
                 Network = "networkd22ce091",
+                EnablePrivateServiceConnect = false,
             };
             mockGrpcClient.Setup(x => x.UpdateIndexEndpointAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<IndexEndpoint>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             IndexEndpointServiceClient client = new IndexEndpointServiceClientImpl(mockGrpcClient.Object, null);

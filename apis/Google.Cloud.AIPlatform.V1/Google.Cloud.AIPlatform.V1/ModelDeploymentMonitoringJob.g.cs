@@ -573,9 +573,10 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int EnableMonitoringPipelineLogsFieldNumber = 22;
     private bool enableMonitoringPipelineLogs_;
     /// <summary>
-    /// If true, the scheduled monitoring pipeline status logs are sent to
-    /// Google Cloud Logging. Please note the logs incur cost, which are subject to
-    /// [Cloud Logging pricing](https://cloud.google.com/logging#pricing).
+    /// If true, the scheduled monitoring pipeline logs are sent to
+    /// Google Cloud Logging, including pipeline status and anomalies detected.
+    /// Please note the logs incur cost, which are subject to [Cloud Logging
+    /// pricing](https://cloud.google.com/logging#pricing).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

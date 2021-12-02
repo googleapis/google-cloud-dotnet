@@ -164,6 +164,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
+  /// LINT.IfChange
   /// A message representing a Study.
   /// </summary>
   public sealed partial class Study : pb::IMessage<Study>
@@ -795,9 +796,9 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// Output only. The identifier of the client that originally requested this Trial.
     /// Each client is identified by a unique client_id. When a client
-    /// asks for a suggestion, Vizier will assign it a Trial. The client should
-    /// evaluate the Trial, complete it, and report back to Vizier.
-    /// If suggestion is asked again by same client_id before the Trial is
+    /// asks for a suggestion, Vertex AI Vizier will assign it a Trial. The client
+    /// should evaluate the Trial, complete it, and report back to Vertex AI
+    /// Vizier. If suggestion is asked again by same client_id before the Trial is
     /// completed, the same Trial will be returned. Multiple clients with
     /// different client_ids can ask for suggestions simultaneously, each of them
     /// will get their own Trial.
@@ -1691,7 +1692,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     private global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise observationNoise_ = global::Google.Cloud.AIPlatform.V1.StudySpec.Types.ObservationNoise.Unspecified;
     /// <summary>
     /// The observation noise level of the study.
-    /// Currently only supported by the Vizier service. Not supported by
+    /// Currently only supported by the Vertex AI Vizier service. Not supported by
     /// HyperparamterTuningJob or TrainingPipeline.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2037,7 +2038,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// <summary>
         /// The default algorithm used by Vertex AI for [hyperparameter
         /// tuning](https://cloud.google.com/vertex-ai/docs/training/hyperparameter-tuning-overview)
-        /// and [Vertex Vizier](https://cloud.google.com/vertex-ai/docs/vizier).
+        /// and [Vertex AI Vizier](https://cloud.google.com/vertex-ai/docs/vizier).
         /// </summary>
         [pbr::OriginalName("ALGORITHM_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -3006,8 +3007,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// relatively good starting point.  Unset value signals that there is no
             /// offered starting point.
             ///
-            /// Currently only supported by the Vizier service. Not supported by
-            /// HyperparamterTuningJob or TrainingPipeline.
+            /// Currently only supported by the Vertex AI Vizier service. Not supported
+            /// by HyperparamterTuningJob or TrainingPipeline.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3301,8 +3302,8 @@ namespace Google.Cloud.AIPlatform.V1 {
             /// relatively good starting point.  Unset value signals that there is no
             /// offered starting point.
             ///
-            /// Currently only supported by the Vizier service. Not supported by
-            /// HyperparamterTuningJob or TrainingPipeline.
+            /// Currently only supported by the Vertex AI Vizier service. Not supported
+            /// by HyperparamterTuningJob or TrainingPipeline.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

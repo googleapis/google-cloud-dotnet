@@ -863,6 +863,176 @@ namespace Google.Cloud.AIPlatform.V1
             CreateFeaturestoreAsync(parent, featurestore, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new Featurestore in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create Featurestores.
+        /// Format:
+        /// `projects/{project}/locations/{location}'`
+        /// </param>
+        /// <param name="featurestore">
+        /// Required. The Featurestore to create.
+        /// </param>
+        /// <param name="featurestoreId">
+        /// Required. The ID to use for this Featurestore, which will become the final component
+        /// of the Featurestore's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Featurestore, CreateFeaturestoreOperationMetadata> CreateFeaturestore(string parent, Featurestore featurestore, string featurestoreId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeaturestore(new CreateFeaturestoreRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Featurestore = gax::GaxPreconditions.CheckNotNull(featurestore, nameof(featurestore)),
+                FeaturestoreId = gax::GaxPreconditions.CheckNotNullOrEmpty(featurestoreId, nameof(featurestoreId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Featurestore in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create Featurestores.
+        /// Format:
+        /// `projects/{project}/locations/{location}'`
+        /// </param>
+        /// <param name="featurestore">
+        /// Required. The Featurestore to create.
+        /// </param>
+        /// <param name="featurestoreId">
+        /// Required. The ID to use for this Featurestore, which will become the final component
+        /// of the Featurestore's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Featurestore, CreateFeaturestoreOperationMetadata>> CreateFeaturestoreAsync(string parent, Featurestore featurestore, string featurestoreId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeaturestoreAsync(new CreateFeaturestoreRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Featurestore = gax::GaxPreconditions.CheckNotNull(featurestore, nameof(featurestore)),
+                FeaturestoreId = gax::GaxPreconditions.CheckNotNullOrEmpty(featurestoreId, nameof(featurestoreId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Featurestore in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create Featurestores.
+        /// Format:
+        /// `projects/{project}/locations/{location}'`
+        /// </param>
+        /// <param name="featurestore">
+        /// Required. The Featurestore to create.
+        /// </param>
+        /// <param name="featurestoreId">
+        /// Required. The ID to use for this Featurestore, which will become the final component
+        /// of the Featurestore's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the project and location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Featurestore, CreateFeaturestoreOperationMetadata>> CreateFeaturestoreAsync(string parent, Featurestore featurestore, string featurestoreId, st::CancellationToken cancellationToken) =>
+            CreateFeaturestoreAsync(parent, featurestore, featurestoreId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Featurestore in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create Featurestores.
+        /// Format:
+        /// `projects/{project}/locations/{location}'`
+        /// </param>
+        /// <param name="featurestore">
+        /// Required. The Featurestore to create.
+        /// </param>
+        /// <param name="featurestoreId">
+        /// Required. The ID to use for this Featurestore, which will become the final component
+        /// of the Featurestore's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Featurestore, CreateFeaturestoreOperationMetadata> CreateFeaturestore(gagr::LocationName parent, Featurestore featurestore, string featurestoreId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeaturestore(new CreateFeaturestoreRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Featurestore = gax::GaxPreconditions.CheckNotNull(featurestore, nameof(featurestore)),
+                FeaturestoreId = gax::GaxPreconditions.CheckNotNullOrEmpty(featurestoreId, nameof(featurestoreId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Featurestore in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create Featurestores.
+        /// Format:
+        /// `projects/{project}/locations/{location}'`
+        /// </param>
+        /// <param name="featurestore">
+        /// Required. The Featurestore to create.
+        /// </param>
+        /// <param name="featurestoreId">
+        /// Required. The ID to use for this Featurestore, which will become the final component
+        /// of the Featurestore's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the project and location.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Featurestore, CreateFeaturestoreOperationMetadata>> CreateFeaturestoreAsync(gagr::LocationName parent, Featurestore featurestore, string featurestoreId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeaturestoreAsync(new CreateFeaturestoreRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Featurestore = gax::GaxPreconditions.CheckNotNull(featurestore, nameof(featurestore)),
+                FeaturestoreId = gax::GaxPreconditions.CheckNotNullOrEmpty(featurestoreId, nameof(featurestoreId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Featurestore in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create Featurestores.
+        /// Format:
+        /// `projects/{project}/locations/{location}'`
+        /// </param>
+        /// <param name="featurestore">
+        /// Required. The Featurestore to create.
+        /// </param>
+        /// <param name="featurestoreId">
+        /// Required. The ID to use for this Featurestore, which will become the final component
+        /// of the Featurestore's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within the project and location.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Featurestore, CreateFeaturestoreOperationMetadata>> CreateFeaturestoreAsync(gagr::LocationName parent, Featurestore featurestore, string featurestoreId, st::CancellationToken cancellationToken) =>
+            CreateFeaturestoreAsync(parent, featurestore, featurestoreId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of a single Featurestore.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1684,6 +1854,176 @@ namespace Google.Cloud.AIPlatform.V1
             CreateEntityTypeAsync(parent, entityType, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates a new EntityType in a given Featurestore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Featurestore to create EntityTypes.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
+        /// </param>
+        /// <param name="entityType">
+        /// The EntityType to create.
+        /// </param>
+        /// <param name="entityTypeId">
+        /// Required. The ID to use for the EntityType, which will become the final component of
+        /// the EntityType's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within a featurestore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<EntityType, CreateEntityTypeOperationMetadata> CreateEntityType(string parent, EntityType entityType, string entityTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntityType(new CreateEntityTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntityType = entityType,
+                EntityTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new EntityType in a given Featurestore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Featurestore to create EntityTypes.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
+        /// </param>
+        /// <param name="entityType">
+        /// The EntityType to create.
+        /// </param>
+        /// <param name="entityTypeId">
+        /// Required. The ID to use for the EntityType, which will become the final component of
+        /// the EntityType's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within a featurestore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EntityType, CreateEntityTypeOperationMetadata>> CreateEntityTypeAsync(string parent, EntityType entityType, string entityTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntityTypeAsync(new CreateEntityTypeRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                EntityType = entityType,
+                EntityTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new EntityType in a given Featurestore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Featurestore to create EntityTypes.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
+        /// </param>
+        /// <param name="entityType">
+        /// The EntityType to create.
+        /// </param>
+        /// <param name="entityTypeId">
+        /// Required. The ID to use for the EntityType, which will become the final component of
+        /// the EntityType's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within a featurestore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EntityType, CreateEntityTypeOperationMetadata>> CreateEntityTypeAsync(string parent, EntityType entityType, string entityTypeId, st::CancellationToken cancellationToken) =>
+            CreateEntityTypeAsync(parent, entityType, entityTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new EntityType in a given Featurestore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Featurestore to create EntityTypes.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
+        /// </param>
+        /// <param name="entityType">
+        /// The EntityType to create.
+        /// </param>
+        /// <param name="entityTypeId">
+        /// Required. The ID to use for the EntityType, which will become the final component of
+        /// the EntityType's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within a featurestore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<EntityType, CreateEntityTypeOperationMetadata> CreateEntityType(FeaturestoreName parent, EntityType entityType, string entityTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntityType(new CreateEntityTypeRequest
+            {
+                ParentAsFeaturestoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntityType = entityType,
+                EntityTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new EntityType in a given Featurestore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Featurestore to create EntityTypes.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
+        /// </param>
+        /// <param name="entityType">
+        /// The EntityType to create.
+        /// </param>
+        /// <param name="entityTypeId">
+        /// Required. The ID to use for the EntityType, which will become the final component of
+        /// the EntityType's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within a featurestore.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EntityType, CreateEntityTypeOperationMetadata>> CreateEntityTypeAsync(FeaturestoreName parent, EntityType entityType, string entityTypeId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEntityTypeAsync(new CreateEntityTypeRequest
+            {
+                ParentAsFeaturestoreName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                EntityType = entityType,
+                EntityTypeId = gax::GaxPreconditions.CheckNotNullOrEmpty(entityTypeId, nameof(entityTypeId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new EntityType in a given Featurestore.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Featurestore to create EntityTypes.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}`
+        /// </param>
+        /// <param name="entityType">
+        /// The EntityType to create.
+        /// </param>
+        /// <param name="entityTypeId">
+        /// Required. The ID to use for the EntityType, which will become the final component of
+        /// the EntityType's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within a featurestore.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<EntityType, CreateEntityTypeOperationMetadata>> CreateEntityTypeAsync(FeaturestoreName parent, EntityType entityType, string entityTypeId, st::CancellationToken cancellationToken) =>
+            CreateEntityTypeAsync(parent, entityType, entityTypeId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets details of a single EntityType.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -2487,6 +2827,176 @@ namespace Google.Cloud.AIPlatform.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(EntityTypeName parent, Feature feature, st::CancellationToken cancellationToken) =>
             CreateFeatureAsync(parent, feature, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType to create a Feature.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final component of
+        /// the Feature's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Feature, CreateFeatureOperationMetadata> CreateFeature(string parent, Feature feature, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeature(new CreateFeatureRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+                FeatureId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType to create a Feature.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final component of
+        /// the Feature's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(string parent, Feature feature, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureAsync(new CreateFeatureRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+                FeatureId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType to create a Feature.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final component of
+        /// the Feature's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(string parent, Feature feature, string featureId, st::CancellationToken cancellationToken) =>
+            CreateFeatureAsync(parent, feature, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType to create a Feature.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final component of
+        /// the Feature's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Feature, CreateFeatureOperationMetadata> CreateFeature(EntityTypeName parent, Feature feature, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeature(new CreateFeatureRequest
+            {
+                ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+                FeatureId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType to create a Feature.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final component of
+        /// the Feature's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(EntityTypeName parent, Feature feature, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureAsync(new CreateFeatureRequest
+            {
+                ParentAsEntityTypeName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Feature = gax::GaxPreconditions.CheckNotNull(feature, nameof(feature)),
+                FeatureId = gax::GaxPreconditions.CheckNotNullOrEmpty(featureId, nameof(featureId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Feature in a given EntityType.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the EntityType to create a Feature.
+        /// Format:
+        /// `projects/{project}/locations/{location}/featurestores/{featurestore}/entityTypes/{entity_type}`
+        /// </param>
+        /// <param name="feature">
+        /// Required. The Feature to create.
+        /// </param>
+        /// <param name="featureId">
+        /// Required. The ID to use for the Feature, which will become the final component of
+        /// the Feature's resource name.
+        /// 
+        /// This value may be up to 60 characters, and valid characters are
+        /// `[a-z0-9_]`. The first character cannot be a number.
+        /// 
+        /// The value must be unique within an EntityType.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, CreateFeatureOperationMetadata>> CreateFeatureAsync(EntityTypeName parent, Feature feature, string featureId, st::CancellationToken cancellationToken) =>
+            CreateFeatureAsync(parent, feature, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a batch of Features in a given EntityType.

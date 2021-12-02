@@ -288,7 +288,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int TrainingPipelineFieldNumber = 7;
     private string trainingPipeline_ = "";
     /// <summary>
-    /// Output only. The resource name of the TrainingPipeline that uploaded this Model, if any.
+    /// Output only. The resource name of the TrainingPipeline that uploaded this Model, if
+    /// any.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -98,7 +98,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeaturestore</summary>
-        public void CreateFeaturestore()
+        public void CreateFeaturestore1()
         {
             // Snippet: CreateFeaturestore(string, Featurestore, CallSettings)
             // Create client
@@ -128,7 +128,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeaturestoreAsync</summary>
-        public async Task CreateFeaturestoreAsync()
+        public async Task CreateFeaturestore1Async()
         {
             // Snippet: CreateFeaturestoreAsync(string, Featurestore, CallSettings)
             // Additional: CreateFeaturestoreAsync(string, Featurestore, CancellationToken)
@@ -159,7 +159,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeaturestore</summary>
-        public void CreateFeaturestoreResourceNames()
+        public void CreateFeaturestore1ResourceNames()
         {
             // Snippet: CreateFeaturestore(LocationName, Featurestore, CallSettings)
             // Create client
@@ -189,7 +189,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeaturestoreAsync</summary>
-        public async Task CreateFeaturestoreResourceNamesAsync()
+        public async Task CreateFeaturestore1ResourceNamesAsync()
         {
             // Snippet: CreateFeaturestoreAsync(LocationName, Featurestore, CallSettings)
             // Additional: CreateFeaturestoreAsync(LocationName, Featurestore, CancellationToken)
@@ -200,6 +200,132 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             Featurestore featurestore = new Featurestore();
             // Make the request
             Operation<Featurestore, CreateFeaturestoreOperationMetadata> response = await featurestoreServiceClient.CreateFeaturestoreAsync(parent, featurestore);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Featurestore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateFeaturestoreAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Featurestore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeaturestore</summary>
+        public void CreateFeaturestore2()
+        {
+            // Snippet: CreateFeaturestore(string, Featurestore, string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Featurestore featurestore = new Featurestore();
+            string featurestoreId = "";
+            // Make the request
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> response = featurestoreServiceClient.CreateFeaturestore(parent, featurestore, featurestoreId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Featurestore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateFeaturestore(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Featurestore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeaturestoreAsync</summary>
+        public async Task CreateFeaturestore2Async()
+        {
+            // Snippet: CreateFeaturestoreAsync(string, Featurestore, string, CallSettings)
+            // Additional: CreateFeaturestoreAsync(string, Featurestore, string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Featurestore featurestore = new Featurestore();
+            string featurestoreId = "";
+            // Make the request
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> response = await featurestoreServiceClient.CreateFeaturestoreAsync(parent, featurestore, featurestoreId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Featurestore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateFeaturestoreAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Featurestore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeaturestore</summary>
+        public void CreateFeaturestore2ResourceNames()
+        {
+            // Snippet: CreateFeaturestore(LocationName, Featurestore, string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Featurestore featurestore = new Featurestore();
+            string featurestoreId = "";
+            // Make the request
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> response = featurestoreServiceClient.CreateFeaturestore(parent, featurestore, featurestoreId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Featurestore result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateFeaturestore(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Featurestore retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeaturestoreAsync</summary>
+        public async Task CreateFeaturestore2ResourceNamesAsync()
+        {
+            // Snippet: CreateFeaturestoreAsync(LocationName, Featurestore, string, CallSettings)
+            // Additional: CreateFeaturestoreAsync(LocationName, Featurestore, string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Featurestore featurestore = new Featurestore();
+            string featurestoreId = "";
+            // Make the request
+            Operation<Featurestore, CreateFeaturestoreOperationMetadata> response = await featurestoreServiceClient.CreateFeaturestoreAsync(parent, featurestore, featurestoreId);
 
             // Poll until the returned long-running operation is complete
             Operation<Featurestore, CreateFeaturestoreOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -1093,7 +1219,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
-        public void CreateEntityType()
+        public void CreateEntityType1()
         {
             // Snippet: CreateEntityType(string, EntityType, CallSettings)
             // Create client
@@ -1123,7 +1249,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityTypeAsync()
+        public async Task CreateEntityType1Async()
         {
             // Snippet: CreateEntityTypeAsync(string, EntityType, CallSettings)
             // Additional: CreateEntityTypeAsync(string, EntityType, CancellationToken)
@@ -1154,7 +1280,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEntityType</summary>
-        public void CreateEntityTypeResourceNames()
+        public void CreateEntityType1ResourceNames()
         {
             // Snippet: CreateEntityType(FeaturestoreName, EntityType, CallSettings)
             // Create client
@@ -1184,7 +1310,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEntityTypeAsync</summary>
-        public async Task CreateEntityTypeResourceNamesAsync()
+        public async Task CreateEntityType1ResourceNamesAsync()
         {
             // Snippet: CreateEntityTypeAsync(FeaturestoreName, EntityType, CallSettings)
             // Additional: CreateEntityTypeAsync(FeaturestoreName, EntityType, CancellationToken)
@@ -1195,6 +1321,132 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             EntityType entityType = new EntityType();
             // Make the request
             Operation<EntityType, CreateEntityTypeOperationMetadata> response = await featurestoreServiceClient.CreateEntityTypeAsync(parent, entityType);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EntityType, CreateEntityTypeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EntityType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EntityType, CreateEntityTypeOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateEntityTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EntityType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityType</summary>
+        public void CreateEntityType2()
+        {
+            // Snippet: CreateEntityType(string, EntityType, string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]";
+            EntityType entityType = new EntityType();
+            string entityTypeId = "";
+            // Make the request
+            Operation<EntityType, CreateEntityTypeOperationMetadata> response = featurestoreServiceClient.CreateEntityType(parent, entityType, entityTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EntityType, CreateEntityTypeOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EntityType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EntityType, CreateEntityTypeOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateEntityType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EntityType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityTypeAsync</summary>
+        public async Task CreateEntityType2Async()
+        {
+            // Snippet: CreateEntityTypeAsync(string, EntityType, string, CallSettings)
+            // Additional: CreateEntityTypeAsync(string, EntityType, string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]";
+            EntityType entityType = new EntityType();
+            string entityTypeId = "";
+            // Make the request
+            Operation<EntityType, CreateEntityTypeOperationMetadata> response = await featurestoreServiceClient.CreateEntityTypeAsync(parent, entityType, entityTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EntityType, CreateEntityTypeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            EntityType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EntityType, CreateEntityTypeOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateEntityTypeAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EntityType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityType</summary>
+        public void CreateEntityType2ResourceNames()
+        {
+            // Snippet: CreateEntityType(FeaturestoreName, EntityType, string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            FeaturestoreName parent = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]");
+            EntityType entityType = new EntityType();
+            string entityTypeId = "";
+            // Make the request
+            Operation<EntityType, CreateEntityTypeOperationMetadata> response = featurestoreServiceClient.CreateEntityType(parent, entityType, entityTypeId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<EntityType, CreateEntityTypeOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            EntityType result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<EntityType, CreateEntityTypeOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateEntityType(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                EntityType retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEntityTypeAsync</summary>
+        public async Task CreateEntityType2ResourceNamesAsync()
+        {
+            // Snippet: CreateEntityTypeAsync(FeaturestoreName, EntityType, string, CallSettings)
+            // Additional: CreateEntityTypeAsync(FeaturestoreName, EntityType, string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            FeaturestoreName parent = FeaturestoreName.FromProjectLocationFeaturestore("[PROJECT]", "[LOCATION]", "[FEATURESTORE]");
+            EntityType entityType = new EntityType();
+            string entityTypeId = "";
+            // Make the request
+            Operation<EntityType, CreateEntityTypeOperationMetadata> response = await featurestoreServiceClient.CreateEntityTypeAsync(parent, entityType, entityTypeId);
 
             // Poll until the returned long-running operation is complete
             Operation<EntityType, CreateEntityTypeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
@@ -2024,7 +2276,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeature</summary>
-        public void CreateFeature()
+        public void CreateFeature1()
         {
             // Snippet: CreateFeature(string, Feature, CallSettings)
             // Create client
@@ -2054,7 +2306,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeatureAsync</summary>
-        public async Task CreateFeatureAsync()
+        public async Task CreateFeature1Async()
         {
             // Snippet: CreateFeatureAsync(string, Feature, CallSettings)
             // Additional: CreateFeatureAsync(string, Feature, CancellationToken)
@@ -2085,7 +2337,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeature</summary>
-        public void CreateFeatureResourceNames()
+        public void CreateFeature1ResourceNames()
         {
             // Snippet: CreateFeature(EntityTypeName, Feature, CallSettings)
             // Create client
@@ -2115,7 +2367,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateFeatureAsync</summary>
-        public async Task CreateFeatureResourceNamesAsync()
+        public async Task CreateFeature1ResourceNamesAsync()
         {
             // Snippet: CreateFeatureAsync(EntityTypeName, Feature, CallSettings)
             // Additional: CreateFeatureAsync(EntityTypeName, Feature, CancellationToken)
@@ -2126,6 +2378,132 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             Feature feature = new Feature();
             // Make the request
             Operation<Feature, CreateFeatureOperationMetadata> response = await featurestoreServiceClient.CreateFeatureAsync(parent, feature);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateFeatureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeature</summary>
+        public void CreateFeature2()
+        {
+            // Snippet: CreateFeature(string, Feature, string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            Feature feature = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = featurestoreServiceClient.CreateFeature(parent, feature, featureId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateFeature(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureAsync</summary>
+        public async Task CreateFeature2Async()
+        {
+            // Snippet: CreateFeatureAsync(string, Feature, string, CallSettings)
+            // Additional: CreateFeatureAsync(string, Feature, string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]/featurestores/[FEATURESTORE]/entityTypes/[ENTITY_TYPE]";
+            Feature feature = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = await featurestoreServiceClient.CreateFeatureAsync(parent, feature, featureId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = await featurestoreServiceClient.PollOnceCreateFeatureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeature</summary>
+        public void CreateFeature2ResourceNames()
+        {
+            // Snippet: CreateFeature(EntityTypeName, Feature, string, CallSettings)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = FeaturestoreServiceClient.Create();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            Feature feature = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = featurestoreServiceClient.CreateFeature(parent, feature, featureId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, CreateFeatureOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, CreateFeatureOperationMetadata> retrievedResponse = featurestoreServiceClient.PollOnceCreateFeature(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureAsync</summary>
+        public async Task CreateFeature2ResourceNamesAsync()
+        {
+            // Snippet: CreateFeatureAsync(EntityTypeName, Feature, string, CallSettings)
+            // Additional: CreateFeatureAsync(EntityTypeName, Feature, string, CancellationToken)
+            // Create client
+            FeaturestoreServiceClient featurestoreServiceClient = await FeaturestoreServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EntityTypeName parent = EntityTypeName.FromProjectLocationFeaturestoreEntityType("[PROJECT]", "[LOCATION]", "[FEATURESTORE]", "[ENTITY_TYPE]");
+            Feature feature = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, CreateFeatureOperationMetadata> response = await featurestoreServiceClient.CreateFeatureAsync(parent, feature, featureId);
 
             // Poll until the returned long-running operation is complete
             Operation<Feature, CreateFeatureOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();

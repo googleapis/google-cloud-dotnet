@@ -237,7 +237,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// <summary>
     /// The state of this Artifact. This is a property of the Artifact, and does
     /// not imply or capture any ongoing process. This property is managed by
-    /// clients (such as Vertex Pipelines), and the system does not prescribe
+    /// clients (such as Vertex AI Pipelines), and the system does not prescribe
     /// or check the validity of state transitions.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -744,7 +744,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// </summary>
         [pbr::OriginalName("STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
-        /// A state used by systems like Vertex Pipelines to indicate that the
+        /// A state used by systems like Vertex AI Pipelines to indicate that the
         /// underlying data item represented by this Artifact is being created.
         /// </summary>
         [pbr::OriginalName("PENDING")] Pending = 1,

@@ -39,6 +39,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Endpoint = new Endpoint(),
+                EndpointId = "",
             };
             // Make the request
             Operation<Endpoint, CreateEndpointOperationMetadata> response = endpointServiceClient.CreateEndpoint(request);
@@ -73,6 +74,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             {
                 ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Endpoint = new Endpoint(),
+                EndpointId = "",
             };
             // Make the request
             Operation<Endpoint, CreateEndpointOperationMetadata> response = await endpointServiceClient.CreateEndpointAsync(request);
@@ -96,7 +98,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEndpoint</summary>
-        public void CreateEndpoint()
+        public void CreateEndpoint1()
         {
             // Snippet: CreateEndpoint(string, Endpoint, CallSettings)
             // Create client
@@ -126,7 +128,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEndpointAsync</summary>
-        public async Task CreateEndpointAsync()
+        public async Task CreateEndpoint1Async()
         {
             // Snippet: CreateEndpointAsync(string, Endpoint, CallSettings)
             // Additional: CreateEndpointAsync(string, Endpoint, CancellationToken)
@@ -157,7 +159,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEndpoint</summary>
-        public void CreateEndpointResourceNames()
+        public void CreateEndpoint1ResourceNames()
         {
             // Snippet: CreateEndpoint(LocationName, Endpoint, CallSettings)
             // Create client
@@ -187,7 +189,7 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
         }
 
         /// <summary>Snippet for CreateEndpointAsync</summary>
-        public async Task CreateEndpointResourceNamesAsync()
+        public async Task CreateEndpoint1ResourceNamesAsync()
         {
             // Snippet: CreateEndpointAsync(LocationName, Endpoint, CallSettings)
             // Additional: CreateEndpointAsync(LocationName, Endpoint, CancellationToken)
@@ -198,6 +200,132 @@ namespace Google.Cloud.AIPlatform.V1.Snippets
             Endpoint endpoint = new Endpoint();
             // Make the request
             Operation<Endpoint, CreateEndpointOperationMetadata> response = await endpointServiceClient.CreateEndpointAsync(parent, endpoint);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, CreateEndpointOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, CreateEndpointOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceCreateEndpointAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEndpoint</summary>
+        public void CreateEndpoint2()
+        {
+            // Snippet: CreateEndpoint(string, Endpoint, string, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Endpoint endpoint = new Endpoint();
+            string endpointId = "";
+            // Make the request
+            Operation<Endpoint, CreateEndpointOperationMetadata> response = endpointServiceClient.CreateEndpoint(parent, endpoint, endpointId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, CreateEndpointOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, CreateEndpointOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceCreateEndpoint(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEndpointAsync</summary>
+        public async Task CreateEndpoint2Async()
+        {
+            // Snippet: CreateEndpointAsync(string, Endpoint, string, CallSettings)
+            // Additional: CreateEndpointAsync(string, Endpoint, string, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Endpoint endpoint = new Endpoint();
+            string endpointId = "";
+            // Make the request
+            Operation<Endpoint, CreateEndpointOperationMetadata> response = await endpointServiceClient.CreateEndpointAsync(parent, endpoint, endpointId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, CreateEndpointOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, CreateEndpointOperationMetadata> retrievedResponse = await endpointServiceClient.PollOnceCreateEndpointAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEndpoint</summary>
+        public void CreateEndpoint2ResourceNames()
+        {
+            // Snippet: CreateEndpoint(LocationName, Endpoint, string, CallSettings)
+            // Create client
+            EndpointServiceClient endpointServiceClient = EndpointServiceClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Endpoint endpoint = new Endpoint();
+            string endpointId = "";
+            // Make the request
+            Operation<Endpoint, CreateEndpointOperationMetadata> response = endpointServiceClient.CreateEndpoint(parent, endpoint, endpointId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Endpoint, CreateEndpointOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Endpoint result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Endpoint, CreateEndpointOperationMetadata> retrievedResponse = endpointServiceClient.PollOnceCreateEndpoint(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Endpoint retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateEndpointAsync</summary>
+        public async Task CreateEndpoint2ResourceNamesAsync()
+        {
+            // Snippet: CreateEndpointAsync(LocationName, Endpoint, string, CallSettings)
+            // Additional: CreateEndpointAsync(LocationName, Endpoint, string, CancellationToken)
+            // Create client
+            EndpointServiceClient endpointServiceClient = await EndpointServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Endpoint endpoint = new Endpoint();
+            string endpointId = "";
+            // Make the request
+            Operation<Endpoint, CreateEndpointOperationMetadata> response = await endpointServiceClient.CreateEndpointAsync(parent, endpoint, endpointId);
 
             // Poll until the returned long-running operation is complete
             Operation<Endpoint, CreateEndpointOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();

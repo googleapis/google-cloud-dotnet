@@ -58,41 +58,46 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Eg0KBXZhbHVlGAIgASgJOgI4ATp+6kF7CiphaXBsYXRmb3JtLmdvb2dsZWFw",
             "aXMuY29tL1RyYWluaW5nUGlwZWxpbmUSTXByb2plY3RzL3twcm9qZWN0fS9s",
             "b2NhdGlvbnMve2xvY2F0aW9ufS90cmFpbmluZ1BpcGVsaW5lcy97dHJhaW5p",
-            "bmdfcGlwZWxpbmV9IqsECg9JbnB1dERhdGFDb25maWcSQwoOZnJhY3Rpb25f",
+            "bmdfcGlwZWxpbmV9IvQECg9JbnB1dERhdGFDb25maWcSQwoOZnJhY3Rpb25f",
             "c3BsaXQYAiABKAsyKS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5GcmFj",
             "dGlvblNwbGl0SAASPwoMZmlsdGVyX3NwbGl0GAMgASgLMicuZ29vZ2xlLmNs",
             "b3VkLmFpcGxhdGZvcm0udjEuRmlsdGVyU3BsaXRIABJHChBwcmVkZWZpbmVk",
             "X3NwbGl0GAQgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJl",
             "ZGVmaW5lZFNwbGl0SAASRQoPdGltZXN0YW1wX3NwbGl0GAUgASgLMiouZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVGltZXN0YW1wU3BsaXRIABJFCg9n",
-            "Y3NfZGVzdGluYXRpb24YCCABKAsyKi5nb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MS5HY3NEZXN0aW5hdGlvbkgBEk8KFGJpZ3F1ZXJ5X2Rlc3RpbmF0aW9u",
-            "GAogASgLMi8uZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuQmlnUXVlcnlE",
-            "ZXN0aW5hdGlvbkgBEhcKCmRhdGFzZXRfaWQYASABKAlCA+BBAhIaChJhbm5v",
-            "dGF0aW9uc19maWx0ZXIYBiABKAkSHQoVYW5ub3RhdGlvbl9zY2hlbWFfdXJp",
-            "GAkgASgJQgcKBXNwbGl0Qg0KC2Rlc3RpbmF0aW9uIl4KDUZyYWN0aW9uU3Bs",
-            "aXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoTdmFsaWRhdGlvbl9m",
-            "cmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMgASgBImUKC0ZpbHRl",
-            "clNwbGl0EhwKD3RyYWluaW5nX2ZpbHRlchgBIAEoCUID4EECEh4KEXZhbGlk",
-            "YXRpb25fZmlsdGVyGAIgASgJQgPgQQISGAoLdGVzdF9maWx0ZXIYAyABKAlC",
-            "A+BBAiIjCg9QcmVkZWZpbmVkU3BsaXQSEAoDa2V5GAEgASgJQgPgQQIicQoO",
-            "VGltZXN0YW1wU3BsaXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24YASABKAESGwoT",
-            "dmFsaWRhdGlvbl9mcmFjdGlvbhgCIAEoARIVCg10ZXN0X2ZyYWN0aW9uGAMg",
-            "ASgBEhAKA2tleRgEIAEoCUID4EECQtkBCh5jb20uZ29vZ2xlLmNsb3VkLmFp",
-            "cGxhdGZvcm0udjFCFVRyYWluaW5nUGlwZWxpbmVQcm90b1ABWkRnb29nbGUu",
-            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2FpcGxhdGZv",
-            "cm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBsYXRmb3JtLlYx",
-            "ygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3Vk",
-            "OjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuVGltZXN0YW1wU3BsaXRIABJHChBz",
+            "dHJhdGlmaWVkX3NwbGl0GAwgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
+            "cm0udjEuU3RyYXRpZmllZFNwbGl0SAASRQoPZ2NzX2Rlc3RpbmF0aW9uGAgg",
+            "ASgLMiouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuR2NzRGVzdGluYXRp",
+            "b25IARJPChRiaWdxdWVyeV9kZXN0aW5hdGlvbhgKIAEoCzIvLmdvb2dsZS5j",
+            "bG91ZC5haXBsYXRmb3JtLnYxLkJpZ1F1ZXJ5RGVzdGluYXRpb25IARIXCgpk",
+            "YXRhc2V0X2lkGAEgASgJQgPgQQISGgoSYW5ub3RhdGlvbnNfZmlsdGVyGAYg",
+            "ASgJEh0KFWFubm90YXRpb25fc2NoZW1hX3VyaRgJIAEoCUIHCgVzcGxpdEIN",
+            "CgtkZXN0aW5hdGlvbiJeCg1GcmFjdGlvblNwbGl0EhkKEXRyYWluaW5nX2Zy",
+            "YWN0aW9uGAEgASgBEhsKE3ZhbGlkYXRpb25fZnJhY3Rpb24YAiABKAESFQoN",
+            "dGVzdF9mcmFjdGlvbhgDIAEoASJlCgtGaWx0ZXJTcGxpdBIcCg90cmFpbmlu",
+            "Z19maWx0ZXIYASABKAlCA+BBAhIeChF2YWxpZGF0aW9uX2ZpbHRlchgCIAEo",
+            "CUID4EECEhgKC3Rlc3RfZmlsdGVyGAMgASgJQgPgQQIiIwoPUHJlZGVmaW5l",
+            "ZFNwbGl0EhAKA2tleRgBIAEoCUID4EECInEKDlRpbWVzdGFtcFNwbGl0EhkK",
+            "EXRyYWluaW5nX2ZyYWN0aW9uGAEgASgBEhsKE3ZhbGlkYXRpb25fZnJhY3Rp",
+            "b24YAiABKAESFQoNdGVzdF9mcmFjdGlvbhgDIAEoARIQCgNrZXkYBCABKAlC",
+            "A+BBAiJyCg9TdHJhdGlmaWVkU3BsaXQSGQoRdHJhaW5pbmdfZnJhY3Rpb24Y",
+            "ASABKAESGwoTdmFsaWRhdGlvbl9mcmFjdGlvbhgCIAEoARIVCg10ZXN0X2Zy",
+            "YWN0aW9uGAMgASgBEhAKA2tleRgEIAEoCUID4EECQtkBCh5jb20uZ29vZ2xl",
+            "LmNsb3VkLmFpcGxhdGZvcm0udjFCFVRyYWluaW5nUGlwZWxpbmVQcm90b1AB",
+            "WkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3Vk",
+            "L2FpcGxhdGZvcm0vdjE7YWlwbGF0Zm9ybaoCGkdvb2dsZS5DbG91ZC5BSVBs",
+            "YXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29n",
+            "bGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ManualBatchTuningParametersReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.PipelineStateReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TrainingPipeline), global::Google.Cloud.AIPlatform.V1.TrainingPipeline.Parser, new[]{ "Name", "DisplayName", "InputDataConfig", "TrainingTaskDefinition", "TrainingTaskInputs", "TrainingTaskMetadata", "ModelToUpload", "State", "Error", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.InputDataConfig), global::Google.Cloud.AIPlatform.V1.InputDataConfig.Parser, new[]{ "FractionSplit", "FilterSplit", "PredefinedSplit", "TimestampSplit", "GcsDestination", "BigqueryDestination", "DatasetId", "AnnotationsFilter", "AnnotationSchemaUri" }, new[]{ "Split", "Destination" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.InputDataConfig), global::Google.Cloud.AIPlatform.V1.InputDataConfig.Parser, new[]{ "FractionSplit", "FilterSplit", "PredefinedSplit", "TimestampSplit", "StratifiedSplit", "GcsDestination", "BigqueryDestination", "DatasetId", "AnnotationsFilter", "AnnotationSchemaUri" }, new[]{ "Split", "Destination" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FractionSplit), global::Google.Cloud.AIPlatform.V1.FractionSplit.Parser, new[]{ "TrainingFraction", "ValidationFraction", "TestFraction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.FilterSplit), global::Google.Cloud.AIPlatform.V1.FilterSplit.Parser, new[]{ "TrainingFilter", "ValidationFilter", "TestFilter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.PredefinedSplit), global::Google.Cloud.AIPlatform.V1.PredefinedSplit.Parser, new[]{ "Key" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TimestampSplit), global::Google.Cloud.AIPlatform.V1.TimestampSplit.Parser, new[]{ "TrainingFraction", "ValidationFraction", "TestFraction", "Key" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TimestampSplit), global::Google.Cloud.AIPlatform.V1.TimestampSplit.Parser, new[]{ "TrainingFraction", "ValidationFraction", "TestFraction", "Key" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.StratifiedSplit), global::Google.Cloud.AIPlatform.V1.StratifiedSplit.Parser, new[]{ "TrainingFraction", "ValidationFraction", "TestFraction", "Key" }, null, null, null, null)
           }));
     }
     #endregion
@@ -1035,6 +1040,9 @@ namespace Google.Cloud.AIPlatform.V1 {
         case SplitOneofCase.TimestampSplit:
           TimestampSplit = other.TimestampSplit.Clone();
           break;
+        case SplitOneofCase.StratifiedSplit:
+          StratifiedSplit = other.StratifiedSplit.Clone();
+          break;
       }
 
       switch (other.DestinationCase) {
@@ -1116,6 +1124,23 @@ namespace Google.Cloud.AIPlatform.V1 {
       set {
         split_ = value;
         splitCase_ = value == null ? SplitOneofCase.None : SplitOneofCase.TimestampSplit;
+      }
+    }
+
+    /// <summary>Field number for the "stratified_split" field.</summary>
+    public const int StratifiedSplitFieldNumber = 12;
+    /// <summary>
+    /// Supported only for tabular Datasets.
+    ///
+    /// Split based on the distribution of the specified column.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AIPlatform.V1.StratifiedSplit StratifiedSplit {
+      get { return splitCase_ == SplitOneofCase.StratifiedSplit ? (global::Google.Cloud.AIPlatform.V1.StratifiedSplit) split_ : null; }
+      set {
+        split_ = value;
+        splitCase_ = value == null ? SplitOneofCase.None : SplitOneofCase.StratifiedSplit;
       }
     }
 
@@ -1272,6 +1297,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       FilterSplit = 3,
       PredefinedSplit = 4,
       TimestampSplit = 5,
+      StratifiedSplit = 12,
     }
     private SplitOneofCase splitCase_ = SplitOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1327,6 +1353,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (!object.Equals(FilterSplit, other.FilterSplit)) return false;
       if (!object.Equals(PredefinedSplit, other.PredefinedSplit)) return false;
       if (!object.Equals(TimestampSplit, other.TimestampSplit)) return false;
+      if (!object.Equals(StratifiedSplit, other.StratifiedSplit)) return false;
       if (!object.Equals(GcsDestination, other.GcsDestination)) return false;
       if (!object.Equals(BigqueryDestination, other.BigqueryDestination)) return false;
       if (DatasetId != other.DatasetId) return false;
@@ -1345,6 +1372,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       if (splitCase_ == SplitOneofCase.FilterSplit) hash ^= FilterSplit.GetHashCode();
       if (splitCase_ == SplitOneofCase.PredefinedSplit) hash ^= PredefinedSplit.GetHashCode();
       if (splitCase_ == SplitOneofCase.TimestampSplit) hash ^= TimestampSplit.GetHashCode();
+      if (splitCase_ == SplitOneofCase.StratifiedSplit) hash ^= StratifiedSplit.GetHashCode();
       if (destinationCase_ == DestinationOneofCase.GcsDestination) hash ^= GcsDestination.GetHashCode();
       if (destinationCase_ == DestinationOneofCase.BigqueryDestination) hash ^= BigqueryDestination.GetHashCode();
       if (DatasetId.Length != 0) hash ^= DatasetId.GetHashCode();
@@ -1406,6 +1434,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(BigqueryDestination);
       }
+      if (splitCase_ == SplitOneofCase.StratifiedSplit) {
+        output.WriteRawTag(98);
+        output.WriteMessage(StratifiedSplit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1452,6 +1484,10 @@ namespace Google.Cloud.AIPlatform.V1 {
         output.WriteRawTag(82);
         output.WriteMessage(BigqueryDestination);
       }
+      if (splitCase_ == SplitOneofCase.StratifiedSplit) {
+        output.WriteRawTag(98);
+        output.WriteMessage(StratifiedSplit);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1473,6 +1509,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
       if (splitCase_ == SplitOneofCase.TimestampSplit) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TimestampSplit);
+      }
+      if (splitCase_ == SplitOneofCase.StratifiedSplit) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(StratifiedSplit);
       }
       if (destinationCase_ == DestinationOneofCase.GcsDestination) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(GcsDestination);
@@ -1534,6 +1573,12 @@ namespace Google.Cloud.AIPlatform.V1 {
             TimestampSplit = new global::Google.Cloud.AIPlatform.V1.TimestampSplit();
           }
           TimestampSplit.MergeFrom(other.TimestampSplit);
+          break;
+        case SplitOneofCase.StratifiedSplit:
+          if (StratifiedSplit == null) {
+            StratifiedSplit = new global::Google.Cloud.AIPlatform.V1.StratifiedSplit();
+          }
+          StratifiedSplit.MergeFrom(other.StratifiedSplit);
           break;
       }
 
@@ -1633,6 +1678,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             BigqueryDestination = subBuilder;
             break;
           }
+          case 98: {
+            global::Google.Cloud.AIPlatform.V1.StratifiedSplit subBuilder = new global::Google.Cloud.AIPlatform.V1.StratifiedSplit();
+            if (splitCase_ == SplitOneofCase.StratifiedSplit) {
+              subBuilder.MergeFrom(StratifiedSplit);
+            }
+            input.ReadMessage(subBuilder);
+            StratifiedSplit = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1712,6 +1766,15 @@ namespace Google.Cloud.AIPlatform.V1 {
             }
             input.ReadMessage(subBuilder);
             BigqueryDestination = subBuilder;
+            break;
+          }
+          case 98: {
+            global::Google.Cloud.AIPlatform.V1.StratifiedSplit subBuilder = new global::Google.Cloud.AIPlatform.V1.StratifiedSplit();
+            if (splitCase_ == SplitOneofCase.StratifiedSplit) {
+              subBuilder.MergeFrom(StratifiedSplit);
+            }
+            input.ReadMessage(subBuilder);
+            StratifiedSplit = subBuilder;
             break;
           }
         }
@@ -2739,6 +2802,338 @@ namespace Google.Cloud.AIPlatform.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(TimestampSplit other) {
+      if (other == null) {
+        return;
+      }
+      if (other.TrainingFraction != 0D) {
+        TrainingFraction = other.TrainingFraction;
+      }
+      if (other.ValidationFraction != 0D) {
+        ValidationFraction = other.ValidationFraction;
+      }
+      if (other.TestFraction != 0D) {
+        TestFraction = other.TestFraction;
+      }
+      if (other.Key.Length != 0) {
+        Key = other.Key;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 9: {
+            TrainingFraction = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            ValidationFraction = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            TestFraction = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            Key = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 9: {
+            TrainingFraction = input.ReadDouble();
+            break;
+          }
+          case 17: {
+            ValidationFraction = input.ReadDouble();
+            break;
+          }
+          case 25: {
+            TestFraction = input.ReadDouble();
+            break;
+          }
+          case 34: {
+            Key = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Assigns input data to the training, validation, and test sets so that the
+  /// distribution of values found in the categorical column (as specified by the
+  /// `key` field) is mirrored within each split. The fraction values determine
+  /// the relative sizes of the splits.
+  ///
+  /// For example, if the specified column has three values, with 50% of the rows
+  /// having value "A", 25% value "B", and 25% value "C", and the split fractions
+  /// are specified as 80/10/10, then the training set will constitute 80% of the
+  /// training data, with about 50% of the training set rows having the value "A"
+  /// for the specified column, about 25% having the value "B", and about 25%
+  /// having the value "C".
+  ///
+  /// Only the top 500 occurring values are used; any values not in the top
+  /// 500 values are randomly assigned to a split. If less than three rows contain
+  /// a specific value, those rows are randomly assigned.
+  ///
+  /// Supported only for tabular Datasets.
+  /// </summary>
+  public sealed partial class StratifiedSplit : pb::IMessage<StratifiedSplit>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<StratifiedSplit> _parser = new pb::MessageParser<StratifiedSplit>(() => new StratifiedSplit());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<StratifiedSplit> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.AIPlatform.V1.TrainingPipelineReflection.Descriptor.MessageTypes[6]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StratifiedSplit() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StratifiedSplit(StratifiedSplit other) : this() {
+      trainingFraction_ = other.trainingFraction_;
+      validationFraction_ = other.validationFraction_;
+      testFraction_ = other.testFraction_;
+      key_ = other.key_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public StratifiedSplit Clone() {
+      return new StratifiedSplit(this);
+    }
+
+    /// <summary>Field number for the "training_fraction" field.</summary>
+    public const int TrainingFractionFieldNumber = 1;
+    private double trainingFraction_;
+    /// <summary>
+    /// The fraction of the input data that is to be used to train the Model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double TrainingFraction {
+      get { return trainingFraction_; }
+      set {
+        trainingFraction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "validation_fraction" field.</summary>
+    public const int ValidationFractionFieldNumber = 2;
+    private double validationFraction_;
+    /// <summary>
+    /// The fraction of the input data that is to be used to validate the Model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double ValidationFraction {
+      get { return validationFraction_; }
+      set {
+        validationFraction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "test_fraction" field.</summary>
+    public const int TestFractionFieldNumber = 3;
+    private double testFraction_;
+    /// <summary>
+    /// The fraction of the input data that is to be used to evaluate the Model.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public double TestFraction {
+      get { return testFraction_; }
+      set {
+        testFraction_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "key" field.</summary>
+    public const int KeyFieldNumber = 4;
+    private string key_ = "";
+    /// <summary>
+    /// Required. The key is a name of one of the Dataset's data columns.
+    /// The key provided must be for a categorical column.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Key {
+      get { return key_; }
+      set {
+        key_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as StratifiedSplit);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(StratifiedSplit other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TrainingFraction, other.TrainingFraction)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(ValidationFraction, other.ValidationFraction)) return false;
+      if (!pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.Equals(TestFraction, other.TestFraction)) return false;
+      if (Key != other.Key) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (TrainingFraction != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TrainingFraction);
+      if (ValidationFraction != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(ValidationFraction);
+      if (TestFraction != 0D) hash ^= pbc::ProtobufEqualityComparers.BitwiseDoubleEqualityComparer.GetHashCode(TestFraction);
+      if (Key.Length != 0) hash ^= Key.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (TrainingFraction != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(TrainingFraction);
+      }
+      if (ValidationFraction != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(ValidationFraction);
+      }
+      if (TestFraction != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TestFraction);
+      }
+      if (Key.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Key);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (TrainingFraction != 0D) {
+        output.WriteRawTag(9);
+        output.WriteDouble(TrainingFraction);
+      }
+      if (ValidationFraction != 0D) {
+        output.WriteRawTag(17);
+        output.WriteDouble(ValidationFraction);
+      }
+      if (TestFraction != 0D) {
+        output.WriteRawTag(25);
+        output.WriteDouble(TestFraction);
+      }
+      if (Key.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Key);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (TrainingFraction != 0D) {
+        size += 1 + 8;
+      }
+      if (ValidationFraction != 0D) {
+        size += 1 + 8;
+      }
+      if (TestFraction != 0D) {
+        size += 1 + 8;
+      }
+      if (Key.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Key);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(StratifiedSplit other) {
       if (other == null) {
         return;
       }

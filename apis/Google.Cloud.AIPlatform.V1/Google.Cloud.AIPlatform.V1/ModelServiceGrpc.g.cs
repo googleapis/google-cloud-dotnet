@@ -239,8 +239,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model.
       ///
-      /// Model can only be deleted if there are no [DeployedModels][] created
-      /// from it.
+      /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+      /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
+      /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -252,7 +253,7 @@ namespace Google.Cloud.AIPlatform.V1 {
       }
 
       /// <summary>
-      /// Exports a trained, exportable, Model to a location specified by the
+      /// Exports a trained, exportable Model to a location specified by the
       /// user. A Model is considered to be exportable if it has at least one
       /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
       /// </summary>
@@ -537,8 +538,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model.
       ///
-      /// Model can only be deleted if there are no [DeployedModels][] created
-      /// from it.
+      /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+      /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
+      /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -553,8 +555,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model.
       ///
-      /// Model can only be deleted if there are no [DeployedModels][] created
-      /// from it.
+      /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+      /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
+      /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -567,8 +570,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model.
       ///
-      /// Model can only be deleted if there are no [DeployedModels][] created
-      /// from it.
+      /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+      /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
+      /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -583,8 +587,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       /// <summary>
       /// Deletes a Model.
       ///
-      /// Model can only be deleted if there are no [DeployedModels][] created
-      /// from it.
+      /// A model cannot be deleted if any [Endpoint][google.cloud.aiplatform.v1.Endpoint] resource has a
+      /// [DeployedModel][google.cloud.aiplatform.v1.DeployedModel] based on the model in its
+      /// [deployed_models][google.cloud.aiplatform.v1.Endpoint.deployed_models] field.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -595,7 +600,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteModel, null, options, request);
       }
       /// <summary>
-      /// Exports a trained, exportable, Model to a location specified by the
+      /// Exports a trained, exportable Model to a location specified by the
       /// user. A Model is considered to be exportable if it has at least one
       /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
       /// </summary>
@@ -610,7 +615,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return ExportModel(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports a trained, exportable, Model to a location specified by the
+      /// Exports a trained, exportable Model to a location specified by the
       /// user. A Model is considered to be exportable if it has at least one
       /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
       /// </summary>
@@ -623,7 +628,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ExportModel, null, options, request);
       }
       /// <summary>
-      /// Exports a trained, exportable, Model to a location specified by the
+      /// Exports a trained, exportable Model to a location specified by the
       /// user. A Model is considered to be exportable if it has at least one
       /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
       /// </summary>
@@ -638,7 +643,7 @@ namespace Google.Cloud.AIPlatform.V1 {
         return ExportModelAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Exports a trained, exportable, Model to a location specified by the
+      /// Exports a trained, exportable Model to a location specified by the
       /// user. A Model is considered to be exportable if it has at least one
       /// [supported export format][google.cloud.aiplatform.v1.Model.supported_export_formats].
       /// </summary>

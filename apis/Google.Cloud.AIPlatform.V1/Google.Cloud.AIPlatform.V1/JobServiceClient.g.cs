@@ -3660,7 +3660,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
-        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// [ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3691,7 +3691,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
-        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// [ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3724,7 +3724,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
-        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// [ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -3755,7 +3755,7 @@ namespace Google.Cloud.AIPlatform.V1
         /// </param>
         /// <param name="deployedModelId">
         /// Required. The DeployedModel ID of the
-        /// [google.cloud.aiplatform.master.ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
+        /// [ModelDeploymentMonitoringObjectiveConfig.deployed_model_id].
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first

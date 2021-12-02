@@ -310,6 +310,12 @@
                 "ListIndexEndpointsAsync"
               ]
             },
+            "MutateDeployedIndex": {
+              "methods": [
+                "MutateDeployedIndex",
+                "MutateDeployedIndexAsync"
+              ]
+            },
             "UndeployIndex": {
               "methods": [
                 "UndeployIndex",

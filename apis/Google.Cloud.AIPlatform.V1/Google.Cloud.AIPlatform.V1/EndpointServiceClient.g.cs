@@ -541,6 +541,176 @@ namespace Google.Cloud.AIPlatform.V1
             CreateEndpointAsync(parent, endpoint, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates an Endpoint.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the Endpoint in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="endpoint">
+        /// Required. The Endpoint to create.
+        /// </param>
+        /// <param name="endpointId">
+        /// Immutable. The ID to use for endpoint, which will become the final
+        /// component of the endpoint resource name.
+        /// If not provided, Vertex AI will generate a value for this ID.
+        /// 
+        /// This value should be 1-10 characters, and valid characters are /[0-9]/.
+        /// When using HTTP/JSON, this field is populated based on a query string
+        /// argument, such as `?endpoint_id=12345`. This is the fallback for fields
+        /// that are not included in either the URI or the body.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Endpoint, CreateEndpointOperationMetadata> CreateEndpoint(string parent, Endpoint endpoint, string endpointId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEndpoint(new CreateEndpointRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Endpoint = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                EndpointId = endpointId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Endpoint.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the Endpoint in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="endpoint">
+        /// Required. The Endpoint to create.
+        /// </param>
+        /// <param name="endpointId">
+        /// Immutable. The ID to use for endpoint, which will become the final
+        /// component of the endpoint resource name.
+        /// If not provided, Vertex AI will generate a value for this ID.
+        /// 
+        /// This value should be 1-10 characters, and valid characters are /[0-9]/.
+        /// When using HTTP/JSON, this field is populated based on a query string
+        /// argument, such as `?endpoint_id=12345`. This is the fallback for fields
+        /// that are not included in either the URI or the body.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, CreateEndpointOperationMetadata>> CreateEndpointAsync(string parent, Endpoint endpoint, string endpointId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEndpointAsync(new CreateEndpointRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Endpoint = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                EndpointId = endpointId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Endpoint.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the Endpoint in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="endpoint">
+        /// Required. The Endpoint to create.
+        /// </param>
+        /// <param name="endpointId">
+        /// Immutable. The ID to use for endpoint, which will become the final
+        /// component of the endpoint resource name.
+        /// If not provided, Vertex AI will generate a value for this ID.
+        /// 
+        /// This value should be 1-10 characters, and valid characters are /[0-9]/.
+        /// When using HTTP/JSON, this field is populated based on a query string
+        /// argument, such as `?endpoint_id=12345`. This is the fallback for fields
+        /// that are not included in either the URI or the body.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, CreateEndpointOperationMetadata>> CreateEndpointAsync(string parent, Endpoint endpoint, string endpointId, st::CancellationToken cancellationToken) =>
+            CreateEndpointAsync(parent, endpoint, endpointId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates an Endpoint.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the Endpoint in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="endpoint">
+        /// Required. The Endpoint to create.
+        /// </param>
+        /// <param name="endpointId">
+        /// Immutable. The ID to use for endpoint, which will become the final
+        /// component of the endpoint resource name.
+        /// If not provided, Vertex AI will generate a value for this ID.
+        /// 
+        /// This value should be 1-10 characters, and valid characters are /[0-9]/.
+        /// When using HTTP/JSON, this field is populated based on a query string
+        /// argument, such as `?endpoint_id=12345`. This is the fallback for fields
+        /// that are not included in either the URI or the body.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Endpoint, CreateEndpointOperationMetadata> CreateEndpoint(gagr::LocationName parent, Endpoint endpoint, string endpointId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEndpoint(new CreateEndpointRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Endpoint = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                EndpointId = endpointId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Endpoint.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the Endpoint in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="endpoint">
+        /// Required. The Endpoint to create.
+        /// </param>
+        /// <param name="endpointId">
+        /// Immutable. The ID to use for endpoint, which will become the final
+        /// component of the endpoint resource name.
+        /// If not provided, Vertex AI will generate a value for this ID.
+        /// 
+        /// This value should be 1-10 characters, and valid characters are /[0-9]/.
+        /// When using HTTP/JSON, this field is populated based on a query string
+        /// argument, such as `?endpoint_id=12345`. This is the fallback for fields
+        /// that are not included in either the URI or the body.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, CreateEndpointOperationMetadata>> CreateEndpointAsync(gagr::LocationName parent, Endpoint endpoint, string endpointId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateEndpointAsync(new CreateEndpointRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Endpoint = gax::GaxPreconditions.CheckNotNull(endpoint, nameof(endpoint)),
+                EndpointId = endpointId ?? "",
+            }, callSettings);
+
+        /// <summary>
+        /// Creates an Endpoint.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The resource name of the Location to create the Endpoint in.
+        /// Format: `projects/{project}/locations/{location}`
+        /// </param>
+        /// <param name="endpoint">
+        /// Required. The Endpoint to create.
+        /// </param>
+        /// <param name="endpointId">
+        /// Immutable. The ID to use for endpoint, which will become the final
+        /// component of the endpoint resource name.
+        /// If not provided, Vertex AI will generate a value for this ID.
+        /// 
+        /// This value should be 1-10 characters, and valid characters are /[0-9]/.
+        /// When using HTTP/JSON, this field is populated based on a query string
+        /// argument, such as `?endpoint_id=12345`. This is the fallback for fields
+        /// that are not included in either the URI or the body.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Endpoint, CreateEndpointOperationMetadata>> CreateEndpointAsync(gagr::LocationName parent, Endpoint endpoint, string endpointId, st::CancellationToken cancellationToken) =>
+            CreateEndpointAsync(parent, endpoint, endpointId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Gets an Endpoint.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
