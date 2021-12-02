@@ -380,9 +380,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets
+        /// Required. The parent resource where this phrase set will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -410,9 +416,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets
+        /// Required. The parent resource where this phrase set will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -440,9 +452,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets
+        /// Required. The parent resource where this phrase set will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -465,9 +483,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets
+        /// Required. The parent resource where this phrase set will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -495,9 +519,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets
+        /// Required. The parent resource where this phrase set will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -525,9 +555,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// recognition model when you send a call that includes the PhraseSet.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this phrase set will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets
+        /// Required. The parent resource where this phrase set will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="phraseSet">
         /// Required. The phrase set to create.
@@ -575,9 +611,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -591,9 +633,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -607,9 +655,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -620,9 +674,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -636,9 +696,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -652,9 +718,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -683,9 +755,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List phrase sets.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of phrase set.
-        /// Format:
-        /// projects/{project}/locations/{location}
+        /// Required. The parent, which owns this collection of phrase set. Format:
+        /// 
+        /// `projects/{project}/locations/{location}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -709,9 +787,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List phrase sets.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of phrase set.
-        /// Format:
-        /// projects/{project}/locations/{location}
+        /// Required. The parent, which owns this collection of phrase set. Format:
+        /// 
+        /// `projects/{project}/locations/{location}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -735,9 +819,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List phrase sets.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of phrase set.
-        /// Format:
-        /// projects/{project}/locations/{location}
+        /// Required. The parent, which owns this collection of phrase set. Format:
+        /// 
+        /// `projects/{project}/locations/{location}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -761,9 +851,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List phrase sets.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of phrase set.
-        /// Format:
-        /// projects/{project}/locations/{location}
+        /// Required. The parent, which owns this collection of phrase set. Format:
+        /// 
+        /// `projects/{project}/locations/{location}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -818,7 +914,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// 
         /// The phrase set's `name` field is used to identify the set to be
         /// updated. Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -840,7 +943,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// 
         /// The phrase set's `name` field is used to identify the set to be
         /// updated. Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -862,7 +972,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// 
         /// The phrase set's `name` field is used to identify the set to be
         /// updated. Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -903,9 +1020,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -919,9 +1036,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -935,9 +1052,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -948,9 +1065,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -964,9 +1081,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -980,9 +1097,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a phrase set.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the phrase set to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/phraseSets/{phrase_set}
+        /// Required. The name of the phrase set to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/phraseSets/{phrase_set}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1020,9 +1137,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent resource where this custom class will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1048,9 +1171,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent resource where this custom class will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1076,9 +1205,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent resource where this custom class will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1099,9 +1234,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent resource where this custom class will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1127,9 +1268,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent resource where this custom class will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1155,9 +1302,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Create a custom class.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent resource where this custom class will be created.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent resource where this custom class will be created. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="customClass">
         /// Required. The custom class to create.
@@ -1205,9 +1358,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1221,9 +1374,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1237,9 +1390,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1250,9 +1403,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1266,9 +1419,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1282,9 +1435,9 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Get a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to retrieve.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to retrieve. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1313,9 +1466,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List custom classes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of custom classes.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent, which owns this collection of custom classes. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1339,9 +1498,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List custom classes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of custom classes.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent, which owns this collection of custom classes. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1365,9 +1530,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List custom classes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of custom classes.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent, which owns this collection of custom classes. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1391,9 +1562,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// List custom classes.
         /// </summary>
         /// <param name="parent">
-        /// Required. The parent, which owns this collection of custom classes.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses
+        /// Required. The parent, which owns this collection of custom classes. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1448,7 +1625,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// 
         /// The custom class's `name` field is used to identify the custom class to be
         /// updated. Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -1470,7 +1654,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// 
         /// The custom class's `name` field is used to identify the custom class to be
         /// updated. Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -1492,7 +1683,14 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// 
         /// The custom class's `name` field is used to identify the custom class to be
         /// updated. Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="updateMask">
         /// The list of fields to be updated.
@@ -1533,9 +1731,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1549,9 +1753,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1565,9 +1775,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1578,9 +1794,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -1594,9 +1816,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -1610,9 +1838,15 @@ namespace Google.Cloud.Speech.V1P1Beta1
         /// Delete a custom class.
         /// </summary>
         /// <param name="name">
-        /// Required. The name of the custom class to delete.
-        /// Format:
-        /// {api_version}/projects/{project}/locations/{location}/customClasses/{custom_class}
+        /// Required. The name of the custom class to delete. Format:
+        /// 
+        /// `projects/{project}/locations/{location}/customClasses/{custom_class}`
+        /// 
+        /// Speech-to-Text supports three locations: `global`, `us` (US North America),
+        /// and `eu` (Europe). If you are calling the `speech.googleapis.com`
+        /// endpoint, use the `global` location. To specify a region, use a
+        /// [regional endpoint](/speech-to-text/docs/endpoints) with matching `us` or
+        /// `eu` location value.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
