@@ -363,7 +363,8 @@ namespace Google.Cloud.Tools.ReleaseManager
             // been generated or because they were already there. We infer the type of each
             // project based on the directory name. Expected suffixes:
             // - None: main API
-            // - .Snippets: snippets (manual and generated)
+            // - .Snippets: snippets (manual and generated) TODO: Will contain manual snippets only after we have started using GeneratedSnippets for docs.
+            // - .GeneratedSnippets: generated snippets.
             // - .Tests: unit tests
             // - .IntegrationTests: integration tests
             // - .Samples: generated standalone samples
@@ -388,6 +389,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                     case ".Tests":
                         GenerateTestProject(api, dir, apiNames, isForAnalyzers: api.Type == ApiType.Analyzers);
                         GenerateCoverageFile(api, dir);
+                        break;
+                    case ".GeneratedSnippets":
+                        GenerateTestProject(api, dir, apiNames, isForAnalyzers: api.Type == ApiType.Analyzers);
                         break;
                     case ".Samples":
                         GenerateSampleProject(api, dir, apiNames);
