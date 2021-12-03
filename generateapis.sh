@@ -55,6 +55,7 @@ generate_microgenerator() {
   delete_generated apis/$1/$1
   delete_generated apis/$1/$1.Tests
   delete_generated apis/$1/$1.Snippets
+  delete_generated apis/$1/$1.GeneratedSnippets
 
   # If there's exactly one gRPC service config file, pass it in. Otherwise, omit it.
   GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*_grpc_service_config.json)
@@ -133,10 +134,6 @@ generate_microgenerator() {
     $(find $API_SRC_DIR -name '*.proto') \
     $COMMON_RESOURCES_PROTO \
     2>&1 | grep -v "is unused" || true # Ignore import warnings (and grep exit code)
-
-  # Remove the newly generated standalone snippets until they are ready for surfacing.
-  rm -rf $API_TMP_DIR/$1.StandaloneSnippets
-  rm -rf $API_TMP_DIR/$1.GeneratedSnippets
 
   # We generate our own project files
   rm $(find tmp -name '*.csproj')
