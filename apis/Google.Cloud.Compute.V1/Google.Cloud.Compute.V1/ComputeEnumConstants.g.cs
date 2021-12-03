@@ -903,28 +903,28 @@ namespace Google.Cloud.Compute.V1
         /// <summary>Container class for enums within the <see cref="global::Google.Cloud.Compute.V1.ForwardingRule"/> message.</summary>
         public static class ForwardingRule
         {
-            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol"/> enum.</summary>
-            public static class IPProtocol
+            /// <summary>Constants for wire representations of the <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum"/> enum.</summary>
+            public static class IPProtocolEnum
             {
-                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol.UndefinedIPProtocol"/>.</summary>
-                public const string UndefinedIPProtocol = "UNDEFINED_I_P_PROTOCOL";
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum.UndefinedIPProtocolEnum"/>.</summary>
+                public const string UndefinedIPProtocolEnum = "UNDEFINED_I_P_PROTOCOL_ENUM";
 
-                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol.Ah"/>.</summary>
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum.Ah"/>.</summary>
                 public const string Ah = "AH";
 
-                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol.Esp"/>.</summary>
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum.Esp"/>.</summary>
                 public const string Esp = "ESP";
 
-                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol.Icmp"/>.</summary>
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum.Icmp"/>.</summary>
                 public const string Icmp = "ICMP";
 
-                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol.Sctp"/>.</summary>
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum.Sctp"/>.</summary>
                 public const string Sctp = "SCTP";
 
-                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol.Tcp"/>.</summary>
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum.Tcp"/>.</summary>
                 public const string Tcp = "TCP";
 
-                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocol.Udp"/>.</summary>
+                /// <summary>Wire representation of <see cref="global::Google.Cloud.Compute.V1.ForwardingRule.Types.IPProtocolEnum.Udp"/>.</summary>
                 public const string Udp = "UDP";
             }
 
