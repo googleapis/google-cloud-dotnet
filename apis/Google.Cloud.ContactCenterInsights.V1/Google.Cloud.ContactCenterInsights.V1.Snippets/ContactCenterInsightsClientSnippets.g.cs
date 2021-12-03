@@ -1302,6 +1302,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
                 BigQueryDestination = new ExportInsightsDataRequest.Types.BigQueryDestination(),
                 Filter = "",
                 KmsKey = "",
+                WriteDisposition = ExportInsightsDataRequest.Types.WriteDisposition.Unspecified,
             };
             // Make the request
             Operation<ExportInsightsDataResponse, ExportInsightsDataMetadata> response = contactCenterInsightsClient.ExportInsightsData(request);
@@ -1338,6 +1339,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
                 BigQueryDestination = new ExportInsightsDataRequest.Types.BigQueryDestination(),
                 Filter = "",
                 KmsKey = "",
+                WriteDisposition = ExportInsightsDataRequest.Types.WriteDisposition.Unspecified,
             };
             // Make the request
             Operation<ExportInsightsDataResponse, ExportInsightsDataMetadata> response = await contactCenterInsightsClient.ExportInsightsDataAsync(request);
