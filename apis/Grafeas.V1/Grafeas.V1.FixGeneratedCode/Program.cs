@@ -45,6 +45,13 @@ namespace Grafeas.V1.FixGeneratedCode
             SourceFile.Load(Path.Combine(layout.SourceDirectory, "Grafeas.V1.Snippets", "GrafeasClientSnippets.g.cs"))
                 .Rewrite(new SnippetRewriter())
                 .Save();
+
+            foreach (string file in Directory.GetFiles(Path.Combine(layout.SourceDirectory, "Grafeas.V1.GeneratedSnippets"), "*Snippet.g.cs"))
+            {
+                SourceFile.Load(file)
+                    .Rewrite(new SnippetRewriter())
+                    .Save();
+            }
         }
 
         /// <summary>
