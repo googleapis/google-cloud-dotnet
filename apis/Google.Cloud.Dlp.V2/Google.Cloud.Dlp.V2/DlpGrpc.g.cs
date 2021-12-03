@@ -3,7 +3,7 @@
 //     source: google/privacy/dlp/v2/dlp.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -711,9 +711,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// Inspect hybrid content and store findings to a trigger. The inspection
       /// will be processed asynchronously. To review the findings monitor the
       /// jobs within the trigger.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -927,11 +924,8 @@ namespace Google.Cloud.Dlp.V2 {
 
       /// <summary>
       /// Inspect hybrid content and store findings to a job.
-      /// To review the findings inspect the job. Inspection will occur
+      /// To review the findings, inspect the job. Inspection will occur
       /// asynchronously.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -945,9 +939,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
       /// of any enabled actions that have not yet run.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -1995,9 +1986,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// Inspect hybrid content and store findings to a trigger. The inspection
       /// will be processed asynchronously. To review the findings monitor the
       /// jobs within the trigger.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2013,9 +2001,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// Inspect hybrid content and store findings to a trigger. The inspection
       /// will be processed asynchronously. To review the findings monitor the
       /// jobs within the trigger.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2029,9 +2014,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// Inspect hybrid content and store findings to a trigger. The inspection
       /// will be processed asynchronously. To review the findings monitor the
       /// jobs within the trigger.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2047,9 +2029,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// Inspect hybrid content and store findings to a trigger. The inspection
       /// will be processed asynchronously. To review the findings monitor the
       /// jobs within the trigger.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2865,11 +2844,8 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Inspect hybrid content and store findings to a job.
-      /// To review the findings inspect the job. Inspection will occur
+      /// To review the findings, inspect the job. Inspection will occur
       /// asynchronously.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2883,11 +2859,8 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Inspect hybrid content and store findings to a job.
-      /// To review the findings inspect the job. Inspection will occur
+      /// To review the findings, inspect the job. Inspection will occur
       /// asynchronously.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2899,11 +2872,8 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Inspect hybrid content and store findings to a job.
-      /// To review the findings inspect the job. Inspection will occur
+      /// To review the findings, inspect the job. Inspection will occur
       /// asynchronously.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2917,11 +2887,8 @@ namespace Google.Cloud.Dlp.V2 {
       }
       /// <summary>
       /// Inspect hybrid content and store findings to a job.
-      /// To review the findings inspect the job. Inspection will occur
+      /// To review the findings, inspect the job. Inspection will occur
       /// asynchronously.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2934,9 +2901,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
       /// of any enabled actions that have not yet run.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2951,9 +2915,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
       /// of any enabled actions that have not yet run.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2966,9 +2927,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
       /// of any enabled actions that have not yet run.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2983,9 +2941,6 @@ namespace Google.Cloud.Dlp.V2 {
       /// <summary>
       /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
       /// of any enabled actions that have not yet run.
-      /// Early access feature is in a pre-release state and might change or have
-      /// limited support. For more information, see
-      /// https://cloud.google.com/products#product-launch-stages.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

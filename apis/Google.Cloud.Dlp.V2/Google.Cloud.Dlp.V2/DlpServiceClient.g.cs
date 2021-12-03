@@ -4628,9 +4628,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4642,9 +4639,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -4656,9 +4650,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -4670,9 +4661,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
@@ -4690,9 +4678,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
@@ -4710,9 +4695,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
@@ -4727,9 +4709,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
@@ -4747,9 +4726,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
@@ -4767,9 +4743,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the trigger to execute a hybrid inspect on, for example
@@ -5383,7 +5356,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5422,7 +5395,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5461,7 +5434,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5496,7 +5469,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5535,7 +5508,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5574,7 +5547,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5609,7 +5582,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5648,7 +5621,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5687,7 +5660,7 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="inspectJob">
-        /// Set to control what and how to inspect.
+        /// An inspection job scans a storage repository for InfoTypes.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5722,7 +5695,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5761,7 +5735,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5800,7 +5775,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5835,7 +5811,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5874,7 +5851,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5913,7 +5891,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -5948,7 +5927,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -5987,7 +5967,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -6026,7 +6007,8 @@ namespace Google.Cloud.Dlp.V2
         /// parent=projects/example-project/locations/europe-west3
         /// </param>
         /// <param name="riskJob">
-        /// Set to choose what metric to calculate.
+        /// A risk analysis job calculates re-identification risk metrics for a
+        /// BigQuery table.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -8146,11 +8128,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8160,11 +8139,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8174,11 +8150,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -8188,11 +8161,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the job to execute a hybrid inspect on, for example
@@ -8208,11 +8178,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the job to execute a hybrid inspect on, for example
@@ -8228,11 +8195,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the job to execute a hybrid inspect on, for example
@@ -8245,11 +8209,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the job to execute a hybrid inspect on, for example
@@ -8265,11 +8226,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the job to execute a hybrid inspect on, for example
@@ -8285,11 +8243,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="name">
         /// Required. Resource name of the job to execute a hybrid inspect on, for example
@@ -8303,9 +8258,6 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
         /// of any enabled actions that have not yet run.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8316,9 +8268,6 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
         /// of any enabled actions that have not yet run.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -8329,9 +8278,6 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
         /// of any enabled actions that have not yet run.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -9186,9 +9132,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9203,9 +9146,6 @@ namespace Google.Cloud.Dlp.V2
         /// Inspect hybrid content and store findings to a trigger. The inspection
         /// will be processed asynchronously. To review the findings monitor the
         /// jobs within the trigger.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9620,11 +9560,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9637,11 +9574,8 @@ namespace Google.Cloud.Dlp.V2
 
         /// <summary>
         /// Inspect hybrid content and store findings to a job.
-        /// To review the findings inspect the job. Inspection will occur
+        /// To review the findings, inspect the job. Inspection will occur
         /// asynchronously.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9655,9 +9589,6 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
         /// of any enabled actions that have not yet run.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -9671,9 +9602,6 @@ namespace Google.Cloud.Dlp.V2
         /// <summary>
         /// Finish a running hybrid DlpJob. Triggers the finalization steps and running
         /// of any enabled actions that have not yet run.
-        /// Early access feature is in a pre-release state and might change or have
-        /// limited support. For more information, see
-        /// https://cloud.google.com/products#product-launch-stages.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
