@@ -155,8 +155,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public abstract partial class VersionsBase
     {
       /// <summary>
-      /// Returns the list of all versions in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -180,15 +179,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`:
-      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request received from the client.</param>
@@ -287,8 +284,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
       }
 
       /// <summary>
-      /// Returns the list of all versions in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -301,8 +297,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListVersions(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all versions in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -313,8 +308,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_ListVersions, null, options, request);
       }
       /// <summary>
-      /// Returns the list of all versions in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -327,8 +321,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return ListVersionsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns the list of all versions in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Returns the list of all versions in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -387,15 +380,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.AsyncUnaryCall(__Method_GetVersion, null, options, request);
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`:
-      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -409,15 +400,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateVersion(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`:
-      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -429,15 +418,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CallInvoker.BlockingUnaryCall(__Method_CreateVersion, null, options, request);
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`:
-      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
@@ -451,15 +438,13 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
         return CreateVersionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified
-      /// [Flow][google.cloud.dialogflow.cx.v3.Flow].
+      /// Creates a [Version][google.cloud.dialogflow.cx.v3.Version] in the specified [Flow][google.cloud.dialogflow.cx.v3.Flow].
       ///
       /// This method is a [long-running
       /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
       /// The returned `Operation` type has the following method-specific fields:
       ///
-      /// - `metadata`:
-      /// [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
+      /// - `metadata`: [CreateVersionOperationMetadata][google.cloud.dialogflow.cx.v3.CreateVersionOperationMetadata]
       /// - `response`: [Version][google.cloud.dialogflow.cx.v3.Version]
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
