@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.0.0-beta06, released 2021-12-06
+
+- [Commit 25e54fa](https://github.com/googleapis/google-cloud-dotnet/commit/25e54fa): fix!: handle GCP enum name start with uppercase IPProtocol
+
 ## Version 1.0.0-beta05, released 2021-12-01
 
 - [Commit 5f323c1](https://github.com/googleapis/google-cloud-dotnet/commit/5f323c1): fix: make parent_id fields required compute move and insert methods ([issue 686](https://github.com/googleapis/google-cloud-dotnet/issues/686))
