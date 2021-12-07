@@ -58,15 +58,18 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             "bWUYASABKAlCA+BBAzp76kF4CiliaWdxdWVyeXN0b3JhZ2UuZ29vZ2xlYXBp",
             "cy5jb20vUmVhZFN0cmVhbRJLcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
             "cy97bG9jYXRpb259L3Nlc3Npb25zL3tzZXNzaW9ufS9zdHJlYW1zL3tzdHJl",
-            "YW19It0DCgtXcml0ZVN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSRQoEdHlw",
+            "YW19IuQECgtXcml0ZVN0cmVhbRIRCgRuYW1lGAEgASgJQgPgQQMSRQoEdHlw",
             "ZRgCIAEoDjIyLmdvb2dsZS5jbG91ZC5iaWdxdWVyeS5zdG9yYWdlLnYxLldy",
             "aXRlU3RyZWFtLlR5cGVCA+BBBRI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgtjb21taXRfdGltZRgE",
             "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJICgx0YWJs",
             "ZV9zY2hlbWEYBSABKAsyLS5nb29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFn",
-            "ZS52MS5UYWJsZVNjaGVtYUID4EEDIkYKBFR5cGUSFAoQVFlQRV9VTlNQRUNJ",
-            "RklFRBAAEg0KCUNPTU1JVFRFRBABEgsKB1BFTkRJTkcQAhIMCghCVUZGRVJF",
-            "RBADOnbqQXMKKmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9Xcml0",
+            "ZS52MS5UYWJsZVNjaGVtYUID4EEDElAKCndyaXRlX21vZGUYByABKA4yNy5n",
+            "b29nbGUuY2xvdWQuYmlncXVlcnkuc3RvcmFnZS52MS5Xcml0ZVN0cmVhbS5X",
+            "cml0ZU1vZGVCA+BBBSJGCgRUeXBlEhQKEFRZUEVfVU5TUEVDSUZJRUQQABIN",
+            "CglDT01NSVRURUQQARILCgdQRU5ESU5HEAISDAoIQlVGRkVSRUQQAyIzCglX",
+            "cml0ZU1vZGUSGgoWV1JJVEVfTU9ERV9VTlNQRUNJRklFRBAAEgoKBklOU0VS",
+            "VBABOnbqQXMKKmJpZ3F1ZXJ5c3RvcmFnZS5nb29nbGVhcGlzLmNvbS9Xcml0",
             "ZVN0cmVhbRJFcHJvamVjdHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0",
             "fS90YWJsZXMve3RhYmxlfS9zdHJlYW1zL3tzdHJlYW19Kj4KCkRhdGFGb3Jt",
             "YXQSGwoXREFUQV9GT1JNQVRfVU5TUEVDSUZJRUQQABIICgRBVlJPEAESCQoF",
@@ -81,7 +84,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Parser, new[]{ "Name", "ExpireTime", "DataFormat", "AvroSchema", "ArrowSchema", "Table", "TableModifiers", "ReadOptions", "Streams", "EstimatedTotalBytesScanned" }, new[]{ "Schema" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableModifiers.Parser, new[]{ "SnapshotTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions), global::Google.Cloud.BigQuery.Storage.V1.ReadSession.Types.TableReadOptions.Parser, new[]{ "SelectedFields", "RowRestriction", "ArrowSerializationOptions" }, new[]{ "OutputFormatSerializationOptions" }, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.ReadStream), global::Google.Cloud.BigQuery.Storage.V1.ReadStream.Parser, new[]{ "Name" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream), global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Parser, new[]{ "Name", "Type", "CreateTime", "CommitTime", "TableSchema", "WriteMode" }, null, new[]{ typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.Type), typeof(global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) }, null, null)
           }));
     }
     #endregion
@@ -1520,6 +1523,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       createTime_ = other.createTime_ != null ? other.createTime_.Clone() : null;
       commitTime_ = other.commitTime_ != null ? other.commitTime_.Clone() : null;
       tableSchema_ = other.tableSchema_ != null ? other.tableSchema_.Clone() : null;
+      writeMode_ = other.writeMode_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -1612,6 +1616,21 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
     }
 
+    /// <summary>Field number for the "write_mode" field.</summary>
+    public const int WriteModeFieldNumber = 7;
+    private global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode writeMode_ = global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified;
+    /// <summary>
+    /// Immutable. Mode of the stream.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode WriteMode {
+      get { return writeMode_; }
+      set {
+        writeMode_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -1632,6 +1651,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (!object.Equals(CreateTime, other.CreateTime)) return false;
       if (!object.Equals(CommitTime, other.CommitTime)) return false;
       if (!object.Equals(TableSchema, other.TableSchema)) return false;
+      if (WriteMode != other.WriteMode) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -1644,6 +1664,7 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       if (createTime_ != null) hash ^= CreateTime.GetHashCode();
       if (commitTime_ != null) hash ^= CommitTime.GetHashCode();
       if (tableSchema_ != null) hash ^= TableSchema.GetHashCode();
+      if (WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) hash ^= WriteMode.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -1682,6 +1703,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(TableSchema);
       }
+      if (WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) WriteMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1712,6 +1737,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(TableSchema);
       }
+      if (WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) {
+        output.WriteRawTag(56);
+        output.WriteEnum((int) WriteMode);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1736,6 +1765,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
       }
       if (tableSchema_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(TableSchema);
+      }
+      if (WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) WriteMode);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1772,6 +1804,9 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
           TableSchema = new global::Google.Cloud.BigQuery.Storage.V1.TableSchema();
         }
         TableSchema.MergeFrom(other.TableSchema);
+      }
+      if (other.WriteMode != global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode.Unspecified) {
+        WriteMode = other.WriteMode;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1815,6 +1850,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
               TableSchema = new global::Google.Cloud.BigQuery.Storage.V1.TableSchema();
             }
             input.ReadMessage(TableSchema);
+            break;
+          }
+          case 56: {
+            WriteMode = (global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) input.ReadEnum();
             break;
           }
         }
@@ -1861,6 +1900,10 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
             input.ReadMessage(TableSchema);
             break;
           }
+          case 56: {
+            WriteMode = (global::Google.Cloud.BigQuery.Storage.V1.WriteStream.Types.WriteMode) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -1892,6 +1935,21 @@ namespace Google.Cloud.BigQuery.Storage.V1 {
         /// Data is only visible up to the offset to which it was flushed.
         /// </summary>
         [pbr::OriginalName("BUFFERED")] Buffered = 3,
+      }
+
+      /// <summary>
+      /// Mode enum of the stream.
+      /// </summary>
+      public enum WriteMode {
+        /// <summary>
+        /// Unknown type.
+        /// </summary>
+        [pbr::OriginalName("WRITE_MODE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Insert new records into the table.
+        /// It is the default value if customers do not specify it.
+        /// </summary>
+        [pbr::OriginalName("INSERT")] Insert = 1,
       }
 
     }

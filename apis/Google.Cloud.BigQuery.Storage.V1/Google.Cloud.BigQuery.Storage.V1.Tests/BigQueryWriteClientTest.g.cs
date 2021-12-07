@@ -43,6 +43,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -67,6 +68,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -93,6 +95,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -117,6 +120,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -143,6 +147,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -167,6 +172,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreateWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -192,6 +198,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -215,6 +222,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -240,6 +248,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -263,6 +272,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -288,6 +298,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStream(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
@@ -311,6 +322,7 @@ namespace Google.Cloud.BigQuery.Storage.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 CommitTime = new wkt::Timestamp(),
                 TableSchema = new TableSchema(),
+                WriteMode = WriteStream.Types.WriteMode.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetWriteStreamAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<WriteStream>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             BigQueryWriteClient client = new BigQueryWriteClientImpl(mockGrpcClient.Object, null);
