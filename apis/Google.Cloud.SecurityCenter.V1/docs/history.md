@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.10.0, released 2021-12-07
+
+- [Commit 1cda659](https://github.com/googleapis/google-cloud-dotnet/commit/1cda659): feat: Added a new API method UpdateExternalSystem, which enables updating a finding w/ external system metadata. External systems are a child resource under finding, and are housed on the finding itself, and can also be filtered on in Notifications, the ListFindings and GroupFindings API
+
 ## Version 2.9.0, released 2021-11-18
 
 - [Commit 7408292](https://github.com/googleapis/google-cloud-dotnet/commit/7408292): docs: fix docstring formatting
