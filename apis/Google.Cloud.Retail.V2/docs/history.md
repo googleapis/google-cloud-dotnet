@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.5.0, released 2021-12-07
+
+- [Commit 2925818](https://github.com/googleapis/google-cloud-dotnet/commit/2925818):
+  - docs: Keep the API doc up-to-date
+  - feat: update grpc service config settings to reflect correct API deadlines
+- [Commit deb7506](https://github.com/googleapis/google-cloud-dotnet/commit/deb7506): docs: fix docstring formatting
 ## Version 1.4.0, released 2021-10-20
 
 - [Commit 3c5e164](https://github.com/googleapis/google-cloud-dotnet/commit/3c5e164):
