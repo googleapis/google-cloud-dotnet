@@ -1322,7 +1322,7 @@
       "id": "Google.Cloud.Gaming.V1Beta",
       "generator": "micro",
       "protoPath": "google/cloud/gaming/v1beta",
-      "version": "1.0.0-beta08",
+      "version": "1.0.0-beta09",
       "type": "grpc",
       "productName": "Google Cloud for Games",
       "productUrl": "https://cloud.google.com/solutions/gaming",
@@ -1332,7 +1332,7 @@
         "games"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.2.0"
+        "Google.LongRunning": "2.3.0"
       }
     },
     {
