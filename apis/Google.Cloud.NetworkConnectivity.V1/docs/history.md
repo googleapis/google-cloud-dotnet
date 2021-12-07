@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.1.0, released 2021-12-07
+
+- [Commit 10e499d](https://github.com/googleapis/google-cloud-dotnet/commit/10e499d): fix!: Mark a couple networkconnectivity API fields as required, to match implemented behavior
+
 ## Version 1.0.0, released 2021-11-10
 
 First GA release.
