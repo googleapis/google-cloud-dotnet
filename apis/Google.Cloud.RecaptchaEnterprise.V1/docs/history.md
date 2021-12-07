@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.6.0, released 2021-12-07
+
+- [Commit 308c733](https://github.com/googleapis/google-cloud-dotnet/commit/308c733): feat: add new reCAPTCHA Enterprise fraud annotations
+
 ## Version 1.5.0, released 2021-11-10
 
 - [Commit fcce878](https://github.com/googleapis/google-cloud-dotnet/commit/fcce878):
