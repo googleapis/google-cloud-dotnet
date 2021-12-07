@@ -1,5 +1,8 @@
 # Version history
 
+## Version 2.0.0-beta07, released 2021-12-07
+
+- [Commit 54f0341](https://github.com/googleapis/google-cloud-dotnet/commit/54f0341): docs: fix docstring formatting
 ## Version 2.0.0-beta06, released 2021-09-06
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
