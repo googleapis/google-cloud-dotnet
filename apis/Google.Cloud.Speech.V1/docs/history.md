@@ -1,5 +1,14 @@
 # Version history
 
+## Version 2.7.0, released 2021-12-07
+
+- [Commit cbbd9a3](https://github.com/googleapis/google-cloud-dotnet/commit/cbbd9a3):
+  - feat: added alternative_language_codes to RecognitionConfig
+  - feat: WEBM_OPUS codec
+  - feat: SpeechAdaptation configuration
+  - feat: word confidence
+  - feat: spoken punctuation and spoken emojis
+  - feat: hint boost in SpeechContext
 ## Version 2.6.0, released 2021-10-12
 
 - [Commit dc07468](https://github.com/googleapis/google-cloud-dotnet/commit/dc07468):
