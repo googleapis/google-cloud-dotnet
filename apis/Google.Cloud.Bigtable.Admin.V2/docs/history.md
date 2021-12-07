@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.7.0, released 2021-12-07
+
+- [Commit c8a3a3e](https://github.com/googleapis/google-cloud-dotnet/commit/c8a3a3e): feat: add Autoscaling API
+
 ## Version 2.6.0, released 2021-10-20
 
 - [Commit f594b06](https://github.com/googleapis/google-cloud-dotnet/commit/f594b06): feat: Add create_time to Instance
