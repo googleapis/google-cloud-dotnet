@@ -1,5 +1,8 @@
 # Version history
 
+## Version 1.3.0, released 2021-12-07
+
+- [Commit e4a7b33](https://github.com/googleapis/google-cloud-dotnet/commit/e4a7b33): docs: fix docstring formatting
 ## Version 1.2.0, released 2021-09-23
 
 - [Commit 1577824](https://github.com/googleapis/google-cloud-dotnet/commit/1577824): feat: support version reporting API
