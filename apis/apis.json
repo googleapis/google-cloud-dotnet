@@ -1918,7 +1918,7 @@
     },
     {
       "id": "Google.Cloud.Notebooks.V1",
-      "version": "1.0.0-beta01",
+      "version": "1.0.0-beta02",
       "type": "grpc",
       "productName": "AI Platform Notebooks",
       "productUrl": "https://cloud.google.com/ai-platform-notebooks",
