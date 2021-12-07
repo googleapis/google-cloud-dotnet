@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.6.0, released 2021-12-07
+
+- [Commit 2382311](https://github.com/googleapis/google-cloud-dotnet/commit/2382311): docs: Small clarification
+
 ## Version 1.5.0, released 2021-11-10
 
 - [Commit 8f5d443](https://github.com/googleapis/google-cloud-dotnet/commit/8f5d443): docs: clarified usage of entitlement parameters
