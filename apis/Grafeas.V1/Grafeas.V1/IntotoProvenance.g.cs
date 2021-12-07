@@ -40,9 +40,10 @@ namespace Grafeas.V1 {
             "ZBgBIAEoCSKkAQoQSW5Ub3RvUHJvdmVuYW5jZRIxCg5idWlsZGVyX2NvbmZp",
             "ZxgBIAEoCzIZLmdyYWZlYXMudjEuQnVpbGRlckNvbmZpZxIiCgZyZWNpcGUY",
             "AiABKAsyEi5ncmFmZWFzLnYxLlJlY2lwZRImCghtZXRhZGF0YRgDIAEoCzIU",
-            "LmdyYWZlYXMudjEuTWV0YWRhdGESEQoJbWF0ZXJpYWxzGAQgAygJQlEKDWlv",
-            "LmdyYWZlYXMudjFQAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
+            "LmdyYWZlYXMudjEuTWV0YWRhdGESEQoJbWF0ZXJpYWxzGAQgAygJQmgKDWlv",
+            "LmdyYWZlYXMudjFCFUluVG90b1Byb3ZlbmFuY2VQcm90b1ABWjhnb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3Jh",
+            "ZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {

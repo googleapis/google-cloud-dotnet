@@ -34,9 +34,9 @@ namespace Grafeas.V1 {
             "UHJvdmVuYW5jZUgAQgsKCXByZWRpY2F0ZSJ3CgdTdWJqZWN0EgwKBG5hbWUY",
             "ASABKAkSLwoGZGlnZXN0GAIgAygLMh8uZ3JhZmVhcy52MS5TdWJqZWN0LkRp",
             "Z2VzdEVudHJ5Gi0KC0RpZ2VzdEVudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1",
-            "ZRgCIAEoCToCOAFCUQoNaW8uZ3JhZmVhcy52MVABWjhnb29nbGUuZ29sYW5n",
-            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6IC",
-            "A0dSQWIGcHJvdG8z"));
+            "ZRgCIAEoCToCOAFCZwoNaW8uZ3JhZmVhcy52MUIUSW5Ub3RvU3RhdGVtZW50",
+            "UHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBp",
+            "cy9ncmFmZWFzL3YxO2dyYWZlYXOiAgNHUkFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Grafeas.V1.IntotoProvenanceReflection.Descriptor, global::Grafeas.V1.SlsaProvenanceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
