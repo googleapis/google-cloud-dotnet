@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.8.0, released 2021-12-07
+
+- [Commit 2c44579](https://github.com/googleapis/google-cloud-dotnet/commit/2c44579):
+  - feat: added support for custom content types
+  - docs: reformat comments
+
 ## Version 1.7.0, released 2021-11-18
 
 - [Commit 042a99f](https://github.com/googleapis/google-cloud-dotnet/commit/042a99f):
