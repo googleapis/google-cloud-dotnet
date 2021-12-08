@@ -71,6 +71,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -122,6 +125,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -175,6 +181,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -226,6 +235,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.UpdateWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -379,6 +391,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -429,6 +444,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -481,6 +499,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -531,6 +552,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -583,6 +607,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkload(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);
@@ -633,6 +660,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1.Tests
                 {
                     new Workload.Types.ResourceSettings(),
                 },
+                KajEnrollmentState = Workload.Types.KajEnrollmentState.Unspecified,
+                EnableSovereignControls = true,
+                SaaEnrollmentResponse = new Workload.Types.SaaEnrollmentResponse(),
             };
             mockGrpcClient.Setup(x => x.GetWorkloadAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Workload>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             AssuredWorkloadsServiceClient client = new AssuredWorkloadsServiceClientImpl(mockGrpcClient.Object, null);

@@ -50,7 +50,7 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "EhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoGZmlsdGVyGAQgASgJInQKFUxpc3RX",
             "b3JrbG9hZHNSZXNwb25zZRJCCgl3b3JrbG9hZHMYASADKAsyLy5nb29nbGUu",
             "Y2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSKFFAoIV29ya2xvYWQSEQoEbmFtZRgBIAEo",
+            "eHRfcGFnZV90b2tlbhgCIAEoCSKLGwoIV29ya2xvYWQSEQoEbmFtZRgBIAEo",
             "CUID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECElQKCXJlc291cmNl",
             "cxgDIAMoCzI8Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0",
             "YTEuV29ya2xvYWQuUmVzb3VyY2VJbmZvQgPgQQMSYwoRY29tcGxpYW5jZV9y",
@@ -74,82 +74,102 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             "bmdzGA4gASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFi",
             "ZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0ID4EEEEmAKEXJlc291cmNlX3Nl",
             "dHRpbmdzGA8gAygLMkAuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMu",
-            "djFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZVNldHRpbmdzQgPgQQQajgIKDFJl",
-            "c291cmNlSW5mbxITCgtyZXNvdXJjZV9pZBgBIAEoAxJgCg1yZXNvdXJjZV90",
-            "eXBlGAIgASgOMkkuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFi",
-            "ZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZUluZm8uUmVzb3VyY2VUeXBlIoYBCgxS",
-            "ZXNvdXJjZVR5cGUSHQoZUkVTT1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEhgK",
-            "EENPTlNVTUVSX1BST0pFQ1QQARoCCAESEwoPQ09OU1VNRVJfRk9MREVSEAQS",
-            "GwoXRU5DUllQVElPTl9LRVlTX1BST0pFQ1QQAhILCgdLRVlSSU5HEAMajwEK",
-            "C0tNU1NldHRpbmdzEkEKEm5leHRfcm90YXRpb25fdGltZRgBIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCCeBBAuBBBOBBBRI9Cg9yb3RhdGlv",
-            "bl9wZXJpb2QYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25CCeBB",
-            "AuBBBOBBBRpvCgtJTDRTZXR0aW5ncxJcCgxrbXNfc2V0dGluZ3MYASABKAsy",
-            "Oy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmts",
-            "b2FkLktNU1NldHRpbmdzQgngQQLgQQTgQQU6AhgBGnAKDENKSVNTZXR0aW5n",
-            "cxJcCgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJl",
-            "ZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgngQQLg",
-            "QQTgQQU6AhgBGncKE0ZlZHJhbXBIaWdoU2V0dGluZ3MSXAoMa21zX3NldHRp",
-            "bmdzGAEgASgLMjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFi",
-            "ZXRhMS5Xb3JrbG9hZC5LTVNTZXR0aW5nc0IJ4EEC4EEE4EEFOgIYARp7ChdG",
-            "ZWRyYW1wTW9kZXJhdGVTZXR0aW5ncxJcCgxrbXNfc2V0dGluZ3MYASABKAsy",
-            "Oy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmts",
-            "b2FkLktNU1NldHRpbmdzQgngQQLgQQTgQQU6AhgBGp8BChBSZXNvdXJjZVNl",
-            "dHRpbmdzEhMKC3Jlc291cmNlX2lkGAEgASgJEmAKDXJlc291cmNlX3R5cGUY",
-            "AiABKA4ySS5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGEx",
-            "Lldvcmtsb2FkLlJlc291cmNlSW5mby5SZXNvdXJjZVR5cGUSFAoMZGlzcGxh",
-            "eV9uYW1lGAMgASgJGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2",
-            "YWx1ZRgCIAEoCToCOAEi2AEKEENvbXBsaWFuY2VSZWdpbWUSIQodQ09NUExJ",
-            "QU5DRV9SRUdJTUVfVU5TUEVDSUZJRUQQABIHCgNJTDQQARIICgRDSklTEAIS",
-            "EAoMRkVEUkFNUF9ISUdIEAMSFAoQRkVEUkFNUF9NT0RFUkFURRAEEhYKElVT",
-            "X1JFR0lPTkFMX0FDQ0VTUxAFEgkKBUhJUEFBEAYSCwoHSElUUlVTVBAHEhoK",
-            "FkVVX1JFR0lPTlNfQU5EX1NVUFBPUlQQCBIaChZDQV9SRUdJT05TX0FORF9T",
-            "VVBQT1JUEAk6depBcgooYXNzdXJlZHdvcmtsb2Fkcy5nb29nbGVhcGlzLmNv",
-            "bS9Xb3JrbG9hZBJGb3JnYW5pemF0aW9ucy97b3JnYW5pemF0aW9ufS9sb2Nh",
-            "dGlvbnMve2xvY2F0aW9ufS93b3JrbG9hZHMve3dvcmtsb2FkfUIcChpjb21w",
-            "bGlhbmNlX3JlZ2ltZV9zZXR0aW5ncyLLAgofQ3JlYXRlV29ya2xvYWRPcGVy",
-            "YXRpb25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBARIZCgxkaXNwbGF5X25hbWUYAiABKAlC",
-            "A+BBARITCgZwYXJlbnQYAyABKAlCA+BBARJgChFjb21wbGlhbmNlX3JlZ2lt",
-            "ZRgEIAEoDjJALmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0",
-            "YTEuV29ya2xvYWQuQ29tcGxpYW5jZVJlZ2ltZUID4EEBEmAKEXJlc291cmNl",
-            "X3NldHRpbmdzGAUgAygLMkAuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9h",
-            "ZHMudjFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZVNldHRpbmdzQgPgQQEyowkK",
-            "F0Fzc3VyZWRXb3JrbG9hZHNTZXJ2aWNlEvkBCg5DcmVhdGVXb3JrbG9hZBI8",
-            "Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuQ3JlYXRl",
-            "V29ya2xvYWRSZXF1ZXN0Gh0uZ29vZ2xlLmxvbmdydW5uaW5nLk9wZXJhdGlv",
-            "biKJAYLT5JMCQyI3L3YxYmV0YTEve3BhcmVudD1vcmdhbml6YXRpb25zLyov",
-            "bG9jYXRpb25zLyp9L3dvcmtsb2FkczoId29ya2xvYWTaQQ9wYXJlbnQsd29y",
-            "a2xvYWTKQSsKCFdvcmtsb2FkEh9DcmVhdGVXb3JrbG9hZE9wZXJhdGlvbk1l",
-            "dGFkYXRhEuoBCg5VcGRhdGVXb3JrbG9hZBI8Lmdvb2dsZS5jbG91ZC5hc3N1",
-            "cmVkd29ya2xvYWRzLnYxYmV0YTEuVXBkYXRlV29ya2xvYWRSZXF1ZXN0Gi8u",
+            "djFiZXRhMS5Xb3JrbG9hZC5SZXNvdXJjZVNldHRpbmdzQgPgQQQSZQoUa2Fq",
+            "X2Vucm9sbG1lbnRfc3RhdGUYESABKA4yQi5nb29nbGUuY2xvdWQuYXNzdXJl",
+            "ZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLkthakVucm9sbG1lbnRTdGF0",
+            "ZUID4EEDEiYKGWVuYWJsZV9zb3ZlcmVpZ25fY29udHJvbHMYEiABKAhCA+BB",
+            "ARJrChdzYWFfZW5yb2xsbWVudF9yZXNwb25zZRgUIAEoCzJFLmdvb2dsZS5j",
+            "bG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuV29ya2xvYWQuU2FhRW5y",
+            "b2xsbWVudFJlc3BvbnNlQgPgQQMajgIKDFJlc291cmNlSW5mbxITCgtyZXNv",
+            "dXJjZV9pZBgBIAEoAxJgCg1yZXNvdXJjZV90eXBlGAIgASgOMkkuZ29vZ2xl",
+            "LmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5SZXNv",
+            "dXJjZUluZm8uUmVzb3VyY2VUeXBlIoYBCgxSZXNvdXJjZVR5cGUSHQoZUkVT",
+            "T1VSQ0VfVFlQRV9VTlNQRUNJRklFRBAAEhgKEENPTlNVTUVSX1BST0pFQ1QQ",
+            "ARoCCAESEwoPQ09OU1VNRVJfRk9MREVSEAQSGwoXRU5DUllQVElPTl9LRVlT",
+            "X1BST0pFQ1QQAhILCgdLRVlSSU5HEAMajwEKC0tNU1NldHRpbmdzEkEKEm5l",
+            "eHRfcm90YXRpb25fdGltZRgBIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXBCCeBBAuBBBOBBBRI9Cg9yb3RhdGlvbl9wZXJpb2QYAiABKAsyGS5n",
+            "b29nbGUucHJvdG9idWYuRHVyYXRpb25CCeBBAuBBBOBBBRpvCgtJTDRTZXR0",
+            "aW5ncxJcCgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNz",
+            "dXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgng",
+            "QQLgQQTgQQU6AhgBGnAKDENKSVNTZXR0aW5ncxJcCgxrbXNfc2V0dGluZ3MY",
+            "ASABKAsyOy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGEx",
+            "Lldvcmtsb2FkLktNU1NldHRpbmdzQgngQQLgQQTgQQU6AhgBGncKE0ZlZHJh",
+            "bXBIaWdoU2V0dGluZ3MSXAoMa21zX3NldHRpbmdzGAEgASgLMjsuZ29vZ2xl",
+            "LmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9hZC5LTVNT",
+            "ZXR0aW5nc0IJ4EEC4EEE4EEFOgIYARp7ChdGZWRyYW1wTW9kZXJhdGVTZXR0",
+            "aW5ncxJcCgxrbXNfc2V0dGluZ3MYASABKAsyOy5nb29nbGUuY2xvdWQuYXNz",
+            "dXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLktNU1NldHRpbmdzQgng",
+            "QQLgQQTgQQU6AhgBGp8BChBSZXNvdXJjZVNldHRpbmdzEhMKC3Jlc291cmNl",
+            "X2lkGAEgASgJEmAKDXJlc291cmNlX3R5cGUYAiABKA4ySS5nb29nbGUuY2xv",
+            "dWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmtsb2FkLlJlc291cmNl",
+            "SW5mby5SZXNvdXJjZVR5cGUSFAoMZGlzcGxheV9uYW1lGAMgASgJGoYEChVT",
+            "YWFFbnJvbGxtZW50UmVzcG9uc2USawoMc2V0dXBfc3RhdHVzGAEgASgOMlAu",
             "Z29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3JrbG9h",
-            "ZCJpgtPkkwJMMkAvdjFiZXRhMS97d29ya2xvYWQubmFtZT1vcmdhbml6YXRp",
-            "b25zLyovbG9jYXRpb25zLyovd29ya2xvYWRzLyp9Ogh3b3JrbG9hZNpBFHdv",
-            "cmtsb2FkLHVwZGF0ZV9tYXNrEq4BCg5EZWxldGVXb3JrbG9hZBI8Lmdvb2ds",
-            "ZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuRGVsZXRlV29ya2xv",
-            "YWRSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVtcHR5IkaC0+STAjkqNy92",
-            "MWJldGExL3tuYW1lPW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMvKi93b3Jr",
-            "bG9hZHMvKn3aQQRuYW1lEsEBCgtHZXRXb3JrbG9hZBI5Lmdvb2dsZS5jbG91",
-            "ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEuR2V0V29ya2xvYWRSZXF1ZXN0",
-            "Gi8uZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5Xb3Jr",
-            "bG9hZCJGgtPkkwI5EjcvdjFiZXRhMS97bmFtZT1vcmdhbml6YXRpb25zLyov",
-            "bG9jYXRpb25zLyovd29ya2xvYWRzLyp92kEEbmFtZRLUAQoNTGlzdFdvcmts",
-            "b2FkcxI7Lmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xvYWRzLnYxYmV0YTEu",
-            "TGlzdFdvcmtsb2Fkc1JlcXVlc3QaPC5nb29nbGUuY2xvdWQuYXNzdXJlZHdv",
-            "cmtsb2Fkcy52MWJldGExLkxpc3RXb3JrbG9hZHNSZXNwb25zZSJIgtPkkwI5",
-            "EjcvdjFiZXRhMS97cGFyZW50PW9yZ2FuaXphdGlvbnMvKi9sb2NhdGlvbnMv",
-            "Kn0vd29ya2xvYWRz2kEGcGFyZW50GlPKQR9hc3N1cmVkd29ya2xvYWRzLmdv",
-            "b2dsZWFwaXMuY29t0kEuaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
-            "aC9jbG91ZC1wbGF0Zm9ybUL2AgopY29tLmdvb2dsZS5jbG91ZC5hc3N1cmVk",
-            "d29ya2xvYWRzLnYxYmV0YTFCFUFzc3VyZWR3b3JrbG9hZHNQcm90b1ABWlVn",
-            "b29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2Fz",
-            "c3VyZWR3b3JrbG9hZHMvdjFiZXRhMTthc3N1cmVkd29ya2xvYWRzqgIlR29v",
-            "Z2xlLkNsb3VkLkFzc3VyZWRXb3JrbG9hZHMuVjFCZXRhMcoCJUdvb2dsZVxD",
-            "bG91ZFxBc3N1cmVkV29ya2xvYWRzXFYxYmV0YTHqAihHb29nbGU6OkNsb3Vk",
-            "OjpBc3N1cmVkV29ya2xvYWRzOjpWMWJldGEx6kFdCihhc3N1cmVkd29ya2xv",
-            "YWRzLmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEjFvcmdhbml6YXRpb25zL3tv",
-            "cmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9jYXRpb259YgZwcm90bzM="));
+            "ZC5TYWFFbnJvbGxtZW50UmVzcG9uc2UuU2V0dXBTdGF0ZUgAiAEBEmYKDHNl",
+            "dHVwX2Vycm9ycxgCIAMoDjJQLmdvb2dsZS5jbG91ZC5hc3N1cmVkd29ya2xv",
+            "YWRzLnYxYmV0YTEuV29ya2xvYWQuU2FhRW5yb2xsbWVudFJlc3BvbnNlLlNl",
+            "dHVwRXJyb3IiUgoKU2V0dXBTdGF0ZRIbChdTRVRVUF9TVEFURV9VTlNQRUNJ",
+            "RklFRBAAEhIKDlNUQVRVU19QRU5ESU5HEAESEwoPU1RBVFVTX0NPTVBMRVRF",
+            "EAIisgEKClNldHVwRXJyb3ISGwoXU0VUVVBfRVJST1JfVU5TUEVDSUZJRUQQ",
+            "ABIcChhFUlJPUl9JTlZBTElEX0JBU0VfU0VUVVAQARImCiJFUlJPUl9NSVNT",
+            "SU5HX0VYVEVSTkFMX1NJR05JTkdfS0VZEAISIwofRVJST1JfTk9UX0FMTF9T",
+            "RVJWSUNFU19FTlJPTExFRBADEhwKGEVSUk9SX1NFVFVQX0NIRUNLX0ZBSUxF",
+            "RBAEQg8KDV9zZXR1cF9zdGF0dXMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ASLYAQoQQ29tcGxpYW5jZVJlZ2ltZRIh",
+            "Ch1DT01QTElBTkNFX1JFR0lNRV9VTlNQRUNJRklFRBAAEgcKA0lMNBABEggK",
+            "BENKSVMQAhIQCgxGRURSQU1QX0hJR0gQAxIUChBGRURSQU1QX01PREVSQVRF",
+            "EAQSFgoSVVNfUkVHSU9OQUxfQUNDRVNTEAUSCQoFSElQQUEQBhILCgdISVRS",
+            "VVNUEAcSGgoWRVVfUkVHSU9OU19BTkRfU1VQUE9SVBAIEhoKFkNBX1JFR0lP",
+            "TlNfQU5EX1NVUFBPUlQQCSJ/ChJLYWpFbnJvbGxtZW50U3RhdGUSJAogS0FK",
+            "X0VOUk9MTE1FTlRfU1RBVEVfVU5TUEVDSUZJRUQQABIgChxLQUpfRU5ST0xM",
+            "TUVOVF9TVEFURV9QRU5ESU5HEAESIQodS0FKX0VOUk9MTE1FTlRfU1RBVEVf",
+            "Q09NUExFVEUQAjp16kFyCihhc3N1cmVkd29ya2xvYWRzLmdvb2dsZWFwaXMu",
+            "Y29tL1dvcmtsb2FkEkZvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3dvcmtsb2Fkcy97d29ya2xvYWR9QhwKGmNv",
+            "bXBsaWFuY2VfcmVnaW1lX3NldHRpbmdzIssCCh9DcmVhdGVXb3JrbG9hZE9w",
+            "ZXJhdGlvbk1ldGFkYXRhEjQKC2NyZWF0ZV90aW1lGAEgASgLMhouZ29vZ2xl",
+            "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEBEhkKDGRpc3BsYXlfbmFtZRgCIAEo",
+            "CUID4EEBEhMKBnBhcmVudBgDIAEoCUID4EEBEmAKEWNvbXBsaWFuY2VfcmVn",
+            "aW1lGAQgASgOMkAuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFi",
+            "ZXRhMS5Xb3JrbG9hZC5Db21wbGlhbmNlUmVnaW1lQgPgQQESYAoRcmVzb3Vy",
+            "Y2Vfc2V0dGluZ3MYBSADKAsyQC5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmts",
+            "b2Fkcy52MWJldGExLldvcmtsb2FkLlJlc291cmNlU2V0dGluZ3NCA+BBATKj",
+            "CQoXQXNzdXJlZFdvcmtsb2Fkc1NlcnZpY2US+QEKDkNyZWF0ZVdvcmtsb2Fk",
+            "EjwuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5DcmVh",
+            "dGVXb3JrbG9hZFJlcXVlc3QaHS5nb29nbGUubG9uZ3J1bm5pbmcuT3BlcmF0",
+            "aW9uIokBgtPkkwJDIjcvdjFiZXRhMS97cGFyZW50PW9yZ2FuaXphdGlvbnMv",
+            "Ki9sb2NhdGlvbnMvKn0vd29ya2xvYWRzOgh3b3JrbG9hZNpBD3BhcmVudCx3",
+            "b3JrbG9hZMpBKwoIV29ya2xvYWQSH0NyZWF0ZVdvcmtsb2FkT3BlcmF0aW9u",
+            "TWV0YWRhdGES6gEKDlVwZGF0ZVdvcmtsb2FkEjwuZ29vZ2xlLmNsb3VkLmFz",
+            "c3VyZWR3b3JrbG9hZHMudjFiZXRhMS5VcGRhdGVXb3JrbG9hZFJlcXVlc3Qa",
+            "Ly5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldvcmts",
+            "b2FkImmC0+STAkwyQC92MWJldGExL3t3b3JrbG9hZC5uYW1lPW9yZ2FuaXph",
+            "dGlvbnMvKi9sb2NhdGlvbnMvKi93b3JrbG9hZHMvKn06CHdvcmtsb2Fk2kEU",
+            "d29ya2xvYWQsdXBkYXRlX21hc2sSrgEKDkRlbGV0ZVdvcmtsb2FkEjwuZ29v",
+            "Z2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5EZWxldGVXb3Jr",
+            "bG9hZFJlcXVlc3QaFi5nb29nbGUucHJvdG9idWYuRW1wdHkiRoLT5JMCOSo3",
+            "L3YxYmV0YTEve25hbWU9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9ucy8qL3dv",
+            "cmtsb2Fkcy8qfdpBBG5hbWUSwQEKC0dldFdvcmtsb2FkEjkuZ29vZ2xlLmNs",
+            "b3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRhMS5HZXRXb3JrbG9hZFJlcXVl",
+            "c3QaLy5nb29nbGUuY2xvdWQuYXNzdXJlZHdvcmtsb2Fkcy52MWJldGExLldv",
+            "cmtsb2FkIkaC0+STAjkSNy92MWJldGExL3tuYW1lPW9yZ2FuaXphdGlvbnMv",
+            "Ki9sb2NhdGlvbnMvKi93b3JrbG9hZHMvKn3aQQRuYW1lEtQBCg1MaXN0V29y",
+            "a2xvYWRzEjsuZ29vZ2xlLmNsb3VkLmFzc3VyZWR3b3JrbG9hZHMudjFiZXRh",
+            "MS5MaXN0V29ya2xvYWRzUmVxdWVzdBo8Lmdvb2dsZS5jbG91ZC5hc3N1cmVk",
+            "d29ya2xvYWRzLnYxYmV0YTEuTGlzdFdvcmtsb2Fkc1Jlc3BvbnNlIkiC0+ST",
+            "AjkSNy92MWJldGExL3twYXJlbnQ9b3JnYW5pemF0aW9ucy8qL2xvY2F0aW9u",
+            "cy8qfS93b3JrbG9hZHPaQQZwYXJlbnQaU8pBH2Fzc3VyZWR3b3JrbG9hZHMu",
+            "Z29vZ2xlYXBpcy5jb23SQS5odHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
+            "dXRoL2Nsb3VkLXBsYXRmb3JtQvYCCiljb20uZ29vZ2xlLmNsb3VkLmFzc3Vy",
+            "ZWR3b3JrbG9hZHMudjFiZXRhMUIVQXNzdXJlZHdvcmtsb2Fkc1Byb3RvUAFa",
+            "VWdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
+            "YXNzdXJlZHdvcmtsb2Fkcy92MWJldGExO2Fzc3VyZWR3b3JrbG9hZHOqAiVH",
+            "b29nbGUuQ2xvdWQuQXNzdXJlZFdvcmtsb2Fkcy5WMUJldGExygIlR29vZ2xl",
+            "XENsb3VkXEFzc3VyZWRXb3JrbG9hZHNcVjFiZXRhMeoCKEdvb2dsZTo6Q2xv",
+            "dWQ6OkFzc3VyZWRXb3JrbG9hZHM6OlYxYmV0YTHqQV0KKGFzc3VyZWR3b3Jr",
+            "bG9hZHMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SMW9yZ2FuaXphdGlvbnMv",
+            "e29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -159,13 +179,14 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.GetWorkloadRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.ListWorkloadsResponse.Parser, new[]{ "Workloads", "NextPageToken" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings", "ResourceSettings" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Parser, new[]{ "Name", "DisplayName", "Resources", "ComplianceRegime", "CreateTime", "BillingAccount", "Il4Settings", "CjisSettings", "FedrampHighSettings", "FedrampModerateSettings", "Etag", "Labels", "ProvisionedResourcesParent", "KmsSettings", "ResourceSettings", "KajEnrollmentState", "EnableSovereignControls", "SaaEnrollmentResponse" }, new[]{ "ComplianceRegimeSettings" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime), typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Parser, new[]{ "ResourceId", "ResourceType" }, null, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceInfo.Types.ResourceType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings.Parser, new[]{ "NextRotationTime", "RotationPeriod" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.IL4Settings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.CJISSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampHighSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampHighSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampModerateSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.FedrampModerateSettings.Parser, new[]{ "KmsSettings" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings.Parser, new[]{ "ResourceId", "ResourceType", "DisplayName" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse), global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Parser, new[]{ "SetupStatus", "SetupErrors" }, new[]{ "SetupStatus" }, new[]{ typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState), typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupError) }, null, null),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata), global::Google.Cloud.AssuredWorkloads.V1Beta1.CreateWorkloadOperationMetadata.Parser, new[]{ "CreateTime", "DisplayName", "Parent", "ComplianceRegime", "ResourceSettings" }, null, null, null, null)
           }));
@@ -258,8 +279,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     public const int ExternalIdFieldNumber = 3;
     private string externalId_ = "";
     /// <summary>
-    /// Optional. A identifier associated with the workload and underlying projects which
-    /// allows for the break down of billing costs for a workload. The value
+    /// Optional. A identifier associated with the workload and underlying projects
+    /// which allows for the break down of billing costs for a workload. The value
     /// provided for the identifier will add a label to the workload and contained
     /// projects with the identifier as the value.
     /// </summary>
@@ -1007,8 +1028,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the Workload to fetch. This is the workloads's
-    /// relative path in the API, formatted as
+    /// Required. The resource name of the Workload to fetch. This is the
+    /// workloads's relative path in the API, formatted as
     /// "organizations/{organization_id}/locations/{location_id}/workloads/{workload_id}".
     /// For example,
     /// "organizations/123/locations/us-east1/workloads/assured-workload-1".
@@ -1747,6 +1768,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       provisionedResourcesParent_ = other.provisionedResourcesParent_;
       kmsSettings_ = other.kmsSettings_ != null ? other.kmsSettings_.Clone() : null;
       resourceSettings_ = other.resourceSettings_.Clone();
+      kajEnrollmentState_ = other.kajEnrollmentState_;
+      enableSovereignControls_ = other.enableSovereignControls_;
+      saaEnrollmentResponse_ = other.saaEnrollmentResponse_ != null ? other.saaEnrollmentResponse_.Clone() : null;
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           Il4Settings = other.Il4Settings.Clone();
@@ -1882,7 +1906,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     /// <summary>Field number for the "il4_settings" field.</summary>
     public const int Il4SettingsFieldNumber = 7;
     /// <summary>
-    /// Required. Input only. Immutable. Settings specific to resources needed for IL4.
+    /// Required. Input only. Immutable. Settings specific to resources needed
+    /// for IL4.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1898,7 +1923,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     /// <summary>Field number for the "cjis_settings" field.</summary>
     public const int CjisSettingsFieldNumber = 8;
     /// <summary>
-    /// Required. Input only. Immutable. Settings specific to resources needed for CJIS.
+    /// Required. Input only. Immutable. Settings specific to resources needed
+    /// for CJIS.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1914,7 +1940,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     /// <summary>Field number for the "fedramp_high_settings" field.</summary>
     public const int FedrampHighSettingsFieldNumber = 11;
     /// <summary>
-    /// Required. Input only. Immutable. Settings specific to resources needed for FedRAMP High.
+    /// Required. Input only. Immutable. Settings specific to resources needed
+    /// for FedRAMP High.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1930,7 +1957,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     /// <summary>Field number for the "fedramp_moderate_settings" field.</summary>
     public const int FedrampModerateSettingsFieldNumber = 12;
     /// <summary>
-    /// Required. Input only. Immutable. Settings specific to resources needed for FedRAMP Moderate.
+    /// Required. Input only. Immutable. Settings specific to resources needed
+    /// for FedRAMP Moderate.
     /// </summary>
     [global::System.ObsoleteAttribute]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1977,8 +2005,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     public const int ProvisionedResourcesParentFieldNumber = 13;
     private string provisionedResourcesParent_ = "";
     /// <summary>
-    /// Input only. The parent resource for the resources managed by this Assured Workload. May
-    /// be either empty or a folder resource which is a child of the
+    /// Input only. The parent resource for the resources managed by this Assured
+    /// Workload. May be either empty or a folder resource which is a child of the
     /// Workload parent. If not specified all resources are created under the
     /// parent organization.
     /// Format:
@@ -1997,9 +2025,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     public const int KmsSettingsFieldNumber = 14;
     private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings kmsSettings_;
     /// <summary>
-    /// Input only. Settings used to create a CMEK crypto key. When set a project with a KMS
-    /// CMEK key is provisioned. This field is mandatory for a subset of Compliance
-    /// Regimes.
+    /// Input only. Settings used to create a CMEK crypto key. When set a project
+    /// with a KMS CMEK key is provisioned. This field is mandatory for a subset of
+    /// Compliance Regimes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2016,14 +2044,62 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         = pb::FieldCodec.ForMessage(122, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings> resourceSettings_ = new pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings>();
     /// <summary>
-    /// Input only. Resource properties that are used to customize workload resources.
-    /// These properties (such as custom project id) will be used to create
-    /// workload resources if possible. This field is optional.
+    /// Input only. Resource properties that are used to customize workload
+    /// resources. These properties (such as custom project id) will be used to
+    /// create workload resources if possible. This field is optional.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings> ResourceSettings {
       get { return resourceSettings_; }
+    }
+
+    /// <summary>Field number for the "kaj_enrollment_state" field.</summary>
+    public const int KajEnrollmentStateFieldNumber = 17;
+    private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState kajEnrollmentState_ = global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified;
+    /// <summary>
+    /// Output only. Represents the KAJ enrollment state of the given workload.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState KajEnrollmentState {
+      get { return kajEnrollmentState_; }
+      set {
+        kajEnrollmentState_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "enable_sovereign_controls" field.</summary>
+    public const int EnableSovereignControlsFieldNumber = 18;
+    private bool enableSovereignControls_;
+    /// <summary>
+    /// Optional. Indicates the sovereignty status of the given workload.
+    /// Currently meant to be used by Europe/Canada customers.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool EnableSovereignControls {
+      get { return enableSovereignControls_; }
+      set {
+        enableSovereignControls_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "saa_enrollment_response" field.</summary>
+    public const int SaaEnrollmentResponseFieldNumber = 20;
+    private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse saaEnrollmentResponse_;
+    /// <summary>
+    /// Output only. Represents the SAA enrollment response of the given workload.
+    /// SAA enrollment response is queried during GetWorkload call.
+    /// In failure cases, user friendly error message is shown in SAA details page.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse SaaEnrollmentResponse {
+      get { return saaEnrollmentResponse_; }
+      set {
+        saaEnrollmentResponse_ = value;
+      }
     }
 
     private object complianceRegimeSettings_;
@@ -2079,6 +2155,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (ProvisionedResourcesParent != other.ProvisionedResourcesParent) return false;
       if (!object.Equals(KmsSettings, other.KmsSettings)) return false;
       if(!resourceSettings_.Equals(other.resourceSettings_)) return false;
+      if (KajEnrollmentState != other.KajEnrollmentState) return false;
+      if (EnableSovereignControls != other.EnableSovereignControls) return false;
+      if (!object.Equals(SaaEnrollmentResponse, other.SaaEnrollmentResponse)) return false;
       if (ComplianceRegimeSettingsCase != other.ComplianceRegimeSettingsCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -2102,6 +2181,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
       if (ProvisionedResourcesParent.Length != 0) hash ^= ProvisionedResourcesParent.GetHashCode();
       if (kmsSettings_ != null) hash ^= KmsSettings.GetHashCode();
       hash ^= resourceSettings_.GetHashCode();
+      if (KajEnrollmentState != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified) hash ^= KajEnrollmentState.GetHashCode();
+      if (EnableSovereignControls != false) hash ^= EnableSovereignControls.GetHashCode();
+      if (saaEnrollmentResponse_ != null) hash ^= SaaEnrollmentResponse.GetHashCode();
       hash ^= (int) complianceRegimeSettingsCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -2172,6 +2254,18 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteMessage(KmsSettings);
       }
       resourceSettings_.WriteTo(output, _repeated_resourceSettings_codec);
+      if (KajEnrollmentState != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) KajEnrollmentState);
+      }
+      if (EnableSovereignControls != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(EnableSovereignControls);
+      }
+      if (saaEnrollmentResponse_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(SaaEnrollmentResponse);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2233,6 +2327,18 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         output.WriteMessage(KmsSettings);
       }
       resourceSettings_.WriteTo(ref output, _repeated_resourceSettings_codec);
+      if (KajEnrollmentState != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified) {
+        output.WriteRawTag(136, 1);
+        output.WriteEnum((int) KajEnrollmentState);
+      }
+      if (EnableSovereignControls != false) {
+        output.WriteRawTag(144, 1);
+        output.WriteBool(EnableSovereignControls);
+      }
+      if (saaEnrollmentResponse_ != null) {
+        output.WriteRawTag(162, 1);
+        output.WriteMessage(SaaEnrollmentResponse);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2282,6 +2388,15 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KmsSettings);
       }
       size += resourceSettings_.CalculateSize(_repeated_resourceSettings_codec);
+      if (KajEnrollmentState != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified) {
+        size += 2 + pb::CodedOutputStream.ComputeEnumSize((int) KajEnrollmentState);
+      }
+      if (EnableSovereignControls != false) {
+        size += 2 + 1;
+      }
+      if (saaEnrollmentResponse_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(SaaEnrollmentResponse);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -2327,6 +2442,18 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         KmsSettings.MergeFrom(other.KmsSettings);
       }
       resourceSettings_.Add(other.resourceSettings_);
+      if (other.KajEnrollmentState != global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState.Unspecified) {
+        KajEnrollmentState = other.KajEnrollmentState;
+      }
+      if (other.EnableSovereignControls != false) {
+        EnableSovereignControls = other.EnableSovereignControls;
+      }
+      if (other.saaEnrollmentResponse_ != null) {
+        if (saaEnrollmentResponse_ == null) {
+          SaaEnrollmentResponse = new global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse();
+        }
+        SaaEnrollmentResponse.MergeFrom(other.SaaEnrollmentResponse);
+      }
       switch (other.ComplianceRegimeSettingsCase) {
         case ComplianceRegimeSettingsOneofCase.Il4Settings:
           if (Il4Settings == null) {
@@ -2455,6 +2582,21 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             resourceSettings_.AddEntriesFrom(input, _repeated_resourceSettings_codec);
             break;
           }
+          case 136: {
+            KajEnrollmentState = (global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            EnableSovereignControls = input.ReadBool();
+            break;
+          }
+          case 162: {
+            if (saaEnrollmentResponse_ == null) {
+              SaaEnrollmentResponse = new global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse();
+            }
+            input.ReadMessage(SaaEnrollmentResponse);
+            break;
+          }
         }
       }
     #endif
@@ -2556,6 +2698,21 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
             resourceSettings_.AddEntriesFrom(ref input, _repeated_resourceSettings_codec);
             break;
           }
+          case 136: {
+            KajEnrollmentState = (global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KajEnrollmentState) input.ReadEnum();
+            break;
+          }
+          case 144: {
+            EnableSovereignControls = input.ReadBool();
+            break;
+          }
+          case 162: {
+            if (saaEnrollmentResponse_ == null) {
+              SaaEnrollmentResponse = new global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse();
+            }
+            input.ReadMessage(SaaEnrollmentResponse);
+            break;
+          }
         }
       }
     }
@@ -2610,6 +2767,24 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         /// Assured Workloads For Canada Regions and Support controls
         /// </summary>
         [pbr::OriginalName("CA_REGIONS_AND_SUPPORT")] CaRegionsAndSupport = 9,
+      }
+
+      /// <summary>
+      /// Key Access Justifications(KAJ) Enrollment State.
+      /// </summary>
+      public enum KajEnrollmentState {
+        /// <summary>
+        /// Default State for KAJ Enrollment.
+        /// </summary>
+        [pbr::OriginalName("KAJ_ENROLLMENT_STATE_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Pending State for KAJ Enrollment.
+        /// </summary>
+        [pbr::OriginalName("KAJ_ENROLLMENT_STATE_PENDING")] Pending = 1,
+        /// <summary>
+        /// Complete State for KAJ Enrollment.
+        /// </summary>
+        [pbr::OriginalName("KAJ_ENROLLMENT_STATE_COMPLETE")] Complete = 2,
       }
 
       /// <summary>
@@ -2935,8 +3110,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         public const int NextRotationTimeFieldNumber = 1;
         private global::Google.Protobuf.WellKnownTypes.Timestamp nextRotationTime_;
         /// <summary>
-        /// Required. Input only. Immutable. The time at which the Key Management Service will automatically create a
-        /// new version of the crypto key and mark it as the primary.
+        /// Required. Input only. Immutable. The time at which the Key Management
+        /// Service will automatically create a new version of the crypto key and
+        /// mark it as the primary.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2951,9 +3127,9 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         public const int RotationPeriodFieldNumber = 2;
         private global::Google.Protobuf.WellKnownTypes.Duration rotationPeriod_;
         /// <summary>
-        /// Required. Input only. Immutable. [next_rotation_time] will be advanced by this period when the Key
-        /// Management Service automatically rotates a key. Must be at least 24 hours
-        /// and at most 876,000 hours.
+        /// Required. Input only. Immutable. [next_rotation_time] will be advanced by
+        /// this period when the Key Management Service automatically rotates a key.
+        /// Must be at least 24 hours and at most 876,000 hours.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3191,7 +3367,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         public const int KmsSettingsFieldNumber = 1;
         private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings kmsSettings_;
         /// <summary>
-        /// Required. Input only. Immutable. Settings used to create a CMEK crypto key.
+        /// Required. Input only. Immutable. Settings used to create a CMEK crypto
+        /// key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3396,7 +3573,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         public const int KmsSettingsFieldNumber = 1;
         private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings kmsSettings_;
         /// <summary>
-        /// Required. Input only. Immutable. Settings used to create a CMEK crypto key.
+        /// Required. Input only. Immutable. Settings used to create a CMEK crypto
+        /// key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3601,7 +3779,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         public const int KmsSettingsFieldNumber = 1;
         private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings kmsSettings_;
         /// <summary>
-        /// Required. Input only. Immutable. Settings used to create a CMEK crypto key.
+        /// Required. Input only. Immutable. Settings used to create a CMEK crypto
+        /// key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3806,7 +3985,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         public const int KmsSettingsFieldNumber = 1;
         private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.KMSSettings kmsSettings_;
         /// <summary>
-        /// Required. Input only. Immutable. Settings used to create a CMEK crypto key.
+        /// Required. Input only. Immutable. Settings used to create a CMEK crypto
+        /// key.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4240,6 +4420,302 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
 
       }
 
+      /// <summary>
+      /// Signed Access Approvals (SAA) enrollment response.
+      /// </summary>
+      public sealed partial class SaaEnrollmentResponse : pb::IMessage<SaaEnrollmentResponse>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<SaaEnrollmentResponse> _parser = new pb::MessageParser<SaaEnrollmentResponse>(() => new SaaEnrollmentResponse());
+        private pb::UnknownFieldSet _unknownFields;
+        private int _hasBits0;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<SaaEnrollmentResponse> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Descriptor.NestedTypes[7]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SaaEnrollmentResponse() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SaaEnrollmentResponse(SaaEnrollmentResponse other) : this() {
+          _hasBits0 = other._hasBits0;
+          setupStatus_ = other.setupStatus_;
+          setupErrors_ = other.setupErrors_.Clone();
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public SaaEnrollmentResponse Clone() {
+          return new SaaEnrollmentResponse(this);
+        }
+
+        /// <summary>Field number for the "setup_status" field.</summary>
+        public const int SetupStatusFieldNumber = 1;
+        private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState setupStatus_;
+        /// <summary>
+        /// Indicates SAA enrollment status of a given workload.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState SetupStatus {
+          get { if ((_hasBits0 & 1) != 0) { return setupStatus_; } else { return global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState.Unspecified; } }
+          set {
+            _hasBits0 |= 1;
+            setupStatus_ = value;
+          }
+        }
+        /// <summary>Gets whether the "setup_status" field is set</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool HasSetupStatus {
+          get { return (_hasBits0 & 1) != 0; }
+        }
+        /// <summary>Clears the value of the "setup_status" field</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void ClearSetupStatus() {
+          _hasBits0 &= ~1;
+        }
+
+        /// <summary>Field number for the "setup_errors" field.</summary>
+        public const int SetupErrorsFieldNumber = 2;
+        private static readonly pb::FieldCodec<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupError> _repeated_setupErrors_codec
+            = pb::FieldCodec.ForEnum(18, x => (int) x, x => (global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupError) x);
+        private readonly pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupError> setupErrors_ = new pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupError>();
+        /// <summary>
+        /// Indicates SAA enrollment setup error if any.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupError> SetupErrors {
+          get { return setupErrors_; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as SaaEnrollmentResponse);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(SaaEnrollmentResponse other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (SetupStatus != other.SetupStatus) return false;
+          if(!setupErrors_.Equals(other.setupErrors_)) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (HasSetupStatus) hash ^= SetupStatus.GetHashCode();
+          hash ^= setupErrors_.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (HasSetupStatus) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) SetupStatus);
+          }
+          setupErrors_.WriteTo(output, _repeated_setupErrors_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HasSetupStatus) {
+            output.WriteRawTag(8);
+            output.WriteEnum((int) SetupStatus);
+          }
+          setupErrors_.WriteTo(ref output, _repeated_setupErrors_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (HasSetupStatus) {
+            size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) SetupStatus);
+          }
+          size += setupErrors_.CalculateSize(_repeated_setupErrors_codec);
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(SaaEnrollmentResponse other) {
+          if (other == null) {
+            return;
+          }
+          if (other.HasSetupStatus) {
+            SetupStatus = other.SetupStatus;
+          }
+          setupErrors_.Add(other.setupErrors_);
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 8: {
+                SetupStatus = (global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState) input.ReadEnum();
+                break;
+              }
+              case 18:
+              case 16: {
+                setupErrors_.AddEntriesFrom(input, _repeated_setupErrors_codec);
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 8: {
+                SetupStatus = (global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.SaaEnrollmentResponse.Types.SetupState) input.ReadEnum();
+                break;
+              }
+              case 18:
+              case 16: {
+                setupErrors_.AddEntriesFrom(ref input, _repeated_setupErrors_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+        #region Nested types
+        /// <summary>Container for nested types declared in the SaaEnrollmentResponse message type.</summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static partial class Types {
+          /// <summary>
+          /// Setup state of SAA enrollment.
+          /// </summary>
+          public enum SetupState {
+            /// <summary>
+            /// Unspecified.
+            /// </summary>
+            [pbr::OriginalName("SETUP_STATE_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// SAA enrollment pending.
+            /// </summary>
+            [pbr::OriginalName("STATUS_PENDING")] StatusPending = 1,
+            /// <summary>
+            /// SAA enrollment comopleted.
+            /// </summary>
+            [pbr::OriginalName("STATUS_COMPLETE")] StatusComplete = 2,
+          }
+
+          /// <summary>
+          /// Setup error of SAA enrollment.
+          /// </summary>
+          public enum SetupError {
+            /// <summary>
+            /// Unspecified.
+            /// </summary>
+            [pbr::OriginalName("SETUP_ERROR_UNSPECIFIED")] Unspecified = 0,
+            /// <summary>
+            /// Invalid states for all customers, to be redirected to AA UI for
+            /// additional details.
+            /// </summary>
+            [pbr::OriginalName("ERROR_INVALID_BASE_SETUP")] ErrorInvalidBaseSetup = 1,
+            /// <summary>
+            /// Returned when there is not an EKM key configured.
+            /// </summary>
+            [pbr::OriginalName("ERROR_MISSING_EXTERNAL_SIGNING_KEY")] ErrorMissingExternalSigningKey = 2,
+            /// <summary>
+            /// Returned when there are no enrolled services or the customer is
+            /// enrolled in CAA only for a subset of services.
+            /// </summary>
+            [pbr::OriginalName("ERROR_NOT_ALL_SERVICES_ENROLLED")] ErrorNotAllServicesEnrolled = 3,
+            /// <summary>
+            /// Returned when exception was encountered during evaluation of other
+            /// criteria.
+            /// </summary>
+            [pbr::OriginalName("ERROR_SETUP_CHECK_FAILED")] ErrorSetupCheckFailed = 4,
+          }
+
+        }
+        #endregion
+
+      }
+
     }
     #endregion
 
@@ -4345,8 +4821,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
     public const int ComplianceRegimeFieldNumber = 4;
     private global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime complianceRegime_ = global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ComplianceRegime.Unspecified;
     /// <summary>
-    /// Optional. Compliance controls that should be applied to the resources managed by
-    /// the workload.
+    /// Optional. Compliance controls that should be applied to the resources
+    /// managed by the workload.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4363,8 +4839,8 @@ namespace Google.Cloud.AssuredWorkloads.V1Beta1 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings> resourceSettings_ = new pbc::RepeatedField<global::Google.Cloud.AssuredWorkloads.V1Beta1.Workload.Types.ResourceSettings>();
     /// <summary>
-    /// Optional. Resource properties in the input that are used for creating/customizing
-    /// workload resources.
+    /// Optional. Resource properties in the input that are used for
+    /// creating/customizing workload resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
