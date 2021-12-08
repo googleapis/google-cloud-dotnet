@@ -44,7 +44,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               NumericValue,        
                               BytesValue,       
                               TimestampValue,      
-                              {(RunningOnEmulator ? "" : "JsonValue,") }
+                              {EmptyOnEmulator("JsonValue,")}
                               DateValue,           
                               BoolArrayValue,      
                               Int64ArrayValue,     
@@ -54,7 +54,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               Base64ArrayValue,
                               BytesArrayValue,     
                               TimestampArrayValue,
-                              {(RunningOnEmulator ? "" : "JsonArrayValue,") } 
+                              {EmptyOnEmulator("JsonArrayValue,")} 
                               DateArrayValue) VALUES(
                               @K,
                               @BoolValue,           
@@ -64,7 +64,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               @NumericValue,        
                               @BytesValue,          
                               @TimestampValue,      
-                              {(RunningOnEmulator ? "" : "@JsonValue,") }
+                              {EmptyOnEmulator("@JsonValue,")}
                               @DateValue,           
                               @BoolArrayValue,      
                               @Int64ArrayValue,     
@@ -74,7 +74,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               @Base64ArrayValue,
                               @BytesArrayValue,     
                               @TimestampArrayValue,
-                              {(RunningOnEmulator ? "" : "@JsonArrayValue,") } 
+                              {EmptyOnEmulator("@JsonArrayValue,")} 
                               @DateArrayValue)";
         }
 
@@ -90,7 +90,7 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               NumericValue        NUMERIC,
                               BytesValue          BYTES(MAX),
                               TimestampValue      TIMESTAMP,
-                              {(RunningOnEmulator ? "" : "JsonValue      JSON,") }
+                              {EmptyOnEmulator("JsonValue      JSON,")}
                               DateValue           DATE,
                               BoolArrayValue      ARRAY<BOOL>,
                               Int64ArrayValue     ARRAY<INT64>,
@@ -100,9 +100,11 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
                               Base64ArrayValue    ARRAY<BYTES(MAX)>,
                               BytesArrayValue     ARRAY<BYTES(MAX)>,
                               TimestampArrayValue ARRAY<TIMESTAMP>,
-                              {(RunningOnEmulator ? "" : "JsonArrayValue      ARRAY<JSON>,") }
+                              {EmptyOnEmulator("JsonArrayValue      ARRAY<JSON>,")}
                               DateArrayValue      ARRAY<DATE>
                             ) PRIMARY KEY(K)");
         }
+
+        private string EmptyOnEmulator(string text) => RunningOnEmulator ? "" : text;
     }
 }
