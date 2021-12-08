@@ -214,16 +214,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task WriteValues()
-        {
-            await ExecuteWriteValuesTest(InsertAsync);
-        }
+        public async Task WriteValues() => await ExecuteWriteValuesTest(InsertAsync);
 
         [Fact]
-        public async Task WriteValuesDml()
-        {
-            await ExecuteWriteValuesTest(InsertDmlAsync);
-        }
+        public async Task WriteValuesDml() => await ExecuteWriteValuesTest(InsertDmlAsync);
 
         private async Task<int> InsertDmlAsync(SpannerParameterCollection values)
         {
@@ -340,16 +334,10 @@ namespace Google.Cloud.Spanner.Data.IntegrationTests
         }
 
         [Fact]
-        public async Task WriteNulls()
-        {
-            await ExecuteWriteNullsTest(InsertAsync);
-        }
+        public async Task WriteNulls() => await ExecuteWriteNullsTest(InsertAsync);
 
         [Fact]
-        public async Task WriteNullsDml()
-        {
-            await ExecuteWriteNullsTest(InsertDmlAsync);
-        }
+        public async Task WriteNullsDml() => await ExecuteWriteNullsTest(InsertDmlAsync);
 
         [Fact]
         public async Task WriteRandomBytes()
