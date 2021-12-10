@@ -95,7 +95,8 @@ namespace Google.Cloud.Tools.ReleaseManager
         internal static DateTimeOffset GetDate(this Commit commit) =>
             (commit.Author ?? commit.Committer).When;
 
-        internal static string GetHashPrefix(this Commit commit) => commit.Sha.Substring(0, 7);
+        internal static string GetHashPrefix(this Commit commit) => GetHashPrefix(commit.Sha);
+        internal static string GetHashPrefix(string hash) => hash.Substring(0, 7);
 
         /// <summary>
         /// Gets the set of pending changes for each API. Note that the release in the dictionary value

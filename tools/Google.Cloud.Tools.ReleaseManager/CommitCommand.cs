@@ -56,6 +56,10 @@ namespace Google.Cloud.Tools.ReleaseManager
             {
                 throw new UserErrorException($"Unable to find history file section for {diff.NewVersion}. Cannot automate a release commit in this state.");
             }
+            if (section.Lines.Any(line => line.Contains(HistoryFile.FixmeBlockingRelease)))
+            {
+                throw new UserErrorException("History file requires editing before release");
+            }
 
             string header = $"Release {diff.Id} version {diff.NewVersion}";
             var message = string.Join("\n", new[] { header, "", "Changes in this release:", "" }.Concat(section.Lines.Skip(2)));

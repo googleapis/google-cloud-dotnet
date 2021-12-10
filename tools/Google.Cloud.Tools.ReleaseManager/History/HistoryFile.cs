@@ -13,6 +13,7 @@
 // limitations under the License.
 
 using Google.Cloud.Tools.Common;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,6 +28,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
     /// </summary>
     internal sealed class HistoryFile
     {
+        public const string FixmeBlockingRelease = "FIXME: Edit this before releasing";
         private static readonly string[] PreambleLines = new[] { "# Version history", "" };
         private const string MarkdownFile = "history.md";
         private static readonly Regex SectionHeader = new Regex(@"## Version (.*), released \d{4}-\d{2}-\d{2}");
@@ -132,17 +134,43 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 }
                 else
                 {
-                    foreach (var commit in release.Commits)
-                    {
-                        Lines.AddRange(commit.GetHistoryLines());
-                    }
+                    Lines.AddRange(GetNotesFromCommits(release.Commits));
                     // No "interesting" commits? That usually means it's just a dependency update.
                     if (Lines.Count == 2)
                     {
                         Lines.Add("No API surface changes; just dependency updates.");
+                        Lines.Add("");
                     }
-                    Lines.Add("");
                 }
+            }
+
+            internal IEnumerable<string> GetNotesFromCommits(IReadOnlyList<GitCommit> commits) =>
+                commits
+                    .SelectMany(c => c.GetReleaseNoteElements())
+                    .ToLookup(e => e.Type)
+                    .Where(g => g.Key != ReleaseNoteElementType.Chore)
+                    .OrderBy(g => g.Key)
+                    .Select(GetNotesFromElement)
+                    .SelectMany(line => line);
+
+            internal IEnumerable<string> GetNotesFromElement(IGrouping<ReleaseNoteElementType, ReleaseNoteElement> elements)
+            {
+                string description = elements.Key switch
+                {
+                    ReleaseNoteElementType.Fix => "Bug fixes",
+                    ReleaseNoteElementType.Feature => "New features",
+                    ReleaseNoteElementType.Chore => "Chores",
+                    ReleaseNoteElementType.Docs => "Documentation improvements",
+                    ReleaseNoteElementType.Unknown => FixmeBlockingRelease,
+                    _ => throw new InvalidOperationException("Unknown element type")
+                };
+                yield return $"### {description}";
+                yield return "";
+                foreach (var element in elements)
+                {
+                    yield return $"- {element}";
+                }
+                yield return "";
             }
         }
     }
