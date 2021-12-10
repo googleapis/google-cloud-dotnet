@@ -38,14 +38,21 @@ namespace Google.Cloud.Tools.ReleaseManager.History
 
         private readonly Commit _libGit2Commit;
 
+        /// <summary>
+        /// The full commit hash.
+        /// </summary>
         public string Hash { get; }
-        private string Url { get; }
+
+        /// <summary>
+        /// The first 7 characters of the commit hash.
+        /// </summary>
+        public string HashPrefix { get; }
 
         internal GitCommit(Commit libGit2Commit)
         {
             _libGit2Commit = libGit2Commit;
-            Hash = _libGit2Commit.GetHashPrefix();
-            Url = $"https://github.com/googleapis/google-cloud-dotnet/commit/{Hash}";
+            Hash = _libGit2Commit.Sha;
+            HashPrefix = GitHelpers.GetHashPrefix(Hash);
         }
 
         private static readonly Regex IssuePattern = new Regex(@"#(\d+)");
@@ -54,7 +61,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         /// Attempts to come up with suitable markdown for release notes, based on a commit.
         /// This is best effort, heuristic-based - and we'll want to tweak it over time.
         /// </summary>
-        internal IEnumerable<string> GetHistoryLines()
+        internal IEnumerable<ReleaseNoteElement> GetReleaseNoteElements()
         {
             // Use the override if one has been provided for this commit, or the commit message otherwise.
             string message = CommitOverrides.HashPrefixToMessageMap.GetValueOrDefault(Hash, _libGit2Commit.Message);
@@ -105,20 +112,12 @@ namespace Google.Cloud.Tools.ReleaseManager.History
                 messageLines.RemoveAt(1);
             }
 
-            // Either format as a single list entry "Commit: purpose" or a list with a top-level "Commit:" and one
-            // message line per original line.
-            if (messageLines.Count == 1)
+            foreach (var line in messageLines)
             {
-                yield return $"- [Commit {Hash}]({Url}): {messageLines[0]}";
-            }
-            else
-            {
-                yield return $"- [Commit {Hash}]({Url}):";
-                foreach (var line in messageLines)
-                {
-                    // Anything already in a list can keep its existing list indentation; otherwise, create a list item.
-                    yield return line.TrimStart().StartsWith("-") ? $"  {line}" : $"  - {line}";
-                }
+                // If we've got list elements, parse each one separately. (Sometimes that will
+                // fail and we'll get unknown elements, but that's okay.)
+                string text = line.TrimStart(' ', '-');
+                yield return ReleaseNoteElement.Parse(Hash, text);
             }
         }
 

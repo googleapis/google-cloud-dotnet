@@ -43,7 +43,7 @@ namespace Google.Cloud.Tools.ReleaseManager.BatchRelease
             foreach (var api in catalog.Apis)
             {
                 var pendingChanges = pendingChangesByApi[api];
-                var pendingCommits = pendingChanges.Commits.Select(commit => commit.Hash);
+                var pendingCommits = pendingChanges.Commits.Select(commit => commit.HashPrefix);
                 if (!Commits.SetEquals(pendingCommits))
                 {
                     continue;
