@@ -23,7 +23,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
     public class TranslationClientTest
     {
         private static readonly string LargeText = LoadResource("independence.txt");
-        private const int ApiLimit = 100 * 1024;
+        private const int ApiLimit = 30 * 1024;
         private static readonly string VeryLargeText = string.Join("\n", Enumerable.Repeat(LargeText, ApiLimit / LargeText.Length));
 
         [Fact]
