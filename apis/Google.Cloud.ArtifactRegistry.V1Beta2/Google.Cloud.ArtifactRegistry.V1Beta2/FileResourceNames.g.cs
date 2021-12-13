@@ -30,13 +30,13 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             Unparsed = 0,
 
             /// <summary>
-            /// A resource name with pattern <c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c>
-            /// .
+            /// A resource name with pattern
+            /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>.
             /// </summary>
-            ProjectLocationRepoFile = 1,
+            ProjectLocationRepositoryFile = 1,
         }
 
-        private static gax::PathTemplate s_projectLocationRepoFile = new gax::PathTemplate("projects/{project}/locations/{location}/repositories/{repo}/files/{file}");
+        private static gax::PathTemplate s_projectLocationRepositoryFile = new gax::PathTemplate("projects/{project}/locations/{location}/repositories/{repository}/files/{file}");
 
         /// <summary>Creates a <see cref="FileName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
@@ -48,52 +48,54 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
 
         /// <summary>
         /// Creates a <see cref="FileName"/> with the pattern
-        /// <c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c>.
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="repoId">The <c>Repo</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="fileId">The <c>File</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>A new instance of <see cref="FileName"/> constructed from the provided ids.</returns>
-        public static FileName FromProjectLocationRepoFile(string projectId, string locationId, string repoId, string fileId) =>
-            new FileName(ResourceNameType.ProjectLocationRepoFile, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repoId: gax::GaxPreconditions.CheckNotNullOrEmpty(repoId, nameof(repoId)), fileId: gax::GaxPreconditions.CheckNotNullOrEmpty(fileId, nameof(fileId)));
+        public static FileName FromProjectLocationRepositoryFile(string projectId, string locationId, string repositoryId, string fileId) =>
+            new FileName(ResourceNameType.ProjectLocationRepositoryFile, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repositoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), fileId: gax::GaxPreconditions.CheckNotNullOrEmpty(fileId, nameof(fileId)));
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="FileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c>.
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="repoId">The <c>Repo</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="fileId">The <c>File</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="FileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c>.
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>.
         /// </returns>
-        public static string Format(string projectId, string locationId, string repoId, string fileId) =>
-            FormatProjectLocationRepoFile(projectId, locationId, repoId, fileId);
+        public static string Format(string projectId, string locationId, string repositoryId, string fileId) =>
+            FormatProjectLocationRepositoryFile(projectId, locationId, repositoryId, fileId);
 
         /// <summary>
         /// Formats the IDs into the string representation of this <see cref="FileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c>.
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="repoId">The <c>Repo</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="fileId">The <c>File</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
         /// The string representation of this <see cref="FileName"/> with pattern
-        /// <c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c>.
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>.
         /// </returns>
-        public static string FormatProjectLocationRepoFile(string projectId, string locationId, string repoId, string fileId) =>
-            s_projectLocationRepoFile.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(repoId, nameof(repoId)), gax::GaxPreconditions.CheckNotNullOrEmpty(fileId, nameof(fileId)));
+        public static string FormatProjectLocationRepositoryFile(string projectId, string locationId, string repositoryId, string fileId) =>
+            s_projectLocationRepositoryFile.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), gax::GaxPreconditions.CheckNotNullOrEmpty(fileId, nameof(fileId)));
 
         /// <summary>Parses the given resource name string into a new <see cref="FileName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -109,7 +111,9 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -129,7 +133,9 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// </remarks>
@@ -148,7 +154,9 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
         /// <item>
-        /// <description><c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c></description>
+        /// <description>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>
+        /// </description>
         /// </item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
@@ -167,9 +175,9 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         {
             gax::GaxPreconditions.CheckNotNull(fileName, nameof(fileName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectLocationRepoFile.TryParseName(fileName, out resourceName))
+            if (s_projectLocationRepositoryFile.TryParseName(fileName, out resourceName))
             {
-                result = FromProjectLocationRepoFile(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
+                result = FromProjectLocationRepositoryFile(resourceName[0], resourceName[1], resourceName[2], resourceName[3]);
                 return true;
             }
             if (allowUnparsed)
@@ -184,25 +192,25 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             return false;
         }
 
-        private FileName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string fileId = null, string locationId = null, string projectId = null, string repoId = null)
+        private FileName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string fileId = null, string locationId = null, string projectId = null, string repositoryId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
             FileId = fileId;
             LocationId = locationId;
             ProjectId = projectId;
-            RepoId = repoId;
+            RepositoryId = repositoryId;
         }
 
         /// <summary>
         /// Constructs a new instance of a <see cref="FileName"/> class from the component parts of pattern
-        /// <c>projects/{project}/locations/{location}/repositories/{repo}/files/{file}</c>
+        /// <c>projects/{project}/locations/{location}/repositories/{repository}/files/{file}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="repoId">The <c>Repo</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="repositoryId">The <c>Repository</c> ID. Must not be <c>null</c> or empty.</param>
         /// <param name="fileId">The <c>File</c> ID. Must not be <c>null</c> or empty.</param>
-        public FileName(string projectId, string locationId, string repoId, string fileId) : this(ResourceNameType.ProjectLocationRepoFile, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repoId: gax::GaxPreconditions.CheckNotNullOrEmpty(repoId, nameof(repoId)), fileId: gax::GaxPreconditions.CheckNotNullOrEmpty(fileId, nameof(fileId)))
+        public FileName(string projectId, string locationId, string repositoryId, string fileId) : this(ResourceNameType.ProjectLocationRepositoryFile, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)), repositoryId: gax::GaxPreconditions.CheckNotNullOrEmpty(repositoryId, nameof(repositoryId)), fileId: gax::GaxPreconditions.CheckNotNullOrEmpty(fileId, nameof(fileId)))
         {
         }
 
@@ -231,9 +239,9 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         public string ProjectId { get; }
 
         /// <summary>
-        /// The <c>Repo</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Repository</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
-        public string RepoId { get; }
+        public string RepositoryId { get; }
 
         /// <summary>Whether this instance contains a resource name with a known pattern.</summary>
         public bool IsKnownPattern => Type != ResourceNameType.Unparsed;
@@ -245,7 +253,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectLocationRepoFile: return s_projectLocationRepoFile.Expand(ProjectId, LocationId, RepoId, FileId);
+                case ResourceNameType.ProjectLocationRepositoryFile: return s_projectLocationRepositoryFile.Expand(ProjectId, LocationId, RepositoryId, FileId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }

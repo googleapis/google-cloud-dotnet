@@ -508,7 +508,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             };
             File expectedResponse = new File
             {
-                FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
+                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
                 Hashes = { new Hash(), },
                 CreateTime = new wkt::Timestamp(),
@@ -533,7 +533,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             };
             File expectedResponse = new File
             {
-                FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
+                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
                 Hashes = { new Hash(), },
                 CreateTime = new wkt::Timestamp(),
@@ -560,7 +560,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             };
             File expectedResponse = new File
             {
-                FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
+                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
                 Hashes = { new Hash(), },
                 CreateTime = new wkt::Timestamp(),
@@ -585,7 +585,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Tests
             };
             File expectedResponse = new File
             {
-                FileName = FileName.FromProjectLocationRepoFile("[PROJECT]", "[LOCATION]", "[REPO]", "[FILE]"),
+                FileName = FileName.FromProjectLocationRepositoryFile("[PROJECT]", "[LOCATION]", "[REPOSITORY]", "[FILE]"),
                 SizeBytes = 4628423819757039038L,
                 Hashes = { new Hash(), },
                 CreateTime = new wkt::Timestamp(),
