@@ -53,30 +53,30 @@ namespace Google.Cloud.Dialogflow.V2 {
             "IAEoDjIvLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk91dHB1dEF1ZGlv",
             "RW5jb2RpbmdCA+BBAhIZChFzYW1wbGVfcmF0ZV9oZXJ0ehgCIAEoBRJUChhz",
             "eW50aGVzaXplX3NwZWVjaF9jb25maWcYAyABKAsyMi5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5TeW50aGVzaXplU3BlZWNoQ29uZmlnImcKElNwZWVj",
-            "aFRvVGV4dENvbmZpZxJRChRzcGVlY2hfbW9kZWxfdmFyaWFudBgBIAEoDjIu",
+            "ZGlhbG9nZmxvdy52Mi5TeW50aGVzaXplU3BlZWNoQ29uZmlnImIKElNwZWVj",
+            "aFRvVGV4dENvbmZpZxJMChRzcGVlY2hfbW9kZWxfdmFyaWFudBgBIAEoDjIu",
             "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLlNwZWVjaE1vZGVsVmFyaWFu",
-            "dEID4EEBKvsBCg1BdWRpb0VuY29kaW5nEh4KGkFVRElPX0VOQ09ESU5HX1VO",
-            "U1BFQ0lGSUVEEAASHAoYQVVESU9fRU5DT0RJTkdfTElORUFSXzE2EAESFwoT",
-            "QVVESU9fRU5DT0RJTkdfRkxBQxACEhgKFEFVRElPX0VOQ09ESU5HX01VTEFX",
-            "EAMSFgoSQVVESU9fRU5DT0RJTkdfQU1SEAQSGQoVQVVESU9fRU5DT0RJTkdf",
-            "QU1SX1dCEAUSGwoXQVVESU9fRU5DT0RJTkdfT0dHX09QVVMQBhIpCiVBVURJ",
-            "T19FTkNPRElOR19TUEVFWF9XSVRIX0hFQURFUl9CWVRFEAcqdgoSU3BlZWNo",
-            "TW9kZWxWYXJpYW50EiQKIFNQRUVDSF9NT0RFTF9WQVJJQU5UX1VOU1BFQ0lG",
-            "SUVEEAASFgoSVVNFX0JFU1RfQVZBSUxBQkxFEAESEAoMVVNFX1NUQU5EQVJE",
-            "EAISEAoMVVNFX0VOSEFOQ0VEEAMqjQEKD1NzbWxWb2ljZUdlbmRlchIhCh1T",
-            "U01MX1ZPSUNFX0dFTkRFUl9VTlNQRUNJRklFRBAAEhoKFlNTTUxfVk9JQ0Vf",
-            "R0VOREVSX01BTEUQARIcChhTU01MX1ZPSUNFX0dFTkRFUl9GRU1BTEUQAhId",
-            "ChlTU01MX1ZPSUNFX0dFTkRFUl9ORVVUUkFMEAMq7AEKE091dHB1dEF1ZGlv",
-            "RW5jb2RpbmcSJQohT1VUUFVUX0FVRElPX0VOQ09ESU5HX1VOU1BFQ0lGSUVE",
-            "EAASIwofT1VUUFVUX0FVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEh0KGU9V",
-            "VFBVVF9BVURJT19FTkNPRElOR19NUDMQAhIlCiFPVVRQVVRfQVVESU9fRU5D",
-            "T0RJTkdfTVAzXzY0X0tCUFMQBBIiCh5PVVRQVVRfQVVESU9fRU5DT0RJTkdf",
-            "T0dHX09QVVMQAxIfChtPVVRQVVRfQVVESU9fRU5DT0RJTkdfTVVMQVcQBUKf",
-            "AQoeY29tLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyQhBBdWRpb0NvbmZp",
-            "Z1Byb3RvUAFaRGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
-            "aXMvY2xvdWQvZGlhbG9nZmxvdy92MjtkaWFsb2dmbG93+AEBogICREaqAhpH",
-            "b29nbGUuQ2xvdWQuRGlhbG9nZmxvdy5WMmIGcHJvdG8z"));
+            "dCr7AQoNQXVkaW9FbmNvZGluZxIeChpBVURJT19FTkNPRElOR19VTlNQRUNJ",
+            "RklFRBAAEhwKGEFVRElPX0VOQ09ESU5HX0xJTkVBUl8xNhABEhcKE0FVRElP",
+            "X0VOQ09ESU5HX0ZMQUMQAhIYChRBVURJT19FTkNPRElOR19NVUxBVxADEhYK",
+            "EkFVRElPX0VOQ09ESU5HX0FNUhAEEhkKFUFVRElPX0VOQ09ESU5HX0FNUl9X",
+            "QhAFEhsKF0FVRElPX0VOQ09ESU5HX09HR19PUFVTEAYSKQolQVVESU9fRU5D",
+            "T0RJTkdfU1BFRVhfV0lUSF9IRUFERVJfQllURRAHKnYKElNwZWVjaE1vZGVs",
+            "VmFyaWFudBIkCiBTUEVFQ0hfTU9ERUxfVkFSSUFOVF9VTlNQRUNJRklFRBAA",
+            "EhYKElVTRV9CRVNUX0FWQUlMQUJMRRABEhAKDFVTRV9TVEFOREFSRBACEhAK",
+            "DFVTRV9FTkhBTkNFRBADKo0BCg9Tc21sVm9pY2VHZW5kZXISIQodU1NNTF9W",
+            "T0lDRV9HRU5ERVJfVU5TUEVDSUZJRUQQABIaChZTU01MX1ZPSUNFX0dFTkRF",
+            "Ul9NQUxFEAESHAoYU1NNTF9WT0lDRV9HRU5ERVJfRkVNQUxFEAISHQoZU1NN",
+            "TF9WT0lDRV9HRU5ERVJfTkVVVFJBTBADKuwBChNPdXRwdXRBdWRpb0VuY29k",
+            "aW5nEiUKIU9VVFBVVF9BVURJT19FTkNPRElOR19VTlNQRUNJRklFRBAAEiMK",
+            "H09VVFBVVF9BVURJT19FTkNPRElOR19MSU5FQVJfMTYQARIdChlPVVRQVVRf",
+            "QVVESU9fRU5DT0RJTkdfTVAzEAISJQohT1VUUFVUX0FVRElPX0VOQ09ESU5H",
+            "X01QM182NF9LQlBTEAQSIgoeT1VUUFVUX0FVRElPX0VOQ09ESU5HX09HR19P",
+            "UFVTEAMSHwobT1VUUFVUX0FVRElPX0VOQ09ESU5HX01VTEFXEAVCnwEKHmNv",
+            "bS5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MkIQQXVkaW9Db25maWdQcm90",
+            "b1ABWkRnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
+            "b3VkL2RpYWxvZ2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xl",
+            "LkNsb3VkLkRpYWxvZ2Zsb3cuVjJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dialogflow.V2.AudioEncoding), typeof(global::Google.Cloud.Dialogflow.V2.SpeechModelVariant), typeof(global::Google.Cloud.Dialogflow.V2.SsmlVoiceGender), typeof(global::Google.Cloud.Dialogflow.V2.OutputAudioEncoding), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -2381,10 +2381,13 @@ namespace Google.Cloud.Dialogflow.V2 {
     public const int SpeechModelVariantFieldNumber = 1;
     private global::Google.Cloud.Dialogflow.V2.SpeechModelVariant speechModelVariant_ = global::Google.Cloud.Dialogflow.V2.SpeechModelVariant.Unspecified;
     /// <summary>
-    /// Optional. The speech model used in speech to text.
+    /// The speech model used in speech to text.
     /// `SPEECH_MODEL_VARIANT_UNSPECIFIED`, `USE_BEST_AVAILABLE` will be treated as
     /// `USE_ENHANCED`. It can be overridden in [AnalyzeContentRequest][google.cloud.dialogflow.v2.AnalyzeContentRequest] and
     /// [StreamingAnalyzeContentRequest][google.cloud.dialogflow.v2.StreamingAnalyzeContentRequest] request.
+    /// If enhanced model variant is specified and an enhanced
+    /// version of the specified model for the language does not exist, then it
+    /// would emit an error.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
