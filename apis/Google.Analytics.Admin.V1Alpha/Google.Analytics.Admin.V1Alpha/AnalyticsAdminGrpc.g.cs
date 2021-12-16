@@ -170,12 +170,6 @@ namespace Google.Analytics.Admin.V1Alpha {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse> __Marshaller_google_analytics_admin_v1alpha_ListAndroidAppDataStreamsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_GetEnhancedMeasurementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> __Marshaller_google_analytics_admin_v1alpha_EnhancedMeasurementSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateEnhancedMeasurementSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest> __Marshaller_google_analytics_admin_v1alpha_CreateFirebaseLinkRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.FirebaseLink> __Marshaller_google_analytics_admin_v1alpha_FirebaseLink = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.FirebaseLink.Parser));
@@ -219,6 +213,10 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteMeasurementProtocolSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateMeasurementProtocolSecretRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest> __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest> __Marshaller_google_analytics_admin_v1alpha_SearchChangeHistoryEventsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -307,6 +305,20 @@ namespace Google.Analytics.Admin.V1Alpha {
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> __Marshaller_google_analytics_admin_v1alpha_DataRetentionSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateDataRetentionSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_CreateDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DataStream> __Marshaller_google_analytics_admin_v1alpha_DataStream = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DataStream.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_DeleteDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_UpdateDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest> __Marshaller_google_analytics_admin_v1alpha_ListDataStreamsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse> __Marshaller_google_analytics_admin_v1alpha_ListDataStreamsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest> __Marshaller_google_analytics_admin_v1alpha_GetDataStreamRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account> __Method_GetAccount = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetAccountRequest, global::Google.Analytics.Admin.V1Alpha.Account>(
@@ -581,22 +593,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         __Marshaller_google_analytics_admin_v1alpha_ListAndroidAppDataStreamsResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> __Method_GetEnhancedMeasurementSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "GetEnhancedMeasurementSettings",
-        __Marshaller_google_analytics_admin_v1alpha_GetEnhancedMeasurementSettingsRequest,
-        __Marshaller_google_analytics_admin_v1alpha_EnhancedMeasurementSettings);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> __Method_UpdateEnhancedMeasurementSettings = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(
-        grpc::MethodType.Unary,
-        __ServiceName,
-        "UpdateEnhancedMeasurementSettings",
-        __Marshaller_google_analytics_admin_v1alpha_UpdateEnhancedMeasurementSettingsRequest,
-        __Marshaller_google_analytics_admin_v1alpha_EnhancedMeasurementSettings);
-
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink> __Method_CreateFirebaseLink = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -707,6 +703,14 @@ namespace Google.Analytics.Admin.V1Alpha {
         "UpdateMeasurementProtocolSecret",
         __Marshaller_google_analytics_admin_v1alpha_UpdateMeasurementProtocolSecretRequest,
         __Marshaller_google_analytics_admin_v1alpha_MeasurementProtocolSecret);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> __Method_AcknowledgeUserDataCollection = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "AcknowledgeUserDataCollection",
+        __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionRequest,
+        __Marshaller_google_analytics_admin_v1alpha_AcknowledgeUserDataCollectionResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse> __Method_SearchChangeHistoryEvents = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(
@@ -947,6 +951,46 @@ namespace Google.Analytics.Admin.V1Alpha {
         "UpdateDataRetentionSettings",
         __Marshaller_google_analytics_admin_v1alpha_UpdateDataRetentionSettingsRequest,
         __Marshaller_google_analytics_admin_v1alpha_DataRetentionSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream> __Method_CreateDataStream = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateDataStream",
+        __Marshaller_google_analytics_admin_v1alpha_CreateDataStreamRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DataStream);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteDataStream = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteDataStream",
+        __Marshaller_google_analytics_admin_v1alpha_DeleteDataStreamRequest,
+        __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream> __Method_UpdateDataStream = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDataStream",
+        __Marshaller_google_analytics_admin_v1alpha_UpdateDataStreamRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DataStream);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse> __Method_ListDataStreams = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDataStreams",
+        __Marshaller_google_analytics_admin_v1alpha_ListDataStreamsRequest,
+        __Marshaller_google_analytics_admin_v1alpha_ListDataStreamsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream> __Method_GetDataStream = new grpc::Method<global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDataStream",
+        __Marshaller_google_analytics_admin_v1alpha_GetDataStreamRequest,
+        __Marshaller_google_analytics_admin_v1alpha_DataStream);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -1420,34 +1464,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       }
 
       /// <summary>
-      /// Returns the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> GetEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
-      /// Updates the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request received from the client.</param>
-      /// <param name="context">The context of the server-side call handler being invoked.</param>
-      /// <returns>The response to send back to the client (wrapped by a task).</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::ServerCallContext context)
-      {
-        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
-      }
-
-      /// <summary>
       /// Creates a FirebaseLink.
       ///
       /// Properties can have at most one FirebaseLink.
@@ -1617,6 +1633,21 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> UpdateMeasurementProtocolSecret(global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Acknowledges the terms of user data collection for the specified property.
+      ///
+      /// This acknowledgement must be completed (either in the Google Analytics UI
+      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> AcknowledgeUserDataCollection(global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1991,6 +2022,66 @@ namespace Google.Analytics.Admin.V1Alpha {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings> UpdateDataRetentionSettings(global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a DataStream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataStream> CreateDataStream(global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDataStream(global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataStream> UpdateDataStream(global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists DataStreams on a property.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse> ListDataStreams(global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lookup for a single DataStream.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Analytics.Admin.V1Alpha.DataStream> GetDataStream(global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -3869,118 +3960,6 @@ namespace Google.Analytics.Admin.V1Alpha {
         return CallInvoker.AsyncUnaryCall(__Method_ListAndroidAppDataStreams, null, options, request);
       }
       /// <summary>
-      /// Returns the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings GetEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetEnhancedMeasurementSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings GetEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_GetEnhancedMeasurementSettings, null, options, request);
-      }
-      /// <summary>
-      /// Returns the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return GetEnhancedMeasurementSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Returns the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> GetEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_GetEnhancedMeasurementSettings, null, options, request);
-      }
-      /// <summary>
-      /// Updates the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings UpdateEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateEnhancedMeasurementSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The response received from the server.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings UpdateEnhancedMeasurementSettings(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.BlockingUnaryCall(__Method_UpdateEnhancedMeasurementSettings, null, options, request);
-      }
-      /// <summary>
-      /// Updates the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
-      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
-      /// <param name="cancellationToken">An optional token for canceling the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
-      {
-        return UpdateEnhancedMeasurementSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
-      }
-      /// <summary>
-      /// Updates the singleton enhanced measurement settings for this web stream.
-      /// Note that the stream must enable enhanced measurement for these settings to
-      /// take effect.
-      /// </summary>
-      /// <param name="request">The request to send to the server.</param>
-      /// <param name="options">The options for the call.</param>
-      /// <returns>The call object.</returns>
-      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings> UpdateEnhancedMeasurementSettingsAsync(global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest request, grpc::CallOptions options)
-      {
-        return CallInvoker.AsyncUnaryCall(__Method_UpdateEnhancedMeasurementSettings, null, options, request);
-      }
-      /// <summary>
       /// Creates a FirebaseLink.
       ///
       /// Properties can have at most one FirebaseLink.
@@ -4675,6 +4654,66 @@ namespace Google.Analytics.Admin.V1Alpha {
       public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret> UpdateMeasurementProtocolSecretAsync(global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateMeasurementProtocolSecret, null, options, request);
+      }
+      /// <summary>
+      /// Acknowledges the terms of user data collection for the specified property.
+      ///
+      /// This acknowledgement must be completed (either in the Google Analytics UI
+      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse AcknowledgeUserDataCollection(global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcknowledgeUserDataCollection(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Acknowledges the terms of user data collection for the specified property.
+      ///
+      /// This acknowledgement must be completed (either in the Google Analytics UI
+      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse AcknowledgeUserDataCollection(global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_AcknowledgeUserDataCollection, null, options, request);
+      }
+      /// <summary>
+      /// Acknowledges the terms of user data collection for the specified property.
+      ///
+      /// This acknowledgement must be completed (either in the Google Analytics UI
+      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> AcknowledgeUserDataCollectionAsync(global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return AcknowledgeUserDataCollectionAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Acknowledges the terms of user data collection for the specified property.
+      ///
+      /// This acknowledgement must be completed (either in the Google Analytics UI
+      /// or via this API) before MeasurementProtocolSecret resources may be created.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse> AcknowledgeUserDataCollectionAsync(global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_AcknowledgeUserDataCollection, null, options, request);
       }
       /// <summary>
       /// Searches through all changes to an account or its children given the
@@ -6172,6 +6211,246 @@ namespace Google.Analytics.Admin.V1Alpha {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateDataRetentionSettings, null, options, request);
       }
+      /// <summary>
+      /// Creates a DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataStream CreateDataStream(global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDataStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataStream CreateDataStream(global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateDataStream, null, options, request);
+      }
+      /// <summary>
+      /// Creates a DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataStream> CreateDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateDataStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataStream> CreateDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateDataStream, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDataStream(global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDataStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteDataStream(global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteDataStream, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteDataStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteDataStream, null, options, request);
+      }
+      /// <summary>
+      /// Updates a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataStream UpdateDataStream(global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataStream UpdateDataStream(global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDataStream, null, options, request);
+      }
+      /// <summary>
+      /// Updates a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataStream> UpdateDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDataStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a DataStream on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataStream> UpdateDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDataStream, null, options, request);
+      }
+      /// <summary>
+      /// Lists DataStreams on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse ListDataStreams(global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDataStreams(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DataStreams on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse ListDataStreams(global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDataStreams, null, options, request);
+      }
+      /// <summary>
+      /// Lists DataStreams on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse> ListDataStreamsAsync(global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDataStreamsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists DataStreams on a property.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse> ListDataStreamsAsync(global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDataStreams, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataStream GetDataStream(global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataStream(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Analytics.Admin.V1Alpha.DataStream GetDataStream(global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDataStream, null, options, request);
+      }
+      /// <summary>
+      /// Lookup for a single DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataStream> GetDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDataStreamAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lookup for a single DataStream.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Analytics.Admin.V1Alpha.DataStream> GetDataStreamAsync(global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDataStream, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override AnalyticsAdminServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -6220,8 +6499,6 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_DeleteAndroidAppDataStream, serviceImpl.DeleteAndroidAppDataStream)
           .AddMethod(__Method_UpdateAndroidAppDataStream, serviceImpl.UpdateAndroidAppDataStream)
           .AddMethod(__Method_ListAndroidAppDataStreams, serviceImpl.ListAndroidAppDataStreams)
-          .AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl.GetEnhancedMeasurementSettings)
-          .AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl.UpdateEnhancedMeasurementSettings)
           .AddMethod(__Method_CreateFirebaseLink, serviceImpl.CreateFirebaseLink)
           .AddMethod(__Method_DeleteFirebaseLink, serviceImpl.DeleteFirebaseLink)
           .AddMethod(__Method_ListFirebaseLinks, serviceImpl.ListFirebaseLinks)
@@ -6236,6 +6513,7 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_CreateMeasurementProtocolSecret, serviceImpl.CreateMeasurementProtocolSecret)
           .AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl.DeleteMeasurementProtocolSecret)
           .AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl.UpdateMeasurementProtocolSecret)
+          .AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl.AcknowledgeUserDataCollection)
           .AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl.SearchChangeHistoryEvents)
           .AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl.GetGoogleSignalsSettings)
           .AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl.UpdateGoogleSignalsSettings)
@@ -6265,7 +6543,12 @@ namespace Google.Analytics.Admin.V1Alpha {
           .AddMethod(__Method_ArchiveCustomMetric, serviceImpl.ArchiveCustomMetric)
           .AddMethod(__Method_GetCustomMetric, serviceImpl.GetCustomMetric)
           .AddMethod(__Method_GetDataRetentionSettings, serviceImpl.GetDataRetentionSettings)
-          .AddMethod(__Method_UpdateDataRetentionSettings, serviceImpl.UpdateDataRetentionSettings).Build();
+          .AddMethod(__Method_UpdateDataRetentionSettings, serviceImpl.UpdateDataRetentionSettings)
+          .AddMethod(__Method_CreateDataStream, serviceImpl.CreateDataStream)
+          .AddMethod(__Method_DeleteDataStream, serviceImpl.DeleteDataStream)
+          .AddMethod(__Method_UpdateDataStream, serviceImpl.UpdateDataStream)
+          .AddMethod(__Method_ListDataStreams, serviceImpl.ListDataStreams)
+          .AddMethod(__Method_GetDataStream, serviceImpl.GetDataStream).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -6309,8 +6592,6 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_DeleteAndroidAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteAndroidAppDataStreamRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteAndroidAppDataStream));
       serviceBinder.AddMethod(__Method_UpdateAndroidAppDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateAndroidAppDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.AndroidAppDataStream>(serviceImpl.UpdateAndroidAppDataStream));
       serviceBinder.AddMethod(__Method_ListAndroidAppDataStreams, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListAndroidAppDataStreamsResponse>(serviceImpl.ListAndroidAppDataStreams));
-      serviceBinder.AddMethod(__Method_GetEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.GetEnhancedMeasurementSettings));
-      serviceBinder.AddMethod(__Method_UpdateEnhancedMeasurementSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateEnhancedMeasurementSettingsRequest, global::Google.Analytics.Admin.V1Alpha.EnhancedMeasurementSettings>(serviceImpl.UpdateEnhancedMeasurementSettings));
       serviceBinder.AddMethod(__Method_CreateFirebaseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateFirebaseLinkRequest, global::Google.Analytics.Admin.V1Alpha.FirebaseLink>(serviceImpl.CreateFirebaseLink));
       serviceBinder.AddMethod(__Method_DeleteFirebaseLink, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteFirebaseLinkRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteFirebaseLink));
       serviceBinder.AddMethod(__Method_ListFirebaseLinks, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksRequest, global::Google.Analytics.Admin.V1Alpha.ListFirebaseLinksResponse>(serviceImpl.ListFirebaseLinks));
@@ -6325,6 +6606,7 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_CreateMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(serviceImpl.CreateMeasurementProtocolSecret));
       serviceBinder.AddMethod(__Method_DeleteMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteMeasurementProtocolSecretRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteMeasurementProtocolSecret));
       serviceBinder.AddMethod(__Method_UpdateMeasurementProtocolSecret, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateMeasurementProtocolSecretRequest, global::Google.Analytics.Admin.V1Alpha.MeasurementProtocolSecret>(serviceImpl.UpdateMeasurementProtocolSecret));
+      serviceBinder.AddMethod(__Method_AcknowledgeUserDataCollection, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionRequest, global::Google.Analytics.Admin.V1Alpha.AcknowledgeUserDataCollectionResponse>(serviceImpl.AcknowledgeUserDataCollection));
       serviceBinder.AddMethod(__Method_SearchChangeHistoryEvents, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsRequest, global::Google.Analytics.Admin.V1Alpha.SearchChangeHistoryEventsResponse>(serviceImpl.SearchChangeHistoryEvents));
       serviceBinder.AddMethod(__Method_GetGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.GetGoogleSignalsSettings));
       serviceBinder.AddMethod(__Method_UpdateGoogleSignalsSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateGoogleSignalsSettingsRequest, global::Google.Analytics.Admin.V1Alpha.GoogleSignalsSettings>(serviceImpl.UpdateGoogleSignalsSettings));
@@ -6355,6 +6637,11 @@ namespace Google.Analytics.Admin.V1Alpha {
       serviceBinder.AddMethod(__Method_GetCustomMetric, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetCustomMetricRequest, global::Google.Analytics.Admin.V1Alpha.CustomMetric>(serviceImpl.GetCustomMetric));
       serviceBinder.AddMethod(__Method_GetDataRetentionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings>(serviceImpl.GetDataRetentionSettings));
       serviceBinder.AddMethod(__Method_UpdateDataRetentionSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateDataRetentionSettingsRequest, global::Google.Analytics.Admin.V1Alpha.DataRetentionSettings>(serviceImpl.UpdateDataRetentionSettings));
+      serviceBinder.AddMethod(__Method_CreateDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.CreateDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream>(serviceImpl.CreateDataStream));
+      serviceBinder.AddMethod(__Method_DeleteDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.DeleteDataStreamRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteDataStream));
+      serviceBinder.AddMethod(__Method_UpdateDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.UpdateDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream>(serviceImpl.UpdateDataStream));
+      serviceBinder.AddMethod(__Method_ListDataStreams, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.ListDataStreamsRequest, global::Google.Analytics.Admin.V1Alpha.ListDataStreamsResponse>(serviceImpl.ListDataStreams));
+      serviceBinder.AddMethod(__Method_GetDataStream, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Analytics.Admin.V1Alpha.GetDataStreamRequest, global::Google.Analytics.Admin.V1Alpha.DataStream>(serviceImpl.GetDataStream));
     }
 
   }

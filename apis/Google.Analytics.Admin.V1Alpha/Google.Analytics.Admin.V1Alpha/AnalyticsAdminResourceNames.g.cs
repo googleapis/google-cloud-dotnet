@@ -534,19 +534,6 @@ namespace Google.Analytics.Admin.V1Alpha
         }
     }
 
-    public partial class GetEnhancedMeasurementSettingsRequest
-    {
-        /// <summary>
-        /// <see cref="gaav::EnhancedMeasurementSettingsName"/>-typed view over the <see cref="Name"/> resource name
-        /// property.
-        /// </summary>
-        public gaav::EnhancedMeasurementSettingsName EnhancedMeasurementSettingsName
-        {
-            get => string.IsNullOrEmpty(Name) ? null : gaav::EnhancedMeasurementSettingsName.Parse(Name, allowUnparsed: true);
-            set => Name = value?.ToString() ?? "";
-        }
-    }
-
     public partial class CreateFirebaseLinkRequest
     {
         /// <summary>
@@ -640,6 +627,18 @@ namespace Google.Analytics.Admin.V1Alpha
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::DataSharingSettingsName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class AcknowledgeUserDataCollectionRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Property"/> resource name property.
+        /// </summary>
+        public PropertyName PropertyAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Property) ? null : PropertyName.Parse(Property, allowUnparsed: true);
+            set => Property = value?.ToString() ?? "";
         }
     }
 
@@ -1004,6 +1003,54 @@ namespace Google.Analytics.Admin.V1Alpha
         public gaav::DataRetentionSettingsName DataRetentionSettingsName
         {
             get => string.IsNullOrEmpty(Name) ? null : gaav::DataRetentionSettingsName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateDataStreamRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteDataStreamRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::DataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::DataStreamName DataStreamName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::DataStreamName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListDataStreamsRequest
+    {
+        /// <summary>
+        /// <see cref="PropertyName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public PropertyName ParentAsPropertyName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : PropertyName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDataStreamRequest
+    {
+        /// <summary>
+        /// <see cref="gaav::DataStreamName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gaav::DataStreamName DataStreamName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gaav::DataStreamName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
     }

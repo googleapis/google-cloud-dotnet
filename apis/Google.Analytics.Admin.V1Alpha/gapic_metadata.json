@@ -10,6 +10,12 @@
         "grpc": {
           "libraryClient": "AnalyticsAdminServiceClient",
           "rpcs": {
+            "AcknowledgeUserDataCollection": {
+              "methods": [
+                "AcknowledgeUserDataCollection",
+                "AcknowledgeUserDataCollectionAsync"
+              ]
+            },
             "ApproveDisplayVideo360AdvertiserLinkProposal": {
               "methods": [
                 "ApproveDisplayVideo360AdvertiserLinkProposal",
@@ -82,6 +88,12 @@
                 "CreateCustomMetricAsync"
               ]
             },
+            "CreateDataStream": {
+              "methods": [
+                "CreateDataStream",
+                "CreateDataStreamAsync"
+              ]
+            },
             "CreateDisplayVideo360AdvertiserLink": {
               "methods": [
                 "CreateDisplayVideo360AdvertiserLink",
@@ -146,6 +158,12 @@
               "methods": [
                 "DeleteConversionEvent",
                 "DeleteConversionEventAsync"
+              ]
+            },
+            "DeleteDataStream": {
+              "methods": [
+                "DeleteDataStream",
+                "DeleteDataStreamAsync"
               ]
             },
             "DeleteDisplayVideo360AdvertiserLink": {
@@ -244,6 +262,12 @@
                 "GetDataSharingSettingsAsync"
               ]
             },
+            "GetDataStream": {
+              "methods": [
+                "GetDataStream",
+                "GetDataStreamAsync"
+              ]
+            },
             "GetDisplayVideo360AdvertiserLink": {
               "methods": [
                 "GetDisplayVideo360AdvertiserLink",
@@ -254,12 +278,6 @@
               "methods": [
                 "GetDisplayVideo360AdvertiserLinkProposal",
                 "GetDisplayVideo360AdvertiserLinkProposalAsync"
-              ]
-            },
-            "GetEnhancedMeasurementSettings": {
-              "methods": [
-                "GetEnhancedMeasurementSettings",
-                "GetEnhancedMeasurementSettingsAsync"
               ]
             },
             "GetGlobalSiteTag": {
@@ -338,6 +356,12 @@
               "methods": [
                 "ListCustomMetrics",
                 "ListCustomMetricsAsync"
+              ]
+            },
+            "ListDataStreams": {
+              "methods": [
+                "ListDataStreams",
+                "ListDataStreamsAsync"
               ]
             },
             "ListDisplayVideo360AdvertiserLinkProposals": {
@@ -436,16 +460,16 @@
                 "UpdateDataRetentionSettingsAsync"
               ]
             },
+            "UpdateDataStream": {
+              "methods": [
+                "UpdateDataStream",
+                "UpdateDataStreamAsync"
+              ]
+            },
             "UpdateDisplayVideo360AdvertiserLink": {
               "methods": [
                 "UpdateDisplayVideo360AdvertiserLink",
                 "UpdateDisplayVideo360AdvertiserLinkAsync"
-              ]
-            },
-            "UpdateEnhancedMeasurementSettings": {
-              "methods": [
-                "UpdateEnhancedMeasurementSettings",
-                "UpdateEnhancedMeasurementSettingsAsync"
               ]
             },
             "UpdateGoogleAdsLink": {
