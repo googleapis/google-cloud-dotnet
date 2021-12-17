@@ -36,6 +36,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> response = knowledgeBasesClient.ListKnowledgeBases(request);
@@ -84,6 +85,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             ListKnowledgeBasesRequest request = new ListKnowledgeBasesRequest
             {
                 ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListKnowledgeBasesResponse, KnowledgeBase> response = knowledgeBasesClient.ListKnowledgeBasesAsync(request);

@@ -398,4 +398,16 @@ namespace Google.Cloud.Dialogflow.V2
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class ExportDocumentRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::DocumentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::DocumentName DocumentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::DocumentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

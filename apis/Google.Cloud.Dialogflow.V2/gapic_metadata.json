@@ -229,6 +229,12 @@
                 "DeleteDocumentAsync"
               ]
             },
+            "ExportDocument": {
+              "methods": [
+                "ExportDocument",
+                "ExportDocumentAsync"
+              ]
+            },
             "GetDocument": {
               "methods": [
                 "GetDocument",

@@ -36,6 +36,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             ListDocumentsRequest request = new ListDocumentsRequest
             {
                 ParentAsKnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
+                Filter = "",
             };
             // Make the request
             PagedEnumerable<ListDocumentsResponse, Document> response = documentsClient.ListDocuments(request);
@@ -84,6 +85,7 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             ListDocumentsRequest request = new ListDocumentsRequest
             {
                 ParentAsKnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
+                Filter = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListDocumentsResponse, Document> response = documentsClient.ListDocumentsAsync(request);
@@ -900,6 +902,8 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
                 ContentUri = "",
+                ImportGcsCustomMetadata = false,
+                SmartMessagingPartialUpdate = false,
             };
             // Make the request
             Operation<Document, KnowledgeOperationMetadata> response = documentsClient.ReloadDocument(request);
@@ -934,6 +938,8 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             {
                 DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
                 ContentUri = "",
+                ImportGcsCustomMetadata = false,
+                SmartMessagingPartialUpdate = false,
             };
             // Make the request
             Operation<Document, KnowledgeOperationMetadata> response = await documentsClient.ReloadDocumentAsync(request);
@@ -1069,6 +1075,77 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             string operationName = response.Name;
             // This name can be stored, then the long-running operation retrieved later by name
             Operation<Document, KnowledgeOperationMetadata> retrievedResponse = await documentsClient.PollOnceReloadDocumentAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Document retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDocument</summary>
+        public void ExportDocumentRequestObject()
+        {
+            // Snippet: ExportDocument(ExportDocumentRequest, CallSettings)
+            // Create client
+            DocumentsClient documentsClient = DocumentsClient.Create();
+            // Initialize request argument(s)
+            ExportDocumentRequest request = new ExportDocumentRequest
+            {
+                DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
+                GcsDestination = new GcsDestination(),
+                ExportFullContent = false,
+                SmartMessagingPartialUpdate = false,
+            };
+            // Make the request
+            Operation<Document, KnowledgeOperationMetadata> response = documentsClient.ExportDocument(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Document, KnowledgeOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Document result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Document, KnowledgeOperationMetadata> retrievedResponse = documentsClient.PollOnceExportDocument(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Document retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ExportDocumentAsync</summary>
+        public async Task ExportDocumentRequestObjectAsync()
+        {
+            // Snippet: ExportDocumentAsync(ExportDocumentRequest, CallSettings)
+            // Additional: ExportDocumentAsync(ExportDocumentRequest, CancellationToken)
+            // Create client
+            DocumentsClient documentsClient = await DocumentsClient.CreateAsync();
+            // Initialize request argument(s)
+            ExportDocumentRequest request = new ExportDocumentRequest
+            {
+                DocumentName = DocumentName.FromProjectKnowledgeBaseDocument("[PROJECT]", "[KNOWLEDGE_BASE]", "[DOCUMENT]"),
+                GcsDestination = new GcsDestination(),
+                ExportFullContent = false,
+                SmartMessagingPartialUpdate = false,
+            };
+            // Make the request
+            Operation<Document, KnowledgeOperationMetadata> response = await documentsClient.ExportDocumentAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Document, KnowledgeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Document result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Document, KnowledgeOperationMetadata> retrievedResponse = await documentsClient.PollOnceExportDocumentAsync(operationName);
             // Check if the retrieved long-running operation has completed
             if (retrievedResponse.IsCompleted)
             {
