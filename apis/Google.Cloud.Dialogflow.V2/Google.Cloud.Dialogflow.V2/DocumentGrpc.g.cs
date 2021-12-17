@@ -81,6 +81,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_ReloadDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_ExportDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest, global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse> __Method_ListDocuments = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest, global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse>(
@@ -128,6 +130,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         __ServiceName,
         "ReloadDocument",
         __Marshaller_google_cloud_dialogflow_v2_ReloadDocumentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest, global::Google.LongRunning.Operation> __Method_ExportDocument = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ExportDocument",
+        __Marshaller_google_cloud_dialogflow_v2_ExportDocumentRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -243,6 +253,26 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ReloadDocument(global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Exports a smart messaging candidate document into the specified
+      /// destination.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ExportDocument(global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -704,6 +734,86 @@ namespace Google.Cloud.Dialogflow.V2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ReloadDocument, null, options, request);
       }
+      /// <summary>
+      /// Exports a smart messaging candidate document into the specified
+      /// destination.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportDocument(global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportDocument(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports a smart messaging candidate document into the specified
+      /// destination.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ExportDocument(global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ExportDocument, null, options, request);
+      }
+      /// <summary>
+      /// Exports a smart messaging candidate document into the specified
+      /// destination.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDocumentAsync(global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ExportDocumentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Exports a smart messaging candidate document into the specified
+      /// destination.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [Document][google.cloud.dialogflow.v2.Document]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ExportDocumentAsync(global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ExportDocument, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override DocumentsClient NewInstance(ClientBaseConfiguration configuration)
@@ -723,7 +833,8 @@ namespace Google.Cloud.Dialogflow.V2 {
           .AddMethod(__Method_CreateDocument, serviceImpl.CreateDocument)
           .AddMethod(__Method_DeleteDocument, serviceImpl.DeleteDocument)
           .AddMethod(__Method_UpdateDocument, serviceImpl.UpdateDocument)
-          .AddMethod(__Method_ReloadDocument, serviceImpl.ReloadDocument).Build();
+          .AddMethod(__Method_ReloadDocument, serviceImpl.ReloadDocument)
+          .AddMethod(__Method_ExportDocument, serviceImpl.ExportDocument).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -739,6 +850,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDocument));
       serviceBinder.AddMethod(__Method_UpdateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDocument));
       serviceBinder.AddMethod(__Method_ReloadDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.ReloadDocument));
+      serviceBinder.AddMethod(__Method_ExportDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ExportDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportDocument));
     }
 
   }
