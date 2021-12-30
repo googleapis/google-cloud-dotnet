@@ -99,7 +99,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             var client = FirewallsClient.Create();
             var list = client.List(ProjectId);
             var fixtureFirewalls = list
-                .Select(instance => instance.Name)
+                .Select(firewall => firewall.Name)
                 .Where(name => name.StartsWith(ResourcePrefix));
             foreach (var firewallToDelete in fixtureFirewalls)
             {
