@@ -59,6 +59,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             // One method per resource type to clean
             CleanUpAddresses();
             CleanUpInstances();
+            CleanUpFirewalls();
         }
 
         private void CleanUpAddresses()
@@ -90,6 +91,19 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             foreach (var instanceToDelete in fixtureInstances)
             {
                 client.Delete(ProjectId, Zone, instanceToDelete);
+            }
+        }
+
+        private void CleanUpFirewalls()
+        {
+            var client = FirewallsClient.Create();
+            var list = client.List(ProjectId);
+            var fixtureFirewalls = list
+                .Select(instance => instance.Name)
+                .Where(name => name.StartsWith(ResourcePrefix));
+            foreach (var firewallToDelete in fixtureFirewalls)
+            {
+                client.Delete(ProjectId, firewallToDelete);
             }
         }
     }
