@@ -30,7 +30,8 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
             (_fixture, _output) = (fixture, output);
 
         /// <summary>
-        /// we want to test a field like "IPProtocol"
+        /// This test is primarily to check the "IPProtocol" property,
+        /// which is declared as I_p_protocol in the proto (yes, with a capital I).
         /// </summary>
         [Fact]
         public void CreateFirewall()
@@ -56,12 +57,12 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
                     }
                 }
             };
-            var insertOp = client.Insert(new InsertFirewallRequest{Project = _fixture.ProjectId, FirewallResource = firewallResource});
+            var insertOp = client.Insert(new InsertFirewallRequest { Project = _fixture.ProjectId, FirewallResource = firewallResource });
             var completed = insertOp.PollUntilCompleted();
             var result = completed.Result;
             _output.WriteLine(
                     $"Operation to insert firewall completed: status {result.Status}; start time {result.StartTime}; end time {result.EndTime}");
-            var fetched = client.Get(new GetFirewallRequest{ Project=_fixture.ProjectId, Firewall=firewallName});
+            var fetched = client.Get(new GetFirewallRequest { Project = _fixture.ProjectId, Firewall = firewallName });
             Assert.Equal(firewallName, fetched.Name);
             Assert.Equal("tcp", fetched.Allowed[0].IPProtocol);
         }
