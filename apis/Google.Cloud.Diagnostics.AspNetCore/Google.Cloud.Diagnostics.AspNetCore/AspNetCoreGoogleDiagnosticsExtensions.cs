@@ -29,6 +29,22 @@ namespace Google.Cloud.Diagnostics.AspNetCore
     public static class AspNetCoreGoogleDiagnosticsExtensions
     {
         /// <summary>
+        /// Configures Google Diagnostics to be used in ASP.NET Core applications with
+        /// default values.
+        /// </summary>
+        /// <remarks>
+        /// Note that the Google Cloud Project ID to use is required and it can only be
+        /// obtained from the environment if running on GCP. This means that this overload
+        /// can only be used when running on GCP. If you are not running on GCP or need to specify
+        /// the Google Cloud Project ID, you can use any of
+        /// <see cref="AddGoogleDiagnosticsForAspNetCore(IServiceCollection, AspNetCoreTraceOptions, LoggingServiceOptions, Common.ErrorReportingServiceOptions)"/>
+        /// or 
+        /// <see cref="AddGoogleDiagnosticsForAspNetCore(IServiceCollection, string, string, string, TraceOptions, LoggingOptions, ErrorReportingOptions)"/>.
+        /// </remarks>
+        public static IServiceCollection AddGoogleDiagnosticsForAspNetCore(this IServiceCollection services) =>
+            services.AddGoogleDiagnosticsForAspNetCore((AspNetCoreTraceOptions)null);
+
+        /// <summary>
         /// Configures Google Diagnostics to be used in ASP.NET Core applications.
         /// </summary>
         /// <remarks>

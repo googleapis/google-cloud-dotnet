@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Diagnostics.Common;
 using Google.Cloud.Diagnostics.Common.IntegrationTests;
@@ -45,6 +46,26 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             // beginning of each tests the qps will not change.  This is dependent on the tests not
             // running in parallel.
             RateLimiter.Reset();
+        }
+
+        [SkippableFact]
+        public async Task UseGoogleDiagnostics_ConfiguresServices_Default()
+        {
+            Skip.If((await Platform.InstanceAsync()).Type == PlatformType.Unknown,
+                "Default configuration can only be used when running on GCP.");
+
+            var testId = IdGenerator.FromDateTime();
+            var startTime = DateTime.UtcNow;
+
+            var hostBuilder = GetHostBuilder(webHostBuilder =>
+                webHostBuilder.ConfigureServices(services =>
+                    services.AddGoogleDiagnosticsForAspNetCore()));
+
+            using var server = GetTestServer(hostBuilder);
+            using var client = server.CreateClient();
+            await TestTrace(testId, startTime, client);
+            await TestLogging(testId, startTime, client);
+            await TestErrorReporting(testId, client);
         }
 
         [Fact]
