@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using System.Linq;
 using Xunit;
 
 namespace Google.Cloud.Compute.V1.IntegrationTests
@@ -27,41 +28,30 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         public PaginationTest(ComputeFixture fixture) => _fixture = fixture;
 
         [Fact]
-        public void ListAcTypes()
+        public void ListAcceleratorTypes_ExplicitRequest()
         {   
             var client = AcceleratorTypesClient.Create();
-            var allTypes = client.List(new ListAcceleratorTypesRequest{ Project = _fixture.ProjectId, Zone=_fixture.Zone, MaxResults = 2});
-            bool foundInResponse = false;
-            foreach (AcceleratorType at in allTypes)
-                if (at.Name.Equals("nvidia-tesla-t4"))
-                {
-                    foundInResponse = true;
-                    break;
-                }
-            Assert.True(foundInResponse);
+            var allTypes = client.List(new ListAcceleratorTypesRequest { Project = _fixture.ProjectId, Zone = _fixture.Zone, MaxResults = 2 });
+            Assert.Contains(allTypes, IsNVidiaTeslaT4);
         }
 
         [Fact]
-        public void AggregatedListAcTypes()
+        public void ListAcceleratorTypes_UsingPageSize()
+        {
+            var client = AcceleratorTypesClient.Create();
+            var allTypes = client.List(_fixture.ProjectId, _fixture.Zone, pageSize: 2);
+            Assert.Contains(allTypes, IsNVidiaTeslaT4);
+        }
+
+        [Fact]
+        public void AggregatedListAcceleratorTypes()
         {   
             var client = AcceleratorTypesClient.Create();
-            var allTypes = client.AggregatedList(new AggregatedListAcceleratorTypesRequest{ Project = _fixture.ProjectId});
-            bool foundInResponse = false;
-            foreach (var item in allTypes)
-                if (item.Key.Equals("zones/us-central1-a"))
-                {
-                    foreach (AcceleratorType at in item.Value.AcceleratorTypes)
-                        if (at.Name.Equals("nvidia-tesla-t4"))
-                        {
-                            foundInResponse = true;
-                            break;
-                        }
-                    if (foundInResponse) 
-                    {
-                        break; 
-                    }
-                }
-            Assert.True(foundInResponse);
+            var allTypes = client.AggregatedList(_fixture.ProjectId);
+            Assert.Contains(allTypes,
+                entry => entry.Key == "zones/us-central1-a" && entry.Value.AcceleratorTypes.Any(IsNVidiaTeslaT4));
         }
+
+        private static bool IsNVidiaTeslaT4(AcceleratorType type) => type.Name == "nvidia-tesla-t4";
     }
 }
