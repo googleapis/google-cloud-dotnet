@@ -33,7 +33,7 @@ namespace Google.Cloud.Compute.V1.IntegrationTests
         /// This test is primarily to check the "IPProtocol" property,
         /// which is declared as I_p_protocol in the proto (yes, with a capital I).
         /// </summary>
-        [Fact]
+        [Fact(Skip = "https://github.com/googleapis/google-cloud-dotnet/issues/7649")]
         public void CreateFirewall()
         {   
             var client = FirewallsClient.Create();
