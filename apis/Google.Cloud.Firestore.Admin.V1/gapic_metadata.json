@@ -28,6 +28,12 @@
                 "ExportDocumentsAsync"
               ]
             },
+            "GetDatabase": {
+              "methods": [
+                "GetDatabase",
+                "GetDatabaseAsync"
+              ]
+            },
             "GetField": {
               "methods": [
                 "GetField",
@@ -46,6 +52,12 @@
                 "ImportDocumentsAsync"
               ]
             },
+            "ListDatabases": {
+              "methods": [
+                "ListDatabases",
+                "ListDatabasesAsync"
+              ]
+            },
             "ListFields": {
               "methods": [
                 "ListFields",
@@ -56,6 +68,12 @@
               "methods": [
                 "ListIndexes",
                 "ListIndexesAsync"
+              ]
+            },
+            "UpdateDatabase": {
+              "methods": [
+                "UpdateDatabase",
+                "UpdateDatabaseAsync"
               ]
             },
             "UpdateField": {

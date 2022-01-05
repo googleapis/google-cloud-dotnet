@@ -1,4 +1,4 @@
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,150 +15,151 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gcfav = Google.Cloud.Firestore.Admin.V1;
 using sys = System;
 
 namespace Google.Cloud.Firestore.Admin.V1
 {
-    /// <summary>Resource name for the <c>Database</c> resource.</summary>
-    public sealed partial class DatabaseName : gax::IResourceName, sys::IEquatable<DatabaseName>
+    /// <summary>Resource name for the <c>Location</c> resource.</summary>
+    public sealed partial class LocationName : gax::IResourceName, sys::IEquatable<LocationName>
     {
-        /// <summary>The possible contents of <see cref="DatabaseName"/>.</summary>
+        /// <summary>The possible contents of <see cref="LocationName"/>.</summary>
         public enum ResourceNameType
         {
             /// <summary>An unparsed resource name.</summary>
             Unparsed = 0,
 
-            /// <summary>A resource name with pattern <c>projects/{project}/databases/{database}</c>.</summary>
-            ProjectDatabase = 1,
+            /// <summary>A resource name with pattern <c>projects/{project}/locations/{location}</c>.</summary>
+            ProjectLocation = 1,
         }
 
-        private static gax::PathTemplate s_projectDatabase = new gax::PathTemplate("projects/{project}/databases/{database}");
+        private static gax::PathTemplate s_projectLocation = new gax::PathTemplate("projects/{project}/locations/{location}");
 
-        /// <summary>Creates a <see cref="DatabaseName"/> containing an unparsed resource name.</summary>
+        /// <summary>Creates a <see cref="LocationName"/> containing an unparsed resource name.</summary>
         /// <param name="unparsedResourceName">The unparsed resource name. Must not be <c>null</c>.</param>
         /// <returns>
-        /// A new instance of <see cref="DatabaseName"/> containing the provided <paramref name="unparsedResourceName"/>
+        /// A new instance of <see cref="LocationName"/> containing the provided <paramref name="unparsedResourceName"/>
         /// .
         /// </returns>
-        public static DatabaseName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
-            new DatabaseName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
+        public static LocationName FromUnparsed(gax::UnparsedResourceName unparsedResourceName) =>
+            new LocationName(ResourceNameType.Unparsed, gax::GaxPreconditions.CheckNotNull(unparsedResourceName, nameof(unparsedResourceName)));
 
         /// <summary>
-        /// Creates a <see cref="DatabaseName"/> with the pattern <c>projects/{project}/databases/{database}</c>.
+        /// Creates a <see cref="LocationName"/> with the pattern <c>projects/{project}/locations/{location}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="databaseId">The <c>Database</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <returns>A new instance of <see cref="DatabaseName"/> constructed from the provided ids.</returns>
-        public static DatabaseName FromProjectDatabase(string projectId, string databaseId) =>
-            new DatabaseName(ResourceNameType.ProjectDatabase, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), databaseId: gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)));
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <returns>A new instance of <see cref="LocationName"/> constructed from the provided ids.</returns>
+        public static LocationName FromProjectLocation(string projectId, string locationId) =>
+            new LocationName(ResourceNameType.ProjectLocation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="DatabaseName"/> with pattern
-        /// <c>projects/{project}/databases/{database}</c>.
+        /// Formats the IDs into the string representation of this <see cref="LocationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="databaseId">The <c>Database</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="DatabaseName"/> with pattern
-        /// <c>projects/{project}/databases/{database}</c>.
+        /// The string representation of this <see cref="LocationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}</c>.
         /// </returns>
-        public static string Format(string projectId, string databaseId) => FormatProjectDatabase(projectId, databaseId);
+        public static string Format(string projectId, string locationId) => FormatProjectLocation(projectId, locationId);
 
         /// <summary>
-        /// Formats the IDs into the string representation of this <see cref="DatabaseName"/> with pattern
-        /// <c>projects/{project}/databases/{database}</c>.
+        /// Formats the IDs into the string representation of this <see cref="LocationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}</c>.
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="databaseId">The <c>Database</c> ID. Must not be <c>null</c> or empty.</param>
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
         /// <returns>
-        /// The string representation of this <see cref="DatabaseName"/> with pattern
-        /// <c>projects/{project}/databases/{database}</c>.
+        /// The string representation of this <see cref="LocationName"/> with pattern
+        /// <c>projects/{project}/locations/{location}</c>.
         /// </returns>
-        public static string FormatProjectDatabase(string projectId, string databaseId) =>
-            s_projectDatabase.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)));
+        public static string FormatProjectLocation(string projectId, string locationId) =>
+            s_projectLocation.Expand(gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)));
 
-        /// <summary>Parses the given resource name string into a new <see cref="DatabaseName"/> instance.</summary>
+        /// <summary>Parses the given resource name string into a new <see cref="LocationName"/> instance.</summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/databases/{database}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// </remarks>
-        /// <param name="databaseName">The resource name in string form. Must not be <c>null</c>.</param>
-        /// <returns>The parsed <see cref="DatabaseName"/> if successful.</returns>
-        public static DatabaseName Parse(string databaseName) => Parse(databaseName, false);
+        /// <param name="locationName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <returns>The parsed <see cref="LocationName"/> if successful.</returns>
+        public static LocationName Parse(string locationName) => Parse(locationName, false);
 
         /// <summary>
-        /// Parses the given resource name string into a new <see cref="DatabaseName"/> instance; optionally allowing an
+        /// Parses the given resource name string into a new <see cref="LocationName"/> instance; optionally allowing an
         /// unparseable resource name.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/databases/{database}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="databaseName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="locationName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnparsed">
         /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
         /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
         /// specified.
         /// </param>
-        /// <returns>The parsed <see cref="DatabaseName"/> if successful.</returns>
-        public static DatabaseName Parse(string databaseName, bool allowUnparsed) =>
-            TryParse(databaseName, allowUnparsed, out DatabaseName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
+        /// <returns>The parsed <see cref="LocationName"/> if successful.</returns>
+        public static LocationName Parse(string locationName, bool allowUnparsed) =>
+            TryParse(locationName, allowUnparsed, out LocationName result) ? result : throw new sys::ArgumentException("The given resource-name matches no pattern.");
 
         /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="DatabaseName"/> instance.
+        /// Tries to parse the given resource name string into a new <see cref="LocationName"/> instance.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/databases/{database}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// </remarks>
-        /// <param name="databaseName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="locationName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="DatabaseName"/>, or <c>null</c> if parsing failed.
+        /// When this method returns, the parsed <see cref="LocationName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string databaseName, out DatabaseName result) => TryParse(databaseName, false, out result);
+        public static bool TryParse(string locationName, out LocationName result) => TryParse(locationName, false, out result);
 
         /// <summary>
-        /// Tries to parse the given resource name string into a new <see cref="DatabaseName"/> instance; optionally
+        /// Tries to parse the given resource name string into a new <see cref="LocationName"/> instance; optionally
         /// allowing an unparseable resource name.
         /// </summary>
         /// <remarks>
         /// To parse successfully, the resource name must be formatted as one of the following:
         /// <list type="bullet">
-        /// <item><description><c>projects/{project}/databases/{database}</c></description></item>
+        /// <item><description><c>projects/{project}/locations/{location}</c></description></item>
         /// </list>
         /// Or may be in any format if <paramref name="allowUnparsed"/> is <c>true</c>.
         /// </remarks>
-        /// <param name="databaseName">The resource name in string form. Must not be <c>null</c>.</param>
+        /// <param name="locationName">The resource name in string form. Must not be <c>null</c>.</param>
         /// <param name="allowUnparsed">
         /// If <c>true</c> will successfully store an unparseable resource name into the <see cref="UnparsedResource"/>
         /// property; otherwise will throw an <see cref="sys::ArgumentException"/> if an unparseable resource name is
         /// specified.
         /// </param>
         /// <param name="result">
-        /// When this method returns, the parsed <see cref="DatabaseName"/>, or <c>null</c> if parsing failed.
+        /// When this method returns, the parsed <see cref="LocationName"/>, or <c>null</c> if parsing failed.
         /// </param>
         /// <returns><c>true</c> if the name was parsed successfully; <c>false</c> otherwise.</returns>
-        public static bool TryParse(string databaseName, bool allowUnparsed, out DatabaseName result)
+        public static bool TryParse(string locationName, bool allowUnparsed, out LocationName result)
         {
-            gax::GaxPreconditions.CheckNotNull(databaseName, nameof(databaseName));
+            gax::GaxPreconditions.CheckNotNull(locationName, nameof(locationName));
             gax::TemplatedResourceName resourceName;
-            if (s_projectDatabase.TryParseName(databaseName, out resourceName))
+            if (s_projectLocation.TryParseName(locationName, out resourceName))
             {
-                result = FromProjectDatabase(resourceName[0], resourceName[1]);
+                result = FromProjectLocation(resourceName[0], resourceName[1]);
                 return true;
             }
             if (allowUnparsed)
             {
-                if (gax::UnparsedResourceName.TryParse(databaseName, out gax::UnparsedResourceName unparsedResourceName))
+                if (gax::UnparsedResourceName.TryParse(locationName, out gax::UnparsedResourceName unparsedResourceName))
                 {
                     result = FromUnparsed(unparsedResourceName);
                     return true;
@@ -168,21 +169,21 @@ namespace Google.Cloud.Firestore.Admin.V1
             return false;
         }
 
-        private DatabaseName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string databaseId = null, string projectId = null)
+        private LocationName(ResourceNameType type, gax::UnparsedResourceName unparsedResourceName = null, string locationId = null, string projectId = null)
         {
             Type = type;
             UnparsedResource = unparsedResourceName;
-            DatabaseId = databaseId;
+            LocationId = locationId;
             ProjectId = projectId;
         }
 
         /// <summary>
-        /// Constructs a new instance of a <see cref="DatabaseName"/> class from the component parts of pattern
-        /// <c>projects/{project}/databases/{database}</c>
+        /// Constructs a new instance of a <see cref="LocationName"/> class from the component parts of pattern
+        /// <c>projects/{project}/locations/{location}</c>
         /// </summary>
         /// <param name="projectId">The <c>Project</c> ID. Must not be <c>null</c> or empty.</param>
-        /// <param name="databaseId">The <c>Database</c> ID. Must not be <c>null</c> or empty.</param>
-        public DatabaseName(string projectId, string databaseId) : this(ResourceNameType.ProjectDatabase, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), databaseId: gax::GaxPreconditions.CheckNotNullOrEmpty(databaseId, nameof(databaseId)))
+        /// <param name="locationId">The <c>Location</c> ID. Must not be <c>null</c> or empty.</param>
+        public LocationName(string projectId, string locationId) : this(ResourceNameType.ProjectLocation, projectId: gax::GaxPreconditions.CheckNotNullOrEmpty(projectId, nameof(projectId)), locationId: gax::GaxPreconditions.CheckNotNullOrEmpty(locationId, nameof(locationId)))
         {
         }
 
@@ -196,9 +197,9 @@ namespace Google.Cloud.Firestore.Admin.V1
         public gax::UnparsedResourceName UnparsedResource { get; }
 
         /// <summary>
-        /// The <c>Database</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
+        /// The <c>Location</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
         /// </summary>
-        public string DatabaseId { get; }
+        public string LocationId { get; }
 
         /// <summary>
         /// The <c>Project</c> ID. Will not be <c>null</c>, unless this instance contains an unparsed resource name.
@@ -215,7 +216,7 @@ namespace Google.Cloud.Firestore.Admin.V1
             switch (Type)
             {
                 case ResourceNameType.Unparsed: return UnparsedResource.ToString();
-                case ResourceNameType.ProjectDatabase: return s_projectDatabase.Expand(ProjectId, DatabaseId);
+                case ResourceNameType.ProjectLocation: return s_projectLocation.Expand(ProjectId, LocationId);
                 default: throw new sys::InvalidOperationException("Unrecognized resource-type.");
             }
         }
@@ -224,16 +225,16 @@ namespace Google.Cloud.Firestore.Admin.V1
         public override int GetHashCode() => ToString().GetHashCode();
 
         /// <inheritdoc/>
-        public override bool Equals(object obj) => Equals(obj as DatabaseName);
+        public override bool Equals(object obj) => Equals(obj as LocationName);
 
         /// <inheritdoc/>
-        public bool Equals(DatabaseName other) => ToString() == other?.ToString();
+        public bool Equals(LocationName other) => ToString() == other?.ToString();
 
         /// <inheritdoc/>
-        public static bool operator ==(DatabaseName a, DatabaseName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
+        public static bool operator ==(LocationName a, LocationName b) => ReferenceEquals(a, b) || (a?.Equals(b) ?? false);
 
         /// <inheritdoc/>
-        public static bool operator !=(DatabaseName a, DatabaseName b) => !(a == b);
+        public static bool operator !=(LocationName a, LocationName b) => !(a == b);
     }
 
     /// <summary>Resource name for the <c>CollectionGroup</c> resource.</summary>
@@ -476,6 +477,30 @@ namespace Google.Cloud.Firestore.Admin.V1
 
         /// <inheritdoc/>
         public static bool operator !=(CollectionGroupName a, CollectionGroupName b) => !(a == b);
+    }
+
+    public partial class ListDatabasesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::ProjectName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::ProjectName ParentAsProjectName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::ProjectName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetDatabaseRequest
+    {
+        /// <summary>
+        /// <see cref="gcfav::DatabaseName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcfav::DatabaseName DatabaseName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcfav::DatabaseName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
     }
 
     public partial class CreateIndexRequest

@@ -3,7 +3,7 @@
 //     source: google/firestore/admin/v1/firestore_admin.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2019 Google LLC.
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 //
-//
 #pragma warning disable 0414, 1591
 #region Designer generated code
 
@@ -25,6 +24,32 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.Firestore.Admin.V1 {
   /// <summary>
+  /// The Cloud Firestore Admin API.
+  ///
+  /// This API provides several administrative services for Cloud Firestore.
+  ///
+  /// Project, Database, Namespace, Collection, Collection Group, and Document are
+  /// used as defined in the Google Cloud Firestore API.
+  ///
+  /// Operation: An Operation represents work being performed in the background.
+  ///
+  /// The index service manages Cloud Firestore indexes.
+  ///
+  /// Index creation is performed asynchronously.
+  /// An Operation resource is created for each such asynchronous operation.
+  /// The state of the operation (including any errors encountered)
+  /// may be queried via the Operation resource.
+  ///
+  /// The Operations collection provides a record of actions performed for the
+  /// specified Project (including any Operations in progress). Operations are not
+  /// created directly but through calls on other collections or resources.
+  ///
+  /// An Operation that is done may be deleted so that it is no longer listed as
+  /// part of the Operation collection. Operations are garbage collected after
+  /// 30 days. By default, ListOperations will only return in progress and failed
+  /// operations. To list completed operation, issue a ListOperations request with
+  /// the filter `done: true`.
+  ///
   /// Operations are created by service `FirestoreAdmin`, but are accessed via
   /// service `google.longrunning.Operations`.
   /// </summary>
@@ -95,6 +120,16 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ExportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest> __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest> __Marshaller_google_firestore_admin_v1_GetDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.Database> __Marshaller_google_firestore_admin_v1_Database = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.Database.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest> __Marshaller_google_firestore_admin_v1_ListDatabasesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse> __Marshaller_google_firestore_admin_v1_ListDatabasesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest> __Marshaller_google_firestore_admin_v1_UpdateDatabaseRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation> __Method_CreateIndex = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.CreateIndexRequest, global::Google.LongRunning.Operation>(
@@ -166,6 +201,30 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         __ServiceName,
         "ImportDocuments",
         __Marshaller_google_firestore_admin_v1_ImportDocumentsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database> __Method_GetDatabase = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetDatabase",
+        __Marshaller_google_firestore_admin_v1_GetDatabaseRequest,
+        __Marshaller_google_firestore_admin_v1_Database);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse> __Method_ListDatabases = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListDatabases",
+        __Marshaller_google_firestore_admin_v1_ListDatabasesRequest,
+        __Marshaller_google_firestore_admin_v1_ListDatabasesResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation> __Method_UpdateDatabase = new grpc::Method<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateDatabase",
+        __Marshaller_google_firestore_admin_v1_UpdateDatabaseRequest,
         __Marshaller_google_longrunning_Operation);
 
     /// <summary>Service descriptor</summary>
@@ -270,7 +329,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
       /// that have been explicitly overridden. To issue this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false`.
+      /// `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -290,6 +349,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// used once the associated operation is done. If an export operation is
       /// cancelled before completion it may leave partial data behind in Google
       /// Cloud Storage.
+      ///
+      /// For more details on export behavior and output format, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/export-import
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -312,6 +374,42 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportDocuments(global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets information about a database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.Database> GetDatabase(global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// List all the databases in the project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse> ListDatabases(global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a database.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> UpdateDatabase(global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -695,7 +793,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
       /// that have been explicitly overridden. To issue this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false`.
+      /// `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -713,7 +811,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
       /// that have been explicitly overridden. To issue this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false`.
+      /// `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -729,7 +827,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
       /// that have been explicitly overridden. To issue this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false`.
+      /// `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -747,7 +845,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// Currently, [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] only supports listing fields
       /// that have been explicitly overridden. To issue this query, call
       /// [FirestoreAdmin.ListFields][google.firestore.admin.v1.FirestoreAdmin.ListFields] with the filter set to
-      /// `indexConfig.usesAncestorConfig:false`.
+      /// `indexConfig.usesAncestorConfig:false` .
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -766,6 +864,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// used once the associated operation is done. If an export operation is
       /// cancelled before completion it may leave partial data behind in Google
       /// Cloud Storage.
+      ///
+      /// For more details on export behavior and output format, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/export-import
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -786,6 +887,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// used once the associated operation is done. If an export operation is
       /// cancelled before completion it may leave partial data behind in Google
       /// Cloud Storage.
+      ///
+      /// For more details on export behavior and output format, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/export-import
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -804,6 +908,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// used once the associated operation is done. If an export operation is
       /// cancelled before completion it may leave partial data behind in Google
       /// Cloud Storage.
+      ///
+      /// For more details on export behavior and output format, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/export-import
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -824,6 +931,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       /// used once the associated operation is done. If an export operation is
       /// cancelled before completion it may leave partial data behind in Google
       /// Cloud Storage.
+      ///
+      /// For more details on export behavior and output format, refer to:
+      /// https://cloud.google.com/firestore/docs/manage-data/export-import
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -897,6 +1007,150 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_ImportDocuments, null, options, request);
       }
+      /// <summary>
+      /// Gets information about a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.Database GetDatabase(global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.Database GetDatabase(global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Gets information about a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.Database> GetDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets information about a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.Database> GetDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetDatabase, null, options, request);
+      }
+      /// <summary>
+      /// List all the databases in the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabases(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all the databases in the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse ListDatabases(global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListDatabases, null, options, request);
+      }
+      /// <summary>
+      /// List all the databases in the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListDatabasesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// List all the databases in the project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse> ListDatabasesAsync(global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListDatabases, null, options, request);
+      }
+      /// <summary>
+      /// Updates a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabase(global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabase(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation UpdateDatabase(global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateDatabase, null, options, request);
+      }
+      /// <summary>
+      /// Updates a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateDatabaseAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a database.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> UpdateDatabaseAsync(global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateDatabase, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override FirestoreAdminClient NewInstance(ClientBaseConfiguration configuration)
@@ -919,7 +1173,10 @@ namespace Google.Cloud.Firestore.Admin.V1 {
           .AddMethod(__Method_UpdateField, serviceImpl.UpdateField)
           .AddMethod(__Method_ListFields, serviceImpl.ListFields)
           .AddMethod(__Method_ExportDocuments, serviceImpl.ExportDocuments)
-          .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments).Build();
+          .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments)
+          .AddMethod(__Method_GetDatabase, serviceImpl.GetDatabase)
+          .AddMethod(__Method_ListDatabases, serviceImpl.ListDatabases)
+          .AddMethod(__Method_UpdateDatabase, serviceImpl.UpdateDatabase).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -938,6 +1195,9 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       serviceBinder.AddMethod(__Method_ListFields, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListFieldsRequest, global::Google.Cloud.Firestore.Admin.V1.ListFieldsResponse>(serviceImpl.ListFields));
       serviceBinder.AddMethod(__Method_ExportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ExportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportDocuments));
       serviceBinder.AddMethod(__Method_ImportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ImportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDocuments));
+      serviceBinder.AddMethod(__Method_GetDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.GetDatabaseRequest, global::Google.Cloud.Firestore.Admin.V1.Database>(serviceImpl.GetDatabase));
+      serviceBinder.AddMethod(__Method_ListDatabases, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.ListDatabasesRequest, global::Google.Cloud.Firestore.Admin.V1.ListDatabasesResponse>(serviceImpl.ListDatabases));
+      serviceBinder.AddMethod(__Method_UpdateDatabase, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Firestore.Admin.V1.UpdateDatabaseRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDatabase));
     }
 
   }

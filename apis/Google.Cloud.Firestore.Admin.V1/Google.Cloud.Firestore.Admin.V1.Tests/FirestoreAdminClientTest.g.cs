@@ -1,4 +1,4 @@
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -417,6 +418,282 @@ namespace Google.Cloud.Firestore.Admin.V1.Tests
             Field responseCallSettings = await client.GetFieldAsync(request.FieldName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Field responseCancellationToken = await client.GetFieldAsync(request.FieldName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDatabaseRequestObject()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                LocationId = "location_iddaa574e2",
+                Type = Database.Types.DatabaseType.Unspecified,
+                ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Database response = client.GetDatabase(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDatabaseRequestObjectAsync()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                LocationId = "location_iddaa574e2",
+                Type = Database.Types.DatabaseType.Unspecified,
+                ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Database responseCallSettings = await client.GetDatabaseAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Database responseCancellationToken = await client.GetDatabaseAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDatabase()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                LocationId = "location_iddaa574e2",
+                Type = Database.Types.DatabaseType.Unspecified,
+                ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Database response = client.GetDatabase(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDatabaseAsync()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                LocationId = "location_iddaa574e2",
+                Type = Database.Types.DatabaseType.Unspecified,
+                ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Database responseCallSettings = await client.GetDatabaseAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Database responseCancellationToken = await client.GetDatabaseAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetDatabaseResourceNames()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                LocationId = "location_iddaa574e2",
+                Type = Database.Types.DatabaseType.Unspecified,
+                ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Database response = client.GetDatabase(request.DatabaseName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetDatabaseResourceNamesAsync()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            Database expectedResponse = new Database
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+                LocationId = "location_iddaa574e2",
+                Type = Database.Types.DatabaseType.Unspecified,
+                ConcurrencyMode = Database.Types.ConcurrencyMode.OptimisticWithEntityGroups,
+                Etag = "etage8ad7218",
+            };
+            mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            Database responseCallSettings = await client.GetDatabaseAsync(request.DatabaseName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Database responseCancellationToken = await client.GetDatabaseAsync(request.DatabaseName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListDatabasesRequestObject()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListDatabasesResponse expectedResponse = new ListDatabasesResponse
+            {
+                Databases = { new Database(), },
+            };
+            mockGrpcClient.Setup(x => x.ListDatabases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            ListDatabasesResponse response = client.ListDatabases(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ListDatabasesRequestObjectAsync()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListDatabasesResponse expectedResponse = new ListDatabasesResponse
+            {
+                Databases = { new Database(), },
+            };
+            mockGrpcClient.Setup(x => x.ListDatabasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDatabasesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            ListDatabasesResponse responseCallSettings = await client.ListDatabasesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListDatabasesResponse responseCancellationToken = await client.ListDatabasesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListDatabases()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListDatabasesResponse expectedResponse = new ListDatabasesResponse
+            {
+                Databases = { new Database(), },
+            };
+            mockGrpcClient.Setup(x => x.ListDatabases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            ListDatabasesResponse response = client.ListDatabases(request.Parent);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ListDatabasesAsync()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListDatabasesResponse expectedResponse = new ListDatabasesResponse
+            {
+                Databases = { new Database(), },
+            };
+            mockGrpcClient.Setup(x => x.ListDatabasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDatabasesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            ListDatabasesResponse responseCallSettings = await client.ListDatabasesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListDatabasesResponse responseCancellationToken = await client.ListDatabasesAsync(request.Parent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ListDatabasesResourceNames()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListDatabasesResponse expectedResponse = new ListDatabasesResponse
+            {
+                Databases = { new Database(), },
+            };
+            mockGrpcClient.Setup(x => x.ListDatabases(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            ListDatabasesResponse response = client.ListDatabases(request.ParentAsProjectName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ListDatabasesResourceNamesAsync()
+        {
+            moq::Mock<FirestoreAdmin.FirestoreAdminClient> mockGrpcClient = new moq::Mock<FirestoreAdmin.FirestoreAdminClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
+            };
+            ListDatabasesResponse expectedResponse = new ListDatabasesResponse
+            {
+                Databases = { new Database(), },
+            };
+            mockGrpcClient.Setup(x => x.ListDatabasesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ListDatabasesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            FirestoreAdminClient client = new FirestoreAdminClientImpl(mockGrpcClient.Object, null);
+            ListDatabasesResponse responseCallSettings = await client.ListDatabasesAsync(request.ParentAsProjectName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ListDatabasesResponse responseCancellationToken = await client.ListDatabasesAsync(request.ParentAsProjectName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
