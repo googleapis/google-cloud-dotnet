@@ -50,9 +50,10 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// Checks that an <see cref="ErrorEvent"/> contains valid data,
         /// including HTTP Context data.
         /// </summary>
-        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName, bool verifyHttpContext = true)
+        public static void VerifyFullErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName,
+            bool verifyHttpContext = true, bool verifyServiceAndVersion = true)
         {
-            VerifyErrorEventLogged(errorEvent, testId, functionName);
+            VerifyErrorEventLogged(errorEvent, testId, functionName, verifyServiceAndVersion);
             if (verifyHttpContext)
             {
                 VerifyHttpContextLogged(errorEvent);
@@ -66,10 +67,13 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
         /// Google.Cloud.Diagnostics.GoogleExceptionLogger is used instead of the
         /// Google.Cloud.Diagnostics.GoogleWebApiExceptionLogger.
         /// </summary>
-        public static void VerifyErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName)
+        public static void VerifyErrorEventLogged(ErrorEvent errorEvent, string testId, string functionName, bool verifyServiceAndVersion = true)
         {
-            Assert.Equal(EntryData.Service, errorEvent.ServiceContext.Service);
-            Assert.Equal(EntryData.Version, errorEvent.ServiceContext.Version);
+            if (verifyServiceAndVersion)
+            {
+                Assert.Equal(EntryData.Service, errorEvent.ServiceContext.Service);
+                Assert.Equal(EntryData.Version, errorEvent.ServiceContext.Version);
+            }
 
             Assert.Contains(functionName, errorEvent.Message);
             Assert.Contains(testId, errorEvent.Message);

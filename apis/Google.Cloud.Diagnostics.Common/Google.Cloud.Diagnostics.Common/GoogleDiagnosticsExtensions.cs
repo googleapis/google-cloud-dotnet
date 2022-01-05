@@ -25,6 +25,21 @@ namespace Google.Cloud.Diagnostics.Common
         /// Configures Google Diagnostics to be used in non ASP.NET Core applications.
         /// </summary>
         /// <remarks>
+        /// Note that the Google Cloud Project ID to use is required and it can only be
+        /// obtained from the environment if running on GCP. This means that this overload
+        /// can only be used when running on GCP. If you are not running on GCP or need to specify
+        /// the Google Cloud Project ID, you can use any of
+        /// <see cref="AddGoogleDiagnostics(IServiceCollection, TraceServiceOptions, LoggingServiceOptions, ErrorReportingServiceOptions)"/>
+        /// or 
+        /// <see cref="AddGoogleDiagnostics(IServiceCollection, string, string, string, TraceOptions, LoggingOptions, ErrorReportingOptions)"/>.
+        /// </remarks>
+        public static IServiceCollection AddGoogleDiagnostics(this IServiceCollection services) =>
+            services.AddGoogleDiagnostics((TraceServiceOptions)null);
+
+        /// <summary>
+        /// Configures Google Diagnostics to be used in non ASP.NET Core applications.
+        /// </summary>
+        /// <remarks>
         /// Options may be null in which case defaults will be used. Note that the
         /// Google Cloud Project ID to use is required. If not set via options, it will be
         /// obtained from the environment, but only if running on GCP.

@@ -65,7 +65,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             using var client = server.CreateClient();
             await TestTrace(testId, startTime, client);
             await TestLogging(testId, startTime, client);
-            await TestErrorReporting(testId, client);
+            await TestErrorReporting(testId, client, verifyServiceAndVersion: false);
         }
 
         [Fact]
@@ -182,7 +182,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             Assert.False(response.Headers.Contains(TraceHeaderContext.TraceHeader));
         }
 
-        private static async Task TestErrorReporting(string testId, HttpClient client)
+        private static async Task TestErrorReporting(string testId, HttpClient client, bool verifyServiceAndVersion = true)
         {
             await Assert.ThrowsAsync<Exception>(() => client.GetAsync($"/ErrorReporting/{nameof(ErrorReportingController.ThrowsException)}/{testId}"));
             var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.Default, testId);

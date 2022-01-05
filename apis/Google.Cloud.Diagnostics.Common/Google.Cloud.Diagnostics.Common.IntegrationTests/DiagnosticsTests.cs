@@ -12,6 +12,7 @@
 // See the License for the specific language governing permissions and
 // limitations under the License.
 
+using Google.Api.Gax;
 using Google.Cloud.ClientTesting;
 using Google.Cloud.Logging.Type;
 using Microsoft.Extensions.DependencyInjection;
@@ -40,15 +41,20 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
             _startTime = DateTimeOffset.UtcNow;
         }
 
+        private static class EmptyHostBuilder
+        {
+            public static IHostBuilder CreateHostBuilder() =>
+                new HostBuilder()
+                    .ConfigureLogging(builder => builder.ClearProviders())
+                    .ConfigureServices(services => services.AddGoogleDiagnostics());
+        }
+
         private static class DefaultHostBuilder
         {
             public static IHostBuilder CreateHostBuilder() =>
                 new HostBuilder()
                     .ConfigureLogging(builder => builder.ClearProviders())
-                    .ConfigureServices(services =>
-                    {
-                        services.AddGoogleDiagnostics(ProjectId, Service, Version);
-                    });
+                    .ConfigureServices(services => services.AddGoogleDiagnostics(ProjectId, Service, Version));
         }
 
         private static class WithOptionsHostBuilder
@@ -57,14 +63,12 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 new HostBuilder()
                     .ConfigureLogging(builder => builder.ClearProviders())
                     .ConfigureServices(services =>
-                    {
                         // We don't care much about which options we are setting.
                         // These are for testing that all the extension method overloads work as expected.
                         services.AddGoogleDiagnostics(ProjectId, Service, Version,
                             TraceOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
                             LoggingOptions.Create(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)),
-                            ErrorReportingOptions.CreateInstance(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate)));
-                    });
+                            ErrorReportingOptions.CreateInstance(retryOptions: RetryOptions.NoRetry(ExceptionHandling.Propagate))));
         }
 
         private static class WithServiceOptionsHostBuilder
@@ -106,6 +110,11 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
                 yield return new object[] { (Func<IHostBuilder>)DefaultHostBuilder.CreateHostBuilder };
                 yield return new object[] { (Func<IHostBuilder>)WithOptionsHostBuilder.CreateHostBuilder };
                 yield return new object[] { (Func<IHostBuilder>)WithServiceOptionsHostBuilder.CreateHostBuilder };
+                // Skip these tests if we are not running on GCP
+                if (Platform.Instance().Type != PlatformType.Unknown)
+                {
+                    yield return new object[] { (Func<IHostBuilder>)EmptyHostBuilder.CreateHostBuilder };
+                }
             }
         }
 
@@ -193,7 +202,7 @@ namespace Google.Cloud.Diagnostics.Common.IntegrationTests
 
                 var errorEvent = ErrorEventEntryVerifiers.VerifySingle(ErrorEventEntryPolling.Default, _testId);
                 ErrorEventEntryVerifiers.VerifyFullErrorEventLogged(
-                    errorEvent, _testId, nameof(ThrowsException), verifyHttpContext: false);
+                    errorEvent, _testId, nameof(ThrowsException), verifyHttpContext: false, verifyServiceAndVersion: false);
             }
             finally
             {
