@@ -36,11 +36,14 @@ for the permissions needed for Tracing.
 > **Note**  
 > Some environments limit or disable CPU usage for background activities, while some others allow you to
 > configure CPU allocation for request processing only.
-> When running on environments with limited CPU for backgrounf activities, take care not to use the
+> When running on environments with limited CPU for background activities, take care not to use the
 > timed buffer options for any of Logging, Tracing or Error Reporting. Take into account that the timed buffer
-> is used for all of these components by default so you will need to explicitly configure the buffers by using
-> the `Google.Cloud.Diagnostics.Common.LoggerOptions`, `Google.Cloud.Diagnostics.Common.TraceOptions` and
-> `Google.Cloud.Diagnostics.Common.ErrorReportingOptions` classes.
+> is used for the Logging and Tracing components by default so you will need to explicitly configure the buffers by using
+> the `Google.Cloud.Diagnostics.Common.LoggerOptions` and `Google.Cloud.Diagnostics.Common.TraceOptions` classes. The Error Reporting
+> component does not buffer entries by default.
+> See the
+> [`Google.Cloud.Diagnostics.Common` documentation](https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Diagnostics.Common/latest)
+> documentation for more information on buffers.
 > Here you can read more about [CPU allocation in Google Cloud Run](https://cloud.google.com/run/docs/tips/general#background-activity).
 
 ## Getting started

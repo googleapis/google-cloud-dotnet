@@ -54,12 +54,39 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             // End sample
         }
 
-        [Fact]
-        public async Task TraceSingleAsync()
+        private static class NoBuffersHostBuilder
+        {
+            // Sample: ConfigureBuffers
+            public static IHostBuilder CreateHostBuilder() =>
+                new HostBuilder()
+                    .ConfigureServices(services =>
+                    {
+                        // Replace ProjectId with your Google Cloud Project ID.
+                        // Replace Service with a name or identifier for the service.
+                        // Replace Version with a version for the service.
+                        services.AddGoogleDiagnostics(ProjectId, Service, Version,
+                            // Configure the three components to use no buffer.
+                            traceOptions: TraceOptions.Create(bufferOptions: BufferOptions.NoBuffer()),
+                            loggingOptions: LoggingOptions.Create(bufferOptions: BufferOptions.NoBuffer()),
+                            errorReportingOptions: ErrorReportingOptions.CreateInstance(bufferOptions: BufferOptions.NoBuffer()));
+                        // Register other services here if you need them.
+                    });
+            // End sample
+        }
+
+        public static TheoryData<Func<IHostBuilder>> HostBuilders => new TheoryData<Func<IHostBuilder>>
+        {
+            DefaultHostBuilder.CreateHostBuilder,
+            NoBuffersHostBuilder.CreateHostBuilder
+        };
+
+        [Theory]
+        [MemberData(nameof(HostBuilders))]
+        public async Task TraceSingleAsync(Func<IHostBuilder> hostBuilder)
         {
             IHost host = null;
             // Hides that we use different classes so that we can have multiple CreateHostBuilder methods.
-            Func<IHostBuilder> CreateHostBuilder = DefaultHostBuilder.CreateHostBuilder;
+            Func<IHostBuilder> CreateHostBuilder = hostBuilder;
 
             try
             {
@@ -93,14 +120,15 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
         }
 
-        [Fact]
-        public async Task LogsAsync()
+        [Theory]
+        [MemberData(nameof(HostBuilders))]
+        public async Task LogsAsync(Func<IHostBuilder> hostBuilder)
         {
             IHost host = null;
 
             try
             {
-                host = DefaultHostBuilder.CreateHostBuilder().Build();
+                host = hostBuilder().Build();
                 await host.StartAsync();
 
                 ILogger logger = host.Services.GetRequiredService<ILogger<Program>>();
@@ -117,14 +145,15 @@ namespace Google.Cloud.Diagnostics.Common.Snippets
             }
         }
 
-        [Fact]
-        public async Task LogsExceptionAsync()
+        [Theory]
+        [MemberData(nameof(HostBuilders))]
+        public async Task LogsExceptionAsync(Func<IHostBuilder> hostBuilder)
         {
             IHost host = null;
 
             try
             {
-                host = DefaultHostBuilder.CreateHostBuilder().Build();
+                host = hostBuilder().Build();
                 await host.StartAsync();
 
                 IContextExceptionLogger exceptionLogger = host.Services.GetRequiredService<IContextExceptionLogger>();
