@@ -526,7 +526,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
         public const int OrderFieldNumber = 2;
         /// <summary>
         /// Indicates that this field supports ordering by the specified order or
-        /// comparing using =, &lt;, &lt;=, >, >=.
+        /// comparing using =, !=, &lt;, &lt;=, >, >=.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

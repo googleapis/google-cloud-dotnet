@@ -25,24 +25,25 @@ namespace Google.Cloud.Firestore.Admin.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2ZpZWxkLnByb3RvEhlnb29n",
-            "bGUuZmlyZXN0b3JlLmFkbWluLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGiVnb29nbGUvZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvGhxn",
-            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIuACCgVGaWVsZBIMCgRuYW1l",
-            "GAEgASgJEkIKDGluZGV4X2NvbmZpZxgCIAEoCzIsLmdvb2dsZS5maXJlc3Rv",
-            "cmUuYWRtaW4udjEuRmllbGQuSW5kZXhDb25maWcaiQEKC0luZGV4Q29uZmln",
-            "EjEKB2luZGV4ZXMYASADKAsyIC5nb29nbGUuZmlyZXN0b3JlLmFkbWluLnYx",
-            "LkluZGV4EhwKFHVzZXNfYW5jZXN0b3JfY29uZmlnGAIgASgIEhYKDmFuY2Vz",
-            "dG9yX2ZpZWxkGAMgASgJEhEKCXJldmVydGluZxgEIAEoCDp56kF2Ch5maXJl",
-            "c3RvcmUuZ29vZ2xlYXBpcy5jb20vRmllbGQSVHByb2plY3RzL3twcm9qZWN0",
-            "fS9kYXRhYmFzZXMve2RhdGFiYXNlfS9jb2xsZWN0aW9uR3JvdXBzL3tjb2xs",
-            "ZWN0aW9ufS9maWVsZHMve2ZpZWxkfULeAQodY29tLmdvb2dsZS5maXJlc3Rv",
-            "cmUuYWRtaW4udjFCCkZpZWxkUHJvdG9QAVo+Z29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9maXJlc3RvcmUvYWRtaW4vdjE7YWRtaW6i",
-            "AgRHQ0ZTqgIfR29vZ2xlLkNsb3VkLkZpcmVzdG9yZS5BZG1pbi5WMcoCH0dv",
-            "b2dsZVxDbG91ZFxGaXJlc3RvcmVcQWRtaW5cVjHqAiNHb29nbGU6OkNsb3Vk",
-            "OjpGaXJlc3RvcmU6OkFkbWluOjpWMWIGcHJvdG8z"));
+            "bGUuZmlyZXN0b3JlLmFkbWluLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiVnb29nbGUv",
+            "ZmlyZXN0b3JlL2FkbWluL3YxL2luZGV4LnByb3RvGhxnb29nbGUvYXBpL2Fu",
+            "bm90YXRpb25zLnByb3RvIuUCCgVGaWVsZBIRCgRuYW1lGAEgASgJQgPgQQIS",
+            "QgoMaW5kZXhfY29uZmlnGAIgASgLMiwuZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
+            "bi52MS5GaWVsZC5JbmRleENvbmZpZxqJAQoLSW5kZXhDb25maWcSMQoHaW5k",
+            "ZXhlcxgBIAMoCzIgLmdvb2dsZS5maXJlc3RvcmUuYWRtaW4udjEuSW5kZXgS",
+            "HAoUdXNlc19hbmNlc3Rvcl9jb25maWcYAiABKAgSFgoOYW5jZXN0b3JfZmll",
+            "bGQYAyABKAkSEQoJcmV2ZXJ0aW5nGAQgASgIOnnqQXYKHmZpcmVzdG9yZS5n",
+            "b29nbGVhcGlzLmNvbS9GaWVsZBJUcHJvamVjdHMve3Byb2plY3R9L2RhdGFi",
+            "YXNlcy97ZGF0YWJhc2V9L2NvbGxlY3Rpb25Hcm91cHMve2NvbGxlY3Rpb259",
+            "L2ZpZWxkcy97ZmllbGR9Qt4BCh1jb20uZ29vZ2xlLmZpcmVzdG9yZS5hZG1p",
+            "bi52MUIKRmllbGRQcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90",
+            "by9nb29nbGVhcGlzL2ZpcmVzdG9yZS9hZG1pbi92MTthZG1pbqICBEdDRlOq",
+            "Ah9Hb29nbGUuQ2xvdWQuRmlyZXN0b3JlLkFkbWluLlYxygIfR29vZ2xlXENs",
+            "b3VkXEZpcmVzdG9yZVxBZG1pblxWMeoCI0dvb2dsZTo6Q2xvdWQ6OkZpcmVz",
+            "dG9yZTo6QWRtaW46OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Firestore.Admin.V1.IndexReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field), global::Google.Cloud.Firestore.Admin.V1.Field.Parser, new[]{ "Name", "IndexConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig), global::Google.Cloud.Firestore.Admin.V1.Field.Types.IndexConfig.Parser, new[]{ "Indexes", "UsesAncestorConfig", "AncestorField", "Reverting" }, null, null, null, null)})
           }));
@@ -106,7 +107,7 @@ namespace Google.Cloud.Firestore.Admin.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// A field name of the form
+    /// Required. A field name of the form
     /// `projects/{project_id}/databases/{database_id}/collectionGroups/{collection_id}/fields/{field_path}`
     ///
     /// A field path may be a simple field name, e.g. `address` or a path to fields

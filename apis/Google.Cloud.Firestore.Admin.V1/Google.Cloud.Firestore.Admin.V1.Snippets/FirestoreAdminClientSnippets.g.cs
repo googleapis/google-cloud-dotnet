@@ -1,4 +1,4 @@
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -17,6 +17,7 @@
 namespace Google.Cloud.Firestore.Admin.V1.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
     using System;
@@ -1529,6 +1530,308 @@ namespace Google.Cloud.Firestore.Admin.V1.Snippets
             {
                 // If it has completed, then access the result
                 Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabase</summary>
+        public void GetDatabaseRequestObject()
+        {
+            // Snippet: GetDatabase(GetDatabaseRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            // Make the request
+            Database response = firestoreAdminClient.GetDatabase(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseAsync</summary>
+        public async Task GetDatabaseRequestObjectAsync()
+        {
+            // Snippet: GetDatabaseAsync(GetDatabaseRequest, CallSettings)
+            // Additional: GetDatabaseAsync(GetDatabaseRequest, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            GetDatabaseRequest request = new GetDatabaseRequest
+            {
+                DatabaseName = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]"),
+            };
+            // Make the request
+            Database response = await firestoreAdminClient.GetDatabaseAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabase</summary>
+        public void GetDatabase()
+        {
+            // Snippet: GetDatabase(string, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Database response = firestoreAdminClient.GetDatabase(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseAsync</summary>
+        public async Task GetDatabaseAsync()
+        {
+            // Snippet: GetDatabaseAsync(string, CallSettings)
+            // Additional: GetDatabaseAsync(string, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/databases/[DATABASE]";
+            // Make the request
+            Database response = await firestoreAdminClient.GetDatabaseAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabase</summary>
+        public void GetDatabaseResourceNames()
+        {
+            // Snippet: GetDatabase(DatabaseName, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            DatabaseName name = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Database response = firestoreAdminClient.GetDatabase(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetDatabaseAsync</summary>
+        public async Task GetDatabaseResourceNamesAsync()
+        {
+            // Snippet: GetDatabaseAsync(DatabaseName, CallSettings)
+            // Additional: GetDatabaseAsync(DatabaseName, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            DatabaseName name = DatabaseName.FromProjectDatabase("[PROJECT]", "[DATABASE]");
+            // Make the request
+            Database response = await firestoreAdminClient.GetDatabaseAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabases</summary>
+        public void ListDatabasesRequestObject()
+        {
+            // Snippet: ListDatabases(ListDatabasesRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            ListDatabasesResponse response = firestoreAdminClient.ListDatabases(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabasesAsync</summary>
+        public async Task ListDatabasesRequestObjectAsync()
+        {
+            // Snippet: ListDatabasesAsync(ListDatabasesRequest, CallSettings)
+            // Additional: ListDatabasesAsync(ListDatabasesRequest, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ListDatabasesRequest request = new ListDatabasesRequest
+            {
+                ParentAsProjectName = ProjectName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            ListDatabasesResponse response = await firestoreAdminClient.ListDatabasesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabases</summary>
+        public void ListDatabases()
+        {
+            // Snippet: ListDatabases(string, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            ListDatabasesResponse response = firestoreAdminClient.ListDatabases(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabasesAsync</summary>
+        public async Task ListDatabasesAsync()
+        {
+            // Snippet: ListDatabasesAsync(string, CallSettings)
+            // Additional: ListDatabasesAsync(string, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]";
+            // Make the request
+            ListDatabasesResponse response = await firestoreAdminClient.ListDatabasesAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabases</summary>
+        public void ListDatabasesResourceNames()
+        {
+            // Snippet: ListDatabases(ProjectName, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            ListDatabasesResponse response = firestoreAdminClient.ListDatabases(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListDatabasesAsync</summary>
+        public async Task ListDatabasesResourceNamesAsync()
+        {
+            // Snippet: ListDatabasesAsync(ProjectName, CallSettings)
+            // Additional: ListDatabasesAsync(ProjectName, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectName parent = ProjectName.FromProject("[PROJECT]");
+            // Make the request
+            ListDatabasesResponse response = await firestoreAdminClient.ListDatabasesAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabase</summary>
+        public void UpdateDatabaseRequestObject()
+        {
+            // Snippet: UpdateDatabase(UpdateDatabaseRequest, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            UpdateDatabaseRequest request = new UpdateDatabaseRequest
+            {
+                Database = new Database(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = firestoreAdminClient.UpdateDatabase(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceUpdateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseAsync</summary>
+        public async Task UpdateDatabaseRequestObjectAsync()
+        {
+            // Snippet: UpdateDatabaseAsync(UpdateDatabaseRequest, CallSettings)
+            // Additional: UpdateDatabaseAsync(UpdateDatabaseRequest, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateDatabaseRequest request = new UpdateDatabaseRequest
+            {
+                Database = new Database(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = await firestoreAdminClient.UpdateDatabaseAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceUpdateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabase</summary>
+        public void UpdateDatabase()
+        {
+            // Snippet: UpdateDatabase(Database, FieldMask, CallSettings)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = FirestoreAdminClient.Create();
+            // Initialize request argument(s)
+            Database database = new Database();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = firestoreAdminClient.UpdateDatabase(database, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = firestoreAdminClient.PollOnceUpdateDatabase(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateDatabaseAsync</summary>
+        public async Task UpdateDatabaseAsync()
+        {
+            // Snippet: UpdateDatabaseAsync(Database, FieldMask, CallSettings)
+            // Additional: UpdateDatabaseAsync(Database, FieldMask, CancellationToken)
+            // Create client
+            FirestoreAdminClient firestoreAdminClient = await FirestoreAdminClient.CreateAsync();
+            // Initialize request argument(s)
+            Database database = new Database();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Database, UpdateDatabaseMetadata> response = await firestoreAdminClient.UpdateDatabaseAsync(database, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Database, UpdateDatabaseMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Database result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Database, UpdateDatabaseMetadata> retrievedResponse = await firestoreAdminClient.PollOnceUpdateDatabaseAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Database retrievedResult = retrievedResponse.Result;
             }
             // End snippet
         }
