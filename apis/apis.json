@@ -115,7 +115,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/aiplatform/v1"
+      "protoPath": "google/cloud/aiplatform/v1",
+      "shortName": "aiplatform"
     },
     {
       "id": "Google.Cloud.ApigeeConnect.V1",
@@ -375,7 +376,8 @@
       },
       "tags": [
         "BigQuery"
-      ]
+      ],
+      "shortName": "bigquery"
     },
     {
       "id": "Google.Cloud.BigQuery.Storage.V1",
@@ -1173,7 +1175,7 @@
       "productName": "Google Cloud Error Reporting",
       "productUrl": "https://cloud.google.com/error-reporting/",
       "version": "2.0.0-beta05",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Error Reporting API, which groups and counts similar errors from cloud services. The Googe Cloud Error Reporting API provides a way to report new errors and read access to error groups and their associated errors.",
       "tags": [
@@ -1270,7 +1272,7 @@
       "listingDescription": "Firestore high-level library",
       "version": "2.4.0",
       "type": "other",
-      "metadataType": "VENEER_GRPC",
+      "metadataType": "GAPIC_MANUAL",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
       "description": "Recommended Google client library to access the Firestore API.",
@@ -1290,7 +1292,8 @@
         "Grpc.Core.Testing": "2.38.1",
         "System.ValueTuple": "4.5.0",
         "Xunit.Combinatorial": "1.4.1"
-      }
+      },
+      "shortName": "firestore"
     },
     {
       "id": "Google.Cloud.Firestore.V1",
@@ -1451,7 +1454,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/gkehub/v1"
+      "protoPath": "google/cloud/gkehub/v1",
+      "shortName": "gkehub"
     },
     {
       "id": "Google.Cloud.Iam.Admin.V1",
@@ -2180,7 +2184,7 @@
       "productName": "Google Cloud OS Login",
       "productUrl": "https://cloud.google.com/compute/docs/instances/managing-instance-access",
       "version": "2.0.0-beta05",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to manages OS login configuration for Google account users.",
       "tags": [
@@ -2388,7 +2392,7 @@
       "productName": "Google Cloud Memorystore for Redis",
       "productUrl": "https://cloud.google.com/memorystore/",
       "version": "2.0.0-beta06",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to administer Cloud Memorystore for Redis (V1 Beta 1 API).",
       "dependencies": {
@@ -2505,7 +2509,7 @@
       "productName": "Secret Manager",
       "productUrl": "https://cloud.google.com/secret-manager",
       "version": "2.0.0-beta05",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Secret Manager API version v1beta1.",
       "dependencies": {
@@ -2877,7 +2881,7 @@
       "productName": "Google Cloud Speech",
       "productUrl": "https://cloud.google.com/speech",
       "version": "2.0.0-beta07",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "metadataType": "GAPIC_COMBO",
       "description": "Google client library to access the Google Cloud Speech API version v1p1beta1 with upcoming features.",
@@ -2907,7 +2911,8 @@
       },
       "tags": [
         "Storage"
-      ]
+      ],
+      "shortName": "storage"
     },
     {
       "id": "Google.Cloud.StorageTransfer.V1",
@@ -2959,7 +2964,7 @@
       "productName": "Google Cloud Talent Solution",
       "productUrl": "https://cloud.google.com/talent-solution/",
       "version": "2.0.0-beta07",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Talent solution API (v4 beta1) which provides the capability to create, read, update, and delete job postings, as well as search jobs based on keywords and filters.",
       "tags": [
@@ -2997,7 +3002,7 @@
       "productName": "Google Cloud Tasks",
       "productUrl": "https://cloud.google.com/tasks/",
       "version": "2.0.0-beta08",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Tasks API (v2beta3), which manages the execution of large numbers of distributed requests.",
       "tags": [
@@ -3134,7 +3139,8 @@
       "tags": [
         "Translate",
         "Translation"
-      ]
+      ],
+      "shortName": "translate"
     },
     {
       "id": "Google.Cloud.VMMigration.V1",
@@ -3278,7 +3284,7 @@
       "productName": "Google Cloud Web Risk",
       "productUrl": "https://cloud.google.com/web-risk/",
       "version": "2.0.0-beta05",
-      "releaseLevelOverride": "beta",
+      "releaseLevelOverride": "preview",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Web Risk API v1beta1.",
       "tags": [
@@ -3490,7 +3496,8 @@
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "containeranalysis"
     }
   ],
   "ignoredPaths": {
