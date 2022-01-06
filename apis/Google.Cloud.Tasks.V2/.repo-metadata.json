@@ -1,6 +1,7 @@
 {
   "distribution_name": "Google.Cloud.Tasks.V2",
-  "release_level": "ga",
+  "release_level": "stable",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Tasks.V2/latest",
-  "library_type": "GAPIC_AUTO"
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "cloudtasks"
 }

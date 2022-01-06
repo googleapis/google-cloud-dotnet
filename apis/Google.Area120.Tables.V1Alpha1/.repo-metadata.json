@@ -1,6 +1,7 @@
 {
   "distribution_name": "Google.Area120.Tables.V1Alpha1",
-  "release_level": "alpha",
+  "release_level": "preview",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Area120.Tables.V1Alpha1/latest",
-  "library_type": "GAPIC_AUTO"
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "area120tables"
 }

@@ -2,5 +2,6 @@
   "distribution_name": "Google.Cloud.Redis.V1Beta1",
   "release_level": "beta",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Redis.V1Beta1/latest",
-  "library_type": "GAPIC_AUTO"
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "redis"
 }

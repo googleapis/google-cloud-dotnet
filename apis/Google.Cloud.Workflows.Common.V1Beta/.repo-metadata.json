@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Workflows.Common.V1Beta",
-  "release_level": "beta",
+  "release_level": "preview",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Workflows.Common.V1Beta/latest",
   "library_type": "OTHER"
 }

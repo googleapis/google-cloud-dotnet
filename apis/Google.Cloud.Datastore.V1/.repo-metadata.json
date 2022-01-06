@@ -1,6 +1,7 @@
 {
   "distribution_name": "Google.Cloud.Datastore.V1",
-  "release_level": "ga",
+  "release_level": "stable",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Datastore.V1/latest",
-  "library_type": "GAPIC_COMBO"
+  "library_type": "GAPIC_COMBO",
+  "api_shortname": "datastore"
 }

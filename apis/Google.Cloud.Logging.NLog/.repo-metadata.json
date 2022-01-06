@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Logging.NLog",
-  "release_level": "ga",
+  "release_level": "stable",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Logging.NLog/latest",
   "library_type": "INTEGRATION"
 }
