@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Location",
-  "release_level": "beta",
+  "release_level": "preview",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Location/latest",
   "library_type": "CORE"
 }

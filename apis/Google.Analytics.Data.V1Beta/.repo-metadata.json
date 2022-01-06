@@ -1,6 +1,7 @@
 {
   "distribution_name": "Google.Analytics.Data.V1Beta",
-  "release_level": "beta",
+  "release_level": "preview",
   "client_documentation": "https://googleapis.dev/dotnet/Google.Analytics.Data.V1Beta/latest",
-  "library_type": "GAPIC_AUTO"
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "analyticsdata"
 }

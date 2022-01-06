@@ -1,6 +1,7 @@
 {
   "distribution_name": "Google.Cloud.Metastore.V1Alpha",
-  "release_level": "alpha",
+  "release_level": "preview",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Metastore.V1Alpha/latest",
-  "library_type": "GAPIC_AUTO"
+  "library_type": "GAPIC_AUTO",
+  "api_shortname": "metastore"
 }

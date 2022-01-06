@@ -1,6 +1,6 @@
 {
   "distribution_name": "Google.Cloud.Firestore",
-  "release_level": "ga",
+  "release_level": "stable",
   "client_documentation": "https://cloud.google.com/dotnet/docs/reference/Google.Cloud.Firestore/latest",
   "library_type": "VENEER_GRPC"
 }
