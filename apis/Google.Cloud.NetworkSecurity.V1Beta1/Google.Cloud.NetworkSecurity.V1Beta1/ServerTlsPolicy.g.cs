@@ -30,49 +30,49 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             "Z29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxouZ29vZ2xlL2Nsb3VkL25ldHdv",
             "cmtzZWN1cml0eS92MWJldGExL3Rscy5wcm90bxogZ29vZ2xlL3Byb3RvYnVm",
             "L2ZpZWxkX21hc2sucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
-            "cHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i7AUKD1NlcnZl",
-            "clRsc1BvbGljeRIRCgRuYW1lGAEgASgJQgPgQQISGAoLZGVzY3JpcHRpb24Y",
-            "AiABKAlCA+BBARI0CgtjcmVhdGVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90",
-            "b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgEIAEoCzIaLmdv",
-            "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJWCgZsYWJlbHMYBSADKAsy",
-            "QS5nb29nbGUuY2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTEuU2VydmVy",
-            "VGxzUG9saWN5LkxhYmVsc0VudHJ5QgPgQQESFwoKYWxsb3dfb3BlbhgGIAEo",
-            "CEID4EEBEloKEnNlcnZlcl9jZXJ0aWZpY2F0ZRgHIAEoCzI5Lmdvb2dsZS5j",
-            "bG91ZC5uZXR3b3Jrc2VjdXJpdHkudjFiZXRhMS5DZXJ0aWZpY2F0ZVByb3Zp",
-            "ZGVyQgPgQQESWgoLbXRsc19wb2xpY3kYCCABKAsyQC5nb29nbGUuY2xvdWQu",
-            "bmV0d29ya3NlY3VyaXR5LnYxYmV0YTEuU2VydmVyVGxzUG9saWN5Lk1UTFNQ",
-            "b2xpY3lCA+BBARpjCgpNVExTUG9saWN5ElUKFGNsaWVudF92YWxpZGF0aW9u",
-            "X2NhGAEgAygLMjIuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJl",
-            "dGExLlZhbGlkYXRpb25DQUID4EECGi0KC0xhYmVsc0VudHJ5EgsKA2tleRgB",
-            "IAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6ggHqQX8KLm5ldHdvcmtzZWN1cml0",
-            "eS5nb29nbGVhcGlzLmNvbS9TZXJ2ZXJUbHNQb2xpY3kSTXByb2plY3RzL3tw",
-            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9zZXJ2ZXJUbHNQb2xpY2ll",
-            "cy97c2VydmVyX3Rsc19wb2xpY3l9IoABChxMaXN0U2VydmVyVGxzUG9saWNp",
-            "ZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMu",
-            "Z29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFnZV9zaXplGAIgASgFEhIK",
-            "CnBhZ2VfdG9rZW4YAyABKAkijAEKHUxpc3RTZXJ2ZXJUbHNQb2xpY2llc1Jl",
-            "c3BvbnNlElIKE3NlcnZlcl90bHNfcG9saWNpZXMYASADKAsyNS5nb29nbGUu",
-            "Y2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTEuU2VydmVyVGxzUG9saWN5",
-            "EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJhChlHZXRTZXJ2ZXJUbHNQb2xp",
-            "Y3lSZXF1ZXN0EkQKBG5hbWUYASABKAlCNuBBAvpBMAoubmV0d29ya3NlY3Vy",
-            "aXR5Lmdvb2dsZWFwaXMuY29tL1NlcnZlclRsc1BvbGljeSLgAQocQ3JlYXRl",
-            "U2VydmVyVGxzUG9saWN5UmVxdWVzdBJGCgZwYXJlbnQYASABKAlCNuBBAvpB",
+            "cHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8izgUKD1NlcnZl",
+            "clRsc1BvbGljeRIRCgRuYW1lGAEgASgJQgPgQQISEwoLZGVzY3JpcHRpb24Y",
+            "AiABKAkSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsyGi5nb29nbGUu",
+            "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSUQoGbGFiZWxzGAUgAygLMkEuZ29v",
+            "Z2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGExLlNlcnZlclRsc1Bv",
+            "bGljeS5MYWJlbHNFbnRyeRISCgphbGxvd19vcGVuGAYgASgIElUKEnNlcnZl",
+            "cl9jZXJ0aWZpY2F0ZRgHIAEoCzI5Lmdvb2dsZS5jbG91ZC5uZXR3b3Jrc2Vj",
+            "dXJpdHkudjFiZXRhMS5DZXJ0aWZpY2F0ZVByb3ZpZGVyElUKC210bHNfcG9s",
+            "aWN5GAggASgLMkAuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJl",
+            "dGExLlNlcnZlclRsc1BvbGljeS5NVExTUG9saWN5Gl4KCk1UTFNQb2xpY3kS",
+            "UAoUY2xpZW50X3ZhbGlkYXRpb25fY2EYASADKAsyMi5nb29nbGUuY2xvdWQu",
+            "bmV0d29ya3NlY3VyaXR5LnYxYmV0YTEuVmFsaWRhdGlvbkNBGi0KC0xhYmVs",
+            "c0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6ggHqQX8K",
+            "Lm5ldHdvcmtzZWN1cml0eS5nb29nbGVhcGlzLmNvbS9TZXJ2ZXJUbHNQb2xp",
+            "Y3kSTXByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9z",
+            "ZXJ2ZXJUbHNQb2xpY2llcy97c2VydmVyX3Rsc19wb2xpY3l9IoABChxMaXN0",
+            "U2VydmVyVGxzUG9saWNpZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC",
+            "+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRpb24SEQoJcGFn",
+            "ZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkijAEKHUxpc3RTZXJ2",
+            "ZXJUbHNQb2xpY2llc1Jlc3BvbnNlElIKE3NlcnZlcl90bHNfcG9saWNpZXMY",
+            "ASADKAsyNS5nb29nbGUuY2xvdWQubmV0d29ya3NlY3VyaXR5LnYxYmV0YTEu",
+            "U2VydmVyVGxzUG9saWN5EhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSJhChlH",
+            "ZXRTZXJ2ZXJUbHNQb2xpY3lSZXF1ZXN0EkQKBG5hbWUYASABKAlCNuBBAvpB",
             "MAoubmV0d29ya3NlY3VyaXR5Lmdvb2dsZWFwaXMuY29tL1NlcnZlclRsc1Bv",
-            "bGljeRIhChRzZXJ2ZXJfdGxzX3BvbGljeV9pZBgCIAEoCUID4EECElUKEXNl",
-            "cnZlcl90bHNfcG9saWN5GAMgASgLMjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtz",
-            "ZWN1cml0eS52MWJldGExLlNlcnZlclRsc1BvbGljeUID4EECIqsBChxVcGRh",
-            "dGVTZXJ2ZXJUbHNQb2xpY3lSZXF1ZXN0EjQKC3VwZGF0ZV9tYXNrGAEgASgL",
-            "MhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID4EEBElUKEXNlcnZlcl90",
-            "bHNfcG9saWN5GAIgASgLMjUuZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0",
-            "eS52MWJldGExLlNlcnZlclRsc1BvbGljeUID4EECImQKHERlbGV0ZVNlcnZl",
-            "clRsc1BvbGljeVJlcXVlc3QSRAoEbmFtZRgBIAEoCUI24EEC+kEwCi5uZXR3",
-            "b3Jrc2VjdXJpdHkuZ29vZ2xlYXBpcy5jb20vU2VydmVyVGxzUG9saWN5QvkB",
-            "Cihjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGExUAFa",
-            "U2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQv",
-            "bmV0d29ya3NlY3VyaXR5L3YxYmV0YTE7bmV0d29ya3NlY3VyaXR5qgIkR29v",
-            "Z2xlLkNsb3VkLk5ldHdvcmtTZWN1cml0eS5WMUJldGExygIkR29vZ2xlXENs",
-            "b3VkXE5ldHdvcmtTZWN1cml0eVxWMWJldGEx6gInR29vZ2xlOjpDbG91ZDo6",
-            "TmV0d29ya1NlY3VyaXR5OjpWMWJldGExYgZwcm90bzM="));
+            "bGljeSLgAQocQ3JlYXRlU2VydmVyVGxzUG9saWN5UmVxdWVzdBJGCgZwYXJl",
+            "bnQYASABKAlCNuBBAvpBMAoubmV0d29ya3NlY3VyaXR5Lmdvb2dsZWFwaXMu",
+            "Y29tL1NlcnZlclRsc1BvbGljeRIhChRzZXJ2ZXJfdGxzX3BvbGljeV9pZBgC",
+            "IAEoCUID4EECElUKEXNlcnZlcl90bHNfcG9saWN5GAMgASgLMjUuZ29vZ2xl",
+            "LmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGExLlNlcnZlclRsc1BvbGlj",
+            "eUID4EECIqsBChxVcGRhdGVTZXJ2ZXJUbHNQb2xpY3lSZXF1ZXN0EjQKC3Vw",
+            "ZGF0ZV9tYXNrGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLkZpZWxkTWFza0ID",
+            "4EEBElUKEXNlcnZlcl90bHNfcG9saWN5GAIgASgLMjUuZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmtzZWN1cml0eS52MWJldGExLlNlcnZlclRsc1BvbGljeUID4EEC",
+            "ImQKHERlbGV0ZVNlcnZlclRsc1BvbGljeVJlcXVlc3QSRAoEbmFtZRgBIAEo",
+            "CUI24EEC+kEwCi5uZXR3b3Jrc2VjdXJpdHkuZ29vZ2xlYXBpcy5jb20vU2Vy",
+            "dmVyVGxzUG9saWN5Qo8CCihjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1",
+            "cml0eS52MWJldGExQhRTZXJ2ZXJUbHNQb2xpY3lQcm90b1ABWlNnb29nbGUu",
+            "Z29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL25ldHdvcmtz",
+            "ZWN1cml0eS92MWJldGExO25ldHdvcmtzZWN1cml0eaoCJEdvb2dsZS5DbG91",
+            "ZC5OZXR3b3JrU2VjdXJpdHkuVjFCZXRhMcoCJEdvb2dsZVxDbG91ZFxOZXR3",
+            "b3JrU2VjdXJpdHlcVjFiZXRhMeoCJ0dvb2dsZTo6Q2xvdWQ6Ok5ldHdvcmtT",
+            "ZWN1cml0eTo6VjFiZXRhMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.NetworkSecurity.V1Beta1.TlsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -166,7 +166,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     public const int DescriptionFieldNumber = 2;
     private string description_ = "";
     /// <summary>
-    /// Optional. Free-text description of the resource.
+    /// Free-text description of the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -213,7 +213,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 42);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. Set of label tags associated with the resource.
+    /// Set of label tags associated with the resource.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -225,11 +225,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     public const int AllowOpenFieldNumber = 6;
     private bool allowOpen_;
     /// <summary>
-    /// Optional. Determines if server allows plaintext connections. If set to true, server
+    ///
+    /// Determines if server allows plaintext connections. If set to true, server
     /// allows plain text connections. By default, it is set to false. This setting
-    /// is not exclusive of other encryption modes. For example, if allow_open and
-    /// mtls_policy are set, server allows both plain text and mTLS connections.
-    /// See documentation of other encryption modes to confirm compatibility.
+    /// is not exclusive of other encryption modes. For example, if `allow_open`
+    /// and `mtls_policy` are set, server allows both plain text and mTLS
+    /// connections. See documentation of other encryption modes to confirm
+    /// compatibility.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -244,8 +246,9 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     public const int ServerCertificateFieldNumber = 7;
     private global::Google.Cloud.NetworkSecurity.V1Beta1.CertificateProvider serverCertificate_;
     /// <summary>
-    /// Optional. Defines a mechanism to provision server identity (public and private keys).
-    /// Cannot be combined with allow_open as a permissive mode that allows both
+    ///
+    /// Defines a mechanism to provision server identity (public and private keys).
+    /// Cannot be combined with `allow_open` as a permissive mode that allows both
     /// plain text and TLS is not supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -261,11 +264,12 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
     public const int MtlsPolicyFieldNumber = 8;
     private global::Google.Cloud.NetworkSecurity.V1Beta1.ServerTlsPolicy.Types.MTLSPolicy mtlsPolicy_;
     /// <summary>
-    /// Optional. Defines a mechanism to provision peer validation certificates for peer to
+    ///
+    /// Defines a mechanism to provision peer validation certificates for peer to
     /// peer authentication (Mutual TLS - mTLS). If not specified, client
     /// certificate will not be requested. The connection is treated as TLS and not
-    /// mTLS. If allow_open and mtls_policy are set, server allows both plain text
-    /// and mTLS connections.
+    /// mTLS. If `allow_open` and `mtls_policy` are set, server allows both plain
+    /// text and mTLS connections.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -659,7 +663,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             = pb::FieldCodec.ForMessage(10, global::Google.Cloud.NetworkSecurity.V1Beta1.ValidationCA.Parser);
         private readonly pbc::RepeatedField<global::Google.Cloud.NetworkSecurity.V1Beta1.ValidationCA> clientValidationCa_ = new pbc::RepeatedField<global::Google.Cloud.NetworkSecurity.V1Beta1.ValidationCA>();
         /// <summary>
-        /// Required. Defines the mechanism to obtain the Certificate Authority certificate to
+        ///
+        /// Defines the mechanism to obtain the Certificate Authority certificate to
         /// validate the client certificate.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]

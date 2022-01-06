@@ -78,12 +78,13 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             "LkF1dGhvcml6YXRpb25Qb2xpY3lCA+BBAiJsCiBEZWxldGVBdXRob3JpemF0",
             "aW9uUG9saWN5UmVxdWVzdBJICgRuYW1lGAEgASgJQjrgQQL6QTQKMm5ldHdv",
             "cmtzZWN1cml0eS5nb29nbGVhcGlzLmNvbS9BdXRob3JpemF0aW9uUG9saWN5",
-            "QvkBCihjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGEx",
-            "UAFaU2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xv",
-            "dWQvbmV0d29ya3NlY3VyaXR5L3YxYmV0YTE7bmV0d29ya3NlY3VyaXR5qgIk",
-            "R29vZ2xlLkNsb3VkLk5ldHdvcmtTZWN1cml0eS5WMUJldGExygIkR29vZ2xl",
-            "XENsb3VkXE5ldHdvcmtTZWN1cml0eVxWMWJldGEx6gInR29vZ2xlOjpDbG91",
-            "ZDo6TmV0d29ya1NlY3VyaXR5OjpWMWJldGExYgZwcm90bzM="));
+            "QpMCCihjb20uZ29vZ2xlLmNsb3VkLm5ldHdvcmtzZWN1cml0eS52MWJldGEx",
+            "QhhBdXRob3JpemF0aW9uUG9saWN5UHJvdG9QAVpTZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9uZXR3b3Jrc2VjdXJpdHkv",
+            "djFiZXRhMTtuZXR3b3Jrc2VjdXJpdHmqAiRHb29nbGUuQ2xvdWQuTmV0d29y",
+            "a1NlY3VyaXR5LlYxQmV0YTHKAiRHb29nbGVcQ2xvdWRcTmV0d29ya1NlY3Vy",
+            "aXR5XFYxYmV0YTHqAidHb29nbGU6OkNsb3VkOjpOZXR3b3JrU2VjdXJpdHk6",
+            "OlYxYmV0YTFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -558,6 +559,8 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
         [pbr::OriginalName("ALLOW")] Allow = 1,
         /// <summary>
         /// Deny access.
+        /// Deny rules should be avoided unless they are used to provide a default
+        /// "deny all" fallback.
         /// </summary>
         [pbr::OriginalName("DENY")] Deny = 2,
       }
@@ -842,7 +845,9 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// Optional. List of peer identities to match for authorization. At least one
             /// principal should match. Each peer can be an exact match, or a prefix
             /// match (example, "namespace/*") or a suffix match (example, //
-            /// */service-account") or a presence match "*".
+            /// */service-account") or a presence match "*". Authorization based on the
+            /// principal name without certificate validation (configured by
+            /// ServerTlsPolicy resource) is considered insecure.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -858,7 +863,9 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             /// <summary>
             /// Optional. List of CIDR ranges to match based on source IP address. At least one
             /// IP block should match. Single IP (e.g., "1.2.3.4") and CIDR (e.g.,
-            /// "1.2.3.0/24") are supported.
+            /// "1.2.3.0/24") are supported. Authorization based on source IP alone
+            /// should be avoided. The IP addresses of any load balancers or proxies
+            /// should be considered untrusted.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1059,7 +1066,7 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
                 = pb::FieldCodec.ForString(10);
             private readonly pbc::RepeatedField<string> hosts_ = new pbc::RepeatedField<string>();
             /// <summary>
-            /// Required. List of host names to match. Matched against HOST header in
+            /// Required. List of host names to match. Matched against the ":authority" header in
             /// http requests. At least one host should match. Each host can be an
             /// exact match, or a prefix match (example "mydomain.*") or a suffix
             /// match (example // *.myorg.com") or a presence(any) match "*".
@@ -1103,9 +1110,11 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1 {
             public const int HttpHeaderMatchFieldNumber = 5;
             private global::Google.Cloud.NetworkSecurity.V1Beta1.AuthorizationPolicy.Types.Rule.Types.Destination.Types.HttpHeaderMatch httpHeaderMatch_;
             /// <summary>
-            /// Optional. Match against key:value pair in http header. Provides a
-            /// flexible match based on HTTP headers, for potentially
-            /// advanced use cases. At least one header should match.
+            /// Optional. Match against key:value pair in http header. Provides a flexible match
+            /// based on HTTP headers, for potentially advanced use cases. At least one
+            /// header should match. Avoid using header matches to make authorization
+            /// decisions unless there is a strong guarantee that requests arrive
+            /// through a trusted client or proxy.
             /// </summary>
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
             [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
