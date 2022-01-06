@@ -12,7 +12,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/analytics/admin/v1alpha"
+      "protoPath": "google/analytics/admin/v1alpha",
+      "shortName": "analyticsadmin"
     },
     {
       "id": "Google.Analytics.Data.V1Beta",
@@ -26,7 +27,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/analytics/data/v1beta"
+      "protoPath": "google/analytics/data/v1beta",
+      "shortName": "analyticsdata"
     },
     {
       "id": "Google.Apps.Script.Type",
@@ -54,7 +56,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/area120/tables/v1alpha1"
+      "protoPath": "google/area120/tables/v1alpha1",
+      "shortName": "area120tables"
     },
     {
       "id": "Google.Cloud.AccessApproval.V1",
@@ -72,7 +75,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/accessapproval/v1"
+      "protoPath": "google/cloud/accessapproval/v1",
+      "shortName": "accessapproval"
     },
     {
       "id": "Google.Cloud.ApiGateway.V1",
@@ -91,7 +95,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/apigateway/v1"
+      "protoPath": "google/cloud/apigateway/v1",
+      "shortName": "apigateway"
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
@@ -129,7 +134,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/apigeeconnect/v1"
+      "protoPath": "google/cloud/apigeeconnect/v1",
+      "shortName": "apigeeconnect"
     },
     {
       "id": "Google.Cloud.AppEngine.V1",
@@ -149,7 +155,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/appengine/v1"
+      "protoPath": "google/appengine/v1",
+      "shortName": "appengine"
     },
     {
       "id": "Google.Cloud.ArtifactRegistry.V1",
@@ -169,7 +176,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/devtools/artifactregistry/v1"
+      "protoPath": "google/devtools/artifactregistry/v1",
+      "shortName": "artifactregistry"
     },
     {
       "id": "Google.Cloud.ArtifactRegistry.V1Beta2",
@@ -188,7 +196,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/devtools/artifactregistry/v1beta2"
+      "protoPath": "google/devtools/artifactregistry/v1beta2",
+      "shortName": "artifactregistry"
     },
     {
       "id": "Google.Cloud.Asset.V1",
@@ -213,7 +222,8 @@
         "asset",
         "inventory",
         "assets"
-      ]
+      ],
+      "shortName": "cloudasset"
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1",
@@ -232,7 +242,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/assuredworkloads/v1"
+      "protoPath": "google/cloud/assuredworkloads/v1",
+      "shortName": "assuredworkloads"
     },
     {
       "id": "Google.Cloud.AssuredWorkloads.V1Beta1",
@@ -249,7 +260,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/assuredworkloads/v1beta1"
+      "protoPath": "google/cloud/assuredworkloads/v1beta1",
+      "shortName": "assuredworkloads"
     },
     {
       "id": "Google.Cloud.Audit",
@@ -285,7 +297,8 @@
       "tags": [
         "automl",
         "ml"
-      ]
+      ],
+      "shortName": "automl"
     },
     {
       "id": "Google.Cloud.BigQuery.Connection.V1",
@@ -304,7 +317,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/bigquery/connection/v1"
+      "protoPath": "google/cloud/bigquery/connection/v1",
+      "shortName": "bigqueryconnection"
     },
     {
       "id": "Google.Cloud.BigQuery.DataTransfer.V1",
@@ -322,7 +336,8 @@
       "tags": [
         "BigQuery",
         "DataTransfer"
-      ]
+      ],
+      "shortName": "bigquerydatatransfer"
     },
     {
       "id": "Google.Cloud.BigQuery.Reservation.V1",
@@ -340,7 +355,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/bigquery/reservation/v1"
+      "protoPath": "google/cloud/bigquery/reservation/v1",
+      "shortName": "bigqueryreservation"
     },
     {
       "id": "Google.Cloud.BigQuery.V2",
@@ -376,7 +392,8 @@
       },
       "tags": [
         "BigQuery"
-      ]
+      ],
+      "shortName": "bigquerystorage"
     },
     {
       "id": "Google.Cloud.Bigtable.Admin.V2",
@@ -400,7 +417,8 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "3.5.0"
-      }
+      },
+      "shortName": "bigtableadmin"
     },
     {
       "id": "Google.Cloud.Bigtable.Common.V2",
@@ -439,7 +457,8 @@
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "3.5.0",
         "Google.Cloud.Bigtable.Admin.V2": "project"
-      }
+      },
+      "shortName": "bigtable"
     },
     {
       "id": "Google.Cloud.Billing.Budgets.V1",
@@ -458,7 +477,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/billing/budgets/v1"
+      "protoPath": "google/cloud/billing/budgets/v1",
+      "shortName": "billingbudgets"
     },
     {
       "id": "Google.Cloud.Billing.Budgets.V1Beta1",
@@ -474,7 +494,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/billing/budgets/v1beta1"
+      "protoPath": "google/cloud/billing/budgets/v1beta1",
+      "shortName": "billingbudgets"
     },
     {
       "id": "Google.Cloud.Billing.V1",
@@ -492,7 +513,8 @@
       },
       "tags": [
         "Billing"
-      ]
+      ],
+      "shortName": "cloudbilling"
     },
     {
       "id": "Google.Cloud.BinaryAuthorization.V1",
@@ -514,7 +536,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/binaryauthorization/v1"
+      "protoPath": "google/cloud/binaryauthorization/v1",
+      "shortName": "binaryauthorization"
     },
     {
       "id": "Google.Cloud.BinaryAuthorization.V1Beta1",
@@ -532,7 +555,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/binaryauthorization/v1beta1"
+      "protoPath": "google/cloud/binaryauthorization/v1beta1",
+      "shortName": "binaryauthorization"
     },
     {
       "id": "Google.Cloud.Channel.V1",
@@ -551,7 +575,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/channel/v1"
+      "protoPath": "google/cloud/channel/v1",
+      "shortName": "cloudchannel"
     },
     {
       "id": "Google.Cloud.CloudBuild.V1",
@@ -570,7 +595,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/devtools/cloudbuild/v1"
+      "protoPath": "google/devtools/cloudbuild/v1",
+      "shortName": "cloudbuild"
     },
     {
       "id": "Google.Cloud.CloudDms.V1",
@@ -589,7 +615,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/clouddms/v1"
+      "protoPath": "google/cloud/clouddms/v1",
+      "shortName": "datamigration"
     },
     {
       "id": "Google.Cloud.Common",
@@ -619,7 +646,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/compute/v1"
+      "protoPath": "google/cloud/compute/v1",
+      "shortName": "compute"
     },
     {
       "id": "Google.Cloud.ContactCenterInsights.V1",
@@ -639,7 +667,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/contactcenterinsights/v1"
+      "protoPath": "google/cloud/contactcenterinsights/v1",
+      "shortName": "contactcenterinsights"
     },
     {
       "id": "Google.Cloud.Container.V1",
@@ -656,7 +685,8 @@
       },
       "tags": [
         "Kubernetes"
-      ]
+      ],
+      "shortName": "container"
     },
     {
       "id": "Google.Cloud.DataCatalog.V1",
@@ -675,7 +705,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.Iam.V1": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "datacatalog"
     },
     {
       "id": "Google.Cloud.DataFusion.V1",
@@ -695,7 +726,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/datafusion/v1"
+      "protoPath": "google/cloud/datafusion/v1",
+      "shortName": "datafusion"
     },
     {
       "id": "Google.Cloud.DataLabeling.V1Beta1",
@@ -712,7 +744,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/datalabeling/v1beta1"
+      "protoPath": "google/cloud/datalabeling/v1beta1",
+      "shortName": "datalabeling"
     },
     {
       "id": "Google.Cloud.DataQnA.V1Alpha",
@@ -727,7 +760,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/dataqna/v1alpha"
+      "protoPath": "google/cloud/dataqna/v1alpha",
+      "shortName": "dataqna"
     },
     {
       "id": "Google.Cloud.Dataflow.V1Beta3",
@@ -741,7 +775,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/dataflow/v1beta3"
+      "protoPath": "google/dataflow/v1beta3",
+      "shortName": "dataflow"
     },
     {
       "id": "Google.Cloud.Dataproc.V1",
@@ -760,7 +795,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "dataproc"
     },
     {
       "id": "Google.Cloud.Datastore.Admin.V1",
@@ -778,7 +814,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/datastore/admin/v1"
+      "protoPath": "google/datastore/admin/v1",
+      "shortName": "datastore"
     },
     {
       "id": "Google.Cloud.Datastore.V1",
@@ -800,7 +837,8 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Grpc.Testing": "3.5.0"
-      }
+      },
+      "shortName": "datastore"
     },
     {
       "id": "Google.Cloud.Datastream.V1Alpha1",
@@ -817,7 +855,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/datastream/v1alpha1"
+      "protoPath": "google/cloud/datastream/v1alpha1",
+      "shortName": "datastream"
     },
     {
       "id": "Google.Cloud.Debugger.V2",
@@ -838,7 +877,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.DevTools.Common": "2.1.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "clouddebugger"
     },
     {
       "id": "Google.Cloud.Deploy.V1",
@@ -859,7 +899,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/deploy/v1"
+      "protoPath": "google/cloud/deploy/v1",
+      "shortName": "clouddeploy"
     },
     {
       "id": "Google.Cloud.DevTools.Common",
@@ -895,7 +936,8 @@
         "Google.Cloud.Iam.V1": "2.2.0",
         "Grafeas.V1": "project",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "containeranalysis"
     },
     {
       "id": "Google.Cloud.Diagnostics.AspNetCore",
@@ -995,7 +1037,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/dialogflow/cx/v3"
+      "protoPath": "google/cloud/dialogflow/cx/v3",
+      "shortName": "dialogflow"
     },
     {
       "id": "Google.Cloud.Dialogflow.V2",
@@ -1017,7 +1060,8 @@
       },
       "testDependencies": {
         "Microsoft.AspNetCore.Mvc.Core": "2.1.16"
-      }
+      },
+      "shortName": "dialogflow"
     },
     {
       "id": "Google.Cloud.Dlp.V2",
@@ -1037,7 +1081,8 @@
         "data loss prevention",
         "privacy",
         "pii"
-      ]
+      ],
+      "shortName": "dlp"
     },
     {
       "id": "Google.Cloud.DocumentAI.V1",
@@ -1060,7 +1105,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/documentai/v1"
+      "protoPath": "google/cloud/documentai/v1",
+      "shortName": "documentai"
     },
     {
       "id": "Google.Cloud.DocumentAI.V1Beta3",
@@ -1081,7 +1127,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/documentai/v1beta3"
+      "protoPath": "google/cloud/documentai/v1beta3",
+      "shortName": "documentai"
     },
     {
       "id": "Google.Cloud.Domains.V1",
@@ -1099,7 +1146,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/domains/v1"
+      "protoPath": "google/cloud/domains/v1",
+      "shortName": "domains"
     },
     {
       "id": "Google.Cloud.Domains.V1Beta1",
@@ -1115,7 +1163,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/domains/v1beta1"
+      "protoPath": "google/cloud/domains/v1beta1",
+      "shortName": "domains"
     },
     {
       "id": "Google.Cloud.ErrorReporting.V1Beta1",
@@ -1130,7 +1179,8 @@
       "tags": [
         "ErrorReporting",
         "Stackdriver"
-      ]
+      ],
+      "shortName": "clouderrorreporting"
     },
     {
       "id": "Google.Cloud.EssentialContacts.V1",
@@ -1149,7 +1199,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/essentialcontacts/v1"
+      "protoPath": "google/cloud/essentialcontacts/v1",
+      "shortName": "essentialcontacts"
     },
     {
       "id": "Google.Cloud.Eventarc.V1",
@@ -1168,7 +1219,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/eventarc/v1"
+      "protoPath": "google/cloud/eventarc/v1",
+      "shortName": "eventarc"
     },
     {
       "id": "Google.Cloud.Filestore.V1",
@@ -1184,7 +1236,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/filestore/v1"
+      "protoPath": "google/cloud/filestore/v1",
+      "shortName": "file"
     },
     {
       "id": "Google.Cloud.Firestore.Admin.V1",
@@ -1207,7 +1260,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.2.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "firestore"
     },
     {
       "id": "Google.Cloud.Firestore",
@@ -1258,7 +1312,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.2.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "firestore"
     },
     {
       "id": "Google.Cloud.Functions.V1",
@@ -1277,7 +1332,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/functions/v1"
+      "protoPath": "google/cloud/functions/v1",
+      "shortName": "cloudfunctions"
     },
     {
       "id": "Google.Cloud.GSuiteAddOns.V1",
@@ -1297,7 +1353,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/gsuiteaddons/v1"
+      "protoPath": "google/cloud/gsuiteaddons/v1",
+      "shortName": "gsuiteaddons"
     },
     {
       "id": "Google.Cloud.Gaming.V1",
@@ -1316,7 +1373,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/gaming/v1"
+      "protoPath": "google/cloud/gaming/v1",
+      "shortName": "gameservices"
     },
     {
       "id": "Google.Cloud.Gaming.V1Beta",
@@ -1333,7 +1391,8 @@
       ],
       "dependencies": {
         "Google.LongRunning": "2.3.0"
-      }
+      },
+      "shortName": "gameservices"
     },
     {
       "id": "Google.Cloud.GkeConnect.Gateway.V1Beta1",
@@ -1352,7 +1411,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/gkeconnect/gateway/v1beta1"
+      "protoPath": "google/cloud/gkeconnect/gateway/v1beta1",
+      "shortName": "connectgateway"
     },
     {
       "id": "Google.Cloud.GkeHub.V1Beta1",
@@ -1370,7 +1430,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/gkehub/v1beta1"
+      "protoPath": "google/cloud/gkehub/v1beta1",
+      "shortName": "gkehub"
     },
     {
       "id": "Google.Cloud.GkeHub.V1",
@@ -1412,7 +1473,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/iam/admin/v1"
+      "protoPath": "google/iam/admin/v1",
+      "shortName": "iam"
     },
     {
       "id": "Google.Cloud.Iam.Credentials.V1",
@@ -1432,7 +1494,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/iam/credentials/v1"
+      "protoPath": "google/iam/credentials/v1",
+      "shortName": "iamcredentials"
     },
     {
       "id": "Google.Cloud.Iam.V1",
@@ -1472,7 +1535,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/iap/v1"
+      "protoPath": "google/cloud/iap/v1",
+      "shortName": "iap"
     },
     {
       "id": "Google.Cloud.Ids.V1",
@@ -1492,7 +1556,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/ids/v1"
+      "protoPath": "google/cloud/ids/v1",
+      "shortName": "ids"
     },
     {
       "id": "Google.Cloud.Iot.V1",
@@ -1510,7 +1575,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/iot/v1"
+      "protoPath": "google/cloud/iot/v1",
+      "shortName": "cloudiot"
     },
     {
       "id": "Google.Cloud.Kms.V1",
@@ -1531,7 +1597,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.Iam.V1": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "cloudkms"
     },
     {
       "id": "Google.Cloud.Language.V1",
@@ -1548,7 +1615,8 @@
       },
       "tags": [
         "Language"
-      ]
+      ],
+      "shortName": "language"
     },
     {
       "id": "Google.Cloud.LifeSciences.V2Beta",
@@ -1565,7 +1633,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/lifesciences/v2beta"
+      "protoPath": "google/cloud/lifesciences/v2beta",
+      "shortName": "lifesciences"
     },
     {
       "id": "Google.Cloud.Location",
@@ -1684,7 +1753,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.Logging.Type": "3.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "logging"
     },
     {
       "id": "Google.Cloud.ManagedIdentities.V1",
@@ -1704,7 +1774,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.2.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "managedidentities"
     },
     {
       "id": "Google.Cloud.MediaTranslation.V1Beta1",
@@ -1720,7 +1791,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/mediatranslation/v1beta1"
+      "protoPath": "google/cloud/mediatranslation/v1beta1",
+      "shortName": "mediatranslation"
     },
     {
       "id": "Google.Cloud.Memcache.V1",
@@ -1739,7 +1811,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/memcache/v1"
+      "protoPath": "google/cloud/memcache/v1",
+      "shortName": "memcache"
     },
     {
       "id": "Google.Cloud.Memcache.V1Beta2",
@@ -1758,7 +1831,8 @@
       "tags": [
         "Redis",
         "Memorystore"
-      ]
+      ],
+      "shortName": "memcache"
     },
     {
       "id": "Google.Cloud.Metastore.V1",
@@ -1777,7 +1851,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/metastore/v1"
+      "protoPath": "google/cloud/metastore/v1",
+      "shortName": "metastore"
     },
     {
       "id": "Google.Cloud.Metastore.V1Alpha",
@@ -1794,7 +1869,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/metastore/v1alpha"
+      "protoPath": "google/cloud/metastore/v1alpha",
+      "shortName": "metastore"
     },
     {
       "id": "Google.Cloud.Metastore.V1Beta",
@@ -1811,7 +1887,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/metastore/v1beta"
+      "protoPath": "google/cloud/metastore/v1beta",
+      "shortName": "metastore"
     },
     {
       "id": "Google.Cloud.Monitoring.V3",
@@ -1831,7 +1908,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "monitoring"
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1",
@@ -1851,7 +1929,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/networkconnectivity/v1"
+      "protoPath": "google/cloud/networkconnectivity/v1",
+      "shortName": "networkconnectivity"
     },
     {
       "id": "Google.Cloud.NetworkConnectivity.V1Alpha1",
@@ -1868,7 +1947,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/networkconnectivity/v1alpha1"
+      "protoPath": "google/cloud/networkconnectivity/v1alpha1",
+      "shortName": "networkconnectivity"
     },
     {
       "id": "Google.Cloud.NetworkManagement.V1",
@@ -1891,7 +1971,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/networkmanagement/v1"
+      "protoPath": "google/cloud/networkmanagement/v1",
+      "shortName": "networkmanagement"
     },
     {
       "id": "Google.Cloud.NetworkSecurity.V1Beta1",
@@ -1914,7 +1995,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/networksecurity/v1beta1"
+      "protoPath": "google/cloud/networksecurity/v1beta1",
+      "shortName": "networksecurity"
     },
     {
       "id": "Google.Cloud.Notebooks.V1",
@@ -1931,7 +2013,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/notebooks/v1"
+      "protoPath": "google/cloud/notebooks/v1",
+      "shortName": "notebooks"
     },
     {
       "id": "Google.Cloud.Notebooks.V1Beta1",
@@ -1948,7 +2031,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/notebooks/v1beta1"
+      "protoPath": "google/cloud/notebooks/v1beta1",
+      "shortName": "notebooks"
     },
     {
       "id": "Google.Cloud.Orchestration.Airflow.Service.V1",
@@ -1968,7 +2052,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/orchestration/airflow/service/v1"
+      "protoPath": "google/cloud/orchestration/airflow/service/v1",
+      "shortName": "composer"
     },
     {
       "id": "Google.Cloud.OrgPolicy.V1",
@@ -2000,7 +2085,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/orgpolicy/v2"
+      "protoPath": "google/cloud/orgpolicy/v2",
+      "shortName": "orgpolicy"
     },
     {
       "id": "Google.Cloud.OsConfig.V1",
@@ -2023,7 +2109,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "osconfig"
     },
     {
       "id": "Google.Cloud.OsConfig.V1Alpha",
@@ -2043,7 +2130,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/osconfig/v1alpha"
+      "protoPath": "google/cloud/osconfig/v1alpha",
+      "shortName": "osconfig"
     },
     {
       "id": "Google.Cloud.OsLogin.Common",
@@ -2082,7 +2170,8 @@
         "Google.Cloud.OsLogin.Common": "project",
         "Grpc.Core": "2.38.1"
       },
-      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be."
+      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
+      "shortName": "oslogin"
     },
     {
       "id": "Google.Cloud.OsLogin.V1Beta",
@@ -2103,7 +2192,8 @@
         "Google.Cloud.OsLogin.Common": "project",
         "Grpc.Core": "2.38.1"
       },
-      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be."
+      "forceOwlBotRegeneration": "OsLogin Common proto is generated and copied when it shouldn't be.",
+      "shortName": "oslogin"
     },
     {
       "id": "Google.Cloud.PhishingProtection.V1Beta1",
@@ -2117,7 +2207,8 @@
       "tags": [
         "Phishing",
         "Security"
-      ]
+      ],
+      "shortName": "phishingprotection"
     },
     {
       "id": "Google.Cloud.PolicyTroubleshooter.V1",
@@ -2136,7 +2227,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/policytroubleshooter/v1"
+      "protoPath": "google/cloud/policytroubleshooter/v1",
+      "shortName": "policytroubleshooter"
     },
     {
       "id": "Google.Cloud.PrivateCatalog.V1Beta1",
@@ -2153,7 +2245,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/privatecatalog/v1beta1"
+      "protoPath": "google/cloud/privatecatalog/v1beta1",
+      "shortName": "cloudprivatecatalog"
     },
     {
       "id": "Google.Cloud.Profiler.V2",
@@ -2171,7 +2264,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/devtools/cloudprofiler/v2"
+      "protoPath": "google/devtools/cloudprofiler/v2",
+      "shortName": "cloudprofiler"
     },
     {
       "id": "Google.Cloud.PubSub.V1",
@@ -2196,7 +2290,8 @@
       },
       "tags": [
         "PubSub"
-      ]
+      ],
+      "shortName": "pubsub"
     },
     {
       "id": "Google.Cloud.RecaptchaEnterprise.V1",
@@ -2213,7 +2308,8 @@
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "recaptchaenterprise"
     },
     {
       "id": "Google.Cloud.RecaptchaEnterprise.V1Beta1",
@@ -2226,7 +2322,8 @@
       "description": "Recommended Google client library to access the Google Cloud reCAPTCHA for Enterprise API v1beta1.",
       "tags": [
         "reCAPTCHA"
-      ]
+      ],
+      "shortName": "recaptchaenterprise"
     },
     {
       "id": "Google.Cloud.RecommendationEngine.V1Beta1",
@@ -2243,7 +2340,8 @@
         "Google.LongRunning": "2.2.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/recommendationengine/v1beta1"
+      "protoPath": "google/cloud/recommendationengine/v1beta1",
+      "shortName": "recommendationengine"
     },
     {
       "id": "Google.Cloud.Recommender.V1",
@@ -2260,7 +2358,8 @@
       },
       "tags": [
         "Recommender"
-      ]
+      ],
+      "shortName": "recommender"
     },
     {
       "id": "Google.Cloud.Redis.V1",
@@ -2279,7 +2378,8 @@
       "tags": [
         "Redis",
         "Memorystore"
-      ]
+      ],
+      "shortName": "redis"
     },
     {
       "id": "Google.Cloud.Redis.V1Beta1",
@@ -2297,7 +2397,8 @@
       "tags": [
         "Redis",
         "Memorystore"
-      ]
+      ],
+      "shortName": "redis"
     },
     {
       "id": "Google.Cloud.ResourceManager.V3",
@@ -2316,7 +2417,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/resourcemanager/v3"
+      "protoPath": "google/cloud/resourcemanager/v3",
+      "shortName": "cloudresourcemanager"
     },
     {
       "id": "Google.Cloud.ResourceSettings.V1",
@@ -2334,7 +2436,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/resourcesettings/v1"
+      "protoPath": "google/cloud/resourcesettings/v1",
+      "shortName": "resourcesettings"
     },
     {
       "id": "Google.Cloud.Retail.V2",
@@ -2352,7 +2455,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/retail/v2"
+      "protoPath": "google/cloud/retail/v2",
+      "shortName": "retail"
     },
     {
       "id": "Google.Cloud.Scheduler.V1",
@@ -2370,7 +2474,8 @@
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "cloudscheduler"
     },
     {
       "id": "Google.Cloud.SecretManager.V1",
@@ -2390,7 +2495,8 @@
         "secret",
         "secrets",
         "security"
-      ]
+      ],
+      "shortName": "secretmanager"
     },
     {
       "id": "Google.Cloud.SecretManager.V1Beta1",
@@ -2409,7 +2515,8 @@
         "secret",
         "secrets",
         "security"
-      ]
+      ],
+      "shortName": "secretmanager"
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1",
@@ -2429,7 +2536,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/security/privateca/v1"
+      "protoPath": "google/cloud/security/privateca/v1",
+      "shortName": "privateca"
     },
     {
       "id": "Google.Cloud.Security.PrivateCA.V1Beta1",
@@ -2447,7 +2555,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/security/privateca/v1beta1"
+      "protoPath": "google/cloud/security/privateca/v1beta1",
+      "shortName": "privateca"
     },
     {
       "id": "Google.Cloud.SecurityCenter.Settings.V1Beta1",
@@ -2468,7 +2577,8 @@
         "security",
         "data risk",
         "settings"
-      ]
+      ],
+      "shortName": "securitycenter"
     },
     {
       "id": "Google.Cloud.SecurityCenter.V1",
@@ -2488,7 +2598,8 @@
       "tags": [
         "security",
         "data risk"
-      ]
+      ],
+      "shortName": "securitycenter"
     },
     {
       "id": "Google.Cloud.SecurityCenter.V1P1Beta1",
@@ -2508,7 +2619,8 @@
       "tags": [
         "security",
         "data risk"
-      ]
+      ],
+      "shortName": "securitycenter"
     },
     {
       "id": "Google.Cloud.ServiceControl.V1",
@@ -2527,7 +2639,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/api/servicecontrol/v1"
+      "protoPath": "google/api/servicecontrol/v1",
+      "shortName": "servicecontrol"
     },
     {
       "id": "Google.Cloud.ServiceDirectory.V1",
@@ -2545,7 +2658,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/servicedirectory/v1"
+      "protoPath": "google/cloud/servicedirectory/v1",
+      "shortName": "servicedirectory"
     },
     {
       "id": "Google.Cloud.ServiceDirectory.V1Beta1",
@@ -2561,7 +2675,8 @@
       },
       "tags": [
         "services"
-      ]
+      ],
+      "shortName": "servicedirectory"
     },
     {
       "id": "Google.Cloud.ServiceManagement.V1",
@@ -2581,7 +2696,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/api/servicemanagement/v1"
+      "protoPath": "google/api/servicemanagement/v1",
+      "shortName": "servicemanagement"
     },
     {
       "id": "Google.Cloud.ServiceUsage.V1",
@@ -2600,7 +2716,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/api/serviceusage/v1"
+      "protoPath": "google/api/serviceusage/v1",
+      "shortName": "serviceusage"
     },
     {
       "id": "Google.Cloud.Shell.V1",
@@ -2618,7 +2735,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/shell/v1"
+      "protoPath": "google/cloud/shell/v1",
+      "shortName": "cloudshell"
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Database.V1",
@@ -2640,7 +2758,8 @@
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
-      "noVersionHistory": true
+      "noVersionHistory": true,
+      "shortName": "spanner"
     },
     {
       "id": "Google.Cloud.Spanner.Admin.Instance.V1",
@@ -2662,7 +2781,8 @@
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
       },
-      "noVersionHistory": true
+      "noVersionHistory": true,
+      "shortName": "spanner"
     },
     {
       "id": "Google.Cloud.Spanner.Data",
@@ -2727,7 +2847,8 @@
       "testDependencies": {
         "Xunit.Combinatorial": "1.4.1"
       },
-      "noVersionHistory": true
+      "noVersionHistory": true,
+      "shortName": "spanner"
     },
     {
       "id": "Google.Cloud.Speech.V1",
@@ -2746,7 +2867,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "speech"
     },
     {
       "id": "Google.Cloud.Speech.V1P1Beta1",
@@ -2764,7 +2886,8 @@
       ],
       "dependencies": {
         "Google.LongRunning": "2.3.0"
-      }
+      },
+      "shortName": "speech"
     },
     {
       "id": "Google.Cloud.Storage.V1",
@@ -2805,7 +2928,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/storagetransfer/v1"
+      "protoPath": "google/storagetransfer/v1",
+      "shortName": "storagetransfer"
     },
     {
       "id": "Google.Cloud.Talent.V4",
@@ -2825,7 +2949,8 @@
       },
       "generator": "micro",
       "protoPath": "google/cloud/talent/v4",
-      "forceOwlBotRegeneration": "Google.Cloud.Common proto is generated and copied when it shouldn't be."
+      "forceOwlBotRegeneration": "Google.Cloud.Common proto is generated and copied when it shouldn't be.",
+      "shortName": "jobs"
     },
     {
       "id": "Google.Cloud.Talent.V4Beta1",
@@ -2843,7 +2968,8 @@
       ],
       "dependencies": {
         "Google.LongRunning": "2.3.0"
-      }
+      },
+      "shortName": "jobs"
     },
     {
       "id": "Google.Cloud.Tasks.V2",
@@ -2861,7 +2987,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.Cloud.Iam.V1": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "cloudtasks"
     },
     {
       "id": "Google.Cloud.Tasks.V2Beta3",
@@ -2878,7 +3005,8 @@
       ],
       "dependencies": {
         "Google.Cloud.Iam.V1": "2.3.0"
-      }
+      },
+      "shortName": "cloudtasks"
     },
     {
       "id": "Google.Cloud.TextToSpeech.V1",
@@ -2896,7 +3024,8 @@
       "tags": [
         "Speech",
         "Text-to-speech"
-      ]
+      ],
+      "shortName": "texttospeech"
     },
     {
       "id": "Google.Cloud.TextToSpeech.V1Beta1",
@@ -2911,7 +3040,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/texttospeech/v1beta1"
+      "protoPath": "google/cloud/texttospeech/v1beta1",
+      "shortName": "texttospeech"
     },
     {
       "id": "Google.Cloud.Tpu.V1",
@@ -2929,7 +3059,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/tpu/v1"
+      "protoPath": "google/cloud/tpu/v1",
+      "shortName": "tpu"
     },
     {
       "id": "Google.Cloud.Trace.V1",
@@ -2947,7 +3078,8 @@
       "tags": [
         "Tracing",
         "Trace"
-      ]
+      ],
+      "shortName": "cloudtrace"
     },
     {
       "id": "Google.Cloud.Trace.V2",
@@ -2965,7 +3097,8 @@
       "tags": [
         "Tracing",
         "Trace"
-      ]
+      ],
+      "shortName": "cloudtrace"
     },
     {
       "id": "Google.Cloud.Translate.V3",
@@ -2984,7 +3117,8 @@
       "tags": [
         "Translate",
         "Translation"
-      ]
+      ],
+      "shortName": "translate"
     },
     {
       "id": "Google.Cloud.Translation.V2",
@@ -3018,7 +3152,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/vmmigration/v1"
+      "protoPath": "google/cloud/vmmigration/v1",
+      "shortName": "vmmigration"
     },
     {
       "id": "Google.Cloud.Video.Transcoder.V1",
@@ -3034,7 +3169,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/video/transcoder/v1"
+      "protoPath": "google/cloud/video/transcoder/v1",
+      "shortName": "transcoder"
     },
     {
       "id": "Google.Cloud.Video.Transcoder.V1Beta1",
@@ -3050,7 +3186,8 @@
       ],
       "dependencies": {},
       "generator": "micro",
-      "protoPath": "google/cloud/video/transcoder/v1beta1"
+      "protoPath": "google/cloud/video/transcoder/v1beta1",
+      "shortName": "transcoder"
     },
     {
       "id": "Google.Cloud.VideoIntelligence.V1",
@@ -3069,7 +3206,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "videointelligence"
     },
     {
       "id": "Google.Cloud.Vision.V1",
@@ -3088,7 +3226,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Google.LongRunning": "2.3.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "vision"
     },
     {
       "id": "Google.Cloud.VpcAccess.V1",
@@ -3106,7 +3245,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/vpcaccess/v1"
+      "protoPath": "google/cloud/vpcaccess/v1",
+      "shortName": "vpcaccess"
     },
     {
       "id": "Google.Cloud.WebRisk.V1",
@@ -3128,7 +3268,8 @@
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "shortName": "webrisk"
     },
     {
       "id": "Google.Cloud.WebRisk.V1Beta1",
@@ -3147,7 +3288,8 @@
         "safety",
         "risk",
         "url"
-      ]
+      ],
+      "shortName": "webrisk"
     },
     {
       "id": "Google.Cloud.WebSecurityScanner.V1",
@@ -3165,7 +3307,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/websecurityscanner/v1"
+      "protoPath": "google/cloud/websecurityscanner/v1",
+      "shortName": "websecurityscanner"
     },
     {
       "id": "Google.Cloud.Workflows.Common.V1",
@@ -3212,7 +3355,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/workflows/executions/v1"
+      "protoPath": "google/cloud/workflows/executions/v1",
+      "shortName": "workflowexecutions"
     },
     {
       "id": "Google.Cloud.Workflows.Executions.V1Beta",
@@ -3229,7 +3373,8 @@
         "Google.Cloud.Workflows.Common.V1Beta": "project"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/workflows/executions/v1beta"
+      "protoPath": "google/cloud/workflows/executions/v1beta",
+      "shortName": "workflowexecutions"
     },
     {
       "id": "Google.Cloud.Workflows.V1",
@@ -3249,7 +3394,8 @@
         "Grpc.Core": "2.38.1"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/workflows/v1"
+      "protoPath": "google/cloud/workflows/v1",
+      "shortName": "workflows"
     },
     {
       "id": "Google.Cloud.Workflows.V1Beta",
@@ -3267,7 +3413,8 @@
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/workflows/v1beta"
+      "protoPath": "google/cloud/workflows/v1beta",
+      "shortName": "workflows"
     },
     {
       "id": "Google.Identity.AccessContextManager.Type",
@@ -3300,7 +3447,8 @@
         "Google.Api.CommonProtos": "2.3.0",
         "Google.Identity.AccessContextManager.Type": "1.1.0",
         "Google.LongRunning": "2.2.0"
-      }
+      },
+      "shortName": "accesscontextmanager"
     },
     {
       "id": "Google.LongRunning",
