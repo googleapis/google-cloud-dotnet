@@ -245,5 +245,12 @@ namespace Google.Cloud.Tools.Common
         /// </summary>
         [JsonIgnore]
         public PackageGroup PackageGroup { get; set; }
+
+        /// <summary>
+        /// The value to include as api_shortname in .repo-metadata.json. This is normally inferred
+        /// from the API index when an API is added. Care should be taken before using this value
+        /// for *any* other purpose, as it's not an API identifier in any meaningful way.
+        /// </summary>
+        public string ShortName { get; set; }
     }
 }

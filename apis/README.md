@@ -40,3 +40,4 @@ Fields:
   should regenerate this API locally, for corner cases. (Custom
   resource configuration and pre/mid-processor tweaks are handled
   automatically.)
+- `shortName`: the value of the `name` field in the corresponding service config, if any

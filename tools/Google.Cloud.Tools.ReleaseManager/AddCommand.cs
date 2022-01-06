@@ -68,7 +68,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                 Type = ApiType.Grpc,
                 Generator = GeneratorType.Micro,
                 // Let's not include test dependencies, which are rarely useful.
-                TestDependencies = null
+                TestDependencies = null,
+                // Translate the host name into the "short name", e.g. bigquery.googleapis.com => bigquery
+                ShortName = targetApi.HostName.Split('.').First()
             };
 
             // Add dependencies discovered via the proto imports.

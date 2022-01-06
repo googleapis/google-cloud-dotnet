@@ -573,13 +573,17 @@ deep-copy-regex:
                 File.Delete(metadataPath);
                 return;
             }
-            var metadata = new
+            var metadata = new JObject
             {
-                distribution_name = api.Id,
-                release_level = releaseLevel,
-                client_documentation = ApiMetadata.IsCloudPackage(api.Id) ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest" : $"https://googleapis.dev/dotnet/{api.Id}/latest",
-                library_type = api.EffectiveMetadataType
+                ["distribution_name"] = api.Id,
+                ["release_level"] = releaseLevel,
+                ["client_documentation"] = ApiMetadata.IsCloudPackage(api.Id) ? $"https://cloud.google.com/dotnet/docs/reference/{api.Id}/latest" : $"https://googleapis.dev/dotnet/{api.Id}/latest",
+                ["library_type"] = api.EffectiveMetadataType
             };
+            if (api.ShortName is object)
+            {
+                metadata["api_shortname"] = api.ShortName;
+            }
             string json = JsonConvert.SerializeObject(metadata, Formatting.Indented);
             File.WriteAllText(metadataPath, json);
         }
