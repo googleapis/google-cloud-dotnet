@@ -318,4 +318,52 @@ namespace Google.Cloud.ContactCenterInsights.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class CreateViewRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetViewRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ViewName ViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListViewsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteViewRequest
+    {
+        /// <summary>
+        /// <see cref="gccv::ViewName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gccv::ViewName ViewName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gccv::ViewName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

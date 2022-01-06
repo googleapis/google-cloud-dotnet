@@ -3629,5 +3629,612 @@ namespace Google.Cloud.ContactCenterInsights.V1.Snippets
             Settings response = await contactCenterInsightsClient.UpdateSettingsAsync(settings, updateMask);
             // End snippet
         }
+
+        /// <summary>Snippet for CreateView</summary>
+        public void CreateViewRequestObject()
+        {
+            // Snippet: CreateView(CreateViewRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            // Make the request
+            View response = contactCenterInsightsClient.CreateView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateViewAsync</summary>
+        public async Task CreateViewRequestObjectAsync()
+        {
+            // Snippet: CreateViewAsync(CreateViewRequest, CallSettings)
+            // Additional: CreateViewAsync(CreateViewRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            // Make the request
+            View response = await contactCenterInsightsClient.CreateViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateView</summary>
+        public void CreateView()
+        {
+            // Snippet: CreateView(string, View, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            View view = new View();
+            // Make the request
+            View response = contactCenterInsightsClient.CreateView(parent, view);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateViewAsync</summary>
+        public async Task CreateViewAsync()
+        {
+            // Snippet: CreateViewAsync(string, View, CallSettings)
+            // Additional: CreateViewAsync(string, View, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            View view = new View();
+            // Make the request
+            View response = await contactCenterInsightsClient.CreateViewAsync(parent, view);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateView</summary>
+        public void CreateViewResourceNames()
+        {
+            // Snippet: CreateView(LocationName, View, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            View view = new View();
+            // Make the request
+            View response = contactCenterInsightsClient.CreateView(parent, view);
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateViewAsync</summary>
+        public async Task CreateViewResourceNamesAsync()
+        {
+            // Snippet: CreateViewAsync(LocationName, View, CallSettings)
+            // Additional: CreateViewAsync(LocationName, View, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            View view = new View();
+            // Make the request
+            View response = await contactCenterInsightsClient.CreateViewAsync(parent, view);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetView</summary>
+        public void GetViewRequestObject()
+        {
+            // Snippet: GetView(GetViewRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            // Make the request
+            View response = contactCenterInsightsClient.GetView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViewAsync</summary>
+        public async Task GetViewRequestObjectAsync()
+        {
+            // Snippet: GetViewAsync(GetViewRequest, CallSettings)
+            // Additional: GetViewAsync(GetViewRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            // Make the request
+            View response = await contactCenterInsightsClient.GetViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetView</summary>
+        public void GetView()
+        {
+            // Snippet: GetView(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/views/[VIEW]";
+            // Make the request
+            View response = contactCenterInsightsClient.GetView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViewAsync</summary>
+        public async Task GetViewAsync()
+        {
+            // Snippet: GetViewAsync(string, CallSettings)
+            // Additional: GetViewAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/views/[VIEW]";
+            // Make the request
+            View response = await contactCenterInsightsClient.GetViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetView</summary>
+        public void GetViewResourceNames()
+        {
+            // Snippet: GetView(ViewName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ViewName name = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]");
+            // Make the request
+            View response = contactCenterInsightsClient.GetView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetViewAsync</summary>
+        public async Task GetViewResourceNamesAsync()
+        {
+            // Snippet: GetViewAsync(ViewName, CallSettings)
+            // Additional: GetViewAsync(ViewName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ViewName name = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]");
+            // Make the request
+            View response = await contactCenterInsightsClient.GetViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViews</summary>
+        public void ListViewsRequestObject()
+        {
+            // Snippet: ListViews(ListViewsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ListViewsRequest request = new ListViewsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListViewsResponse, View> response = contactCenterInsightsClient.ListViews(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (View item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (View item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<View> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (View item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViewsAsync</summary>
+        public async Task ListViewsRequestObjectAsync()
+        {
+            // Snippet: ListViewsAsync(ListViewsRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ListViewsRequest request = new ListViewsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListViewsResponse, View> response = contactCenterInsightsClient.ListViewsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((View item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (View item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<View> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (View item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViews</summary>
+        public void ListViews()
+        {
+            // Snippet: ListViews(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListViewsResponse, View> response = contactCenterInsightsClient.ListViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (View item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (View item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<View> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (View item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViewsAsync</summary>
+        public async Task ListViewsAsync()
+        {
+            // Snippet: ListViewsAsync(string, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListViewsResponse, View> response = contactCenterInsightsClient.ListViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((View item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (View item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<View> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (View item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViews</summary>
+        public void ListViewsResourceNames()
+        {
+            // Snippet: ListViews(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListViewsResponse, View> response = contactCenterInsightsClient.ListViews(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (View item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListViewsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (View item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<View> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (View item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListViewsAsync</summary>
+        public async Task ListViewsResourceNamesAsync()
+        {
+            // Snippet: ListViewsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListViewsResponse, View> response = contactCenterInsightsClient.ListViewsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((View item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListViewsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (View item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<View> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (View item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateView</summary>
+        public void UpdateViewRequestObject()
+        {
+            // Snippet: UpdateView(UpdateViewRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                View = new View(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            View response = contactCenterInsightsClient.UpdateView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateViewAsync</summary>
+        public async Task UpdateViewRequestObjectAsync()
+        {
+            // Snippet: UpdateViewAsync(UpdateViewRequest, CallSettings)
+            // Additional: UpdateViewAsync(UpdateViewRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                View = new View(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            View response = await contactCenterInsightsClient.UpdateViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateView</summary>
+        public void UpdateView()
+        {
+            // Snippet: UpdateView(View, FieldMask, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            View view = new View();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            View response = contactCenterInsightsClient.UpdateView(view, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateViewAsync</summary>
+        public async Task UpdateViewAsync()
+        {
+            // Snippet: UpdateViewAsync(View, FieldMask, CallSettings)
+            // Additional: UpdateViewAsync(View, FieldMask, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            View view = new View();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            View response = await contactCenterInsightsClient.UpdateViewAsync(view, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteView</summary>
+        public void DeleteViewRequestObject()
+        {
+            // Snippet: DeleteView(DeleteViewRequest, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            // Make the request
+            contactCenterInsightsClient.DeleteView(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteViewAsync</summary>
+        public async Task DeleteViewRequestObjectAsync()
+        {
+            // Snippet: DeleteViewAsync(DeleteViewRequest, CallSettings)
+            // Additional: DeleteViewAsync(DeleteViewRequest, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            // Make the request
+            await contactCenterInsightsClient.DeleteViewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteView</summary>
+        public void DeleteView()
+        {
+            // Snippet: DeleteView(string, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/views/[VIEW]";
+            // Make the request
+            contactCenterInsightsClient.DeleteView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteViewAsync</summary>
+        public async Task DeleteViewAsync()
+        {
+            // Snippet: DeleteViewAsync(string, CallSettings)
+            // Additional: DeleteViewAsync(string, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/views/[VIEW]";
+            // Make the request
+            await contactCenterInsightsClient.DeleteViewAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteView</summary>
+        public void DeleteViewResourceNames()
+        {
+            // Snippet: DeleteView(ViewName, CallSettings)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = ContactCenterInsightsClient.Create();
+            // Initialize request argument(s)
+            ViewName name = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]");
+            // Make the request
+            contactCenterInsightsClient.DeleteView(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteViewAsync</summary>
+        public async Task DeleteViewResourceNamesAsync()
+        {
+            // Snippet: DeleteViewAsync(ViewName, CallSettings)
+            // Additional: DeleteViewAsync(ViewName, CancellationToken)
+            // Create client
+            ContactCenterInsightsClient contactCenterInsightsClient = await ContactCenterInsightsClient.CreateAsync();
+            // Initialize request argument(s)
+            ViewName name = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]");
+            // Make the request
+            await contactCenterInsightsClient.DeleteViewAsync(name);
+            // End snippet
+        }
     }
 }

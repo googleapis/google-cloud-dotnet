@@ -75,6 +75,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -129,6 +130,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -185,6 +187,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -239,6 +242,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -295,6 +299,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -349,6 +354,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.CreateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -404,6 +410,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -457,6 +464,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -512,6 +520,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -565,6 +574,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.UpdateConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -620,6 +630,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -673,6 +684,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -727,6 +739,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -779,6 +792,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -833,6 +847,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -885,6 +900,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
                         new DialogflowIntent()
                     },
                 },
+                ObfuscatedUserId = "obfuscated_user_ida61668af",
             };
             mockGrpcClient.Setup(x => x.GetConversationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Conversation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
@@ -3445,6 +3461,515 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Settings responseCancellationToken = await client.UpdateSettingsAsync(request.Settings, request.UpdateMask, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateViewRequestObject()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.CreateView(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateViewRequestObjectAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.CreateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.CreateViewAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateView()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.CreateView(request.Parent, request.View);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateViewAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.CreateViewAsync(request.Parent, request.View, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.CreateViewAsync(request.Parent, request.View, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void CreateViewResourceNames()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.CreateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.CreateView(request.ParentAsLocationName, request.View);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task CreateViewResourceNamesAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            CreateViewRequest request = new CreateViewRequest
+            {
+                ParentAsLocationName = gagr::LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                View = new View(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.CreateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.CreateViewAsync(request.ParentAsLocationName, request.View, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.CreateViewAsync(request.ParentAsLocationName, request.View, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetViewRequestObject()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.GetView(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetViewRequestObjectAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.GetViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.GetViewAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetView()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.GetView(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetViewAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.GetViewAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.GetViewAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetViewResourceNames()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.GetView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.GetView(request.ViewName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetViewResourceNamesAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetViewRequest request = new GetViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.GetViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.GetViewAsync(request.ViewName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.GetViewAsync(request.ViewName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateViewRequestObject()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                View = new View(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.UpdateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.UpdateView(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateViewRequestObjectAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                View = new View(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.UpdateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.UpdateViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.UpdateViewAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdateView()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                View = new View(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.UpdateView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View response = client.UpdateView(request.View, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdateViewAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            UpdateViewRequest request = new UpdateViewRequest
+            {
+                View = new View(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            View expectedResponse = new View
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+                DisplayName = "display_name137f65c2",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Value = "value60c16320",
+            };
+            mockGrpcClient.Setup(x => x.UpdateViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<View>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            View responseCallSettings = await client.UpdateViewAsync(request.View, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            View responseCancellationToken = await client.UpdateViewAsync(request.View, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteViewRequestObject()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteView(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteViewRequestObjectAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteViewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteViewAsync(request, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteView()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteView(request.Name);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteViewAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteViewAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteViewAsync(request.Name, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void DeleteViewResourceNames()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteView(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            client.DeleteView(request.ViewName);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task DeleteViewResourceNamesAsync()
+        {
+            moq::Mock<ContactCenterInsights.ContactCenterInsightsClient> mockGrpcClient = new moq::Mock<ContactCenterInsights.ContactCenterInsightsClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            DeleteViewRequest request = new DeleteViewRequest
+            {
+                ViewName = ViewName.FromProjectLocationView("[PROJECT]", "[LOCATION]", "[VIEW]"),
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.DeleteViewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ContactCenterInsightsClient client = new ContactCenterInsightsClientImpl(mockGrpcClient.Object, null);
+            await client.DeleteViewAsync(request.ViewName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.DeleteViewAsync(request.ViewName, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }
