@@ -151,6 +151,20 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.Settings> __Marshaller_google_cloud_contactcenterinsights_v1_Settings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.Settings.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest> __Marshaller_google_cloud_contactcenterinsights_v1_CreateViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.View> __Marshaller_google_cloud_contactcenterinsights_v1_View = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.View.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest> __Marshaller_google_cloud_contactcenterinsights_v1_GetViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest> __Marshaller_google_cloud_contactcenterinsights_v1_ListViewsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse> __Marshaller_google_cloud_contactcenterinsights_v1_ListViewsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest> __Marshaller_google_cloud_contactcenterinsights_v1_UpdateViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest> __Marshaller_google_cloud_contactcenterinsights_v1_DeleteViewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation> __Method_CreateConversation = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateConversationRequest, global::Google.Cloud.ContactCenterInsights.V1.Conversation>(
@@ -383,6 +397,46 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
         "UpdateSettings",
         __Marshaller_google_cloud_contactcenterinsights_v1_UpdateSettingsRequest,
         __Marshaller_google_cloud_contactcenterinsights_v1_Settings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View> __Method_CreateView = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "CreateView",
+        __Marshaller_google_cloud_contactcenterinsights_v1_CreateViewRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_View);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View> __Method_GetView = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetView",
+        __Marshaller_google_cloud_contactcenterinsights_v1_GetViewRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_View);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse> __Method_ListViews = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ListViews",
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListViewsRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_ListViewsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View> __Method_UpdateView = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateView",
+        __Marshaller_google_cloud_contactcenterinsights_v1_UpdateViewRequest,
+        __Marshaller_google_cloud_contactcenterinsights_v1_View);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_DeleteView = new grpc::Method<global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "DeleteView",
+        __Marshaller_google_cloud_contactcenterinsights_v1_DeleteViewRequest,
+        __Marshaller_google_protobuf_Empty);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -741,6 +795,66 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.Settings> UpdateSettings(global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates a view.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.View> CreateView(global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets a view.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.View> GetView(global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Lists views.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse> ListViews(global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates a view.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ContactCenterInsights.V1.View> UpdateView(global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Deletes a view.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeleteView(global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -2178,6 +2292,246 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateSettings, null, options, request);
       }
+      /// <summary>
+      /// Creates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.View CreateView(global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.View CreateView(global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_CreateView, null, options, request);
+      }
+      /// <summary>
+      /// Creates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.View> CreateViewAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return CreateViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.View> CreateViewAsync(global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_CreateView, null, options, request);
+      }
+      /// <summary>
+      /// Gets a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.View GetView(global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.View GetView(global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetView, null, options, request);
+      }
+      /// <summary>
+      /// Gets a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.View> GetViewAsync(global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.View> GetViewAsync(global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetView, null, options, request);
+      }
+      /// <summary>
+      /// Lists views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse ListViews(global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListViews(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse ListViews(global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ListViews, null, options, request);
+      }
+      /// <summary>
+      /// Lists views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse> ListViewsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ListViewsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Lists views.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse> ListViewsAsync(global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ListViews, null, options, request);
+      }
+      /// <summary>
+      /// Updates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.View UpdateView(global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ContactCenterInsights.V1.View UpdateView(global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateView, null, options, request);
+      }
+      /// <summary>
+      /// Updates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.View> UpdateViewAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ContactCenterInsights.V1.View> UpdateViewAsync(global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateView, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteView(global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteView(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty DeleteView(global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_DeleteView, null, options, request);
+      }
+      /// <summary>
+      /// Deletes a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteViewAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return DeleteViewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Deletes a view.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> DeleteViewAsync(global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_DeleteView, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ContactCenterInsightsClient NewInstance(ClientBaseConfiguration configuration)
@@ -2220,7 +2574,12 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
           .AddMethod(__Method_UpdatePhraseMatcher, serviceImpl.UpdatePhraseMatcher)
           .AddMethod(__Method_CalculateStats, serviceImpl.CalculateStats)
           .AddMethod(__Method_GetSettings, serviceImpl.GetSettings)
-          .AddMethod(__Method_UpdateSettings, serviceImpl.UpdateSettings).Build();
+          .AddMethod(__Method_UpdateSettings, serviceImpl.UpdateSettings)
+          .AddMethod(__Method_CreateView, serviceImpl.CreateView)
+          .AddMethod(__Method_GetView, serviceImpl.GetView)
+          .AddMethod(__Method_ListViews, serviceImpl.ListViews)
+          .AddMethod(__Method_UpdateView, serviceImpl.UpdateView)
+          .AddMethod(__Method_DeleteView, serviceImpl.DeleteView).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -2259,6 +2618,11 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
       serviceBinder.AddMethod(__Method_CalculateStats, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsRequest, global::Google.Cloud.ContactCenterInsights.V1.CalculateStatsResponse>(serviceImpl.CalculateStats));
       serviceBinder.AddMethod(__Method_GetSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(serviceImpl.GetSettings));
       serviceBinder.AddMethod(__Method_UpdateSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateSettingsRequest, global::Google.Cloud.ContactCenterInsights.V1.Settings>(serviceImpl.UpdateSettings));
+      serviceBinder.AddMethod(__Method_CreateView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.CreateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(serviceImpl.CreateView));
+      serviceBinder.AddMethod(__Method_GetView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.GetViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(serviceImpl.GetView));
+      serviceBinder.AddMethod(__Method_ListViews, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.ListViewsRequest, global::Google.Cloud.ContactCenterInsights.V1.ListViewsResponse>(serviceImpl.ListViews));
+      serviceBinder.AddMethod(__Method_UpdateView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.UpdateViewRequest, global::Google.Cloud.ContactCenterInsights.V1.View>(serviceImpl.UpdateView));
+      serviceBinder.AddMethod(__Method_DeleteView, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ContactCenterInsights.V1.DeleteViewRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteView));
     }
 
   }

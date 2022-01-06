@@ -46,6 +46,12 @@
                 "CreatePhraseMatcherAsync"
               ]
             },
+            "CreateView": {
+              "methods": [
+                "CreateView",
+                "CreateViewAsync"
+              ]
+            },
             "DeleteAnalysis": {
               "methods": [
                 "DeleteAnalysis",
@@ -68,6 +74,12 @@
               "methods": [
                 "DeletePhraseMatcher",
                 "DeletePhraseMatcherAsync"
+              ]
+            },
+            "DeleteView": {
+              "methods": [
+                "DeleteView",
+                "DeleteViewAsync"
               ]
             },
             "DeployIssueModel": {
@@ -118,6 +130,12 @@
                 "GetSettingsAsync"
               ]
             },
+            "GetView": {
+              "methods": [
+                "GetView",
+                "GetViewAsync"
+              ]
+            },
             "ListAnalyses": {
               "methods": [
                 "ListAnalyses",
@@ -146,6 +164,12 @@
               "methods": [
                 "ListPhraseMatchers",
                 "ListPhraseMatchersAsync"
+              ]
+            },
+            "ListViews": {
+              "methods": [
+                "ListViews",
+                "ListViewsAsync"
               ]
             },
             "UndeployIssueModel": {
@@ -182,6 +206,12 @@
               "methods": [
                 "UpdateSettings",
                 "UpdateSettingsAsync"
+              ]
+            },
+            "UpdateView": {
+              "methods": [
+                "UpdateView",
+                "UpdateViewAsync"
               ]
             }
           }
