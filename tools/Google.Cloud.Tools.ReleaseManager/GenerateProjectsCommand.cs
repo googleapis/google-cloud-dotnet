@@ -562,8 +562,8 @@ deep-copy-regex:
                 // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
                 (version.Prerelease ?? "").EndsWith("00") && version.Major == 1 && version.Minor == 0 ? "none"
                 // If it's not a prerelease now, or it's ever got to 1.0, it's generally "ga"
-                : version.Major > 1 || version.Minor > 0 || version.Prerelease == null ? "ga"
-                : version.Prerelease.StartsWith("beta") ? "beta" : "alpha";
+                : version.Major > 1 || version.Minor > 0 || version.Prerelease == null ? "stable"
+                : "preview";
 
             string releaseLevel = api.ReleaseLevelOverride ?? versionBasedReleaseLevel;
             if (releaseLevel == "none")
