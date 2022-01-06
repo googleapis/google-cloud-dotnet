@@ -24,6 +24,9 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.NetworkSecurity.V1Beta1 {
   /// <summary>
+  /// Network Security API provides resources to configure authentication and
+  /// authorization policies. Refer to per API resource documentation for more
+  /// information.
   /// Network Security service.
   /// </summary>
   public static partial class NetworkSecurity

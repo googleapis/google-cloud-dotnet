@@ -502,6 +502,9 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
 
     /// <summary>NetworkSecurity client wrapper, for convenient use.</summary>
     /// <remarks>
+    /// Network Security API provides resources to configure authentication and
+    /// authorization policies. Refer to per API resource documentation for more
+    /// information.
     /// Network Security service.
     /// </remarks>
     public abstract partial class NetworkSecurityClient
@@ -2642,6 +2645,9 @@ namespace Google.Cloud.NetworkSecurity.V1Beta1
 
     /// <summary>NetworkSecurity client wrapper implementation, for convenient use.</summary>
     /// <remarks>
+    /// Network Security API provides resources to configure authentication and
+    /// authorization policies. Refer to per API resource documentation for more
+    /// information.
     /// Network Security service.
     /// </remarks>
     public sealed partial class NetworkSecurityClientImpl : NetworkSecurityClient
