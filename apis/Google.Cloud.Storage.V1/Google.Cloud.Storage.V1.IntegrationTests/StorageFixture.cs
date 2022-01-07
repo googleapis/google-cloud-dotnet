@@ -179,15 +179,13 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
 
         private static StorageClient CreateRequesterPaysClient()
         {
-            // TODO: https://github.com/googleapis/google-cloud-dotnet/issues/7647
-            return null;
-            //string file = Environment.GetEnvironmentVariable(RequesterPaysCredentialsEnvironmentVariable);
-            //if (string.IsNullOrEmpty(file))
-            //{
-            //    return null;
-            //}
-            //var credential = GoogleCredential.FromFile(file);
-            //return StorageClient.Create(credential);
+            string file = Environment.GetEnvironmentVariable(RequesterPaysCredentialsEnvironmentVariable);
+            if (string.IsNullOrEmpty(file))
+            {
+                return null;
+            }
+            var credential = GoogleCredential.FromFile(file);
+            return StorageClient.Create(credential);
         }
 
         private string CreateRequesterPaysBucket()
