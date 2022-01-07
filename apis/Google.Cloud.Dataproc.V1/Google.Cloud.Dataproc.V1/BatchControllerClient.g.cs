@@ -350,7 +350,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Optional. The ID to use for the batch, which will become the final component of
         /// the batch's resource name.
         /// 
-        /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
+        /// This value must be 4-63 characters. Valid characters
+        /// are /[a-z][0-9]-/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -375,7 +376,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Optional. The ID to use for the batch, which will become the final component of
         /// the batch's resource name.
         /// 
-        /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
+        /// This value must be 4-63 characters. Valid characters
+        /// are /[a-z][0-9]-/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -400,7 +402,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Optional. The ID to use for the batch, which will become the final component of
         /// the batch's resource name.
         /// 
-        /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
+        /// This value must be 4-63 characters. Valid characters
+        /// are /[a-z][0-9]-/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -420,7 +423,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Optional. The ID to use for the batch, which will become the final component of
         /// the batch's resource name.
         /// 
-        /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
+        /// This value must be 4-63 characters. Valid characters
+        /// are /[a-z][0-9]-/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
@@ -445,7 +449,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Optional. The ID to use for the batch, which will become the final component of
         /// the batch's resource name.
         /// 
-        /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
+        /// This value must be 4-63 characters. Valid characters
+        /// are /[a-z][0-9]-/.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
@@ -470,7 +475,8 @@ namespace Google.Cloud.Dataproc.V1
         /// Optional. The ID to use for the batch, which will become the final component of
         /// the batch's resource name.
         /// 
-        /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
+        /// This value must be 4-63 characters. Valid characters
+        /// are /[a-z][0-9]-/.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
