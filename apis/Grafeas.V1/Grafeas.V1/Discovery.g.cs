@@ -25,28 +25,30 @@ namespace Grafeas.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "ChpncmFmZWFzL3YxL2Rpc2NvdmVyeS5wcm90bxIKZ3JhZmVhcy52MRofZ29v",
-            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0",
-            "dXMucHJvdG8aF2dyYWZlYXMvdjEvY29tbW9uLnByb3RvIjwKDURpc2NvdmVy",
-            "eU5vdGUSKwoNYW5hbHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90",
-            "ZUtpbmQijAQKE0Rpc2NvdmVyeU9jY3VycmVuY2USTwoTY29udGludW91c19h",
-            "bmFseXNpcxgBIAEoDjIyLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5j",
-            "ZS5Db250aW51b3VzQW5hbHlzaXMSRwoPYW5hbHlzaXNfc3RhdHVzGAIgASgO",
-            "Mi4uZ3JhZmVhcy52MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLkFuYWx5c2lzU3Rh",
-            "dHVzEjEKFWFuYWx5c2lzX3N0YXR1c19lcnJvchgDIAEoCzISLmdvb2dsZS5y",
-            "cGMuU3RhdHVzEgsKA2NwZRgEIAEoCRIyCg5sYXN0X3NjYW5fdGltZRgFIAEo",
-            "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAiUwoSQ29udGludW91c0Fu",
-            "YWx5c2lzEiMKH0NPTlRJTlVPVVNfQU5BTFlTSVNfVU5TUEVDSUZJRUQQABIK",
-            "CgZBQ1RJVkUQARIMCghJTkFDVElWRRACIpEBCg5BbmFseXNpc1N0YXR1cxIf",
-            "ChtBTkFMWVNJU19TVEFUVVNfVU5TUEVDSUZJRUQQABILCgdQRU5ESU5HEAES",
-            "DAoIU0NBTk5JTkcQAhIUChBGSU5JU0hFRF9TVUNDRVNTEAMSEwoPRklOSVNI",
-            "RURfRkFJTEVEEAQSGAoURklOSVNIRURfVU5TVVBQT1JURUQQBUJRCg1pby5n",
-            "cmFmZWFzLnYxUAFaOGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2ds",
-            "ZWFwaXMvZ3JhZmVhcy92MTtncmFmZWFzogIDR1JBYgZwcm90bzM="));
+            "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxofZ29vZ2xlL3Byb3RvYnVm",
+            "L3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8aF2dy",
+            "YWZlYXMvdjEvY29tbW9uLnByb3RvIjwKDURpc2NvdmVyeU5vdGUSKwoNYW5h",
+            "bHlzaXNfa2luZBgBIAEoDjIULmdyYWZlYXMudjEuTm90ZUtpbmQiwwQKE0Rp",
+            "c2NvdmVyeU9jY3VycmVuY2USTwoTY29udGludW91c19hbmFseXNpcxgBIAEo",
+            "DjIyLmdyYWZlYXMudjEuRGlzY292ZXJ5T2NjdXJyZW5jZS5Db250aW51b3Vz",
+            "QW5hbHlzaXMSRwoPYW5hbHlzaXNfc3RhdHVzGAIgASgOMi4uZ3JhZmVhcy52",
+            "MS5EaXNjb3ZlcnlPY2N1cnJlbmNlLkFuYWx5c2lzU3RhdHVzEjEKFWFuYWx5",
+            "c2lzX3N0YXR1c19lcnJvchgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzEgsK",
+            "A2NwZRgEIAEoCRIyCg5sYXN0X3NjYW5fdGltZRgFIAEoCzIaLmdvb2dsZS5w",
+            "cm90b2J1Zi5UaW1lc3RhbXASNQoMYXJjaGl2ZV90aW1lGAYgASgLMhouZ29v",
+            "Z2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDIlMKEkNvbnRpbnVvdXNBbmFs",
+            "eXNpcxIjCh9DT05USU5VT1VTX0FOQUxZU0lTX1VOU1BFQ0lGSUVEEAASCgoG",
+            "QUNUSVZFEAESDAoISU5BQ1RJVkUQAiKRAQoOQW5hbHlzaXNTdGF0dXMSHwob",
+            "QU5BTFlTSVNfU1RBVFVTX1VOU1BFQ0lGSUVEEAASCwoHUEVORElORxABEgwK",
+            "CFNDQU5OSU5HEAISFAoQRklOSVNIRURfU1VDQ0VTUxADEhMKD0ZJTklTSEVE",
+            "X0ZBSUxFRBAEEhgKFEZJTklTSEVEX1VOU1VQUE9SVEVEEAVCUQoNaW8uZ3Jh",
+            "ZmVhcy52MVABWjhnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2dyYWZlYXMvdjE7Z3JhZmVhc6ICA0dSQWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Grafeas.V1.CommonReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryNote), global::Grafeas.V1.DiscoveryNote.Parser, new[]{ "AnalysisKind" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisStatusError", "Cpe", "LastScanTime" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Grafeas.V1.DiscoveryOccurrence), global::Grafeas.V1.DiscoveryOccurrence.Parser, new[]{ "ContinuousAnalysis", "AnalysisStatus", "AnalysisStatusError", "Cpe", "LastScanTime", "ArchiveTime" }, null, new[]{ typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.ContinuousAnalysis), typeof(global::Grafeas.V1.DiscoveryOccurrence.Types.AnalysisStatus) }, null, null)
           }));
     }
     #endregion
@@ -293,6 +295,7 @@ namespace Grafeas.V1 {
       analysisStatusError_ = other.analysisStatusError_ != null ? other.analysisStatusError_.Clone() : null;
       cpe_ = other.cpe_;
       lastScanTime_ = other.lastScanTime_ != null ? other.lastScanTime_.Clone() : null;
+      archiveTime_ = other.archiveTime_ != null ? other.archiveTime_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -379,6 +382,21 @@ namespace Grafeas.V1 {
       }
     }
 
+    /// <summary>Field number for the "archive_time" field.</summary>
+    public const int ArchiveTimeFieldNumber = 6;
+    private global::Google.Protobuf.WellKnownTypes.Timestamp archiveTime_;
+    /// <summary>
+    /// The time occurrences related to this discovery occurrence were archived.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Protobuf.WellKnownTypes.Timestamp ArchiveTime {
+      get { return archiveTime_; }
+      set {
+        archiveTime_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -399,6 +417,7 @@ namespace Grafeas.V1 {
       if (!object.Equals(AnalysisStatusError, other.AnalysisStatusError)) return false;
       if (Cpe != other.Cpe) return false;
       if (!object.Equals(LastScanTime, other.LastScanTime)) return false;
+      if (!object.Equals(ArchiveTime, other.ArchiveTime)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -411,6 +430,7 @@ namespace Grafeas.V1 {
       if (analysisStatusError_ != null) hash ^= AnalysisStatusError.GetHashCode();
       if (Cpe.Length != 0) hash ^= Cpe.GetHashCode();
       if (lastScanTime_ != null) hash ^= LastScanTime.GetHashCode();
+      if (archiveTime_ != null) hash ^= ArchiveTime.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -449,6 +469,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(LastScanTime);
       }
+      if (archiveTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ArchiveTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -479,6 +503,10 @@ namespace Grafeas.V1 {
         output.WriteRawTag(42);
         output.WriteMessage(LastScanTime);
       }
+      if (archiveTime_ != null) {
+        output.WriteRawTag(50);
+        output.WriteMessage(ArchiveTime);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -503,6 +531,9 @@ namespace Grafeas.V1 {
       }
       if (lastScanTime_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(LastScanTime);
+      }
+      if (archiveTime_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ArchiveTime);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -536,6 +567,12 @@ namespace Grafeas.V1 {
           LastScanTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         LastScanTime.MergeFrom(other.LastScanTime);
+      }
+      if (other.archiveTime_ != null) {
+        if (archiveTime_ == null) {
+          ArchiveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+        }
+        ArchiveTime.MergeFrom(other.ArchiveTime);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -578,6 +615,13 @@ namespace Grafeas.V1 {
             input.ReadMessage(LastScanTime);
             break;
           }
+          case 50: {
+            if (archiveTime_ == null) {
+              ArchiveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ArchiveTime);
+            break;
+          }
         }
       }
     #endif
@@ -617,6 +661,13 @@ namespace Grafeas.V1 {
               LastScanTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(LastScanTime);
+            break;
+          }
+          case 50: {
+            if (archiveTime_ == null) {
+              ArchiveTime = new global::Google.Protobuf.WellKnownTypes.Timestamp();
+            }
+            input.ReadMessage(ArchiveTime);
             break;
           }
         }
