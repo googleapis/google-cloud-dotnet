@@ -217,8 +217,7 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. The ID to use for the batch, which will become the final component of
     /// the batch's resource name.
     ///
-    /// This value must be 4-63 characters. Valid characters
-    /// are /[a-z][0-9]-/.
+    /// This value must be 4-63 characters. Valid characters are `/[a-z][0-9]-/`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
