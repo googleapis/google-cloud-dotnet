@@ -6681,6 +6681,12 @@ namespace Google.Cloud.Dataproc.V1 {
     /// 4 times within 10 minute window.
     ///
     /// Maximum value is 10.
+    ///
+    /// **Note:** Currently, this restartable job option is
+    /// not supported in Dataproc
+    /// [workflow
+    /// template](https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template)
+    /// jobs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6698,6 +6704,12 @@ namespace Google.Cloud.Dataproc.V1 {
     /// Optional. Maximum number of times in total a driver may be restarted as a result of
     /// driver exiting with non-zero code before job is reported failed.
     /// Maximum value is 240.
+    ///
+    /// **Note:** Currently, this restartable job option is
+    /// not supported in Dataproc
+    /// [workflow
+    /// template](https://cloud.google.com/dataproc/docs/concepts/workflows/using-workflows#adding_jobs_to_a_template)
+    /// jobs.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
