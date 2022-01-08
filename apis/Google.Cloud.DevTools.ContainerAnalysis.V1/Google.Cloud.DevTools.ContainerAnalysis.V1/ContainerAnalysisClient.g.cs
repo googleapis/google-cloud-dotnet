@@ -913,7 +913,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// The name of the project to get a vulnerability summary for in the form of
+        /// Required. The name of the project to get a vulnerability summary for in the form of
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
@@ -932,7 +932,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// The name of the project to get a vulnerability summary for in the form of
+        /// Required. The name of the project to get a vulnerability summary for in the form of
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
@@ -951,7 +951,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// The name of the project to get a vulnerability summary for in the form of
+        /// Required. The name of the project to get a vulnerability summary for in the form of
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
@@ -966,7 +966,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// The name of the project to get a vulnerability summary for in the form of
+        /// Required. The name of the project to get a vulnerability summary for in the form of
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
@@ -985,7 +985,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// The name of the project to get a vulnerability summary for in the form of
+        /// Required. The name of the project to get a vulnerability summary for in the form of
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
@@ -1004,7 +1004,7 @@ namespace Google.Cloud.DevTools.ContainerAnalysis.V1
         /// Gets a summary of the number and severity of occurrences.
         /// </summary>
         /// <param name="parent">
-        /// The name of the project to get a vulnerability summary for in the form of
+        /// Required. The name of the project to get a vulnerability summary for in the form of
         /// `projects/[PROJECT_ID]`.
         /// </param>
         /// <param name="filter">
