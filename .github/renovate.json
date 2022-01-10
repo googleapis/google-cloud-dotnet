@@ -65,6 +65,7 @@
     "apis/Google.Cloud.Domains.V1Beta1/Google.Cloud.Domains.V1Beta1/**",
     "apis/Google.Cloud.ErrorReporting.V1Beta1/Google.Cloud.ErrorReporting.V1Beta1/**",
     "apis/Google.Cloud.EssentialContacts.V1/Google.Cloud.EssentialContacts.V1/**",
+    "apis/Google.Cloud.Eventarc.Publishing.V1/Google.Cloud.Eventarc.Publishing.V1/**",
     "apis/Google.Cloud.Eventarc.V1/Google.Cloud.Eventarc.V1/**",
     "apis/Google.Cloud.Filestore.V1/Google.Cloud.Filestore.V1/**",
     "apis/Google.Cloud.Firestore.Admin.V1/Google.Cloud.Firestore.Admin.V1/**",

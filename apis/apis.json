@@ -1205,6 +1205,22 @@
       "shortName": "essentialcontacts"
     },
     {
+      "id": "Google.Cloud.Eventarc.Publishing.V1",
+      "version": "1.0.0-beta01",
+      "type": "grpc",
+      "productName": "Eventarc Publishing",
+      "productUrl": "https://cloud.google.com/eventarc/docs",
+      "description": "Recommended Google client library to access the Eventarc Publishing API",
+      "tags": [
+        "events",
+        "cloudevents"
+      ],
+      "dependencies": {},
+      "generator": "micro",
+      "protoPath": "google/cloud/eventarc/publishing/v1",
+      "shortName": "eventarcpublishing"
+    },
+    {
       "id": "Google.Cloud.Eventarc.V1",
       "version": "1.1.0",
       "type": "grpc",
