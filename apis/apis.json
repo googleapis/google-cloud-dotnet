@@ -644,7 +644,7 @@
         "compute"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc": "3.6.0-beta03",
+        "Google.Api.Gax.Grpc": "3.6.0",
         "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
