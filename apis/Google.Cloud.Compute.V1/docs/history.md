@@ -1,5 +1,9 @@
 # Version history
 
+## Version 1.0.0, released 2022-01-11
+
+No API surface changes; just dependency updates for first GA release.
+
 ## Version 1.0.0-beta06, released 2021-12-06
 
 - [Commit 25e54fa](https://github.com/googleapis/google-cloud-dotnet/commit/25e54fa): fix!: handle GCP enum name start with uppercase IPProtocol
