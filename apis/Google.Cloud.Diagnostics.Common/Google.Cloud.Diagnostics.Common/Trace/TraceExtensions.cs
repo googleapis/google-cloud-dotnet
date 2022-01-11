@@ -17,6 +17,7 @@ using Google.Cloud.Trace.V1;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Net.Http;
+using static Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions;
 
 namespace Google.Cloud.Diagnostics.Common
 {
@@ -44,9 +45,16 @@ namespace Google.Cloud.Diagnostics.Common
             services.AddSingleton(ManagedTracer.CreateDelegatingTracer(ContextTracerManager.GetCurrentTracer));
 
             // On .Net Standard 2.0 or higher, we can use the System.Net.Http.IHttpClientFactory defined in Microsoft.Extensions.Http,
-            // for which we need a DelegatingHandler with no InnerHandler set. This is the recommended way.
-            // It should be registered as follows.
-            return services.AddTransient(UnchainedTraceHeaderPropagatingHandlerFactory);
+            // for which we need a DelegatingHandler with no InnerHandler set.
+            // we register factories for the UnchainedTraceHeaderPropagatingHandler.
+#pragma warning disable CS0618 // Type or member is obsolete
+            // This factory we register for backwards compatibility only.
+            // We can remove it on our next major version as we are making UnchainedTraceHeaderPropagatingHandler
+            // obsolete as well.
+            services.AddTransient(UnchainedTraceHeaderPropagatingHandlerFactory);
+#pragma warning restore CS0618 // Type or member is obsolete
+            // This is the new factory, that takes trace custom labels into account.
+            return services.AddSingleton<OutgoingGoogleTraceHandlerFactory>();
         }
 
         /// <summary>
@@ -54,9 +62,9 @@ namespace Google.Cloud.Diagnostics.Common
         /// outgoing propagator. If user code has not specified a trace context outgoing propagator, the Google header will
         /// be propagated.
         /// </summary>
+        // Note that this is internal so the obsolete mark is just so we remember to remove it.
+        [Obsolete("We are registering OutgoingGoogleTraceHandlerFactory instead.")]
         internal static UnchainedTraceHeaderPropagatingHandler UnchainedTraceHeaderPropagatingHandlerFactory(IServiceProvider serviceProvider) =>
-            serviceProvider.GetService<Action<HttpRequestMessage, ITraceContext>>() is Action<HttpRequestMessage, ITraceContext> traceContextOutgoingPropagator ?
-                new UnchainedTraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer, traceContextOutgoingPropagator) :
-                new UnchainedTraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer);
+            new UnchainedTraceHeaderPropagatingHandler(ContextTracerManager.GetCurrentTracer, serviceProvider.GetService<Action<HttpRequestMessage, ITraceContext>>());
     }
 }
