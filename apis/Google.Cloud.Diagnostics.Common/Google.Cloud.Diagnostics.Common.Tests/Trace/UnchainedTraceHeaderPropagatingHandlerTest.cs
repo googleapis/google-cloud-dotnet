@@ -23,7 +23,9 @@ namespace Google.Cloud.Diagnostics.Common.Tests
         public void InnerHandler_Unset()
         {
             var mockTracer = new Mock<IManagedTracer>();
+#pragma warning disable CS0618 // Type or member is obsolete
             var traceHandler = new UnchainedTraceHeaderPropagatingHandler(() => mockTracer.Object);
+#pragma warning restore CS0618 // Type or member is obsolete
 
             Assert.Null(traceHandler.InnerHandler);
         }

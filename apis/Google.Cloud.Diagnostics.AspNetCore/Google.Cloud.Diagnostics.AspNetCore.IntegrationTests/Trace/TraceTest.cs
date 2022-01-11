@@ -41,6 +41,7 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 #error unknown target framework
 #endif
 {
+    using static Google.Cloud.Diagnostics.Common.HttpClientBuilderExtensions;
     using static TestServerHelpers;
 
     public class TraceTest
@@ -51,6 +52,11 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
 
         private static readonly TraceIdFactory _traceIdFactory = TraceIdFactory.Create();
         private static readonly SpanIdFactory _spanIdFactory = SpanIdFactory.Create();
+        private static readonly IDictionary<string, string> _customLabels = new Dictionary<string, string>
+        {
+            { "label1", "value1" },
+            { "label2", "value2" }
+        };
 
         private readonly string _testId;
         private readonly DateTimeOffset _startTime;
@@ -213,6 +219,30 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
 
             TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
+        }
+
+        [Theory]
+        [MemberData(nameof(ConfigurationData))]
+        public async Task Trace_OutGoingClientFactory_WithLabels(Action<IWebHostBuilder> testServerConfigurator)
+        {
+            var uri = $"/Trace/{nameof(TraceController.TraceOutgoingClientFactoryWithLabels)}/{_testId}";
+            var childSpanName = EntryData.GetMessage(nameof(TraceController.TraceOutgoingClientFactory), _testId);
+            var outgoingSpanName = "https://google.com/";
+
+            using var server = GetTestServer<TraceTestNoBufferHighQpsApplication>(builder =>
+            {
+                testServerConfigurator?.Invoke(builder);
+                builder.ConfigureServices(services => services
+                    .AddHttpClient("outgoing_with_labels", c => c.BaseAddress = new Uri("https://google.com/"))
+                    .AddOutgoingGoogleTraceHandler(sp => _customLabels));
+            });
+            using var client = server.CreateClient();
+            await client.GetAsync(uri);
+
+            var trace = TraceEntryPolling.Default.GetTrace(uri, _startTime);
+
+            TraceEntryVerifiers.AssertParentChildSpan(trace, uri, childSpanName, outgoingSpanName);
+            TraceEntryVerifiers.AssertSpanLabelsContains(trace.Spans.First(span => span.Name == outgoingSpanName), _customLabels);
         }
 
         [Theory]
@@ -837,6 +867,17 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
             return message;
         }
 
+        public async Task<string> TraceOutgoingClientFactoryWithLabels(string id, [FromServices] IManagedTracer tracer, [FromServices] IHttpClientFactory httpClientFactory)
+        {
+            string message = EntryData.GetMessage(nameof(TraceOutgoingClientFactory), id);
+            using (tracer.StartSpan(message))
+            {
+                var httpClient = httpClientFactory.CreateClient("outgoing_with_labels");
+                await httpClient.GetAsync("");
+            }
+            return message;
+        }
+
 #pragma warning disable CS0618 // Type or member is obsolete
         public async Task<string> TraceOutgoing(string id, [FromServices] IManagedTracer tracer, [FromServices] TraceHeaderPropagatingHandler propagatingHandler)
 #pragma warning restore CS0618 // Type or member is obsolete
@@ -869,12 +910,13 @@ namespace Google.Cloud.Diagnostics.AspNetCore.IntegrationTests
         public static TestServer SecondCallServer;
 
         private IManagedTracer _tracer;
-        private UnchainedTraceHeaderPropagatingHandler _propagatingHandler;
+        private DelegatingHandler _propagatingHandler;
 
-        public PropagationController([FromServices] IManagedTracer tracer, [FromServices] UnchainedTraceHeaderPropagatingHandler propagatingHandler)
+        public PropagationController([FromServices] IManagedTracer tracer, [FromServices] IServiceProvider serviceProvider)
         {
             _tracer = tracer;
-            _propagatingHandler = propagatingHandler;
+            var propagatingHandlerFactory = serviceProvider.GetRequiredService<OutgoingGoogleTraceHandlerFactory>();
+            _propagatingHandler = propagatingHandlerFactory.Create(serviceProvider, labelsProvider: null);
         }
 
         public async Task<string> CreateFirstSpan(string id)
