@@ -225,6 +225,15 @@
       ],
       "matchCurrentVersion": "/^3\\./",
       "allowedVersions": "<3.2.0"
+    },
+    {
+      "matchPaths": [
+        "apis/Google.Cloud.Dialogflow.V2/**"
+      ],
+      "matchPackagePrefixes": [
+        "Microsoft.AspNetCore."
+      ],
+      "allowedVersions": "<2.2.0"
     }
   ],
   "schedule": [
