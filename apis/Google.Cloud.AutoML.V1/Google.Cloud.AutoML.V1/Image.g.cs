@@ -25,32 +25,35 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXV0b21sL3YxL2ltYWdlLnByb3RvEhZnb29nbGUu",
-            "Y2xvdWQuYXV0b21sLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGixn",
-            "b29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90bxor",
-            "Z29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9jbGFzc2lmaWNhdGlvbi5wcm90bxof",
-            "Z29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90byJtCiJJbWFnZUNsYXNzaWZpY2F0aW9uRGF0YXNl",
-            "dE1ldGFkYXRhEkcKE2NsYXNzaWZpY2F0aW9uX3R5cGUYASABKA4yKi5nb29n",
-            "bGUuY2xvdWQuYXV0b21sLnYxLkNsYXNzaWZpY2F0aW9uVHlwZSIlCiNJbWFn",
-            "ZU9iamVjdERldGVjdGlvbkRhdGFzZXRNZXRhZGF0YSLUAQogSW1hZ2VDbGFz",
-            "c2lmaWNhdGlvbk1vZGVsTWV0YWRhdGESFQoNYmFzZV9tb2RlbF9pZBgBIAEo",
-            "CRIlCh10cmFpbl9idWRnZXRfbWlsbGlfbm9kZV9ob3VycxgQIAEoAxIjCht0",
-            "cmFpbl9jb3N0X21pbGxpX25vZGVfaG91cnMYESABKAMSEwoLc3RvcF9yZWFz",
-            "b24YBSABKAkSEgoKbW9kZWxfdHlwZRgHIAEoCRIQCghub2RlX3FwcxgNIAEo",
-            "ARISCgpub2RlX2NvdW50GA4gASgDIr4BCiFJbWFnZU9iamVjdERldGVjdGlv",
-            "bk1vZGVsTWV0YWRhdGESEgoKbW9kZWxfdHlwZRgBIAEoCRISCgpub2RlX2Nv",
-            "dW50GAMgASgDEhAKCG5vZGVfcXBzGAQgASgBEhMKC3N0b3BfcmVhc29uGAUg",
-            "ASgJEiUKHXRyYWluX2J1ZGdldF9taWxsaV9ub2RlX2hvdXJzGAYgASgDEiMK",
-            "G3RyYWluX2Nvc3RfbWlsbGlfbm9kZV9ob3VycxgHIAEoAyJACipJbWFnZUNs",
-            "YXNzaWZpY2F0aW9uTW9kZWxEZXBsb3ltZW50TWV0YWRhdGESEgoKbm9kZV9j",
-            "b3VudBgBIAEoAyJBCitJbWFnZU9iamVjdERldGVjdGlvbk1vZGVsRGVwbG95",
-            "bWVudE1ldGFkYXRhEhIKCm5vZGVfY291bnQYASABKANCtgEKGmNvbS5nb29n",
-            "bGUuY2xvdWQuYXV0b21sLnYxQgpJbWFnZVByb3RvUAFaPGdvb2dsZS5nb2xh",
-            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvYXV0b21sL3YxO2F1",
-            "dG9tbKoCFkdvb2dsZS5DbG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRc",
-            "QXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
+            "Y2xvdWQuYXV0b21sLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
+            "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGixnb29nbGUvY2xvdWQv",
+            "YXV0b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90bxorZ29vZ2xlL2Nsb3Vk",
+            "L2F1dG9tbC92MS9jbGFzc2lmaWNhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
+            "YnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "cm90byJyCiJJbWFnZUNsYXNzaWZpY2F0aW9uRGF0YXNldE1ldGFkYXRhEkwK",
+            "E2NsYXNzaWZpY2F0aW9uX3R5cGUYASABKA4yKi5nb29nbGUuY2xvdWQuYXV0",
+            "b21sLnYxLkNsYXNzaWZpY2F0aW9uVHlwZUID4EECIiUKI0ltYWdlT2JqZWN0",
+            "RGV0ZWN0aW9uRGF0YXNldE1ldGFkYXRhIvcBCiBJbWFnZUNsYXNzaWZpY2F0",
+            "aW9uTW9kZWxNZXRhZGF0YRIaCg1iYXNlX21vZGVsX2lkGAEgASgJQgPgQQES",
+            "KgoddHJhaW5fYnVkZ2V0X21pbGxpX25vZGVfaG91cnMYECABKANCA+BBARIo",
+            "Cht0cmFpbl9jb3N0X21pbGxpX25vZGVfaG91cnMYESABKANCA+BBAxIYCgtz",
+            "dG9wX3JlYXNvbhgFIAEoCUID4EEDEhcKCm1vZGVsX3R5cGUYByABKAlCA+BB",
+            "ARIVCghub2RlX3FwcxgNIAEoAUID4EEDEhcKCm5vZGVfY291bnQYDiABKANC",
+            "A+BBAyLcAQohSW1hZ2VPYmplY3REZXRlY3Rpb25Nb2RlbE1ldGFkYXRhEhcK",
+            "Cm1vZGVsX3R5cGUYASABKAlCA+BBARIXCgpub2RlX2NvdW50GAMgASgDQgPg",
+            "QQMSFQoIbm9kZV9xcHMYBCABKAFCA+BBAxIYCgtzdG9wX3JlYXNvbhgFIAEo",
+            "CUID4EEDEioKHXRyYWluX2J1ZGdldF9taWxsaV9ub2RlX2hvdXJzGAYgASgD",
+            "QgPgQQESKAobdHJhaW5fY29zdF9taWxsaV9ub2RlX2hvdXJzGAcgASgDQgPg",
+            "QQMiRQoqSW1hZ2VDbGFzc2lmaWNhdGlvbk1vZGVsRGVwbG95bWVudE1ldGFk",
+            "YXRhEhcKCm5vZGVfY291bnQYASABKANCA+BBBCJGCitJbWFnZU9iamVjdERl",
+            "dGVjdGlvbk1vZGVsRGVwbG95bWVudE1ldGFkYXRhEhcKCm5vZGVfY291bnQY",
+            "ASABKANCA+BBBEK2AQoaY29tLmdvb2dsZS5jbG91ZC5hdXRvbWwudjFCCklt",
+            "YWdlUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xl",
+            "YXBpcy9jbG91ZC9hdXRvbWwvdjE7YXV0b21sqgIWR29vZ2xlLkNsb3VkLkF1",
+            "dG9NTC5WMcoCFkdvb2dsZVxDbG91ZFxBdXRvTWxcVjHqAhlHb29nbGU6OkNs",
+            "b3VkOjpBdXRvTUw6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata.Parser, null, null, null, null, null),
@@ -490,7 +493,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int TrainBudgetMilliNodeHoursFieldNumber = 16;
     private long trainBudgetMilliNodeHours_;
     /// <summary>
-    /// The train budget of creating this model, expressed in milli node
+    /// Optional. The train budget of creating this model, expressed in milli node
     /// hours i.e. 1,000 value in this field means 1 node hour. The actual
     /// `train_cost` will be equal or less than this value. If further model
     /// training ceases to provide any improvements, it will stop without using
@@ -1046,7 +1049,7 @@ namespace Google.Cloud.AutoML.V1 {
     public const int TrainBudgetMilliNodeHoursFieldNumber = 6;
     private long trainBudgetMilliNodeHours_;
     /// <summary>
-    /// The train budget of creating this model, expressed in milli node
+    /// Optional. The train budget of creating this model, expressed in milli node
     /// hours i.e. 1,000 value in this field means 1 node hour. The actual
     /// `train_cost` will be equal or less than this value. If further model
     /// training ceases to provide any improvements, it will stop without using
@@ -1395,7 +1398,6 @@ namespace Google.Cloud.AutoML.V1 {
     /// Input only. The number of nodes to deploy the model on. A node is an
     /// abstraction of a machine resource, which can handle online prediction QPS
     /// as given in the model's
-    ///
     /// [node_qps][google.cloud.automl.v1.ImageClassificationModelMetadata.node_qps].
     /// Must be between 1 and 100, inclusive on both ends.
     /// </summary>
@@ -1595,7 +1597,6 @@ namespace Google.Cloud.AutoML.V1 {
     /// Input only. The number of nodes to deploy the model on. A node is an
     /// abstraction of a machine resource, which can handle online prediction QPS
     /// as given in the model's
-    ///
     /// [qps_per_node][google.cloud.automl.v1.ImageObjectDetectionModelMetadata.qps_per_node].
     /// Must be between 1 and 100, inclusive on both ends.
     /// </summary>

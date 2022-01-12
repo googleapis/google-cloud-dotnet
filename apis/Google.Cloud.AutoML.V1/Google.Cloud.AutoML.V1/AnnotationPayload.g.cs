@@ -220,7 +220,7 @@ namespace Google.Cloud.AutoML.V1 {
     private string displayName_ = "";
     /// <summary>
     /// Output only. The value of
-    /// [display_name][google.cloud.automl.v1.AnnotationSpec.display_name]
+    /// [display_name][google.cloud.automl.v1p1beta.AnnotationSpec.display_name]
     /// when the model was trained. Because this field returns a value at model
     /// training time, for different models trained using the same dataset, the
     /// returned value could be different as model owner could update the

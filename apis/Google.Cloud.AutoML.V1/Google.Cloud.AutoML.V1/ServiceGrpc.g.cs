@@ -3,7 +3,7 @@
 //     source: google/cloud/automl/v1/service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -37,7 +37,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// Currently the only supported `location_id` is "us-central1".
   ///
   /// On any input that is documented to expect a string parameter in
-  /// snake_case or kebab-case, either of those cases is accepted.
+  /// snake_case or dash-case, either of those cases is accepted.
   /// </summary>
   public static partial class AutoMl
   {
@@ -465,7 +465,6 @@ namespace Google.Cloud.AutoML.V1 {
       /// Deploys a model. If a model is already deployed, deploying it with the
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
-      ///
       /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
@@ -1289,7 +1288,6 @@ namespace Google.Cloud.AutoML.V1 {
       /// Deploys a model. If a model is already deployed, deploying it with the
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
-      ///
       /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
@@ -1313,7 +1311,6 @@ namespace Google.Cloud.AutoML.V1 {
       /// Deploys a model. If a model is already deployed, deploying it with the
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
-      ///
       /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
@@ -1335,7 +1332,6 @@ namespace Google.Cloud.AutoML.V1 {
       /// Deploys a model. If a model is already deployed, deploying it with the
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
-      ///
       /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
@@ -1359,7 +1355,6 @@ namespace Google.Cloud.AutoML.V1 {
       /// Deploys a model. If a model is already deployed, deploying it with the
       /// same parameters has no effect. Deploying with different parametrs
       /// (as e.g. changing
-      ///
       /// [node_number][google.cloud.automl.v1p1beta.ImageObjectDetectionModelDeploymentMetadata.node_number])
       ///  will reset the deployment state without pausing the model's availability.
       ///
