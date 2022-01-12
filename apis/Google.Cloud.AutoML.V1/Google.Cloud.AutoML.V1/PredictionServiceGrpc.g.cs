@@ -3,7 +3,7 @@
 //     source: google/cloud/automl/v1/prediction_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2021 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -27,7 +27,7 @@ namespace Google.Cloud.AutoML.V1 {
   /// AutoML Prediction API.
   ///
   /// On any input that is documented to expect a string parameter in
-  /// snake_case or kebab-case, either of those cases is accepted.
+  /// snake_case or dash-case, either of those cases is accepted.
   /// </summary>
   public static partial class PredictionService
   {
