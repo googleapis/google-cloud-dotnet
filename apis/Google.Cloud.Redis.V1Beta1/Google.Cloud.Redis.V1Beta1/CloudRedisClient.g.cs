@@ -49,6 +49,7 @@ namespace Google.Cloud.Redis.V1Beta1
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
             ListInstancesSettings = existing.ListInstancesSettings;
             GetInstanceSettings = existing.GetInstanceSettings;
+            GetInstanceAuthStringSettings = existing.GetInstanceAuthStringSettings;
             CreateInstanceSettings = existing.CreateInstanceSettings;
             CreateInstanceOperationsSettings = existing.CreateInstanceOperationsSettings.Clone();
             UpdateInstanceSettings = existing.UpdateInstanceSettings;
@@ -63,6 +64,8 @@ namespace Google.Cloud.Redis.V1Beta1
             FailoverInstanceOperationsSettings = existing.FailoverInstanceOperationsSettings.Clone();
             DeleteInstanceSettings = existing.DeleteInstanceSettings;
             DeleteInstanceOperationsSettings = existing.DeleteInstanceOperationsSettings.Clone();
+            RescheduleMaintenanceSettings = existing.RescheduleMaintenanceSettings;
+            RescheduleMaintenanceOperationsSettings = existing.RescheduleMaintenanceOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -91,6 +94,18 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings GetInstanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClient.GetInstanceAuthString</c> and <c>CloudRedisClient.GetInstanceAuthStringAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>Timeout: 600 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetInstanceAuthStringSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(600000)));
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -298,6 +313,36 @@ namespace Google.Cloud.Redis.V1Beta1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteInstanceOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>CloudRedisClient.RescheduleMaintenance</c> and <c>CloudRedisClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings RescheduleMaintenanceSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>CloudRedisClient.RescheduleMaintenance</c> and
+        /// <c>CloudRedisClient.RescheduleMaintenanceAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings RescheduleMaintenanceOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -762,6 +807,141 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Instance> GetInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             GetInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstanceAuthString GetInstanceAuthString(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(GetInstanceAuthStringRequest request, st::CancellationToken cancellationToken) =>
+            GetInstanceAuthStringAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstanceAuthString GetInstanceAuthString(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthString(new GetInstanceAuthStringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthStringAsync(new GetInstanceAuthStringRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(string name, st::CancellationToken cancellationToken) =>
+            GetInstanceAuthStringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual InstanceAuthString GetInstanceAuthString(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthString(new GetInstanceAuthStringRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetInstanceAuthStringAsync(new GetInstanceAuthStringRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(InstanceName name, st::CancellationToken cancellationToken) =>
+            GetInstanceAuthStringAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
         /// Creates a Redis instance based on the specified tier and memory size.
@@ -2040,6 +2220,215 @@ namespace Google.Cloud.Redis.V1Beta1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, wkt::Any>> DeleteInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public virtual lro::OperationsClient RescheduleMaintenanceOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>RescheduleMaintenance</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> PollOnceRescheduleMaintenance(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, wkt::Any>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>RescheduleMaintenance</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> PollOnceRescheduleMaintenanceAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Instance, wkt::Any>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), RescheduleMaintenanceOperationsClient, callSettings);
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> RescheduleMaintenance(string name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> RescheduleMaintenanceAsync(string name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> RescheduleMaintenanceAsync(string name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(name, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, wkt::Any> RescheduleMaintenance(InstanceName name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenance(new RescheduleMaintenanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> RescheduleMaintenanceAsync(InstanceName name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, gaxgrpc::CallSettings callSettings = null) =>
+            RescheduleMaintenanceAsync(new RescheduleMaintenanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                RescheduleType = rescheduleType,
+                ScheduleTime = scheduleTime,
+            }, callSettings);
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="name">
+        /// Required. Redis instance resource name using the form:
+        /// `projects/{project_id}/locations/{location_id}/instances/{instance_id}`
+        /// where `location_id` refers to a GCP region.
+        /// </param>
+        /// <param name="rescheduleType">
+        /// Required. If reschedule type is SPECIFIC_TIME, must set up schedule_time as well.
+        /// </param>
+        /// <param name="scheduleTime">
+        /// Optional. Timestamp when the maintenance shall be rescheduled to if
+        /// reschedule_type=SPECIFIC_TIME, in RFC 3339 format, for
+        /// example `2012-11-15T16:19:00.094Z`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, wkt::Any>> RescheduleMaintenanceAsync(InstanceName name, RescheduleMaintenanceRequest.Types.RescheduleType rescheduleType, wkt::Timestamp scheduleTime, st::CancellationToken cancellationToken) =>
+            RescheduleMaintenanceAsync(name, rescheduleType, scheduleTime, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>CloudRedis client wrapper implementation, for convenient use.</summary>
@@ -2066,6 +2455,8 @@ namespace Google.Cloud.Redis.V1Beta1
 
         private readonly gaxgrpc::ApiCall<GetInstanceRequest, Instance> _callGetInstance;
 
+        private readonly gaxgrpc::ApiCall<GetInstanceAuthStringRequest, InstanceAuthString> _callGetInstanceAuthString;
+
         private readonly gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> _callCreateInstance;
 
         private readonly gaxgrpc::ApiCall<UpdateInstanceRequest, lro::Operation> _callUpdateInstance;
@@ -2079,6 +2470,8 @@ namespace Google.Cloud.Redis.V1Beta1
         private readonly gaxgrpc::ApiCall<FailoverInstanceRequest, lro::Operation> _callFailoverInstance;
 
         private readonly gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> _callDeleteInstance;
+
+        private readonly gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> _callRescheduleMaintenance;
 
         /// <summary>
         /// Constructs a client wrapper for the CloudRedis service, with the specified gRPC client and settings.
@@ -2097,12 +2490,16 @@ namespace Google.Cloud.Redis.V1Beta1
             ExportInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ExportInstanceOperationsSettings);
             FailoverInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.FailoverInstanceOperationsSettings);
             DeleteInstanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteInstanceOperationsSettings);
+            RescheduleMaintenanceOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.RescheduleMaintenanceOperationsSettings);
             _callListInstances = clientHelper.BuildApiCall<ListInstancesRequest, ListInstancesResponse>(grpcClient.ListInstancesAsync, grpcClient.ListInstances, effectiveSettings.ListInstancesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListInstances);
             Modify_ListInstancesApiCall(ref _callListInstances);
             _callGetInstance = clientHelper.BuildApiCall<GetInstanceRequest, Instance>(grpcClient.GetInstanceAsync, grpcClient.GetInstance, effectiveSettings.GetInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetInstance);
             Modify_GetInstanceApiCall(ref _callGetInstance);
+            _callGetInstanceAuthString = clientHelper.BuildApiCall<GetInstanceAuthStringRequest, InstanceAuthString>(grpcClient.GetInstanceAuthStringAsync, grpcClient.GetInstanceAuthString, effectiveSettings.GetInstanceAuthStringSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetInstanceAuthString);
+            Modify_GetInstanceAuthStringApiCall(ref _callGetInstanceAuthString);
             _callCreateInstance = clientHelper.BuildApiCall<CreateInstanceRequest, lro::Operation>(grpcClient.CreateInstanceAsync, grpcClient.CreateInstance, effectiveSettings.CreateInstanceSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateInstance);
             Modify_CreateInstanceApiCall(ref _callCreateInstance);
@@ -2124,6 +2521,9 @@ namespace Google.Cloud.Redis.V1Beta1
             _callDeleteInstance = clientHelper.BuildApiCall<DeleteInstanceRequest, lro::Operation>(grpcClient.DeleteInstanceAsync, grpcClient.DeleteInstance, effectiveSettings.DeleteInstanceSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteInstance);
             Modify_DeleteInstanceApiCall(ref _callDeleteInstance);
+            _callRescheduleMaintenance = clientHelper.BuildApiCall<RescheduleMaintenanceRequest, lro::Operation>(grpcClient.RescheduleMaintenanceAsync, grpcClient.RescheduleMaintenance, effectiveSettings.RescheduleMaintenanceSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callRescheduleMaintenance);
+            Modify_RescheduleMaintenanceApiCall(ref _callRescheduleMaintenance);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2132,6 +2532,8 @@ namespace Google.Cloud.Redis.V1Beta1
         partial void Modify_ListInstancesApiCall(ref gaxgrpc::ApiCall<ListInstancesRequest, ListInstancesResponse> call);
 
         partial void Modify_GetInstanceApiCall(ref gaxgrpc::ApiCall<GetInstanceRequest, Instance> call);
+
+        partial void Modify_GetInstanceAuthStringApiCall(ref gaxgrpc::ApiCall<GetInstanceAuthStringRequest, InstanceAuthString> call);
 
         partial void Modify_CreateInstanceApiCall(ref gaxgrpc::ApiCall<CreateInstanceRequest, lro::Operation> call);
 
@@ -2147,6 +2549,8 @@ namespace Google.Cloud.Redis.V1Beta1
 
         partial void Modify_DeleteInstanceApiCall(ref gaxgrpc::ApiCall<DeleteInstanceRequest, lro::Operation> call);
 
+        partial void Modify_RescheduleMaintenanceApiCall(ref gaxgrpc::ApiCall<RescheduleMaintenanceRequest, lro::Operation> call);
+
         partial void OnConstruction(CloudRedis.CloudRedisClient grpcClient, CloudRedisSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC CloudRedis client</summary>
@@ -2155,6 +2559,8 @@ namespace Google.Cloud.Redis.V1Beta1
         partial void Modify_ListInstancesRequest(ref ListInstancesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_GetInstanceRequest(ref GetInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetInstanceAuthStringRequest(ref GetInstanceAuthStringRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateInstanceRequest(ref CreateInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2169,6 +2575,8 @@ namespace Google.Cloud.Redis.V1Beta1
         partial void Modify_FailoverInstanceRequest(ref FailoverInstanceRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteInstanceRequest(ref DeleteInstanceRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_RescheduleMaintenanceRequest(ref RescheduleMaintenanceRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Lists all Redis instances owned by a project in either the specified
@@ -2232,6 +2640,34 @@ namespace Google.Cloud.Redis.V1Beta1
         {
             Modify_GetInstanceRequest(ref request, ref callSettings);
             return _callGetInstance.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override InstanceAuthString GetInstanceAuthString(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstanceAuthStringRequest(ref request, ref callSettings);
+            return _callGetInstanceAuthString.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+        /// instance the response will be empty. This information is not included in
+        /// the details returned to GetInstance.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<InstanceAuthString> GetInstanceAuthStringAsync(GetInstanceAuthStringRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetInstanceAuthStringRequest(ref request, ref callSettings);
+            return _callGetInstanceAuthString.Async(request, callSettings);
         }
 
         /// <summary>The long-running operations client for <c>CreateInstance</c>.</summary>
@@ -2481,6 +2917,35 @@ namespace Google.Cloud.Redis.V1Beta1
         {
             Modify_DeleteInstanceRequest(ref request, ref callSettings);
             return new lro::Operation<wkt::Empty, wkt::Any>(await _callDeleteInstance.Async(request, callSettings).ConfigureAwait(false), DeleteInstanceOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>RescheduleMaintenance</c>.</summary>
+        public override lro::OperationsClient RescheduleMaintenanceOperationsClient { get; }
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Instance, wkt::Any> RescheduleMaintenance(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, wkt::Any>(_callRescheduleMaintenance.Sync(request, callSettings), RescheduleMaintenanceOperationsClient);
+        }
+
+        /// <summary>
+        /// Reschedule maintenance for a given instance in a given project and
+        /// location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Instance, wkt::Any>> RescheduleMaintenanceAsync(RescheduleMaintenanceRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_RescheduleMaintenanceRequest(ref request, ref callSettings);
+            return new lro::Operation<Instance, wkt::Any>(await _callRescheduleMaintenance.Async(request, callSettings).ConfigureAwait(false), RescheduleMaintenanceOperationsClient);
         }
     }
 
