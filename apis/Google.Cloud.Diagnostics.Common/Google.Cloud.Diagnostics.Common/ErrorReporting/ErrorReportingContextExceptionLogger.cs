@@ -77,7 +77,7 @@ namespace Google.Cloud.Diagnostics.Common
 
             var serviceContext = CreateServiceContext(
                 Project.GetServiceName(options.ServiceName, errorReportingOptions.MonitoredResource),
-                Project.GetServiceName(options.Version, errorReportingOptions.MonitoredResource))
+                Project.GetServiceVersion(options.Version, errorReportingOptions.MonitoredResource))
                 ?? new Struct();
 
             IConsumer<LogEntry> consumer = LogConsumer.Create(client, errorReportingOptions.BufferOptions, errorReportingOptions.RetryOptions);
