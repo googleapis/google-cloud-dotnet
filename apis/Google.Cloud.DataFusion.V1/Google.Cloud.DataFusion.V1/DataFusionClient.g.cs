@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
@@ -405,8 +406,8 @@ namespace Google.Cloud.DataFusion.V1
         /// and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve instance
-        /// information in the format projects/{project}/locations/{location}.
+        /// Required. The project and location for which to retrieve instance information
+        /// in the format projects/{project}/locations/{location}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -431,8 +432,8 @@ namespace Google.Cloud.DataFusion.V1
         /// and location.
         /// </summary>
         /// <param name="parent">
-        /// Required. The project and location for which to retrieve instance
-        /// information in the format projects/{project}/locations/{location}.
+        /// Required. The project and location for which to retrieve instance information
+        /// in the format projects/{project}/locations/{location}.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -448,6 +449,58 @@ namespace Google.Cloud.DataFusion.V1
             ListAvailableVersionsAsync(new ListAvailableVersionsRequest
             {
                 Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists possible versions for Data Fusion instances in the specified project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve instance information
+        /// in the format projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Version"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersions(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAvailableVersions(new ListAvailableVersionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists possible versions for Data Fusion instances in the specified project
+        /// and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The project and location for which to retrieve instance information
+        /// in the format projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Version"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListAvailableVersionsResponse, Version> ListAvailableVersionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListAvailableVersionsAsync(new ListAvailableVersionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -554,22 +607,22 @@ namespace Google.Cloud.DataFusion.V1
         /// Creates a new Data Fusion instance in the specified project and location.
         /// </summary>
         /// <param name="parent">
-        /// The instance's project and location in the format
+        /// Required. The instance's project and location in the format
         /// projects/{project}/locations/{location}.
         /// </param>
         /// <param name="instance">
         /// An instance resource.
         /// </param>
         /// <param name="instanceId">
-        /// The name of the instance to create.
+        /// Required. The name of the instance to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual lro::Operation<Instance, OperationMetadata> CreateInstance(string parent, Instance instance, string instanceId, gaxgrpc::CallSettings callSettings = null) =>
             CreateInstance(new CreateInstanceRequest
             {
-                Parent = parent ?? "",
-                InstanceId = instanceId ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                 Instance = instance,
             }, callSettings);
 
@@ -577,22 +630,22 @@ namespace Google.Cloud.DataFusion.V1
         /// Creates a new Data Fusion instance in the specified project and location.
         /// </summary>
         /// <param name="parent">
-        /// The instance's project and location in the format
+        /// Required. The instance's project and location in the format
         /// projects/{project}/locations/{location}.
         /// </param>
         /// <param name="instance">
         /// An instance resource.
         /// </param>
         /// <param name="instanceId">
-        /// The name of the instance to create.
+        /// Required. The name of the instance to create.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(string parent, Instance instance, string instanceId, gaxgrpc::CallSettings callSettings = null) =>
             CreateInstanceAsync(new CreateInstanceRequest
             {
-                Parent = parent ?? "",
-                InstanceId = instanceId ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
                 Instance = instance,
             }, callSettings);
 
@@ -600,18 +653,82 @@ namespace Google.Cloud.DataFusion.V1
         /// Creates a new Data Fusion instance in the specified project and location.
         /// </summary>
         /// <param name="parent">
-        /// The instance's project and location in the format
+        /// Required. The instance's project and location in the format
         /// projects/{project}/locations/{location}.
         /// </param>
         /// <param name="instance">
         /// An instance resource.
         /// </param>
         /// <param name="instanceId">
-        /// The name of the instance to create.
+        /// Required. The name of the instance to create.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(string parent, Instance instance, string instanceId, st::CancellationToken cancellationToken) =>
+            CreateInstanceAsync(parent, instance, instanceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a new Data Fusion instance in the specified project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance's project and location in the format
+        /// projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="instance">
+        /// An instance resource.
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The name of the instance to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Instance, OperationMetadata> CreateInstance(gagr::LocationName parent, Instance instance, string instanceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstance(new CreateInstanceRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                Instance = instance,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Data Fusion instance in the specified project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance's project and location in the format
+        /// projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="instance">
+        /// An instance resource.
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The name of the instance to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(gagr::LocationName parent, Instance instance, string instanceId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateInstanceAsync(new CreateInstanceRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                InstanceId = gax::GaxPreconditions.CheckNotNullOrEmpty(instanceId, nameof(instanceId)),
+                Instance = instance,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a new Data Fusion instance in the specified project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The instance's project and location in the format
+        /// projects/{project}/locations/{location}.
+        /// </param>
+        /// <param name="instance">
+        /// An instance resource.
+        /// </param>
+        /// <param name="instanceId">
+        /// Required. The name of the instance to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> CreateInstanceAsync(gagr::LocationName parent, Instance instance, string instanceId, st::CancellationToken cancellationToken) =>
             CreateInstanceAsync(parent, instance, instanceId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -671,36 +788,84 @@ namespace Google.Cloud.DataFusion.V1
         /// Deletes a single Date Fusion instance.
         /// </summary>
         /// <param name="name">
-        /// The instance resource name in the format
+        /// Required. The instance resource name in the format
         /// projects/{project}/locations/{location}/instances/{instance}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteInstance(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteInstance(new DeleteInstanceRequest { Name = name ?? "", }, callSettings);
+            DeleteInstance(new DeleteInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Deletes a single Date Fusion instance.
         /// </summary>
         /// <param name="name">
-        /// The instance resource name in the format
+        /// Required. The instance resource name in the format
         /// projects/{project}/locations/{location}/instances/{instance}
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInstanceAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteInstanceAsync(new DeleteInstanceRequest { Name = name ?? "", }, callSettings);
+            DeleteInstanceAsync(new DeleteInstanceRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Deletes a single Date Fusion instance.
         /// </summary>
         /// <param name="name">
-        /// The instance resource name in the format
+        /// Required. The instance resource name in the format
         /// projects/{project}/locations/{location}/instances/{instance}
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInstanceAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a single Date Fusion instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The instance resource name in the format
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteInstance(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstance(new DeleteInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Date Fusion instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The instance resource name in the format
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInstanceAsync(InstanceName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteInstanceAsync(new DeleteInstanceRequest
+            {
+                InstanceName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a single Date Fusion instance.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The instance resource name in the format
+        /// projects/{project}/locations/{location}/instances/{instance}
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteInstanceAsync(InstanceName name, st::CancellationToken cancellationToken) =>
             DeleteInstanceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -760,7 +925,7 @@ namespace Google.Cloud.DataFusion.V1
         /// Updates a single Data Fusion instance.
         /// </summary>
         /// <param name="instance">
-        /// The instance resource that replaces the resource on the server. Currently,
+        /// Required. The instance resource that replaces the resource on the server. Currently,
         /// Data Fusion only allows replacing labels, options, and stack driver
         /// settings. All other fields will be ignored.
         /// </param>
@@ -777,7 +942,7 @@ namespace Google.Cloud.DataFusion.V1
         public virtual lro::Operation<Instance, OperationMetadata> UpdateInstance(Instance instance, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateInstance(new UpdateInstanceRequest
             {
-                Instance = instance,
+                Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 UpdateMask = updateMask,
             }, callSettings);
 
@@ -785,7 +950,7 @@ namespace Google.Cloud.DataFusion.V1
         /// Updates a single Data Fusion instance.
         /// </summary>
         /// <param name="instance">
-        /// The instance resource that replaces the resource on the server. Currently,
+        /// Required. The instance resource that replaces the resource on the server. Currently,
         /// Data Fusion only allows replacing labels, options, and stack driver
         /// settings. All other fields will be ignored.
         /// </param>
@@ -802,7 +967,7 @@ namespace Google.Cloud.DataFusion.V1
         public virtual stt::Task<lro::Operation<Instance, OperationMetadata>> UpdateInstanceAsync(Instance instance, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
             UpdateInstanceAsync(new UpdateInstanceRequest
             {
-                Instance = instance,
+                Instance = gax::GaxPreconditions.CheckNotNull(instance, nameof(instance)),
                 UpdateMask = updateMask,
             }, callSettings);
 
@@ -810,7 +975,7 @@ namespace Google.Cloud.DataFusion.V1
         /// Updates a single Data Fusion instance.
         /// </summary>
         /// <param name="instance">
-        /// The instance resource that replaces the resource on the server. Currently,
+        /// Required. The instance resource that replaces the resource on the server. Currently,
         /// Data Fusion only allows replacing labels, options, and stack driver
         /// settings. All other fields will be ignored.
         /// </param>

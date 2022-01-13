@@ -35,7 +35,7 @@ namespace Google.Cloud.DataFusion.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                Name = "name1c9368b0",
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
@@ -62,7 +62,7 @@ namespace Google.Cloud.DataFusion.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                State = Instance.Types.State.AutoUpdating,
+                State = Instance.Types.State.Creating,
                 StateMessage = "state_message46cf28c0",
                 ServiceEndpoint = "service_endpoint15ef9910",
                 Zone = "zone255f4ea8",
@@ -80,6 +80,10 @@ namespace Google.Cloud.DataFusion.V1.Tests
                 DataprocServiceAccount = "dataproc_service_account07295e86",
                 EnableRbac = true,
                 CryptoKeyConfig = new CryptoKeyConfig(),
+                DisabledReason =
+                {
+                    Instance.Types.DisabledReason.KmsKeyIssue,
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataFusionClient client = new DataFusionClientImpl(mockGrpcClient.Object, null);
@@ -95,7 +99,7 @@ namespace Google.Cloud.DataFusion.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetInstanceRequest request = new GetInstanceRequest
             {
-                Name = "name1c9368b0",
+                InstanceName = InstanceName.FromProjectLocationInstance("[PROJECT]", "[LOCATION]", "[INSTANCE]"),
             };
             Instance expectedResponse = new Instance
             {
@@ -122,7 +126,7 @@ namespace Google.Cloud.DataFusion.V1.Tests
                 },
                 CreateTime = new wkt::Timestamp(),
                 UpdateTime = new wkt::Timestamp(),
-                State = Instance.Types.State.AutoUpdating,
+                State = Instance.Types.State.Creating,
                 StateMessage = "state_message46cf28c0",
                 ServiceEndpoint = "service_endpoint15ef9910",
                 Zone = "zone255f4ea8",
@@ -140,6 +144,10 @@ namespace Google.Cloud.DataFusion.V1.Tests
                 DataprocServiceAccount = "dataproc_service_account07295e86",
                 EnableRbac = true,
                 CryptoKeyConfig = new CryptoKeyConfig(),
+                DisabledReason =
+                {
+                    Instance.Types.DisabledReason.KmsKeyIssue,
+                },
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataFusionClient client = new DataFusionClientImpl(mockGrpcClient.Object, null);
