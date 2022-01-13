@@ -263,6 +263,18 @@ namespace Google.Cloud.Redis.V1Beta1
         }
     }
 
+    public partial class RescheduleMaintenanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
     public partial class ListInstancesRequest
     {
         /// <summary>
@@ -276,6 +288,18 @@ namespace Google.Cloud.Redis.V1Beta1
     }
 
     public partial class GetInstanceRequest
+    {
+        /// <summary>
+        /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcrv::InstanceName InstanceName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcrv::InstanceName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetInstanceAuthStringRequest
     {
         /// <summary>
         /// <see cref="gcrv::InstanceName"/>-typed view over the <see cref="Name"/> resource name property.

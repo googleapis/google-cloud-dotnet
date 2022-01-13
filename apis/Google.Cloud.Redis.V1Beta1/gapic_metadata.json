@@ -40,6 +40,12 @@
                 "GetInstanceAsync"
               ]
             },
+            "GetInstanceAuthString": {
+              "methods": [
+                "GetInstanceAuthString",
+                "GetInstanceAuthStringAsync"
+              ]
+            },
             "ImportInstance": {
               "methods": [
                 "ImportInstance",
@@ -50,6 +56,12 @@
               "methods": [
                 "ListInstances",
                 "ListInstancesAsync"
+              ]
+            },
+            "RescheduleMaintenance": {
+              "methods": [
+                "RescheduleMaintenance",
+                "RescheduleMaintenanceAsync"
               ]
             },
             "UpdateInstance": {

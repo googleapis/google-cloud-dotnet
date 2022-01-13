@@ -86,6 +86,10 @@ namespace Google.Cloud.Redis.V1Beta1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.Instance> __Marshaller_google_cloud_redis_v1beta1_Instance = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.V1Beta1.Instance.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest> __Marshaller_google_cloud_redis_v1beta1_GetInstanceAuthStringRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.InstanceAuthString> __Marshaller_google_cloud_redis_v1beta1_InstanceAuthString = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.V1Beta1.InstanceAuthString.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest> __Marshaller_google_cloud_redis_v1beta1_CreateInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
@@ -101,6 +105,8 @@ namespace Google.Cloud.Redis.V1Beta1 {
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest> __Marshaller_google_cloud_redis_v1beta1_FailoverInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest> __Marshaller_google_cloud_redis_v1beta1_DeleteInstanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest> __Marshaller_google_cloud_redis_v1beta1_RescheduleMaintenanceRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest, global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse> __Method_ListInstances = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest, global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse>(
@@ -117,6 +123,14 @@ namespace Google.Cloud.Redis.V1Beta1 {
         "GetInstance",
         __Marshaller_google_cloud_redis_v1beta1_GetInstanceRequest,
         __Marshaller_google_cloud_redis_v1beta1_Instance);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest, global::Google.Cloud.Redis.V1Beta1.InstanceAuthString> __Method_GetInstanceAuthString = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest, global::Google.Cloud.Redis.V1Beta1.InstanceAuthString>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetInstanceAuthString",
+        __Marshaller_google_cloud_redis_v1beta1_GetInstanceAuthStringRequest,
+        __Marshaller_google_cloud_redis_v1beta1_InstanceAuthString);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest, global::Google.LongRunning.Operation> __Method_CreateInstance = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest, global::Google.LongRunning.Operation>(
@@ -174,6 +188,14 @@ namespace Google.Cloud.Redis.V1Beta1 {
         __Marshaller_google_cloud_redis_v1beta1_DeleteInstanceRequest,
         __Marshaller_google_longrunning_Operation);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation> __Method_RescheduleMaintenance = new grpc::Method<global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "RescheduleMaintenance",
+        __Marshaller_google_cloud_redis_v1beta1_RescheduleMaintenanceRequest,
+        __Marshaller_google_longrunning_Operation);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -212,6 +234,20 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.V1Beta1.Instance> GetInstance(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+      /// instance the response will be empty. This information is not included in
+      /// the details returned to GetInstance.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.Redis.V1Beta1.InstanceAuthString> GetInstanceAuthString(global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -326,6 +362,19 @@ namespace Google.Cloud.Redis.V1Beta1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> DeleteInstance(global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Reschedule maintenance for a given instance in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> RescheduleMaintenance(global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -486,6 +535,62 @@ namespace Google.Cloud.Redis.V1Beta1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.V1Beta1.Instance> GetInstanceAsync(global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_GetInstance, null, options, request);
+      }
+      /// <summary>
+      /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+      /// instance the response will be empty. This information is not included in
+      /// the details returned to GetInstance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.V1Beta1.InstanceAuthString GetInstanceAuthString(global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInstanceAuthString(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+      /// instance the response will be empty. This information is not included in
+      /// the details returned to GetInstance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.Redis.V1Beta1.InstanceAuthString GetInstanceAuthString(global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetInstanceAuthString, null, options, request);
+      }
+      /// <summary>
+      /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+      /// instance the response will be empty. This information is not included in
+      /// the details returned to GetInstance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.V1Beta1.InstanceAuthString> GetInstanceAuthStringAsync(global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetInstanceAuthStringAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Gets the AUTH string for a Redis instance. If AUTH is not enabled for the
+      /// instance the response will be empty. This information is not included in
+      /// the details returned to GetInstance.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.Redis.V1Beta1.InstanceAuthString> GetInstanceAuthStringAsync(global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetInstanceAuthString, null, options, request);
       }
       /// <summary>
       /// Creates a Redis instance based on the specified tier and memory size.
@@ -943,6 +1048,58 @@ namespace Google.Cloud.Redis.V1Beta1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteInstance, null, options, request);
       }
+      /// <summary>
+      /// Reschedule maintenance for a given instance in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RescheduleMaintenance(global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RescheduleMaintenance(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reschedule maintenance for a given instance in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation RescheduleMaintenance(global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_RescheduleMaintenance, null, options, request);
+      }
+      /// <summary>
+      /// Reschedule maintenance for a given instance in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RescheduleMaintenanceAsync(global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return RescheduleMaintenanceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Reschedule maintenance for a given instance in a given project and
+      /// location.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> RescheduleMaintenanceAsync(global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_RescheduleMaintenance, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override CloudRedisClient NewInstance(ClientBaseConfiguration configuration)
@@ -959,13 +1116,15 @@ namespace Google.Cloud.Redis.V1Beta1 {
       return grpc::ServerServiceDefinition.CreateBuilder()
           .AddMethod(__Method_ListInstances, serviceImpl.ListInstances)
           .AddMethod(__Method_GetInstance, serviceImpl.GetInstance)
+          .AddMethod(__Method_GetInstanceAuthString, serviceImpl.GetInstanceAuthString)
           .AddMethod(__Method_CreateInstance, serviceImpl.CreateInstance)
           .AddMethod(__Method_UpdateInstance, serviceImpl.UpdateInstance)
           .AddMethod(__Method_UpgradeInstance, serviceImpl.UpgradeInstance)
           .AddMethod(__Method_ImportInstance, serviceImpl.ImportInstance)
           .AddMethod(__Method_ExportInstance, serviceImpl.ExportInstance)
           .AddMethod(__Method_FailoverInstance, serviceImpl.FailoverInstance)
-          .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance).Build();
+          .AddMethod(__Method_DeleteInstance, serviceImpl.DeleteInstance)
+          .AddMethod(__Method_RescheduleMaintenance, serviceImpl.RescheduleMaintenance).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -977,6 +1136,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
     {
       serviceBinder.AddMethod(__Method_ListInstances, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.ListInstancesRequest, global::Google.Cloud.Redis.V1Beta1.ListInstancesResponse>(serviceImpl.ListInstances));
       serviceBinder.AddMethod(__Method_GetInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.GetInstanceRequest, global::Google.Cloud.Redis.V1Beta1.Instance>(serviceImpl.GetInstance));
+      serviceBinder.AddMethod(__Method_GetInstanceAuthString, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.GetInstanceAuthStringRequest, global::Google.Cloud.Redis.V1Beta1.InstanceAuthString>(serviceImpl.GetInstanceAuthString));
       serviceBinder.AddMethod(__Method_CreateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.CreateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateInstance));
       serviceBinder.AddMethod(__Method_UpdateInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.UpdateInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateInstance));
       serviceBinder.AddMethod(__Method_UpgradeInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.UpgradeInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.UpgradeInstance));
@@ -984,6 +1144,7 @@ namespace Google.Cloud.Redis.V1Beta1 {
       serviceBinder.AddMethod(__Method_ExportInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.ExportInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.ExportInstance));
       serviceBinder.AddMethod(__Method_FailoverInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.FailoverInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.FailoverInstance));
       serviceBinder.AddMethod(__Method_DeleteInstance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.DeleteInstanceRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteInstance));
+      serviceBinder.AddMethod(__Method_RescheduleMaintenance, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Redis.V1Beta1.RescheduleMaintenanceRequest, global::Google.LongRunning.Operation>(serviceImpl.RescheduleMaintenance));
     }
 
   }
