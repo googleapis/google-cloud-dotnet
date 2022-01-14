@@ -25,15 +25,15 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvYXV0b21sL3YxL29wZXJhdGlvbnMucHJvdG8SFmdv",
-            "b2dsZS5jbG91ZC5hdXRvbWwudjEaJGdvb2dsZS9jbG91ZC9hdXRvbWwvdjEv",
-            "ZGF0YXNldC5wcm90bxofZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9pby5wcm90",
-            "bxoiZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9tb2RlbC5wcm90bxotZ29vZ2xl",
-            "L2Nsb3VkL2F1dG9tbC92MS9tb2RlbF9ldmFsdWF0aW9uLnByb3RvGi9nb29n",
-            "bGUvY2xvdWQvYXV0b21sL3YxL3ByZWRpY3Rpb25fc2VydmljZS5wcm90bxok",
-            "Z29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9zZXJ2aWNlLnByb3RvGhtnb29nbGUv",
-            "cHJvdG9idWYvZW1wdHkucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8aF2dvb2dsZS9ycGMvc3RhdHVzLnByb3RvGhxnb29nbGUvYXBp",
-            "L2Fubm90YXRpb25zLnByb3RvIskHChFPcGVyYXRpb25NZXRhZGF0YRJJCg5k",
+            "b2dsZS5jbG91ZC5hdXRvbWwudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
+            "cHJvdG8aJGdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvZGF0YXNldC5wcm90bxof",
+            "Z29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9pby5wcm90bxoiZ29vZ2xlL2Nsb3Vk",
+            "L2F1dG9tbC92MS9tb2RlbC5wcm90bxotZ29vZ2xlL2Nsb3VkL2F1dG9tbC92",
+            "MS9tb2RlbF9ldmFsdWF0aW9uLnByb3RvGi9nb29nbGUvY2xvdWQvYXV0b21s",
+            "L3YxL3ByZWRpY3Rpb25fc2VydmljZS5wcm90bxokZ29vZ2xlL2Nsb3VkL2F1",
+            "dG9tbC92MS9zZXJ2aWNlLnByb3RvGhtnb29nbGUvcHJvdG9idWYvZW1wdHku",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2ds",
+            "ZS9ycGMvc3RhdHVzLnByb3RvIskHChFPcGVyYXRpb25NZXRhZGF0YRJJCg5k",
             "ZWxldGVfZGV0YWlscxgIIAEoCzIvLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEu",
             "RGVsZXRlT3BlcmF0aW9uTWV0YWRhdGFIABJUChRkZXBsb3lfbW9kZWxfZGV0",
             "YWlscxgYIAEoCzI0Lmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuRGVwbG95TW9k",
@@ -80,7 +80,7 @@ namespace Google.Cloud.AutoML.V1 {
             "b3VkXEF1dG9NbFxWMeoCGUdvb2dsZTo6Q2xvdWQ6OkF1dG9NTDo6VjFiBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.DatasetReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelEvaluationReflection.Descriptor, global::Google.Cloud.AutoML.V1.PredictionServiceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.DatasetReflection.Descriptor, global::Google.Cloud.AutoML.V1.IoReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelReflection.Descriptor, global::Google.Cloud.AutoML.V1.ModelEvaluationReflection.Descriptor, global::Google.Cloud.AutoML.V1.PredictionServiceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ServiceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.OperationMetadata), global::Google.Cloud.AutoML.V1.OperationMetadata.Parser, new[]{ "DeleteDetails", "DeployModelDetails", "UndeployModelDetails", "CreateModelDetails", "CreateDatasetDetails", "ImportDataDetails", "BatchPredictDetails", "ExportDataDetails", "ExportModelDetails", "ProgressPercent", "PartialFailures", "CreateTime", "UpdateTime" }, new[]{ "Details" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.DeleteOperationMetadata), global::Google.Cloud.AutoML.V1.DeleteOperationMetadata.Parser, null, null, null, null, null),

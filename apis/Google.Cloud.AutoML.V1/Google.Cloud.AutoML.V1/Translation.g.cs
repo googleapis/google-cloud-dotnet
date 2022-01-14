@@ -25,9 +25,9 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvYXV0b21sL3YxL3RyYW5zbGF0aW9uLnByb3RvEhZn",
-            "b29nbGUuY2xvdWQuYXV0b21sLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGidnb29nbGUvY2xvdWQvYXV0b21sL3YxL2RhdGFfaXRlbXMu",
-            "cHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iYgoaVHJhbnNs",
+            "b29nbGUuY2xvdWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
+            "LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGidnb29n",
+            "bGUvY2xvdWQvYXV0b21sL3YxL2RhdGFfaXRlbXMucHJvdG8iYgoaVHJhbnNs",
             "YXRpb25EYXRhc2V0TWV0YWRhdGESIQoUc291cmNlX2xhbmd1YWdlX2NvZGUY",
             "ASABKAlCA+BBAhIhChR0YXJnZXRfbGFuZ3VhZ2VfY29kZRgCIAEoCUID4EEC",
             "IksKHFRyYW5zbGF0aW9uRXZhbHVhdGlvbk1ldHJpY3MSEgoKYmxldV9zY29y",
@@ -42,7 +42,7 @@ namespace Google.Cloud.AutoML.V1 {
             "dXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx6gIZR29vZ2xlOjpD",
             "bG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AutoML.V1.DataItemsReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata), global::Google.Cloud.AutoML.V1.TranslationDatasetMetadata.Parser, new[]{ "SourceLanguageCode", "TargetLanguageCode" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics), global::Google.Cloud.AutoML.V1.TranslationEvaluationMetrics.Parser, new[]{ "BleuScore", "BaseBleuScore" }, null, null, null, null),

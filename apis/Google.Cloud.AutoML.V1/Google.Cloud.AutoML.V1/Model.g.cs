@@ -25,11 +25,11 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXV0b21sL3YxL21vZGVsLnByb3RvEhZnb29nbGUu",
-            "Y2xvdWQuYXV0b21sLnYxGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiJn",
-            "b29nbGUvY2xvdWQvYXV0b21sL3YxL2ltYWdlLnByb3RvGiFnb29nbGUvY2xv",
-            "dWQvYXV0b21sL3YxL3RleHQucHJvdG8aKGdvb2dsZS9jbG91ZC9hdXRvbWwv",
-            "djEvdHJhbnNsYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i8QgKBU1v",
+            "Y2xvdWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
+            "Ghlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiJnb29nbGUvY2xvdWQvYXV0",
+            "b21sL3YxL2ltYWdlLnByb3RvGiFnb29nbGUvY2xvdWQvYXV0b21sL3YxL3Rl",
+            "eHQucHJvdG8aKGdvb2dsZS9jbG91ZC9hdXRvbWwvdjEvdHJhbnNsYXRpb24u",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8i8QgKBU1v",
             "ZGVsElYKGnRyYW5zbGF0aW9uX21vZGVsX21ldGFkYXRhGA8gASgLMjAuZ29v",
             "Z2xlLmNsb3VkLmF1dG9tbC52MS5UcmFuc2xhdGlvbk1vZGVsTWV0YWRhdGFI",
             "ABJnCiNpbWFnZV9jbGFzc2lmaWNhdGlvbl9tb2RlbF9tZXRhZGF0YRgNIAEo",
@@ -61,7 +61,7 @@ namespace Google.Cloud.AutoML.V1 {
             "bGVcQ2xvdWRcQXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpW",
             "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ImageReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.ImageReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextReflection.Descriptor, global::Google.Cloud.AutoML.V1.TranslationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.Model), global::Google.Cloud.AutoML.V1.Model.Parser, new[]{ "TranslationModelMetadata", "ImageClassificationModelMetadata", "TextClassificationModelMetadata", "ImageObjectDetectionModelMetadata", "TextExtractionModelMetadata", "TextSentimentModelMetadata", "Name", "DisplayName", "DatasetId", "CreateTime", "UpdateTime", "DeploymentState", "Etag", "Labels" }, new[]{ "ModelMetadata" }, new[]{ typeof(global::Google.Cloud.AutoML.V1.Model.Types.DeploymentState) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

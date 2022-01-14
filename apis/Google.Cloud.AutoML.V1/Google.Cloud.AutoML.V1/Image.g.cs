@@ -25,11 +25,11 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvY2xvdWQvYXV0b21sL3YxL2ltYWdlLnByb3RvEhZnb29nbGUu",
-            "Y2xvdWQuYXV0b21sLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
-            "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGixnb29nbGUvY2xvdWQv",
-            "YXV0b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90bxorZ29vZ2xlL2Nsb3Vk",
-            "L2F1dG9tbC92MS9jbGFzc2lmaWNhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "Y2xvdWQuYXV0b21sLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3Rv",
+            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
+            "L3Jlc291cmNlLnByb3RvGixnb29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90",
+            "YXRpb25fc3BlYy5wcm90bxorZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS9jbGFz",
+            "c2lmaWNhdGlvbi5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
             "cm90byJyCiJJbWFnZUNsYXNzaWZpY2F0aW9uRGF0YXNldE1ldGFkYXRhEkwK",
             "E2NsYXNzaWZpY2F0aW9uX3R5cGUYASABKA4yKi5nb29nbGUuY2xvdWQuYXV0",
             "b21sLnYxLkNsYXNzaWZpY2F0aW9uVHlwZUID4EECIiUKI0ltYWdlT2JqZWN0",
@@ -53,7 +53,7 @@ namespace Google.Cloud.AutoML.V1 {
             "dG9NTC5WMcoCFkdvb2dsZVxDbG91ZFxBdXRvTWxcVjHqAhlHb29nbGU6OkNs",
             "b3VkOjpBdXRvTUw6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AutoML.V1.AnnotationSpecReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata), global::Google.Cloud.AutoML.V1.ImageObjectDetectionDatasetMetadata.Parser, null, null, null, null, null),
