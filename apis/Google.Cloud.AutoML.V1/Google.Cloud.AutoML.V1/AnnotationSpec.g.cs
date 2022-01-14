@@ -25,8 +25,8 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvYXV0b21sL3YxL2Fubm90YXRpb25fc3BlYy5wcm90",
-            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLWAQoOQW5u",
+            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRocZ29vZ2xlL2FwaS9hbm5vdGF0",
+            "aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLWAQoOQW5u",
             "b3RhdGlvblNwZWMSDAoEbmFtZRgBIAEoCRIUCgxkaXNwbGF5X25hbWUYAiAB",
             "KAkSFQoNZXhhbXBsZV9jb3VudBgJIAEoBTqIAepBhAEKJGF1dG9tbC5nb29n",
             "bGVhcGlzLmNvbS9Bbm5vdGF0aW9uU3BlYxJccHJvamVjdHMve3Byb2plY3R9",
@@ -37,7 +37,7 @@ namespace Google.Cloud.AutoML.V1 {
             "bG91ZC5BdXRvTUwuVjHKAhZHb29nbGVcQ2xvdWRcQXV0b01sXFYx6gIZR29v",
             "Z2xlOjpDbG91ZDo6QXV0b01MOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.AnnotationSpec), global::Google.Cloud.AutoML.V1.AnnotationSpec.Parser, new[]{ "Name", "DisplayName", "ExampleCount" }, null, null, null, null)
           }));

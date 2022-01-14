@@ -25,9 +25,9 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiFnb29nbGUvY2xvdWQvYXV0b21sL3YxL3RleHQucHJvdG8SFmdvb2dsZS5j",
-            "bG91ZC5hdXRvbWwudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJv",
-            "dG8aK2dvb2dsZS9jbG91ZC9hdXRvbWwvdjEvY2xhc3NpZmljYXRpb24ucHJv",
-            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ibAohVGV4dENsYXNz",
+            "bG91ZC5hdXRvbWwudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8a",
+            "H2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aK2dvb2dsZS9jbG91",
+            "ZC9hdXRvbWwvdjEvY2xhc3NpZmljYXRpb24ucHJvdG8ibAohVGV4dENsYXNz",
             "aWZpY2F0aW9uRGF0YXNldE1ldGFkYXRhEkcKE2NsYXNzaWZpY2F0aW9uX3R5",
             "cGUYASABKA4yKi5nb29nbGUuY2xvdWQuYXV0b21sLnYxLkNsYXNzaWZpY2F0",
             "aW9uVHlwZSJqCh9UZXh0Q2xhc3NpZmljYXRpb25Nb2RlbE1ldGFkYXRhEkcK",
@@ -42,7 +42,7 @@ namespace Google.Cloud.AutoML.V1 {
             "Q2xvdWRcQXV0b01sXFYx6gIZR29vZ2xlOjpDbG91ZDo6QXV0b01MOjpWMWIG",
             "cHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AutoML.V1.ClassificationReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata), global::Google.Cloud.AutoML.V1.TextClassificationDatasetMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata), global::Google.Cloud.AutoML.V1.TextClassificationModelMetadata.Parser, new[]{ "ClassificationType" }, null, null, null, null),

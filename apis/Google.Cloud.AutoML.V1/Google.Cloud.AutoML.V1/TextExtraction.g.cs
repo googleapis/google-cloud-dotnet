@@ -25,9 +25,9 @@ namespace Google.Cloud.AutoML.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvYXV0b21sL3YxL3RleHRfZXh0cmFjdGlvbi5wcm90",
-            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRopZ29vZ2xlL2Nsb3VkL2F1dG9t",
-            "bC92MS90ZXh0X3NlZ21lbnQucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8idAoYVGV4dEV4dHJhY3Rpb25Bbm5vdGF0aW9uEjsKDHRleHRf",
+            "bxIWZ29vZ2xlLmNsb3VkLmF1dG9tbC52MRocZ29vZ2xlL2FwaS9hbm5vdGF0",
+            "aW9ucy5wcm90bxopZ29vZ2xlL2Nsb3VkL2F1dG9tbC92MS90ZXh0X3NlZ21l",
+            "bnQucHJvdG8idAoYVGV4dEV4dHJhY3Rpb25Bbm5vdGF0aW9uEjsKDHRleHRf",
             "c2VnbWVudBgDIAEoCzIjLmdvb2dsZS5jbG91ZC5hdXRvbWwudjEuVGV4dFNl",
             "Z21lbnRIABINCgVzY29yZRgBIAEoAkIMCgphbm5vdGF0aW9uIpICCh9UZXh0",
             "RXh0cmFjdGlvbkV2YWx1YXRpb25NZXRyaWNzEg4KBmF1X3ByYxgBIAEoAhJy",
@@ -41,7 +41,7 @@ namespace Google.Cloud.AutoML.V1 {
             "b21sqgIWR29vZ2xlLkNsb3VkLkF1dG9NTC5WMcoCFkdvb2dsZVxDbG91ZFxB",
             "dXRvTWxcVjHqAhlHb29nbGU6OkNsb3VkOjpBdXRvTUw6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AutoML.V1.TextSegmentReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionAnnotation), global::Google.Cloud.AutoML.V1.TextExtractionAnnotation.Parser, new[]{ "TextSegment", "Score" }, new[]{ "Annotation" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics), global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Parser, new[]{ "AuPrc", "ConfidenceMetricsEntries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry), global::Google.Cloud.AutoML.V1.TextExtractionEvaluationMetrics.Types.ConfidenceMetricsEntry.Parser, new[]{ "ConfidenceThreshold", "Recall", "Precision", "F1Score" }, null, null, null, null)})
