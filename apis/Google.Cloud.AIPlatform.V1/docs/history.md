@@ -1,5 +1,18 @@
 # Version history
 
+## Version 1.2.0, released 2022-01-17
+
+### New features
+
+- Add enable_private_service_connect field to Endpoint ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+- Add id field to DeployedModel ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+- Add service_attachment field to PrivateEndpoints ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+- Add endpoint_id to CreateEndpointRequest and method signature to CreateEndpoint ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+- Add method signature to CreateFeatureStore, CreateEntityType, CreateFeature ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+- Add network and enable_private_service_connect to IndexEndpoint ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+- Add service_attachment to IndexPrivateEndpoints ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+- Add stratified_split field to training_pipeline InputDataConfig ([commit 9ca7ec1](https://github.com/googleapis/google-cloud-dotnet/commit/9ca7ec1e363e1c737c3bfc8d6cc94a62581f4873))
+
 ## Version 1.1.0, released 2021-11-18
 
 - [Commit 0d5a6b7](https://github.com/googleapis/google-cloud-dotnet/commit/0d5a6b7):
