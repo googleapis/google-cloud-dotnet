@@ -182,7 +182,7 @@
     },
     {
       "id": "Google.Cloud.ArtifactRegistry.V1Beta2",
-      "version": "1.0.0-beta03",
+      "version": "1.0.0-beta04",
       "type": "grpc",
       "productName": "Artifact Registry",
       "productUrl": "https://cloud.google.com/artifact-registry",
@@ -193,8 +193,8 @@
         "containers"
       ],
       "dependencies": {
-        "Google.Cloud.Iam.V1": "2.2.0",
-        "Google.LongRunning": "2.2.0"
+        "Google.Cloud.Iam.V1": "2.3.0",
+        "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
       "protoPath": "google/devtools/artifactregistry/v1beta2",
