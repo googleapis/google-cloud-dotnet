@@ -100,7 +100,7 @@
     },
     {
       "id": "Google.Cloud.AIPlatform.V1",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "type": "grpc",
       "productName": "Cloud AI Platform",
       "productUrl": "https://cloud.google.com/ai-platform/docs/",
@@ -110,9 +110,9 @@
         "ml"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.6.0",
         "Google.LongRunning": "2.3.0",
-        "Grpc.Core": "2.38.1"
+        "Grpc.Core": "2.41.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/aiplatform/v1",
