@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Metastore.V1Alpha/Google.Cloud.Metastore.V1Alpha.Snippets
     - source: /google/cloud/metastore/v1alpha/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Metastore.V1Alpha/gapic_metadata.json
+
+api-name: Google.Cloud.Metastore.V1Alpha

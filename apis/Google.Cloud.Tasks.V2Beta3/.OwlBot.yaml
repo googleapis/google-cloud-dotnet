@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Tasks.V2Beta3/Google.Cloud.Tasks.V2Beta3.Snippets
     - source: /google/cloud/tasks/v2beta3/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Tasks.V2Beta3/gapic_metadata.json
+
+api-name: Google.Cloud.Tasks.V2Beta3

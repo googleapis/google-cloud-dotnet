@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Workflows.V1Beta/Google.Cloud.Workflows.V1Beta.Snippets
     - source: /google/cloud/workflows/v1beta/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Workflows.V1Beta/gapic_metadata.json
+
+api-name: Google.Cloud.Workflows.V1Beta

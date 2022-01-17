@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Analytics.Admin.V1Alpha/Google.Analytics.Admin.V1Alpha.Snippets
     - source: /google/analytics/admin/v1alpha/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Analytics.Admin.V1Alpha/gapic_metadata.json
+
+api-name: Google.Analytics.Admin.V1Alpha

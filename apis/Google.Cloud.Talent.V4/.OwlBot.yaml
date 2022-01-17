@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.Talent.V4/Google.Cloud.Talent.V4.Snippets
     - source: /google/cloud/talent/v4/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.Talent.V4/gapic_metadata.json
+
+api-name: Google.Cloud.Talent.V4

@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.BigQuery.Reservation.V1/Google.Cloud.BigQuery.Reservation.V1.Snippets
     - source: /google/cloud/bigquery/reservation/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.BigQuery.Reservation.V1/gapic_metadata.json
+
+api-name: Google.Cloud.BigQuery.Reservation.V1

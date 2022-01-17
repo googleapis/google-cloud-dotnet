@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Apps.Script.Type/Google.Apps.Script.Type.Snippets
     - source: /google/apps/script/type/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Apps.Script.Type/gapic_metadata.json
+
+api-name: Google.Apps.Script.Type

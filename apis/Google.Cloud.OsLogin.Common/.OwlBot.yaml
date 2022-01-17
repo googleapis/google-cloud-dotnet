@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.OsLogin.Common/Google.Cloud.OsLogin.Common.Snippets
     - source: /google/cloud/oslogin/common/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.OsLogin.Common/gapic_metadata.json
+
+api-name: Google.Cloud.OsLogin.Common

@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.NetworkManagement.V1/Google.Cloud.NetworkManagement.V1.Snippets
     - source: /google/cloud/networkmanagement/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.NetworkManagement.V1/gapic_metadata.json
+
+api-name: Google.Cloud.NetworkManagement.V1
