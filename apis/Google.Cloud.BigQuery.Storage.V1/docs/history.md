@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.6.0, released 2022-01-17
+
+### New features
+
+- Add write_mode support for BigQuery Storage Write API v1 ([commit 129c391](https://github.com/googleapis/google-cloud-dotnet/commit/129c391394ff748a5f9ae34cd0ee68acf4acc421))
+
 ## Version 2.5.0, released 2021-09-24
 
 - [Commit d200346](https://github.com/googleapis/google-cloud-dotnet/commit/d200346): fix: add missing read api retry setting on SplitReadStream
