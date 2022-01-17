@@ -64,7 +64,7 @@ namespace Google.Cloud.Tools.ReleaseManager.History
         internal IEnumerable<ReleaseNoteElement> GetReleaseNoteElements()
         {
             // Use the override if one has been provided for this commit, or the commit message otherwise.
-            string message = CommitOverrides.HashPrefixToMessageMap.GetValueOrDefault(Hash, _libGit2Commit.Message);
+            string message = CommitOverrides.HashPrefixToMessageMap.GetValueOrDefault(HashPrefix, _libGit2Commit.Message);
 
             var messageLines = SplitCommitMessage(message);
 
