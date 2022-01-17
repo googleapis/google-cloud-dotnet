@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2022-01-17
+
+### New features
+
+- Define Datastore -> Firestore in Datastore mode migration long running operation metadata ([commit f182b74](https://github.com/googleapis/google-cloud-dotnet/commit/f182b7447ea2c831093b3bb5c5abf3fe5f829f39))
+
 ## Version 1.3.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
