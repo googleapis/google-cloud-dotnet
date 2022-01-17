@@ -1,5 +1,22 @@
 # Version history
 
+## Version 1.0.0-alpha10, released 2022-01-17
+
+### Bug fixes
+
+- **BREAKING CHANGE** Remove `GetEnhancedMeasurementSettings`, `UpdateEnhancedMeasurementSettingsRequest`, `UpdateEnhancedMeasurementSettingsRequest` operations from the API ([commit 2a70fba](https://github.com/googleapis/google-cloud-dotnet/commit/2a70fbab54fb4c9fdac5b742a382e0f17b73d853))
+
+### New features
+
+- Add the `AcknowledgeUserDataCollection` operation which acknowledges the terms of user data collection for the specified property ([commit 2a70fba](https://github.com/googleapis/google-cloud-dotnet/commit/2a70fbab54fb4c9fdac5b742a382e0f17b73d853))
+- Add the new resource type `DataStream`, which is planned to eventually replace `WebDataStream`, `IosAppDataStream`, `AndroidAppDataStream` resources ([commit 2a70fba](https://github.com/googleapis/google-cloud-dotnet/commit/2a70fbab54fb4c9fdac5b742a382e0f17b73d853))
+- Add `CreateDataStream`, `DeleteDataStream`, `UpdateDataStream`, `ListDataStreams` operations to support the new `DataStream` resource ([commit 2a70fba](https://github.com/googleapis/google-cloud-dotnet/commit/2a70fbab54fb4c9fdac5b742a382e0f17b73d853))
+- Add `DISPLAY_VIDEO_360_ADVERTISER_LINK`,  `DISPLAY_VIDEO_360_ADVERTISER_LINK_PROPOSAL` fields to `ChangeHistoryResourceType` enum ([commit 2a70fba](https://github.com/googleapis/google-cloud-dotnet/commit/2a70fbab54fb4c9fdac5b742a382e0f17b73d853))
+- Add the `account` field to the `Property` type ([commit 2a70fba](https://github.com/googleapis/google-cloud-dotnet/commit/2a70fbab54fb4c9fdac5b742a382e0f17b73d853))
+
+### Documentation improvements
+
+- Update the documentation with a new list of valid values for `UserLink.direct_roles` field ([commit 2a70fba](https://github.com/googleapis/google-cloud-dotnet/commit/2a70fbab54fb4c9fdac5b742a382e0f17b73d853))
 ## Version 1.0.0-alpha09, released 2021-09-23
 
 - [Commit 31dfcff](https://github.com/googleapis/google-cloud-dotnet/commit/31dfcff):
