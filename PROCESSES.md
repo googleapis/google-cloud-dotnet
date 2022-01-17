@@ -155,7 +155,7 @@ GitHub are the ones we want to release".
 
 **Create the release PR**
 
-1. Make sure the `master` branch is up-to-date (as that's what
+1. Make sure the `main` branch is up-to-date (as that's what
 `prepare-release.sh` uses to determine the current versions)
 and create a new branch from that. If you want to use the `compare`
 option later, run `git fetch --all --tags -f` as well to make sure
@@ -223,8 +223,8 @@ beforehand. The access token should include the `repo` scope.
 Sample session when releasing Google.Cloud.Speech.V1:
 
 ```text
-$ git checkout master
-$ git pull upstream master
+$ git checkout main
+$ git pull upstream main
 $ git fetch --all --tags -f
 $ git checkout -b release-speech
 $ ./prepare-release.sh set-version Google.Cloud.Speech.V1 2.0.0-beta03
@@ -239,8 +239,8 @@ Equivalent process using `increment-version`, assuming the current
 version is 2.0.0-beta02:
 
 ```text
-$ git checkout master
-$ git pull upstream master
+$ git checkout main
+$ git pull upstream main
 $ git fetch --all --tags -f
 $ git checkout -b release-speech
 $ ./prepare-release.sh increment-version Google.Cloud.Speech.V1
