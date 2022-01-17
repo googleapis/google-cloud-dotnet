@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.9.0, released 2022-01-17
+
+### New features
+
+- Added the display name of the current page in webhook requests ([commit 889b18e](https://github.com/googleapis/google-cloud-dotnet/commit/889b18e0efeae3a6095d46813d436b36f9d190d4))
+
 ## Version 1.8.0, released 2021-12-07
 
 - [Commit 2c44579](https://github.com/googleapis/google-cloud-dotnet/commit/2c44579):
