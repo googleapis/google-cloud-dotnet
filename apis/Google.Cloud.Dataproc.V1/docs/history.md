@@ -1,5 +1,13 @@
 # Version history
 
+## Version 3.4.0, released 2022-01-17
+
+### New features
+
+- Spark runtime versioning for Spark batches ([commit b6189ae](https://github.com/googleapis/google-cloud-dotnet/commit/b6189aeaa81e283d7eb9d0cd1652f5b594db2d0a))
+- Custom image containers for Spark batches ([commit b6189ae](https://github.com/googleapis/google-cloud-dotnet/commit/b6189aeaa81e283d7eb9d0cd1652f5b594db2d0a))
+- Auto-diagnostic of failed Spark batches ([commit b6189ae](https://github.com/googleapis/google-cloud-dotnet/commit/b6189aeaa81e283d7eb9d0cd1652f5b594db2d0a))
+- Local SSD NVME interface support for GCE clusters ([commit b6189ae](https://github.com/googleapis/google-cloud-dotnet/commit/b6189aeaa81e283d7eb9d0cd1652f5b594db2d0a))
 ## Version 3.3.0, released 2021-10-14
 
 - [Commit 7c1e526](https://github.com/googleapis/google-cloud-dotnet/commit/7c1e526): feat: add Dataproc Serverless for Spark Batches API
