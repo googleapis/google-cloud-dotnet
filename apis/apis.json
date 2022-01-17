@@ -1266,7 +1266,7 @@
       "productUrl": "https://firebase.google.com",
       "targetFrameworks": "netstandard2.0;net461",
       "testTargetFrameworks": "netcoreapp2.1;net461",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Firestore Admin API.",
       "tags": [
@@ -1275,9 +1275,9 @@
         "admin"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.LongRunning": "2.2.0",
-        "Grpc.Core": "2.38.1"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.6.0",
+        "Google.LongRunning": "2.3.0",
+        "Grpc.Core": "2.41.0"
       },
       "shortName": "firestore"
     },
