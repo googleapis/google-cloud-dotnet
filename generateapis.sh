@@ -126,6 +126,7 @@ generate_microgenerator() {
 
   # Remove the newly generated standalone snippets until they are ready for surfacing.
   rm -rf $API_TMP_DIR/$1.StandaloneSnippets
+  rm -rf $API_TMP_DIR/$1.GeneratedSnippets
 
   # We generate our own project files
   rm $(find tmp -name '*.csproj')
