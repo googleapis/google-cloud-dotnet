@@ -385,12 +385,12 @@
       "protoPath": "google/cloud/bigquery/storage/v1",
       "productName": "Google BigQuery Storage",
       "productUrl": "https://cloud.google.com/bigquery/docs/reference/storage/",
-      "version": "2.5.0",
+      "version": "2.6.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the BigQuery Storage API.",
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Grpc.Core": "2.38.1"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.6.0",
+        "Grpc.Core": "2.41.0"
       },
       "tags": [
         "BigQuery"
