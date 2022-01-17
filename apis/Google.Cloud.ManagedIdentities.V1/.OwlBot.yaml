@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.ManagedIdentities.V1/Google.Cloud.ManagedIdentities.V1.Snippets
     - source: /google/cloud/managedidentities/v1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.ManagedIdentities.V1/gapic_metadata.json
+
+api-name: Google.Cloud.ManagedIdentities.V1

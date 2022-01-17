@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Cloud.OrgPolicy.V2/Google.Cloud.OrgPolicy.V2.Snippets
     - source: /google/cloud/orgpolicy/v2/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Cloud.OrgPolicy.V2/gapic_metadata.json
+
+api-name: Google.Cloud.OrgPolicy.V2

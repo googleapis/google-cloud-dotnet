@@ -27,3 +27,5 @@ deep-copy-regex:
       dest: /owl-bot-staging/Google.Area120.Tables.V1Alpha1/Google.Area120.Tables.V1Alpha1.Snippets
     - source: /google/area120/tables/v1alpha1/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/Google.Area120.Tables.V1Alpha1/gapic_metadata.json
+
+api-name: Google.Area120.Tables.V1Alpha1
