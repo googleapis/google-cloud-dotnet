@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2022-01-17
+
+### New features
+
+- EU Regions and Support With Sovereign Controls ([commit 0e8c59f](https://github.com/googleapis/google-cloud-dotnet/commit/0e8c59f05a08b1dbf518900bffc0e1f83894aaa2))
+
 ## Version 1.0.0-beta07, released 2021-09-24
 
 - [Commit aff9821](https://github.com/googleapis/google-cloud-dotnet/commit/aff9821):
