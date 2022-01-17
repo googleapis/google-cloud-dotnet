@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.5.0, released 2022-01-17
+
+### New features
+
+- Increase the logical timeout (retry deadline) to 5 minutes ([commit b56182a](https://github.com/googleapis/google-cloud-dotnet/commit/b56182a312da47b8b8b2e8aa74f849bc2ac3e844))
+
 ## Version 1.4.0, released 2021-09-24
 
 - [Commit 7c0622f](https://github.com/googleapis/google-cloud-dotnet/commit/7c0622f):
