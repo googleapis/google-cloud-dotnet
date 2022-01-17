@@ -1,5 +1,13 @@
 # Version history
 
+## Version 4.4.0, released 2022-01-17
+
+### Bug fixes
+
+- Adds AddGoogleDiagnosticsForAspNetCore empty overload. ([commit 18ecd5c](https://github.com/googleapis/google-cloud-dotnet/commit/18ecd5cbc94b7cab721e2cbae39444e5ba3615fb))
+ - To avoid ambiguity, which results in a compiler error, when not specifying any of the optional parameters for the other overloads.
+ - Fixes [issue 7633](https://github.com/googleapis/google-cloud-dotnet/issues/7633)
+
 ## Version 4.3.1, released 2021-11-09
 
 No API surface changes; just dependency updates.
