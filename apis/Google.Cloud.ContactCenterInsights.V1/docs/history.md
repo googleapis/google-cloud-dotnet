@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.2.0, released 2022-01-17
+
+### New features
+
+- New API for the View resource ([commit 0810531](https://github.com/googleapis/google-cloud-dotnet/commit/08105316df285d5adb1f95a9213f420b6783cc49))
+
 ## Version 1.1.0, released 2021-12-07
 
 - [Commit c917530](https://github.com/googleapis/google-cloud-dotnet/commit/c917530): feat: Add WriteDisposition to BigQuery Export API
