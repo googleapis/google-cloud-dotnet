@@ -562,19 +562,12 @@ api-name: {api.Id}
             var version = api.StructuredVersion;
             string versionBasedReleaseLevel =
                 // Version "1.0.0-beta00" hasn't been released at all, so we don't have a package to talk about.
-                (version.Prerelease ?? "").EndsWith("00") && version.Major == 1 && version.Minor == 0 ? "none"
+                (version.Prerelease ?? "").EndsWith("00") && version.Major == 1 && version.Minor == 0 ? "unreleased"
                 // If it's not a prerelease now, or it's ever got to 1.0, it's generally "ga"
                 : version.Major > 1 || version.Minor > 0 || version.Prerelease == null ? "stable"
                 : "preview";
 
             string releaseLevel = api.ReleaseLevelOverride ?? versionBasedReleaseLevel;
-            if (releaseLevel == "none")
-            {
-                // If we have temporarily set the version to (say) beta01 and then reset it to beta00,
-                // make sure we don't have an obsolete metadata file.
-                File.Delete(metadataPath);
-                return;
-            }
             var metadata = new JObject
             {
                 ["distribution_name"] = api.Id,
