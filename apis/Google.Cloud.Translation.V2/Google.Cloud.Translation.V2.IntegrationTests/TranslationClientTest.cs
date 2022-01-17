@@ -23,6 +23,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
     public class TranslationClientTest
     {
         private static readonly string LargeText = LoadResource("independence.txt");
+        private const string ExpectedTranslationContent = "dans le cours des";
         private const int ApiLimit = 30 * 1024;
         private static readonly string VeryLargeText = string.Join("\n", Enumerable.Repeat(LargeText, ApiLimit / LargeText.Length));
 
@@ -39,7 +40,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         {
             var client = TranslationClient.Create();
             var translation = client.TranslateText(LargeText, LanguageCodes.French);
-            Assert.Contains("au cours d", translation.TranslatedText);
+            Assert.Contains(ExpectedTranslationContent, translation.TranslatedText);
             Assert.Equal(LargeText, translation.OriginalText);
             Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
             Assert.Equal(LanguageCodes.English, translation.DetectedSourceLanguage);
@@ -51,7 +52,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
         {
             var client = TranslationClient.Create();
             var translation = client.TranslateText(VeryLargeText, LanguageCodes.French);
-            Assert.Contains("au cours d", translation.TranslatedText);
+            Assert.Contains(ExpectedTranslationContent, translation.TranslatedText);
             Assert.Equal(VeryLargeText, translation.OriginalText);
             Assert.Equal(LanguageCodes.French, translation.TargetLanguage);
             Assert.Equal(LanguageCodes.English, translation.DetectedSourceLanguage);
