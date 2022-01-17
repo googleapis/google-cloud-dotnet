@@ -1,5 +1,19 @@
 # Version history
 
+## Version 4.4.0, released 2022-01-17
+
+### Bug fixes
+
+- Adds AddGoogleDiagnostics empty overload. ([commit d5c3963](https://github.com/googleapis/google-cloud-dotnet/commit/d5c396346dae01654d869f3cf82fcf71e2483b1f))
+ - To avoid ambiguity, which results in a compiler error, when not specifying any of the optional parameters for the other overloads.
+ - Fixes [issue 7633](https://github.com/googleapis/google-cloud-dotnet/issues/7633)
+- Use service version instead of name ([commit 437e6c4](https://github.com/googleapis/google-cloud-dotnet/commit/437e6c418146ff2b529dfb612dc5b284cf5427d9))
+
+### New features
+
+- Custom labels for outgoing traces. ([commit d8d213c](https://github.com/googleapis/google-cloud-dotnet/commit/d8d213ce0d2c42b62c6935de3f00db4162b85fe9))
+ - Closes [issue 7430](https://github.com/googleapis/google-cloud-dotnet/issues/7430)
+
 ## Version 4.3.1, released 2021-11-09
 
 - [Commit b1318ac](https://github.com/googleapis/google-cloud-dotnet/commit/b1318ac):
