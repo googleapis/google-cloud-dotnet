@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta07, released 2022-01-17
+
+### Bug fixes
+
+- [Cloud Memorystore for Redis] Add missing fields for TLS and Maintenance Window features ([commit 7dc9e4c](https://github.com/googleapis/google-cloud-dotnet/commit/7dc9e4c2ddf74ef3ab49b137df07af8c9a57a517))
+
 ## Version 2.0.0-beta06, released 2021-11-10
 
 - [Commit bdfaff0](https://github.com/googleapis/google-cloud-dotnet/commit/bdfaff0): feat: Support Multiple Read Replicas when creating Instance
