@@ -1,5 +1,20 @@
 # Version history
 
+## Version 3.9.0, released 2022-01-17
+
+### New features
+
+- Added export documentation method ([commit 46cbdd5](https://github.com/googleapis/google-cloud-dotnet/commit/46cbdd55de24ce6ca9560c16458322c4bbf16ab5))
+- Added filter in list documentations request ([commit 46cbdd5](https://github.com/googleapis/google-cloud-dotnet/commit/46cbdd55de24ce6ca9560c16458322c4bbf16ab5))
+- Added option to import custom metadata from Google Cloud Storage in reload document request ([commit 46cbdd5](https://github.com/googleapis/google-cloud-dotnet/commit/46cbdd55de24ce6ca9560c16458322c4bbf16ab5))
+- Added option to apply partial update to the smart messaging allowlist in reload document request ([commit 46cbdd5](https://github.com/googleapis/google-cloud-dotnet/commit/46cbdd55de24ce6ca9560c16458322c4bbf16ab5))
+- Added filter in list knowledge bases request ([commit 46cbdd5](https://github.com/googleapis/google-cloud-dotnet/commit/46cbdd55de24ce6ca9560c16458322c4bbf16ab5))
+- Removed OPTIONAL for speech model variant ([commit 853d986](https://github.com/googleapis/google-cloud-dotnet/commit/853d98625a880a54c32b07d87f47924a7d65f84e))
+
+### Documentation improvements
+
+- Added more docs for speech model variant and improved docs format for participant ([commit 853d986](https://github.com/googleapis/google-cloud-dotnet/commit/853d98625a880a54c32b07d87f47924a7d65f84e))
+
 ## Version 3.8.0, released 2021-11-18
 
 - [Commit d033f77](https://github.com/googleapis/google-cloud-dotnet/commit/d033f77): feat: support document metadata filter in article suggestion and smart reply model in human agent assistant
