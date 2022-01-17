@@ -527,6 +527,8 @@ deep-copy-regex:
       dest: /owl-bot-staging/{api.Id}/{api.Id}.Snippets
     - source: /{api.ProtoPath}/.*-csharp/gapic_metadata.json
       dest: /owl-bot-staging/{api.Id}/gapic_metadata.json
+
+api-name: {api.Id}
 ";
             File.WriteAllText(owlBotConfigFile, content);
 
