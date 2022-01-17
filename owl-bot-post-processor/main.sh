@@ -74,6 +74,7 @@ copy_one_api() {
 
   # Remove the newly generated standalone snippets until they are ready for surfacing.
   rm -rf "$STAGING_DIR/$1.StandaloneSnippets"
+  rm -rf "$STAGING_DIR/$1.GeneratedSnippets"
 
   # We generate our own project files
   rm -f $(find "$STAGING_DIR" -name '*.csproj')
