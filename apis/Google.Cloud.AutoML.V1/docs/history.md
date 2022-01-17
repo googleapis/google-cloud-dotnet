@@ -1,5 +1,17 @@
 # Version history
 
+## Version 2.5.0, released 2022-01-17
+
+### Bug fixes
+
+- Proto field markdown comment for the display_name field in annotation_payload.proto to point the correct public v1/ version ([commit c26a158](https://github.com/googleapis/google-cloud-dotnet/commit/c26a15832ac35576ec09cf8f54e18170443dd8bf))
+- Add back java_multiple_files option to the text_sentiment.proto to match with the previous published version of text_sentiment proto ([commit c26a158](https://github.com/googleapis/google-cloud-dotnet/commit/c26a15832ac35576ec09cf8f54e18170443dd8bf))
+- **BREAKING CHANGE** One of the fields now have field_behavior as REQUIRED in cloud/automl/v1 service definition. ([commit b1398f1](https://github.com/googleapis/google-cloud-dotnet/commit/b1398f19035a33d46b0574b486aaf6d80fe86b6e))
+
+### New features
+
+- Publish updated protos for cloud/automl/v1 service ([commit b1398f1](https://github.com/googleapis/google-cloud-dotnet/commit/b1398f19035a33d46b0574b486aaf6d80fe86b6e))
+
 ## Version 2.4.0, released 2021-12-07
 
 - [Commit f182ed9](https://github.com/googleapis/google-cloud-dotnet/commit/f182ed9): docs: fix docstring formatting
