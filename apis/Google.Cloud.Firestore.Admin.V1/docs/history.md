@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0, released 2022-01-17
+
+### New features
+
+- Update client libraries to support Database operations ([commit ba21870](https://github.com/googleapis/google-cloud-dotnet/commit/ba2187023f67d902d54ec8c6a3d16b0c934873f8))
+
 ## Version 2.3.0, released 2021-08-31
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
