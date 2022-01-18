@@ -924,7 +924,7 @@
       "protoPath": "google/devtools/containeranalysis/v1",
       "productName": "Google Container Analysis",
       "productUrl": "https://cloud.google.com/container-registry/docs/container-analysis/",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "description": "Recommended Google client library to access the Google Cloud Container Analysis API.",
       "tags": [
@@ -934,10 +934,10 @@
         "grafeas"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Google.Cloud.Iam.V1": "2.2.0",
+        "Google.Api.Gax.Grpc.GrpcCore": "3.6.0",
+        "Google.Cloud.Iam.V1": "2.3.0",
         "Grafeas.V1": "project",
-        "Grpc.Core": "2.38.1"
+        "Grpc.Core": "2.41.0"
       },
       "shortName": "containeranalysis"
     },
@@ -3500,7 +3500,7 @@
       "protoPath": "grafeas/v1",
       "productName": "Grafeas",
       "productUrl": "https://grafeas.io/",
-      "version": "2.3.0",
+      "version": "2.4.0",
       "type": "grpc",
       "description": "Recommended client library to access Grafeas, an open artifact metadata API to audit and govern your software supply chain.",
       "tags": [
@@ -3510,8 +3510,8 @@
         "grafeas"
       ],
       "dependencies": {
-        "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
-        "Grpc.Core": "2.38.1"
+        "Google.Api.Gax.Grpc.GrpcCore": "3.6.0",
+        "Grpc.Core": "2.41.0"
       },
       "shortName": "containeranalysis"
     }
