@@ -20,7 +20,7 @@ namespace Google.Cloud.Translation.V2.IntegrationTests
     public class AdvancedTranslationClientTest
     {
         private static readonly string LargeText = TranslationClientTest.LoadResource("independence.txt");
-        private const string ExpectedTranslationContent = "dans le cours des";
+        private const string ExpectedTranslationContent = "cours des";
         private const int ApiLimit = 30 * 1024;
         private static readonly string VeryLargeText = string.Join("\n", Enumerable.Repeat(LargeText, ApiLimit / LargeText.Length));
 
