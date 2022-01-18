@@ -1,0 +1,195 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.cloud.retail.v2",
+  "libraryPackage": "Google.Cloud.Retail.V2",
+  "services": {
+    "CatalogService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CatalogServiceClient",
+          "rpcs": {
+            "GetDefaultBranch": {
+              "methods": [
+                "GetDefaultBranch",
+                "GetDefaultBranchAsync"
+              ]
+            },
+            "ListCatalogs": {
+              "methods": [
+                "ListCatalogs",
+                "ListCatalogsAsync"
+              ]
+            },
+            "SetDefaultBranch": {
+              "methods": [
+                "SetDefaultBranch",
+                "SetDefaultBranchAsync"
+              ]
+            },
+            "UpdateCatalog": {
+              "methods": [
+                "UpdateCatalog",
+                "UpdateCatalogAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "CompletionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "CompletionServiceClient",
+          "rpcs": {
+            "CompleteQuery": {
+              "methods": [
+                "CompleteQuery",
+                "CompleteQueryAsync"
+              ]
+            },
+            "ImportCompletionData": {
+              "methods": [
+                "ImportCompletionData",
+                "ImportCompletionDataAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "PredictionService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "PredictionServiceClient",
+          "rpcs": {
+            "Predict": {
+              "methods": [
+                "Predict",
+                "PredictAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "ProductService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "ProductServiceClient",
+          "rpcs": {
+            "AddFulfillmentPlaces": {
+              "methods": [
+                "AddFulfillmentPlaces",
+                "AddFulfillmentPlacesAsync"
+              ]
+            },
+            "CreateProduct": {
+              "methods": [
+                "CreateProduct",
+                "CreateProductAsync"
+              ]
+            },
+            "DeleteProduct": {
+              "methods": [
+                "DeleteProduct",
+                "DeleteProductAsync"
+              ]
+            },
+            "GetProduct": {
+              "methods": [
+                "GetProduct",
+                "GetProductAsync"
+              ]
+            },
+            "ImportProducts": {
+              "methods": [
+                "ImportProducts",
+                "ImportProductsAsync"
+              ]
+            },
+            "ListProducts": {
+              "methods": [
+                "ListProducts",
+                "ListProductsAsync"
+              ]
+            },
+            "RemoveFulfillmentPlaces": {
+              "methods": [
+                "RemoveFulfillmentPlaces",
+                "RemoveFulfillmentPlacesAsync"
+              ]
+            },
+            "SetInventory": {
+              "methods": [
+                "SetInventory",
+                "SetInventoryAsync"
+              ]
+            },
+            "UpdateProduct": {
+              "methods": [
+                "UpdateProduct",
+                "UpdateProductAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "SearchService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "SearchServiceClient",
+          "rpcs": {
+            "Search": {
+              "methods": [
+                "Search",
+                "SearchAsync"
+              ]
+            }
+          }
+        }
+      }
+    },
+    "UserEventService": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "UserEventServiceClient",
+          "rpcs": {
+            "CollectUserEvent": {
+              "methods": [
+                "CollectUserEvent",
+                "CollectUserEventAsync"
+              ]
+            },
+            "ImportUserEvents": {
+              "methods": [
+                "ImportUserEvents",
+                "ImportUserEventsAsync"
+              ]
+            },
+            "PurgeUserEvents": {
+              "methods": [
+                "PurgeUserEvents",
+                "PurgeUserEventsAsync"
+              ]
+            },
+            "RejoinUserEvents": {
+              "methods": [
+                "RejoinUserEvents",
+                "RejoinUserEventsAsync"
+              ]
+            },
+            "WriteUserEvent": {
+              "methods": [
+                "WriteUserEvent",
+                "WriteUserEventAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
