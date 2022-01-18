@@ -1,5 +1,8 @@
 # Version history
 
+## Version 1.0.0-beta08, released 2022-01-18
+
+No API changes; just dependency updates.
 ## Version 1.0.0-beta07, released 2021-11-08
 
 - [Commit ebf6fab](https://github.com/googleapis/google-cloud-dotnet/commit/ebf6fab):
