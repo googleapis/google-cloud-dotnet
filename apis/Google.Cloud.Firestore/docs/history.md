@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.5.0, released 2022-01-18
+
+No API surface changes; just dependency updates.
+
 ## Version 2.4.0, released 2021-05-05
 
 - [Commit 6f8b4e0](https://github.com/googleapis/google-cloud-dotnet/commit/6f8b4e0): Use CopySettingsForEmulator in FirestoreDbBuilder

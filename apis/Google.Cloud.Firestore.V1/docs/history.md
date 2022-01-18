@@ -4,6 +4,10 @@ This package is primarily a dependency of Google.Cloud.Firestore. See the
 [Google.Cloud.Firestore version history](https://googleapis.dev/dotnet/Google.Cloud.Firestore/latest/history.html)
 for more details.
 
+## Version 2.5.0, released 2022-01-18
+
+No API surface changes; just dependency updates.
+
 ## Version 2.4.0, released 2021-08-18
 
 - [Commit d9a3648](https://github.com/googleapis/google-cloud-dotnet/commit/d9a3648): fix: Fix Firestore and Datastore for self-signed JWTs
