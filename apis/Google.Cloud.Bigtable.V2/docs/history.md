@@ -1,5 +1,9 @@
 # Version history
 
+## Version 2.5.0, released 2022-01-18
+
+No API surface changes; just dependency updates.
+
 ## Version 2.4.0, released 2021-09-23
 
 - [Commit 2a57d32](https://github.com/googleapis/google-cloud-dotnet/commit/2a57d32): docs: Fix the documentation for BigtableServiceApiSettings
