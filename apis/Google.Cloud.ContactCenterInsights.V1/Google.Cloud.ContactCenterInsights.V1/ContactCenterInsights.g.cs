@@ -219,7 +219,7 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
             "RGVsZXRlVmlld1JlcXVlc3QSPwoEbmFtZRgBIAEoCUIx4EEC+kErCiljb250",
             "YWN0Y2VudGVyaW5zaWdodHMuZ29vZ2xlYXBpcy5jb20vVmlldypKChBDb252",
             "ZXJzYXRpb25WaWV3EiEKHUNPTlZFUlNBVElPTl9WSUVXX1VOU1BFQ0lGSUVE",
-            "EAASCQoFQkFTSUMQARIICgRGVUxMEAIy5ToKFUNvbnRhY3RDZW50ZXJJbnNp",
+            "EAASCAoERlVMTBACEgkKBUJBU0lDEAEy5ToKFUNvbnRhY3RDZW50ZXJJbnNp",
             "Z2h0cxL6AQoSQ3JlYXRlQ29udmVyc2F0aW9uEkAuZ29vZ2xlLmNsb3VkLmNv",
             "bnRhY3RjZW50ZXJpbnNpZ2h0cy52MS5DcmVhdGVDb252ZXJzYXRpb25SZXF1",
             "ZXN0GjMuZ29vZ2xlLmNsb3VkLmNvbnRhY3RjZW50ZXJpbnNpZ2h0cy52MS5D",
@@ -456,23 +456,24 @@ namespace Google.Cloud.ContactCenterInsights.V1 {
   }
   #region Enums
   /// <summary>
-  /// Represents the options for views of a conversation.
+  /// Represents the options for viewing a conversation.
   /// </summary>
   public enum ConversationView {
     /// <summary>
-    /// Not specified. Defaults to FULL on GetConversationRequest and BASIC for
-    /// ListConversationsRequest.
+    /// The conversation view is not specified.
+    ///
+    /// * Defaults to `FULL` in `GetConversationRequest`.
+    /// * Defaults to `BASIC` in `ListConversationsRequest`.
     /// </summary>
     [pbr::OriginalName("CONVERSATION_VIEW_UNSPECIFIED")] Unspecified = 0,
     /// <summary>
-    /// Transcript field is not populated in the response for Insights
-    /// conversation.
-    /// </summary>
-    [pbr::OriginalName("BASIC")] Basic = 1,
-    /// <summary>
-    /// All fields are populated for Insights conversation.
+    /// Populates all fields in the conversation.
     /// </summary>
     [pbr::OriginalName("FULL")] Full = 2,
+    /// <summary>
+    /// Populates all fields in the conversation except the transcript.
+    /// </summary>
+    [pbr::OriginalName("BASIC")] Basic = 1,
   }
 
   #endregion

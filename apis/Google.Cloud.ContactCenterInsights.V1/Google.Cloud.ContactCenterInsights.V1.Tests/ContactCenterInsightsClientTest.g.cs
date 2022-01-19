@@ -593,7 +593,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
-                View = ConversationView.Basic,
+                View = ConversationView.Full,
             };
             Conversation expectedResponse = new Conversation
             {
@@ -647,7 +647,7 @@ namespace Google.Cloud.ContactCenterInsights.V1.Tests
             GetConversationRequest request = new GetConversationRequest
             {
                 ConversationName = ConversationName.FromProjectLocationConversation("[PROJECT]", "[LOCATION]", "[CONVERSATION]"),
-                View = ConversationView.Basic,
+                View = ConversationView.Full,
             };
             Conversation expectedResponse = new Conversation
             {
