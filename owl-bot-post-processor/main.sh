@@ -97,9 +97,6 @@ copy_one_api() {
     cp $STAGING_DIR/gapic_metadata.json $PACKAGE_DIR
   fi
 
-  # Clean out the staging directory.
-  rm -rf "$STAGING_DIR"
-
   # The following code was copied from generate_api().
   if [[ -f $PACKAGE_DIR/postgeneration.patch ]]
   then
@@ -117,6 +114,9 @@ copy_one_api() {
     # which would be set in generateapis.sh
     (cd $PACKAGE_DIR; export GOOGLEAPIS=$PWD/$STAGING_DIR/googleapis; ./postgeneration.sh)
   fi
+
+  # Clean out the staging directory.
+  rm -rf "$STAGING_DIR"
 
   if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -Ev "namespace ${1}[[:space:]{]*\$") ]]; then
     # We know Google.LongRunning contains a proto in Google.Cloud.
