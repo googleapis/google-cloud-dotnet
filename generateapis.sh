@@ -79,7 +79,7 @@ generate_microgenerator() {
   # Only specify common resource protos for GCP APIs.
   # Don't include the file for the ResourceManager API, which genuinely defines these resources.
   COMMON_RESOURCES_PROTO=
-  if [[ $PACKAGE_ID == Google.Cloud.* && $PACKAGE_ID != Google.Cloud.ResourceManager.V3 ]]
+  if [[ ( $PACKAGE_ID == Google.Cloud.* || $PACKAGE_ID == Google.Identity.* ) && $PACKAGE_ID != Google.Cloud.ResourceManager.V3 ]]
   then
     COMMON_RESOURCES_PROTO=$GOOGLEAPIS/google/cloud/common_resources.proto
   fi
