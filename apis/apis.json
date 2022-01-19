@@ -1494,7 +1494,8 @@
       },
       "generator": "micro",
       "protoPath": "google/iam/admin/v1",
-      "shortName": "iam"
+      "shortName": "iam",
+      "forceOwlBotRegeneration": "AuditData proto is generated in the wrong place."
     },
     {
       "id": "Google.Cloud.Iam.Credentials.V1",
@@ -3494,7 +3495,8 @@
       },
       "testDependencies": {
         "Google.Api.Gax.Testing": "3.5.0"
-      }
+      },
+      "forceOwlBotRegeneration": "Post-processor requires googleapis repo."
     },
     {
       "id": "Grafeas.V1",
