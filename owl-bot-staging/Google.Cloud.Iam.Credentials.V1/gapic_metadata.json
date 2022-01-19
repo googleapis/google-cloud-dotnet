@@ -1,0 +1,42 @@
+{
+  "schema": "1.0",
+  "comment": "This file maps proto services/RPCs to the corresponding library clients/methods",
+  "language": "csharp",
+  "protoPackage": "google.iam.credentials.v1",
+  "libraryPackage": "Google.Cloud.Iam.Credentials.V1",
+  "services": {
+    "IAMCredentials": {
+      "clients": {
+        "grpc": {
+          "libraryClient": "IAMCredentialsClient",
+          "rpcs": {
+            "GenerateAccessToken": {
+              "methods": [
+                "GenerateAccessToken",
+                "GenerateAccessTokenAsync"
+              ]
+            },
+            "GenerateIdToken": {
+              "methods": [
+                "GenerateIdToken",
+                "GenerateIdTokenAsync"
+              ]
+            },
+            "SignBlob": {
+              "methods": [
+                "SignBlob",
+                "SignBlobAsync"
+              ]
+            },
+            "SignJwt": {
+              "methods": [
+                "SignJwt",
+                "SignJwtAsync"
+              ]
+            }
+          }
+        }
+      }
+    }
+  }
+}
