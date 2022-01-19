@@ -7,6 +7,7 @@ set -e
 # google.longrunning) but it's too late to fix that now.
 cd ../..
 source toolversions.sh
+install_protoc
 declare -r CORE_PROTOS_ROOT=$PROTOBUF_TOOLS_ROOT/tools
 
 $PROTOC \
