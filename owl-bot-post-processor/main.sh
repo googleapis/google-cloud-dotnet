@@ -113,7 +113,9 @@ copy_one_api() {
   if [[ -f $PACKAGE_DIR/postgeneration.sh ]]
   then    
     echo "Running post-generation script for $PACKAGE"
-    (cd $PACKAGE_DIR; ./postgeneration.sh)
+    # Some postgeneration steps require the GOOGLEAPIS environment variable
+    # which would be set in generateapis.sh
+    (cd $PACKAGE_DIR; export GOOGLEAPIS=$PWD/$STAGING_DIR/googleapis; ./postgeneration.sh)
   fi
 
   if [[ $(grep -E "^namespace" apis/$1/$1/*.cs | grep -Ev "namespace ${1}[[:space:]{]*\$") ]]; then
