@@ -60,6 +60,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             ListTransferRunsSettings = existing.ListTransferRunsSettings;
             ListTransferLogsSettings = existing.ListTransferLogsSettings;
             CheckValidCredsSettings = existing.CheckValidCredsSettings;
+            EnrollDataSourcesSettings = existing.EnrollDataSourcesSettings;
             OnCopy(existing);
         }
 
@@ -333,6 +334,19 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// </remarks>
         public gaxgrpc::CallSettings CheckValidCredsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(20000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable, grpccore::StatusCode.DeadlineExceeded)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DataTransferServiceClient.EnrollDataSources</c> and <c>DataTransferServiceClient.EnrollDataSourcesAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings EnrollDataSourcesSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="DataTransferServiceSettings"/> object.</returns>
         public DataTransferServiceSettings Clone() => new DataTransferServiceSettings(this);
@@ -404,10 +418,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
 
     /// <summary>DataTransferService client wrapper, for convenient use.</summary>
     /// <remarks>
-    /// The Google BigQuery Data Transfer Service API enables BigQuery users to
-    /// configure the transfer of their data from other Google Products into
-    /// BigQuery. This service contains methods that are end user exposed. It backs
-    /// up the frontend.
+    /// This API allows users to manage their data transfers into BigQuery.
     /// </remarks>
     public abstract partial class DataTransferServiceClient
     {
@@ -501,8 +512,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         public virtual DataTransferService.DataTransferServiceClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -511,8 +521,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -521,8 +530,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -531,8 +539,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetDataSourceAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -548,8 +555,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -565,8 +571,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -579,8 +584,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetDataSourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -596,8 +600,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -613,8 +616,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -627,8 +629,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             GetDataSourceAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -637,8 +638,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -647,8 +647,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
@@ -674,8 +673,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
@@ -701,8 +699,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
@@ -728,8 +725,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
@@ -755,8 +751,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
@@ -782,8 +777,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="parent">
         /// Required. The BigQuery project id for which data sources should be returned.
@@ -1096,8 +1090,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             UpdateTransferConfigAsync(transferConfig, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1106,8 +1100,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1116,8 +1110,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -1126,8 +1120,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             DeleteTransferConfigAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -1143,8 +1137,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -1160,8 +1154,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -1174,8 +1168,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             DeleteTransferConfigAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -1191,8 +1185,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -1208,8 +1202,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="name">
         /// Required. The field will contain name of the resource requested, for example:
@@ -2009,7 +2003,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             DeleteTransferRunAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2018,7 +2012,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2027,7 +2021,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
@@ -2054,7 +2048,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
@@ -2081,7 +2075,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
@@ -2108,7 +2102,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="parent">
         /// Required. Name of transfer configuration for which transfer runs should be retrieved.
@@ -2135,7 +2129,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2144,7 +2138,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2153,7 +2147,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
@@ -2179,7 +2173,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
@@ -2205,7 +2199,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
@@ -2231,7 +2225,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             }, callSettings);
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="parent">
         /// Required. Transfer run name in the form:
@@ -2259,10 +2253,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2273,10 +2263,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2287,10 +2273,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
@@ -2301,10 +2283,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
@@ -2322,10 +2300,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
@@ -2343,10 +2317,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
@@ -2361,10 +2331,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
@@ -2382,10 +2348,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
@@ -2403,10 +2365,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="name">
         /// Required. The data source in the form:
@@ -2417,14 +2375,53 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<CheckValidCredsResponse> CheckValidCredsAsync(DataSourceName name, st::CancellationToken cancellationToken) =>
             CheckValidCredsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Enroll data sources in a user project. This allows users to create transfer
+        /// configurations for these data sources. They will also appear in the
+        /// ListDataSources RPC and as such, will appear in the BigQuery UI
+        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+        /// https://cloud.google.com/bigquery/bigquery-web-ui and
+        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual void EnrollDataSources(EnrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enroll data sources in a user project. This allows users to create transfer
+        /// configurations for these data sources. They will also appear in the
+        /// ListDataSources RPC and as such, will appear in the BigQuery UI
+        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+        /// https://cloud.google.com/bigquery/bigquery-web-ui and
+        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task EnrollDataSourcesAsync(EnrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Enroll data sources in a user project. This allows users to create transfer
+        /// configurations for these data sources. They will also appear in the
+        /// ListDataSources RPC and as such, will appear in the BigQuery UI
+        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+        /// https://cloud.google.com/bigquery/bigquery-web-ui and
+        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task EnrollDataSourcesAsync(EnrollDataSourcesRequest request, st::CancellationToken cancellationToken) =>
+            EnrollDataSourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>DataTransferService client wrapper implementation, for convenient use.</summary>
     /// <remarks>
-    /// The Google BigQuery Data Transfer Service API enables BigQuery users to
-    /// configure the transfer of their data from other Google Products into
-    /// BigQuery. This service contains methods that are end user exposed. It backs
-    /// up the frontend.
+    /// This API allows users to manage their data transfers into BigQuery.
     /// </remarks>
     public sealed partial class DataTransferServiceClientImpl : DataTransferServiceClient
     {
@@ -2455,6 +2452,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         private readonly gaxgrpc::ApiCall<ListTransferLogsRequest, ListTransferLogsResponse> _callListTransferLogs;
 
         private readonly gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> _callCheckValidCreds;
+
+        private readonly gaxgrpc::ApiCall<EnrollDataSourcesRequest, wkt::Empty> _callEnrollDataSources;
 
         /// <summary>
         /// Constructs a client wrapper for the DataTransferService service, with the specified gRPC client and
@@ -2511,6 +2510,9 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
             _callCheckValidCreds = clientHelper.BuildApiCall<CheckValidCredsRequest, CheckValidCredsResponse>(grpcClient.CheckValidCredsAsync, grpcClient.CheckValidCreds, effectiveSettings.CheckValidCredsSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCheckValidCreds);
             Modify_CheckValidCredsApiCall(ref _callCheckValidCreds);
+            _callEnrollDataSources = clientHelper.BuildApiCall<EnrollDataSourcesRequest, wkt::Empty>(grpcClient.EnrollDataSourcesAsync, grpcClient.EnrollDataSources, effectiveSettings.EnrollDataSourcesSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callEnrollDataSources);
+            Modify_EnrollDataSourcesApiCall(ref _callEnrollDataSources);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -2543,6 +2545,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         partial void Modify_ListTransferLogsApiCall(ref gaxgrpc::ApiCall<ListTransferLogsRequest, ListTransferLogsResponse> call);
 
         partial void Modify_CheckValidCredsApiCall(ref gaxgrpc::ApiCall<CheckValidCredsRequest, CheckValidCredsResponse> call);
+
+        partial void Modify_EnrollDataSourcesApiCall(ref gaxgrpc::ApiCall<EnrollDataSourcesRequest, wkt::Empty> call);
 
         partial void OnConstruction(DataTransferService.DataTransferServiceClient grpcClient, DataTransferServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
@@ -2577,9 +2581,10 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
 
         partial void Modify_CheckValidCredsRequest(ref CheckValidCredsRequest request, ref gaxgrpc::CallSettings settings);
 
+        partial void Modify_EnrollDataSourcesRequest(ref EnrollDataSourcesRequest request, ref gaxgrpc::CallSettings settings);
+
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2591,8 +2596,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Retrieves a supported data source and returns its settings,
-        /// which can be used for UI rendering.
+        /// Retrieves a supported data source and returns its settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2604,8 +2608,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2617,8 +2620,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Lists supported data sources and returns their settings,
-        /// which can be used for UI rendering.
+        /// Lists supported data sources and returns their settings.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2680,8 +2682,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2693,8 +2695,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Deletes a data transfer configuration,
-        /// including any associated transfer runs and logs.
+        /// Deletes a data transfer configuration, including any associated transfer
+        /// runs and logs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2868,7 +2870,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2880,7 +2882,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns information about running and completed jobs.
+        /// Returns information about running and completed transfer runs.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2892,7 +2894,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2904,7 +2906,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         }
 
         /// <summary>
-        /// Returns user facing log messages for the data transfer run.
+        /// Returns log messages for the transfer run.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2918,10 +2920,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2935,10 +2933,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         /// <summary>
         /// Returns true if valid credentials exist for the given data source and
         /// requesting user.
-        /// Some data sources doesn't support service account, so we need to talk to
-        /// them on behalf of the end user. This API just checks whether we have OAuth
-        /// token for the particular user, which is a pre-requisite before user can
-        /// create a transfer config.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2947,6 +2941,40 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1
         {
             Modify_CheckValidCredsRequest(ref request, ref callSettings);
             return _callCheckValidCreds.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enroll data sources in a user project. This allows users to create transfer
+        /// configurations for these data sources. They will also appear in the
+        /// ListDataSources RPC and as such, will appear in the BigQuery UI
+        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+        /// https://cloud.google.com/bigquery/bigquery-web-ui and
+        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override void EnrollDataSources(EnrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnrollDataSourcesRequest(ref request, ref callSettings);
+            _callEnrollDataSources.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Enroll data sources in a user project. This allows users to create transfer
+        /// configurations for these data sources. They will also appear in the
+        /// ListDataSources RPC and as such, will appear in the BigQuery UI
+        /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+        /// https://cloud.google.com/bigquery/bigquery-web-ui and
+        /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task EnrollDataSourcesAsync(EnrollDataSourcesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_EnrollDataSourcesRequest(ref request, ref callSettings);
+            return _callEnrollDataSources.Async(request, callSettings);
         }
     }
 

@@ -2195,5 +2195,40 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Snippets
             CheckValidCredsResponse response = await dataTransferServiceClient.CheckValidCredsAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for EnrollDataSources</summary>
+        public void EnrollDataSourcesRequestObject()
+        {
+            // Snippet: EnrollDataSources(EnrollDataSourcesRequest, CallSettings)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = DataTransferServiceClient.Create();
+            // Initialize request argument(s)
+            EnrollDataSourcesRequest request = new EnrollDataSourcesRequest
+            {
+                Name = "",
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            dataTransferServiceClient.EnrollDataSources(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for EnrollDataSourcesAsync</summary>
+        public async Task EnrollDataSourcesRequestObjectAsync()
+        {
+            // Snippet: EnrollDataSourcesAsync(EnrollDataSourcesRequest, CallSettings)
+            // Additional: EnrollDataSourcesAsync(EnrollDataSourcesRequest, CancellationToken)
+            // Create client
+            DataTransferServiceClient dataTransferServiceClient = await DataTransferServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            EnrollDataSourcesRequest request = new EnrollDataSourcesRequest
+            {
+                Name = "",
+                DataSourceIds = { "", },
+            };
+            // Make the request
+            await dataTransferServiceClient.EnrollDataSourcesAsync(request);
+            // End snippet
+        }
     }
 }

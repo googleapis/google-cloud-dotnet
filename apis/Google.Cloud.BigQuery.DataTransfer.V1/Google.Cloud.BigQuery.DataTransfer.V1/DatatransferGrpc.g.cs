@@ -24,10 +24,7 @@ using grpc = global::Grpc.Core;
 
 namespace Google.Cloud.BigQuery.DataTransfer.V1 {
   /// <summary>
-  /// The Google BigQuery Data Transfer Service API enables BigQuery users to
-  /// configure the transfer of their data from other Google Products into
-  /// BigQuery. This service contains methods that are end user exposed. It backs
-  /// up the frontend.
+  /// This API allows users to manage their data transfers into BigQuery.
   /// </summary>
   public static partial class DataTransferService
   {
@@ -116,6 +113,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_CheckValidCredsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> __Marshaller_google_cloud_bigquery_datatransfer_v1_CheckValidCredsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest> __Marshaller_google_cloud_bigquery_datatransfer_v1_EnrollDataSourcesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource> __Method_GetDataSource = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.GetDataSourceRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.DataSource>(
@@ -229,6 +228,14 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         __Marshaller_google_cloud_bigquery_datatransfer_v1_CheckValidCredsRequest,
         __Marshaller_google_cloud_bigquery_datatransfer_v1_CheckValidCredsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest, global::Google.Protobuf.WellKnownTypes.Empty> __Method_EnrollDataSources = new grpc::Method<global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "EnrollDataSources",
+        __Marshaller_google_cloud_bigquery_datatransfer_v1_EnrollDataSourcesRequest,
+        __Marshaller_google_protobuf_Empty);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -240,8 +247,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
     public abstract partial class DataTransferServiceBase
     {
       /// <summary>
-      /// Retrieves a supported data source and returns its settings,
-      /// which can be used for UI rendering.
+      /// Retrieves a supported data source and returns its settings.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -253,8 +259,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
 
       /// <summary>
-      /// Lists supported data sources and returns their settings,
-      /// which can be used for UI rendering.
+      /// Lists supported data sources and returns their settings.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -291,8 +296,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
 
       /// <summary>
-      /// Deletes a data transfer configuration,
-      /// including any associated transfer runs and logs.
+      /// Deletes a data transfer configuration, including any associated transfer
+      /// runs and logs.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -384,7 +389,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
 
       /// <summary>
-      /// Returns information about running and completed jobs.
+      /// Returns information about running and completed transfer runs.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -396,7 +401,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
 
       /// <summary>
-      /// Returns user facing log messages for the data transfer run.
+      /// Returns log messages for the transfer run.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -410,16 +415,29 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Returns true if valid credentials exist for the given data source and
       /// requesting user.
-      /// Some data sources doesn't support service account, so we need to talk to
-      /// them on behalf of the end user. This API just checks whether we have OAuth
-      /// token for the particular user, which is a pre-requisite before user can
-      /// create a transfer config.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCreds(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Enroll data sources in a user project. This allows users to create transfer
+      /// configurations for these data sources. They will also appear in the
+      /// ListDataSources RPC and as such, will appear in the BigQuery UI
+      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+      /// https://cloud.google.com/bigquery/bigquery-web-ui and
+      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> EnrollDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -454,8 +472,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       }
 
       /// <summary>
-      /// Retrieves a supported data source and returns its settings,
-      /// which can be used for UI rendering.
+      /// Retrieves a supported data source and returns its settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -468,8 +485,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return GetDataSource(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a supported data source and returns its settings,
-      /// which can be used for UI rendering.
+      /// Retrieves a supported data source and returns its settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -480,8 +496,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_GetDataSource, null, options, request);
       }
       /// <summary>
-      /// Retrieves a supported data source and returns its settings,
-      /// which can be used for UI rendering.
+      /// Retrieves a supported data source and returns its settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -494,8 +509,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return GetDataSourceAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Retrieves a supported data source and returns its settings,
-      /// which can be used for UI rendering.
+      /// Retrieves a supported data source and returns its settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -506,8 +520,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_GetDataSource, null, options, request);
       }
       /// <summary>
-      /// Lists supported data sources and returns their settings,
-      /// which can be used for UI rendering.
+      /// Lists supported data sources and returns their settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -520,8 +533,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return ListDataSources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists supported data sources and returns their settings,
-      /// which can be used for UI rendering.
+      /// Lists supported data sources and returns their settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -532,8 +544,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListDataSources, null, options, request);
       }
       /// <summary>
-      /// Lists supported data sources and returns their settings,
-      /// which can be used for UI rendering.
+      /// Lists supported data sources and returns their settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -546,8 +557,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return ListDataSourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists supported data sources and returns their settings,
-      /// which can be used for UI rendering.
+      /// Lists supported data sources and returns their settings.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -658,8 +668,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_UpdateTransferConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes a data transfer configuration,
-      /// including any associated transfer runs and logs.
+      /// Deletes a data transfer configuration, including any associated transfer
+      /// runs and logs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -672,8 +682,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return DeleteTransferConfig(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a data transfer configuration,
-      /// including any associated transfer runs and logs.
+      /// Deletes a data transfer configuration, including any associated transfer
+      /// runs and logs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -684,8 +694,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_DeleteTransferConfig, null, options, request);
       }
       /// <summary>
-      /// Deletes a data transfer configuration,
-      /// including any associated transfer runs and logs.
+      /// Deletes a data transfer configuration, including any associated transfer
+      /// runs and logs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -698,8 +708,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return DeleteTransferConfigAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Deletes a data transfer configuration,
-      /// including any associated transfer runs and logs.
+      /// Deletes a data transfer configuration, including any associated transfer
+      /// runs and logs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1030,7 +1040,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_DeleteTransferRun, null, options, request);
       }
       /// <summary>
-      /// Returns information about running and completed jobs.
+      /// Returns information about running and completed transfer runs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1043,7 +1053,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return ListTransferRuns(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns information about running and completed jobs.
+      /// Returns information about running and completed transfer runs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1054,7 +1064,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferRuns, null, options, request);
       }
       /// <summary>
-      /// Returns information about running and completed jobs.
+      /// Returns information about running and completed transfer runs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1067,7 +1077,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return ListTransferRunsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns information about running and completed jobs.
+      /// Returns information about running and completed transfer runs.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1078,7 +1088,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListTransferRuns, null, options, request);
       }
       /// <summary>
-      /// Returns user facing log messages for the data transfer run.
+      /// Returns log messages for the transfer run.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1091,7 +1101,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return ListTransferLogs(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns user facing log messages for the data transfer run.
+      /// Returns log messages for the transfer run.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1102,7 +1112,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListTransferLogs, null, options, request);
       }
       /// <summary>
-      /// Returns user facing log messages for the data transfer run.
+      /// Returns log messages for the transfer run.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1115,7 +1125,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
         return ListTransferLogsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Returns user facing log messages for the data transfer run.
+      /// Returns log messages for the transfer run.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1128,10 +1138,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Returns true if valid credentials exist for the given data source and
       /// requesting user.
-      /// Some data sources doesn't support service account, so we need to talk to
-      /// them on behalf of the end user. This API just checks whether we have OAuth
-      /// token for the particular user, which is a pre-requisite before user can
-      /// create a transfer config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1146,10 +1152,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Returns true if valid credentials exist for the given data source and
       /// requesting user.
-      /// Some data sources doesn't support service account, so we need to talk to
-      /// them on behalf of the end user. This API just checks whether we have OAuth
-      /// token for the particular user, which is a pre-requisite before user can
-      /// create a transfer config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1162,10 +1164,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Returns true if valid credentials exist for the given data source and
       /// requesting user.
-      /// Some data sources doesn't support service account, so we need to talk to
-      /// them on behalf of the end user. This API just checks whether we have OAuth
-      /// token for the particular user, which is a pre-requisite before user can
-      /// create a transfer config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -1180,10 +1178,6 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       /// <summary>
       /// Returns true if valid credentials exist for the given data source and
       /// requesting user.
-      /// Some data sources doesn't support service account, so we need to talk to
-      /// them on behalf of the end user. This API just checks whether we have OAuth
-      /// token for the particular user, which is a pre-requisite before user can
-      /// create a transfer config.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -1192,6 +1186,74 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse> CheckValidCredsAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CheckValidCreds, null, options, request);
+      }
+      /// <summary>
+      /// Enroll data sources in a user project. This allows users to create transfer
+      /// configurations for these data sources. They will also appear in the
+      /// ListDataSources RPC and as such, will appear in the BigQuery UI
+      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+      /// https://cloud.google.com/bigquery/bigquery-web-ui and
+      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty EnrollDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnrollDataSources(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enroll data sources in a user project. This allows users to create transfer
+      /// configurations for these data sources. They will also appear in the
+      /// ListDataSources RPC and as such, will appear in the BigQuery UI
+      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+      /// https://cloud.google.com/bigquery/bigquery-web-ui and
+      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Protobuf.WellKnownTypes.Empty EnrollDataSources(global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_EnrollDataSources, null, options, request);
+      }
+      /// <summary>
+      /// Enroll data sources in a user project. This allows users to create transfer
+      /// configurations for these data sources. They will also appear in the
+      /// ListDataSources RPC and as such, will appear in the BigQuery UI
+      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+      /// https://cloud.google.com/bigquery/bigquery-web-ui and
+      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnrollDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return EnrollDataSourcesAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Enroll data sources in a user project. This allows users to create transfer
+      /// configurations for these data sources. They will also appear in the
+      /// ListDataSources RPC and as such, will appear in the BigQuery UI
+      /// 'https://bigquery.cloud.google.com' (and the documents can be found at
+      /// https://cloud.google.com/bigquery/bigquery-web-ui and
+      /// https://cloud.google.com/bigquery/docs/working-with-transfers).
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Protobuf.WellKnownTypes.Empty> EnrollDataSourcesAsync(global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_EnrollDataSources, null, options, request);
       }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -1220,7 +1282,8 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
           .AddMethod(__Method_DeleteTransferRun, serviceImpl.DeleteTransferRun)
           .AddMethod(__Method_ListTransferRuns, serviceImpl.ListTransferRuns)
           .AddMethod(__Method_ListTransferLogs, serviceImpl.ListTransferLogs)
-          .AddMethod(__Method_CheckValidCreds, serviceImpl.CheckValidCreds).Build();
+          .AddMethod(__Method_CheckValidCreds, serviceImpl.CheckValidCreds)
+          .AddMethod(__Method_EnrollDataSources, serviceImpl.EnrollDataSources).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1244,6 +1307,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1 {
       serviceBinder.AddMethod(__Method_ListTransferRuns, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferRunsResponse>(serviceImpl.ListTransferRuns));
       serviceBinder.AddMethod(__Method_ListTransferLogs, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.ListTransferLogsResponse>(serviceImpl.ListTransferLogs));
       serviceBinder.AddMethod(__Method_CheckValidCreds, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsRequest, global::Google.Cloud.BigQuery.DataTransfer.V1.CheckValidCredsResponse>(serviceImpl.CheckValidCreds));
+      serviceBinder.AddMethod(__Method_EnrollDataSources, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.BigQuery.DataTransfer.V1.EnrollDataSourcesRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.EnrollDataSources));
     }
 
   }
