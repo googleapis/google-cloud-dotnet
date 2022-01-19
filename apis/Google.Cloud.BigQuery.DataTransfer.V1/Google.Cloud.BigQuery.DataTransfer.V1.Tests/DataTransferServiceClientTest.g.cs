@@ -311,6 +311,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -349,6 +350,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -386,6 +388,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -421,6 +424,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -458,6 +462,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -493,6 +498,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -530,6 +536,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -565,6 +572,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.CreateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -605,6 +613,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -643,6 +652,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -680,6 +690,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -715,6 +726,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.UpdateTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -844,6 +856,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -878,6 +891,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -914,6 +928,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -948,6 +963,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -984,6 +1000,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTransferConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -1018,6 +1035,7 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
                 NotificationPubsubTopic = "notification_pubsub_topic857fa8e4",
                 EmailPreferences = new EmailPreferences(),
                 ScheduleOptions = new ScheduleOptions(),
+                OwnerInfo = new UserInfo(),
             };
             mockGrpcClient.Setup(x => x.GetTransferConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<TransferConfig>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
@@ -1636,6 +1654,45 @@ namespace Google.Cloud.BigQuery.DataTransfer.V1.Tests
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             CheckValidCredsResponse responseCancellationToken = await client.CheckValidCredsAsync(request.DataSourceName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void EnrollDataSourcesRequestObject()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            EnrollDataSourcesRequest request = new EnrollDataSourcesRequest
+            {
+                Name = "name1c9368b0",
+                DataSourceIds =
+                {
+                    "data_source_ids4dbf5f2e",
+                },
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnrollDataSources(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            client.EnrollDataSources(request);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task EnrollDataSourcesRequestObjectAsync()
+        {
+            moq::Mock<DataTransferService.DataTransferServiceClient> mockGrpcClient = new moq::Mock<DataTransferService.DataTransferServiceClient>(moq::MockBehavior.Strict);
+            EnrollDataSourcesRequest request = new EnrollDataSourcesRequest
+            {
+                Name = "name1c9368b0",
+                DataSourceIds =
+                {
+                    "data_source_ids4dbf5f2e",
+                },
+            };
+            wkt::Empty expectedResponse = new wkt::Empty { };
+            mockGrpcClient.Setup(x => x.EnrollDataSourcesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<wkt::Empty>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataTransferServiceClient client = new DataTransferServiceClientImpl(mockGrpcClient.Object, null);
+            await client.EnrollDataSourcesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            await client.EnrollDataSourcesAsync(request, st::CancellationToken.None);
             mockGrpcClient.VerifyAll();
         }
     }
