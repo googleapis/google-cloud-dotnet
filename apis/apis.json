@@ -1494,8 +1494,7 @@
       },
       "generator": "micro",
       "protoPath": "google/iam/admin/v1",
-      "shortName": "iam",
-      "forceOwlBotRegeneration": "AuditData proto is generated in the wrong place."
+      "shortName": "iam"
     },
     {
       "id": "Google.Cloud.Iam.Credentials.V1",
@@ -1536,7 +1535,8 @@
       "dependencies": {
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Grpc.Core": "2.38.1"
-      }
+      },
+      "forceOwlBotRegeneration": "AuditData proto is generated in the wrong place."
     },
     {
       "id": "Google.Cloud.Iap.V1",
