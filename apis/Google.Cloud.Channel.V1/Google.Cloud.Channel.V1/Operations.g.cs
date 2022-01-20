@@ -252,7 +252,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum OperationType {
         /// <summary>
-        /// Default value. This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("OPERATION_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>

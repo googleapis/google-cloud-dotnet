@@ -25,12 +25,12 @@ namespace Google.Cloud.Channel.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9vZmZlcnMucHJvdG8SF2dvb2ds",
-            "ZS5jbG91ZC5jaGFubmVsLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
-            "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUvY2xv",
-            "dWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aJmdvb2dsZS9jbG91ZC9jaGFu",
-            "bmVsL3YxL3Byb2R1Y3RzLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvGhdnb29nbGUvdHlwZS9tb25leS5wcm90bxocZ29vZ2xlL2Fw",
-            "aS9hbm5vdGF0aW9ucy5wcm90byKpBAoFT2ZmZXISDAoEbmFtZRgBIAEoCRI+",
+            "ZS5jbG91ZC5jaGFubmVsLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
+            "b3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
+            "YXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9j",
+            "b21tb24ucHJvdG8aJmdvb2dsZS9jbG91ZC9jaGFubmVsL3YxL3Byb2R1Y3Rz",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29n",
+            "bGUvdHlwZS9tb25leS5wcm90byKpBAoFT2ZmZXISDAoEbmFtZRgBIAEoCRI+",
             "Cg5tYXJrZXRpbmdfaW5mbxgCIAEoCzImLmdvb2dsZS5jbG91ZC5jaGFubmVs",
             "LnYxLk1hcmtldGluZ0luZm8SKQoDc2t1GAMgASgLMhwuZ29vZ2xlLmNsb3Vk",
             "LmNoYW5uZWwudjEuU2t1EisKBHBsYW4YBCABKAsyHS5nb29nbGUuY2xvdWQu",
@@ -96,7 +96,7 @@ namespace Google.Cloud.Channel.V1 {
             "YW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2NoYW5uZWwvdjE7",
             "Y2hhbm5lbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.MoneyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.PromotionalOrderType), typeof(global::Google.Cloud.Channel.V1.PaymentPlan), typeof(global::Google.Cloud.Channel.V1.PaymentType), typeof(global::Google.Cloud.Channel.V1.ResourceType), typeof(global::Google.Cloud.Channel.V1.PeriodType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Offer), global::Google.Cloud.Channel.V1.Offer.Parser, new[]{ "Name", "MarketingInfo", "Sku", "Plan", "Constraints", "PriceByResources", "StartTime", "EndTime", "ParameterDefinitions" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ParameterDefinition), global::Google.Cloud.Channel.V1.ParameterDefinition.Parser, new[]{ "Name", "ParameterType", "MinValue", "MaxValue", "AllowedValues", "Optional" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.ParameterDefinition.Types.ParameterType) }, null, null),

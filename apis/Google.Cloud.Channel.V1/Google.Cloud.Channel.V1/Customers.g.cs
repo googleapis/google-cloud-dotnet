@@ -25,11 +25,11 @@ namespace Google.Cloud.Channel.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9jdXN0b21lcnMucHJvdG8SF2dv",
-            "b2dsZS5jbG91ZC5jaGFubmVsLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
-            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUv",
-            "Y2xvdWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1",
-            "Zi90aW1lc3RhbXAucHJvdG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNz",
-            "LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvItEECghDdXN0",
+            "b2dsZS5jbG91ZC5jaGFubmVsLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
+            "LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29n",
+            "bGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUvY2xvdWQvY2hhbm5lbC92",
+            "MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJv",
+            "dG8aIGdvb2dsZS90eXBlL3Bvc3RhbF9hZGRyZXNzLnByb3RvItEECghDdXN0",
             "b21lchIRCgRuYW1lGAEgASgJQgPgQQMSHQoQb3JnX2Rpc3BsYXlfbmFtZRgC",
             "IAEoCUID4EECEjsKEm9yZ19wb3N0YWxfYWRkcmVzcxgDIAEoCzIaLmdvb2ds",
             "ZS50eXBlLlBvc3RhbEFkZHJlc3NCA+BBAhJCChRwcmltYXJ5X2NvbnRhY3Rf",
@@ -50,7 +50,7 @@ namespace Google.Cloud.Channel.V1 {
             "b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Ns",
             "b3VkL2NoYW5uZWwvdjE7Y2hhbm5lbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Type.PostalAddressReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Customer), global::Google.Cloud.Channel.V1.Customer.Parser, new[]{ "Name", "OrgDisplayName", "OrgPostalAddress", "PrimaryContactInfo", "AlternateEmail", "Domain", "CreateTime", "UpdateTime", "CloudIdentityId", "LanguageCode", "CloudIdentityInfo", "ChannelPartnerId" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ContactInfo), global::Google.Cloud.Channel.V1.ContactInfo.Parser, new[]{ "FirstName", "LastName", "DisplayName", "Email", "Title", "Phone" }, null, null, null, null)

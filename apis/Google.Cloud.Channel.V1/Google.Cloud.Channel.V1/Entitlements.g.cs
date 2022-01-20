@@ -25,13 +25,13 @@ namespace Google.Cloud.Channel.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9lbnRpdGxlbWVudHMucHJvdG8S",
-            "F2dvb2dsZS5jbG91ZC5jaGFubmVsLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2Jl",
-            "aGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29n",
-            "bGUvY2xvdWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aJGdvb2dsZS9jbG91",
-            "ZC9jaGFubmVsL3YxL29mZmVycy5wcm90bxomZ29vZ2xlL2Nsb3VkL2NoYW5u",
-            "ZWwvdjEvcHJvZHVjdHMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
-            "bXAucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi93cmFwcGVycy5wcm90bxocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLdCAoLRW50aXRsZW1lbnQSEQoE",
+            "F2dvb2dsZS5jbG91ZC5jaGFubmVsLnYxGhxnb29nbGUvYXBpL2Fubm90YXRp",
+            "b25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhln",
+            "b29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUvY2xvdWQvY2hhbm5l",
+            "bC92MS9jb21tb24ucHJvdG8aJGdvb2dsZS9jbG91ZC9jaGFubmVsL3YxL29m",
+            "ZmVycy5wcm90bxomZ29vZ2xlL2Nsb3VkL2NoYW5uZWwvdjEvcHJvZHVjdHMu",
+            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHmdvb2ds",
+            "ZS9wcm90b2J1Zi93cmFwcGVycy5wcm90byLdCAoLRW50aXRsZW1lbnQSEQoE",
             "bmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xl",
             "LnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAYgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjgKBW9mZmVyGAgg",
@@ -87,7 +87,7 @@ namespace Google.Cloud.Channel.V1 {
             "dHNQcm90b1ABWj5nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
             "cGlzL2Nsb3VkL2NoYW5uZWwvdjE7Y2hhbm5lbGIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.OffersReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Cloud.Channel.V1.OffersReflection.Descriptor, global::Google.Cloud.Channel.V1.ProductsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Entitlement), global::Google.Cloud.Channel.V1.Entitlement.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Offer", "CommitmentSettings", "ProvisioningState", "ProvisionedService", "SuspensionReasons", "PurchaseOrderId", "TrialSettings", "AssociationInfo", "Parameters" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.Entitlement.Types.ProvisioningState), typeof(global::Google.Cloud.Channel.V1.Entitlement.Types.SuspensionReason) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.Parameter), global::Google.Cloud.Channel.V1.Parameter.Parser, new[]{ "Name", "Value", "Editable" }, null, null, null, null),
@@ -797,7 +797,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum ProvisioningState {
         /// <summary>
-        /// Default value. This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("PROVISIONING_STATE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -815,7 +815,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum SuspensionReason {
         /// <summary>
-        /// Default value. This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("SUSPENSION_REASON_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -3068,7 +3068,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum Reason {
         /// <summary>
-        /// Reason is not available.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("REASON_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
