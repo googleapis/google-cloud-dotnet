@@ -27,40 +27,41 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
             "Cg5pbmRleF92MS5wcm90bxIeZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4",
             "LnYxInsKBUluZGV4EjEKBGFwaXMYASADKAsyIy5nb29nbGUuY2xvdWQudG9v",
             "bHMuYXBpaW5kZXgudjEuQXBpEj8KCG1ldGFkYXRhGAIgASgLMi0uZ29vZ2xl",
-            "LmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLkluZGV4TWV0YWRhdGEinQQKA0Fw",
+            "LmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLkluZGV4TWV0YWRhdGEisgQKA0Fw",
             "aRIKCgJpZBgBIAEoCRIRCglkaXJlY3RvcnkYAiABKAkSDwoHdmVyc2lvbhgD",
             "IAEoCRIVCg1tYWpvcl92ZXJzaW9uGAQgASgJEhEKCWhvc3RfbmFtZRgFIAEo",
             "CRINCgV0aXRsZRgGIAEoCRITCgtkZXNjcmlwdGlvbhgHIAEoCRIaChJpbXBv",
             "cnRfZGlyZWN0b3JpZXMYCCADKAkSQQoHb3B0aW9ucxgJIAMoCzIwLmdvb2ds",
             "ZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5BcGkuT3B0aW9uc0VudHJ5EjkK",
             "CHNlcnZpY2VzGAogAygLMicuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4",
-            "LnYxLlNlcnZpY2UamwEKDE9wdGlvblZhbHVlcxJXCgx2YWx1ZV9jb3VudHMY",
-            "ASADKAsyQS5nb29nbGUuY2xvdWQudG9vbHMuYXBpaW5kZXgudjEuQXBpLk9w",
-            "dGlvblZhbHVlcy5WYWx1ZUNvdW50c0VudHJ5GjIKEFZhbHVlQ291bnRzRW50",
-            "cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgFOgI4ARpgCgxPcHRpb25z",
-            "RW50cnkSCwoDa2V5GAEgASgJEj8KBXZhbHVlGAIgASgLMjAuZ29vZ2xlLmNs",
-            "b3VkLnRvb2xzLmFwaWluZGV4LnYxLkFwaS5PcHRpb25WYWx1ZXM6AjgBImkK",
-            "B1NlcnZpY2USEgoKc2hvcnRfbmFtZRgBIAEoCRIRCglmdWxsX25hbWUYAiAB",
-            "KAkSNwoHbWV0aG9kcxgDIAMoCzImLmdvb2dsZS5jbG91ZC50b29scy5hcGlp",
-            "bmRleC52MS5NZXRob2Qi1AIKBk1ldGhvZBISCgpzaG9ydF9uYW1lGAEgASgJ",
-            "EhEKCWZ1bGxfbmFtZRgCIAEoCRI5CgRtb2RlGAMgASgOMisuZ29vZ2xlLmNs",
-            "b3VkLnRvb2xzLmFwaWluZGV4LnYxLk1ldGhvZC5Nb2RlEkQKCGJpbmRpbmdz",
-            "GAQgAygLMjIuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLk1ldGhv",
-            "ZC5IdHRwQmluZGluZxowCgtIdHRwQmluZGluZxITCgtodHRwX21ldGhvZBgB",
-            "IAEoCRIMCgRwYXRoGAIgASgJInAKBE1vZGUSFAoQTU9ERV9VTlNQRUNJRklF",
-            "RBAAEgkKBVVOQVJZEAESFAoQQ0xJRU5UX1NUUkVBTUlORxACEhQKEFNFUlZF",
-            "Ul9TVFJFQU1JTkcQAxIbChdCSURJUkVDVElPTkFMX1NUUkVBTUlORxAEInIK",
-            "DUluZGV4TWV0YWRhdGESFgoOc2NoZW1hX3ZlcnNpb24YASABKAkSSQoQc2No",
-            "ZW1hX3N0YWJpbGl0eRgCIAEoDjIvLmdvb2dsZS5jbG91ZC50b29scy5hcGlp",
-            "bmRleC52MS5TY2hlbWFTdGFiaWxpdHkqXQoPU2NoZW1hU3RhYmlsaXR5EiAK",
-            "HFNDSEVNQV9TVEFCSUxJVFlfVU5TUEVDSUZJRUQQABIMCghVTlNUQUJMRRAB",
-            "EgoKBlNUQUJMRRACEg4KCkRFUFJFQ0FURUQQA0IhqgIeR29vZ2xlLkNsb3Vk",
-            "LlRvb2xzLkFwaUluZGV4LlYxYgZwcm90bzM="));
+            "LnYxLlNlcnZpY2USEwoLY29uZmlnX2ZpbGUYCyABKAkamwEKDE9wdGlvblZh",
+            "bHVlcxJXCgx2YWx1ZV9jb3VudHMYASADKAsyQS5nb29nbGUuY2xvdWQudG9v",
+            "bHMuYXBpaW5kZXgudjEuQXBpLk9wdGlvblZhbHVlcy5WYWx1ZUNvdW50c0Vu",
+            "dHJ5GjIKEFZhbHVlQ291bnRzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVl",
+            "GAIgASgFOgI4ARpgCgxPcHRpb25zRW50cnkSCwoDa2V5GAEgASgJEj8KBXZh",
+            "bHVlGAIgASgLMjAuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLkFw",
+            "aS5PcHRpb25WYWx1ZXM6AjgBImkKB1NlcnZpY2USEgoKc2hvcnRfbmFtZRgB",
+            "IAEoCRIRCglmdWxsX25hbWUYAiABKAkSNwoHbWV0aG9kcxgDIAMoCzImLmdv",
+            "b2dsZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5NZXRob2Qi1AIKBk1ldGhv",
+            "ZBISCgpzaG9ydF9uYW1lGAEgASgJEhEKCWZ1bGxfbmFtZRgCIAEoCRI5CgRt",
+            "b2RlGAMgASgOMisuZ29vZ2xlLmNsb3VkLnRvb2xzLmFwaWluZGV4LnYxLk1l",
+            "dGhvZC5Nb2RlEkQKCGJpbmRpbmdzGAQgAygLMjIuZ29vZ2xlLmNsb3VkLnRv",
+            "b2xzLmFwaWluZGV4LnYxLk1ldGhvZC5IdHRwQmluZGluZxowCgtIdHRwQmlu",
+            "ZGluZxITCgtodHRwX21ldGhvZBgBIAEoCRIMCgRwYXRoGAIgASgJInAKBE1v",
+            "ZGUSFAoQTU9ERV9VTlNQRUNJRklFRBAAEgkKBVVOQVJZEAESFAoQQ0xJRU5U",
+            "X1NUUkVBTUlORxACEhQKEFNFUlZFUl9TVFJFQU1JTkcQAxIbChdCSURJUkVD",
+            "VElPTkFMX1NUUkVBTUlORxAEInIKDUluZGV4TWV0YWRhdGESFgoOc2NoZW1h",
+            "X3ZlcnNpb24YASABKAkSSQoQc2NoZW1hX3N0YWJpbGl0eRgCIAEoDjIvLmdv",
+            "b2dsZS5jbG91ZC50b29scy5hcGlpbmRleC52MS5TY2hlbWFTdGFiaWxpdHkq",
+            "XQoPU2NoZW1hU3RhYmlsaXR5EiAKHFNDSEVNQV9TVEFCSUxJVFlfVU5TUEVD",
+            "SUZJRUQQABIMCghVTlNUQUJMRRABEgoKBlNUQUJMRRACEg4KCkRFUFJFQ0FU",
+            "RUQQA0IhqgIeR29vZ2xlLkNsb3VkLlRvb2xzLkFwaUluZGV4LlYxYgZwcm90",
+            "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Tools.ApiIndex.V1.SchemaStability), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Index), global::Google.Cloud.Tools.ApiIndex.V1.Index.Parser, new[]{ "Apis", "Metadata" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api), global::Google.Cloud.Tools.ApiIndex.V1.Api.Parser, new[]{ "Id", "Directory", "Version", "MajorVersion", "HostName", "Title", "Description", "ImportDirectories", "Options", "Services" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues), global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues.Parser, new[]{ "ValueCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api), global::Google.Cloud.Tools.ApiIndex.V1.Api.Parser, new[]{ "Id", "Directory", "Version", "MajorVersion", "HostName", "Title", "Description", "ImportDirectories", "Options", "Services", "ConfigFile" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues), global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues.Parser, new[]{ "ValueCounts" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Service), global::Google.Cloud.Tools.ApiIndex.V1.Service.Parser, new[]{ "ShortName", "FullName", "Methods" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method), global::Google.Cloud.Tools.ApiIndex.V1.Method.Parser, new[]{ "ShortName", "FullName", "Mode", "Bindings" }, null, new[]{ typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding), global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding.Parser, new[]{ "HttpMethod", "Path" }, null, null, null, null)}),
@@ -107,23 +108,31 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
   /// See the glossary for more details about the
   /// terminology used in this schema.
   /// </summary>
-  public sealed partial class Index : pb::IMessage<Index> {
+  public sealed partial class Index : pb::IMessage<Index>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Index> _parser = new pb::MessageParser<Index>(() => new Index());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Index> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tools.ApiIndex.V1.IndexV1Reflection.Descriptor.MessageTypes[0]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Index() {
       OnConstruction();
     }
@@ -131,6 +140,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Index(Index other) : this() {
       apis_ = other.apis_.Clone();
       metadata_ = other.metadata_ != null ? other.metadata_.Clone() : null;
@@ -138,6 +148,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Index Clone() {
       return new Index(this);
     }
@@ -151,6 +162,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// All the known APIs, ordered lexicographically by ID.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Api> Apis {
       get { return apis_; }
     }
@@ -162,6 +174,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Metadata about the current API index.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tools.ApiIndex.V1.IndexMetadata Metadata {
       get { return metadata_; }
       set {
@@ -170,11 +183,13 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Index);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Index other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -188,6 +203,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       hash ^= apis_.GetHashCode();
@@ -199,12 +215,17 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       apis_.WriteTo(output, _repeated_apis_codec);
       if (metadata_ != null) {
         output.WriteRawTag(18);
@@ -213,9 +234,26 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      apis_.WriteTo(ref output, _repeated_apis_codec);
+      if (metadata_ != null) {
+        output.WriteRawTag(18);
+        output.WriteMessage(Metadata);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       size += apis_.CalculateSize(_repeated_apis_codec);
@@ -229,6 +267,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Index other) {
       if (other == null) {
         return;
@@ -244,7 +283,11 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -264,30 +307,65 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            apis_.AddEntriesFrom(ref input, _repeated_apis_codec);
+            break;
+          }
+          case 18: {
+            if (metadata_ == null) {
+              Metadata = new global::Google.Cloud.Tools.ApiIndex.V1.IndexMetadata();
+            }
+            input.ReadMessage(Metadata);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// Information about a single versioned API.
   /// </summary>
-  public sealed partial class Api : pb::IMessage<Api> {
+  public sealed partial class Api : pb::IMessage<Api>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Api> _parser = new pb::MessageParser<Api>(() => new Api());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Api> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tools.ApiIndex.V1.IndexV1Reflection.Descriptor.MessageTypes[1]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Api() {
       OnConstruction();
     }
@@ -295,6 +373,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Api(Api other) : this() {
       id_ = other.id_;
       directory_ = other.directory_;
@@ -306,10 +385,12 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       importDirectories_ = other.importDirectories_.Clone();
       options_ = other.options_.Clone();
       services_ = other.services_.Clone();
+      configFile_ = other.configFile_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Api Clone() {
       return new Api(this);
     }
@@ -323,6 +404,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "google.cloud.translate.v3"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Id {
       get { return id_; }
       set {
@@ -341,6 +423,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "google/cloud/translate/v3"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Directory {
       get { return directory_; }
       set {
@@ -356,6 +439,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Examples: "v3", "v2beta1", "v1beta"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Version {
       get { return version_; }
       set {
@@ -372,6 +456,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "v2" (from versions of "v2beta1", "v2alpha" or "v2")  
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string MajorVersion {
       get { return majorVersion_; }
       set {
@@ -389,6 +474,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "translate.googleapis.com"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string HostName {
       get { return hostName_; }
       set {
@@ -404,6 +490,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "Cloud Translation API"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Title {
       get { return title_; }
       set {
@@ -419,6 +506,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "Integrates text translation into your website or application."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string Description {
       get { return description_; }
       set {
@@ -437,6 +525,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// the same directory, that directory only appears once.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<string> ImportDirectories {
       get { return importDirectories_; }
     }
@@ -457,8 +546,12 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// - Any uninterpreted options
     /// - java_outer_classname
     /// - optimize_for
+    ///
+    /// The entries should appear in lexicographic order on the wire;
+    /// different platforms may or may not preserve that ordering.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::MapField<string, global::Google.Cloud.Tools.ApiIndex.V1.Api.Types.OptionValues> Options {
       get { return options_; }
     }
@@ -473,16 +566,35 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// full name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Service> Services {
       get { return services_; }
     }
 
+    /// <summary>Field number for the "config_file" field.</summary>
+    public const int ConfigFileFieldNumber = 11;
+    private string configFile_ = "";
+    /// <summary>
+    /// The path to the service config YAML file that describes this API,
+    /// relative to the `directory` field.
+    /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConfigFile {
+      get { return configFile_; }
+      set {
+        configFile_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Api);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Api other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -500,10 +612,12 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if(!importDirectories_.Equals(other.importDirectories_)) return false;
       if (!Options.Equals(other.Options)) return false;
       if(!services_.Equals(other.services_)) return false;
+      if (ConfigFile != other.ConfigFile) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (Id.Length != 0) hash ^= Id.GetHashCode();
@@ -516,6 +630,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       hash ^= importDirectories_.GetHashCode();
       hash ^= Options.GetHashCode();
       hash ^= services_.GetHashCode();
+      if (ConfigFile.Length != 0) hash ^= ConfigFile.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -523,12 +638,17 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (Id.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(Id);
@@ -560,12 +680,63 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       importDirectories_.WriteTo(output, _repeated_importDirectories_codec);
       options_.WriteTo(output, _map_options_codec);
       services_.WriteTo(output, _repeated_services_codec);
+      if (ConfigFile.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(ConfigFile);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Id.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Id);
+      }
+      if (Directory.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Directory);
+      }
+      if (Version.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Version);
+      }
+      if (MajorVersion.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(MajorVersion);
+      }
+      if (HostName.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(HostName);
+      }
+      if (Title.Length != 0) {
+        output.WriteRawTag(50);
+        output.WriteString(Title);
+      }
+      if (Description.Length != 0) {
+        output.WriteRawTag(58);
+        output.WriteString(Description);
+      }
+      importDirectories_.WriteTo(ref output, _repeated_importDirectories_codec);
+      options_.WriteTo(ref output, _map_options_codec);
+      services_.WriteTo(ref output, _repeated_services_codec);
+      if (ConfigFile.Length != 0) {
+        output.WriteRawTag(90);
+        output.WriteString(ConfigFile);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (Id.Length != 0) {
@@ -592,6 +763,9 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       size += importDirectories_.CalculateSize(_repeated_importDirectories_codec);
       size += options_.CalculateSize(_map_options_codec);
       size += services_.CalculateSize(_repeated_services_codec);
+      if (ConfigFile.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConfigFile);
+      }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
       }
@@ -599,6 +773,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Api other) {
       if (other == null) {
         return;
@@ -627,11 +802,18 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       importDirectories_.Add(other.importDirectories_);
       options_.Add(other.options_);
       services_.Add(other.services_);
+      if (other.ConfigFile.Length != 0) {
+        ConfigFile = other.ConfigFile;
+      }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -678,36 +860,109 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
             services_.AddEntriesFrom(input, _repeated_services_codec);
             break;
           }
+          case 90: {
+            ConfigFile = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Id = input.ReadString();
+            break;
+          }
+          case 18: {
+            Directory = input.ReadString();
+            break;
+          }
+          case 26: {
+            Version = input.ReadString();
+            break;
+          }
+          case 34: {
+            MajorVersion = input.ReadString();
+            break;
+          }
+          case 42: {
+            HostName = input.ReadString();
+            break;
+          }
+          case 50: {
+            Title = input.ReadString();
+            break;
+          }
+          case 58: {
+            Description = input.ReadString();
+            break;
+          }
+          case 66: {
+            importDirectories_.AddEntriesFrom(ref input, _repeated_importDirectories_codec);
+            break;
+          }
+          case 74: {
+            options_.AddEntriesFrom(ref input, _map_options_codec);
+            break;
+          }
+          case 82: {
+            services_.AddEntriesFrom(ref input, _repeated_services_codec);
+            break;
+          }
+          case 90: {
+            ConfigFile = input.ReadString();
+            break;
+          }
         }
       }
     }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Api message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// The values for a specific option from across all protos contributing
       /// to this API. The option name itself is the key in the `Api.options`
       /// field.
       /// </summary>
-      public sealed partial class OptionValues : pb::IMessage<OptionValues> {
+      public sealed partial class OptionValues : pb::IMessage<OptionValues>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<OptionValues> _parser = new pb::MessageParser<OptionValues>(() => new OptionValues());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<OptionValues> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Tools.ApiIndex.V1.Api.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OptionValues() {
           OnConstruction();
         }
@@ -715,12 +970,14 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OptionValues(OptionValues other) : this() {
           valueCounts_ = other.valueCounts_.Clone();
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public OptionValues Clone() {
           return new OptionValues(this);
         }
@@ -736,18 +993,24 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         /// one or more protos (but does occur in other ones), the key is an
         /// empty string. (The API Index does not differentiate between an
         /// absent option and one which is present with an empty value.)
+        ///
+        /// The entries should appear in lexicographic order on the wire;
+        /// different platforms may or may not preserve that ordering.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public pbc::MapField<string, int> ValueCounts {
           get { return valueCounts_; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as OptionValues);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(OptionValues other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -760,6 +1023,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           hash ^= ValueCounts.GetHashCode();
@@ -770,19 +1034,37 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           valueCounts_.WriteTo(output, _map_valueCounts_codec);
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
 
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          valueCounts_.WriteTo(ref output, _map_valueCounts_codec);
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           size += valueCounts_.CalculateSize(_map_valueCounts_codec);
@@ -793,6 +1075,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(OptionValues other) {
           if (other == null) {
             return;
@@ -802,7 +1085,11 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -815,7 +1102,27 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                valueCounts_.AddEntriesFrom(ref input, _map_valueCounts_codec);
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -827,23 +1134,31 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
   /// <summary>
   /// A service within an API.
   /// </summary>
-  public sealed partial class Service : pb::IMessage<Service> {
+  public sealed partial class Service : pb::IMessage<Service>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Service> _parser = new pb::MessageParser<Service>(() => new Service());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Service> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tools.ApiIndex.V1.IndexV1Reflection.Descriptor.MessageTypes[2]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Service() {
       OnConstruction();
     }
@@ -851,6 +1166,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Service(Service other) : this() {
       shortName_ = other.shortName_;
       fullName_ = other.fullName_;
@@ -859,6 +1175,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Service Clone() {
       return new Service(this);
     }
@@ -873,6 +1190,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "TranslationService"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ShortName {
       get { return shortName_; }
       set {
@@ -890,6 +1208,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "google.cloud.translate.v3.TranslationService"
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FullName {
       get { return fullName_; }
       set {
@@ -906,16 +1225,19 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// The methods within the API, ordered lexicographically by short name.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Method> Methods {
       get { return methods_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Service);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Service other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -930,6 +1252,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ShortName.Length != 0) hash ^= ShortName.GetHashCode();
@@ -942,12 +1265,17 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ShortName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ShortName);
@@ -960,9 +1288,30 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ShortName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ShortName);
+      }
+      if (FullName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FullName);
+      }
+      methods_.WriteTo(ref output, _repeated_methods_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ShortName.Length != 0) {
@@ -979,6 +1328,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Service other) {
       if (other == null) {
         return;
@@ -994,7 +1344,11 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1015,30 +1369,66 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ShortName = input.ReadString();
+            break;
+          }
+          case 18: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 26: {
+            methods_.AddEntriesFrom(ref input, _repeated_methods_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
   /// <summary>
   /// A method within a service.
   /// </summary>
-  public sealed partial class Method : pb::IMessage<Method> {
+  public sealed partial class Method : pb::IMessage<Method>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<Method> _parser = new pb::MessageParser<Method>(() => new Method());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<Method> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tools.ApiIndex.V1.IndexV1Reflection.Descriptor.MessageTypes[3]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Method() {
       OnConstruction();
     }
@@ -1046,6 +1436,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Method(Method other) : this() {
       shortName_ = other.shortName_;
       fullName_ = other.fullName_;
@@ -1055,6 +1446,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public Method Clone() {
       return new Method(this);
     }
@@ -1068,6 +1460,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// but may not be unique within the API.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string ShortName {
       get { return shortName_; }
       set {
@@ -1084,6 +1477,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// This is globally unique.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string FullName {
       get { return fullName_; }
       set {
@@ -1098,6 +1492,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// The mode of the method.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode Mode {
       get { return mode_; }
       set {
@@ -1111,19 +1506,23 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding> bindings_ = new pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding>();
     /// <summary>
-    /// The bindings of the method.
+    /// The bindings of the method, ordered as they appear in the proto
+    /// (initial binding, then additional bindings).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public pbc::RepeatedField<global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.HttpBinding> Bindings {
       get { return bindings_; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as Method);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(Method other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1139,6 +1538,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (ShortName.Length != 0) hash ^= ShortName.GetHashCode();
@@ -1152,12 +1552,17 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (ShortName.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(ShortName);
@@ -1174,9 +1579,34 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ShortName.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ShortName);
+      }
+      if (FullName.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(FullName);
+      }
+      if (Mode != global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode.Unspecified) {
+        output.WriteRawTag(24);
+        output.WriteEnum((int) Mode);
+      }
+      bindings_.WriteTo(ref output, _repeated_bindings_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (ShortName.Length != 0) {
@@ -1196,6 +1626,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(Method other) {
       if (other == null) {
         return;
@@ -1214,7 +1645,11 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1239,11 +1674,44 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ShortName = input.ReadString();
+            break;
+          }
+          case 18: {
+            FullName = input.ReadString();
+            break;
+          }
+          case 24: {
+            Mode = (global::Google.Cloud.Tools.ApiIndex.V1.Method.Types.Mode) input.ReadEnum();
+            break;
+          }
+          case 34: {
+            bindings_.AddEntriesFrom(ref input, _repeated_bindings_codec);
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
     #region Nested types
     /// <summary>Container for nested types declared in the Method message type.</summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static partial class Types {
       /// <summary>
       /// Modes for methods.
@@ -1275,23 +1743,31 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       /// An HTTP binding for a method.
       /// This is a much-simplified view of google.api.HttpRule.
       /// </summary>
-      public sealed partial class HttpBinding : pb::IMessage<HttpBinding> {
+      public sealed partial class HttpBinding : pb::IMessage<HttpBinding>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
         private static readonly pb::MessageParser<HttpBinding> _parser = new pb::MessageParser<HttpBinding>(() => new HttpBinding());
         private pb::UnknownFieldSet _unknownFields;
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pb::MessageParser<HttpBinding> Parser { get { return _parser; } }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
           get { return global::Google.Cloud.Tools.ApiIndex.V1.Method.Descriptor.NestedTypes[0]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         pbr::MessageDescriptor pb::IMessage.Descriptor {
           get { return Descriptor; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public HttpBinding() {
           OnConstruction();
         }
@@ -1299,6 +1775,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         partial void OnConstruction();
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public HttpBinding(HttpBinding other) : this() {
           httpMethod_ = other.httpMethod_;
           path_ = other.path_;
@@ -1306,6 +1783,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public HttpBinding Clone() {
           return new HttpBinding(this);
         }
@@ -1319,6 +1797,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         /// and to allow for the "custom" option in HttpRule.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string HttpMethod {
           get { return httpMethod_; }
           set {
@@ -1333,6 +1812,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         /// The path, as a pattern (e.g. "/v1/{name=messages/*}")
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public string Path {
           get { return path_; }
           set {
@@ -1341,11 +1821,13 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
           return Equals(other as HttpBinding);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public bool Equals(HttpBinding other) {
           if (ReferenceEquals(other, null)) {
             return false;
@@ -1359,6 +1841,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override int GetHashCode() {
           int hash = 1;
           if (HttpMethod.Length != 0) hash ^= HttpMethod.GetHashCode();
@@ -1370,12 +1853,17 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override string ToString() {
           return pb::JsonFormatter.ToDiagnosticString(this);
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
           if (HttpMethod.Length != 0) {
             output.WriteRawTag(10);
             output.WriteString(HttpMethod);
@@ -1387,9 +1875,29 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
           if (_unknownFields != null) {
             _unknownFields.WriteTo(output);
           }
+        #endif
         }
 
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (HttpMethod.Length != 0) {
+            output.WriteRawTag(10);
+            output.WriteString(HttpMethod);
+          }
+          if (Path.Length != 0) {
+            output.WriteRawTag(18);
+            output.WriteString(Path);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public int CalculateSize() {
           int size = 0;
           if (HttpMethod.Length != 0) {
@@ -1405,6 +1913,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(HttpBinding other) {
           if (other == null) {
             return;
@@ -1419,7 +1928,11 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
           uint tag;
           while ((tag = input.ReadTag()) != 0) {
             switch(tag) {
@@ -1436,7 +1949,31 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
               }
             }
           }
+        #endif
         }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 10: {
+                HttpMethod = input.ReadString();
+                break;
+              }
+              case 18: {
+                Path = input.ReadString();
+                break;
+              }
+            }
+          }
+        }
+        #endif
 
       }
 
@@ -1448,23 +1985,31 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
   /// <summary>
   /// Metadata about the schema and information.
   /// </summary>
-  public sealed partial class IndexMetadata : pb::IMessage<IndexMetadata> {
+  public sealed partial class IndexMetadata : pb::IMessage<IndexMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
     private static readonly pb::MessageParser<IndexMetadata> _parser = new pb::MessageParser<IndexMetadata>(() => new IndexMetadata());
     private pb::UnknownFieldSet _unknownFields;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<IndexMetadata> Parser { get { return _parser; } }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
       get { return global::Google.Cloud.Tools.ApiIndex.V1.IndexV1Reflection.Descriptor.MessageTypes[4]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     pbr::MessageDescriptor pb::IMessage.Descriptor {
       get { return Descriptor; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IndexMetadata() {
       OnConstruction();
     }
@@ -1472,6 +2017,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     partial void OnConstruction();
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IndexMetadata(IndexMetadata other) : this() {
       schemaVersion_ = other.schemaVersion_;
       schemaStability_ = other.schemaStability_;
@@ -1479,6 +2025,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public IndexMetadata Clone() {
       return new IndexMetadata(this);
     }
@@ -1491,6 +2038,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// Example: "v1".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public string SchemaVersion {
       get { return schemaVersion_; }
       set {
@@ -1505,6 +2053,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     /// The stability of this schema.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public global::Google.Cloud.Tools.ApiIndex.V1.SchemaStability SchemaStability {
       get { return schemaStability_; }
       set {
@@ -1513,11 +2062,13 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
       return Equals(other as IndexMetadata);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public bool Equals(IndexMetadata other) {
       if (ReferenceEquals(other, null)) {
         return false;
@@ -1531,6 +2082,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override int GetHashCode() {
       int hash = 1;
       if (SchemaVersion.Length != 0) hash ^= SchemaVersion.GetHashCode();
@@ -1542,12 +2094,17 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override string ToString() {
       return pb::JsonFormatter.ToDiagnosticString(this);
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
       if (SchemaVersion.Length != 0) {
         output.WriteRawTag(10);
         output.WriteString(SchemaVersion);
@@ -1559,9 +2116,29 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
+    #endif
     }
 
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (SchemaVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(SchemaVersion);
+      }
+      if (SchemaStability != global::Google.Cloud.Tools.ApiIndex.V1.SchemaStability.Unspecified) {
+        output.WriteRawTag(16);
+        output.WriteEnum((int) SchemaStability);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public int CalculateSize() {
       int size = 0;
       if (SchemaVersion.Length != 0) {
@@ -1577,6 +2154,7 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(IndexMetadata other) {
       if (other == null) {
         return;
@@ -1591,7 +2169,11 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
       uint tag;
       while ((tag = input.ReadTag()) != 0) {
         switch(tag) {
@@ -1608,7 +2190,31 @@ namespace Google.Cloud.Tools.ApiIndex.V1 {
           }
         }
       }
+    #endif
     }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            SchemaVersion = input.ReadString();
+            break;
+          }
+          case 16: {
+            SchemaStability = (global::Google.Cloud.Tools.ApiIndex.V1.SchemaStability) input.ReadEnum();
+            break;
+          }
+        }
+      }
+    }
+    #endif
 
   }
 
