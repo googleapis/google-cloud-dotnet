@@ -25,8 +25,8 @@ namespace Google.Cloud.Channel.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci5nb29nbGUvY2xvdWQvY2hhbm5lbC92MS9zdWJzY3JpYmVyX2V2ZW50LnBy",
-            "b3RvEhdnb29nbGUuY2xvdWQuY2hhbm5lbC52MRoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLkAQoN",
+            "b3RvEhdnb29nbGUuY2xvdWQuY2hhbm5lbC52MRocZ29vZ2xlL2FwaS9hbm5v",
+            "dGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90byLkAQoN",
             "Q3VzdG9tZXJFdmVudBI7CghjdXN0b21lchgBIAEoCUIp+kEmCiRjbG91ZGNo",
             "YW5uZWwuZ29vZ2xlYXBpcy5jb20vQ3VzdG9tZXISPwoKZXZlbnRfdHlwZRgC",
             "IAEoDjIrLmdvb2dsZS5jbG91ZC5jaGFubmVsLnYxLkN1c3RvbWVyRXZlbnQu",
@@ -50,7 +50,7 @@ namespace Google.Cloud.Channel.V1 {
             "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvY2hhbm5lbC92MTtjaGFu",
             "bmVsYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CustomerEvent), global::Google.Cloud.Channel.V1.CustomerEvent.Parser, new[]{ "Customer", "EventType" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.CustomerEvent.Types.Type) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.EntitlementEvent), global::Google.Cloud.Channel.V1.EntitlementEvent.Parser, new[]{ "Entitlement", "EventType" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.EntitlementEvent.Types.Type) }, null, null),
@@ -305,7 +305,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum Type {
         /// <summary>
-        /// Default value. This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -567,7 +567,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum Type {
         /// <summary>
-        /// Default value. This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>

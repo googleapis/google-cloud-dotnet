@@ -25,11 +25,11 @@ namespace Google.Cloud.Channel.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjNnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9jaGFubmVsX3BhcnRuZXJfbGlu",
-            "a3MucHJvdG8SF2dvb2dsZS5jbG91ZC5jaGFubmVsLnYxGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGiRnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aH2dv",
-            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8ijwQKEkNoYW5uZWxQYXJ0bmVyTGluaxIRCgRuYW1l",
+            "a3MucHJvdG8SF2dvb2dsZS5jbG91ZC5jaGFubmVsLnYxGhxnb29nbGUvYXBp",
+            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
+            "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGiRnb29nbGUvY2xv",
+            "dWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
+            "aW1lc3RhbXAucHJvdG8ijwQKEkNoYW5uZWxQYXJ0bmVyTGluaxIRCgRuYW1l",
             "GAEgASgJQgPgQQMSJwoacmVzZWxsZXJfY2xvdWRfaWRlbnRpdHlfaWQYAiAB",
             "KAlCA+BBAhJJCgpsaW5rX3N0YXRlGAMgASgOMjAuZ29vZ2xlLmNsb3VkLmNo",
             "YW5uZWwudjEuQ2hhbm5lbFBhcnRuZXJMaW5rU3RhdGVCA+BBAhIcCg9pbnZp",
@@ -50,7 +50,7 @@ namespace Google.Cloud.Channel.V1 {
             "L2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvY2hhbm5lbC92MTtjaGFubmVs",
             "YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Channel.V1.CommonReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Channel.V1.ChannelPartnerLinkView), typeof(global::Google.Cloud.Channel.V1.ChannelPartnerLinkState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.ChannelPartnerLink), global::Google.Cloud.Channel.V1.ChannelPartnerLink.Parser, new[]{ "Name", "ResellerCloudIdentityId", "LinkState", "InviteLinkUri", "CreateTime", "UpdateTime", "PublicId", "ChannelPartnerCloudIdentityInfo" }, null, null, null, null)
           }));
@@ -84,7 +84,7 @@ namespace Google.Cloud.Channel.V1 {
   /// </summary>
   public enum ChannelPartnerLinkState {
     /// <summary>
-    /// The state is not specified.
+    /// Not used.
     /// </summary>
     [pbr::OriginalName("CHANNEL_PARTNER_LINK_STATE_UNSPECIFIED")] Unspecified = 0,
     /// <summary>

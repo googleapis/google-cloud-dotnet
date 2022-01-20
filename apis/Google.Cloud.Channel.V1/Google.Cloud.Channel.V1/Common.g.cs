@@ -25,9 +25,9 @@ namespace Google.Cloud.Channel.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiRnb29nbGUvY2xvdWQvY2hhbm5lbC92MS9jb21tb24ucHJvdG8SF2dvb2ds",
-            "ZS5jbG91ZC5jaGFubmVsLnYxGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
-            "LnByb3RvGhlnb29nbGUvcHJvdG9idWYvYW55LnByb3RvGhxnb29nbGUvYXBp",
-            "L2Fubm90YXRpb25zLnByb3RvIrADCgdFZHVEYXRhEkYKDmluc3RpdHV0ZV90",
+            "ZS5jbG91ZC5jaGFubmVsLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
+            "b3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUv",
+            "cHJvdG9idWYvYW55LnByb3RvIrADCgdFZHVEYXRhEkYKDmluc3RpdHV0ZV90",
             "eXBlGAEgASgOMi4uZ29vZ2xlLmNsb3VkLmNoYW5uZWwudjEuRWR1RGF0YS5J",
             "bnN0aXR1dGVUeXBlEkYKDmluc3RpdHV0ZV9zaXplGAIgASgOMi4uZ29vZ2xl",
             "LmNsb3VkLmNoYW5uZWwudjEuRWR1RGF0YS5JbnN0aXR1dGVTaXplEg8KB3dl",
@@ -55,7 +55,7 @@ namespace Google.Cloud.Channel.V1 {
             "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9jaGFubmVsL3YxO2No",
             "YW5uZWxiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.AnyReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.EduData), global::Google.Cloud.Channel.V1.EduData.Parser, new[]{ "InstituteType", "InstituteSize", "Website" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.EduData.Types.InstituteType), typeof(global::Google.Cloud.Channel.V1.EduData.Types.InstituteSize) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Channel.V1.CloudIdentityInfo), global::Google.Cloud.Channel.V1.CloudIdentityInfo.Parser, new[]{ "CustomerType", "PrimaryDomain", "IsDomainVerified", "AlternateEmail", "PhoneNumber", "LanguageCode", "AdminConsoleUri", "EduData" }, null, new[]{ typeof(global::Google.Cloud.Channel.V1.CloudIdentityInfo.Types.CustomerType) }, null, null),
@@ -350,7 +350,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum InstituteType {
         /// <summary>
-        /// Default value.  This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("INSTITUTE_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -368,7 +368,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum InstituteSize {
         /// <summary>
-        /// Default value. This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("INSTITUTE_SIZE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
@@ -902,7 +902,7 @@ namespace Google.Cloud.Channel.V1 {
       /// </summary>
       public enum CustomerType {
         /// <summary>
-        /// Default value. This state doesn't show unless an error occurs.
+        /// Not used.
         /// </summary>
         [pbr::OriginalName("CUSTOMER_TYPE_UNSPECIFIED")] Unspecified = 0,
         /// <summary>
