@@ -70,7 +70,9 @@ namespace Google.Cloud.Tools.ReleaseManager
                 // Let's not include test dependencies, which are rarely useful.
                 TestDependencies = null,
                 // Translate the host name into the "short name", e.g. bigquery.googleapis.com => bigquery
-                ShortName = targetApi.HostName.Split('.').First()
+                ShortName = targetApi.HostName.Split('.').First(),
+                // The service config file is always populated in the index, so we don't need to translate empty to null here.
+                ServiceConfigFile = targetApi.ConfigFile
             };
 
             // Add dependencies discovered via the proto imports.
