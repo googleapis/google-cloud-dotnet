@@ -252,5 +252,11 @@ namespace Google.Cloud.Tools.Common
         /// for *any* other purpose, as it's not an API identifier in any meaningful way.
         /// </summary>
         public string ShortName { get; set; }
+
+        /// <summary>
+        /// The path to the service config file, relative to the proto directory. Only relevant
+        /// for GAPIC APIs, and is usually copied from the API index when an API is added.
+        /// </summary>
+        public string ServiceConfigFile { get; set; }
     }
 }
