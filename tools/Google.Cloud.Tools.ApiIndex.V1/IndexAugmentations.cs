@@ -30,7 +30,6 @@ namespace Google.Cloud.Tools.ApiIndex.V1
         /// </summary>
         public static Index LoadFromGoogleApis(string googleApisRoot)
         {
-            Console.WriteLine(googleApisRoot);
             var json = File.ReadAllText(Path.Combine(googleApisRoot, "api-index-v1.json"));
             return Parser.ParseJson(json);
         }
