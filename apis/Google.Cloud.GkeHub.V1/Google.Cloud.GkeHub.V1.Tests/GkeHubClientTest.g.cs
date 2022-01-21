@@ -264,7 +264,7 @@ namespace Google.Cloud.GkeHub.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
-                Name = "name1c9368b0",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
             };
             Feature expectedResponse = new Feature
             {
@@ -311,7 +311,7 @@ namespace Google.Cloud.GkeHub.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
-                Name = "name1c9368b0",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
             };
             Feature expectedResponse = new Feature
             {
@@ -360,7 +360,7 @@ namespace Google.Cloud.GkeHub.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
-                Name = "name1c9368b0",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
             };
             Feature expectedResponse = new Feature
             {
@@ -407,7 +407,7 @@ namespace Google.Cloud.GkeHub.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GetFeatureRequest request = new GetFeatureRequest
             {
-                Name = "name1c9368b0",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
             };
             Feature expectedResponse = new Feature
             {
@@ -450,13 +450,109 @@ namespace Google.Cloud.GkeHub.V1.Tests
         }
 
         [xunit::FactAttribute]
+        public void GetFeatureResourceNames()
+        {
+            moq::Mock<GkeHub.GkeHubClient> mockGrpcClient = new moq::Mock<GkeHub.GkeHubClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFeatureRequest request = new GetFeatureRequest
+            {
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
+            };
+            Feature expectedResponse = new Feature
+            {
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                ResourceState = new FeatureResourceState(),
+                Spec = new CommonFeatureSpec(),
+                MembershipSpecs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new MembershipFeatureSpec()
+                    },
+                },
+                State = new CommonFeatureState(),
+                MembershipStates =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new MembershipFeatureState()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFeature(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            GkeHubClient client = new GkeHubClientImpl(mockGrpcClient.Object, null);
+            Feature response = client.GetFeature(request.FeatureName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetFeatureResourceNamesAsync()
+        {
+            moq::Mock<GkeHub.GkeHubClient> mockGrpcClient = new moq::Mock<GkeHub.GkeHubClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetFeatureRequest request = new GetFeatureRequest
+            {
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
+            };
+            Feature expectedResponse = new Feature
+            {
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
+                Labels =
+                {
+                    {
+                        "key8a0b6e3c",
+                        "value60c16320"
+                    },
+                },
+                ResourceState = new FeatureResourceState(),
+                Spec = new CommonFeatureSpec(),
+                MembershipSpecs =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new MembershipFeatureSpec()
+                    },
+                },
+                State = new CommonFeatureState(),
+                MembershipStates =
+                {
+                    {
+                        "key8a0b6e3c",
+                        new MembershipFeatureState()
+                    },
+                },
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                DeleteTime = new wkt::Timestamp(),
+            };
+            mockGrpcClient.Setup(x => x.GetFeatureAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Feature>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            GkeHubClient client = new GkeHubClientImpl(mockGrpcClient.Object, null);
+            Feature responseCallSettings = await client.GetFeatureAsync(request.FeatureName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Feature responseCancellationToken = await client.GetFeatureAsync(request.FeatureName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
         public void GenerateConnectManifestRequestObject()
         {
             moq::Mock<GkeHub.GkeHubClient> mockGrpcClient = new moq::Mock<GkeHub.GkeHubClient>(moq::MockBehavior.Strict);
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 Namespace = "namespace9e1e8089",
                 Proxy = proto::ByteString.CopyFromUtf8("proxyeb871343"),
                 Version = "version102ff72a",
@@ -485,7 +581,7 @@ namespace Google.Cloud.GkeHub.V1.Tests
             mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "name1c9368b0",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 Namespace = "namespace9e1e8089",
                 Proxy = proto::ByteString.CopyFromUtf8("proxyeb871343"),
                 Version = "version102ff72a",

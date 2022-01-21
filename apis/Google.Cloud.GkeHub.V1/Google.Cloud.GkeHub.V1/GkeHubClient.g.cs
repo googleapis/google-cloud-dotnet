@@ -687,7 +687,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Features in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project and location) where the Features will be listed.
+        /// Required. The parent (project and location) where the Features will be listed.
         /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
@@ -712,7 +712,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Lists Features in a given project and location.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project and location) where the Features will be listed.
+        /// Required. The parent (project and location) where the Features will be listed.
         /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="pageToken">
@@ -729,6 +729,56 @@ namespace Google.Cloud.GkeHub.V1
             ListFeaturesAsync(new ListFeaturesRequest
             {
                 Parent = parent ?? "",
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Features in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Features will be listed.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Feature"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListFeaturesResponse, Feature> ListFeatures(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFeatures(new ListFeaturesRequest
+            {
+                ParentAsLocationName = parent,
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists Features in a given project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Features will be listed.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Feature"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListFeaturesResponse, Feature> ListFeaturesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListFeaturesAsync(new ListFeaturesRequest
+            {
+                ParentAsLocationName = parent,
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -875,7 +925,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Gets details of a single Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -887,7 +937,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Gets details of a single Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -899,12 +949,48 @@ namespace Google.Cloud.GkeHub.V1
         /// Gets details of a single Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Feature> GetFeatureAsync(string name, st::CancellationToken cancellationToken) =>
+            GetFeatureAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets details of a single Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Feature GetFeature(FeatureName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeature(new GetFeatureRequest { FeatureName = name, }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Feature> GetFeatureAsync(FeatureName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetFeatureAsync(new GetFeatureRequest { FeatureName = name, }, callSettings);
+
+        /// <summary>
+        /// Gets details of a single Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Feature> GetFeatureAsync(FeatureName name, st::CancellationToken cancellationToken) =>
             GetFeatureAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1229,7 +1315,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project and location) where the Feature will be created.
+        /// Required. The parent (project and location) where the Feature will be created.
         /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
@@ -1252,7 +1338,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project and location) where the Feature will be created.
+        /// Required. The parent (project and location) where the Feature will be created.
         /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
@@ -1275,7 +1361,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Adds a new Feature.
         /// </summary>
         /// <param name="parent">
-        /// The parent (project and location) where the Feature will be created.
+        /// Required. The parent (project and location) where the Feature will be created.
         /// Specified in the format `projects/*/locations/*`.
         /// </param>
         /// <param name="resource">
@@ -1287,6 +1373,70 @@ namespace Google.Cloud.GkeHub.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Feature, OperationMetadata>> CreateFeatureAsync(string parent, Feature resource, string featureId, st::CancellationToken cancellationToken) =>
+            CreateFeatureAsync(parent, resource, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Adds a new Feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Feature will be created.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="resource">
+        /// The Feature resource to create.
+        /// </param>
+        /// <param name="featureId">
+        /// The ID of the feature to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Feature, OperationMetadata> CreateFeature(gagr::LocationName parent, Feature resource, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeature(new CreateFeatureRequest
+            {
+                ParentAsLocationName = parent,
+                FeatureId = featureId ?? "",
+                Resource = resource,
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a new Feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Feature will be created.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="resource">
+        /// The Feature resource to create.
+        /// </param>
+        /// <param name="featureId">
+        /// The ID of the feature to create.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, OperationMetadata>> CreateFeatureAsync(gagr::LocationName parent, Feature resource, string featureId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateFeatureAsync(new CreateFeatureRequest
+            {
+                ParentAsLocationName = parent,
+                FeatureId = featureId ?? "",
+                Resource = resource,
+            }, callSettings);
+
+        /// <summary>
+        /// Adds a new Feature.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent (project and location) where the Feature will be created.
+        /// Specified in the format `projects/*/locations/*`.
+        /// </param>
+        /// <param name="resource">
+        /// The Feature resource to create.
+        /// </param>
+        /// <param name="featureId">
+        /// The ID of the feature to create.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, OperationMetadata>> CreateFeatureAsync(gagr::LocationName parent, Feature resource, string featureId, st::CancellationToken cancellationToken) =>
             CreateFeatureAsync(parent, resource, featureId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1519,7 +1669,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Removes a Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1531,7 +1681,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Removes a Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -1543,12 +1693,48 @@ namespace Google.Cloud.GkeHub.V1
         /// Removes a Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFeatureAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteFeatureAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Removes a Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteFeature(FeatureName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeature(new DeleteFeatureRequest { FeatureName = name, }, callSettings);
+
+        /// <summary>
+        /// Removes a Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFeatureAsync(FeatureName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteFeatureAsync(new DeleteFeatureRequest { FeatureName = name, }, callSettings);
+
+        /// <summary>
+        /// Removes a Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteFeatureAsync(FeatureName name, st::CancellationToken cancellationToken) =>
             DeleteFeatureAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1690,6 +1876,91 @@ namespace Google.Cloud.GkeHub.V1
             UpdateMembershipAsync(name, resource, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Updates an existing Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Required. Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Membership, OperationMetadata> UpdateMembership(MembershipName name, Membership resource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMembership(new UpdateMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Required. Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> UpdateMembershipAsync(MembershipName name, Membership resource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateMembershipAsync(new UpdateMembershipRequest
+            {
+                MembershipName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+                UpdateMask = gax::GaxPreconditions.CheckNotNull(updateMask, nameof(updateMask)),
+                Resource = gax::GaxPreconditions.CheckNotNull(resource, nameof(resource)),
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing Membership.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Membership resource name in the format
+        /// `projects/*/locations/*/memberships/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Required. Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Required. Mask of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Membership, OperationMetadata>> UpdateMembershipAsync(MembershipName name, Membership resource, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateMembershipAsync(name, resource, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
         /// Updates an existing Feature.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -1746,7 +2017,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Updates an existing Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`.
         /// </param>
         /// <param name="resource">
@@ -1776,7 +2047,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Updates an existing Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`.
         /// </param>
         /// <param name="resource">
@@ -1806,7 +2077,7 @@ namespace Google.Cloud.GkeHub.V1
         /// Updates an existing Feature.
         /// </summary>
         /// <param name="name">
-        /// The Feature resource name in the format
+        /// Required. The Feature resource name in the format
         /// `projects/*/locations/*/features/*`.
         /// </param>
         /// <param name="resource">
@@ -1825,6 +2096,91 @@ namespace Google.Cloud.GkeHub.V1
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Feature, OperationMetadata>> UpdateFeatureAsync(string name, Feature resource, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateFeatureAsync(name, resource, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates an existing Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Feature, OperationMetadata> UpdateFeature(FeatureName name, Feature resource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFeature(new UpdateFeatureRequest
+            {
+                FeatureName = name,
+                UpdateMask = updateMask,
+                Resource = resource,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask of fields to update.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, OperationMetadata>> UpdateFeatureAsync(FeatureName name, Feature resource, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateFeatureAsync(new UpdateFeatureRequest
+            {
+                FeatureName = name,
+                UpdateMask = updateMask,
+                Resource = resource,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates an existing Feature.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The Feature resource name in the format
+        /// `projects/*/locations/*/features/*`.
+        /// </param>
+        /// <param name="resource">
+        /// Only fields specified in update_mask are updated.
+        /// If you specify a field in the update_mask but don't specify its value here
+        /// that field will be deleted.
+        /// If you are updating a map field, set the value of a key to null or empty
+        /// string to delete the key from the map. It's not possible to update a key's
+        /// value to the empty string.
+        /// If you specify the update_mask to be a special path "*", fully replaces all
+        /// user-modifiable fields to match `resource`.
+        /// </param>
+        /// <param name="updateMask">
+        /// Mask of fields to update.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Feature, OperationMetadata>> UpdateFeatureAsync(FeatureName name, Feature resource, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
             UpdateFeatureAsync(name, resource, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
