@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gax = Google.Api.Gax;
+using gagr = Google.Api.Gax.ResourceNames;
 using gcav = Google.Cloud.ArtifactRegistry.V1Beta2;
 using sys = System;
 
@@ -260,6 +261,54 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
     }
 
     public partial class Repository
+    {
+        /// <summary>
+        /// <see cref="gcav::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListRepositoriesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetRepositoryRequest
+    {
+        /// <summary>
+        /// <see cref="gcav::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcav::RepositoryName RepositoryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcav::RepositoryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateRepositoryRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteRepositoryRequest
     {
         /// <summary>
         /// <see cref="gcav::RepositoryName"/>-typed view over the <see cref="Name"/> resource name property.

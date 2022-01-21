@@ -17,6 +17,7 @@
 namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
 {
     using Google.Api.Gax;
+    using Google.Api.Gax.ResourceNames;
     using Google.Cloud.Iam.V1;
     using Google.LongRunning;
     using Google.Protobuf.WellKnownTypes;
@@ -28,6 +29,140 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
     /// <summary>Generated snippets.</summary>
     public sealed class GeneratedArtifactRegistryClientSnippets
     {
+        /// <summary>Snippet for ImportAptArtifacts</summary>
+        public void ImportAptArtifactsRequestObject()
+        {
+            // Snippet: ImportAptArtifacts(ImportAptArtifactsRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            ImportAptArtifactsRequest request = new ImportAptArtifactsRequest
+            {
+                Parent = "",
+                GcsSource = new ImportAptArtifactsGcsSource(),
+            };
+            // Make the request
+            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> response = artifactRegistryClient.ImportAptArtifacts(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportAptArtifactsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> retrievedResponse = artifactRegistryClient.PollOnceImportAptArtifacts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportAptArtifactsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportAptArtifactsAsync</summary>
+        public async Task ImportAptArtifactsRequestObjectAsync()
+        {
+            // Snippet: ImportAptArtifactsAsync(ImportAptArtifactsRequest, CallSettings)
+            // Additional: ImportAptArtifactsAsync(ImportAptArtifactsRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportAptArtifactsRequest request = new ImportAptArtifactsRequest
+            {
+                Parent = "",
+                GcsSource = new ImportAptArtifactsGcsSource(),
+            };
+            // Make the request
+            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> response = await artifactRegistryClient.ImportAptArtifactsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportAptArtifactsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceImportAptArtifactsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportAptArtifactsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportYumArtifacts</summary>
+        public void ImportYumArtifactsRequestObject()
+        {
+            // Snippet: ImportYumArtifacts(ImportYumArtifactsRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            ImportYumArtifactsRequest request = new ImportYumArtifactsRequest
+            {
+                Parent = "",
+                GcsSource = new ImportYumArtifactsGcsSource(),
+            };
+            // Make the request
+            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> response = artifactRegistryClient.ImportYumArtifacts(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportYumArtifactsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> retrievedResponse = artifactRegistryClient.PollOnceImportYumArtifacts(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportYumArtifactsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportYumArtifactsAsync</summary>
+        public async Task ImportYumArtifactsRequestObjectAsync()
+        {
+            // Snippet: ImportYumArtifactsAsync(ImportYumArtifactsRequest, CallSettings)
+            // Additional: ImportYumArtifactsAsync(ImportYumArtifactsRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportYumArtifactsRequest request = new ImportYumArtifactsRequest
+            {
+                Parent = "",
+                GcsSource = new ImportYumArtifactsGcsSource(),
+            };
+            // Make the request
+            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> response = await artifactRegistryClient.ImportYumArtifactsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportYumArtifactsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> retrievedResponse = await artifactRegistryClient.PollOnceImportYumArtifactsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportYumArtifactsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for ListRepositories</summary>
         public void ListRepositoriesRequestObject()
         {
@@ -35,7 +170,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            ListRepositoriesRequest request = new ListRepositoriesRequest { Parent = "", };
+            ListRepositoriesRequest request = new ListRepositoriesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
             // Make the request
             PagedEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositories(request);
 
@@ -80,7 +218,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            ListRepositoriesRequest request = new ListRepositoriesRequest { Parent = "", };
+            ListRepositoriesRequest request = new ListRepositoriesRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
             // Make the request
             PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositoriesAsync(request);
 
@@ -125,7 +266,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositories(parent);
 
@@ -170,7 +311,97 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositoriesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Repository item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListRepositoriesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Repository item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Repository> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Repository item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRepositories</summary>
+        public void ListRepositoriesResourceNames()
+        {
+            // Snippet: ListRepositories(LocationName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositories(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Repository item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListRepositoriesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Repository item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Repository> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Repository item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListRepositoriesAsync</summary>
+        public async Task ListRepositoriesResourceNamesAsync()
+        {
+            // Snippet: ListRepositoriesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListRepositoriesResponse, Repository> response = artifactRegistryClient.ListRepositoriesAsync(parent);
 
@@ -215,7 +446,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            GetRepositoryRequest request = new GetRepositoryRequest { Name = "", };
+            GetRepositoryRequest request = new GetRepositoryRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
             // Make the request
             Repository response = artifactRegistryClient.GetRepository(request);
             // End snippet
@@ -229,7 +463,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            GetRepositoryRequest request = new GetRepositoryRequest { Name = "", };
+            GetRepositoryRequest request = new GetRepositoryRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
             // Make the request
             Repository response = await artifactRegistryClient.GetRepositoryAsync(request);
             // End snippet
@@ -242,7 +479,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
             Repository response = artifactRegistryClient.GetRepository(name);
             // End snippet
@@ -256,7 +493,34 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            Repository response = await artifactRegistryClient.GetRepositoryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRepository</summary>
+        public void GetRepositoryResourceNames()
+        {
+            // Snippet: GetRepository(RepositoryName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            Repository response = artifactRegistryClient.GetRepository(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetRepositoryAsync</summary>
+        public async Task GetRepositoryResourceNamesAsync()
+        {
+            // Snippet: GetRepositoryAsync(RepositoryName, CallSettings)
+            // Additional: GetRepositoryAsync(RepositoryName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
             Repository response = await artifactRegistryClient.GetRepositoryAsync(name);
             // End snippet
@@ -271,7 +535,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Initialize request argument(s)
             CreateRepositoryRequest request = new CreateRepositoryRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 RepositoryId = "",
                 Repository = new Repository(),
             };
@@ -306,7 +570,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Initialize request argument(s)
             CreateRepositoryRequest request = new CreateRepositoryRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 RepositoryId = "",
                 Repository = new Repository(),
             };
@@ -338,7 +602,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             Repository repository = new Repository();
             string repositoryId = "";
             // Make the request
@@ -370,7 +634,70 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Repository repository = new Repository();
+            string repositoryId = "";
+            // Make the request
+            Operation<Repository, OperationMetadata> response = await artifactRegistryClient.CreateRepositoryAsync(parent, repository, repositoryId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Repository, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Repository result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Repository, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceCreateRepositoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Repository retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRepository</summary>
+        public void CreateRepositoryResourceNames()
+        {
+            // Snippet: CreateRepository(LocationName, Repository, string, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Repository repository = new Repository();
+            string repositoryId = "";
+            // Make the request
+            Operation<Repository, OperationMetadata> response = artifactRegistryClient.CreateRepository(parent, repository, repositoryId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Repository, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Repository result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Repository, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceCreateRepository(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Repository retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateRepositoryAsync</summary>
+        public async Task CreateRepositoryResourceNamesAsync()
+        {
+            // Snippet: CreateRepositoryAsync(LocationName, Repository, string, CallSettings)
+            // Additional: CreateRepositoryAsync(LocationName, Repository, string, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Repository repository = new Repository();
             string repositoryId = "";
             // Make the request
@@ -465,7 +792,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            DeleteRepositoryRequest request = new DeleteRepositoryRequest { Name = "", };
+            DeleteRepositoryRequest request = new DeleteRepositoryRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteRepository(request);
 
@@ -495,7 +825,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            DeleteRepositoryRequest request = new DeleteRepositoryRequest { Name = "", };
+            DeleteRepositoryRequest request = new DeleteRepositoryRequest
+            {
+                RepositoryName = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]"),
+            };
             // Make the request
             Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(request);
 
@@ -524,7 +857,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
             // Make the request
             Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteRepository(name);
 
@@ -554,7 +887,66 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             // Create client
             ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/repositories/[REPOSITORY]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await artifactRegistryClient.PollOnceDeleteRepositoryAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRepository</summary>
+        public void DeleteRepositoryResourceNames()
+        {
+            // Snippet: DeleteRepository(RepositoryName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = artifactRegistryClient.DeleteRepository(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = artifactRegistryClient.PollOnceDeleteRepository(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteRepositoryAsync</summary>
+        public async Task DeleteRepositoryResourceNamesAsync()
+        {
+            // Snippet: DeleteRepositoryAsync(RepositoryName, CallSettings)
+            // Additional: DeleteRepositoryAsync(RepositoryName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            RepositoryName name = RepositoryName.FromProjectLocationRepository("[PROJECT]", "[LOCATION]", "[REPOSITORY]");
             // Make the request
             Operation<Empty, OperationMetadata> response = await artifactRegistryClient.DeleteRepositoryAsync(name);
 
@@ -939,6 +1331,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             {
                 Parent = "",
                 View = VersionView.Unspecified,
+                OrderBy = "",
             };
             // Make the request
             PagedEnumerable<ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersions(request);
@@ -988,6 +1381,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             {
                 Parent = "",
                 View = VersionView.Unspecified,
+                OrderBy = "",
             };
             // Make the request
             PagedAsyncEnumerable<ListVersionsResponse, gcav::Version> response = artifactRegistryClient.ListVersionsAsync(request);
@@ -2076,6 +2470,157 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2.Snippets
             };
             // Make the request
             TestIamPermissionsResponse response = await artifactRegistryClient.TestIamPermissionsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectSettings</summary>
+        public void GetProjectSettingsRequestObject()
+        {
+            // Snippet: GetProjectSettings(GetProjectSettingsRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            GetProjectSettingsRequest request = new GetProjectSettingsRequest
+            {
+                ProjectSettingsName = ProjectSettingsName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            ProjectSettings response = artifactRegistryClient.GetProjectSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectSettingsAsync</summary>
+        public async Task GetProjectSettingsRequestObjectAsync()
+        {
+            // Snippet: GetProjectSettingsAsync(GetProjectSettingsRequest, CallSettings)
+            // Additional: GetProjectSettingsAsync(GetProjectSettingsRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            GetProjectSettingsRequest request = new GetProjectSettingsRequest
+            {
+                ProjectSettingsName = ProjectSettingsName.FromProject("[PROJECT]"),
+            };
+            // Make the request
+            ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectSettings</summary>
+        public void GetProjectSettings()
+        {
+            // Snippet: GetProjectSettings(string, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/projectSettings";
+            // Make the request
+            ProjectSettings response = artifactRegistryClient.GetProjectSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectSettingsAsync</summary>
+        public async Task GetProjectSettingsAsync()
+        {
+            // Snippet: GetProjectSettingsAsync(string, CallSettings)
+            // Additional: GetProjectSettingsAsync(string, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/projectSettings";
+            // Make the request
+            ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectSettings</summary>
+        public void GetProjectSettingsResourceNames()
+        {
+            // Snippet: GetProjectSettings(ProjectSettingsName, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            ProjectSettingsName name = ProjectSettingsName.FromProject("[PROJECT]");
+            // Make the request
+            ProjectSettings response = artifactRegistryClient.GetProjectSettings(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetProjectSettingsAsync</summary>
+        public async Task GetProjectSettingsResourceNamesAsync()
+        {
+            // Snippet: GetProjectSettingsAsync(ProjectSettingsName, CallSettings)
+            // Additional: GetProjectSettingsAsync(ProjectSettingsName, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectSettingsName name = ProjectSettingsName.FromProject("[PROJECT]");
+            // Make the request
+            ProjectSettings response = await artifactRegistryClient.GetProjectSettingsAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectSettings</summary>
+        public void UpdateProjectSettingsRequestObject()
+        {
+            // Snippet: UpdateProjectSettings(UpdateProjectSettingsRequest, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            UpdateProjectSettingsRequest request = new UpdateProjectSettingsRequest
+            {
+                ProjectSettings = new ProjectSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ProjectSettings response = artifactRegistryClient.UpdateProjectSettings(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectSettingsAsync</summary>
+        public async Task UpdateProjectSettingsRequestObjectAsync()
+        {
+            // Snippet: UpdateProjectSettingsAsync(UpdateProjectSettingsRequest, CallSettings)
+            // Additional: UpdateProjectSettingsAsync(UpdateProjectSettingsRequest, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateProjectSettingsRequest request = new UpdateProjectSettingsRequest
+            {
+                ProjectSettings = new ProjectSettings(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            ProjectSettings response = await artifactRegistryClient.UpdateProjectSettingsAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectSettings</summary>
+        public void UpdateProjectSettings()
+        {
+            // Snippet: UpdateProjectSettings(ProjectSettings, FieldMask, CallSettings)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = ArtifactRegistryClient.Create();
+            // Initialize request argument(s)
+            ProjectSettings projectSettings = new ProjectSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProjectSettings response = artifactRegistryClient.UpdateProjectSettings(projectSettings, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateProjectSettingsAsync</summary>
+        public async Task UpdateProjectSettingsAsync()
+        {
+            // Snippet: UpdateProjectSettingsAsync(ProjectSettings, FieldMask, CallSettings)
+            // Additional: UpdateProjectSettingsAsync(ProjectSettings, FieldMask, CancellationToken)
+            // Create client
+            ArtifactRegistryClient artifactRegistryClient = await ArtifactRegistryClient.CreateAsync();
+            // Initialize request argument(s)
+            ProjectSettings projectSettings = new ProjectSettings();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            ProjectSettings response = await artifactRegistryClient.UpdateProjectSettingsAsync(projectSettings, updateMask);
             // End snippet
         }
     }

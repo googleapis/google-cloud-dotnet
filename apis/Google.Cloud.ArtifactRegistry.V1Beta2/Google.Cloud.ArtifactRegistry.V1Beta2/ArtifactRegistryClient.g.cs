@@ -17,6 +17,7 @@
 using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
+using gagr = Google.Api.Gax.ResourceNames;
 using gciv = Google.Cloud.Iam.V1;
 using lro = Google.LongRunning;
 using proto = Google.Protobuf;
@@ -47,6 +48,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         private ArtifactRegistrySettings(ArtifactRegistrySettings existing) : base(existing)
         {
             gax::GaxPreconditions.CheckNotNull(existing, nameof(existing));
+            ImportAptArtifactsSettings = existing.ImportAptArtifactsSettings;
+            ImportAptArtifactsOperationsSettings = existing.ImportAptArtifactsOperationsSettings.Clone();
+            ImportYumArtifactsSettings = existing.ImportYumArtifactsSettings;
+            ImportYumArtifactsOperationsSettings = existing.ImportYumArtifactsOperationsSettings.Clone();
             ListRepositoriesSettings = existing.ListRepositoriesSettings;
             GetRepositorySettings = existing.GetRepositorySettings;
             CreateRepositorySettings = existing.CreateRepositorySettings;
@@ -72,10 +77,72 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             SetIamPolicySettings = existing.SetIamPolicySettings;
             GetIamPolicySettings = existing.GetIamPolicySettings;
             TestIamPermissionsSettings = existing.TestIamPermissionsSettings;
+            GetProjectSettingsSettings = existing.GetProjectSettingsSettings;
+            UpdateProjectSettingsSettings = existing.UpdateProjectSettingsSettings;
             OnCopy(existing);
         }
 
         partial void OnCopy(ArtifactRegistrySettings existing);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ImportAptArtifacts</c> and <c>ArtifactRegistryClient.ImportAptArtifactsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportAptArtifactsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.ImportAptArtifacts</c> and
+        /// <c>ArtifactRegistryClient.ImportAptArtifactsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportAptArtifactsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.ImportYumArtifacts</c> and <c>ArtifactRegistryClient.ImportYumArtifactsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportYumArtifactsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>ArtifactRegistryClient.ImportYumArtifacts</c> and
+        /// <c>ArtifactRegistryClient.ImportYumArtifactsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportYumArtifactsOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
 
         /// <summary>
         /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
@@ -491,6 +558,31 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// </remarks>
         public gaxgrpc::CallSettings TestIamPermissionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(30000)));
 
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.GetProjectSettings</c> and <c>ArtifactRegistryClient.GetProjectSettingsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetProjectSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ArtifactRegistryClient.UpdateProjectSettings</c> and <c>ArtifactRegistryClient.UpdateProjectSettingsAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateProjectSettingsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ArtifactRegistrySettings"/> object.</returns>
         public ArtifactRegistrySettings Clone() => new ArtifactRegistrySettings(this);
@@ -667,6 +759,132 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         public virtual ArtifactRegistry.ArtifactRegistryClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
+        /// Imports Apt artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> ImportAptArtifacts(ImportAptArtifactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports Apt artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>> ImportAptArtifactsAsync(ImportAptArtifactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports Apt artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>> ImportAptArtifactsAsync(ImportAptArtifactsRequest request, st::CancellationToken cancellationToken) =>
+            ImportAptArtifactsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportAptArtifacts</c>.</summary>
+        public virtual lro::OperationsClient ImportAptArtifactsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportAptArtifacts</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> PollOnceImportAptArtifacts(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportAptArtifactsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportAptArtifacts</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>> PollOnceImportAptArtifactsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportAptArtifactsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> ImportYumArtifacts(ImportYumArtifactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>> ImportYumArtifactsAsync(ImportYumArtifactsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>> ImportYumArtifactsAsync(ImportYumArtifactsRequest request, st::CancellationToken cancellationToken) =>
+            ImportYumArtifactsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportYumArtifacts</c>.</summary>
+        public virtual lro::OperationsClient ImportYumArtifactsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportYumArtifacts</c>
+        /// .
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> PollOnceImportYumArtifacts(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportYumArtifactsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportYumArtifacts</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>> PollOnceImportYumArtifactsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportYumArtifactsOperationsClient, callSettings);
+
+        /// <summary>
         /// Lists repositories.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
@@ -688,7 +906,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -703,7 +921,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListRepositories(new ListRepositoriesRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -712,7 +930,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// Lists repositories.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource whose repositories will be listed.
+        /// Required. The name of the parent resource whose repositories will be listed.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -727,7 +945,55 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
             ListRepositoriesAsync(new ListRepositoriesRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists repositories.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose repositories will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Repository"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListRepositoriesResponse, Repository> ListRepositories(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRepositories(new ListRepositoriesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Lists repositories.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource whose repositories will be listed.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Repository"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListRepositoriesResponse, Repository> ListRepositoriesAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListRepositoriesAsync(new ListRepositoriesRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
                 PageToken = pageToken ?? "",
                 PageSize = pageSize ?? 0,
             }, callSettings);
@@ -763,33 +1029,78 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// Gets a repository.
         /// </summary>
         /// <param name="name">
-        /// The name of the repository to retrieve.
+        /// Required. The name of the repository to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual Repository GetRepository(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetRepository(new GetRepositoryRequest { Name = name ?? "", }, callSettings);
+            GetRepository(new GetRepositoryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Gets a repository.
         /// </summary>
         /// <param name="name">
-        /// The name of the repository to retrieve.
+        /// Required. The name of the repository to retrieve.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Repository> GetRepositoryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            GetRepositoryAsync(new GetRepositoryRequest { Name = name ?? "", }, callSettings);
+            GetRepositoryAsync(new GetRepositoryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Gets a repository.
         /// </summary>
         /// <param name="name">
-        /// The name of the repository to retrieve.
+        /// Required. The name of the repository to retrieve.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<Repository> GetRepositoryAsync(string name, st::CancellationToken cancellationToken) =>
+            GetRepositoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets a repository.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the repository to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Repository GetRepository(RepositoryName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRepository(new GetRepositoryRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a repository.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the repository to retrieve.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Repository> GetRepositoryAsync(RepositoryName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetRepositoryAsync(new GetRepositoryRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets a repository.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the repository to retrieve.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Repository> GetRepositoryAsync(RepositoryName name, st::CancellationToken cancellationToken) =>
             GetRepositoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -853,7 +1164,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -866,7 +1177,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         public virtual lro::Operation<Repository, OperationMetadata> CreateRepository(string parent, Repository repository, string repositoryId, gaxgrpc::CallSettings callSettings = null) =>
             CreateRepository(new CreateRepositoryRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 RepositoryId = repositoryId ?? "",
                 Repository = repository,
             }, callSettings);
@@ -876,7 +1187,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -889,7 +1200,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         public virtual stt::Task<lro::Operation<Repository, OperationMetadata>> CreateRepositoryAsync(string parent, Repository repository, string repositoryId, gaxgrpc::CallSettings callSettings = null) =>
             CreateRepositoryAsync(new CreateRepositoryRequest
             {
-                Parent = parent ?? "",
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
                 RepositoryId = repositoryId ?? "",
                 Repository = repository,
             }, callSettings);
@@ -899,7 +1210,7 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// repository has been created. Its response will be the created Repository.
         /// </summary>
         /// <param name="parent">
-        /// The name of the parent resource where the repository will be created.
+        /// Required. The name of the parent resource where the repository will be created.
         /// </param>
         /// <param name="repository">
         /// The repository to be created.
@@ -910,6 +1221,70 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Repository, OperationMetadata>> CreateRepositoryAsync(string parent, Repository repository, string repositoryId, st::CancellationToken cancellationToken) =>
+            CreateRepositoryAsync(parent, repository, repositoryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Creates a repository. The returned Operation will finish once the
+        /// repository has been created. Its response will be the created Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the repository will be created.
+        /// </param>
+        /// <param name="repository">
+        /// The repository to be created.
+        /// </param>
+        /// <param name="repositoryId">
+        /// The repository id to use for this repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Repository, OperationMetadata> CreateRepository(gagr::LocationName parent, Repository repository, string repositoryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRepository(new CreateRepositoryRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RepositoryId = repositoryId ?? "",
+                Repository = repository,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a repository. The returned Operation will finish once the
+        /// repository has been created. Its response will be the created Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the repository will be created.
+        /// </param>
+        /// <param name="repository">
+        /// The repository to be created.
+        /// </param>
+        /// <param name="repositoryId">
+        /// The repository id to use for this repository.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Repository, OperationMetadata>> CreateRepositoryAsync(gagr::LocationName parent, Repository repository, string repositoryId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateRepositoryAsync(new CreateRepositoryRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                RepositoryId = repositoryId ?? "",
+                Repository = repository,
+            }, callSettings);
+
+        /// <summary>
+        /// Creates a repository. The returned Operation will finish once the
+        /// repository has been created. Its response will be the created Repository.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the parent resource where the repository will be created.
+        /// </param>
+        /// <param name="repository">
+        /// The repository to be created.
+        /// </param>
+        /// <param name="repositoryId">
+        /// The repository id to use for this repository.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Repository, OperationMetadata>> CreateRepositoryAsync(gagr::LocationName parent, Repository repository, string repositoryId, st::CancellationToken cancellationToken) =>
             CreateRepositoryAsync(parent, repository, repositoryId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -1060,12 +1435,15 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// metadata and will return a google.protobuf.Empty response.
         /// </summary>
         /// <param name="name">
-        /// The name of the repository to delete.
+        /// Required. The name of the repository to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>The RPC response.</returns>
         public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRepository(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteRepository(new DeleteRepositoryRequest { Name = name ?? "", }, callSettings);
+            DeleteRepository(new DeleteRepositoryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Deletes a repository and all of its contents. The returned Operation will
@@ -1073,12 +1451,15 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// metadata and will return a google.protobuf.Empty response.
         /// </summary>
         /// <param name="name">
-        /// The name of the repository to delete.
+        /// Required. The name of the repository to delete.
         /// </param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRepositoryAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
-            DeleteRepositoryAsync(new DeleteRepositoryRequest { Name = name ?? "", }, callSettings);
+            DeleteRepositoryAsync(new DeleteRepositoryRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
 
         /// <summary>
         /// Deletes a repository and all of its contents. The returned Operation will
@@ -1086,11 +1467,56 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// metadata and will return a google.protobuf.Empty response.
         /// </summary>
         /// <param name="name">
-        /// The name of the repository to delete.
+        /// Required. The name of the repository to delete.
         /// </param>
         /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRepositoryAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteRepositoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Deletes a repository and all of its contents. The returned Operation will
+        /// finish once the repository has been deleted. It will not have any Operation
+        /// metadata and will return a google.protobuf.Empty response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the repository to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<wkt::Empty, OperationMetadata> DeleteRepository(RepositoryName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRepository(new DeleteRepositoryRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a repository and all of its contents. The returned Operation will
+        /// finish once the repository has been deleted. It will not have any Operation
+        /// metadata and will return a google.protobuf.Empty response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the repository to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRepositoryAsync(RepositoryName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteRepositoryAsync(new DeleteRepositoryRequest
+            {
+                RepositoryName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Deletes a repository and all of its contents. The returned Operation will
+        /// finish once the repository has been deleted. It will not have any Operation
+        /// metadata and will return a google.protobuf.Empty response.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the repository to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<wkt::Empty, OperationMetadata>> DeleteRepositoryAsync(RepositoryName name, st::CancellationToken cancellationToken) =>
             DeleteRepositoryAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
@@ -2092,6 +2518,188 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<gciv::TestIamPermissionsResponse> TestIamPermissionsAsync(gciv::TestIamPermissionsRequest request, st::CancellationToken cancellationToken) =>
             TestIamPermissionsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProjectSettings GetProjectSettings(GetProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> GetProjectSettingsAsync(GetProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> GetProjectSettingsAsync(GetProjectSettingsRequest request, st::CancellationToken cancellationToken) =>
+            GetProjectSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the projectSettings resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProjectSettings GetProjectSettings(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectSettings(new GetProjectSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the projectSettings resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> GetProjectSettingsAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectSettingsAsync(new GetProjectSettingsRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the projectSettings resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> GetProjectSettingsAsync(string name, st::CancellationToken cancellationToken) =>
+            GetProjectSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the projectSettings resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProjectSettings GetProjectSettings(ProjectSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectSettings(new GetProjectSettingsRequest
+            {
+                ProjectSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the projectSettings resource.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> GetProjectSettingsAsync(ProjectSettingsName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetProjectSettingsAsync(new GetProjectSettingsRequest
+            {
+                ProjectSettingsName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the projectSettings resource.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> GetProjectSettingsAsync(ProjectSettingsName name, st::CancellationToken cancellationToken) =>
+            GetProjectSettingsAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProjectSettings UpdateProjectSettings(UpdateProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> UpdateProjectSettingsAsync(UpdateProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> UpdateProjectSettingsAsync(UpdateProjectSettingsRequest request, st::CancellationToken cancellationToken) =>
+            UpdateProjectSettingsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="projectSettings">
+        /// The project settings.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask to support partial updates.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ProjectSettings UpdateProjectSettings(ProjectSettings projectSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProjectSettings(new UpdateProjectSettingsRequest
+            {
+                ProjectSettings = projectSettings,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="projectSettings">
+        /// The project settings.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask to support partial updates.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> UpdateProjectSettingsAsync(ProjectSettings projectSettings, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateProjectSettingsAsync(new UpdateProjectSettingsRequest
+            {
+                ProjectSettings = projectSettings,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="projectSettings">
+        /// The project settings.
+        /// </param>
+        /// <param name="updateMask">
+        /// Field mask to support partial updates.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ProjectSettings> UpdateProjectSettingsAsync(ProjectSettings projectSettings, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateProjectSettingsAsync(projectSettings, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>ArtifactRegistry client wrapper implementation, for convenient use.</summary>
@@ -2112,6 +2720,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
     /// </remarks>
     public sealed partial class ArtifactRegistryClientImpl : ArtifactRegistryClient
     {
+        private readonly gaxgrpc::ApiCall<ImportAptArtifactsRequest, lro::Operation> _callImportAptArtifacts;
+
+        private readonly gaxgrpc::ApiCall<ImportYumArtifactsRequest, lro::Operation> _callImportYumArtifacts;
+
         private readonly gaxgrpc::ApiCall<ListRepositoriesRequest, ListRepositoriesResponse> _callListRepositories;
 
         private readonly gaxgrpc::ApiCall<GetRepositoryRequest, Repository> _callGetRepository;
@@ -2154,6 +2766,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
 
         private readonly gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> _callTestIamPermissions;
 
+        private readonly gaxgrpc::ApiCall<GetProjectSettingsRequest, ProjectSettings> _callGetProjectSettings;
+
+        private readonly gaxgrpc::ApiCall<UpdateProjectSettingsRequest, ProjectSettings> _callUpdateProjectSettings;
+
         /// <summary>
         /// Constructs a client wrapper for the ArtifactRegistry service, with the specified gRPC client and settings.
         /// </summary>
@@ -2164,10 +2780,18 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             GrpcClient = grpcClient;
             ArtifactRegistrySettings effectiveSettings = settings ?? ArtifactRegistrySettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            ImportAptArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportAptArtifactsOperationsSettings);
+            ImportYumArtifactsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportYumArtifactsOperationsSettings);
             CreateRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateRepositoryOperationsSettings);
             DeleteRepositoryOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteRepositoryOperationsSettings);
             DeletePackageOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeletePackageOperationsSettings);
             DeleteVersionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteVersionOperationsSettings);
+            _callImportAptArtifacts = clientHelper.BuildApiCall<ImportAptArtifactsRequest, lro::Operation>(grpcClient.ImportAptArtifactsAsync, grpcClient.ImportAptArtifacts, effectiveSettings.ImportAptArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportAptArtifacts);
+            Modify_ImportAptArtifactsApiCall(ref _callImportAptArtifacts);
+            _callImportYumArtifacts = clientHelper.BuildApiCall<ImportYumArtifactsRequest, lro::Operation>(grpcClient.ImportYumArtifactsAsync, grpcClient.ImportYumArtifacts, effectiveSettings.ImportYumArtifactsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportYumArtifacts);
+            Modify_ImportYumArtifactsApiCall(ref _callImportYumArtifacts);
             _callListRepositories = clientHelper.BuildApiCall<ListRepositoriesRequest, ListRepositoriesResponse>(grpcClient.ListRepositoriesAsync, grpcClient.ListRepositories, effectiveSettings.ListRepositoriesSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callListRepositories);
             Modify_ListRepositoriesApiCall(ref _callListRepositories);
@@ -2231,10 +2855,20 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
             _callTestIamPermissions = clientHelper.BuildApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse>(grpcClient.TestIamPermissionsAsync, grpcClient.TestIamPermissions, effectiveSettings.TestIamPermissionsSettings).WithGoogleRequestParam("resource", request => request.Resource);
             Modify_ApiCall(ref _callTestIamPermissions);
             Modify_TestIamPermissionsApiCall(ref _callTestIamPermissions);
+            _callGetProjectSettings = clientHelper.BuildApiCall<GetProjectSettingsRequest, ProjectSettings>(grpcClient.GetProjectSettingsAsync, grpcClient.GetProjectSettings, effectiveSettings.GetProjectSettingsSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetProjectSettings);
+            Modify_GetProjectSettingsApiCall(ref _callGetProjectSettings);
+            _callUpdateProjectSettings = clientHelper.BuildApiCall<UpdateProjectSettingsRequest, ProjectSettings>(grpcClient.UpdateProjectSettingsAsync, grpcClient.UpdateProjectSettings, effectiveSettings.UpdateProjectSettingsSettings).WithGoogleRequestParam("project_settings.name", request => request.ProjectSettings?.Name);
+            Modify_ApiCall(ref _callUpdateProjectSettings);
+            Modify_UpdateProjectSettingsApiCall(ref _callUpdateProjectSettings);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
         partial void Modify_ApiCall<TRequest, TResponse>(ref gaxgrpc::ApiCall<TRequest, TResponse> call) where TRequest : class, proto::IMessage<TRequest> where TResponse : class, proto::IMessage<TResponse>;
+
+        partial void Modify_ImportAptArtifactsApiCall(ref gaxgrpc::ApiCall<ImportAptArtifactsRequest, lro::Operation> call);
+
+        partial void Modify_ImportYumArtifactsApiCall(ref gaxgrpc::ApiCall<ImportYumArtifactsRequest, lro::Operation> call);
 
         partial void Modify_ListRepositoriesApiCall(ref gaxgrpc::ApiCall<ListRepositoriesRequest, ListRepositoriesResponse> call);
 
@@ -2278,10 +2912,18 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
 
         partial void Modify_TestIamPermissionsApiCall(ref gaxgrpc::ApiCall<gciv::TestIamPermissionsRequest, gciv::TestIamPermissionsResponse> call);
 
+        partial void Modify_GetProjectSettingsApiCall(ref gaxgrpc::ApiCall<GetProjectSettingsRequest, ProjectSettings> call);
+
+        partial void Modify_UpdateProjectSettingsApiCall(ref gaxgrpc::ApiCall<UpdateProjectSettingsRequest, ProjectSettings> call);
+
         partial void OnConstruction(ArtifactRegistry.ArtifactRegistryClient grpcClient, ArtifactRegistrySettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC ArtifactRegistry client</summary>
         public override ArtifactRegistry.ArtifactRegistryClient GrpcClient { get; }
+
+        partial void Modify_ImportAptArtifactsRequest(ref ImportAptArtifactsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportYumArtifactsRequest(ref ImportYumArtifactsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_ListRepositoriesRequest(ref ListRepositoriesRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -2324,6 +2966,76 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         partial void Modify_GetIamPolicyRequest(ref gciv::GetIamPolicyRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_TestIamPermissionsRequest(ref gciv::TestIamPermissionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetProjectSettingsRequest(ref GetProjectSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateProjectSettingsRequest(ref UpdateProjectSettingsRequest request, ref gaxgrpc::CallSettings settings);
+
+        /// <summary>The long-running operations client for <c>ImportAptArtifacts</c>.</summary>
+        public override lro::OperationsClient ImportAptArtifactsOperationsClient { get; }
+
+        /// <summary>
+        /// Imports Apt artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata> ImportAptArtifacts(ImportAptArtifactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportAptArtifactsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>(_callImportAptArtifacts.Sync(request, callSettings), ImportAptArtifactsOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports Apt artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>> ImportAptArtifactsAsync(ImportAptArtifactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportAptArtifactsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportAptArtifactsResponse, ImportAptArtifactsMetadata>(await _callImportAptArtifacts.Async(request, callSettings).ConfigureAwait(false), ImportAptArtifactsOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportYumArtifacts</c>.</summary>
+        public override lro::OperationsClient ImportYumArtifactsOperationsClient { get; }
+
+        /// <summary>
+        /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata> ImportYumArtifacts(ImportYumArtifactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportYumArtifactsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>(_callImportYumArtifacts.Sync(request, callSettings), ImportYumArtifactsOperationsClient);
+        }
+
+        /// <summary>
+        /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+        /// resources are imported. Package, Version, and File resources are created
+        /// based on the imported artifacts. Imported artifacts that conflict with
+        /// existing resources are ignored.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>> ImportYumArtifactsAsync(ImportYumArtifactsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportYumArtifactsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportYumArtifactsResponse, ImportYumArtifactsMetadata>(await _callImportYumArtifacts.Async(request, callSettings).ConfigureAwait(false), ImportYumArtifactsOperationsClient);
+        }
 
         /// <summary>
         /// Lists repositories.
@@ -2849,6 +3561,54 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2
         {
             Modify_TestIamPermissionsRequest(ref request, ref callSettings);
             return _callTestIamPermissions.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ProjectSettings GetProjectSettings(GetProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProjectSettingsRequest(ref request, ref callSettings);
+            return _callGetProjectSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Retrieves the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ProjectSettings> GetProjectSettingsAsync(GetProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetProjectSettingsRequest(ref request, ref callSettings);
+            return _callGetProjectSettings.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ProjectSettings UpdateProjectSettings(UpdateProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProjectSettingsRequest(ref request, ref callSettings);
+            return _callUpdateProjectSettings.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Updates the Settings for the Project.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ProjectSettings> UpdateProjectSettingsAsync(UpdateProjectSettingsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateProjectSettingsRequest(ref request, ref callSettings);
+            return _callUpdateProjectSettings.Async(request, callSettings);
         }
     }
 
