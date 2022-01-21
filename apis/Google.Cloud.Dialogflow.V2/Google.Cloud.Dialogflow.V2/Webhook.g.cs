@@ -25,12 +25,12 @@ namespace Google.Cloud.Dialogflow.V2 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi93ZWJob29rLnByb3RvEhpn",
-            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MhooZ29vZ2xlL2Nsb3VkL2RpYWxv",
-            "Z2Zsb3cvdjIvY29udGV4dC5wcm90bxonZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zs",
-            "b3cvdjIvaW50ZW50LnByb3RvGihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92",
-            "Mi9zZXNzaW9uLnByb3RvGjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9z",
-            "ZXNzaW9uX2VudGl0eV90eXBlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3Ry",
-            "dWN0LnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvItYBCg5X",
+            "b29nbGUuY2xvdWQuZGlhbG9nZmxvdy52MhocZ29vZ2xlL2FwaS9hbm5vdGF0",
+            "aW9ucy5wcm90bxooZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvY29udGV4",
+            "dC5wcm90bxonZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvdjIvaW50ZW50LnBy",
+            "b3RvGihnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9zZXNzaW9uLnByb3Rv",
+            "GjRnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy92Mi9zZXNzaW9uX2VudGl0eV90",
+            "eXBlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvItYBCg5X",
             "ZWJob29rUmVxdWVzdBIPCgdzZXNzaW9uGAQgASgJEhMKC3Jlc3BvbnNlX2lk",
             "GAEgASgJEj0KDHF1ZXJ5X3Jlc3VsdBgCIAEoCzInLmdvb2dsZS5jbG91ZC5k",
             "aWFsb2dmbG93LnYyLlF1ZXJ5UmVzdWx0El8KHm9yaWdpbmFsX2RldGVjdF9p",
@@ -52,7 +52,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "dy92MjtkaWFsb2dmbG93+AEBogICREaqAhpHb29nbGUuQ2xvdWQuRGlhbG9n",
             "Zmxvdy5WMmIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ContextReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookRequest), global::Google.Cloud.Dialogflow.V2.WebhookRequest.Parser, new[]{ "Session", "ResponseId", "QueryResult", "OriginalDetectIntentRequest" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.WebhookResponse), global::Google.Cloud.Dialogflow.V2.WebhookResponse.Parser, new[]{ "FulfillmentText", "FulfillmentMessages", "Source", "Payload", "OutputContexts", "FollowupEventInput", "SessionEntityTypes" }, null, null, null, null),

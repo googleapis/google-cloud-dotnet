@@ -1134,5 +1134,161 @@ namespace Google.Cloud.Dialogflow.V2.Tests
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
+
+        [xunit::FactAttribute]
+        public void SuggestSmartRepliesRequestObject()
+        {
+            moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+                CurrentTextInput = new TextInput(),
+            };
+            SuggestSmartRepliesResponse expectedResponse = new SuggestSmartRepliesResponse
+            {
+                SmartReplyAnswers =
+                {
+                    new SmartReplyAnswer(),
+                },
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestSmartReplies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            SuggestSmartRepliesResponse response = client.SuggestSmartReplies(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SuggestSmartRepliesRequestObjectAsync()
+        {
+            moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+                CurrentTextInput = new TextInput(),
+            };
+            SuggestSmartRepliesResponse expectedResponse = new SuggestSmartRepliesResponse
+            {
+                SmartReplyAnswers =
+                {
+                    new SmartReplyAnswer(),
+                },
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestSmartRepliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestSmartRepliesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            SuggestSmartRepliesResponse responseCallSettings = await client.SuggestSmartRepliesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SuggestSmartRepliesResponse responseCancellationToken = await client.SuggestSmartRepliesAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SuggestSmartReplies()
+        {
+            moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+            };
+            SuggestSmartRepliesResponse expectedResponse = new SuggestSmartRepliesResponse
+            {
+                SmartReplyAnswers =
+                {
+                    new SmartReplyAnswer(),
+                },
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestSmartReplies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            SuggestSmartRepliesResponse response = client.SuggestSmartReplies(request.Parent);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SuggestSmartRepliesAsync()
+        {
+            moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+            };
+            SuggestSmartRepliesResponse expectedResponse = new SuggestSmartRepliesResponse
+            {
+                SmartReplyAnswers =
+                {
+                    new SmartReplyAnswer(),
+                },
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestSmartRepliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestSmartRepliesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            SuggestSmartRepliesResponse responseCallSettings = await client.SuggestSmartRepliesAsync(request.Parent, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SuggestSmartRepliesResponse responseCancellationToken = await client.SuggestSmartRepliesAsync(request.Parent, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void SuggestSmartRepliesResourceNames()
+        {
+            moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+            };
+            SuggestSmartRepliesResponse expectedResponse = new SuggestSmartRepliesResponse
+            {
+                SmartReplyAnswers =
+                {
+                    new SmartReplyAnswer(),
+                },
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestSmartReplies(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            SuggestSmartRepliesResponse response = client.SuggestSmartReplies(request.ParentAsParticipantName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task SuggestSmartRepliesResourceNamesAsync()
+        {
+            moq::Mock<Participants.ParticipantsClient> mockGrpcClient = new moq::Mock<Participants.ParticipantsClient>(moq::MockBehavior.Strict);
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+            };
+            SuggestSmartRepliesResponse expectedResponse = new SuggestSmartRepliesResponse
+            {
+                SmartReplyAnswers =
+                {
+                    new SmartReplyAnswer(),
+                },
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 1799545581,
+            };
+            mockGrpcClient.Setup(x => x.SuggestSmartRepliesAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<SuggestSmartRepliesResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            ParticipantsClient client = new ParticipantsClientImpl(mockGrpcClient.Object, null);
+            SuggestSmartRepliesResponse responseCallSettings = await client.SuggestSmartRepliesAsync(request.ParentAsParticipantName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            SuggestSmartRepliesResponse responseCancellationToken = await client.SuggestSmartRepliesAsync(request.ParentAsParticipantName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
     }
 }

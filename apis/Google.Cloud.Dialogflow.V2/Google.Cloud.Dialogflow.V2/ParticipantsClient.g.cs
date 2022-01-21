@@ -52,6 +52,7 @@ namespace Google.Cloud.Dialogflow.V2
             AnalyzeContentSettings = existing.AnalyzeContentSettings;
             SuggestArticlesSettings = existing.SuggestArticlesSettings;
             SuggestFaqAnswersSettings = existing.SuggestFaqAnswersSettings;
+            SuggestSmartRepliesSettings = existing.SuggestSmartRepliesSettings;
             OnCopy(existing);
         }
 
@@ -182,6 +183,24 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings SuggestFaqAnswersSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>ParticipantsClient.SuggestSmartReplies</c> and <c>ParticipantsClient.SuggestSmartRepliesAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings SuggestSmartRepliesSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="ParticipantsSettings"/> object.</returns>
@@ -1377,6 +1396,132 @@ namespace Google.Cloud.Dialogflow.V2
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<SuggestFaqAnswersResponse> SuggestFaqAnswersAsync(ParticipantName parent, st::CancellationToken cancellationToken) =>
             SuggestFaqAnswersAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SuggestSmartRepliesResponse SuggestSmartReplies(SuggestSmartRepliesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(SuggestSmartRepliesRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(SuggestSmartRepliesRequest request, st::CancellationToken cancellationToken) =>
+            SuggestSmartRepliesAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the participant to fetch suggestion for.
+        /// Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;/participants/&amp;lt;Participant ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SuggestSmartRepliesResponse SuggestSmartReplies(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestSmartReplies(new SuggestSmartRepliesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the participant to fetch suggestion for.
+        /// Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;/participants/&amp;lt;Participant ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(string parent, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestSmartRepliesAsync(new SuggestSmartRepliesRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the participant to fetch suggestion for.
+        /// Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;/participants/&amp;lt;Participant ID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(string parent, st::CancellationToken cancellationToken) =>
+            SuggestSmartRepliesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the participant to fetch suggestion for.
+        /// Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;/participants/&amp;lt;Participant ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual SuggestSmartRepliesResponse SuggestSmartReplies(ParticipantName parent, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestSmartReplies(new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the participant to fetch suggestion for.
+        /// Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;/participants/&amp;lt;Participant ID&amp;gt;`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(ParticipantName parent, gaxgrpc::CallSettings callSettings = null) =>
+            SuggestSmartRepliesAsync(new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+            }, callSettings);
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The name of the participant to fetch suggestion for.
+        /// Format: `projects/{Project ID}/locations/{Location
+        /// ID&amp;gt;/conversations/&amp;lt;Conversation ID&amp;gt;/participants/&amp;lt;Participant ID&amp;gt;`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(ParticipantName parent, st::CancellationToken cancellationToken) =>
+            SuggestSmartRepliesAsync(parent, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Participants client wrapper implementation, for convenient use.</summary>
@@ -1398,6 +1543,8 @@ namespace Google.Cloud.Dialogflow.V2
         private readonly gaxgrpc::ApiCall<SuggestArticlesRequest, SuggestArticlesResponse> _callSuggestArticles;
 
         private readonly gaxgrpc::ApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse> _callSuggestFaqAnswers;
+
+        private readonly gaxgrpc::ApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse> _callSuggestSmartReplies;
 
         /// <summary>
         /// Constructs a client wrapper for the Participants service, with the specified gRPC client and settings.
@@ -1430,6 +1577,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callSuggestFaqAnswers = clientHelper.BuildApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse>(grpcClient.SuggestFaqAnswersAsync, grpcClient.SuggestFaqAnswers, effectiveSettings.SuggestFaqAnswersSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callSuggestFaqAnswers);
             Modify_SuggestFaqAnswersApiCall(ref _callSuggestFaqAnswers);
+            _callSuggestSmartReplies = clientHelper.BuildApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse>(grpcClient.SuggestSmartRepliesAsync, grpcClient.SuggestSmartReplies, effectiveSettings.SuggestSmartRepliesSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callSuggestSmartReplies);
+            Modify_SuggestSmartRepliesApiCall(ref _callSuggestSmartReplies);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1449,6 +1599,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_SuggestFaqAnswersApiCall(ref gaxgrpc::ApiCall<SuggestFaqAnswersRequest, SuggestFaqAnswersResponse> call);
 
+        partial void Modify_SuggestSmartRepliesApiCall(ref gaxgrpc::ApiCall<SuggestSmartRepliesRequest, SuggestSmartRepliesResponse> call);
+
         partial void OnConstruction(Participants.ParticipantsClient grpcClient, ParticipantsSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Participants client</summary>
@@ -1467,6 +1619,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_SuggestArticlesRequest(ref SuggestArticlesRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_SuggestFaqAnswersRequest(ref SuggestFaqAnswersRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_SuggestSmartRepliesRequest(ref SuggestSmartRepliesRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Creates a new participant in a conversation.
@@ -1648,6 +1802,32 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_SuggestFaqAnswersRequest(ref request, ref callSettings);
             return _callSuggestFaqAnswers.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override SuggestSmartRepliesResponse SuggestSmartReplies(SuggestSmartRepliesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuggestSmartRepliesRequest(ref request, ref callSettings);
+            return _callSuggestSmartReplies.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Gets smart replies for a participant based on specific historical
+        /// messages.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<SuggestSmartRepliesResponse> SuggestSmartRepliesAsync(SuggestSmartRepliesRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_SuggestSmartRepliesRequest(ref request, ref callSettings);
+            return _callSuggestSmartReplies.Async(request, callSettings);
         }
     }
 

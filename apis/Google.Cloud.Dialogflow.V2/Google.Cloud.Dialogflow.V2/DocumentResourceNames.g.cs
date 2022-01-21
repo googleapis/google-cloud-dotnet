@@ -375,6 +375,18 @@ namespace Google.Cloud.Dialogflow.V2
         }
     }
 
+    public partial class ImportDocumentsRequest
+    {
+        /// <summary>
+        /// <see cref="KnowledgeBaseName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public KnowledgeBaseName ParentAsKnowledgeBaseName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : KnowledgeBaseName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
     public partial class DeleteDocumentRequest
     {
         /// <summary>

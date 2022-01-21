@@ -78,7 +78,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "cnNhdGlvblByb2ZpbGVSZXF1ZXN0EkMKBG5hbWUYASABKAlCNeBBAvpBLwot",
             "ZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9Db252ZXJzYXRpb25Qcm9maWxl",
             "Ik4KFEF1dG9tYXRlZEFnZW50Q29uZmlnEjYKBWFnZW50GAEgASgJQifgQQL6",
-            "QSEKH2RpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnQirhIKGUh1bWFu",
+            "QSEKH2RpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnQi4RMKGUh1bWFu",
             "QWdlbnRBc3Npc3RhbnRDb25maWcSSwoTbm90aWZpY2F0aW9uX2NvbmZpZxgC",
             "IAEoCzIuLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLk5vdGlmaWNhdGlv",
             "bkNvbmZpZxJtCh1odW1hbl9hZ2VudF9zdWdnZXN0aW9uX2NvbmZpZxgDIAEo",
@@ -90,7 +90,7 @@ namespace Google.Cloud.Dialogflow.V2 {
             "bG91ZC5kaWFsb2dmbG93LnYyLkh1bWFuQWdlbnRBc3Npc3RhbnRDb25maWcu",
             "TWVzc2FnZUFuYWx5c2lzQ29uZmlnGkgKGVN1Z2dlc3Rpb25UcmlnZ2VyU2V0",
             "dGluZ3MSFAoMbm9fc21hbGx0YWxrGAEgASgIEhUKDW9ubHlfZW5kX3VzZXIY",
-            "AiABKAga1gMKF1N1Z2dlc3Rpb25GZWF0dXJlQ29uZmlnEkkKEnN1Z2dlc3Rp",
+            "AiABKAgazAQKF1N1Z2dlc3Rpb25GZWF0dXJlQ29uZmlnEkkKEnN1Z2dlc3Rp",
             "b25fZmVhdHVyZRgFIAEoCzItLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
             "LlN1Z2dlc3Rpb25GZWF0dXJlEiUKHWVuYWJsZV9ldmVudF9iYXNlZF9zdWdn",
             "ZXN0aW9uGAMgASgIEnQKG3N1Z2dlc3Rpb25fdHJpZ2dlcl9zZXR0aW5ncxgK",
@@ -100,103 +100,107 @@ namespace Google.Cloud.Dialogflow.V2 {
             "Mi5IdW1hbkFnZW50QXNzaXN0YW50Q29uZmlnLlN1Z2dlc3Rpb25RdWVyeUNv",
             "bmZpZxJwChljb252ZXJzYXRpb25fbW9kZWxfY29uZmlnGAcgASgLMk0uZ29v",
             "Z2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSHVtYW5BZ2VudEFzc2lzdGFudENv",
-            "bmZpZy5Db252ZXJzYXRpb25Nb2RlbENvbmZpZxqeAQoQU3VnZ2VzdGlvbkNv",
-            "bmZpZxJmCg9mZWF0dXJlX2NvbmZpZ3MYAiADKAsyTS5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5IdW1hbkFnZW50QXNzaXN0YW50Q29uZmlnLlN1Z2dl",
-            "c3Rpb25GZWF0dXJlQ29uZmlnEiIKGmdyb3VwX3N1Z2dlc3Rpb25fcmVzcG9u",
-            "c2VzGAMgASgIGvwHChVTdWdnZXN0aW9uUXVlcnlDb25maWcSiwEKG2tub3ds",
-            "ZWRnZV9iYXNlX3F1ZXJ5X3NvdXJjZRgBIAEoCzJkLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyLkh1bWFuQWdlbnRBc3Npc3RhbnRDb25maWcuU3VnZ2Vz",
-            "dGlvblF1ZXJ5Q29uZmlnLktub3dsZWRnZUJhc2VRdWVyeVNvdXJjZUgAEoAB",
-            "ChVkb2N1bWVudF9xdWVyeV9zb3VyY2UYAiABKAsyXy5nb29nbGUuY2xvdWQu",
-            "ZGlhbG9nZmxvdy52Mi5IdW1hbkFnZW50QXNzaXN0YW50Q29uZmlnLlN1Z2dl",
-            "c3Rpb25RdWVyeUNvbmZpZy5Eb2N1bWVudFF1ZXJ5U291cmNlSAAShAEKF2Rp",
-            "YWxvZ2Zsb3dfcXVlcnlfc291cmNlGAMgASgLMmEuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuSHVtYW5BZ2VudEFzc2lzdGFudENvbmZpZy5TdWdnZXN0",
-            "aW9uUXVlcnlDb25maWcuRGlhbG9nZmxvd1F1ZXJ5U291cmNlSAASEwoLbWF4",
-            "X3Jlc3VsdHMYBCABKAUSHAoUY29uZmlkZW5jZV90aHJlc2hvbGQYBSABKAIS",
-            "ggEKF2NvbnRleHRfZmlsdGVyX3NldHRpbmdzGAcgASgLMmEuZ29vZ2xlLmNs",
-            "b3VkLmRpYWxvZ2Zsb3cudjIuSHVtYW5BZ2VudEFzc2lzdGFudENvbmZpZy5T",
-            "dWdnZXN0aW9uUXVlcnlDb25maWcuQ29udGV4dEZpbHRlclNldHRpbmdzGmQK",
-            "GEtub3dsZWRnZUJhc2VRdWVyeVNvdXJjZRJICg9rbm93bGVkZ2VfYmFzZXMY",
-            "ASADKAlCL+BBAvpBKQonZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9Lbm93",
-            "bGVkZ2VCYXNlGlQKE0RvY3VtZW50UXVlcnlTb3VyY2USPQoJZG9jdW1lbnRz",
-            "GAEgAygJQirgQQL6QSQKImRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vRG9j",
-            "dW1lbnQaTwoVRGlhbG9nZmxvd1F1ZXJ5U291cmNlEjYKBWFnZW50GAEgASgJ",
-            "QifgQQL6QSEKH2RpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQWdlbnQadgoV",
-            "Q29udGV4dEZpbHRlclNldHRpbmdzEh0KFWRyb3BfaGFuZG9mZl9tZXNzYWdl",
-            "cxgBIAEoCBIjChtkcm9wX3ZpcnR1YWxfYWdlbnRfbWVzc2FnZXMYAiABKAgS",
-            "GQoRZHJvcF9pdnJfbWVzc2FnZXMYAyABKAhCDgoMcXVlcnlfc291cmNlGloK",
-            "F0NvbnZlcnNhdGlvbk1vZGVsQ29uZmlnEj8KBW1vZGVsGAEgASgJQjD6QS0K",
-            "K2RpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQ29udmVyc2F0aW9uTW9kZWwa",
-            "XAoVTWVzc2FnZUFuYWx5c2lzQ29uZmlnEiAKGGVuYWJsZV9lbnRpdHlfZXh0",
-            "cmFjdGlvbhgCIAEoCBIhChllbmFibGVfc2VudGltZW50X2FuYWx5c2lzGAMg",
-            "ASgIIsQDChdIdW1hbkFnZW50SGFuZG9mZkNvbmZpZxJiChJsaXZlX3BlcnNv",
-            "bl9jb25maWcYASABKAsyRC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5I",
-            "dW1hbkFnZW50SGFuZG9mZkNvbmZpZy5MaXZlUGVyc29uQ29uZmlnSAASdQoc",
-            "c2FsZXNmb3JjZV9saXZlX2FnZW50X2NvbmZpZxgCIAEoCzJNLmdvb2dsZS5j",
-            "bG91ZC5kaWFsb2dmbG93LnYyLkh1bWFuQWdlbnRIYW5kb2ZmQ29uZmlnLlNh",
-            "bGVzZm9yY2VMaXZlQWdlbnRDb25maWdIABovChBMaXZlUGVyc29uQ29uZmln",
-            "EhsKDmFjY291bnRfbnVtYmVyGAEgASgJQgPgQQIaiwEKGVNhbGVzZm9yY2VM",
-            "aXZlQWdlbnRDb25maWcSHAoPb3JnYW5pemF0aW9uX2lkGAEgASgJQgPgQQIS",
-            "GgoNZGVwbG95bWVudF9pZBgCIAEoCUID4EECEhYKCWJ1dHRvbl9pZBgDIAEo",
-            "CUID4EECEhwKD2VuZHBvaW50X2RvbWFpbhgEIAEoCUID4EECQg8KDWFnZW50",
-            "X3NlcnZpY2UivwEKEk5vdGlmaWNhdGlvbkNvbmZpZxINCgV0b3BpYxgBIAEo",
-            "CRJUCg5tZXNzYWdlX2Zvcm1hdBgCIAEoDjI8Lmdvb2dsZS5jbG91ZC5kaWFs",
-            "b2dmbG93LnYyLk5vdGlmaWNhdGlvbkNvbmZpZy5NZXNzYWdlRm9ybWF0IkQK",
-            "DU1lc3NhZ2VGb3JtYXQSHgoaTUVTU0FHRV9GT1JNQVRfVU5TUEVDSUZJRUQQ",
-            "ABIJCgVQUk9UTxABEggKBEpTT04QAiIzCg1Mb2dnaW5nQ29uZmlnEiIKGmVu",
-            "YWJsZV9zdGFja2RyaXZlcl9sb2dnaW5nGAMgASgIIqUBChFTdWdnZXN0aW9u",
-            "RmVhdHVyZRJACgR0eXBlGAEgASgOMjIuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zs",
-            "b3cudjIuU3VnZ2VzdGlvbkZlYXR1cmUuVHlwZSJOCgRUeXBlEhQKEFRZUEVf",
-            "VU5TUEVDSUZJRUQQABIWChJBUlRJQ0xFX1NVR0dFU1RJT04QARIHCgNGQVEQ",
-            "AhIPCgtTTUFSVF9SRVBMWRADMtUMChRDb252ZXJzYXRpb25Qcm9maWxlcxKQ",
-            "AgoYTGlzdENvbnZlcnNhdGlvblByb2ZpbGVzEjsuZ29vZ2xlLmNsb3VkLmRp",
-            "YWxvZ2Zsb3cudjIuTGlzdENvbnZlcnNhdGlvblByb2ZpbGVzUmVxdWVzdBo8",
-            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkxpc3RDb252ZXJzYXRpb25Q",
-            "cm9maWxlc1Jlc3BvbnNlInmC0+STAmoSLC92Mi97cGFyZW50PXByb2plY3Rz",
-            "Lyp9L2NvbnZlcnNhdGlvblByb2ZpbGVzWjoSOC92Mi97cGFyZW50PXByb2pl",
-            "Y3RzLyovbG9jYXRpb25zLyp9L2NvbnZlcnNhdGlvblByb2ZpbGVz2kEGcGFy",
-            "ZW50Ev0BChZHZXRDb252ZXJzYXRpb25Qcm9maWxlEjkuZ29vZ2xlLmNsb3Vk",
-            "LmRpYWxvZ2Zsb3cudjIuR2V0Q29udmVyc2F0aW9uUHJvZmlsZVJlcXVlc3Qa",
-            "Ly5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5Db252ZXJzYXRpb25Qcm9m",
-            "aWxlIneC0+STAmoSLC92Mi97bmFtZT1wcm9qZWN0cy8qL2NvbnZlcnNhdGlv",
-            "blByb2ZpbGVzLyp9WjoSOC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
-            "cy8qL2NvbnZlcnNhdGlvblByb2ZpbGVzLyp92kEEbmFtZRLIAgoZQ3JlYXRl",
-            "Q29udmVyc2F0aW9uUHJvZmlsZRI8Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93",
-            "LnYyLkNyZWF0ZUNvbnZlcnNhdGlvblByb2ZpbGVSZXF1ZXN0Gi8uZ29vZ2xl",
-            "LmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udmVyc2F0aW9uUHJvZmlsZSK7AYLT",
-            "5JMClgEiLC92Mi97cGFyZW50PXByb2plY3RzLyp9L2NvbnZlcnNhdGlvblBy",
-            "b2ZpbGVzOhRjb252ZXJzYXRpb25fcHJvZmlsZVpQIjgvdjIve3BhcmVudD1w",
-            "cm9qZWN0cy8qL2xvY2F0aW9ucy8qfS9jb252ZXJzYXRpb25Qcm9maWxlczoU",
-            "Y29udmVyc2F0aW9uX3Byb2ZpbGXaQRtwYXJlbnQsY29udmVyc2F0aW9uX3By",
-            "b2ZpbGUS9wIKGVVwZGF0ZUNvbnZlcnNhdGlvblByb2ZpbGUSPC5nb29nbGUu",
-            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5VcGRhdGVDb252ZXJzYXRpb25Qcm9maWxl",
-            "UmVxdWVzdBovLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNvbnZlcnNh",
-            "dGlvblByb2ZpbGUi6gGC0+STAsABMkEvdjIve2NvbnZlcnNhdGlvbl9wcm9m",
-            "aWxlLm5hbWU9cHJvamVjdHMvKi9jb252ZXJzYXRpb25Qcm9maWxlcy8qfToU",
-            "Y29udmVyc2F0aW9uX3Byb2ZpbGVaZTJNL3YyL3tjb252ZXJzYXRpb25fcHJv",
-            "ZmlsZS5uYW1lPXByb2plY3RzLyovbG9jYXRpb25zLyovY29udmVyc2F0aW9u",
-            "UHJvZmlsZXMvKn06FGNvbnZlcnNhdGlvbl9wcm9maWxl2kEgY29udmVyc2F0",
-            "aW9uX3Byb2ZpbGUsdXBkYXRlX21hc2sS6gEKGURlbGV0ZUNvbnZlcnNhdGlv",
-            "blByb2ZpbGUSPC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5EZWxldGVD",
-            "b252ZXJzYXRpb25Qcm9maWxlUmVxdWVzdBoWLmdvb2dsZS5wcm90b2J1Zi5F",
-            "bXB0eSJ3gtPkkwJqKiwvdjIve25hbWU9cHJvamVjdHMvKi9jb252ZXJzYXRp",
-            "b25Qcm9maWxlcy8qfVo6KjgvdjIve25hbWU9cHJvamVjdHMvKi9sb2NhdGlv",
-            "bnMvKi9jb252ZXJzYXRpb25Qcm9maWxlcy8qfdpBBG5hbWUaeMpBGWRpYWxv",
-            "Z2Zsb3cuZ29vZ2xlYXBpcy5jb23SQVlodHRwczovL3d3dy5nb29nbGVhcGlz",
-            "LmNvbS9hdXRoL2Nsb3VkLXBsYXRmb3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFw",
-            "aXMuY29tL2F1dGgvZGlhbG9nZmxvd0KnAwoeY29tLmdvb2dsZS5jbG91ZC5k",
-            "aWFsb2dmbG93LnYyQhhDb252ZXJzYXRpb25Qcm9maWxlUHJvdG9QAVpEZ29v",
-            "Z2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9kaWFs",
-            "b2dmbG93L3YyO2RpYWxvZ2Zsb3f4AQGiAgJERqoCGkdvb2dsZS5DbG91ZC5E",
-            "aWFsb2dmbG93LlYy6kF8CixkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0NY",
-            "U2VjdXJpdHlTZXR0aW5ncxJMcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L3NlY3VyaXR5U2V0dGluZ3Mve3NlY3VyaXR5X3NldHRp",
-            "bmdzfepBfgorZGlhbG9nZmxvdy5nb29nbGVhcGlzLmNvbS9Db252ZXJzYXRp",
-            "b25Nb2RlbBJPcHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRp",
-            "b259L2NvbnZlcnNhdGlvbk1vZGVscy97Y29udmVyc2F0aW9uX21vZGVsfWIG",
-            "cHJvdG8z"));
+            "bmZpZy5Db252ZXJzYXRpb25Nb2RlbENvbmZpZxJ0Chtjb252ZXJzYXRpb25f",
+            "cHJvY2Vzc19jb25maWcYCCABKAsyTy5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5IdW1hbkFnZW50QXNzaXN0YW50Q29uZmlnLkNvbnZlcnNhdGlvblBy",
+            "b2Nlc3NDb25maWcangEKEFN1Z2dlc3Rpb25Db25maWcSZgoPZmVhdHVyZV9j",
+            "b25maWdzGAIgAygLMk0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSHVt",
+            "YW5BZ2VudEFzc2lzdGFudENvbmZpZy5TdWdnZXN0aW9uRmVhdHVyZUNvbmZp",
+            "ZxIiChpncm91cF9zdWdnZXN0aW9uX3Jlc3BvbnNlcxgDIAEoCBr8BwoVU3Vn",
+            "Z2VzdGlvblF1ZXJ5Q29uZmlnEosBChtrbm93bGVkZ2VfYmFzZV9xdWVyeV9z",
+            "b3VyY2UYASABKAsyZC5nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy52Mi5IdW1h",
+            "bkFnZW50QXNzaXN0YW50Q29uZmlnLlN1Z2dlc3Rpb25RdWVyeUNvbmZpZy5L",
+            "bm93bGVkZ2VCYXNlUXVlcnlTb3VyY2VIABKAAQoVZG9jdW1lbnRfcXVlcnlf",
+            "c291cmNlGAIgASgLMl8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuSHVt",
+            "YW5BZ2VudEFzc2lzdGFudENvbmZpZy5TdWdnZXN0aW9uUXVlcnlDb25maWcu",
+            "RG9jdW1lbnRRdWVyeVNvdXJjZUgAEoQBChdkaWFsb2dmbG93X3F1ZXJ5X3Nv",
+            "dXJjZRgDIAEoCzJhLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkh1bWFu",
+            "QWdlbnRBc3Npc3RhbnRDb25maWcuU3VnZ2VzdGlvblF1ZXJ5Q29uZmlnLkRp",
+            "YWxvZ2Zsb3dRdWVyeVNvdXJjZUgAEhMKC21heF9yZXN1bHRzGAQgASgFEhwK",
+            "FGNvbmZpZGVuY2VfdGhyZXNob2xkGAUgASgCEoIBChdjb250ZXh0X2ZpbHRl",
+            "cl9zZXR0aW5ncxgHIAEoCzJhLmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYy",
+            "Lkh1bWFuQWdlbnRBc3Npc3RhbnRDb25maWcuU3VnZ2VzdGlvblF1ZXJ5Q29u",
+            "ZmlnLkNvbnRleHRGaWx0ZXJTZXR0aW5ncxpkChhLbm93bGVkZ2VCYXNlUXVl",
+            "cnlTb3VyY2USSAoPa25vd2xlZGdlX2Jhc2VzGAEgAygJQi/gQQL6QSkKJ2Rp",
+            "YWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vS25vd2xlZGdlQmFzZRpUChNEb2N1",
+            "bWVudFF1ZXJ5U291cmNlEj0KCWRvY3VtZW50cxgBIAMoCUIq4EEC+kEkCiJk",
+            "aWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0RvY3VtZW50Gk8KFURpYWxvZ2Zs",
+            "b3dRdWVyeVNvdXJjZRI2CgVhZ2VudBgBIAEoCUIn4EEC+kEhCh9kaWFsb2dm",
+            "bG93Lmdvb2dsZWFwaXMuY29tL0FnZW50GnYKFUNvbnRleHRGaWx0ZXJTZXR0",
+            "aW5ncxIdChVkcm9wX2hhbmRvZmZfbWVzc2FnZXMYASABKAgSIwobZHJvcF92",
+            "aXJ0dWFsX2FnZW50X21lc3NhZ2VzGAIgASgIEhkKEWRyb3BfaXZyX21lc3Nh",
+            "Z2VzGAMgASgIQg4KDHF1ZXJ5X3NvdXJjZRpaChdDb252ZXJzYXRpb25Nb2Rl",
+            "bENvbmZpZxI/CgVtb2RlbBgBIAEoCUIw+kEtCitkaWFsb2dmbG93Lmdvb2ds",
+            "ZWFwaXMuY29tL0NvbnZlcnNhdGlvbk1vZGVsGjsKGUNvbnZlcnNhdGlvblBy",
+            "b2Nlc3NDb25maWcSHgoWcmVjZW50X3NlbnRlbmNlc19jb3VudBgCIAEoBRpc",
+            "ChVNZXNzYWdlQW5hbHlzaXNDb25maWcSIAoYZW5hYmxlX2VudGl0eV9leHRy",
+            "YWN0aW9uGAIgASgIEiEKGWVuYWJsZV9zZW50aW1lbnRfYW5hbHlzaXMYAyAB",
+            "KAgixAMKF0h1bWFuQWdlbnRIYW5kb2ZmQ29uZmlnEmIKEmxpdmVfcGVyc29u",
+            "X2NvbmZpZxgBIAEoCzJELmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkh1",
+            "bWFuQWdlbnRIYW5kb2ZmQ29uZmlnLkxpdmVQZXJzb25Db25maWdIABJ1Chxz",
+            "YWxlc2ZvcmNlX2xpdmVfYWdlbnRfY29uZmlnGAIgASgLMk0uZ29vZ2xlLmNs",
+            "b3VkLmRpYWxvZ2Zsb3cudjIuSHVtYW5BZ2VudEhhbmRvZmZDb25maWcuU2Fs",
+            "ZXNmb3JjZUxpdmVBZ2VudENvbmZpZ0gAGi8KEExpdmVQZXJzb25Db25maWcS",
+            "GwoOYWNjb3VudF9udW1iZXIYASABKAlCA+BBAhqLAQoZU2FsZXNmb3JjZUxp",
+            "dmVBZ2VudENvbmZpZxIcCg9vcmdhbml6YXRpb25faWQYASABKAlCA+BBAhIa",
+            "Cg1kZXBsb3ltZW50X2lkGAIgASgJQgPgQQISFgoJYnV0dG9uX2lkGAMgASgJ",
+            "QgPgQQISHAoPZW5kcG9pbnRfZG9tYWluGAQgASgJQgPgQQJCDwoNYWdlbnRf",
+            "c2VydmljZSK/AQoSTm90aWZpY2F0aW9uQ29uZmlnEg0KBXRvcGljGAEgASgJ",
+            "ElQKDm1lc3NhZ2VfZm9ybWF0GAIgASgOMjwuZ29vZ2xlLmNsb3VkLmRpYWxv",
+            "Z2Zsb3cudjIuTm90aWZpY2F0aW9uQ29uZmlnLk1lc3NhZ2VGb3JtYXQiRAoN",
+            "TWVzc2FnZUZvcm1hdBIeChpNRVNTQUdFX0ZPUk1BVF9VTlNQRUNJRklFRBAA",
+            "EgkKBVBST1RPEAESCAoESlNPThACIjMKDUxvZ2dpbmdDb25maWcSIgoaZW5h",
+            "YmxlX3N0YWNrZHJpdmVyX2xvZ2dpbmcYAyABKAgipQEKEVN1Z2dlc3Rpb25G",
+            "ZWF0dXJlEkAKBHR5cGUYASABKA4yMi5nb29nbGUuY2xvdWQuZGlhbG9nZmxv",
+            "dy52Mi5TdWdnZXN0aW9uRmVhdHVyZS5UeXBlIk4KBFR5cGUSFAoQVFlQRV9V",
+            "TlNQRUNJRklFRBAAEhYKEkFSVElDTEVfU1VHR0VTVElPThABEgcKA0ZBURAC",
+            "Eg8KC1NNQVJUX1JFUExZEAMy1QwKFENvbnZlcnNhdGlvblByb2ZpbGVzEpAC",
+            "ChhMaXN0Q29udmVyc2F0aW9uUHJvZmlsZXMSOy5nb29nbGUuY2xvdWQuZGlh",
+            "bG9nZmxvdy52Mi5MaXN0Q29udmVyc2F0aW9uUHJvZmlsZXNSZXF1ZXN0Gjwu",
+            "Z29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuTGlzdENvbnZlcnNhdGlvblBy",
+            "b2ZpbGVzUmVzcG9uc2UieYLT5JMCahIsL3YyL3twYXJlbnQ9cHJvamVjdHMv",
+            "Kn0vY29udmVyc2F0aW9uUHJvZmlsZXNaOhI4L3YyL3twYXJlbnQ9cHJvamVj",
+            "dHMvKi9sb2NhdGlvbnMvKn0vY29udmVyc2F0aW9uUHJvZmlsZXPaQQZwYXJl",
+            "bnQS/QEKFkdldENvbnZlcnNhdGlvblByb2ZpbGUSOS5nb29nbGUuY2xvdWQu",
+            "ZGlhbG9nZmxvdy52Mi5HZXRDb252ZXJzYXRpb25Qcm9maWxlUmVxdWVzdBov",
+            "Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkNvbnZlcnNhdGlvblByb2Zp",
+            "bGUid4LT5JMCahIsL3YyL3tuYW1lPXByb2plY3RzLyovY29udmVyc2F0aW9u",
+            "UHJvZmlsZXMvKn1aOhI4L3YyL3tuYW1lPXByb2plY3RzLyovbG9jYXRpb25z",
+            "LyovY29udmVyc2F0aW9uUHJvZmlsZXMvKn3aQQRuYW1lEsgCChlDcmVhdGVD",
+            "b252ZXJzYXRpb25Qcm9maWxlEjwuZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cu",
+            "djIuQ3JlYXRlQ29udmVyc2F0aW9uUHJvZmlsZVJlcXVlc3QaLy5nb29nbGUu",
+            "Y2xvdWQuZGlhbG9nZmxvdy52Mi5Db252ZXJzYXRpb25Qcm9maWxlIrsBgtPk",
+            "kwKWASIsL3YyL3twYXJlbnQ9cHJvamVjdHMvKn0vY29udmVyc2F0aW9uUHJv",
+            "ZmlsZXM6FGNvbnZlcnNhdGlvbl9wcm9maWxlWlAiOC92Mi97cGFyZW50PXBy",
+            "b2plY3RzLyovbG9jYXRpb25zLyp9L2NvbnZlcnNhdGlvblByb2ZpbGVzOhRj",
+            "b252ZXJzYXRpb25fcHJvZmlsZdpBG3BhcmVudCxjb252ZXJzYXRpb25fcHJv",
+            "ZmlsZRL3AgoZVXBkYXRlQ29udmVyc2F0aW9uUHJvZmlsZRI8Lmdvb2dsZS5j",
+            "bG91ZC5kaWFsb2dmbG93LnYyLlVwZGF0ZUNvbnZlcnNhdGlvblByb2ZpbGVS",
+            "ZXF1ZXN0Gi8uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cudjIuQ29udmVyc2F0",
+            "aW9uUHJvZmlsZSLqAYLT5JMCwAEyQS92Mi97Y29udmVyc2F0aW9uX3Byb2Zp",
+            "bGUubmFtZT1wcm9qZWN0cy8qL2NvbnZlcnNhdGlvblByb2ZpbGVzLyp9OhRj",
+            "b252ZXJzYXRpb25fcHJvZmlsZVplMk0vdjIve2NvbnZlcnNhdGlvbl9wcm9m",
+            "aWxlLm5hbWU9cHJvamVjdHMvKi9sb2NhdGlvbnMvKi9jb252ZXJzYXRpb25Q",
+            "cm9maWxlcy8qfToUY29udmVyc2F0aW9uX3Byb2ZpbGXaQSBjb252ZXJzYXRp",
+            "b25fcHJvZmlsZSx1cGRhdGVfbWFzaxLqAQoZRGVsZXRlQ29udmVyc2F0aW9u",
+            "UHJvZmlsZRI8Lmdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LnYyLkRlbGV0ZUNv",
+            "bnZlcnNhdGlvblByb2ZpbGVSZXF1ZXN0GhYuZ29vZ2xlLnByb3RvYnVmLkVt",
+            "cHR5IneC0+STAmoqLC92Mi97bmFtZT1wcm9qZWN0cy8qL2NvbnZlcnNhdGlv",
+            "blByb2ZpbGVzLyp9WjoqOC92Mi97bmFtZT1wcm9qZWN0cy8qL2xvY2F0aW9u",
+            "cy8qL2NvbnZlcnNhdGlvblByb2ZpbGVzLyp92kEEbmFtZRp4ykEZZGlhbG9n",
+            "Zmxvdy5nb29nbGVhcGlzLmNvbdJBWWh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMu",
+            "Y29tL2F1dGgvY2xvdWQtcGxhdGZvcm0saHR0cHM6Ly93d3cuZ29vZ2xlYXBp",
+            "cy5jb20vYXV0aC9kaWFsb2dmbG93QqcDCh5jb20uZ29vZ2xlLmNsb3VkLmRp",
+            "YWxvZ2Zsb3cudjJCGENvbnZlcnNhdGlvblByb2ZpbGVQcm90b1ABWkRnb29n",
+            "bGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlzL2Nsb3VkL2RpYWxv",
+            "Z2Zsb3cvdjI7ZGlhbG9nZmxvd/gBAaICAkRGqgIaR29vZ2xlLkNsb3VkLkRp",
+            "YWxvZ2Zsb3cuVjLqQXwKLGRpYWxvZ2Zsb3cuZ29vZ2xlYXBpcy5jb20vQ1hT",
+            "ZWN1cml0eVNldHRpbmdzEkxwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
+            "L3tsb2NhdGlvbn0vc2VjdXJpdHlTZXR0aW5ncy97c2VjdXJpdHlfc2V0dGlu",
+            "Z3N96kF+CitkaWFsb2dmbG93Lmdvb2dsZWFwaXMuY29tL0NvbnZlcnNhdGlv",
+            "bk1vZGVsEk9wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vY29udmVyc2F0aW9uTW9kZWxzL3tjb252ZXJzYXRpb25fbW9kZWx9YgZw",
+            "cm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.V2.ParticipantReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -209,13 +213,14 @@ namespace Google.Cloud.Dialogflow.V2 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.DeleteConversationProfileRequest), global::Google.Cloud.Dialogflow.V2.DeleteConversationProfileRequest.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.AutomatedAgentConfig), global::Google.Cloud.Dialogflow.V2.AutomatedAgentConfig.Parser, new[]{ "Agent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Parser, new[]{ "NotificationConfig", "HumanAgentSuggestionConfig", "EndUserSuggestionConfig", "MessageAnalysisConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionTriggerSettings), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionTriggerSettings.Parser, new[]{ "NoSmalltalk", "OnlyEndUser" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionFeatureConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionFeatureConfig.Parser, new[]{ "SuggestionFeature", "EnableEventBasedSuggestion", "SuggestionTriggerSettings", "QueryConfig", "ConversationModelConfig" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionFeatureConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionFeatureConfig.Parser, new[]{ "SuggestionFeature", "EnableEventBasedSuggestion", "SuggestionTriggerSettings", "QueryConfig", "ConversationModelConfig", "ConversationProcessConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionConfig.Parser, new[]{ "FeatureConfigs", "GroupSuggestionResponses" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Parser, new[]{ "KnowledgeBaseQuerySource", "DocumentQuerySource", "DialogflowQuerySource", "MaxResults", "ConfidenceThreshold", "ContextFilterSettings" }, new[]{ "QuerySource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.KnowledgeBaseQuerySource), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.KnowledgeBaseQuerySource.Parser, new[]{ "KnowledgeBases" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.DocumentQuerySource), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.DocumentQuerySource.Parser, new[]{ "Documents" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.DialogflowQuerySource), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.DialogflowQuerySource.Parser, new[]{ "Agent" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.ContextFilterSettings), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.SuggestionQueryConfig.Types.ContextFilterSettings.Parser, new[]{ "DropHandoffMessages", "DropVirtualAgentMessages", "DropIvrMessages" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationModelConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationModelConfig.Parser, new[]{ "Model" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationProcessConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationProcessConfig.Parser, new[]{ "RecentSentencesCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.MessageAnalysisConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.MessageAnalysisConfig.Parser, new[]{ "EnableEntityExtraction", "EnableSentimentAnalysis" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentHandoffConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentHandoffConfig.Parser, new[]{ "LivePersonConfig", "SalesforceLiveAgentConfig" }, new[]{ "AgentService" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentHandoffConfig.Types.LivePersonConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentHandoffConfig.Types.LivePersonConfig.Parser, new[]{ "AccountNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.V2.HumanAgentHandoffConfig.Types.SalesforceLiveAgentConfig), global::Google.Cloud.Dialogflow.V2.HumanAgentHandoffConfig.Types.SalesforceLiveAgentConfig.Parser, new[]{ "OrganizationId", "DeploymentId", "ButtonId", "EndpointDomain" }, null, null, null, null)}),
@@ -3282,6 +3287,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           suggestionTriggerSettings_ = other.suggestionTriggerSettings_ != null ? other.suggestionTriggerSettings_.Clone() : null;
           queryConfig_ = other.queryConfig_ != null ? other.queryConfig_.Clone() : null;
           conversationModelConfig_ = other.conversationModelConfig_ != null ? other.conversationModelConfig_.Clone() : null;
+          conversationProcessConfig_ = other.conversationProcessConfig_ != null ? other.conversationProcessConfig_.Clone() : null;
           _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
         }
 
@@ -3371,6 +3377,21 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
         }
 
+        /// <summary>Field number for the "conversation_process_config" field.</summary>
+        public const int ConversationProcessConfigFieldNumber = 8;
+        private global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationProcessConfig conversationProcessConfig_;
+        /// <summary>
+        /// Configs for processing conversation.
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationProcessConfig ConversationProcessConfig {
+          get { return conversationProcessConfig_; }
+          set {
+            conversationProcessConfig_ = value;
+          }
+        }
+
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public override bool Equals(object other) {
@@ -3391,6 +3412,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (!object.Equals(SuggestionTriggerSettings, other.SuggestionTriggerSettings)) return false;
           if (!object.Equals(QueryConfig, other.QueryConfig)) return false;
           if (!object.Equals(ConversationModelConfig, other.ConversationModelConfig)) return false;
+          if (!object.Equals(ConversationProcessConfig, other.ConversationProcessConfig)) return false;
           return Equals(_unknownFields, other._unknownFields);
         }
 
@@ -3403,6 +3425,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           if (suggestionTriggerSettings_ != null) hash ^= SuggestionTriggerSettings.GetHashCode();
           if (queryConfig_ != null) hash ^= QueryConfig.GetHashCode();
           if (conversationModelConfig_ != null) hash ^= ConversationModelConfig.GetHashCode();
+          if (conversationProcessConfig_ != null) hash ^= ConversationProcessConfig.GetHashCode();
           if (_unknownFields != null) {
             hash ^= _unknownFields.GetHashCode();
           }
@@ -3437,6 +3460,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteRawTag(58);
             output.WriteMessage(ConversationModelConfig);
           }
+          if (conversationProcessConfig_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(ConversationProcessConfig);
+          }
           if (suggestionTriggerSettings_ != null) {
             output.WriteRawTag(82);
             output.WriteMessage(SuggestionTriggerSettings);
@@ -3467,6 +3494,10 @@ namespace Google.Cloud.Dialogflow.V2 {
             output.WriteRawTag(58);
             output.WriteMessage(ConversationModelConfig);
           }
+          if (conversationProcessConfig_ != null) {
+            output.WriteRawTag(66);
+            output.WriteMessage(ConversationProcessConfig);
+          }
           if (suggestionTriggerSettings_ != null) {
             output.WriteRawTag(82);
             output.WriteMessage(SuggestionTriggerSettings);
@@ -3495,6 +3526,9 @@ namespace Google.Cloud.Dialogflow.V2 {
           }
           if (conversationModelConfig_ != null) {
             size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConversationModelConfig);
+          }
+          if (conversationProcessConfig_ != null) {
+            size += 1 + pb::CodedOutputStream.ComputeMessageSize(ConversationProcessConfig);
           }
           if (_unknownFields != null) {
             size += _unknownFields.CalculateSize();
@@ -3535,6 +3569,12 @@ namespace Google.Cloud.Dialogflow.V2 {
             }
             ConversationModelConfig.MergeFrom(other.ConversationModelConfig);
           }
+          if (other.conversationProcessConfig_ != null) {
+            if (conversationProcessConfig_ == null) {
+              ConversationProcessConfig = new global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationProcessConfig();
+            }
+            ConversationProcessConfig.MergeFrom(other.ConversationProcessConfig);
+          }
           _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
         }
 
@@ -3573,6 +3613,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                   ConversationModelConfig = new global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationModelConfig();
                 }
                 input.ReadMessage(ConversationModelConfig);
+                break;
+              }
+              case 66: {
+                if (conversationProcessConfig_ == null) {
+                  ConversationProcessConfig = new global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationProcessConfig();
+                }
+                input.ReadMessage(ConversationProcessConfig);
                 break;
               }
               case 82: {
@@ -3620,6 +3667,13 @@ namespace Google.Cloud.Dialogflow.V2 {
                   ConversationModelConfig = new global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationModelConfig();
                 }
                 input.ReadMessage(ConversationModelConfig);
+                break;
+              }
+              case 66: {
+                if (conversationProcessConfig_ == null) {
+                  ConversationProcessConfig = new global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Types.ConversationProcessConfig();
+                }
+                input.ReadMessage(ConversationProcessConfig);
                 break;
               }
               case 82: {
@@ -5433,6 +5487,202 @@ namespace Google.Cloud.Dialogflow.V2 {
       }
 
       /// <summary>
+      /// Config to process conversation.
+      /// </summary>
+      public sealed partial class ConversationProcessConfig : pb::IMessage<ConversationProcessConfig>
+      #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          , pb::IBufferMessage
+      #endif
+      {
+        private static readonly pb::MessageParser<ConversationProcessConfig> _parser = new pb::MessageParser<ConversationProcessConfig>(() => new ConversationProcessConfig());
+        private pb::UnknownFieldSet _unknownFields;
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pb::MessageParser<ConversationProcessConfig> Parser { get { return _parser; } }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public static pbr::MessageDescriptor Descriptor {
+          get { return global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Descriptor.NestedTypes[5]; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        pbr::MessageDescriptor pb::IMessage.Descriptor {
+          get { return Descriptor; }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConversationProcessConfig() {
+          OnConstruction();
+        }
+
+        partial void OnConstruction();
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConversationProcessConfig(ConversationProcessConfig other) : this() {
+          recentSentencesCount_ = other.recentSentencesCount_;
+          _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public ConversationProcessConfig Clone() {
+          return new ConversationProcessConfig(this);
+        }
+
+        /// <summary>Field number for the "recent_sentences_count" field.</summary>
+        public const int RecentSentencesCountFieldNumber = 2;
+        private int recentSentencesCount_;
+        /// <summary>
+        /// Number of recent non-small-talk sentences to use as context for article
+        /// and FAQ suggestion
+        /// </summary>
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int RecentSentencesCount {
+          get { return recentSentencesCount_; }
+          set {
+            recentSentencesCount_ = value;
+          }
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override bool Equals(object other) {
+          return Equals(other as ConversationProcessConfig);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public bool Equals(ConversationProcessConfig other) {
+          if (ReferenceEquals(other, null)) {
+            return false;
+          }
+          if (ReferenceEquals(other, this)) {
+            return true;
+          }
+          if (RecentSentencesCount != other.RecentSentencesCount) return false;
+          return Equals(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override int GetHashCode() {
+          int hash = 1;
+          if (RecentSentencesCount != 0) hash ^= RecentSentencesCount.GetHashCode();
+          if (_unknownFields != null) {
+            hash ^= _unknownFields.GetHashCode();
+          }
+          return hash;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public override string ToString() {
+          return pb::JsonFormatter.ToDiagnosticString(this);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void WriteTo(pb::CodedOutputStream output) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          output.WriteRawMessage(this);
+        #else
+          if (RecentSentencesCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(RecentSentencesCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(output);
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+          if (RecentSentencesCount != 0) {
+            output.WriteRawTag(16);
+            output.WriteInt32(RecentSentencesCount);
+          }
+          if (_unknownFields != null) {
+            _unknownFields.WriteTo(ref output);
+          }
+        }
+        #endif
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public int CalculateSize() {
+          int size = 0;
+          if (RecentSentencesCount != 0) {
+            size += 1 + pb::CodedOutputStream.ComputeInt32Size(RecentSentencesCount);
+          }
+          if (_unknownFields != null) {
+            size += _unknownFields.CalculateSize();
+          }
+          return size;
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(ConversationProcessConfig other) {
+          if (other == null) {
+            return;
+          }
+          if (other.RecentSentencesCount != 0) {
+            RecentSentencesCount = other.RecentSentencesCount;
+          }
+          _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+        }
+
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        public void MergeFrom(pb::CodedInputStream input) {
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+          input.ReadRawMessage(this);
+        #else
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+                break;
+              case 16: {
+                RecentSentencesCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        #endif
+        }
+
+        #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+        [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+        void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+          uint tag;
+          while ((tag = input.ReadTag()) != 0) {
+            switch(tag) {
+              default:
+                _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+                break;
+              case 16: {
+                RecentSentencesCount = input.ReadInt32();
+                break;
+              }
+            }
+          }
+        }
+        #endif
+
+      }
+
+      /// <summary>
       /// Configuration for analyses to run on each conversation message.
       /// </summary>
       public sealed partial class MessageAnalysisConfig : pb::IMessage<MessageAnalysisConfig>
@@ -5449,7 +5699,7 @@ namespace Google.Cloud.Dialogflow.V2 {
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
         public static pbr::MessageDescriptor Descriptor {
-          get { return global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Descriptor.NestedTypes[5]; }
+          get { return global::Google.Cloud.Dialogflow.V2.HumanAgentAssistantConfig.Descriptor.NestedTypes[6]; }
         }
 
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
