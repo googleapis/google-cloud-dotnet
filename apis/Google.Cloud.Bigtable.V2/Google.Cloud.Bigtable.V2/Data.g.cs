@@ -2741,7 +2741,7 @@ namespace Google.Cloud.Bigtable.V2 {
   /// RowFilter.Chain and RowFilter.Interleave documentation.
   ///
   /// The total serialized size of a RowFilter message must not
-  /// exceed 4096 bytes, and RowFilters may not be nested within each other
+  /// exceed 20480 bytes, and RowFilters may not be nested within each other
   /// (in Chains or Interleaves) to a depth of more than 20.
   /// </summary>
   public sealed partial class RowFilter : pb::IMessage<RowFilter>
