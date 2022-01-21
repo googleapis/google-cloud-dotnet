@@ -76,6 +76,12 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     }
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest> __Marshaller_google_devtools_artifactregistry_v1beta2_ImportAptArtifactsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest> __Marshaller_google_devtools_artifactregistry_v1beta2_ImportYumArtifactsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesRequest> __Marshaller_google_devtools_artifactregistry_v1beta2_ListRepositoriesRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesResponse> __Marshaller_google_devtools_artifactregistry_v1beta2_ListRepositoriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesResponse.Parser));
@@ -85,8 +91,6 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.Repository> __Marshaller_google_devtools_artifactregistry_v1beta2_Repository = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.Repository.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.CreateRepositoryRequest> __Marshaller_google_devtools_artifactregistry_v1beta2_CreateRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.CreateRepositoryRequest.Parser));
-    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
-    static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateRepositoryRequest> __Marshaller_google_devtools_artifactregistry_v1beta2_UpdateRepositoryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateRepositoryRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -145,6 +149,28 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest> __Marshaller_google_iam_v1_TestIamPermissionsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.TestIamPermissionsResponse> __Marshaller_google_iam_v1_TestIamPermissionsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest> __Marshaller_google_devtools_artifactregistry_v1beta2_GetProjectSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> __Marshaller_google_devtools_artifactregistry_v1beta2_ProjectSettings = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest> __Marshaller_google_devtools_artifactregistry_v1beta2_UpdateProjectSettingsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest.Parser));
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest, global::Google.LongRunning.Operation> __Method_ImportAptArtifacts = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportAptArtifacts",
+        __Marshaller_google_devtools_artifactregistry_v1beta2_ImportAptArtifactsRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest, global::Google.LongRunning.Operation> __Method_ImportYumArtifacts = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportYumArtifacts",
+        __Marshaller_google_devtools_artifactregistry_v1beta2_ImportYumArtifactsRequest,
+        __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesResponse> __Method_ListRepositories = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesResponse>(
@@ -314,6 +340,22 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
         __Marshaller_google_iam_v1_TestIamPermissionsRequest,
         __Marshaller_google_iam_v1_TestIamPermissionsResponse);
 
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> __Method_GetProjectSettings = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "GetProjectSettings",
+        __Marshaller_google_devtools_artifactregistry_v1beta2_GetProjectSettingsRequest,
+        __Marshaller_google_devtools_artifactregistry_v1beta2_ProjectSettings);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> __Method_UpdateProjectSettings = new grpc::Method<global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdateProjectSettings",
+        __Marshaller_google_devtools_artifactregistry_v1beta2_UpdateProjectSettingsRequest,
+        __Marshaller_google_devtools_artifactregistry_v1beta2_ProjectSettings);
+
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
     {
@@ -324,6 +366,36 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     [grpc::BindServiceMethod(typeof(ArtifactRegistry), "BindService")]
     public abstract partial class ArtifactRegistryBase
     {
+      /// <summary>
+      /// Imports Apt artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportAptArtifacts(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportYumArtifacts(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
       /// <summary>
       /// Lists repositories.
       /// </summary>
@@ -581,6 +653,30 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
+      /// <summary>
+      /// Retrieves the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> GetProjectSettings(global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Updates the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> UpdateProjectSettings(global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
     }
 
     /// <summary>Client for ArtifactRegistry</summary>
@@ -610,6 +706,126 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
       {
       }
 
+      /// <summary>
+      /// Imports Apt artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportAptArtifacts(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportAptArtifacts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports Apt artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportAptArtifacts(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportAptArtifacts, null, options, request);
+      }
+      /// <summary>
+      /// Imports Apt artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportAptArtifactsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportAptArtifactsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports Apt artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportAptArtifactsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportAptArtifacts, null, options, request);
+      }
+      /// <summary>
+      /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportYumArtifacts(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportYumArtifacts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportYumArtifacts(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportYumArtifacts, null, options, request);
+      }
+      /// <summary>
+      /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportYumArtifactsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportYumArtifactsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Imports Yum (RPM) artifacts. The returned Operation will complete once the
+      /// resources are imported. Package, Version, and File resources are created
+      /// based on the imported artifacts. Imported artifacts that conflict with
+      /// existing resources are ignored.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportYumArtifactsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportYumArtifacts, null, options, request);
+      }
       /// <summary>
       /// Lists repositories.
       /// </summary>
@@ -1638,6 +1854,102 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_TestIamPermissions, null, options, request);
       }
+      /// <summary>
+      /// Retrieves the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings GetProjectSettings(global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProjectSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings GetProjectSettings(global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_GetProjectSettings, null, options, request);
+      }
+      /// <summary>
+      /// Retrieves the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> GetProjectSettingsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return GetProjectSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Retrieves the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> GetProjectSettingsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_GetProjectSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings UpdateProjectSettings(global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProjectSettings(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings UpdateProjectSettings(global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdateProjectSettings, null, options, request);
+      }
+      /// <summary>
+      /// Updates the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> UpdateProjectSettingsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdateProjectSettingsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Updates the Settings for the Project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings> UpdateProjectSettingsAsync(global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdateProjectSettings, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override ArtifactRegistryClient NewInstance(ClientBaseConfiguration configuration)
@@ -1652,6 +1964,8 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     public static grpc::ServerServiceDefinition BindService(ArtifactRegistryBase serviceImpl)
     {
       return grpc::ServerServiceDefinition.CreateBuilder()
+          .AddMethod(__Method_ImportAptArtifacts, serviceImpl.ImportAptArtifacts)
+          .AddMethod(__Method_ImportYumArtifacts, serviceImpl.ImportYumArtifacts)
           .AddMethod(__Method_ListRepositories, serviceImpl.ListRepositories)
           .AddMethod(__Method_GetRepository, serviceImpl.GetRepository)
           .AddMethod(__Method_CreateRepository, serviceImpl.CreateRepository)
@@ -1672,7 +1986,9 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
           .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
-          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
+          .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions)
+          .AddMethod(__Method_GetProjectSettings, serviceImpl.GetProjectSettings)
+          .AddMethod(__Method_UpdateProjectSettings, serviceImpl.UpdateProjectSettings).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -1682,6 +1998,8 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     public static void BindService(grpc::ServiceBinderBase serviceBinder, ArtifactRegistryBase serviceImpl)
     {
+      serviceBinder.AddMethod(__Method_ImportAptArtifacts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportAptArtifactsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportAptArtifacts));
+      serviceBinder.AddMethod(__Method_ImportYumArtifacts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1Beta2.ImportYumArtifactsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportYumArtifacts));
       serviceBinder.AddMethod(__Method_ListRepositories, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ListRepositoriesResponse>(serviceImpl.ListRepositories));
       serviceBinder.AddMethod(__Method_GetRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1Beta2.GetRepositoryRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.Repository>(serviceImpl.GetRepository));
       serviceBinder.AddMethod(__Method_CreateRepository, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1Beta2.CreateRepositoryRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateRepository));
@@ -1703,6 +2021,8 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));
+      serviceBinder.AddMethod(__Method_GetProjectSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1Beta2.GetProjectSettingsRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings>(serviceImpl.GetProjectSettings));
+      serviceBinder.AddMethod(__Method_UpdateProjectSettings, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.ArtifactRegistry.V1Beta2.UpdateProjectSettingsRequest, global::Google.Cloud.ArtifactRegistry.V1Beta2.ProjectSettings>(serviceImpl.UpdateProjectSettings));
     }
 
   }

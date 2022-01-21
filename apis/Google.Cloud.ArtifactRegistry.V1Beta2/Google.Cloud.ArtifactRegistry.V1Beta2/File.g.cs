@@ -26,33 +26,33 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
           string.Concat(
             "CjNnb29nbGUvZGV2dG9vbHMvYXJ0aWZhY3RyZWdpc3RyeS92MWJldGEyL2Zp",
             "bGUucHJvdG8SKGdvb2dsZS5kZXZ0b29scy5hcnRpZmFjdHJlZ2lzdHJ5LnYx",
-            "YmV0YTIaGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90",
-            "b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8ijwEKBEhhc2gSRQoEdHlwZRgBIAEoDjI3Lmdvb2dsZS5kZXZ0b29s",
+            "YmV0YTIaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aGWdvb2dsZS9h",
+            "cGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAu",
+            "cHJvdG8imAEKBEhhc2gSRQoEdHlwZRgBIAEoDjI3Lmdvb2dsZS5kZXZ0b29s",
             "cy5hcnRpZmFjdHJlZ2lzdHJ5LnYxYmV0YTIuSGFzaC5IYXNoVHlwZRINCgV2",
-            "YWx1ZRgCIAEoDCIxCghIYXNoVHlwZRIZChVIQVNIX1RZUEVfVU5TUEVDSUZJ",
-            "RUQQABIKCgZTSEEyNTYQASLUAgoERmlsZRIMCgRuYW1lGAEgASgJEhIKCnNp",
-            "emVfYnl0ZXMYAyABKAMSPgoGaGFzaGVzGAQgAygLMi4uZ29vZ2xlLmRldnRv",
-            "b2xzLmFydGlmYWN0cmVnaXN0cnkudjFiZXRhMi5IYXNoEi8KC2NyZWF0ZV90",
-            "aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcBIvCgt1cGRh",
-            "dGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXASDQoF",
-            "b3duZXIYByABKAk6eepBdgokYXJ0aWZhY3RyZWdpc3RyeS5nb29nbGVhcGlz",
-            "LmNvbS9GaWxlEk5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2Nh",
-            "dGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fS9maWxlcy97ZmlsZX0i",
-            "WQoQTGlzdEZpbGVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkSDgoGZmlsdGVy",
-            "GAQgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rva2VuGAMgASgJ",
-            "ImsKEUxpc3RGaWxlc1Jlc3BvbnNlEj0KBWZpbGVzGAEgAygLMi4uZ29vZ2xl",
-            "LmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjFiZXRhMi5GaWxlEhcKD25l",
-            "eHRfcGFnZV90b2tlbhgCIAEoCSIeCg5HZXRGaWxlUmVxdWVzdBIMCgRuYW1l",
-            "GAEgASgJQpACCixjb20uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0",
-            "cnkudjFiZXRhMkIJRmlsZVByb3RvUAFaWGdvb2dsZS5nb2xhbmcub3JnL2dl",
-            "bnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvYXJ0aWZhY3RyZWdpc3RyeS92",
-            "MWJldGEyO2FydGlmYWN0cmVnaXN0cnmqAiVHb29nbGUuQ2xvdWQuQXJ0aWZh",
-            "Y3RSZWdpc3RyeS5WMUJldGEyygIlR29vZ2xlXENsb3VkXEFydGlmYWN0UmVn",
-            "aXN0cnlcVjFiZXRhMuoCKEdvb2dsZTo6Q2xvdWQ6OkFydGlmYWN0UmVnaXN0",
-            "cnk6OlYxYmV0YTJiBnByb3RvMw=="));
+            "YWx1ZRgCIAEoDCI6CghIYXNoVHlwZRIZChVIQVNIX1RZUEVfVU5TUEVDSUZJ",
+            "RUQQABIKCgZTSEEyNTYQARIHCgNNRDUQAiLUAgoERmlsZRIMCgRuYW1lGAEg",
+            "ASgJEhIKCnNpemVfYnl0ZXMYAyABKAMSPgoGaGFzaGVzGAQgAygLMi4uZ29v",
+            "Z2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjFiZXRhMi5IYXNoEi8K",
+            "C2NyZWF0ZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cBIvCgt1cGRhdGVfdGltZRgGIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1l",
+            "c3RhbXASDQoFb3duZXIYByABKAk6eepBdgokYXJ0aWZhY3RyZWdpc3RyeS5n",
+            "b29nbGVhcGlzLmNvbS9GaWxlEk5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vcmVwb3NpdG9yaWVzL3tyZXBvc2l0b3J5fS9maWxl",
+            "cy97ZmlsZX0iWQoQTGlzdEZpbGVzUmVxdWVzdBIOCgZwYXJlbnQYASABKAkS",
+            "DgoGZmlsdGVyGAQgASgJEhEKCXBhZ2Vfc2l6ZRgCIAEoBRISCgpwYWdlX3Rv",
+            "a2VuGAMgASgJImsKEUxpc3RGaWxlc1Jlc3BvbnNlEj0KBWZpbGVzGAEgAygL",
+            "Mi4uZ29vZ2xlLmRldnRvb2xzLmFydGlmYWN0cmVnaXN0cnkudjFiZXRhMi5G",
+            "aWxlEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCSIeCg5HZXRGaWxlUmVxdWVz",
+            "dBIMCgRuYW1lGAEgASgJQpACCixjb20uZ29vZ2xlLmRldnRvb2xzLmFydGlm",
+            "YWN0cmVnaXN0cnkudjFiZXRhMkIJRmlsZVByb3RvUAFaWGdvb2dsZS5nb2xh",
+            "bmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGV2dG9vbHMvYXJ0aWZhY3Ry",
+            "ZWdpc3RyeS92MWJldGEyO2FydGlmYWN0cmVnaXN0cnmqAiVHb29nbGUuQ2xv",
+            "dWQuQXJ0aWZhY3RSZWdpc3RyeS5WMUJldGEyygIlR29vZ2xlXENsb3VkXEFy",
+            "dGlmYWN0UmVnaXN0cnlcVjFiZXRhMuoCKEdvb2dsZTo6Q2xvdWQ6OkFydGlm",
+            "YWN0UmVnaXN0cnk6OlYxYmV0YTJiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1Beta2.Hash), global::Google.Cloud.ArtifactRegistry.V1Beta2.Hash.Parser, new[]{ "Type", "Value" }, null, new[]{ typeof(global::Google.Cloud.ArtifactRegistry.V1Beta2.Hash.Types.HashType) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.ArtifactRegistry.V1Beta2.File), global::Google.Cloud.ArtifactRegistry.V1Beta2.File.Parser, new[]{ "Name", "SizeBytes", "Hashes", "CreateTime", "UpdateTime", "Owner" }, null, null, null, null),
@@ -315,6 +315,10 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
         /// SHA256 hash.
         /// </summary>
         [pbr::OriginalName("SHA256")] Sha256 = 1,
+        /// <summary>
+        /// MD5 hash.
+        /// </summary>
+        [pbr::OriginalName("MD5")] Md5 = 2,
       }
 
     }
@@ -379,7 +383,8 @@ namespace Google.Cloud.ArtifactRegistry.V1Beta2 {
     private string name_ = "";
     /// <summary>
     /// The name of the file, for example:
-    /// "projects/p1/locations/us-central1/repositories/repo1/files/a/b/c.txt".
+    /// "projects/p1/locations/us-central1/repositories/repo1/files/a%2Fb%2Fc.txt".
+    /// If the file ID part contains slashes, they are escaped.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
