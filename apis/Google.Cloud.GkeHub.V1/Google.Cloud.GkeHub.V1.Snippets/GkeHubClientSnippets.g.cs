@@ -317,7 +317,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             ListFeaturesRequest request = new ListFeaturesRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -367,7 +367,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             ListFeaturesRequest request = new ListFeaturesRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 Filter = "",
                 OrderBy = "",
             };
@@ -415,7 +415,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = GkeHubClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             // Make the request
             PagedEnumerable<ListFeaturesResponse, Feature> response = gkeHubClient.ListFeatures(parent);
 
@@ -460,7 +460,97 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = gkeHubClient.ListFeaturesAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Feature item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListFeaturesResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Feature item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Feature> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Feature item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeatures</summary>
+        public void ListFeaturesResourceNames()
+        {
+            // Snippet: ListFeatures(LocationName, string, int?, CallSettings)
+            // Create client
+            GkeHubClient gkeHubClient = GkeHubClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListFeaturesResponse, Feature> response = gkeHubClient.ListFeatures(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Feature item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListFeaturesResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Feature item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Feature> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Feature item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListFeaturesAsync</summary>
+        public async Task ListFeaturesResourceNamesAsync()
+        {
+            // Snippet: ListFeaturesAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             // Make the request
             PagedAsyncEnumerable<ListFeaturesResponse, Feature> response = gkeHubClient.ListFeaturesAsync(parent);
 
@@ -592,7 +682,10 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = GkeHubClient.Create();
             // Initialize request argument(s)
-            GetFeatureRequest request = new GetFeatureRequest { Name = "", };
+            GetFeatureRequest request = new GetFeatureRequest
+            {
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
+            };
             // Make the request
             Feature response = gkeHubClient.GetFeature(request);
             // End snippet
@@ -606,7 +699,10 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
             // Initialize request argument(s)
-            GetFeatureRequest request = new GetFeatureRequest { Name = "", };
+            GetFeatureRequest request = new GetFeatureRequest
+            {
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
+            };
             // Make the request
             Feature response = await gkeHubClient.GetFeatureAsync(request);
             // End snippet
@@ -619,7 +715,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = GkeHubClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/features/[FEATURE]";
             // Make the request
             Feature response = gkeHubClient.GetFeature(name);
             // End snippet
@@ -633,7 +729,34 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/features/[FEATURE]";
+            // Make the request
+            Feature response = await gkeHubClient.GetFeatureAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeature</summary>
+        public void GetFeatureResourceNames()
+        {
+            // Snippet: GetFeature(FeatureName, CallSettings)
+            // Create client
+            GkeHubClient gkeHubClient = GkeHubClient.Create();
+            // Initialize request argument(s)
+            FeatureName name = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]");
+            // Make the request
+            Feature response = gkeHubClient.GetFeature(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetFeatureAsync</summary>
+        public async Task GetFeatureResourceNamesAsync()
+        {
+            // Snippet: GetFeatureAsync(FeatureName, CallSettings)
+            // Additional: GetFeatureAsync(FeatureName, CancellationToken)
+            // Create client
+            GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureName name = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]");
             // Make the request
             Feature response = await gkeHubClient.GetFeatureAsync(name);
             // End snippet
@@ -845,7 +968,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             CreateFeatureRequest request = new CreateFeatureRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 FeatureId = "",
                 Resource = new Feature(),
                 RequestId = "",
@@ -881,7 +1004,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             CreateFeatureRequest request = new CreateFeatureRequest
             {
-                Parent = "",
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
                 FeatureId = "",
                 Resource = new Feature(),
                 RequestId = "",
@@ -914,7 +1037,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = GkeHubClient.Create();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
             Feature resource = new Feature();
             string featureId = "";
             // Make the request
@@ -946,7 +1069,70 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
             // Initialize request argument(s)
-            string parent = "";
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Feature resource = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, OperationMetadata> response = await gkeHubClient.CreateFeatureAsync(parent, resource, featureId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, OperationMetadata> retrievedResponse = await gkeHubClient.PollOnceCreateFeatureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeature</summary>
+        public void CreateFeatureResourceNames()
+        {
+            // Snippet: CreateFeature(LocationName, Feature, string, CallSettings)
+            // Create client
+            GkeHubClient gkeHubClient = GkeHubClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Feature resource = new Feature();
+            string featureId = "";
+            // Make the request
+            Operation<Feature, OperationMetadata> response = gkeHubClient.CreateFeature(parent, resource, featureId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, OperationMetadata> retrievedResponse = gkeHubClient.PollOnceCreateFeature(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateFeatureAsync</summary>
+        public async Task CreateFeatureResourceNamesAsync()
+        {
+            // Snippet: CreateFeatureAsync(LocationName, Feature, string, CallSettings)
+            // Additional: CreateFeatureAsync(LocationName, Feature, string, CancellationToken)
+            // Create client
+            GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
             Feature resource = new Feature();
             string featureId = "";
             // Make the request
@@ -1164,7 +1350,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             DeleteFeatureRequest request = new DeleteFeatureRequest
             {
-                Name = "",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
                 Force = false,
                 RequestId = "",
             };
@@ -1199,7 +1385,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             DeleteFeatureRequest request = new DeleteFeatureRequest
             {
-                Name = "",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
                 Force = false,
                 RequestId = "",
             };
@@ -1231,7 +1417,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = GkeHubClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/features/[FEATURE]";
             // Make the request
             Operation<Empty, OperationMetadata> response = gkeHubClient.DeleteFeature(name);
 
@@ -1261,7 +1447,66 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/features/[FEATURE]";
+            // Make the request
+            Operation<Empty, OperationMetadata> response = await gkeHubClient.DeleteFeatureAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = await gkeHubClient.PollOnceDeleteFeatureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeature</summary>
+        public void DeleteFeatureResourceNames()
+        {
+            // Snippet: DeleteFeature(FeatureName, CallSettings)
+            // Create client
+            GkeHubClient gkeHubClient = GkeHubClient.Create();
+            // Initialize request argument(s)
+            FeatureName name = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]");
+            // Make the request
+            Operation<Empty, OperationMetadata> response = gkeHubClient.DeleteFeature(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Empty, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Empty result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Empty, OperationMetadata> retrievedResponse = gkeHubClient.PollOnceDeleteFeature(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Empty retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteFeatureAsync</summary>
+        public async Task DeleteFeatureResourceNamesAsync()
+        {
+            // Snippet: DeleteFeatureAsync(FeatureName, CallSettings)
+            // Additional: DeleteFeatureAsync(FeatureName, CancellationToken)
+            // Create client
+            GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureName name = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]");
             // Make the request
             Operation<Empty, OperationMetadata> response = await gkeHubClient.DeleteFeatureAsync(name);
 
@@ -1292,7 +1537,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             UpdateMembershipRequest request = new UpdateMembershipRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 UpdateMask = new FieldMask(),
                 Resource = new Membership(),
                 RequestId = "",
@@ -1328,7 +1573,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             UpdateMembershipRequest request = new UpdateMembershipRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 UpdateMask = new FieldMask(),
                 Resource = new Membership(),
                 RequestId = "",
@@ -1361,7 +1606,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = GkeHubClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
             Membership resource = new Membership();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -1393,7 +1638,70 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/memberships/[MEMBERSHIP]";
+            Membership resource = new Membership();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Membership, OperationMetadata> response = await gkeHubClient.UpdateMembershipAsync(name, resource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Membership, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Membership result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Membership, OperationMetadata> retrievedResponse = await gkeHubClient.PollOnceUpdateMembershipAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Membership retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMembership</summary>
+        public void UpdateMembershipResourceNames()
+        {
+            // Snippet: UpdateMembership(MembershipName, Membership, FieldMask, CallSettings)
+            // Create client
+            GkeHubClient gkeHubClient = GkeHubClient.Create();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
+            Membership resource = new Membership();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Membership, OperationMetadata> response = gkeHubClient.UpdateMembership(name, resource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Membership, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Membership result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Membership, OperationMetadata> retrievedResponse = gkeHubClient.PollOnceUpdateMembership(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Membership retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateMembershipAsync</summary>
+        public async Task UpdateMembershipResourceNamesAsync()
+        {
+            // Snippet: UpdateMembershipAsync(MembershipName, Membership, FieldMask, CallSettings)
+            // Additional: UpdateMembershipAsync(MembershipName, Membership, FieldMask, CancellationToken)
+            // Create client
+            GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
+            // Initialize request argument(s)
+            MembershipName name = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]");
             Membership resource = new Membership();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -1426,7 +1734,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             UpdateFeatureRequest request = new UpdateFeatureRequest
             {
-                Name = "",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
                 UpdateMask = new FieldMask(),
                 Resource = new Feature(),
                 RequestId = "",
@@ -1462,7 +1770,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             UpdateFeatureRequest request = new UpdateFeatureRequest
             {
-                Name = "",
+                FeatureName = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]"),
                 UpdateMask = new FieldMask(),
                 Resource = new Feature(),
                 RequestId = "",
@@ -1495,7 +1803,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = GkeHubClient.Create();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/features/[FEATURE]";
             Feature resource = new Feature();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -1527,7 +1835,70 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Create client
             GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
             // Initialize request argument(s)
-            string name = "";
+            string name = "projects/[PROJECT]/locations/[LOCATION]/features/[FEATURE]";
+            Feature resource = new Feature();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Feature, OperationMetadata> response = await gkeHubClient.UpdateFeatureAsync(name, resource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, OperationMetadata> retrievedResponse = await gkeHubClient.PollOnceUpdateFeatureAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeature</summary>
+        public void UpdateFeatureResourceNames()
+        {
+            // Snippet: UpdateFeature(FeatureName, Feature, FieldMask, CallSettings)
+            // Create client
+            GkeHubClient gkeHubClient = GkeHubClient.Create();
+            // Initialize request argument(s)
+            FeatureName name = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]");
+            Feature resource = new Feature();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Feature, OperationMetadata> response = gkeHubClient.UpdateFeature(name, resource, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Feature, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Feature result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Feature, OperationMetadata> retrievedResponse = gkeHubClient.PollOnceUpdateFeature(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Feature retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateFeatureAsync</summary>
+        public async Task UpdateFeatureResourceNamesAsync()
+        {
+            // Snippet: UpdateFeatureAsync(FeatureName, Feature, FieldMask, CallSettings)
+            // Additional: UpdateFeatureAsync(FeatureName, Feature, FieldMask, CancellationToken)
+            // Create client
+            GkeHubClient gkeHubClient = await GkeHubClient.CreateAsync();
+            // Initialize request argument(s)
+            FeatureName name = FeatureName.FromProjectLocationFeature("[PROJECT]", "[LOCATION]", "[FEATURE]");
             Feature resource = new Feature();
             FieldMask updateMask = new FieldMask();
             // Make the request
@@ -1560,7 +1931,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 Namespace = "",
                 Proxy = ByteString.Empty,
                 Version = "",
@@ -1583,7 +1954,7 @@ namespace Google.Cloud.GkeHub.V1.Snippets
             // Initialize request argument(s)
             GenerateConnectManifestRequest request = new GenerateConnectManifestRequest
             {
-                Name = "",
+                MembershipName = MembershipName.FromProjectLocationMembership("[PROJECT]", "[LOCATION]", "[MEMBERSHIP]"),
                 Namespace = "",
                 Proxy = ByteString.Empty,
                 Version = "",

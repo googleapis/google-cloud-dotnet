@@ -66,4 +66,88 @@ namespace Google.Cloud.GkeHub.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class UpdateMembershipRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::MembershipName MembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::MembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GenerateConnectManifestRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::MembershipName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::MembershipName MembershipName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::MembershipName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListFeaturesRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetFeatureRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::FeatureName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::FeatureName FeatureName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::FeatureName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateFeatureRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteFeatureRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::FeatureName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::FeatureName FeatureName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::FeatureName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UpdateFeatureRequest
+    {
+        /// <summary>
+        /// <see cref="gcgv::FeatureName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcgv::FeatureName FeatureName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcgv::FeatureName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

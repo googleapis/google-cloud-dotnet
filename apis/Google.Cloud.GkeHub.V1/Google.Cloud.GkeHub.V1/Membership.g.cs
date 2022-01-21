@@ -25,10 +25,10 @@ namespace Google.Cloud.GkeHub.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cidnb29nbGUvY2xvdWQvZ2tlaHViL3YxL21lbWJlcnNoaXAucHJvdG8SFmdv",
-            "b2dsZS5jbG91ZC5na2VodWIudjEaH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
-            "b3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8i7gUKCk1lbWJlcnNoaXASQwoIZW5kcG9pbnQYBCABKAsyKi5n",
+            "b2dsZS5jbG91ZC5na2VodWIudjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
+            "cHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2ds",
+            "ZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8i7gUKCk1lbWJlcnNoaXASQwoIZW5kcG9pbnQYBCABKAsyKi5n",
             "b29nbGUuY2xvdWQuZ2tlaHViLnYxLk1lbWJlcnNoaXBFbmRwb2ludEID4EEB",
             "SAASEQoEbmFtZRgBIAEoCUID4EEDEkMKBmxhYmVscxgCIAMoCzIuLmdvb2ds",
             "ZS5jbG91ZC5na2VodWIudjEuTWVtYmVyc2hpcC5MYWJlbHNFbnRyeUID4EEB",
@@ -44,33 +44,48 @@ namespace Google.Cloud.GkeHub.V1 {
             "MS5BdXRob3JpdHlCA+BBARotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkS",
             "DQoFdmFsdWUYAiABKAk6AjgBOmfqQWQKIGdrZWh1Yi5nb29nbGVhcGlzLmNv",
             "bS9NZW1iZXJzaGlwEkBwcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3ts",
-            "b2NhdGlvbn0vbWVtYmVyc2hpcHMve21lbWJlcnNoaXB9QgYKBHR5cGUioAEK",
+            "b2NhdGlvbn0vbWVtYmVyc2hpcHMve21lbWJlcnNoaXB9QgYKBHR5cGUi7gEK",
             "Ek1lbWJlcnNoaXBFbmRwb2ludBI8Cgtna2VfY2x1c3RlchgBIAEoCzIiLmdv",
             "b2dsZS5jbG91ZC5na2VodWIudjEuR2tlQ2x1c3RlckID4EEBEkwKE2t1YmVy",
             "bmV0ZXNfbWV0YWRhdGEYAiABKAsyKi5nb29nbGUuY2xvdWQuZ2tlaHViLnYx",
-            "Lkt1YmVybmV0ZXNNZXRhZGF0YUID4EEDIigKCkdrZUNsdXN0ZXISGgoNcmVz",
-            "b3VyY2VfbGluaxgBIAEoCUID4EEFIt8BChJLdWJlcm5ldGVzTWV0YWRhdGES",
-            "Kgoda3ViZXJuZXRlc19hcGlfc2VydmVyX3ZlcnNpb24YASABKAlCA+BBAxId",
-            "ChBub2RlX3Byb3ZpZGVyX2lkGAIgASgJQgPgQQMSFwoKbm9kZV9jb3VudBgD",
-            "IAEoBUID4EEDEhcKCnZjcHVfY291bnQYBCABKAVCA+BBAxIWCgltZW1vcnlf",
-            "bWIYBSABKAVCA+BBAxI0Cgt1cGRhdGVfdGltZRhkIAEoCzIaLmdvb2dsZS5w",
-            "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAyK7AQoPTWVtYmVyc2hpcFN0YXRlEj8K",
-            "BGNvZGUYASABKA4yLC5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLk1lbWJlcnNo",
-            "aXBTdGF0ZS5Db2RlQgPgQQMiZwoEQ29kZRIUChBDT0RFX1VOU1BFQ0lGSUVE",
-            "EAASDAoIQ1JFQVRJTkcQARIJCgVSRUFEWRACEgwKCERFTEVUSU5HEAMSDAoI",
-            "VVBEQVRJTkcQBBIUChBTRVJWSUNFX1VQREFUSU5HEAUifQoJQXV0aG9yaXR5",
-            "EhMKBmlzc3VlchgBIAEoCUID4EEBEiMKFndvcmtsb2FkX2lkZW50aXR5X3Bv",
-            "b2wYAiABKAlCA+BBAxIeChFpZGVudGl0eV9wcm92aWRlchgDIAEoCUID4EED",
-            "EhYKCW9pZGNfandrcxgEIAEoDEID4EEBQrsBChpjb20uZ29vZ2xlLmNsb3Vk",
-            "LmdrZWh1Yi52MUIPTWVtYmVyc2hpcFByb3RvUAFaPGdvb2dsZS5nb2xhbmcu",
-            "b3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZ2tlaHViL3YxO2drZWh1",
-            "YqoCFkdvb2dsZS5DbG91ZC5Ha2VIdWIuVjHKAhZHb29nbGVcQ2xvdWRcR2tl",
-            "SHViXFYx6gIZR29vZ2xlOjpDbG91ZDo6R2tlSHViOjpWMWIGcHJvdG8z"));
+            "Lkt1YmVybmV0ZXNNZXRhZGF0YUID4EEDEkwKE2t1YmVybmV0ZXNfcmVzb3Vy",
+            "Y2UYAyABKAsyKi5nb29nbGUuY2xvdWQuZ2tlaHViLnYxLkt1YmVybmV0ZXNS",
+            "ZXNvdXJjZUID4EEBIpgCChJLdWJlcm5ldGVzUmVzb3VyY2USIwoWbWVtYmVy",
+            "c2hpcF9jcl9tYW5pZmVzdBgBIAEoCUID4EEEEksKFG1lbWJlcnNoaXBfcmVz",
+            "b3VyY2VzGAIgAygLMiguZ29vZ2xlLmNsb3VkLmdrZWh1Yi52MS5SZXNvdXJj",
+            "ZU1hbmlmZXN0QgPgQQMSSAoRY29ubmVjdF9yZXNvdXJjZXMYAyADKAsyKC5n",
+            "b29nbGUuY2xvdWQuZ2tlaHViLnYxLlJlc291cmNlTWFuaWZlc3RCA+BBAxJG",
+            "ChByZXNvdXJjZV9vcHRpb25zGAQgASgLMicuZ29vZ2xlLmNsb3VkLmdrZWh1",
+            "Yi52MS5SZXNvdXJjZU9wdGlvbnNCA+BBASJjCg9SZXNvdXJjZU9wdGlvbnMS",
+            "HAoPY29ubmVjdF92ZXJzaW9uGAEgASgJQgPgQQESGAoLdjFiZXRhMV9jcmQY",
+            "AiABKAhCA+BBARIYCgtrOHNfdmVyc2lvbhgDIAEoCUID4EEBIjwKEFJlc291",
+            "cmNlTWFuaWZlc3QSEAoIbWFuaWZlc3QYASABKAkSFgoOY2x1c3Rlcl9zY29w",
+            "ZWQYAiABKAgiKAoKR2tlQ2x1c3RlchIaCg1yZXNvdXJjZV9saW5rGAEgASgJ",
+            "QgPgQQUi3wEKEkt1YmVybmV0ZXNNZXRhZGF0YRIqCh1rdWJlcm5ldGVzX2Fw",
+            "aV9zZXJ2ZXJfdmVyc2lvbhgBIAEoCUID4EEDEh0KEG5vZGVfcHJvdmlkZXJf",
+            "aWQYAiABKAlCA+BBAxIXCgpub2RlX2NvdW50GAMgASgFQgPgQQMSFwoKdmNw",
+            "dV9jb3VudBgEIAEoBUID4EEDEhYKCW1lbW9yeV9tYhgFIAEoBUID4EEDEjQK",
+            "C3VwZGF0ZV90aW1lGGQgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEDIrsBCg9NZW1iZXJzaGlwU3RhdGUSPwoEY29kZRgBIAEoDjIsLmdv",
+            "b2dsZS5jbG91ZC5na2VodWIudjEuTWVtYmVyc2hpcFN0YXRlLkNvZGVCA+BB",
+            "AyJnCgRDb2RlEhQKEENPREVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxAB",
+            "EgkKBVJFQURZEAISDAoIREVMRVRJTkcQAxIMCghVUERBVElORxAEEhQKEFNF",
+            "UlZJQ0VfVVBEQVRJTkcQBSJ9CglBdXRob3JpdHkSEwoGaXNzdWVyGAEgASgJ",
+            "QgPgQQESIwoWd29ya2xvYWRfaWRlbnRpdHlfcG9vbBgCIAEoCUID4EEDEh4K",
+            "EWlkZW50aXR5X3Byb3ZpZGVyGAMgASgJQgPgQQMSFgoJb2lkY19qd2tzGAQg",
+            "ASgMQgPgQQFCuwEKGmNvbS5nb29nbGUuY2xvdWQuZ2tlaHViLnYxQg9NZW1i",
+            "ZXJzaGlwUHJvdG9QAVo8Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
+            "Z2xlYXBpcy9jbG91ZC9na2VodWIvdjE7Z2tlaHViqgIWR29vZ2xlLkNsb3Vk",
+            "LkdrZUh1Yi5WMcoCFkdvb2dsZVxDbG91ZFxHa2VIdWJcVjHqAhlHb29nbGU6",
+            "OkNsb3VkOjpHa2VIdWI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.Membership), global::Google.Cloud.GkeHub.V1.Membership.Parser, new[]{ "Endpoint", "Name", "Labels", "Description", "State", "CreateTime", "UpdateTime", "DeleteTime", "ExternalId", "LastConnectionTime", "UniqueId", "Authority" }, new[]{ "Type" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipEndpoint), global::Google.Cloud.GkeHub.V1.MembershipEndpoint.Parser, new[]{ "GkeCluster", "KubernetesMetadata" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipEndpoint), global::Google.Cloud.GkeHub.V1.MembershipEndpoint.Parser, new[]{ "GkeCluster", "KubernetesMetadata", "KubernetesResource" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.KubernetesResource), global::Google.Cloud.GkeHub.V1.KubernetesResource.Parser, new[]{ "MembershipCrManifest", "MembershipResources", "ConnectResources", "ResourceOptions" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ResourceOptions), global::Google.Cloud.GkeHub.V1.ResourceOptions.Parser, new[]{ "ConnectVersion", "V1Beta1Crd", "K8SVersion" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.ResourceManifest), global::Google.Cloud.GkeHub.V1.ResourceManifest.Parser, new[]{ "Manifest", "ClusterScoped" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.GkeCluster), global::Google.Cloud.GkeHub.V1.GkeCluster.Parser, new[]{ "ResourceLink" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.KubernetesMetadata), global::Google.Cloud.GkeHub.V1.KubernetesMetadata.Parser, new[]{ "KubernetesApiServerVersion", "NodeProviderId", "NodeCount", "VcpuCount", "MemoryMb", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.GkeHub.V1.MembershipState), global::Google.Cloud.GkeHub.V1.MembershipState.Parser, new[]{ "Code" }, null, new[]{ typeof(global::Google.Cloud.GkeHub.V1.MembershipState.Types.Code) }, null, null),
@@ -868,6 +883,7 @@ namespace Google.Cloud.GkeHub.V1 {
     public MembershipEndpoint(MembershipEndpoint other) : this() {
       gkeCluster_ = other.gkeCluster_ != null ? other.gkeCluster_.Clone() : null;
       kubernetesMetadata_ = other.kubernetesMetadata_ != null ? other.kubernetesMetadata_.Clone() : null;
+      kubernetesResource_ = other.kubernetesResource_ != null ? other.kubernetesResource_.Clone() : null;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -907,6 +923,28 @@ namespace Google.Cloud.GkeHub.V1 {
       }
     }
 
+    /// <summary>Field number for the "kubernetes_resource" field.</summary>
+    public const int KubernetesResourceFieldNumber = 3;
+    private global::Google.Cloud.GkeHub.V1.KubernetesResource kubernetesResource_;
+    /// <summary>
+    /// Optional. The in-cluster Kubernetes Resources that should be applied for a correctly
+    /// registered cluster, in the steady state. These resources:
+    ///
+    ///   * Ensure that the cluster is exclusively registered to one and only one
+    ///     Hub Membership.
+    ///   * Propagate Workload Pool Information available in the Membership
+    ///     Authority field.
+    ///   * Ensure proper initial configuration of default Hub Features.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.KubernetesResource KubernetesResource {
+      get { return kubernetesResource_; }
+      set {
+        kubernetesResource_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -924,6 +962,7 @@ namespace Google.Cloud.GkeHub.V1 {
       }
       if (!object.Equals(GkeCluster, other.GkeCluster)) return false;
       if (!object.Equals(KubernetesMetadata, other.KubernetesMetadata)) return false;
+      if (!object.Equals(KubernetesResource, other.KubernetesResource)) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -933,6 +972,7 @@ namespace Google.Cloud.GkeHub.V1 {
       int hash = 1;
       if (gkeCluster_ != null) hash ^= GkeCluster.GetHashCode();
       if (kubernetesMetadata_ != null) hash ^= KubernetesMetadata.GetHashCode();
+      if (kubernetesResource_ != null) hash ^= KubernetesResource.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -959,6 +999,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(KubernetesMetadata);
       }
+      if (kubernetesResource_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KubernetesResource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -977,6 +1021,10 @@ namespace Google.Cloud.GkeHub.V1 {
         output.WriteRawTag(18);
         output.WriteMessage(KubernetesMetadata);
       }
+      if (kubernetesResource_ != null) {
+        output.WriteRawTag(26);
+        output.WriteMessage(KubernetesResource);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -992,6 +1040,9 @@ namespace Google.Cloud.GkeHub.V1 {
       }
       if (kubernetesMetadata_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(KubernetesMetadata);
+      }
+      if (kubernetesResource_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(KubernetesResource);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1016,6 +1067,12 @@ namespace Google.Cloud.GkeHub.V1 {
           KubernetesMetadata = new global::Google.Cloud.GkeHub.V1.KubernetesMetadata();
         }
         KubernetesMetadata.MergeFrom(other.KubernetesMetadata);
+      }
+      if (other.kubernetesResource_ != null) {
+        if (kubernetesResource_ == null) {
+          KubernetesResource = new global::Google.Cloud.GkeHub.V1.KubernetesResource();
+        }
+        KubernetesResource.MergeFrom(other.KubernetesResource);
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1044,6 +1101,13 @@ namespace Google.Cloud.GkeHub.V1 {
               KubernetesMetadata = new global::Google.Cloud.GkeHub.V1.KubernetesMetadata();
             }
             input.ReadMessage(KubernetesMetadata);
+            break;
+          }
+          case 26: {
+            if (kubernetesResource_ == null) {
+              KubernetesResource = new global::Google.Cloud.GkeHub.V1.KubernetesResource();
+            }
+            input.ReadMessage(KubernetesResource);
             break;
           }
         }
@@ -1075,6 +1139,858 @@ namespace Google.Cloud.GkeHub.V1 {
             input.ReadMessage(KubernetesMetadata);
             break;
           }
+          case 26: {
+            if (kubernetesResource_ == null) {
+              KubernetesResource = new global::Google.Cloud.GkeHub.V1.KubernetesResource();
+            }
+            input.ReadMessage(KubernetesResource);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// KubernetesResource contains the YAML manifests and configuration for
+  /// Membership Kubernetes resources in the cluster. After CreateMembership or
+  /// UpdateMembership, these resources should be re-applied in the cluster.
+  /// </summary>
+  public sealed partial class KubernetesResource : pb::IMessage<KubernetesResource>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<KubernetesResource> _parser = new pb::MessageParser<KubernetesResource>(() => new KubernetesResource());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<KubernetesResource> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[2]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesResource() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesResource(KubernetesResource other) : this() {
+      membershipCrManifest_ = other.membershipCrManifest_;
+      membershipResources_ = other.membershipResources_.Clone();
+      connectResources_ = other.connectResources_.Clone();
+      resourceOptions_ = other.resourceOptions_ != null ? other.resourceOptions_.Clone() : null;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public KubernetesResource Clone() {
+      return new KubernetesResource(this);
+    }
+
+    /// <summary>Field number for the "membership_cr_manifest" field.</summary>
+    public const int MembershipCrManifestFieldNumber = 1;
+    private string membershipCrManifest_ = "";
+    /// <summary>
+    /// Input only. The YAML representation of the Membership CR. This field is ignored for GKE
+    /// clusters where Hub can read the CR directly.
+    ///
+    /// Callers should provide the CR that is currently present in the cluster
+    /// during CreateMembership or UpdateMembership, or leave this field empty if
+    /// none exists. The CR manifest is used to validate the cluster has not been
+    /// registered with another Membership.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string MembershipCrManifest {
+      get { return membershipCrManifest_; }
+      set {
+        membershipCrManifest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "membership_resources" field.</summary>
+    public const int MembershipResourcesFieldNumber = 2;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeHub.V1.ResourceManifest> _repeated_membershipResources_codec
+        = pb::FieldCodec.ForMessage(18, global::Google.Cloud.GkeHub.V1.ResourceManifest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest> membershipResources_ = new pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest>();
+    /// <summary>
+    /// Output only. Additional Kubernetes resources that need to be applied to the cluster
+    /// after Membership creation, and after every update.
+    ///
+    /// This field is only populated in the Membership returned from a successful
+    /// long-running operation from CreateMembership or UpdateMembership. It is not
+    /// populated during normal GetMembership or ListMemberships requests. To get
+    /// the resource manifest after the initial registration, the caller should
+    /// make a UpdateMembership call with an empty field mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest> MembershipResources {
+      get { return membershipResources_; }
+    }
+
+    /// <summary>Field number for the "connect_resources" field.</summary>
+    public const int ConnectResourcesFieldNumber = 3;
+    private static readonly pb::FieldCodec<global::Google.Cloud.GkeHub.V1.ResourceManifest> _repeated_connectResources_codec
+        = pb::FieldCodec.ForMessage(26, global::Google.Cloud.GkeHub.V1.ResourceManifest.Parser);
+    private readonly pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest> connectResources_ = new pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest>();
+    /// <summary>
+    /// Output only. The Kubernetes resources for installing the GKE Connect agent
+    ///
+    /// This field is only populated in the Membership returned from a successful
+    /// long-running operation from CreateMembership or UpdateMembership. It is not
+    /// populated during normal GetMembership or ListMemberships requests. To get
+    /// the resource manifest after the initial registration, the caller should
+    /// make a UpdateMembership call with an empty field mask.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.GkeHub.V1.ResourceManifest> ConnectResources {
+      get { return connectResources_; }
+    }
+
+    /// <summary>Field number for the "resource_options" field.</summary>
+    public const int ResourceOptionsFieldNumber = 4;
+    private global::Google.Cloud.GkeHub.V1.ResourceOptions resourceOptions_;
+    /// <summary>
+    /// Optional. Options for Kubernetes resource generation.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.GkeHub.V1.ResourceOptions ResourceOptions {
+      get { return resourceOptions_; }
+      set {
+        resourceOptions_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as KubernetesResource);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(KubernetesResource other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (MembershipCrManifest != other.MembershipCrManifest) return false;
+      if(!membershipResources_.Equals(other.membershipResources_)) return false;
+      if(!connectResources_.Equals(other.connectResources_)) return false;
+      if (!object.Equals(ResourceOptions, other.ResourceOptions)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (MembershipCrManifest.Length != 0) hash ^= MembershipCrManifest.GetHashCode();
+      hash ^= membershipResources_.GetHashCode();
+      hash ^= connectResources_.GetHashCode();
+      if (resourceOptions_ != null) hash ^= ResourceOptions.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (MembershipCrManifest.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MembershipCrManifest);
+      }
+      membershipResources_.WriteTo(output, _repeated_membershipResources_codec);
+      connectResources_.WriteTo(output, _repeated_connectResources_codec);
+      if (resourceOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResourceOptions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (MembershipCrManifest.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(MembershipCrManifest);
+      }
+      membershipResources_.WriteTo(ref output, _repeated_membershipResources_codec);
+      connectResources_.WriteTo(ref output, _repeated_connectResources_codec);
+      if (resourceOptions_ != null) {
+        output.WriteRawTag(34);
+        output.WriteMessage(ResourceOptions);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (MembershipCrManifest.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(MembershipCrManifest);
+      }
+      size += membershipResources_.CalculateSize(_repeated_membershipResources_codec);
+      size += connectResources_.CalculateSize(_repeated_connectResources_codec);
+      if (resourceOptions_ != null) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(ResourceOptions);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(KubernetesResource other) {
+      if (other == null) {
+        return;
+      }
+      if (other.MembershipCrManifest.Length != 0) {
+        MembershipCrManifest = other.MembershipCrManifest;
+      }
+      membershipResources_.Add(other.membershipResources_);
+      connectResources_.Add(other.connectResources_);
+      if (other.resourceOptions_ != null) {
+        if (resourceOptions_ == null) {
+          ResourceOptions = new global::Google.Cloud.GkeHub.V1.ResourceOptions();
+        }
+        ResourceOptions.MergeFrom(other.ResourceOptions);
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            MembershipCrManifest = input.ReadString();
+            break;
+          }
+          case 18: {
+            membershipResources_.AddEntriesFrom(input, _repeated_membershipResources_codec);
+            break;
+          }
+          case 26: {
+            connectResources_.AddEntriesFrom(input, _repeated_connectResources_codec);
+            break;
+          }
+          case 34: {
+            if (resourceOptions_ == null) {
+              ResourceOptions = new global::Google.Cloud.GkeHub.V1.ResourceOptions();
+            }
+            input.ReadMessage(ResourceOptions);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            MembershipCrManifest = input.ReadString();
+            break;
+          }
+          case 18: {
+            membershipResources_.AddEntriesFrom(ref input, _repeated_membershipResources_codec);
+            break;
+          }
+          case 26: {
+            connectResources_.AddEntriesFrom(ref input, _repeated_connectResources_codec);
+            break;
+          }
+          case 34: {
+            if (resourceOptions_ == null) {
+              ResourceOptions = new global::Google.Cloud.GkeHub.V1.ResourceOptions();
+            }
+            input.ReadMessage(ResourceOptions);
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ResourceOptions represent options for Kubernetes resource generation.
+  /// </summary>
+  public sealed partial class ResourceOptions : pb::IMessage<ResourceOptions>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ResourceOptions> _parser = new pb::MessageParser<ResourceOptions>(() => new ResourceOptions());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ResourceOptions> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[3]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceOptions() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceOptions(ResourceOptions other) : this() {
+      connectVersion_ = other.connectVersion_;
+      v1Beta1Crd_ = other.v1Beta1Crd_;
+      k8SVersion_ = other.k8SVersion_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceOptions Clone() {
+      return new ResourceOptions(this);
+    }
+
+    /// <summary>Field number for the "connect_version" field.</summary>
+    public const int ConnectVersionFieldNumber = 1;
+    private string connectVersion_ = "";
+    /// <summary>
+    /// Optional. The Connect agent version to use for connect_resources. Defaults to the
+    /// latest GKE Connect version. The version must be a currently supported
+    /// version, obsolete versions will be rejected.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string ConnectVersion {
+      get { return connectVersion_; }
+      set {
+        connectVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "v1beta1_crd" field.</summary>
+    public const int V1Beta1CrdFieldNumber = 2;
+    private bool v1Beta1Crd_;
+    /// <summary>
+    /// Optional. Use `apiextensions/v1beta1` instead of `apiextensions/v1` for
+    /// CustomResourceDefinition resources.
+    /// This option should be set for clusters with Kubernetes apiserver versions
+    /// &lt;1.16.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool V1Beta1Crd {
+      get { return v1Beta1Crd_; }
+      set {
+        v1Beta1Crd_ = value;
+      }
+    }
+
+    /// <summary>Field number for the "k8s_version" field.</summary>
+    public const int K8SVersionFieldNumber = 3;
+    private string k8SVersion_ = "";
+    /// <summary>
+    /// Optional. Major version of the Kubernetes cluster. This is only used to determine
+    /// which version to use for the CustomResourceDefinition resources,
+    /// `apiextensions/v1beta1` or`apiextensions/v1`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string K8SVersion {
+      get { return k8SVersion_; }
+      set {
+        k8SVersion_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ResourceOptions);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ResourceOptions other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (ConnectVersion != other.ConnectVersion) return false;
+      if (V1Beta1Crd != other.V1Beta1Crd) return false;
+      if (K8SVersion != other.K8SVersion) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (ConnectVersion.Length != 0) hash ^= ConnectVersion.GetHashCode();
+      if (V1Beta1Crd != false) hash ^= V1Beta1Crd.GetHashCode();
+      if (K8SVersion.Length != 0) hash ^= K8SVersion.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (ConnectVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ConnectVersion);
+      }
+      if (V1Beta1Crd != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(V1Beta1Crd);
+      }
+      if (K8SVersion.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(K8SVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (ConnectVersion.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(ConnectVersion);
+      }
+      if (V1Beta1Crd != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(V1Beta1Crd);
+      }
+      if (K8SVersion.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(K8SVersion);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (ConnectVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(ConnectVersion);
+      }
+      if (V1Beta1Crd != false) {
+        size += 1 + 1;
+      }
+      if (K8SVersion.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(K8SVersion);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ResourceOptions other) {
+      if (other == null) {
+        return;
+      }
+      if (other.ConnectVersion.Length != 0) {
+        ConnectVersion = other.ConnectVersion;
+      }
+      if (other.V1Beta1Crd != false) {
+        V1Beta1Crd = other.V1Beta1Crd;
+      }
+      if (other.K8SVersion.Length != 0) {
+        K8SVersion = other.K8SVersion;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            ConnectVersion = input.ReadString();
+            break;
+          }
+          case 16: {
+            V1Beta1Crd = input.ReadBool();
+            break;
+          }
+          case 26: {
+            K8SVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            ConnectVersion = input.ReadString();
+            break;
+          }
+          case 16: {
+            V1Beta1Crd = input.ReadBool();
+            break;
+          }
+          case 26: {
+            K8SVersion = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// ResourceManifest represents a single Kubernetes resource to be applied to
+  /// the cluster.
+  /// </summary>
+  public sealed partial class ResourceManifest : pb::IMessage<ResourceManifest>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<ResourceManifest> _parser = new pb::MessageParser<ResourceManifest>(() => new ResourceManifest());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<ResourceManifest> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[4]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceManifest() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceManifest(ResourceManifest other) : this() {
+      manifest_ = other.manifest_;
+      clusterScoped_ = other.clusterScoped_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public ResourceManifest Clone() {
+      return new ResourceManifest(this);
+    }
+
+    /// <summary>Field number for the "manifest" field.</summary>
+    public const int ManifestFieldNumber = 1;
+    private string manifest_ = "";
+    /// <summary>
+    /// YAML manifest of the resource.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Manifest {
+      get { return manifest_; }
+      set {
+        manifest_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "cluster_scoped" field.</summary>
+    public const int ClusterScopedFieldNumber = 2;
+    private bool clusterScoped_;
+    /// <summary>
+    /// Whether the resource provided in the manifest is `cluster_scoped`.
+    /// If unset, the manifest is assumed to be namespace scoped.
+    ///
+    /// This field is used for REST mapping when applying the resource in a
+    /// cluster.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ClusterScoped {
+      get { return clusterScoped_; }
+      set {
+        clusterScoped_ = value;
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as ResourceManifest);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(ResourceManifest other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Manifest != other.Manifest) return false;
+      if (ClusterScoped != other.ClusterScoped) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Manifest.Length != 0) hash ^= Manifest.GetHashCode();
+      if (ClusterScoped != false) hash ^= ClusterScoped.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Manifest.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Manifest);
+      }
+      if (ClusterScoped != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ClusterScoped);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Manifest.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Manifest);
+      }
+      if (ClusterScoped != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(ClusterScoped);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Manifest.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Manifest);
+      }
+      if (ClusterScoped != false) {
+        size += 1 + 1;
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(ResourceManifest other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Manifest.Length != 0) {
+        Manifest = other.Manifest;
+      }
+      if (other.ClusterScoped != false) {
+        ClusterScoped = other.ClusterScoped;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Manifest = input.ReadString();
+            break;
+          }
+          case 16: {
+            ClusterScoped = input.ReadBool();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Manifest = input.ReadString();
+            break;
+          }
+          case 16: {
+            ClusterScoped = input.ReadBool();
+            break;
+          }
         }
       }
     }
@@ -1099,7 +2015,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[2]; }
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[5]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1135,7 +2051,7 @@ namespace Google.Cloud.GkeHub.V1 {
     /// <summary>
     /// Immutable. Self-link of the GCP resource for the GKE cluster. For example:
     ///
-    ///     //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
+    /// //container.googleapis.com/projects/my-project/locations/us-west1-a/clusters/my-cluster
     ///
     /// Zonal clusters are also supported.
     /// </summary>
@@ -1299,7 +2215,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[3]; }
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1709,7 +2625,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[4]; }
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[7]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1944,7 +2860,7 @@ namespace Google.Cloud.GkeHub.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.GkeHub.V1.MembershipReflection.Descriptor.MessageTypes[8]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
