@@ -889,5 +889,98 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             SuggestFaqAnswersResponse response = await participantsClient.SuggestFaqAnswersAsync(parent);
             // End snippet
         }
+
+        /// <summary>Snippet for SuggestSmartReplies</summary>
+        public void SuggestSmartRepliesRequestObject()
+        {
+            // Snippet: SuggestSmartReplies(SuggestSmartRepliesRequest, CallSettings)
+            // Create client
+            ParticipantsClient participantsClient = ParticipantsClient.Create();
+            // Initialize request argument(s)
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+                CurrentTextInput = new TextInput(),
+            };
+            // Make the request
+            SuggestSmartRepliesResponse response = participantsClient.SuggestSmartReplies(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestSmartRepliesAsync</summary>
+        public async Task SuggestSmartRepliesRequestObjectAsync()
+        {
+            // Snippet: SuggestSmartRepliesAsync(SuggestSmartRepliesRequest, CallSettings)
+            // Additional: SuggestSmartRepliesAsync(SuggestSmartRepliesRequest, CancellationToken)
+            // Create client
+            ParticipantsClient participantsClient = await ParticipantsClient.CreateAsync();
+            // Initialize request argument(s)
+            SuggestSmartRepliesRequest request = new SuggestSmartRepliesRequest
+            {
+                ParentAsParticipantName = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]"),
+                LatestMessageAsMessageName = MessageName.FromProjectConversationMessage("[PROJECT]", "[CONVERSATION]", "[MESSAGE]"),
+                ContextSize = 0,
+                CurrentTextInput = new TextInput(),
+            };
+            // Make the request
+            SuggestSmartRepliesResponse response = await participantsClient.SuggestSmartRepliesAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestSmartReplies</summary>
+        public void SuggestSmartReplies()
+        {
+            // Snippet: SuggestSmartReplies(string, CallSettings)
+            // Create client
+            ParticipantsClient participantsClient = ParticipantsClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/conversations/[CONVERSATION]/participants/[PARTICIPANT]";
+            // Make the request
+            SuggestSmartRepliesResponse response = participantsClient.SuggestSmartReplies(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestSmartRepliesAsync</summary>
+        public async Task SuggestSmartRepliesAsync()
+        {
+            // Snippet: SuggestSmartRepliesAsync(string, CallSettings)
+            // Additional: SuggestSmartRepliesAsync(string, CancellationToken)
+            // Create client
+            ParticipantsClient participantsClient = await ParticipantsClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/conversations/[CONVERSATION]/participants/[PARTICIPANT]";
+            // Make the request
+            SuggestSmartRepliesResponse response = await participantsClient.SuggestSmartRepliesAsync(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestSmartReplies</summary>
+        public void SuggestSmartRepliesResourceNames()
+        {
+            // Snippet: SuggestSmartReplies(ParticipantName, CallSettings)
+            // Create client
+            ParticipantsClient participantsClient = ParticipantsClient.Create();
+            // Initialize request argument(s)
+            ParticipantName parent = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]");
+            // Make the request
+            SuggestSmartRepliesResponse response = participantsClient.SuggestSmartReplies(parent);
+            // End snippet
+        }
+
+        /// <summary>Snippet for SuggestSmartRepliesAsync</summary>
+        public async Task SuggestSmartRepliesResourceNamesAsync()
+        {
+            // Snippet: SuggestSmartRepliesAsync(ParticipantName, CallSettings)
+            // Additional: SuggestSmartRepliesAsync(ParticipantName, CancellationToken)
+            // Create client
+            ParticipantsClient participantsClient = await ParticipantsClient.CreateAsync();
+            // Initialize request argument(s)
+            ParticipantName parent = ParticipantName.FromProjectConversationParticipant("[PROJECT]", "[CONVERSATION]", "[PARTICIPANT]");
+            // Make the request
+            SuggestSmartRepliesResponse response = await participantsClient.SuggestSmartRepliesAsync(parent);
+            // End snippet
+        }
     }
 }

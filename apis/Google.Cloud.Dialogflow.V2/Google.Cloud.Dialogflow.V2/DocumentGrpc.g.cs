@@ -76,6 +76,8 @@ namespace Google.Cloud.Dialogflow.V2 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.LongRunning.Operation> __Marshaller_google_longrunning_Operation = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.LongRunning.Operation.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest> __Marshaller_google_cloud_dialogflow_v2_ImportDocumentsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_DeleteDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest> __Marshaller_google_cloud_dialogflow_v2_UpdateDocumentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest.Parser));
@@ -106,6 +108,14 @@ namespace Google.Cloud.Dialogflow.V2 {
         __ServiceName,
         "CreateDocument",
         __Marshaller_google_cloud_dialogflow_v2_CreateDocumentRequest,
+        __Marshaller_google_longrunning_Operation);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest, global::Google.LongRunning.Operation> __Method_ImportDocuments = new grpc::Method<global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest, global::Google.LongRunning.Operation>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ImportDocuments",
+        __Marshaller_google_cloud_dialogflow_v2_ImportDocumentsRequest,
         __Marshaller_google_longrunning_Operation);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -189,6 +199,27 @@ namespace Google.Cloud.Dialogflow.V2 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> CreateDocument(global::Google.Cloud.Dialogflow.V2.CreateDocumentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Creates documents by importing data from external sources.
+      /// Dialogflow supports up to 350 documents in each request. If you try to
+      /// import more, Dialogflow will return an error.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.LongRunning.Operation> ImportDocuments(global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -477,6 +508,90 @@ namespace Google.Cloud.Dialogflow.V2 {
       public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> CreateDocumentAsync(global::Google.Cloud.Dialogflow.V2.CreateDocumentRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_CreateDocument, null, options, request);
+      }
+      /// <summary>
+      /// Creates documents by importing data from external sources.
+      /// Dialogflow supports up to 350 documents in each request. If you try to
+      /// import more, Dialogflow will return an error.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportDocuments(global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportDocuments(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates documents by importing data from external sources.
+      /// Dialogflow supports up to 350 documents in each request. If you try to
+      /// import more, Dialogflow will return an error.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.LongRunning.Operation ImportDocuments(global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ImportDocuments, null, options, request);
+      }
+      /// <summary>
+      /// Creates documents by importing data from external sources.
+      /// Dialogflow supports up to 350 documents in each request. If you try to
+      /// import more, Dialogflow will return an error.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDocumentsAsync(global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ImportDocumentsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Creates documents by importing data from external sources.
+      /// Dialogflow supports up to 350 documents in each request. If you try to
+      /// import more, Dialogflow will return an error.
+      ///
+      /// This method is a [long-running
+      /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+      /// The returned `Operation` type has the following method-specific fields:
+      ///
+      /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+      /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.LongRunning.Operation> ImportDocumentsAsync(global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ImportDocuments, null, options, request);
       }
       /// <summary>
       /// Deletes the specified document.
@@ -831,6 +946,7 @@ namespace Google.Cloud.Dialogflow.V2 {
           .AddMethod(__Method_ListDocuments, serviceImpl.ListDocuments)
           .AddMethod(__Method_GetDocument, serviceImpl.GetDocument)
           .AddMethod(__Method_CreateDocument, serviceImpl.CreateDocument)
+          .AddMethod(__Method_ImportDocuments, serviceImpl.ImportDocuments)
           .AddMethod(__Method_DeleteDocument, serviceImpl.DeleteDocument)
           .AddMethod(__Method_UpdateDocument, serviceImpl.UpdateDocument)
           .AddMethod(__Method_ReloadDocument, serviceImpl.ReloadDocument)
@@ -847,6 +963,7 @@ namespace Google.Cloud.Dialogflow.V2 {
       serviceBinder.AddMethod(__Method_ListDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ListDocumentsRequest, global::Google.Cloud.Dialogflow.V2.ListDocumentsResponse>(serviceImpl.ListDocuments));
       serviceBinder.AddMethod(__Method_GetDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.GetDocumentRequest, global::Google.Cloud.Dialogflow.V2.Document>(serviceImpl.GetDocument));
       serviceBinder.AddMethod(__Method_CreateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.CreateDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.CreateDocument));
+      serviceBinder.AddMethod(__Method_ImportDocuments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ImportDocumentsRequest, global::Google.LongRunning.Operation>(serviceImpl.ImportDocuments));
       serviceBinder.AddMethod(__Method_DeleteDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.DeleteDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.DeleteDocument));
       serviceBinder.AddMethod(__Method_UpdateDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.UpdateDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.UpdateDocument));
       serviceBinder.AddMethod(__Method_ReloadDocument, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Dialogflow.V2.ReloadDocumentRequest, global::Google.LongRunning.Operation>(serviceImpl.ReloadDocument));

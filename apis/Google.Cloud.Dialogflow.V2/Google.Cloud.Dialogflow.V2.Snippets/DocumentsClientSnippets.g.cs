@@ -580,6 +580,77 @@ namespace Google.Cloud.Dialogflow.V2.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ImportDocuments</summary>
+        public void ImportDocumentsRequestObject()
+        {
+            // Snippet: ImportDocuments(ImportDocumentsRequest, CallSettings)
+            // Create client
+            DocumentsClient documentsClient = DocumentsClient.Create();
+            // Initialize request argument(s)
+            ImportDocumentsRequest request = new ImportDocumentsRequest
+            {
+                ParentAsKnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
+                GcsSource = new GcsSources(),
+                DocumentTemplate = new ImportDocumentTemplate(),
+                ImportGcsCustomMetadata = false,
+            };
+            // Make the request
+            Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> response = documentsClient.ImportDocuments(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> retrievedResponse = documentsClient.PollOnceImportDocuments(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for ImportDocumentsAsync</summary>
+        public async Task ImportDocumentsRequestObjectAsync()
+        {
+            // Snippet: ImportDocumentsAsync(ImportDocumentsRequest, CallSettings)
+            // Additional: ImportDocumentsAsync(ImportDocumentsRequest, CancellationToken)
+            // Create client
+            DocumentsClient documentsClient = await DocumentsClient.CreateAsync();
+            // Initialize request argument(s)
+            ImportDocumentsRequest request = new ImportDocumentsRequest
+            {
+                ParentAsKnowledgeBaseName = KnowledgeBaseName.FromProjectKnowledgeBase("[PROJECT]", "[KNOWLEDGE_BASE]"),
+                GcsSource = new GcsSources(),
+                DocumentTemplate = new ImportDocumentTemplate(),
+                ImportGcsCustomMetadata = false,
+            };
+            // Make the request
+            Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> response = await documentsClient.ImportDocumentsAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ImportDocumentsResponse result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> retrievedResponse = await documentsClient.PollOnceImportDocumentsAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ImportDocumentsResponse retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
         /// <summary>Snippet for DeleteDocument</summary>
         public void DeleteDocumentRequestObject()
         {

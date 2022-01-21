@@ -50,6 +50,8 @@ namespace Google.Cloud.Dialogflow.V2
             GetDocumentSettings = existing.GetDocumentSettings;
             CreateDocumentSettings = existing.CreateDocumentSettings;
             CreateDocumentOperationsSettings = existing.CreateDocumentOperationsSettings.Clone();
+            ImportDocumentsSettings = existing.ImportDocumentsSettings;
+            ImportDocumentsOperationsSettings = existing.ImportDocumentsOperationsSettings.Clone();
             DeleteDocumentSettings = existing.DeleteDocumentSettings;
             DeleteDocumentOperationsSettings = existing.DeleteDocumentOperationsSettings.Clone();
             UpdateDocumentSettings = existing.UpdateDocumentSettings;
@@ -131,6 +133,42 @@ namespace Google.Cloud.Dialogflow.V2
         /// </list>
         /// </remarks>
         public lro::OperationsSettings CreateDocumentOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>DocumentsClient.ImportDocuments</c> and <c>DocumentsClient.ImportDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 100 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: Unlimited</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ImportDocumentsSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 2147483647, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>DocumentsClient.ImportDocuments</c> and
+        /// <c>DocumentsClient.ImportDocumentsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings ImportDocumentsOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -909,6 +947,86 @@ namespace Google.Cloud.Dialogflow.V2
             CreateDocumentAsync(parent, document, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
+        /// Creates documents by importing data from external sources.
+        /// Dialogflow supports up to 350 documents in each request. If you try to
+        /// import more, Dialogflow will return an error.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> ImportDocuments(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates documents by importing data from external sources.
+        /// Dialogflow supports up to 350 documents in each request. If you try to
+        /// import more, Dialogflow will return an error.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>> ImportDocumentsAsync(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Creates documents by importing data from external sources.
+        /// Dialogflow supports up to 350 documents in each request. If you try to
+        /// import more, Dialogflow will return an error.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>> ImportDocumentsAsync(ImportDocumentsRequest request, st::CancellationToken cancellationToken) =>
+            ImportDocumentsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>ImportDocuments</c>.</summary>
+        public virtual lro::OperationsClient ImportDocumentsOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>ImportDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> PollOnceImportDocuments(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDocumentsOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>ImportDocuments</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>> PollOnceImportDocumentsAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), ImportDocumentsOperationsClient, callSettings);
+
+        /// <summary>
         /// Deletes the specified document.
         /// 
         /// This method is a [long-running
@@ -1670,6 +1788,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         private readonly gaxgrpc::ApiCall<CreateDocumentRequest, lro::Operation> _callCreateDocument;
 
+        private readonly gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> _callImportDocuments;
+
         private readonly gaxgrpc::ApiCall<DeleteDocumentRequest, lro::Operation> _callDeleteDocument;
 
         private readonly gaxgrpc::ApiCall<UpdateDocumentRequest, lro::Operation> _callUpdateDocument;
@@ -1689,6 +1809,7 @@ namespace Google.Cloud.Dialogflow.V2
             DocumentsSettings effectiveSettings = settings ?? DocumentsSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
             CreateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateDocumentOperationsSettings);
+            ImportDocumentsOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ImportDocumentsOperationsSettings);
             DeleteDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteDocumentOperationsSettings);
             UpdateDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateDocumentOperationsSettings);
             ReloadDocumentOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.ReloadDocumentOperationsSettings);
@@ -1702,6 +1823,9 @@ namespace Google.Cloud.Dialogflow.V2
             _callCreateDocument = clientHelper.BuildApiCall<CreateDocumentRequest, lro::Operation>(grpcClient.CreateDocumentAsync, grpcClient.CreateDocument, effectiveSettings.CreateDocumentSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateDocument);
             Modify_CreateDocumentApiCall(ref _callCreateDocument);
+            _callImportDocuments = clientHelper.BuildApiCall<ImportDocumentsRequest, lro::Operation>(grpcClient.ImportDocumentsAsync, grpcClient.ImportDocuments, effectiveSettings.ImportDocumentsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callImportDocuments);
+            Modify_ImportDocumentsApiCall(ref _callImportDocuments);
             _callDeleteDocument = clientHelper.BuildApiCall<DeleteDocumentRequest, lro::Operation>(grpcClient.DeleteDocumentAsync, grpcClient.DeleteDocument, effectiveSettings.DeleteDocumentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteDocument);
             Modify_DeleteDocumentApiCall(ref _callDeleteDocument);
@@ -1725,6 +1849,8 @@ namespace Google.Cloud.Dialogflow.V2
 
         partial void Modify_CreateDocumentApiCall(ref gaxgrpc::ApiCall<CreateDocumentRequest, lro::Operation> call);
 
+        partial void Modify_ImportDocumentsApiCall(ref gaxgrpc::ApiCall<ImportDocumentsRequest, lro::Operation> call);
+
         partial void Modify_DeleteDocumentApiCall(ref gaxgrpc::ApiCall<DeleteDocumentRequest, lro::Operation> call);
 
         partial void Modify_UpdateDocumentApiCall(ref gaxgrpc::ApiCall<UpdateDocumentRequest, lro::Operation> call);
@@ -1743,6 +1869,8 @@ namespace Google.Cloud.Dialogflow.V2
         partial void Modify_GetDocumentRequest(ref GetDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_CreateDocumentRequest(ref CreateDocumentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ImportDocumentsRequest(ref ImportDocumentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteDocumentRequest(ref DeleteDocumentRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1839,6 +1967,51 @@ namespace Google.Cloud.Dialogflow.V2
         {
             Modify_CreateDocumentRequest(ref request, ref callSettings);
             return new lro::Operation<Document, KnowledgeOperationMetadata>(await _callCreateDocument.Async(request, callSettings).ConfigureAwait(false), CreateDocumentOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>ImportDocuments</c>.</summary>
+        public override lro::OperationsClient ImportDocumentsOperationsClient { get; }
+
+        /// <summary>
+        /// Creates documents by importing data from external sources.
+        /// Dialogflow supports up to 350 documents in each request. If you try to
+        /// import more, Dialogflow will return an error.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata> ImportDocuments(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>(_callImportDocuments.Sync(request, callSettings), ImportDocumentsOperationsClient);
+        }
+
+        /// <summary>
+        /// Creates documents by importing data from external sources.
+        /// Dialogflow supports up to 350 documents in each request. If you try to
+        /// import more, Dialogflow will return an error.
+        /// 
+        /// This method is a [long-running
+        /// operation](https://cloud.google.com/dialogflow/cx/docs/how/long-running-operation).
+        /// The returned `Operation` type has the following method-specific fields:
+        /// 
+        /// - `metadata`: [KnowledgeOperationMetadata][google.cloud.dialogflow.v2.KnowledgeOperationMetadata]
+        /// - `response`: [ImportDocumentsResponse][google.cloud.dialogflow.v2.ImportDocumentsResponse]
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>> ImportDocumentsAsync(ImportDocumentsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ImportDocumentsRequest(ref request, ref callSettings);
+            return new lro::Operation<ImportDocumentsResponse, KnowledgeOperationMetadata>(await _callImportDocuments.Async(request, callSettings).ConfigureAwait(false), ImportDocumentsOperationsClient);
         }
 
         /// <summary>The long-running operations client for <c>DeleteDocument</c>.</summary>

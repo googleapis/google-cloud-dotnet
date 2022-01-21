@@ -241,6 +241,12 @@
                 "GetDocumentAsync"
               ]
             },
+            "ImportDocuments": {
+              "methods": [
+                "ImportDocuments",
+                "ImportDocumentsAsync"
+              ]
+            },
             "ListDocuments": {
               "methods": [
                 "ListDocuments",
@@ -527,6 +533,12 @@
               "methods": [
                 "SuggestFaqAnswers",
                 "SuggestFaqAnswersAsync"
+              ]
+            },
+            "SuggestSmartReplies": {
+              "methods": [
+                "SuggestSmartReplies",
+                "SuggestSmartRepliesAsync"
               ]
             },
             "UpdateParticipant": {

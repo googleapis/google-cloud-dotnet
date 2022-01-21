@@ -755,4 +755,49 @@ namespace Google.Cloud.Dialogflow.V2
             set => LatestMessage = value?.ToString() ?? "";
         }
     }
+
+    public partial class SuggestSmartRepliesRequest
+    {
+        /// <summary>
+        /// <see cref="ParticipantName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public ParticipantName ParentAsParticipantName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : ParticipantName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+
+        /// <summary>
+        /// <see cref="MessageName"/>-typed view over the <see cref="LatestMessage"/> resource name property.
+        /// </summary>
+        public MessageName LatestMessageAsMessageName
+        {
+            get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
+            set => LatestMessage = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SuggestSmartRepliesResponse
+    {
+        /// <summary>
+        /// <see cref="MessageName"/>-typed view over the <see cref="LatestMessage"/> resource name property.
+        /// </summary>
+        public MessageName LatestMessageAsMessageName
+        {
+            get => string.IsNullOrEmpty(LatestMessage) ? null : MessageName.Parse(LatestMessage, allowUnparsed: true);
+            set => LatestMessage = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class SmartReplyAnswer
+    {
+        /// <summary>
+        /// <see cref="AnswerRecordName"/>-typed view over the <see cref="AnswerRecord"/> resource name property.
+        /// </summary>
+        public AnswerRecordName AnswerRecordAsAnswerRecordName
+        {
+            get => string.IsNullOrEmpty(AnswerRecord) ? null : AnswerRecordName.Parse(AnswerRecord, allowUnparsed: true);
+            set => AnswerRecord = value?.ToString() ?? "";
+        }
+    }
 }
