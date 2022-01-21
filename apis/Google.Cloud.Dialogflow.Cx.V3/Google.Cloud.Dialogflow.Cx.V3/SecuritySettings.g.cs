@@ -2176,7 +2176,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
 
       /// <summary>
       /// Settings for exporting conversations to
-      /// [Insights](https://cloud.google.com/dialogflow/priv/docs/insights).
+      /// [Insights](https://cloud.google.com/contact-center/insights/docs).
       /// </summary>
       public sealed partial class InsightsExportSettings : pb::IMessage<InsightsExportSettings>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

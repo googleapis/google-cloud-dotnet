@@ -26,19 +26,19 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "Citnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9zZXNzaW9uLnByb3Rv",
             "Eh1nb29nbGUuY2xvdWQuZGlhbG9nZmxvdy5jeC52MxocZ29vZ2xlL2FwaS9h",
-            "bm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5w",
-            "cm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo1Z29vZ2xlL2Nsb3Vk",
-            "L2RpYWxvZ2Zsb3cvY3gvdjMvYWR2YW5jZWRfc2V0dGluZ3MucHJvdG8aMGdv",
-            "b2dsZS9jbG91ZC9kaWFsb2dmbG93L2N4L3YzL2F1ZGlvX2NvbmZpZy5wcm90",
-            "bxooZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gvdjMvZmxvdy5wcm90bxoq",
-            "Z29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cvY3gvdjMvaW50ZW50LnByb3RvGihn",
-            "b29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9wYWdlLnByb3RvGjRnb29n",
-            "bGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9yZXNwb25zZV9tZXNzYWdlLnBy",
-            "b3RvGjdnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My9zZXNzaW9uX2Vu",
-            "dGl0eV90eXBlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJv",
-            "dG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aF2dvb2dsZS9ycGMv",
-            "c3RhdHVzLnByb3RvGhhnb29nbGUvdHlwZS9sYXRsbmcucHJvdG8aF2dvb2ds",
-            "ZS9hcGkvY2xpZW50LnByb3RvIqsCChNEZXRlY3RJbnRlbnRSZXF1ZXN0EjoK",
+            "bm5vdGF0aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dv",
+            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
+            "b3VyY2UucHJvdG8aNWdvb2dsZS9jbG91ZC9kaWFsb2dmbG93L2N4L3YzL2Fk",
+            "dmFuY2VkX3NldHRpbmdzLnByb3RvGjBnb29nbGUvY2xvdWQvZGlhbG9nZmxv",
+            "dy9jeC92My9hdWRpb19jb25maWcucHJvdG8aKGdvb2dsZS9jbG91ZC9kaWFs",
+            "b2dmbG93L2N4L3YzL2Zsb3cucHJvdG8aKmdvb2dsZS9jbG91ZC9kaWFsb2dm",
+            "bG93L2N4L3YzL2ludGVudC5wcm90bxooZ29vZ2xlL2Nsb3VkL2RpYWxvZ2Zs",
+            "b3cvY3gvdjMvcGFnZS5wcm90bxo0Z29vZ2xlL2Nsb3VkL2RpYWxvZ2Zsb3cv",
+            "Y3gvdjMvcmVzcG9uc2VfbWVzc2FnZS5wcm90bxo3Z29vZ2xlL2Nsb3VkL2Rp",
+            "YWxvZ2Zsb3cvY3gvdjMvc2Vzc2lvbl9lbnRpdHlfdHlwZS5wcm90bxoeZ29v",
+            "Z2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhxnb29nbGUvcHJvdG9idWYv",
+            "c3RydWN0LnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoYZ29vZ2xl",
+            "L3R5cGUvbGF0bG5nLnByb3RvIqsCChNEZXRlY3RJbnRlbnRSZXF1ZXN0EjoK",
             "B3Nlc3Npb24YASABKAlCKeBBAvpBIwohZGlhbG9nZmxvdy5nb29nbGVhcGlz",
             "LmNvbS9TZXNzaW9uEkQKDHF1ZXJ5X3BhcmFtcxgCIAEoCzIuLmdvb2dsZS5j",
             "bG91ZC5kaWFsb2dmbG93LmN4LnYzLlF1ZXJ5UGFyYW1ldGVycxJDCgtxdWVy",
@@ -190,7 +190,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "dHMve2FnZW50fS9lbnZpcm9ubWVudHMve2Vudmlyb25tZW50fS9zZXNzaW9u",
             "cy97c2Vzc2lvbn1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AdvancedSettingsReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.AudioConfigReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.FlowReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.IntentReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.PageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.ResponseMessageReflection.Descriptor, global::Google.Cloud.Dialogflow.Cx.V3.SessionEntityTypeReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Type.LatlngReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentRequest.Parser, new[]{ "Session", "QueryParams", "QueryInput", "OutputAudioConfig" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse), global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Parser, new[]{ "ResponseId", "QueryResult", "OutputAudio", "OutputAudioConfig", "ResponseType", "AllowCancellation" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.DetectIntentResponse.Types.ResponseType) }, null, null),
@@ -5525,8 +5525,9 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
     public const int EventFieldNumber = 6;
     private string event_ = "";
     /// <summary>
-    /// The event that matched the query. Only filled for
-    /// [`EVENT`][google.cloud.dialogflow.cx.v3.Match.MatchType] match type.
+    /// The event that matched the query. Filled for
+    /// [`EVENT`][google.cloud.dialogflow.cx.v3.Match.MatchType], [`NO_MATCH`][google.cloud.dialogflow.cx.v3.Match.MatchType] and
+    /// [`NO_INPUT`][google.cloud.dialogflow.cx.v3.Match.MatchType] match types.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
