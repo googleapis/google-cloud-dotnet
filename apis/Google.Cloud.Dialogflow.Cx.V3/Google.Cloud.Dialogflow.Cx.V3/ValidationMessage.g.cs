@@ -26,8 +26,8 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
           string.Concat(
             "CjZnb29nbGUvY2xvdWQvZGlhbG9nZmxvdy9jeC92My92YWxpZGF0aW9uX21l",
             "c3NhZ2UucHJvdG8SHWdvb2dsZS5jbG91ZC5kaWFsb2dmbG93LmN4LnYzGhxn",
-            "b29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvIvgEChFWYWxpZGF0aW9uTWVzc2FnZRJUCg1yZXNvdXJj",
+            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhxnb29nbGUvcHJvdG9idWYv",
+            "c3RydWN0LnByb3RvIvgEChFWYWxpZGF0aW9uTWVzc2FnZRJUCg1yZXNvdXJj",
             "ZV90eXBlGAEgASgOMj0uZ29vZ2xlLmNsb3VkLmRpYWxvZ2Zsb3cuY3gudjMu",
             "VmFsaWRhdGlvbk1lc3NhZ2UuUmVzb3VyY2VUeXBlEhUKCXJlc291cmNlcxgC",
             "IAMoCUICGAESQwoOcmVzb3VyY2VfbmFtZXMYBiADKAsyKy5nb29nbGUuY2xv",
@@ -49,7 +49,7 @@ namespace Google.Cloud.Dialogflow.Cx.V3 {
             "bG9nZmxvdy5DeC5WM+oCIUdvb2dsZTo6Q2xvdWQ6OkRpYWxvZ2Zsb3c6OkNY",
             "OjpWM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ValidationMessage), global::Google.Cloud.Dialogflow.Cx.V3.ValidationMessage.Parser, new[]{ "ResourceType", "Resources", "ResourceNames", "Severity", "Detail" }, null, new[]{ typeof(global::Google.Cloud.Dialogflow.Cx.V3.ValidationMessage.Types.ResourceType), typeof(global::Google.Cloud.Dialogflow.Cx.V3.ValidationMessage.Types.Severity) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dialogflow.Cx.V3.ResourceName), global::Google.Cloud.Dialogflow.Cx.V3.ResourceName.Parser, new[]{ "Name", "DisplayName" }, null, null, null, null)
