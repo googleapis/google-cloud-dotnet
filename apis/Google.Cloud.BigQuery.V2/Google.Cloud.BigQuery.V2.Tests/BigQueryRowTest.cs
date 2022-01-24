@@ -38,6 +38,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 { "dateTime", BigQueryDbType.DateTime },
                 { "time", BigQueryDbType.Time },
                 { "numeric", BigQueryDbType.Numeric },
+                { "bigNumeric", BigQueryDbType.BigNumeric },
                 { "geography", BigQueryDbType.Geography },
                 { "struct", new TableSchemaBuilder { { "x", BigQueryDbType.Int64 }, { "y", BigQueryDbType.String } } }
             }.Build();
@@ -55,6 +56,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = "2017-08-09T12:34:56.123" },
                     new TableCell { V = "12:34:56.123" },
                     new TableCell { V = "1234567890123456789012345678.123456789" },
+                    new TableCell { V = "123456789012345678901234567890123456789.12345678901234567890123456789012345678" },
                     new TableCell { V = "POINT(1 2)" },
                     new TableCell { V = new JObject { ["f"] = new JArray {new JObject { ["v"] = "100" }, new JObject { ["v"] = "xyz" } } } }
                 }
@@ -70,6 +72,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             Assert.Equal(new DateTime(2017, 8, 9, 12, 34, 56, 123, DateTimeKind.Utc), (DateTime)row["dateTime"]);
             Assert.Equal(new TimeSpan(0, 12, 34, 56, 123), (TimeSpan)row["time"]);
             Assert.Equal(BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), (BigQueryNumeric) row["numeric"]);
+            Assert.Equal(BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), (BigQueryBigNumeric)row["bigNumeric"]);
             Assert.Equal(BigQueryGeography.Parse("POINT(1 2)"), (BigQueryGeography) row["geography"]);
             Assert.Equal(new Dictionary<string, object> { { "x", 100L }, { "y", "xyz" } }, (Dictionary<string, object>)row["struct"]);
         }
@@ -89,6 +92,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 { "dateTime", BigQueryDbType.DateTime, BigQueryFieldMode.Repeated },
                 { "time", BigQueryDbType.Time, BigQueryFieldMode.Repeated },
                 { "numeric", BigQueryDbType.Numeric, BigQueryFieldMode.Repeated },
+                { "bigNumeric", BigQueryDbType.BigNumeric, BigQueryFieldMode.Repeated },
                 { "geography", BigQueryDbType.Geography, BigQueryFieldMode.Repeated },
                 { "struct", new TableSchemaBuilder { { "x", BigQueryDbType.Int64 }, { "y", BigQueryDbType.String } }, BigQueryFieldMode.Repeated }
             }.Build();
@@ -106,6 +110,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                     new TableCell { V = CreateArray("2017-08-09T12:34:56.123","2017-08-09T12:34:57.123") },
                     new TableCell { V = CreateArray("12:34:56.123", "12:34:57.123") },
                     new TableCell { V = CreateArray("1234567890123456789012345678.123456789", "0.000000001") },
+                    new TableCell { V = CreateArray("123456789012345678901234567890123456789.12345678901234567890123456789012345678", "0.00000000000000000000000000000000000001") },
                     new TableCell { V = CreateArray("POINT(1 3)", "POINT(2 4)") },
                     new TableCell { V = new JArray {
                         new JObject { ["v"] = new JObject { ["f"] = new JArray { new JObject { ["v"] = "100" }, new JObject { ["v"] = "xyz" } } } },
@@ -127,6 +132,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
                 (DateTime[])row["dateTime"]);
             Assert.Equal(new[] { new TimeSpan(0, 12, 34, 56, 123), new TimeSpan(0, 12, 34, 57, 123) }, (TimeSpan[])row["time"]);
             Assert.Equal(new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("0.000000001") }, (BigQueryNumeric[]) row["numeric"]);
+            Assert.Equal(new[] { BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryBigNumeric.Parse("0.00000000000000000000000000000000000001") }, (BigQueryBigNumeric[])row["bigNumeric"]);
             Assert.Equal(new[] { BigQueryGeography.Parse("POINT(1 3)"), BigQueryGeography.Parse("POINT(2 4)") }, (BigQueryGeography[]) row["geography"]);
             Assert.Equal(new[]
                 {

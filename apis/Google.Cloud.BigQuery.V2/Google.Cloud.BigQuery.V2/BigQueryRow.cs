@@ -76,6 +76,7 @@ namespace Google.Cloud.BigQuery.V2
         private static readonly Func<string, byte[]> BytesConverter = v => Convert.FromBase64String(v);
         private static readonly Func<string, bool> BooleanConverter = v => v == "true";
         private static readonly Func<string, BigQueryNumeric> NumericConverter = BigQueryNumeric.Parse;
+        private static readonly Func<string, BigQueryBigNumeric> BigNumericConverter = BigQueryBigNumeric.Parse;
         private static readonly Func<string, BigQueryGeography> GeographyConverter = BigQueryGeography.Parse;
 
         /// <summary>
@@ -132,6 +133,8 @@ namespace Google.Cloud.BigQuery.V2
                         return ConvertRecordArray(array, field);
                     case BigQueryDbType.Numeric:
                         return ConvertArray(array, NumericConverter);
+                    case BigQueryDbType.BigNumeric:
+                        return ConvertArray(array, BigNumericConverter);
                     case BigQueryDbType.Geography:
                         return ConvertArray(array, GeographyConverter);
                     default:
@@ -160,6 +163,8 @@ namespace Google.Cloud.BigQuery.V2
                     return DateTimeConverter((string) rawValue);
                 case BigQueryDbType.Numeric:
                     return NumericConverter((string) rawValue);
+                case BigQueryDbType.BigNumeric:
+                    return BigNumericConverter((string)rawValue);
                 case BigQueryDbType.Geography:
                     return GeographyConverter((string) rawValue);
                 case BigQueryDbType.Struct:

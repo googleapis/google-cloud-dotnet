@@ -94,7 +94,12 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// A collection of points, lines, and polygons, which is represented as a point set, or a subset of the surface of the Earth.
         /// </summary>
-        Geography
+        Geography,
+        /// <summary>
+        /// A fixed-point number which has 76 digits of precision (plus a left most partial digit),
+        /// and always 38 decimal places.
+        /// </summary>
+        BigNumeric,
     }
 
     internal static class BigQueryDbTypeExtensions
@@ -116,7 +121,8 @@ namespace Google.Cloud.BigQuery.V2
             { BigQueryDbType.Array, "ARRAY" },
             { BigQueryDbType.Struct, "STRUCT" },
             { BigQueryDbType.Numeric, "NUMERIC" },
-            { BigQueryDbType.Geography, "GEOGRAPHY" }
+            { BigQueryDbType.Geography, "GEOGRAPHY" },
+            { BigQueryDbType.BigNumeric, "BIGNUMERIC" }
         };
 
         internal static string ToParameterApiType(this BigQueryDbType type) => s_typeToNameMapping[type];

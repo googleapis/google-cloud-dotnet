@@ -147,6 +147,15 @@ namespace Google.Cloud.BigQuery.V2.Tests
         }
 
         [Fact]
+        public void BigNumeric_Json()
+        {
+            object value = BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678");
+            var row = new BigQueryInsertRow { { "field", value } };
+            var rowData = row.ToRowsData(false);
+            Assert.Equal("123456789012345678901234567890123456789.12345678901234567890123456789012345678", rowData.Json["field"]);
+        }
+
+        [Fact]
         public void DateTimeOffsetFormatting()
         {
             var row = new BigQueryInsertRow
