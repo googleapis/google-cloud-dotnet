@@ -3315,6 +3315,26 @@
       "serviceConfigFile": "vmmigration_v1.yaml"
     },
     {
+      "id": "Google.Cloud.Video.LiveStream.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Live Stream",
+      "productUrl": "https://cloud.google.com/livestream/docs/",
+      "description": "Recommended Google client library to access the Live Stream API, which transcodes mezzanine live signals into direct-to-consumer streaming formats.",
+      "tags": [
+        "video",
+        "streaming",
+        "transcoding"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/video/livestream/v1",
+      "shortName": "livestream",
+      "serviceConfigFile": "livestream_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.Video.Transcoder.V1",
       "version": "1.0.0-beta03",
       "type": "grpc",
