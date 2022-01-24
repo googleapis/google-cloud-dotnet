@@ -87,6 +87,7 @@ namespace Google.Cloud.BigQuery.V2
             typeof(DateTime), typeof(DateTimeOffset),
             typeof(TimeSpan),
             typeof(BigQueryNumeric),
+            typeof(BigQueryBigNumeric),
             typeof(BigQueryGeography),
             typeof(BigQueryInsertRow)
         };
@@ -230,6 +231,8 @@ namespace Google.Cloud.BigQuery.V2
                     return (new DateTime(1970, 1, 1) + ts).ToString("HH:mm:ss.FFFFFF", CultureInfo.InvariantCulture);
                 case BigQueryNumeric numeric:
                     return numeric.ToString();
+                case BigQueryBigNumeric bigNumeric:
+                    return bigNumeric.ToString();
                 case BigQueryGeography geography:
                     return geography.ToString();
                 case BigQueryInsertRow row:

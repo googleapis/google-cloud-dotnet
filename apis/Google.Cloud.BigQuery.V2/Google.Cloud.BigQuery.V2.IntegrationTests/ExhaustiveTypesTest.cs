@@ -67,6 +67,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(123456789012L, (long) row["single_int64"]);
             Assert.Equal(1.25, (double) row["single_float64"]);
             Assert.Equal(BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), (BigQueryNumeric) row["single_numeric"]);
+            Assert.Equal(BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), (BigQueryBigNumeric)row["single_big_numeric"]);
             Assert.Equal(BigQueryGeography.Parse("POINT(1 2)"), (BigQueryGeography) row["single_geography"]);
 
             var singleRecord = (Dictionary<string, object>) row["single_record"];
@@ -93,6 +94,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(new[] { -1.25, 2.5 }, (double[]) row["array_float64"]);
             Assert.Equal(new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") },
                 (BigQueryNumeric[]) row["array_numeric"]);
+            Assert.Equal(new[] { BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryBigNumeric.Parse("123.456") },
+                (BigQueryBigNumeric[])row["array_big_numeric"]);
             Assert.Equal(new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") },
                 (BigQueryGeography[]) row["array_geography"]);
 
@@ -125,6 +128,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Timestamp, new DateTime(2017, 2, 14, 17, 25, 30, DateTimeKind.Utc)));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Time, new TimeSpan(0, 1, 2, 3, 456)));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Numeric, BigQueryNumeric.Parse("1234567890123456789012345678.123456789")));
+            AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.BigNumeric, BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678")));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Geography, BigQueryGeography.Parse("POINT(1 2)")));
 
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array, new[] { "foo", "bar" }));
@@ -146,6 +150,8 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 new[] { new TimeSpan(0, 1, 2, 3, 456), new TimeSpan(0, 23, 59, 59, 987) }));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") }));
+            AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
+                new[] { BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryBigNumeric.Parse("123.456") }));
             AssertParameterRoundTrip(client, new BigQueryParameter(BigQueryDbType.Array,
                 new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") }));
         }
@@ -221,6 +227,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             ["single_int64"] = 123456789012L, // Larger than an int32
             ["single_float64"] = 1.25,
             ["single_numeric"] = BigQueryNumeric.Parse("1234567890123456789012345678.123456789"),
+            ["single_big_numeric"] = BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"),
             ["single_geography"] = BigQueryGeography.Parse("POINT(1 2)"),
             ["single_record"] = new BigQueryInsertRow
             {
@@ -239,6 +246,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             ["array_int64"] = new[] { 1234567890123L, 12345678901234L },
             ["array_float64"] = new[] { -1.25, 2.5 },
             ["array_numeric"] = new[] { BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), BigQueryNumeric.Parse("123.456") },
+            ["array_big_numeric"] = new[] { BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryBigNumeric.Parse("123.456") },
             ["array_geography"] = new[] { BigQueryGeography.Parse("POINT(1 2)"), BigQueryGeography.Parse("POINT(1 3)") },
             ["array_record"] = new[] {
                     new BigQueryInsertRow

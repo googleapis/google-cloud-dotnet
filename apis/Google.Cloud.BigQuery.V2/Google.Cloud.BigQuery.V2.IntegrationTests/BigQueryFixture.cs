@@ -232,6 +232,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "single_int64", BigQueryDbType.Int64 },
                 { "single_float64", BigQueryDbType.Float64 },
                 { "single_numeric", BigQueryDbType.Numeric },
+                { "single_big_numeric", BigQueryDbType.BigNumeric },
                 { "single_geography", BigQueryDbType.Geography },
                 { "single_record", recordSchema },
                 
@@ -246,6 +247,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
                 { "array_int64", BigQueryDbType.Int64, BigQueryFieldMode.Repeated },
                 { "array_float64", BigQueryDbType.Float64, BigQueryFieldMode.Repeated },
                 { "array_numeric", BigQueryDbType.Numeric, BigQueryFieldMode.Repeated },
+                { "array_big_numeric", BigQueryDbType.BigNumeric, BigQueryFieldMode.Repeated },
                 { "array_geography", BigQueryDbType.Geography, BigQueryFieldMode.Repeated },
                 { "array_record", recordSchema, BigQueryFieldMode.Repeated },                
             }.Build());

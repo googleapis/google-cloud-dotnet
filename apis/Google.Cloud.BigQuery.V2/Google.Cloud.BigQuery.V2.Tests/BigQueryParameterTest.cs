@@ -135,6 +135,11 @@ namespace Google.Cloud.BigQuery.V2.Tests
             ScalarTest("Numeric parameter, string value", BigQueryDbType.Numeric, "string value", "string value"),
             ScalarTest("Numeric parameter, null value", BigQueryDbType.Numeric, null, null),
 
+            // BigNumeric
+            ScalarTest("BigNumeric parameter", BigQueryDbType.BigNumeric, BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), "123456789012345678901234567890123456789.12345678901234567890123456789012345678"),
+            ScalarTest("BigNumeric parameter, string value", BigQueryDbType.BigNumeric, "string value", "string value"),
+            ScalarTest("BigNumeric parameter, null value", BigQueryDbType.BigNumeric, null, null),
+
             // Geography (where the underlying value is just the string)
             ScalarTest("Geography parameter, BigQueryGeography value", BigQueryDbType.Geography, BigQueryGeography.Parse("POINT"), "POINT"),
             ScalarTest("Geogprahy parameter, string value", BigQueryDbType.Numeric, "POINT", "POINT"),
@@ -165,6 +170,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             new object[] { "Double", 1.0d, BigQueryDbType.Float64 },
             new object[] { "TimeSpan", TimeSpan.FromHours(1), BigQueryDbType.Time },
             new object[] { "Numeric", BigQueryNumeric.Parse("123.45"), BigQueryDbType.Numeric },
+            new object[] { "BigNumeric", BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), BigQueryDbType.BigNumeric },
             new object[] { "Geography", BigQueryGeography.Parse("POINT"), BigQueryDbType.Geography },
             new object[] { "DateTime (local)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Local), BigQueryDbType.DateTime },
             new object[] { "DateTime (unspecified)", new DateTime(2016, 10, 31, 0, 0, 0, DateTimeKind.Unspecified), BigQueryDbType.DateTime },
@@ -188,6 +194,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             new object[] { "DateTimeOffset[]", new DateTimeOffset[0], BigQueryDbType.Timestamp },
             new object[] { "Byte[][]", new byte[0][], BigQueryDbType.Bytes },
             new object[] { "BigQueryNumeric[]", new BigQueryNumeric[0], BigQueryDbType.Numeric },
+            new object[] { "BigQueryBigNumeric[]", new BigQueryBigNumeric[0], BigQueryDbType.BigNumeric },
             new object[] { "BigQueryGeography[]", new BigQueryGeography[0], BigQueryDbType.Geography },
         };
 

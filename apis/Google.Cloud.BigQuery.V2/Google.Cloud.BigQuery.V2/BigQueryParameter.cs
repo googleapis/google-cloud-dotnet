@@ -88,6 +88,7 @@ namespace Google.Cloud.BigQuery.V2
             typeof(string), typeof(byte[]),
             typeof(DateTime), typeof(DateTimeOffset), typeof(TimeSpan),
             typeof(BigQueryNumeric),
+            typeof(BigQueryBigNumeric),
             typeof(BigQueryGeography),
         };
 
@@ -115,6 +116,7 @@ namespace Google.Cloud.BigQuery.V2
             { typeof(DateTimeOffset), BigQueryDbType.Timestamp },
             { typeof(TimeSpan), BigQueryDbType.Time },
             { typeof(BigQueryNumeric), BigQueryDbType.Numeric },
+            { typeof(BigQueryBigNumeric), BigQueryDbType.BigNumeric },
             { typeof(BigQueryGeography), BigQueryDbType.Geography },
         };
 
@@ -274,6 +276,10 @@ namespace Google.Cloud.BigQuery.V2
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.Numeric:
                     return parameter.PopulateScalar<BigQueryNumeric>(value, x => x.ToString())
+                        ?? parameter.PopulateScalar<string>(value, x => x)
+                        ?? parameter.UseNullScalarOrThrow(value);
+                case BigQueryDbType.BigNumeric:
+                    return parameter.PopulateScalar<BigQueryBigNumeric>(value, x => x.ToString())
                         ?? parameter.PopulateScalar<string>(value, x => x)
                         ?? parameter.UseNullScalarOrThrow(value);
                 case BigQueryDbType.Geography:
