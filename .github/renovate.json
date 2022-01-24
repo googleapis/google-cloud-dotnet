@@ -45,6 +45,7 @@
     "apis/Google.Cloud.DataLabeling.V1Beta1/Google.Cloud.DataLabeling.V1Beta1/**",
     "apis/Google.Cloud.DataQnA.V1Alpha/Google.Cloud.DataQnA.V1Alpha/**",
     "apis/Google.Cloud.Dataflow.V1Beta3/Google.Cloud.Dataflow.V1Beta3/**",
+    "apis/Google.Cloud.Dataplex.V1/Google.Cloud.Dataplex.V1/**",
     "apis/Google.Cloud.Dataproc.V1/Google.Cloud.Dataproc.V1/**",
     "apis/Google.Cloud.Datastore.Admin.V1/Google.Cloud.Datastore.Admin.V1/**",
     "apis/Google.Cloud.Datastore.V1/Google.Cloud.Datastore.V1/**",
