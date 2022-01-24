@@ -816,6 +816,25 @@
       "serviceConfigFile": "dataflow_v1beta3.yaml"
     },
     {
+      "id": "Google.Cloud.Dataplex.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "Cloud Dataplex",
+      "productUrl": "https://cloud.google.com/dataplex/docs",
+      "description": "Recommended Google client library to access the Google Cloud Dataplex API, which is used to manage the lifecycle of data lakes.",
+      "tags": [
+        "data-lakes",
+        "dataplex"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/dataplex/v1",
+      "shortName": "dataplex",
+      "serviceConfigFile": "dataplex_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.Dataproc.V1",
       "generator": "micro",
       "protoPath": "google/cloud/dataproc/v1",
