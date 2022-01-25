@@ -416,6 +416,10 @@ namespace Google.Cloud.Container.V1.Snippets
                 Locations = { "", },
                 WorkloadMetadataConfig = new WorkloadMetadataConfig(),
                 UpgradeSettings = new NodePool.Types.UpgradeSettings(),
+                LinuxNodeConfig = new LinuxNodeConfig(),
+                KubeletConfig = new NodeKubeletConfig(),
+                GcfsConfig = new GcfsConfig(),
+                Gvnic = new VirtualNIC(),
             };
             // Make the request
             Operation response = clusterManagerClient.UpdateNodePool(request);
@@ -438,6 +442,10 @@ namespace Google.Cloud.Container.V1.Snippets
                 Locations = { "", },
                 WorkloadMetadataConfig = new WorkloadMetadataConfig(),
                 UpgradeSettings = new NodePool.Types.UpgradeSettings(),
+                LinuxNodeConfig = new LinuxNodeConfig(),
+                KubeletConfig = new NodeKubeletConfig(),
+                GcfsConfig = new GcfsConfig(),
+                Gvnic = new VirtualNIC(),
             };
             // Make the request
             Operation response = await clusterManagerClient.UpdateNodePoolAsync(request);
