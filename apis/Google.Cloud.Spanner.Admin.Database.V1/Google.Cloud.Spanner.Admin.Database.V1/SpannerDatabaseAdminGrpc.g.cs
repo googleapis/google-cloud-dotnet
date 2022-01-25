@@ -26,10 +26,11 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
   /// <summary>
   /// Cloud Spanner Database Admin API
   ///
-  /// The Cloud Spanner Database Admin API can be used to create, drop, and
-  /// list databases. It also enables updating the schema of pre-existing
-  /// databases. It can be also used to create, delete and list backups for a
-  /// database and to restore from an existing backup.
+  /// The Cloud Spanner Database Admin API can be used to:
+  ///   * create, drop, and list databases
+  ///   * update the schema of pre-existing databases
+  ///   * create, delete and list backups for a database
+  ///   * restore a database from an existing backup
   /// </summary>
   public static partial class DatabaseAdmin
   {
@@ -336,6 +337,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// Drops (aka deletes) a Cloud Spanner database.
       /// Completed backups for the database will be retained according to their
       /// `expire_time`.
+      /// Note: Cloud Spanner might continue to accept requests for a few seconds
+      /// after the database has been deleted.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -836,6 +839,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// Drops (aka deletes) a Cloud Spanner database.
       /// Completed backups for the database will be retained according to their
       /// `expire_time`.
+      /// Note: Cloud Spanner might continue to accept requests for a few seconds
+      /// after the database has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -851,6 +856,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// Drops (aka deletes) a Cloud Spanner database.
       /// Completed backups for the database will be retained according to their
       /// `expire_time`.
+      /// Note: Cloud Spanner might continue to accept requests for a few seconds
+      /// after the database has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -864,6 +871,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// Drops (aka deletes) a Cloud Spanner database.
       /// Completed backups for the database will be retained according to their
       /// `expire_time`.
+      /// Note: Cloud Spanner might continue to accept requests for a few seconds
+      /// after the database has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -879,6 +888,8 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       /// Drops (aka deletes) a Cloud Spanner database.
       /// Completed backups for the database will be retained according to their
       /// `expire_time`.
+      /// Note: Cloud Spanner might continue to accept requests for a few seconds
+      /// after the database has been deleted.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

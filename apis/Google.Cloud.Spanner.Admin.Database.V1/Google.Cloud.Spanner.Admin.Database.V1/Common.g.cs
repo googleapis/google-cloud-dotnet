@@ -25,10 +25,10 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvc3Bhbm5lci9hZG1pbi9kYXRhYmFzZS92MS9jb21tb24ucHJv",
-            "dG8SIGdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxGh9nb29nbGUv",
-            "YXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNl",
-            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29n",
-            "bGUvcnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "dG8SIGdvb2dsZS5zcGFubmVyLmFkbWluLmRhdGFiYXNlLnYxGhxnb29nbGUv",
+            "YXBpL2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2",
+            "aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUv",
+            "cHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5w",
             "cm90byKLAQoRT3BlcmF0aW9uUHJvZ3Jlc3MSGAoQcHJvZ3Jlc3NfcGVyY2Vu",
             "dBgBIAEoBRIuCgpzdGFydF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVm",
             "LlRpbWVzdGFtcBIsCghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1",
@@ -41,22 +41,24 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
             "IAEoCUIw4EED+kEqCihjbG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9L",
             "ZXlWZXJzaW9uIlwKBFR5cGUSFAoQVFlQRV9VTlNQRUNJRklFRBAAEh0KGUdP",
             "T0dMRV9ERUZBVUxUX0VOQ1JZUFRJT04QARIfChtDVVNUT01FUl9NQU5BR0VE",
-            "X0VOQ1JZUFRJT04QAkKkBAokY29tLmdvb2dsZS5zcGFubmVyLmFkbWluLmRh",
-            "dGFiYXNlLnYxQgtDb21tb25Qcm90b1ABWkhnb29nbGUuZ29sYW5nLm9yZy9n",
-            "ZW5wcm90by9nb29nbGVhcGlzL3NwYW5uZXIvYWRtaW4vZGF0YWJhc2UvdjE7",
-            "ZGF0YWJhc2WqAiZHb29nbGUuQ2xvdWQuU3Bhbm5lci5BZG1pbi5EYXRhYmFz",
-            "ZS5WMcoCJkdvb2dsZVxDbG91ZFxTcGFubmVyXEFkbWluXERhdGFiYXNlXFYx",
-            "6gIrR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6QWRtaW46OkRhdGFiYXNlOjpW",
-            "MepBeAohY2xvdWRrbXMuZ29vZ2xlYXBpcy5jb20vQ3J5cHRvS2V5ElNwcm9q",
+            "X0VOQ1JZUFRJT04QAipcCg9EYXRhYmFzZURpYWxlY3QSIAocREFUQUJBU0Vf",
+            "RElBTEVDVF9VTlNQRUNJRklFRBAAEhcKE0dPT0dMRV9TVEFOREFSRF9TUUwQ",
+            "ARIOCgpQT1NUR1JFU1FMEAJCpAQKJGNvbS5nb29nbGUuc3Bhbm5lci5hZG1p",
+            "bi5kYXRhYmFzZS52MUILQ29tbW9uUHJvdG9QAVpIZ29vZ2xlLmdvbGFuZy5v",
+            "cmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9zcGFubmVyL2FkbWluL2RhdGFiYXNl",
+            "L3YxO2RhdGFiYXNlqgImR29vZ2xlLkNsb3VkLlNwYW5uZXIuQWRtaW4uRGF0",
+            "YWJhc2UuVjHKAiZHb29nbGVcQ2xvdWRcU3Bhbm5lclxBZG1pblxEYXRhYmFz",
+            "ZVxWMeoCK0dvb2dsZTo6Q2xvdWQ6OlNwYW5uZXI6OkFkbWluOjpEYXRhYmFz",
+            "ZTo6VjHqQXgKIWNsb3Vka21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleRJT",
+            "cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259L2tleVJp",
+            "bmdzL3trZXlfcmluZ30vY3J5cHRvS2V5cy97Y3J5cHRvX2tleX3qQaYBCihj",
+            "bG91ZGttcy5nb29nbGVhcGlzLmNvbS9DcnlwdG9LZXlWZXJzaW9uEnpwcm9q",
             "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0va2V5UmluZ3Mv",
-            "e2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fepBpgEKKGNsb3Vk",
-            "a21zLmdvb2dsZWFwaXMuY29tL0NyeXB0b0tleVZlcnNpb24SenByb2plY3Rz",
-            "L3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9rZXlSaW5ncy97a2V5",
-            "X3Jpbmd9L2NyeXB0b0tleXMve2NyeXB0b19rZXl9L2NyeXB0b0tleVZlcnNp",
-            "b25zL3tjcnlwdG9fa2V5X3ZlcnNpb259YgZwcm90bzM="));
+            "e2tleV9yaW5nfS9jcnlwdG9LZXlzL3tjcnlwdG9fa2V5fS9jcnlwdG9LZXlW",
+            "ZXJzaW9ucy97Y3J5cHRvX2tleV92ZXJzaW9ufWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.Admin.Database.V1.DatabaseDialect), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress), global::Google.Cloud.Spanner.Admin.Database.V1.OperationProgress.Parser, new[]{ "ProgressPercent", "StartTime", "EndTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig), global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionConfig.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionInfo), global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionInfo.Parser, new[]{ "EncryptionType", "EncryptionStatus", "KmsKeyVersion" }, null, new[]{ typeof(global::Google.Cloud.Spanner.Admin.Database.V1.EncryptionInfo.Types.Type) }, null, null)
@@ -65,6 +67,28 @@ namespace Google.Cloud.Spanner.Admin.Database.V1 {
     #endregion
 
   }
+  #region Enums
+  /// <summary>
+  /// Indicates the dialect type of a database.
+  /// </summary>
+  public enum DatabaseDialect {
+    /// <summary>
+    /// Default value. This value will create a database with the
+    /// GOOGLE_STANDARD_SQL dialect.
+    /// </summary>
+    [pbr::OriginalName("DATABASE_DIALECT_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Google standard SQL.
+    /// </summary>
+    [pbr::OriginalName("GOOGLE_STANDARD_SQL")] GoogleStandardSql = 1,
+    /// <summary>
+    /// PostgreSQL supported SQL.
+    /// </summary>
+    [pbr::OriginalName("POSTGRESQL")] Postgresql = 2,
+  }
+
+  #endregion
+
   #region Messages
   /// <summary>
   /// Encapsulates progress related information for a Cloud Spanner long
