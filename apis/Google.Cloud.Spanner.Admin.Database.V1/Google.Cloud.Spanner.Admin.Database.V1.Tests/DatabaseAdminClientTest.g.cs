@@ -55,6 +55,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                     new EncryptionInfo(),
                 },
                 DefaultLeader = "default_leader08a48e00",
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -86,6 +87,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                     new EncryptionInfo(),
                 },
                 DefaultLeader = "default_leader08a48e00",
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -119,6 +121,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                     new EncryptionInfo(),
                 },
                 DefaultLeader = "default_leader08a48e00",
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -150,6 +153,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                     new EncryptionInfo(),
                 },
                 DefaultLeader = "default_leader08a48e00",
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -183,6 +187,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                     new EncryptionInfo(),
                 },
                 DefaultLeader = "default_leader08a48e00",
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabase(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -214,6 +219,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                     new EncryptionInfo(),
                 },
                 DefaultLeader = "default_leader08a48e00",
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetDatabaseAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Database>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -978,6 +984,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1009,6 +1016,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1042,6 +1050,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1073,6 +1082,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1106,6 +1116,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1137,6 +1148,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.GetBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1171,6 +1183,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1203,6 +1216,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1237,6 +1251,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.UpdateBackup(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);
@@ -1269,6 +1284,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Tests
                 },
                 EncryptionInfo = new EncryptionInfo(),
                 VersionTime = new wkt::Timestamp(),
+                DatabaseDialect = DatabaseDialect.GoogleStandardSql,
             };
             mockGrpcClient.Setup(x => x.UpdateBackupAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Backup>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DatabaseAdminClient client = new DatabaseAdminClientImpl(mockGrpcClient.Object, null);

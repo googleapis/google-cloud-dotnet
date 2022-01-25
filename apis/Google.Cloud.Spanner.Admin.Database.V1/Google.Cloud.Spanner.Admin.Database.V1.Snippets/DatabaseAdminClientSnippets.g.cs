@@ -318,6 +318,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 CreateStatement = "",
                 ExtraStatements = { "", },
                 EncryptionConfig = new EncryptionConfig(),
+                DatabaseDialect = DatabaseDialect.Unspecified,
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = databaseAdminClient.CreateDatabase(request);
@@ -354,6 +355,7 @@ namespace Google.Cloud.Spanner.Admin.Database.V1.Snippets
                 CreateStatement = "",
                 ExtraStatements = { "", },
                 EncryptionConfig = new EncryptionConfig(),
+                DatabaseDialect = DatabaseDialect.Unspecified,
             };
             // Make the request
             Operation<Database, CreateDatabaseMetadata> response = await databaseAdminClient.CreateDatabaseAsync(request);
