@@ -2,6 +2,10 @@
 
 ## How can I trace gRPC issues?
 
+> Note: this guidance only applies when using Grpc.Core, which is currently the
+> default gRPC implementation. We intend to update this documentation with
+> respect to Grpc.Net.Client before adopting that as the default implementation.
+
 For libraries that use gRPC, it can be very useful to hook into the
 gRPC logging framework. There are two aspects to this:
 
