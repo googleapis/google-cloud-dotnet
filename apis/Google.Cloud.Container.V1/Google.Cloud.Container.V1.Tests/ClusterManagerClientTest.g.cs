@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using wkt = Google.Protobuf.WellKnownTypes;
+using gr = Google.Rpc;
 using grpccore = Grpc.Core;
 using moq = Moq;
 using st = System.Threading;
@@ -250,6 +251,9 @@ namespace Google.Cloud.Container.V1.Tests
                 ShieldedNodes = new ShieldedNodes(),
                 ReleaseChannel = new ReleaseChannel(),
                 WorkloadIdentityConfig = new WorkloadIdentityConfig(),
+                NotificationConfig = new NotificationConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
+                MeshCertificates = new MeshCertificates(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -284,6 +288,11 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     new StatusCondition(),
                 },
+                Autopilot = new Autopilot(),
+                Id = "id74b70bb8",
+                NodePoolDefaults = new NodePoolDefaults(),
+                LoggingConfig = new LoggingConfig(),
+                MonitoringConfig = new MonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -351,6 +360,9 @@ namespace Google.Cloud.Container.V1.Tests
                 ShieldedNodes = new ShieldedNodes(),
                 ReleaseChannel = new ReleaseChannel(),
                 WorkloadIdentityConfig = new WorkloadIdentityConfig(),
+                NotificationConfig = new NotificationConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
+                MeshCertificates = new MeshCertificates(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -385,6 +397,11 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     new StatusCondition(),
                 },
+                Autopilot = new Autopilot(),
+                Id = "id74b70bb8",
+                NodePoolDefaults = new NodePoolDefaults(),
+                LoggingConfig = new LoggingConfig(),
+                MonitoringConfig = new MonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -453,6 +470,9 @@ namespace Google.Cloud.Container.V1.Tests
                 ShieldedNodes = new ShieldedNodes(),
                 ReleaseChannel = new ReleaseChannel(),
                 WorkloadIdentityConfig = new WorkloadIdentityConfig(),
+                NotificationConfig = new NotificationConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
+                MeshCertificates = new MeshCertificates(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -487,6 +507,11 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     new StatusCondition(),
                 },
+                Autopilot = new Autopilot(),
+                Id = "id74b70bb8",
+                NodePoolDefaults = new NodePoolDefaults(),
+                LoggingConfig = new LoggingConfig(),
+                MonitoringConfig = new MonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -555,6 +580,9 @@ namespace Google.Cloud.Container.V1.Tests
                 ShieldedNodes = new ShieldedNodes(),
                 ReleaseChannel = new ReleaseChannel(),
                 WorkloadIdentityConfig = new WorkloadIdentityConfig(),
+                NotificationConfig = new NotificationConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
+                MeshCertificates = new MeshCertificates(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -589,6 +617,11 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     new StatusCondition(),
                 },
+                Autopilot = new Autopilot(),
+                Id = "id74b70bb8",
+                NodePoolDefaults = new NodePoolDefaults(),
+                LoggingConfig = new LoggingConfig(),
+                MonitoringConfig = new MonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -657,6 +690,9 @@ namespace Google.Cloud.Container.V1.Tests
                 ShieldedNodes = new ShieldedNodes(),
                 ReleaseChannel = new ReleaseChannel(),
                 WorkloadIdentityConfig = new WorkloadIdentityConfig(),
+                NotificationConfig = new NotificationConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
+                MeshCertificates = new MeshCertificates(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -691,6 +727,11 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     new StatusCondition(),
                 },
+                Autopilot = new Autopilot(),
+                Id = "id74b70bb8",
+                NodePoolDefaults = new NodePoolDefaults(),
+                LoggingConfig = new LoggingConfig(),
+                MonitoringConfig = new MonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -753,6 +794,9 @@ namespace Google.Cloud.Container.V1.Tests
                 ShieldedNodes = new ShieldedNodes(),
                 ReleaseChannel = new ReleaseChannel(),
                 WorkloadIdentityConfig = new WorkloadIdentityConfig(),
+                NotificationConfig = new NotificationConfig(),
+                ConfidentialNodes = new ConfidentialNodes(),
+                MeshCertificates = new MeshCertificates(),
                 SelfLink = "self_link7e87f12d",
 #pragma warning disable CS0612
                 Zone = "zone255f4ea8",
@@ -787,6 +831,11 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     new StatusCondition(),
                 },
+                Autopilot = new Autopilot(),
+                Id = "id74b70bb8",
+                NodePoolDefaults = new NodePoolDefaults(),
+                LoggingConfig = new LoggingConfig(),
+                MonitoringConfig = new MonitoringConfig(),
             };
             mockGrpcClient.Setup(x => x.GetClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Cluster>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -818,7 +867,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -826,14 +877,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -863,7 +919,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -871,14 +929,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -909,7 +972,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -917,14 +982,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -955,7 +1025,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -963,14 +1035,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1002,7 +1079,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1010,14 +1089,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1043,7 +1127,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1051,14 +1137,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1091,7 +1182,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1099,14 +1192,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1137,7 +1235,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1145,14 +1245,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1184,7 +1289,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1192,14 +1299,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1231,7 +1343,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1239,14 +1353,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1278,7 +1397,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1286,14 +1407,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1319,7 +1445,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1327,14 +1455,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1366,6 +1499,10 @@ namespace Google.Cloud.Container.V1.Tests
                 },
                 WorkloadMetadataConfig = new WorkloadMetadataConfig(),
                 UpgradeSettings = new NodePool.Types.UpgradeSettings(),
+                LinuxNodeConfig = new LinuxNodeConfig(),
+                KubeletConfig = new NodeKubeletConfig(),
+                GcfsConfig = new GcfsConfig(),
+                Gvnic = new VirtualNIC(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1375,7 +1512,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1383,14 +1522,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1420,6 +1564,10 @@ namespace Google.Cloud.Container.V1.Tests
                 },
                 WorkloadMetadataConfig = new WorkloadMetadataConfig(),
                 UpgradeSettings = new NodePool.Types.UpgradeSettings(),
+                LinuxNodeConfig = new LinuxNodeConfig(),
+                KubeletConfig = new NodeKubeletConfig(),
+                GcfsConfig = new GcfsConfig(),
+                Gvnic = new VirtualNIC(),
             };
             Operation expectedResponse = new Operation
             {
@@ -1429,7 +1577,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1437,14 +1587,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1478,7 +1633,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1486,14 +1643,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNodePoolAutoscaling(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1525,7 +1687,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1533,14 +1697,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNodePoolAutoscalingAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1573,7 +1742,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1581,14 +1752,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLoggingService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1619,7 +1795,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1627,14 +1805,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1666,7 +1849,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1674,14 +1859,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLoggingService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1713,7 +1903,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1721,14 +1913,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1760,7 +1957,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1768,14 +1967,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLoggingService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1801,7 +2005,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1809,14 +2015,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLoggingServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1849,7 +2060,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1857,14 +2070,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMonitoringService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1895,7 +2113,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1903,14 +2123,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1942,7 +2167,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1950,14 +2177,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMonitoringService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -1989,7 +2221,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -1997,14 +2231,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2036,7 +2275,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2044,14 +2285,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMonitoringService(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2077,7 +2323,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2085,14 +2333,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMonitoringServiceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2125,7 +2378,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2133,14 +2388,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2171,7 +2431,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2179,14 +2441,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2218,7 +2485,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2226,14 +2495,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2265,7 +2539,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2273,14 +2549,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2312,7 +2593,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2320,14 +2603,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfig(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2353,7 +2641,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2361,14 +2651,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetAddonsConfigAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2404,7 +2699,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2412,14 +2709,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLocations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2455,7 +2757,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2463,14 +2767,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLocationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2509,7 +2818,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2517,14 +2828,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLocations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2559,7 +2875,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2567,14 +2885,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLocationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2609,7 +2932,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2617,14 +2942,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLocations(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2655,7 +2985,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2663,14 +2995,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLocationsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2707,7 +3044,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2715,14 +3054,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateMaster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2753,7 +3097,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2761,14 +3107,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateMasterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2800,7 +3151,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2808,14 +3161,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateMaster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2847,7 +3205,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2855,14 +3215,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateMasterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2894,7 +3259,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2902,14 +3269,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateMaster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2935,7 +3307,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2943,14 +3317,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.UpdateMasterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -2984,7 +3363,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -2992,14 +3373,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMasterAuth(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3031,7 +3417,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3039,14 +3427,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMasterAuthAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3078,7 +3471,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3086,14 +3481,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3123,7 +3523,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3131,14 +3533,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3169,7 +3576,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3177,14 +3586,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3215,7 +3629,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3223,14 +3639,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3261,7 +3682,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3269,14 +3692,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteCluster(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3301,7 +3729,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3309,14 +3739,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteClusterAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3464,7 +3899,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3472,14 +3909,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3509,7 +3951,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3517,14 +3961,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3555,7 +4004,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3563,14 +4014,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3601,7 +4057,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3609,14 +4067,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3647,7 +4110,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3655,14 +4120,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetOperation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -3687,7 +4157,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -3695,14 +4167,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.GetOperationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4275,6 +4752,7 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "locationsc7b6c0b4",
                 },
+                NetworkConfig = new NodeNetworkConfig(),
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4325,6 +4803,7 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "locationsc7b6c0b4",
                 },
+                NetworkConfig = new NodeNetworkConfig(),
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4376,6 +4855,7 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "locationsc7b6c0b4",
                 },
+                NetworkConfig = new NodeNetworkConfig(),
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4427,6 +4907,7 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "locationsc7b6c0b4",
                 },
+                NetworkConfig = new NodeNetworkConfig(),
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4477,6 +4958,7 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "locationsc7b6c0b4",
                 },
+                NetworkConfig = new NodeNetworkConfig(),
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4521,6 +5003,7 @@ namespace Google.Cloud.Container.V1.Tests
                 {
                     "locationsc7b6c0b4",
                 },
+                NetworkConfig = new NodeNetworkConfig(),
                 SelfLink = "self_link7e87f12d",
                 Version = "version102ff72a",
                 InstanceGroupUrls =
@@ -4568,7 +5051,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4576,14 +5061,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4614,7 +5104,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4622,14 +5114,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4661,7 +5158,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4669,14 +5168,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4708,7 +5212,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4716,14 +5222,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4755,7 +5266,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4763,14 +5276,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4796,7 +5314,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4804,14 +5324,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CreateNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4844,7 +5369,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4852,14 +5379,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4890,7 +5422,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4898,14 +5432,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4937,7 +5476,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4945,14 +5486,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -4984,7 +5530,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -4992,14 +5540,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5030,7 +5583,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5038,14 +5593,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteNodePool(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5070,7 +5630,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5078,14 +5640,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.DeleteNodePoolAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5118,7 +5685,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5126,14 +5695,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5164,7 +5738,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5172,14 +5748,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5211,7 +5792,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5219,14 +5802,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5258,7 +5846,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5266,14 +5856,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5304,7 +5899,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5312,14 +5909,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgrade(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5344,7 +5946,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5352,14 +5956,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.RollbackNodePoolUpgradeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5393,7 +6002,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5401,14 +6012,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNodePoolManagement(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5440,7 +6056,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5448,14 +6066,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNodePoolManagementAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5495,7 +6118,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5503,14 +6128,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLabels(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5548,7 +6178,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5556,14 +6188,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLabelsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5596,7 +6233,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5604,14 +6243,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbac(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5642,7 +6286,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5650,14 +6296,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5689,7 +6340,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5697,14 +6350,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbac(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5736,7 +6394,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5744,14 +6404,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5783,7 +6448,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5791,14 +6458,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbac(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5824,7 +6496,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5832,14 +6506,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetLegacyAbacAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5872,7 +6551,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5880,14 +6561,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.StartIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5918,7 +6604,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5926,14 +6614,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.StartIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -5964,7 +6657,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -5972,14 +6667,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.StartIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6010,7 +6710,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6018,14 +6720,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.StartIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6056,7 +6763,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6064,14 +6773,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.StartIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6096,7 +6810,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6104,14 +6820,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.StartIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6143,7 +6864,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6151,14 +6874,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6188,7 +6916,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6196,14 +6926,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6234,7 +6969,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6242,14 +6979,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6280,7 +7022,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6288,14 +7032,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6326,7 +7075,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6334,14 +7085,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6366,7 +7122,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6374,14 +7132,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.CompleteIPRotationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6415,7 +7178,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6423,14 +7188,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNodePoolSize(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6462,7 +7232,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6470,14 +7242,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNodePoolSizeAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6510,7 +7287,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6518,14 +7297,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6556,7 +7340,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6564,14 +7350,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6603,7 +7394,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6611,14 +7404,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6650,7 +7448,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6658,14 +7458,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6697,7 +7502,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6705,14 +7512,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6738,7 +7550,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6746,14 +7560,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetNetworkPolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6784,7 +7603,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6792,14 +7613,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6828,7 +7654,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6836,14 +7664,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6873,7 +7706,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6881,14 +7716,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6916,7 +7756,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6924,14 +7766,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -6959,7 +7806,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -6967,14 +7816,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicy(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
@@ -7000,7 +7854,9 @@ namespace Google.Cloud.Container.V1.Tests
 #pragma warning restore CS0612
                 OperationType = Operation.Types.Type.UpdateCluster,
                 Status = Operation.Types.Status.Aborting,
+#pragma warning disable CS0612
                 StatusMessage = "status_message2c618f86",
+#pragma warning restore CS0612
                 SelfLink = "self_link7e87f12d",
                 TargetLink = "target_link9b435dc0",
                 Detail = "detailb7a61d95",
@@ -7008,14 +7864,19 @@ namespace Google.Cloud.Container.V1.Tests
                 StartTime = "start_timebd8dd9c4",
                 EndTime = "end_time89285d30",
                 Progress = new OperationProgress(),
+#pragma warning disable CS0612
                 ClusterConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+#pragma warning disable CS0612
                 NodepoolConditions =
+#pragma warning restore CS0612
                 {
                     new StatusCondition(),
                 },
+                Error = new gr::Status(),
             };
             mockGrpcClient.Setup(x => x.SetMaintenancePolicyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Operation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             ClusterManagerClient client = new ClusterManagerClientImpl(mockGrpcClient.Object, null);
