@@ -25,26 +25,29 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Chxnb29nbGUvc3Bhbm5lci92MS90eXBlLnByb3RvEhFnb29nbGUuc3Bhbm5l",
-            "ci52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxocZ29vZ2xl",
-            "L2FwaS9hbm5vdGF0aW9ucy5wcm90byKfAQoEVHlwZRIuCgRjb2RlGAEgASgO",
+            "ci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2Fw",
+            "aS9maWVsZF9iZWhhdmlvci5wcm90byLfAQoEVHlwZRIuCgRjb2RlGAEgASgO",
             "MhsuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZUNvZGVCA+BBAhIzChJhcnJheV9l",
             "bGVtZW50X3R5cGUYAiABKAsyFy5nb29nbGUuc3Bhbm5lci52MS5UeXBlEjIK",
             "C3N0cnVjdF90eXBlGAMgASgLMh0uZ29vZ2xlLnNwYW5uZXIudjEuU3RydWN0",
-            "VHlwZSJ/CgpTdHJ1Y3RUeXBlEjMKBmZpZWxkcxgBIAMoCzIjLmdvb2dsZS5z",
-            "cGFubmVyLnYxLlN0cnVjdFR5cGUuRmllbGQaPAoFRmllbGQSDAoEbmFtZRgB",
-            "IAEoCRIlCgR0eXBlGAIgASgLMhcuZ29vZ2xlLnNwYW5uZXIudjEuVHlwZSql",
-            "AQoIVHlwZUNvZGUSGQoVVFlQRV9DT0RFX1VOU1BFQ0lGSUVEEAASCAoEQk9P",
-            "TBABEgkKBUlOVDY0EAISCwoHRkxPQVQ2NBADEg0KCVRJTUVTVEFNUBAEEggK",
-            "BERBVEUQBRIKCgZTVFJJTkcQBhIJCgVCWVRFUxAHEgkKBUFSUkFZEAgSCgoG",
-            "U1RSVUNUEAkSCwoHTlVNRVJJQxAKEggKBEpTT04QC0KvAQoVY29tLmdvb2ds",
-            "ZS5zcGFubmVyLnYxQglUeXBlUHJvdG9QAVo4Z29vZ2xlLmdvbGFuZy5vcmcv",
-            "Z2VucHJvdG8vZ29vZ2xlYXBpcy9zcGFubmVyL3YxO3NwYW5uZXKqAhdHb29n",
-            "bGUuQ2xvdWQuU3Bhbm5lci5WMcoCF0dvb2dsZVxDbG91ZFxTcGFubmVyXFYx",
-            "6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5lcjo6VjFiBnByb3RvMw=="));
+            "VHlwZRI+Cg90eXBlX2Fubm90YXRpb24YBCABKA4yJS5nb29nbGUuc3Bhbm5l",
+            "ci52MS5UeXBlQW5ub3RhdGlvbkNvZGUifwoKU3RydWN0VHlwZRIzCgZmaWVs",
+            "ZHMYASADKAsyIy5nb29nbGUuc3Bhbm5lci52MS5TdHJ1Y3RUeXBlLkZpZWxk",
+            "GjwKBUZpZWxkEgwKBG5hbWUYASABKAkSJQoEdHlwZRgCIAEoCzIXLmdvb2ds",
+            "ZS5zcGFubmVyLnYxLlR5cGUqpQEKCFR5cGVDb2RlEhkKFVRZUEVfQ09ERV9V",
+            "TlNQRUNJRklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgsKB0ZMT0FUNjQQ",
+            "AxINCglUSU1FU1RBTVAQBBIICgREQVRFEAUSCgoGU1RSSU5HEAYSCQoFQllU",
+            "RVMQBxIJCgVBUlJBWRAIEgoKBlNUUlVDVBAJEgsKB05VTUVSSUMQChIICgRK",
+            "U09OEAsqSgoSVHlwZUFubm90YXRpb25Db2RlEiQKIFRZUEVfQU5OT1RBVElP",
+            "Tl9DT0RFX1VOU1BFQ0lGSUVEEAASDgoKUEdfTlVNRVJJQxACQq8BChVjb20u",
+            "Z29vZ2xlLnNwYW5uZXIudjFCCVR5cGVQcm90b1ABWjhnb29nbGUuZ29sYW5n",
+            "Lm9yZy9nZW5wcm90by9nb29nbGVhcGlzL3NwYW5uZXIvdjE7c3Bhbm5lcqoC",
+            "F0dvb2dsZS5DbG91ZC5TcGFubmVyLlYxygIXR29vZ2xlXENsb3VkXFNwYW5u",
+            "ZXJcVjHqAhpHb29nbGU6OkNsb3VkOjpTcGFubmVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), }, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType" }, null, null, null, null),
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Spanner.V1.TypeCode), typeof(global::Google.Cloud.Spanner.V1.TypeAnnotationCode), }, null, new pbr::GeneratedClrTypeInfo[] {
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.Type), global::Google.Cloud.Spanner.V1.Type.Parser, new[]{ "Code", "ArrayElementType", "StructType", "TypeAnnotation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType), global::Google.Cloud.Spanner.V1.StructType.Parser, new[]{ "Fields" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.StructType.Types.Field), global::Google.Cloud.Spanner.V1.StructType.Types.Field.Parser, new[]{ "Name", "Type" }, null, null, null, null)})
           }));
     }
@@ -127,15 +130,39 @@ namespace Google.Cloud.Spanner.V1 {
     /// </summary>
     [pbr::OriginalName("NUMERIC")] Numeric = 10,
     /// <summary>
-    /// Encoded as a JSON-formatted 'string' as described in RFC 7159. The
-    /// following rules will be applied when parsing JSON input:
-    /// - Whitespace will be stripped from the document.
-    /// - If a JSON object has duplicate keys, only the first key will be
-    ///   preserved.
+    /// Encoded as a JSON-formatted `string` as described in RFC 7159. The
+    /// following rules are applied when parsing JSON input:
+    ///
+    /// - Whitespace characters are not preserved.
+    /// - If a JSON object has duplicate keys, only the first key is preserved.
     /// - Members of a JSON object are not guaranteed to have their order
-    ///   preserved. JSON array elements will have their order preserved.
+    ///   preserved.
+    /// - JSON array elements will have their order preserved.
     /// </summary>
     [pbr::OriginalName("JSON")] Json = 11,
+  }
+
+  /// <summary>
+  /// `TypeAnnotationCode` is used as a part of [Type][google.spanner.v1.Type] to
+  /// disambiguate SQL types that should be used for a given Cloud Spanner value.
+  /// Disambiguation is needed because the same Cloud Spanner type can be mapped to
+  /// different SQL types depending on SQL dialect. TypeAnnotationCode doesn't
+  /// affect the way value is serialized.
+  /// </summary>
+  public enum TypeAnnotationCode {
+    /// <summary>
+    /// Not specified.
+    /// </summary>
+    [pbr::OriginalName("TYPE_ANNOTATION_CODE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// PostgreSQL compatible NUMERIC type. This annotation needs to be applied to
+    /// [Type][google.spanner.v1.Type] instances having [NUMERIC][google.spanner.v1.TypeCode.NUMERIC]
+    /// type code to specify that values of this type should be treated as
+    /// PostgreSQL NUMERIC values. Currently this annotation is always needed for
+    /// [NUMERIC][google.spanner.v1.TypeCode.NUMERIC] when a client interacts with PostgreSQL-enabled
+    /// Spanner databases.
+    /// </summary>
+    [pbr::OriginalName("PG_NUMERIC")] PgNumeric = 2,
   }
 
   #endregion
@@ -182,6 +209,7 @@ namespace Google.Cloud.Spanner.V1 {
       code_ = other.code_;
       arrayElementType_ = other.arrayElementType_ != null ? other.arrayElementType_.Clone() : null;
       structType_ = other.structType_ != null ? other.structType_.Clone() : null;
+      typeAnnotation_ = other.typeAnnotation_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -238,6 +266,26 @@ namespace Google.Cloud.Spanner.V1 {
       }
     }
 
+    /// <summary>Field number for the "type_annotation" field.</summary>
+    public const int TypeAnnotationFieldNumber = 4;
+    private global::Google.Cloud.Spanner.V1.TypeAnnotationCode typeAnnotation_ = global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified;
+    /// <summary>
+    /// The [TypeAnnotationCode][google.spanner.v1.TypeAnnotationCode] that disambiguates SQL type that Spanner will
+    /// use to represent values of this type during query processing. This is
+    /// necessary for some type codes because a single [TypeCode][google.spanner.v1.TypeCode] can be mapped
+    /// to different SQL types depending on the SQL dialect. [type_annotation][google.spanner.v1.Type.type_annotation]
+    /// typically is not needed to process the content of a value (it doesn't
+    /// affect serialization) and clients can ignore it on the read path.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Spanner.V1.TypeAnnotationCode TypeAnnotation {
+      get { return typeAnnotation_; }
+      set {
+        typeAnnotation_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -256,6 +304,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Code != other.Code) return false;
       if (!object.Equals(ArrayElementType, other.ArrayElementType)) return false;
       if (!object.Equals(StructType, other.StructType)) return false;
+      if (TypeAnnotation != other.TypeAnnotation) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -266,6 +315,7 @@ namespace Google.Cloud.Spanner.V1 {
       if (Code != global::Google.Cloud.Spanner.V1.TypeCode.Unspecified) hash ^= Code.GetHashCode();
       if (arrayElementType_ != null) hash ^= ArrayElementType.GetHashCode();
       if (structType_ != null) hash ^= StructType.GetHashCode();
+      if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) hash ^= TypeAnnotation.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -296,6 +346,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(StructType);
       }
+      if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TypeAnnotation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -318,6 +372,10 @@ namespace Google.Cloud.Spanner.V1 {
         output.WriteRawTag(26);
         output.WriteMessage(StructType);
       }
+      if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
+        output.WriteRawTag(32);
+        output.WriteEnum((int) TypeAnnotation);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -336,6 +394,9 @@ namespace Google.Cloud.Spanner.V1 {
       }
       if (structType_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(StructType);
+      }
+      if (TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) TypeAnnotation);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -363,6 +424,9 @@ namespace Google.Cloud.Spanner.V1 {
           StructType = new global::Google.Cloud.Spanner.V1.StructType();
         }
         StructType.MergeFrom(other.StructType);
+      }
+      if (other.TypeAnnotation != global::Google.Cloud.Spanner.V1.TypeAnnotationCode.Unspecified) {
+        TypeAnnotation = other.TypeAnnotation;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -397,6 +461,10 @@ namespace Google.Cloud.Spanner.V1 {
             input.ReadMessage(StructType);
             break;
           }
+          case 32: {
+            TypeAnnotation = (global::Google.Cloud.Spanner.V1.TypeAnnotationCode) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -428,6 +496,10 @@ namespace Google.Cloud.Spanner.V1 {
               StructType = new global::Google.Cloud.Spanner.V1.StructType();
             }
             input.ReadMessage(StructType);
+            break;
+          }
+          case 32: {
+            TypeAnnotation = (global::Google.Cloud.Spanner.V1.TypeAnnotationCode) input.ReadEnum();
             break;
           }
         }

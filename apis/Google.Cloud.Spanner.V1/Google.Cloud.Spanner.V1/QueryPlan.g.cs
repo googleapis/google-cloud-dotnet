@@ -25,8 +25,8 @@ namespace Google.Cloud.Spanner.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiJnb29nbGUvc3Bhbm5lci92MS9xdWVyeV9wbGFuLnByb3RvEhFnb29nbGUu",
-            "c3Bhbm5lci52MRocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byL4BAoIUGxhbk5vZGUSDQoFaW5k",
+            "c3Bhbm5lci52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxocZ29v",
+            "Z2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90byL4BAoIUGxhbk5vZGUSDQoFaW5k",
             "ZXgYASABKAUSLgoEa2luZBgCIAEoDjIgLmdvb2dsZS5zcGFubmVyLnYxLlBs",
             "YW5Ob2RlLktpbmQSFAoMZGlzcGxheV9uYW1lGAMgASgJEjoKC2NoaWxkX2xp",
             "bmtzGAQgAygLMiUuZ29vZ2xlLnNwYW5uZXIudjEuUGxhbk5vZGUuQ2hpbGRM",
@@ -48,7 +48,7 @@ namespace Google.Cloud.Spanner.V1 {
             "b2dsZVxDbG91ZFxTcGFubmVyXFYx6gIaR29vZ2xlOjpDbG91ZDo6U3Bhbm5l",
             "cjo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode), global::Google.Cloud.Spanner.V1.PlanNode.Parser, new[]{ "Index", "Kind", "DisplayName", "ChildLinks", "ShortRepresentation", "Metadata", "ExecutionStats" }, null, new[]{ typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.Kind) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink), global::Google.Cloud.Spanner.V1.PlanNode.Types.ChildLink.Parser, new[]{ "ChildIndex", "Type", "Variable" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation), global::Google.Cloud.Spanner.V1.PlanNode.Types.ShortRepresentation.Parser, new[]{ "Description", "Subqueries" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })}),
