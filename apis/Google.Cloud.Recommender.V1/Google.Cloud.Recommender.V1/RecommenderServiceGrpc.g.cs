@@ -3,7 +3,7 @@
 //     source: google/cloud/recommender/v1/recommender_service.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2020 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -166,8 +166,8 @@ namespace Google.Cloud.Recommender.V1 {
     public abstract partial class RecommenderBase
     {
       /// <summary>
-      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-      /// permission for the specified insight type.
+      /// Lists insights for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified insight type.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -209,8 +209,8 @@ namespace Google.Cloud.Recommender.V1 {
       }
 
       /// <summary>
-      /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-      /// IAM permission for the specified recommender.
+      /// Lists recommendations for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified recommender.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
@@ -329,8 +329,8 @@ namespace Google.Cloud.Recommender.V1 {
       }
 
       /// <summary>
-      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-      /// permission for the specified insight type.
+      /// Lists insights for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified insight type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -343,8 +343,8 @@ namespace Google.Cloud.Recommender.V1 {
         return ListInsights(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-      /// permission for the specified insight type.
+      /// Lists insights for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified insight type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -355,8 +355,8 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListInsights, null, options, request);
       }
       /// <summary>
-      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-      /// permission for the specified insight type.
+      /// Lists insights for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified insight type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -369,8 +369,8 @@ namespace Google.Cloud.Recommender.V1 {
         return ListInsightsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-      /// permission for the specified insight type.
+      /// Lists insights for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified insight type.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -501,8 +501,8 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_MarkInsightAccepted, null, options, request);
       }
       /// <summary>
-      /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-      /// IAM permission for the specified recommender.
+      /// Lists recommendations for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified recommender.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -515,8 +515,8 @@ namespace Google.Cloud.Recommender.V1 {
         return ListRecommendations(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-      /// IAM permission for the specified recommender.
+      /// Lists recommendations for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified recommender.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -527,8 +527,8 @@ namespace Google.Cloud.Recommender.V1 {
         return CallInvoker.BlockingUnaryCall(__Method_ListRecommendations, null, options, request);
       }
       /// <summary>
-      /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-      /// IAM permission for the specified recommender.
+      /// Lists recommendations for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified recommender.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -541,8 +541,8 @@ namespace Google.Cloud.Recommender.V1 {
         return ListRecommendationsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
       }
       /// <summary>
-      /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-      /// IAM permission for the specified recommender.
+      /// Lists recommendations for the specified Cloud Resource. Requires the
+      /// recommender.*.list IAM permission for the specified recommender.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>

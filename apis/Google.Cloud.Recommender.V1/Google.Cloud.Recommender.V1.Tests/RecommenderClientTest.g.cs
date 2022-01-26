@@ -54,6 +54,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -89,6 +90,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -126,6 +128,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -161,6 +164,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -198,6 +202,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsight(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -233,6 +238,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.GetInsightAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -278,6 +284,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -321,6 +328,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -366,6 +374,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -409,6 +418,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -454,6 +464,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAccepted(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -497,6 +508,7 @@ namespace Google.Cloud.Recommender.V1.Tests
                 },
                 InsightSubtype = "insight_subtype87faa4e7",
                 Etag = "etage8ad7218",
+                Severity = Insight.Types.Severity.High,
             };
             mockGrpcClient.Setup(x => x.MarkInsightAcceptedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Insight>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -530,6 +542,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -561,6 +575,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -594,6 +610,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -625,6 +643,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -658,6 +678,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendation(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -689,6 +711,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.GetRecommendationAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -730,6 +754,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -769,6 +795,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -810,6 +838,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -849,6 +879,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -890,6 +922,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -929,6 +963,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationClaimedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -970,6 +1006,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1009,6 +1047,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1050,6 +1090,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1089,6 +1131,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1130,6 +1174,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceeded(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1169,6 +1215,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationSucceededAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1210,6 +1258,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1249,6 +1299,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1290,6 +1342,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1329,6 +1383,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1370,6 +1426,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailed(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
@@ -1409,6 +1467,8 @@ namespace Google.Cloud.Recommender.V1.Tests
                 {
                     new Recommendation.Types.InsightReference(),
                 },
+                Priority = Recommendation.Types.Priority.P1,
+                XorGroupId = "xor_group_id40c40796",
             };
             mockGrpcClient.Setup(x => x.MarkRecommendationFailedAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Recommendation>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             RecommenderClient client = new RecommenderClientImpl(mockGrpcClient.Object, null);
