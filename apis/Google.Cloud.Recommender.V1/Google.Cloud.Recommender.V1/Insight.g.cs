@@ -28,7 +28,7 @@ namespace Google.Cloud.Recommender.V1 {
             "Z29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxGhlnb29nbGUvYXBpL3Jlc291",
             "cmNlLnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aHGdv",
             "b2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90",
-            "aW1lc3RhbXAucHJvdG8ioggKB0luc2lnaHQSDAoEbmFtZRgBIAEoCRITCgtk",
+            "aW1lc3RhbXAucHJvdG8itgkKB0luc2lnaHQSDAoEbmFtZRgBIAEoCRITCgtk",
             "ZXNjcmlwdGlvbhgCIAEoCRIYChB0YXJnZXRfcmVzb3VyY2VzGAkgAygJEhcK",
             "D2luc2lnaHRfc3VidHlwZRgKIAEoCRIoCgdjb250ZW50GAMgASgLMhcuZ29v",
             "Z2xlLnByb3RvYnVmLlN0cnVjdBI1ChFsYXN0X3JlZnJlc2hfdGltZRgEIAEo",
@@ -36,45 +36,48 @@ namespace Google.Cloud.Recommender.V1 {
             "cGVyaW9kGAUgASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uEkEKCnN0",
             "YXRlX2luZm8YBiABKAsyLS5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEu",
             "SW5zaWdodFN0YXRlSW5mbxI/CghjYXRlZ29yeRgHIAEoDjItLmdvb2dsZS5j",
-            "bG91ZC5yZWNvbW1lbmRlci52MS5JbnNpZ2h0LkNhdGVnb3J5EgwKBGV0YWcY",
-            "CyABKAkSYAoaYXNzb2NpYXRlZF9yZWNvbW1lbmRhdGlvbnMYCCADKAsyPC5n",
-            "b29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuSW5zaWdodC5SZWNvbW1lbmRh",
-            "dGlvblJlZmVyZW5jZRoxChdSZWNvbW1lbmRhdGlvblJlZmVyZW5jZRIWCg5y",
-            "ZWNvbW1lbmRhdGlvbhgBIAEoCSJgCghDYXRlZ29yeRIYChRDQVRFR09SWV9V",
-            "TlNQRUNJRklFRBAAEggKBENPU1QQARIMCghTRUNVUklUWRACEg8KC1BFUkZP",
-            "Uk1BTkNFEAMSEQoNTUFOQUdFQUJJTElUWRAEOp8D6kGbAwoicmVjb21tZW5k",
-            "ZXIuZ29vZ2xlYXBpcy5jb20vSW5zaWdodBJWcHJvamVjdHMve3Byb2plY3R9",
-            "L2xvY2F0aW9ucy97bG9jYXRpb259L2luc2lnaHRUeXBlcy97aW5zaWdodF90",
-            "eXBlfS9pbnNpZ2h0cy97aW5zaWdodH0SZWJpbGxpbmdBY2NvdW50cy97Ymls",
-            "bGluZ19hY2NvdW50fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbnNpZ2h0VHlw",
-            "ZXMve2luc2lnaHRfdHlwZX0vaW5zaWdodHMve2luc2lnaHR9ElRmb2xkZXJz",
-            "L3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc2lnaHRUeXBlcy97",
-            "aW5zaWdodF90eXBlfS9pbnNpZ2h0cy97aW5zaWdodH0SYG9yZ2FuaXphdGlv",
-            "bnMve29yZ2FuaXphdGlvbn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5zaWdo",
-            "dFR5cGVzL3tpbnNpZ2h0X3R5cGV9L2luc2lnaHRzL3tpbnNpZ2h0fSKvAgoQ",
-            "SW5zaWdodFN0YXRlSW5mbxJCCgVzdGF0ZRgBIAEoDjIzLmdvb2dsZS5jbG91",
-            "ZC5yZWNvbW1lbmRlci52MS5JbnNpZ2h0U3RhdGVJbmZvLlN0YXRlElgKDnN0",
-            "YXRlX21ldGFkYXRhGAIgAygLMkAuZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVy",
-            "LnYxLkluc2lnaHRTdGF0ZUluZm8uU3RhdGVNZXRhZGF0YUVudHJ5GjQKElN0",
-            "YXRlTWV0YWRhdGFFbnRyeRILCgNrZXkYASABKAkSDQoFdmFsdWUYAiABKAk6",
-            "AjgBIkcKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVEEAASCgoGQUNUSVZF",
-            "EAESDAoIQUNDRVBURUQQAhINCglESVNNSVNTRUQQA0L1AwofY29tLmdvb2ds",
-            "ZS5jbG91ZC5yZWNvbW1lbmRlci52MUIMSW5zaWdodFByb3RvUAFaRmdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvcmVjb21t",
-            "ZW5kZXIvdjE7cmVjb21tZW5kZXKiAgRDUkVDqgIbR29vZ2xlLkNsb3VkLlJl",
-            "Y29tbWVuZGVyLlYx6kHTAgomcmVjb21tZW5kZXIuZ29vZ2xlYXBpcy5jb20v",
-            "SW5zaWdodFR5cGUSQ3Byb2plY3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xv",
-            "Y2F0aW9ufS9pbnNpZ2h0VHlwZXMve2luc2lnaHRfdHlwZX0SUmJpbGxpbmdB",
-            "Y2NvdW50cy97YmlsbGluZ19hY2NvdW50fS9sb2NhdGlvbnMve2xvY2F0aW9u",
-            "fS9pbnNpZ2h0VHlwZXMve2luc2lnaHRfdHlwZX0SQWZvbGRlcnMve2ZvbGRl",
-            "cn0vbG9jYXRpb25zL3tsb2NhdGlvbn0vaW5zaWdodFR5cGVzL3tpbnNpZ2h0",
-            "X3R5cGV9Ek1vcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9u",
-            "cy97bG9jYXRpb259L2luc2lnaHRUeXBlcy97aW5zaWdodF90eXBlfWIGcHJv",
-            "dG8z"));
+            "bG91ZC5yZWNvbW1lbmRlci52MS5JbnNpZ2h0LkNhdGVnb3J5Ej8KCHNldmVy",
+            "aXR5GA8gASgOMi0uZ29vZ2xlLmNsb3VkLnJlY29tbWVuZGVyLnYxLkluc2ln",
+            "aHQuU2V2ZXJpdHkSDAoEZXRhZxgLIAEoCRJgChphc3NvY2lhdGVkX3JlY29t",
+            "bWVuZGF0aW9ucxgIIAMoCzI8Lmdvb2dsZS5jbG91ZC5yZWNvbW1lbmRlci52",
+            "MS5JbnNpZ2h0LlJlY29tbWVuZGF0aW9uUmVmZXJlbmNlGjEKF1JlY29tbWVu",
+            "ZGF0aW9uUmVmZXJlbmNlEhYKDnJlY29tbWVuZGF0aW9uGAEgASgJImAKCENh",
+            "dGVnb3J5EhgKFENBVEVHT1JZX1VOU1BFQ0lGSUVEEAASCAoEQ09TVBABEgwK",
+            "CFNFQ1VSSVRZEAISDwoLUEVSRk9STUFOQ0UQAxIRCg1NQU5BR0VBQklMSVRZ",
+            "EAQiUQoIU2V2ZXJpdHkSGAoUU0VWRVJJVFlfVU5TUEVDSUZJRUQQABIHCgNM",
+            "T1cQARIKCgZNRURJVU0QAhIICgRISUdIEAMSDAoIQ1JJVElDQUwQBDqfA+pB",
+            "mwMKInJlY29tbWVuZGVyLmdvb2dsZWFwaXMuY29tL0luc2lnaHQSVnByb2pl",
+            "Y3RzL3twcm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbnNpZ2h0VHlw",
+            "ZXMve2luc2lnaHRfdHlwZX0vaW5zaWdodHMve2luc2lnaHR9EmViaWxsaW5n",
+            "QWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRpb25zL3tsb2NhdGlv",
+            "bn0vaW5zaWdodFR5cGVzL3tpbnNpZ2h0X3R5cGV9L2luc2lnaHRzL3tpbnNp",
+            "Z2h0fRJUZm9sZGVycy97Zm9sZGVyfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9p",
+            "bnNpZ2h0VHlwZXMve2luc2lnaHRfdHlwZX0vaW5zaWdodHMve2luc2lnaHR9",
+            "EmBvcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L2xvY2F0aW9ucy97bG9j",
+            "YXRpb259L2luc2lnaHRUeXBlcy97aW5zaWdodF90eXBlfS9pbnNpZ2h0cy97",
+            "aW5zaWdodH0irwIKEEluc2lnaHRTdGF0ZUluZm8SQgoFc3RhdGUYASABKA4y",
+            "My5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjEuSW5zaWdodFN0YXRlSW5m",
+            "by5TdGF0ZRJYCg5zdGF0ZV9tZXRhZGF0YRgCIAMoCzJALmdvb2dsZS5jbG91",
+            "ZC5yZWNvbW1lbmRlci52MS5JbnNpZ2h0U3RhdGVJbmZvLlN0YXRlTWV0YWRh",
+            "dGFFbnRyeRo0ChJTdGF0ZU1ldGFkYXRhRW50cnkSCwoDa2V5GAEgASgJEg0K",
+            "BXZhbHVlGAIgASgJOgI4ASJHCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklF",
+            "RBAAEgoKBkFDVElWRRABEgwKCEFDQ0VQVEVEEAISDQoJRElTTUlTU0VEEANC",
+            "9QMKH2NvbS5nb29nbGUuY2xvdWQucmVjb21tZW5kZXIudjFCDEluc2lnaHRQ",
+            "cm90b1ABWkZnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVhcGlz",
+            "L2Nsb3VkL3JlY29tbWVuZGVyL3YxO3JlY29tbWVuZGVyogIEQ1JFQ6oCG0dv",
+            "b2dsZS5DbG91ZC5SZWNvbW1lbmRlci5WMepB0wIKJnJlY29tbWVuZGVyLmdv",
+            "b2dsZWFwaXMuY29tL0luc2lnaHRUeXBlEkNwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vaW5zaWdodFR5cGVzL3tpbnNpZ2h0X3R5",
+            "cGV9ElJiaWxsaW5nQWNjb3VudHMve2JpbGxpbmdfYWNjb3VudH0vbG9jYXRp",
+            "b25zL3tsb2NhdGlvbn0vaW5zaWdodFR5cGVzL3tpbnNpZ2h0X3R5cGV9EkFm",
+            "b2xkZXJzL3tmb2xkZXJ9L2xvY2F0aW9ucy97bG9jYXRpb259L2luc2lnaHRU",
+            "eXBlcy97aW5zaWdodF90eXBlfRJNb3JnYW5pemF0aW9ucy97b3JnYW5pemF0",
+            "aW9ufS9sb2NhdGlvbnMve2xvY2F0aW9ufS9pbnNpZ2h0VHlwZXMve2luc2ln",
+            "aHRfdHlwZX1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Insight), global::Google.Cloud.Recommender.V1.Insight.Parser, new[]{ "Name", "Description", "TargetResources", "InsightSubtype", "Content", "LastRefreshTime", "ObservationPeriod", "StateInfo", "Category", "Etag", "AssociatedRecommendations" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.Insight.Types.Category) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Insight.Types.RecommendationReference), global::Google.Cloud.Recommender.V1.Insight.Types.RecommendationReference.Parser, new[]{ "Recommendation" }, null, null, null, null)}),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Insight), global::Google.Cloud.Recommender.V1.Insight.Parser, new[]{ "Name", "Description", "TargetResources", "InsightSubtype", "Content", "LastRefreshTime", "ObservationPeriod", "StateInfo", "Category", "Severity", "Etag", "AssociatedRecommendations" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.Insight.Types.Category), typeof(global::Google.Cloud.Recommender.V1.Insight.Types.Severity) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.Insight.Types.RecommendationReference), global::Google.Cloud.Recommender.V1.Insight.Types.RecommendationReference.Parser, new[]{ "Recommendation" }, null, null, null, null)}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Recommender.V1.InsightStateInfo), global::Google.Cloud.Recommender.V1.InsightStateInfo.Parser, new[]{ "State", "StateMetadata" }, null, new[]{ typeof(global::Google.Cloud.Recommender.V1.InsightStateInfo.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
     }
@@ -129,6 +132,7 @@ namespace Google.Cloud.Recommender.V1 {
       observationPeriod_ = other.observationPeriod_ != null ? other.observationPeriod_.Clone() : null;
       stateInfo_ = other.stateInfo_ != null ? other.stateInfo_.Clone() : null;
       category_ = other.category_;
+      severity_ = other.severity_;
       etag_ = other.etag_;
       associatedRecommendations_ = other.associatedRecommendations_.Clone();
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -278,6 +282,21 @@ namespace Google.Cloud.Recommender.V1 {
       }
     }
 
+    /// <summary>Field number for the "severity" field.</summary>
+    public const int SeverityFieldNumber = 15;
+    private global::Google.Cloud.Recommender.V1.Insight.Types.Severity severity_ = global::Google.Cloud.Recommender.V1.Insight.Types.Severity.Unspecified;
+    /// <summary>
+    /// Insight's severity.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Recommender.V1.Insight.Types.Severity Severity {
+      get { return severity_; }
+      set {
+        severity_ = value;
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 11;
     private string etag_ = "";
@@ -332,6 +351,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (!object.Equals(ObservationPeriod, other.ObservationPeriod)) return false;
       if (!object.Equals(StateInfo, other.StateInfo)) return false;
       if (Category != other.Category) return false;
+      if (Severity != other.Severity) return false;
       if (Etag != other.Etag) return false;
       if(!associatedRecommendations_.Equals(other.associatedRecommendations_)) return false;
       return Equals(_unknownFields, other._unknownFields);
@@ -350,6 +370,7 @@ namespace Google.Cloud.Recommender.V1 {
       if (observationPeriod_ != null) hash ^= ObservationPeriod.GetHashCode();
       if (stateInfo_ != null) hash ^= StateInfo.GetHashCode();
       if (Category != global::Google.Cloud.Recommender.V1.Insight.Types.Category.Unspecified) hash ^= Category.GetHashCode();
+      if (Severity != global::Google.Cloud.Recommender.V1.Insight.Types.Severity.Unspecified) hash ^= Severity.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       hash ^= associatedRecommendations_.GetHashCode();
       if (_unknownFields != null) {
@@ -408,6 +429,10 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(90);
         output.WriteString(Etag);
       }
+      if (Severity != global::Google.Cloud.Recommender.V1.Insight.Types.Severity.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Severity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -456,6 +481,10 @@ namespace Google.Cloud.Recommender.V1 {
         output.WriteRawTag(90);
         output.WriteString(Etag);
       }
+      if (Severity != global::Google.Cloud.Recommender.V1.Insight.Types.Severity.Unspecified) {
+        output.WriteRawTag(120);
+        output.WriteEnum((int) Severity);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -490,6 +519,9 @@ namespace Google.Cloud.Recommender.V1 {
       }
       if (Category != global::Google.Cloud.Recommender.V1.Insight.Types.Category.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Category);
+      }
+      if (Severity != global::Google.Cloud.Recommender.V1.Insight.Types.Severity.Unspecified) {
+        size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Severity);
       }
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
@@ -543,6 +575,9 @@ namespace Google.Cloud.Recommender.V1 {
       }
       if (other.Category != global::Google.Cloud.Recommender.V1.Insight.Types.Category.Unspecified) {
         Category = other.Category;
+      }
+      if (other.Severity != global::Google.Cloud.Recommender.V1.Insight.Types.Severity.Unspecified) {
+        Severity = other.Severity;
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
@@ -619,6 +654,10 @@ namespace Google.Cloud.Recommender.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 120: {
+            Severity = (global::Google.Cloud.Recommender.V1.Insight.Types.Severity) input.ReadEnum();
+            break;
+          }
         }
       }
     #endif
@@ -690,6 +729,10 @@ namespace Google.Cloud.Recommender.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 120: {
+            Severity = (global::Google.Cloud.Recommender.V1.Insight.Types.Severity) input.ReadEnum();
+            break;
+          }
         }
       }
     }
@@ -724,6 +767,32 @@ namespace Google.Cloud.Recommender.V1 {
         /// This insight is related to manageability.
         /// </summary>
         [pbr::OriginalName("MANAGEABILITY")] Manageability = 4,
+      }
+
+      /// <summary>
+      /// Insight severity levels.
+      /// </summary>
+      public enum Severity {
+        /// <summary>
+        /// Insight has unspecified severity.
+        /// </summary>
+        [pbr::OriginalName("SEVERITY_UNSPECIFIED")] Unspecified = 0,
+        /// <summary>
+        /// Insight has low severity.
+        /// </summary>
+        [pbr::OriginalName("LOW")] Low = 1,
+        /// <summary>
+        /// Insight has medium severity.
+        /// </summary>
+        [pbr::OriginalName("MEDIUM")] Medium = 2,
+        /// <summary>
+        /// Insight has high severity.
+        /// </summary>
+        [pbr::OriginalName("HIGH")] High = 3,
+        /// <summary>
+        /// Insight has critical severity.
+        /// </summary>
+        [pbr::OriginalName("CRITICAL")] Critical = 4,
       }
 
       /// <summary>

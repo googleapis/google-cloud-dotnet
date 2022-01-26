@@ -356,8 +356,8 @@ namespace Google.Cloud.Recommender.V1
         public virtual Recommender.RecommenderClient GrpcClient => throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -366,8 +366,8 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -376,20 +376,27 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
         /// INSIGHT_TYPE_ID refers to supported insight types:
-        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -410,20 +417,27 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
         /// INSIGHT_TYPE_ID refers to supported insight types:
-        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -444,20 +458,27 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
         /// INSIGHT_TYPE_ID refers to supported insight types:
-        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -478,20 +499,27 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/insightTypes/[INSIGHT_TYPE_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
         /// INSIGHT_TYPE_ID refers to supported insight types:
-        /// https://cloud.google.com/recommender/docs/insights/insight-types.)
+        /// https://cloud.google.com/recommender/docs/insights/insight-types.
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -838,8 +866,8 @@ namespace Google.Cloud.Recommender.V1
             MarkInsightAcceptedAsync(name, stateMetadata, etag, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -848,8 +876,8 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -858,15 +886,22 @@ namespace Google.Cloud.Recommender.V1
             throw new sys::NotImplementedException();
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -892,15 +927,22 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -926,15 +968,22 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -960,15 +1009,22 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -994,15 +1050,22 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -1011,8 +1074,26 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
-        /// filter fields: state_info.state
-        /// Eg: `state_info.state:"DISMISSED" or state_info.state:"FAILED"
+        /// filter fields:
+        /// 
+        /// * `state_info.state`
+        /// 
+        /// * `recommenderSubtype`
+        /// 
+        /// * `priority`
+        /// 
+        /// Examples:
+        /// 
+        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
+        /// 
+        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
+        /// 
+        /// * `priority = P1 OR priority = P2`
+        /// 
+        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
+        /// 
+        /// (These expressions are based on the filter language described at
+        /// https://google.aip.dev/160)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1034,15 +1115,22 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -1051,8 +1139,26 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
-        /// filter fields: state_info.state
-        /// Eg: `state_info.state:"DISMISSED" or state_info.state:"FAILED"
+        /// filter fields:
+        /// 
+        /// * `state_info.state`
+        /// 
+        /// * `recommenderSubtype`
+        /// 
+        /// * `priority`
+        /// 
+        /// Examples:
+        /// 
+        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
+        /// 
+        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
+        /// 
+        /// * `priority = P1 OR priority = P2`
+        /// 
+        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
+        /// 
+        /// (These expressions are based on the filter language described at
+        /// https://google.aip.dev/160)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1074,15 +1180,22 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -1091,8 +1204,26 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
-        /// filter fields: state_info.state
-        /// Eg: `state_info.state:"DISMISSED" or state_info.state:"FAILED"
+        /// filter fields:
+        /// 
+        /// * `state_info.state`
+        /// 
+        /// * `recommenderSubtype`
+        /// 
+        /// * `priority`
+        /// 
+        /// Examples:
+        /// 
+        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
+        /// 
+        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
+        /// 
+        /// * `priority = P1 OR priority = P2`
+        /// 
+        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
+        /// 
+        /// (These expressions are based on the filter language described at
+        /// https://google.aip.dev/160)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -1114,15 +1245,22 @@ namespace Google.Cloud.Recommender.V1
             }, callSettings);
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="parent">
         /// Required. The container resource on which to execute the request.
         /// Acceptable formats:
         /// 
-        /// 1.
-        /// "projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]",
+        /// * `projects/[PROJECT_NUMBER]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `projects/[PROJECT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `billingAccounts/[BILLING_ACCOUNT_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `folders/[FOLDER_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
+        /// 
+        /// * `organizations/[ORGANIZATION_ID]/locations/[LOCATION]/recommenders/[RECOMMENDER_ID]`
         /// 
         /// LOCATION here refers to GCP Locations:
         /// https://cloud.google.com/about/locations/
@@ -1131,8 +1269,26 @@ namespace Google.Cloud.Recommender.V1
         /// </param>
         /// <param name="filter">
         /// Filter expression to restrict the recommendations returned. Supported
-        /// filter fields: state_info.state
-        /// Eg: `state_info.state:"DISMISSED" or state_info.state:"FAILED"
+        /// filter fields:
+        /// 
+        /// * `state_info.state`
+        /// 
+        /// * `recommenderSubtype`
+        /// 
+        /// * `priority`
+        /// 
+        /// Examples:
+        /// 
+        /// * `stateInfo.state = ACTIVE OR stateInfo.state = DISMISSED`
+        /// 
+        /// * `recommenderSubtype = REMOVE_ROLE OR recommenderSubtype = REPLACE_ROLE`
+        /// 
+        /// * `priority = P1 OR priority = P2`
+        /// 
+        /// * `stateInfo.state = ACTIVE AND (priority = P1 OR priority = P2)`
+        /// 
+        /// (These expressions are based on the filter language described at
+        /// https://google.aip.dev/160)
         /// </param>
         /// <param name="pageToken">
         /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
@@ -2168,8 +2324,8 @@ namespace Google.Cloud.Recommender.V1
         partial void Modify_MarkRecommendationFailedRequest(ref MarkRecommendationFailedRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2181,8 +2337,8 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Lists insights for a Cloud project. Requires the recommender.*.list IAM
-        /// permission for the specified insight type.
+        /// Lists insights for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified insight type.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2254,8 +2410,8 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
@@ -2267,8 +2423,8 @@ namespace Google.Cloud.Recommender.V1
         }
 
         /// <summary>
-        /// Lists recommendations for a Cloud project. Requires the recommender.*.list
-        /// IAM permission for the specified recommender.
+        /// Lists recommendations for the specified Cloud Resource. Requires the
+        /// recommender.*.list IAM permission for the specified recommender.
         /// </summary>
         /// <param name="request">The request object containing all of the parameters for the API call.</param>
         /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
