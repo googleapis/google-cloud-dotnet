@@ -1,0 +1,16 @@
+[
+  {
+    "method": "ListChannels",
+    "client": "LivestreamServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  },
+  {
+    "method": "ListInputs",
+    "client": "LivestreamServiceClient",
+    "arguments": {
+      "parent": "projects/${PROJECT_ID}/locations/us-east1"
+    }
+  }
+]
