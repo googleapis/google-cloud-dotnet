@@ -14,6 +14,15 @@ It wraps the `Google.Apis.Storage.v1` generated library, providing a higher-leve
 Common operations are exposed via the
 [StorageClient](obj/api/Google.Cloud.Storage.V1.StorageClient.yml) class.
 
+## Error responses
+
+All errors reported by the underlying API (including precondition
+failures) are propagated as exceptions of type
+[`GoogleApiException`](https://cloud.google.com/dotnet/docs/reference/Google.Apis/latest/Google.GoogleApiException).
+See the [Cloud Storage API status and error codes
+documentation](https://cloud.google.com/storage/docs/json_api/v1/status-codes)
+for details of the HTTP status codes used.
+
 ## Client life-cycle management
 
 In many cases you don't need to worry about disposing of
