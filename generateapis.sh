@@ -56,12 +56,12 @@ generate_microgenerator() {
   delete_generated apis/$1/$1.Tests
   delete_generated apis/$1/$1.Snippets
 
-  # If there's exactly one service config file, pass it in. Otherwise, omit it.
+  # If there's exactly one gRPC service config file, pass it in. Otherwise, omit it.
   GRPC_SERVICE_CONFIG=$(echo $API_SRC_DIR/*_grpc_service_config.json)
-  SERVICE_CONFIG_OPTION=
+  GRPC_SERVICE_CONFIG_OPTION=
   if [[ -f "$GRPC_SERVICE_CONFIG" ]]
   then
-    SERVICE_CONFIG_OPTION=--gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG
+    GRPC_SERVICE_CONFIG_OPTION=--gapic_opt=grpc-service-config=$GRPC_SERVICE_CONFIG
   fi
 
   # Default to "all resources are common" but allow a per-API config file too.
@@ -75,7 +75,16 @@ generate_microgenerator() {
     COMMON_RESOURCES_CONFIG=$COMMON_RESOURCES_CONFIG,common-resources-config=$API_COMMON_RESOURCES_CONFIG
   fi
   COMMON_RESOURCES_OPTION=--gapic_opt=$COMMON_RESOURCES_CONFIG
-  
+
+  # All APIs should have a service config specified, but it might be deliberately "none" to mean
+  # "there are no services for this API directory" e.g. for oslogin/common
+  SERVICE_CONFIG_FILE=$($PYTHON3 tools/getapifield.py apis/apis.json $PACKAGE_ID serviceConfigFile)
+  SERVICE_CONFIG_OPTION=
+  if [[ $SERVICE_CONFIG_FILE != "none" ]]
+  then
+    SERVICE_CONFIG_OPTION=--gapic_opt=service-config=$API_SRC_DIR/$SERVICE_CONFIG_FILE
+  fi
+
   # Only specify common resource protos for GCP APIs.
   # Don't include the file for the ResourceManager API, which genuinely defines these resources.
   COMMON_RESOURCES_PROTO=
@@ -114,6 +123,7 @@ generate_microgenerator() {
   # types can use the messages in them, but nothing will be generated.
   $PROTOC \
     --gapic_out=$API_TMP_DIR \
+    $GRPC_SERVICE_CONFIG_OPTION \
     $SERVICE_CONFIG_OPTION \
     $COMMON_RESOURCES_OPTION \
     --plugin=protoc-gen-gapic=$GAPIC_PLUGIN \
