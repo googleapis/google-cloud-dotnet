@@ -121,7 +121,8 @@
       },
       "generator": "micro",
       "protoPath": "google/cloud/aiplatform/v1",
-      "shortName": "aiplatform"
+      "shortName": "aiplatform",
+      "serviceConfigFile": "aiplatform_v1.yaml"
     },
     {
       "id": "Google.Cloud.ApigeeConnect.V1",
@@ -1554,7 +1555,8 @@
       },
       "generator": "micro",
       "protoPath": "google/cloud/gkehub/v1",
-      "shortName": "gkehub"
+      "shortName": "gkehub",
+      "serviceConfigFile": "gkehub_v1.yaml"
     },
     {
       "id": "Google.Cloud.Iam.Admin.V1",
@@ -1621,7 +1623,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.5.0",
         "Grpc.Core": "2.38.1"
       },
-      "forceOwlBotRegeneration": "AuditData proto is generated in the wrong place."
+      "forceOwlBotRegeneration": "AuditData proto is generated in the wrong place.",
+      "serviceConfigFile": "iam_meta_api.yaml"
     },
     {
       "id": "Google.Cloud.Iap.V1",
@@ -1766,7 +1769,8 @@
         "Grpc.Core": "2.41.0"
       },
       "generator": "micro",
-      "protoPath": "google/cloud/location"
+      "protoPath": "google/cloud/location",
+      "serviceConfigFile": "location.yaml"
     },
     {
       "id": "Google.Cloud.Logging.Log4Net",
@@ -2283,7 +2287,8 @@
         "Google.Api.Gax": "3.5.0"
       },
       "noVersionHistory": true,
-      "forceOwlBotRegeneration": "OsLogin Common proto is generated in the wrong place."
+      "forceOwlBotRegeneration": "OsLogin Common proto is generated in the wrong place.",
+      "serviceConfigFile": "none"
     },
     {
       "id": "Google.Cloud.OsLogin.V1",
@@ -3693,7 +3698,8 @@
       "testDependencies": {
         "Google.Api.Gax.Testing": "3.5.0"
       },
-      "forceOwlBotRegeneration": "Post-processor requires googleapis repo."
+      "forceOwlBotRegeneration": "Post-processor requires googleapis repo.",
+      "serviceConfigFile": "longrunning.yaml"
     },
     {
       "id": "Grafeas.V1",
@@ -3715,7 +3721,8 @@
         "Google.Api.Gax.Grpc.GrpcCore": "3.6.0",
         "Grpc.Core": "2.41.0"
       },
-      "shortName": "containeranalysis"
+      "shortName": "containeranalysis",
+      "serviceConfigFile": "none"
     }
   ],
   "ignoredPaths": {
