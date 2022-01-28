@@ -83,6 +83,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 ReadEndpoint = "read_endpointb6c6d0a1",
                 ReadEndpointPort = 906869138,
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
+                PersistenceConfig = new PersistenceConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -146,6 +147,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 ReadEndpoint = "read_endpointb6c6d0a1",
                 ReadEndpointPort = 906869138,
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
+                PersistenceConfig = new PersistenceConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -211,6 +213,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 ReadEndpoint = "read_endpointb6c6d0a1",
                 ReadEndpointPort = 906869138,
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
+                PersistenceConfig = new PersistenceConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -274,6 +277,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 ReadEndpoint = "read_endpointb6c6d0a1",
                 ReadEndpointPort = 906869138,
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
+                PersistenceConfig = new PersistenceConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -339,6 +343,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 ReadEndpoint = "read_endpointb6c6d0a1",
                 ReadEndpointPort = 906869138,
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
+                PersistenceConfig = new PersistenceConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInstance(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
@@ -402,6 +407,7 @@ namespace Google.Cloud.Redis.V1Beta1.Tests
                 ReadEndpoint = "read_endpointb6c6d0a1",
                 ReadEndpointPort = 906869138,
                 ReadReplicasMode = Instance.Types.ReadReplicasMode.ReadReplicasEnabled,
+                PersistenceConfig = new PersistenceConfig(),
             };
             mockGrpcClient.Setup(x => x.GetInstanceAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Instance>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             CloudRedisClient client = new CloudRedisClientImpl(mockGrpcClient.Object, null);
