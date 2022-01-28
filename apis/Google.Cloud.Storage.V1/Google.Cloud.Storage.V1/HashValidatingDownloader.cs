@@ -27,7 +27,7 @@ namespace Google.Cloud.Storage.V1
     /// Subclass of <see cref="MediaDownloader"/> which validates the data it receives
     /// against a CRC32c hash set in the header.
     /// </summary>
-    internal sealed class HashValidatingDownloader : MediaDownloader
+    internal sealed class HashValidatingDownloader : ContentMetadataRecordingMediaDownloader
     {
         private string crc32cHashBase64;
         private Crc32c hasher;

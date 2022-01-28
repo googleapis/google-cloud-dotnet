@@ -32,7 +32,8 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
-        public virtual void DownloadObject(
+        /// <returns>FIXME</returns>
+        public virtual ContentMetadata DownloadObject(
             string bucket,
             string objectName,
             Stream destination,
@@ -53,7 +54,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DownloadObjectAsync(
+        public virtual Task<ContentMetadata> DownloadObjectAsync(
             string bucket,
             string objectName,
             Stream destination,
@@ -75,7 +76,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="options">Additional options for the download. May be null, in which case appropriate
         /// defaults will be used.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
-        public virtual void DownloadObject(
+        public virtual ContentMetadata DownloadObject(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
@@ -97,7 +98,7 @@ namespace Google.Cloud.Storage.V1
         /// <param name="cancellationToken">The token to monitor for cancellation requests.</param>
         /// <param name="progress">Progress reporter for the download. May be null.</param>
         /// <returns>A task representing the asynchronous operation.</returns>
-        public virtual Task DownloadObjectAsync(
+        public virtual Task<ContentMetadata> DownloadObjectAsync(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,

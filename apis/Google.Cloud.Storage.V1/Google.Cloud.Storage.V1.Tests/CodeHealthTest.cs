@@ -28,7 +28,9 @@ namespace Google.Cloud.Storage.V1.Tests
         [Fact]
         public void SealedClasses()
         {
-            CodeHealthTester.AssertClassesAreSealedOrAbstract(typeof(StorageClient));
+            CodeHealthTester.AssertClassesAreSealedOrAbstract(typeof(StorageClient),
+                // Deliberately neither sealed nor abstract
+                exemptedTypes: new[] { typeof(ContentMetadataRecordingMediaDownloader) });
         }
     }
 }

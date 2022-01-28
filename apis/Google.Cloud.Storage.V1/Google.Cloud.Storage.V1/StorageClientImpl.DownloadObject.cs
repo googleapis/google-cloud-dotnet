@@ -28,7 +28,7 @@ namespace Google.Cloud.Storage.V1
     public sealed partial class StorageClientImpl : StorageClient
     {
         /// <inheritdoc />
-        public override void DownloadObject(
+        public override ContentMetadata DownloadObject(
             string bucket,
             string objectName,
             Stream destination,
@@ -36,11 +36,11 @@ namespace Google.Cloud.Storage.V1
             IProgress<IDownloadProgress> progress = null)
         {
             var builder = CreateRequestBuilder(bucket, objectName);
-            DownloadObjectImpl(builder, destination, options, progress);
+            return DownloadObjectImpl(builder, destination, options, progress);
         }
 
         /// <inheritdoc />
-        public override Task DownloadObjectAsync(
+        public override Task<ContentMetadata> DownloadObjectAsync(
             string bucket,
             string objectName,
             Stream destination,
@@ -53,18 +53,18 @@ namespace Google.Cloud.Storage.V1
         }
 
         /// <inheritdoc />
-        public override void DownloadObject(
+        public override ContentMetadata DownloadObject(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
             IProgress<IDownloadProgress> progress = null)
         {
             var builder = CreateRequestBuilder(source);
-            DownloadObjectImpl(builder, destination, options, progress);
+            return DownloadObjectImpl(builder, destination, options, progress);
         }
 
         /// <inheritdoc />
-        public override Task DownloadObjectAsync(
+        public override Task<ContentMetadata> DownloadObjectAsync(
             Object source,
             Stream destination,
             DownloadObjectOptions options = null,
@@ -109,7 +109,7 @@ namespace Google.Cloud.Storage.V1
             return CreateRequestBuilder(source.Bucket, source.Name);
         }
 
-        private void DownloadObjectImpl(
+        private ContentMetadata DownloadObjectImpl(
             RequestBuilder requestBuilder,
             Stream destination,
             DownloadObjectOptions options,
@@ -130,9 +130,10 @@ namespace Google.Cloud.Storage.V1
             {
                 throw result.Exception;
             }
+            return downloader.ContentMetadata;
         }
 
-        private Task DownloadObjectAsyncImpl(
+        private Task<ContentMetadata> DownloadObjectAsyncImpl(
             RequestBuilder requestBuilder,
             Stream destination,
             DownloadObjectOptions options,
@@ -156,15 +157,16 @@ namespace Google.Cloud.Storage.V1
                 {
                     throw result.Exception;
                 }
+                return downloader.ContentMetadata;
             });
 
-        private MediaDownloader CreateDownloader(DownloadObjectOptions options)
+        private ContentMetadataRecordingMediaDownloader CreateDownloader(DownloadObjectOptions options)
         {
             DownloadValidationMode mode = options?.DownloadValidationMode ?? DownloadValidationMode.Always;
             GaxPreconditions.CheckEnumValue(mode, nameof(DownloadObjectOptions.DownloadValidationMode));
 
-            MediaDownloader downloader = mode == DownloadValidationMode.Never
-                ? new MediaDownloader(Service) : new HashValidatingDownloader(Service);
+            ContentMetadataRecordingMediaDownloader downloader = mode == DownloadValidationMode.Never
+                ? new ContentMetadataRecordingMediaDownloader(Service) : new HashValidatingDownloader(Service);
             options?.ModifyDownloader(downloader);
             ApplyEncryptionKey(options?.EncryptionKey, downloader);
             return downloader;

@@ -45,7 +45,10 @@ namespace Google.Cloud.Storage.V1.IntegrationTests
         {
             using (var stream = new MemoryStream())
             {
-                await _fixture.Client.DownloadObjectAsync(_fixture.ReadBucket, _fixture.SmallObject, stream);
+                var metadata = await _fixture.Client.DownloadObjectAsync(_fixture.ReadBucket, _fixture.SmallObject, stream);
+                Assert.NotNull(metadata.Hash);
+                Assert.NotNull(metadata.Generation);
+                Assert.NotNull(metadata.Metageneration);
                 Assert.Equal(_fixture.SmallContent, stream.ToArray());
             }
         }
