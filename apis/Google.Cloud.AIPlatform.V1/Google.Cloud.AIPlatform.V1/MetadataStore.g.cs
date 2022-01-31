@@ -25,11 +25,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci9nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tZXRhZGF0YV9zdG9yZS5w",
-            "cm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkv",
-            "ZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJv",
-            "dG8aMGdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRpb25fc3Bl",
-            "Yy5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLnAwoNTWV0YWRhdGFTdG9yZRIR",
+            "cm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9hcGkv",
+            "YW5ub3RhdGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3Iu",
+            "cHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aMGdvb2dsZS9jbG91",
+            "ZC9haXBsYXRmb3JtL3YxL2VuY3J5cHRpb25fc3BlYy5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLnAwoNTWV0YWRhdGFTdG9yZRIR",
             "CgRuYW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29n",
             "bGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSQwoPZW5jcnlw",
@@ -47,7 +47,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "XENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRm",
             "b3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataStore), global::Google.Cloud.AIPlatform.V1.MetadataStore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "EncryptionSpec", "Description", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState), global::Google.Cloud.AIPlatform.V1.MetadataStore.Types.MetadataStoreState.Parser, new[]{ "DiskUtilizationBytes" }, null, null, null, null)})
           }));

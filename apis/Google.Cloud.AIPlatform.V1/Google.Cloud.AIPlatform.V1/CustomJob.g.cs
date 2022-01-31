@@ -25,16 +25,16 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9jdXN0b21fam9iLnByb3Rv",
-            "Ehpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxow",
-            "Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnBy",
-            "b3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnByb3Rv",
-            "GiNnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9pby5wcm90bxoqZ29vZ2xl",
-            "L2Nsb3VkL2FpcGxhdGZvcm0vdjEvam9iX3N0YXRlLnByb3RvGjJnb29nbGUv",
-            "Y2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNlcy5wcm90bxoe",
-            "Z29vZ2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLhBgoJQ3VzdG9tSm9iEhEK",
+            "Ehpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xlL2FwaS9hbm5v",
+            "dGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL2Nsb3VkL2Fp",
+            "cGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnByb3RvGihnb29nbGUvY2xv",
+            "dWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnByb3RvGiNnb29nbGUvY2xvdWQv",
+            "YWlwbGF0Zm9ybS92MS9pby5wcm90bxoqZ29vZ2xlL2Nsb3VkL2FpcGxhdGZv",
+            "cm0vdjEvam9iX3N0YXRlLnByb3RvGjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9y",
+            "bS92MS9tYWNoaW5lX3Jlc291cmNlcy5wcm90bxoeZ29vZ2xlL3Byb3RvYnVm",
+            "L2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
+            "b3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90byLhBgoJQ3VzdG9tSm9iEhEK",
             "BG5hbWUYASABKAlCA+BBAxIZCgxkaXNwbGF5X25hbWUYAiABKAlCA+BBAhJA",
             "Cghqb2Jfc3BlYxgEIAEoCzIpLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYx",
             "LkN1c3RvbUpvYlNwZWNCA+BBAhI4CgVzdGF0ZRgFIAEoDjIkLmdvb2dsZS5j",
@@ -85,7 +85,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b3VkLkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxW",
             "MeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MachineResourcesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJob), global::Google.Cloud.AIPlatform.V1.CustomJob.Parser, new[]{ "Name", "DisplayName", "JobSpec", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec", "WebAccessUris" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CustomJobSpec), global::Google.Cloud.AIPlatform.V1.CustomJobSpec.Parser, new[]{ "WorkerPoolSpecs", "Scheduling", "ServiceAccount", "Network", "BaseOutputDirectory", "Tensorboard", "EnableWebAccess" }, null, null, null, null),
@@ -803,6 +803,7 @@ namespace Google.Cloud.AIPlatform.V1 {
 
   /// <summary>
   /// Represents the spec of a CustomJob.
+  /// Next Id: 14
   /// </summary>
   public sealed partial class CustomJobSpec : pb::IMessage<CustomJobSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

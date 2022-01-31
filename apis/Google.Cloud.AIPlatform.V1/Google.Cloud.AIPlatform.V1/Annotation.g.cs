@@ -25,12 +25,12 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Citnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9hbm5vdGF0aW9uLnByb3Rv",
-            "Ehpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2FwaS9maWVs",
-            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo2",
-            "Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvdXNlcl9hY3Rpb25fcmVmZXJl",
-            "bmNlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29n",
-            "bGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvIs4ECgpBbm5vdGF0aW9uEhEKBG5hbWUYASABKAlCA+BB",
+            "Ehpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xlL2FwaS9hbm5v",
+            "dGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxo2Z29vZ2xlL2Nsb3VkL2Fp",
+            "cGxhdGZvcm0vdjEvdXNlcl9hY3Rpb25fcmVmZXJlbmNlLnByb3RvGhxnb29n",
+            "bGUvcHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGlt",
+            "ZXN0YW1wLnByb3RvIs4ECgpBbm5vdGF0aW9uEhEKBG5hbWUYASABKAlCA+BB",
             "AxIfChJwYXlsb2FkX3NjaGVtYV91cmkYAiABKAlCA+BBAhIsCgdwYXlsb2Fk",
             "GAMgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlQgPgQQISNAoLY3JlYXRl",
             "X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMS",
@@ -50,7 +50,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxh",
             "dGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.UserActionReferenceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.UserActionReferenceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Annotation), global::Google.Cloud.AIPlatform.V1.Annotation.Parser, new[]{ "Name", "PayloadSchemaUri", "Payload", "CreateTime", "UpdateTime", "Etag", "AnnotationSource", "Labels" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

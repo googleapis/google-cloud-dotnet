@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cjpnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS91bm1hbmFnZWRfY29udGFp",
-            "bmVyX21vZGVsLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRof",
-            "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxomZ29vZ2xlL2Nsb3Vk",
-            "L2FpcGxhdGZvcm0vdjEvbW9kZWwucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8iwwEKF1VubWFuYWdlZENvbnRhaW5lck1vZGVsEhQKDGFy",
+            "bmVyX21vZGVsLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
+            "ZF9iZWhhdmlvci5wcm90bxomZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEv",
+            "bW9kZWwucHJvdG8iwwEKF1VubWFuYWdlZENvbnRhaW5lck1vZGVsEhQKDGFy",
             "dGlmYWN0X3VyaRgBIAEoCRJFChBwcmVkaWN0X3NjaGVtYXRhGAIgASgLMisu",
             "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJlZGljdFNjaGVtYXRhEksK",
             "DmNvbnRhaW5lcl9zcGVjGAMgASgLMi4uZ29vZ2xlLmNsb3VkLmFpcGxhdGZv",
@@ -39,7 +39,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHq",
             "Ah1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.UnmanagedContainerModel), global::Google.Cloud.AIPlatform.V1.UnmanagedContainerModel.Parser, new[]{ "ArtifactUri", "PredictSchemata", "ContainerSpec" }, null, null, null, null)
           }));

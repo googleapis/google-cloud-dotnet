@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cjhnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS90ZW5zb3Jib2FyZF90aW1l",
-            "X3Nlcmllcy5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dv",
-            "b2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVz",
-            "b3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8a",
-            "HGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ivwYKFVRlbnNvcmJvYXJk",
+            "X3Nlcmllcy5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdv",
+            "b2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRf",
+            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dv",
+            "b2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8ivwYKFVRlbnNvcmJvYXJk",
             "VGltZVNlcmllcxIRCgRuYW1lGAEgASgJQgPgQQMSGQoMZGlzcGxheV9uYW1l",
             "GAIgASgJQgPgQQISEwoLZGVzY3JpcHRpb24YAyABKAkSVwoKdmFsdWVfdHlw",
             "ZRgEIAEoDjI7Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRlbnNvcmJv",
@@ -54,7 +54,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "ZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0",
             "Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries), global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries.Parser, new[]{ "Name", "DisplayName", "Description", "ValueType", "CreateTime", "UpdateTime", "Etag", "PluginName", "PluginData", "Metadata" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries.Types.ValueType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries.Types.Metadata), global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeries.Types.Metadata.Parser, new[]{ "MaxStep", "MaxWallTime", "MaxBlobSequenceLength" }, null, null, null, null)})
           }));

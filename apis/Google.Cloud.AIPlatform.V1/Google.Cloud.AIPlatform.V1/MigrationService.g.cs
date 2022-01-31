@@ -25,13 +25,13 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9taWdyYXRpb25fc2Vydmlj",
-            "ZS5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaKGdvb2dsZS9j",
-            "bG91ZC9haXBsYXRmb3JtL3YxL2RhdGFzZXQucHJvdG8aJmdvb2dsZS9jbG91",
-            "ZC9haXBsYXRmb3JtL3YxL21vZGVsLnByb3RvGhxnb29nbGUvYXBpL2Fubm90",
-            "YXRpb25zLnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxofZ29vZ2xl",
-            "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxo0Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvbWlncmF0YWJs",
-            "ZV9yZXNvdXJjZS5wcm90bxoqZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEv",
+            "ZS5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9h",
+            "cGkvYW5ub3RhdGlvbnMucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3Rv",
+            "Gh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBp",
+            "L3Jlc291cmNlLnByb3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9k",
+            "YXRhc2V0LnByb3RvGjRnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9taWdy",
+            "YXRhYmxlX3Jlc291cmNlLnByb3RvGiZnb29nbGUvY2xvdWQvYWlwbGF0Zm9y",
+            "bS92MS9tb2RlbC5wcm90bxoqZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEv",
             "b3BlcmF0aW9uLnByb3RvGiNnb29nbGUvbG9uZ3J1bm5pbmcvb3BlcmF0aW9u",
             "cy5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8ilAEKIFNlYXJjaE1p",
             "Z3JhdGFibGVSZXNvdXJjZXNSZXF1ZXN0EjkKBnBhcmVudBgBIAEoCUIp4EEC",
@@ -115,7 +115,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "VjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xv",
             "dWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AIPlatform.V1.DatasetReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MigratableResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DatasetReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.MigratableResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.OperationReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchMigratableResourcesRequest), global::Google.Cloud.AIPlatform.V1.SearchMigratableResourcesRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SearchMigratableResourcesResponse), global::Google.Cloud.AIPlatform.V1.SearchMigratableResourcesResponse.Parser, new[]{ "MigratableResources", "NextPageToken" }, null, null, null, null),

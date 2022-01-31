@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjJnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tYWNoaW5lX3Jlc291cmNl",
-            "cy5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9h",
-            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aMWdvb2dsZS9jbG91ZC9haXBsYXRm",
-            "b3JtL3YxL2FjY2VsZXJhdG9yX3R5cGUucHJvdG8aHGdvb2dsZS9hcGkvYW5u",
-            "b3RhdGlvbnMucHJvdG8ijwEKC01hY2hpbmVTcGVjEhkKDG1hY2hpbmVfdHlw",
+            "cy5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9h",
+            "cGkvYW5ub3RhdGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZp",
+            "b3IucHJvdG8aMWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL2FjY2VsZXJh",
+            "dG9yX3R5cGUucHJvdG8ijwEKC01hY2hpbmVTcGVjEhkKDG1hY2hpbmVfdHlw",
             "ZRgBIAEoCUID4EEFEkoKEGFjY2VsZXJhdG9yX3R5cGUYAiABKA4yKy5nb29n",
             "bGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BY2NlbGVyYXRvclR5cGVCA+BBBRIZ",
             "ChFhY2NlbGVyYXRvcl9jb3VudBgDIAEoBSL4AQoSRGVkaWNhdGVkUmVzb3Vy",
@@ -53,7 +53,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
             "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.AcceleratorTypeReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MachineSpec), global::Google.Cloud.AIPlatform.V1.MachineSpec.Parser, new[]{ "MachineType", "AcceleratorType", "AcceleratorCount" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DedicatedResources), global::Google.Cloud.AIPlatform.V1.DedicatedResources.Parser, new[]{ "MachineSpec", "MinReplicaCount", "MaxReplicaCount", "AutoscalingMetricSpecs" }, null, null, null, null),

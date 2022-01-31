@@ -26,16 +26,16 @@ namespace Google.Cloud.AIPlatform.V1 {
           string.Concat(
             "CkBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tb2RlbF9kZXBsb3ltZW50",
             "X21vbml0b3Jpbmdfam9iLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9y",
-            "bS52MRofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xl",
-            "L2FwaS9yZXNvdXJjZS5wcm90bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0v",
-            "djEvZW5jcnlwdGlvbl9zcGVjLnByb3RvGjlnb29nbGUvY2xvdWQvYWlwbGF0",
-            "Zm9ybS92MS9mZWF0dXJlX21vbml0b3Jpbmdfc3RhdHMucHJvdG8aI2dvb2ds",
-            "ZS9jbG91ZC9haXBsYXRmb3JtL3YxL2lvLnByb3RvGipnb29nbGUvY2xvdWQv",
-            "YWlwbGF0Zm9ybS92MS9qb2Jfc3RhdGUucHJvdG8aMWdvb2dsZS9jbG91ZC9h",
-            "aXBsYXRmb3JtL3YxL21vZGVsX21vbml0b3JpbmcucHJvdG8aHmdvb2dsZS9w",
-            "cm90b2J1Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVj",
-            "dC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29v",
-            "Z2xlL3JwYy9zdGF0dXMucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
+            "bS52MRocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2Fw",
+            "aS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5w",
+            "cm90bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9z",
+            "cGVjLnByb3RvGjlnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJl",
+            "X21vbml0b3Jpbmdfc3RhdHMucHJvdG8aI2dvb2dsZS9jbG91ZC9haXBsYXRm",
+            "b3JtL3YxL2lvLnByb3RvGipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9q",
+            "b2Jfc3RhdGUucHJvdG8aMWdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL21v",
+            "ZGVsX21vbml0b3JpbmcucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlv",
+            "bi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMu",
             "cHJvdG8iqQ4KHE1vZGVsRGVwbG95bWVudE1vbml0b3JpbmdKb2ISEQoEbmFt",
             "ZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEjwKCGVu",
             "ZHBvaW50GAMgASgJQirgQQL6QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
@@ -115,7 +115,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "LkFJUGxhdGZvcm0uVjHKAhpHb29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoC",
             "HUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.FeatureMonitoringStatsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ModelMonitoringReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringObjectiveType), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob.Parser, new[]{ "Name", "DisplayName", "Endpoint", "State", "ScheduleState", "ModelDeploymentMonitoringObjectiveConfigs", "ModelDeploymentMonitoringScheduleConfig", "LoggingSamplingStrategy", "ModelMonitoringAlertConfig", "PredictInstanceSchemaUri", "SamplePredictInstance", "AnalysisInstanceSchemaUri", "BigqueryTables", "LogTtl", "Labels", "CreateTime", "UpdateTime", "NextScheduleTime", "StatsAnomaliesBaseDirectory", "EncryptionSpec", "EnableMonitoringPipelineLogs", "Error" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringJob.Types.MonitoringScheduleState) }, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable), global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Parser, new[]{ "LogSource", "LogType", "BigqueryTablePath" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Types.LogSource), typeof(global::Google.Cloud.AIPlatform.V1.ModelDeploymentMonitoringBigQueryTable.Types.LogType) }, null, null),
@@ -1957,8 +1957,8 @@ namespace Google.Cloud.AIPlatform.V1 {
     public const int MonitorIntervalFieldNumber = 1;
     private global::Google.Protobuf.WellKnownTypes.Duration monitorInterval_;
     /// <summary>
-    /// Required. The model monitoring job running interval. It will be rounded up to next
-    /// full hour.
+    /// Required. The model monitoring job scheduling interval. It will be rounded up to next
+    /// full hour. This defines how often the monitoring jobs are triggered.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

@@ -25,15 +25,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cjpnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9oeXBlcnBhcmFtZXRlcl90",
-            "dW5pbmdfam9iLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRof",
-            "Z29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9y",
-            "ZXNvdXJjZS5wcm90bxorZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvY3Vz",
-            "dG9tX2pvYi5wcm90bxowZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5j",
-            "cnlwdGlvbl9zcGVjLnByb3RvGipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92",
-            "MS9qb2Jfc3RhdGUucHJvdG8aJmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3Yx",
-            "L3N0dWR5LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90byL7BwoXSHlwZXJwYXJhbWV0ZXJUdW5pbmdKb2ISEQoEbmFt",
+            "dW5pbmdfam9iLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRoc",
+            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVs",
+            "ZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxor",
+            "Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvY3VzdG9tX2pvYi5wcm90bxow",
+            "Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnBy",
+            "b3RvGipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9qb2Jfc3RhdGUucHJv",
+            "dG8aJmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL3N0dWR5LnByb3RvGh9n",
+            "b29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBjL3N0",
+            "YXR1cy5wcm90byL7BwoXSHlwZXJwYXJhbWV0ZXJUdW5pbmdKb2ISEQoEbmFt",
             "ZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEj4KCnN0",
             "dWR5X3NwZWMYBCABKAsyJS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
             "dHVkeVNwZWNCA+BBAhIcCg9tYXhfdHJpYWxfY291bnQYBSABKAVCA+BBAhIh",
@@ -63,7 +63,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.CustomJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.CustomJobReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.JobStateReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.StudyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.HyperparameterTuningJob), global::Google.Cloud.AIPlatform.V1.HyperparameterTuningJob.Parser, new[]{ "Name", "DisplayName", "StudySpec", "MaxTrialCount", "ParallelTrialCount", "MaxFailedTrialCount", "TrialJobSpec", "Trials", "State", "CreateTime", "StartTime", "EndTime", "UpdateTime", "Error", "Labels", "EncryptionSpec" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

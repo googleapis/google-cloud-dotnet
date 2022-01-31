@@ -25,11 +25,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9saW5lYWdlX3N1YmdyYXBo",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRopZ29vZ2xlL2Ns",
-            "b3VkL2FpcGxhdGZvcm0vdjEvYXJ0aWZhY3QucHJvdG8aJmdvb2dsZS9jbG91",
-            "ZC9haXBsYXRmb3JtL3YxL2V2ZW50LnByb3RvGipnb29nbGUvY2xvdWQvYWlw",
-            "bGF0Zm9ybS92MS9leGVjdXRpb24ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8iuAEKD0xpbmVhZ2VTdWJncmFwaBI3CglhcnRpZmFjdHMY",
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xlL2Fw",
+            "aS9hbm5vdGF0aW9ucy5wcm90bxopZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0v",
+            "djEvYXJ0aWZhY3QucHJvdG8aJmdvb2dsZS9jbG91ZC9haXBsYXRmb3JtL3Yx",
+            "L2V2ZW50LnByb3RvGipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9leGVj",
+            "dXRpb24ucHJvdG8iuAEKD0xpbmVhZ2VTdWJncmFwaBI3CglhcnRpZmFjdHMY",
             "ASADKAsyJC5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5BcnRpZmFjdBI5",
             "CgpleGVjdXRpb25zGAIgAygLMiUuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0u",
             "djEuRXhlY3V0aW9uEjEKBmV2ZW50cxgDIAMoCzIhLmdvb2dsZS5jbG91ZC5h",
@@ -40,7 +40,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b29nbGVcQ2xvdWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJ",
             "UGxhdGZvcm06OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.AIPlatform.V1.ArtifactReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EventReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExecutionReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ArtifactReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EventReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExecutionReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.LineageSubgraph), global::Google.Cloud.AIPlatform.V1.LineageSubgraph.Parser, new[]{ "Artifacts", "Executions", "Events" }, null, null, null, null)
           }));

@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cipnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9vcGVyYXRpb24ucHJvdG8S",
-            "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2ZpZWxk",
-            "X2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvGhdnb29nbGUvcnBjL3N0YXR1cy5wcm90bxocZ29vZ2xlL2FwaS9hbm5v",
-            "dGF0aW9ucy5wcm90byK5AQoYR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhEjEK",
+            "Gmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29nbGUvYXBpL2Fubm90",
+            "YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3Rv",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhdnb29nbGUvcnBj",
+            "L3N0YXR1cy5wcm90byK5AQoYR2VuZXJpY09wZXJhdGlvbk1ldGFkYXRhEjEK",
             "EHBhcnRpYWxfZmFpbHVyZXMYASADKAsyEi5nb29nbGUucnBjLlN0YXR1c0ID",
             "4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRp",
             "bWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1lGAMgASgLMhouZ29vZ2xlLnBy",
@@ -41,7 +41,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29v",
             "Z2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata), global::Google.Cloud.AIPlatform.V1.GenericOperationMetadata.Parser, new[]{ "PartialFailures", "CreateTime", "UpdateTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.DeleteOperationMetadata), global::Google.Cloud.AIPlatform.V1.DeleteOperationMetadata.Parser, new[]{ "GenericMetadata" }, null, null, null, null)

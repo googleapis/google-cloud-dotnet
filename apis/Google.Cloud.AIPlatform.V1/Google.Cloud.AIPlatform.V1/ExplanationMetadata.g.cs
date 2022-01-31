@@ -25,9 +25,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjVnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9leHBsYW5hdGlvbl9tZXRh",
-            "ZGF0YS5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2ds",
-            "ZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9z",
-            "dHJ1Y3QucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ishIK",
+            "ZGF0YS5wcm90bxIaZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2ds",
+            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVo",
+            "YXZpb3IucHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8ishIK",
             "E0V4cGxhbmF0aW9uTWV0YWRhdGESUAoGaW5wdXRzGAEgAygLMjsuZ29vZ2xl",
             "LmNsb3VkLmFpcGxhdGZvcm0udjEuRXhwbGFuYXRpb25NZXRhZGF0YS5JbnB1",
             "dHNFbnRyeUID4EECElIKB291dHB1dHMYAiADKAsyPC5nb29nbGUuY2xvdWQu",
@@ -87,7 +87,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQ",
             "bGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata), global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Parser, new[]{ "Inputs", "Outputs", "FeatureAttributionsSchemaUri" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata), global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Parser, new[]{ "InputBaselines", "InputTensorName", "Encoding", "Modality", "FeatureValueDomain", "IndicesTensorName", "DenseShapeTensorName", "IndexFeatureMapping", "EncodedTensorName", "EncodedBaselines", "Visualization", "GroupName" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Encoding) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.FeatureValueDomain), global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.FeatureValueDomain.Parser, new[]{ "MinValue", "MaxValue", "OriginalMean", "OriginalStddev" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization), global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization.Parser, new[]{ "Type", "Polarity", "ColorMap", "ClipPercentUpperbound", "ClipPercentLowerbound", "OverlayType" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.Type), typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.Polarity), typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.ColorMap), typeof(global::Google.Cloud.AIPlatform.V1.ExplanationMetadata.Types.InputMetadata.Types.Visualization.Types.OverlayType) }, null, null)}),

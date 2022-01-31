@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cjdnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS90ZW5zb3Jib2FyZF9leHBl",
-            "cmltZW50LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29v",
-            "Z2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNv",
-            "dXJjZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byL3AwoVVGVuc29yYm9hcmRF",
+            "cmltZW50LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29v",
+            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9i",
+            "ZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byL3AwoVVGVuc29yYm9hcmRF",
             "eHBlcmltZW50EhEKBG5hbWUYASABKAlCA+BBAxIUCgxkaXNwbGF5X25hbWUY",
             "AiABKAkSEwoLZGVzY3JpcHRpb24YAyABKAkSNAoLY3JlYXRlX3RpbWUYBCAB",
             "KAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRl",
@@ -47,7 +47,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TensorboardExperiment), global::Google.Cloud.AIPlatform.V1.TensorboardExperiment.Parser, new[]{ "Name", "DisplayName", "Description", "CreateTime", "UpdateTime", "Labels", "Etag", "Source" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

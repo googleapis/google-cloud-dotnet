@@ -25,11 +25,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS90ZW5zb3Jib2FyZF9kYXRh",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2Fw",
-            "aS9maWVsZF9iZWhhdmlvci5wcm90bxo4Z29vZ2xlL2Nsb3VkL2FpcGxhdGZv",
-            "cm0vdjEvdGVuc29yYm9hcmRfdGltZV9zZXJpZXMucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8i2AEKDlRpbWVTZXJpZXNEYXRhEicKGnRlbnNvcmJvYXJkX3Rp",
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xlL2Fw",
+            "aS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
+            "ci5wcm90bxo4Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvdGVuc29yYm9h",
+            "cmRfdGltZV9zZXJpZXMucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8i2AEKDlRpbWVTZXJpZXNEYXRhEicKGnRlbnNvcmJvYXJkX3Rp",
             "bWVfc2VyaWVzX2lkGAEgASgJQgPgQQISVwoKdmFsdWVfdHlwZRgCIAEoDjI7",
             "Lmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLlRlbnNvcmJvYXJkVGltZVNl",
             "cmllcy5WYWx1ZVR5cGVCBuBBAuBBBRJECgZ2YWx1ZXMYAyADKAsyLy5nb29n",
@@ -52,7 +52,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "b3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6",
             "OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeriesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.TensorboardTimeSeriesReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TimeSeriesData), global::Google.Cloud.AIPlatform.V1.TimeSeriesData.Parser, new[]{ "TensorboardTimeSeriesId", "ValueType", "Values" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.TimeSeriesDataPoint), global::Google.Cloud.AIPlatform.V1.TimeSeriesDataPoint.Parser, new[]{ "Scalar", "Tensor", "Blobs", "WallTime", "Step" }, new[]{ "Value" }, null, null, null),
