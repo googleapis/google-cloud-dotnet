@@ -25,11 +25,11 @@ namespace Google.Cloud.SecretManager.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvc2VjcmV0bWFuYWdlci92MS9yZXNvdXJjZXMucHJv",
-            "dG8SHWdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
-            "bnMucHJvdG8i3gQKBlNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSRwoLcmVw",
+            "dG8SHWdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxGhxnb29nbGUvYXBp",
+            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
+            "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh5nb29nbGUvcHJv",
+            "dG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3Rh",
+            "bXAucHJvdG8i3gQKBlNlY3JldBIRCgRuYW1lGAEgASgJQgPgQQMSRwoLcmVw",
             "bGljYXRpb24YAiABKAsyKi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52",
             "MS5SZXBsaWNhdGlvbkIG4EEF4EECEjQKC2NyZWF0ZV90aW1lGAMgASgLMhou",
             "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkEKBmxhYmVscxgEIAMo",
@@ -42,63 +42,65 @@ namespace Google.Cloud.SecretManager.V1 {
             "cmV0bWFuYWdlci52MS5Sb3RhdGlvbkID4EEBGi0KC0xhYmVsc0VudHJ5EgsK",
             "A2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToCOAE6TepBSgojc2VjcmV0bWFu",
             "YWdlci5nb29nbGVhcGlzLmNvbS9TZWNyZXQSI3Byb2plY3RzL3twcm9qZWN0",
-            "fS9zZWNyZXRzL3tzZWNyZXR9QgwKCmV4cGlyYXRpb24i8gMKDVNlY3JldFZl",
+            "fS9zZWNyZXRzL3tzZWNyZXR9QgwKCmV4cGlyYXRpb24iogQKDVNlY3JldFZl",
             "cnNpb24SEQoEbmFtZRgBIAEoCUID4EEDEjQKC2NyZWF0ZV90aW1lGAIgASgL",
             "MhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjUKDGRlc3Ryb3lf",
             "dGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJG",
             "CgVzdGF0ZRgEIAEoDjIyLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYx",
             "LlNlY3JldFZlcnNpb24uU3RhdGVCA+BBAxJMChJyZXBsaWNhdGlvbl9zdGF0",
             "dXMYBSABKAsyMC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBs",
-            "aWNhdGlvblN0YXR1cxIRCgRldGFnGAYgASgJQgPgQQMiSAoFU3RhdGUSFQoR",
-            "U1RBVEVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJMRUQQ",
-            "AhINCglERVNUUk9ZRUQQAzpu6kFrCipzZWNyZXRtYW5hZ2VyLmdvb2dsZWFw",
-            "aXMuY29tL1NlY3JldFZlcnNpb24SPXByb2plY3RzL3twcm9qZWN0fS9zZWNy",
-            "ZXRzL3tzZWNyZXR9L3ZlcnNpb25zL3tzZWNyZXRfdmVyc2lvbn0ikAQKC1Jl",
-            "cGxpY2F0aW9uEkkKCWF1dG9tYXRpYxgBIAEoCzI0Lmdvb2dsZS5jbG91ZC5z",
-            "ZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uLkF1dG9tYXRpY0gAEk4KDHVz",
-            "ZXJfbWFuYWdlZBgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2Vy",
-            "LnYxLlJlcGxpY2F0aW9uLlVzZXJNYW5hZ2VkSAAabwoJQXV0b21hdGljEmIK",
-            "G2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgBIAEoCzI4Lmdvb2dsZS5j",
+            "aWNhdGlvblN0YXR1cxIRCgRldGFnGAYgASgJQgPgQQMSLgohY2xpZW50X3Nw",
+            "ZWNpZmllZF9wYXlsb2FkX2NoZWNrc3VtGAcgASgIQgPgQQMiSAoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABILCgdFTkFCTEVEEAESDAoIRElTQUJM",
+            "RUQQAhINCglERVNUUk9ZRUQQAzpu6kFrCipzZWNyZXRtYW5hZ2VyLmdvb2ds",
+            "ZWFwaXMuY29tL1NlY3JldFZlcnNpb24SPXByb2plY3RzL3twcm9qZWN0fS9z",
+            "ZWNyZXRzL3tzZWNyZXR9L3ZlcnNpb25zL3tzZWNyZXRfdmVyc2lvbn0ikAQK",
+            "C1JlcGxpY2F0aW9uEkkKCWF1dG9tYXRpYxgBIAEoCzI0Lmdvb2dsZS5jbG91",
+            "ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9uLkF1dG9tYXRpY0gAEk4K",
+            "DHVzZXJfbWFuYWdlZBgCIAEoCzI2Lmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5h",
+            "Z2VyLnYxLlJlcGxpY2F0aW9uLlVzZXJNYW5hZ2VkSAAabwoJQXV0b21hdGlj",
+            "EmIKG2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgBIAEoCzI4Lmdvb2ds",
+            "ZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5",
+            "cHRpb25CA+BBARrlAQoLVXNlck1hbmFnZWQSVQoIcmVwbGljYXMYASADKAsy",
+            "Pi5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbi5V",
+            "c2VyTWFuYWdlZC5SZXBsaWNhQgPgQQIafwoHUmVwbGljYRIQCghsb2NhdGlv",
+            "bhgBIAEoCRJiChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YAiABKAsy",
+            "OC5nb29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFn",
+            "ZWRFbmNyeXB0aW9uQgPgQQFCDQoLcmVwbGljYXRpb24iNgoZQ3VzdG9tZXJN",
+            "YW5hZ2VkRW5jcnlwdGlvbhIZCgxrbXNfa2V5X25hbWUYASABKAlCA+BBAiLr",
+            "BAoRUmVwbGljYXRpb25TdGF0dXMSVQoJYXV0b21hdGljGAEgASgLMkAuZ29v",
+            "Z2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMu",
+            "QXV0b21hdGljU3RhdHVzSAASWgoMdXNlcl9tYW5hZ2VkGAIgASgLMkIuZ29v",
+            "Z2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMu",
+            "VXNlck1hbmFnZWRTdGF0dXNIABp7Cg9BdXRvbWF0aWNTdGF0dXMSaAobY3Vz",
+            "dG9tZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAEgASgLMj4uZ29vZ2xlLmNsb3Vk",
+            "LnNlY3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0",
+            "YXR1c0ID4EEDGo8CChFVc2VyTWFuYWdlZFN0YXR1cxJnCghyZXBsaWNhcxgB",
+            "IAMoCzJQLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0",
+            "aW9uU3RhdHVzLlVzZXJNYW5hZ2VkU3RhdHVzLlJlcGxpY2FTdGF0dXNCA+BB",
+            "AxqQAQoNUmVwbGljYVN0YXR1cxIVCghsb2NhdGlvbhgBIAEoCUID4EEDEmgK",
+            "G2N1c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgCIAEoCzI+Lmdvb2dsZS5j",
             "bG91ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRp",
-            "b25CA+BBARrlAQoLVXNlck1hbmFnZWQSVQoIcmVwbGljYXMYASADKAsyPi5n",
-            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5SZXBsaWNhdGlvbi5Vc2Vy",
-            "TWFuYWdlZC5SZXBsaWNhQgPgQQIafwoHUmVwbGljYRIQCghsb2NhdGlvbhgB",
-            "IAEoCRJiChtjdXN0b21lcl9tYW5hZ2VkX2VuY3J5cHRpb24YAiABKAsyOC5n",
-            "b29nbGUuY2xvdWQuc2VjcmV0bWFuYWdlci52MS5DdXN0b21lck1hbmFnZWRF",
-            "bmNyeXB0aW9uQgPgQQFCDQoLcmVwbGljYXRpb24iNgoZQ3VzdG9tZXJNYW5h",
-            "Z2VkRW5jcnlwdGlvbhIZCgxrbXNfa2V5X25hbWUYASABKAlCA+BBAiLrBAoR",
-            "UmVwbGljYXRpb25TdGF0dXMSVQoJYXV0b21hdGljGAEgASgLMkAuZ29vZ2xl",
-            "LmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMuQXV0",
-            "b21hdGljU3RhdHVzSAASWgoMdXNlcl9tYW5hZ2VkGAIgASgLMkIuZ29vZ2xl",
-            "LmNsb3VkLnNlY3JldG1hbmFnZXIudjEuUmVwbGljYXRpb25TdGF0dXMuVXNl",
-            "ck1hbmFnZWRTdGF0dXNIABp7Cg9BdXRvbWF0aWNTdGF0dXMSaAobY3VzdG9t",
-            "ZXJfbWFuYWdlZF9lbmNyeXB0aW9uGAEgASgLMj4uZ29vZ2xlLmNsb3VkLnNl",
-            "Y3JldG1hbmFnZXIudjEuQ3VzdG9tZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1",
-            "c0ID4EEDGo8CChFVc2VyTWFuYWdlZFN0YXR1cxJnCghyZXBsaWNhcxgBIAMo",
-            "CzJQLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxLlJlcGxpY2F0aW9u",
-            "U3RhdHVzLlVzZXJNYW5hZ2VkU3RhdHVzLlJlcGxpY2FTdGF0dXNCA+BBAxqQ",
-            "AQoNUmVwbGljYVN0YXR1cxIVCghsb2NhdGlvbhgBIAEoCUID4EEDEmgKG2N1",
-            "c3RvbWVyX21hbmFnZWRfZW5jcnlwdGlvbhgCIAEoCzI+Lmdvb2dsZS5jbG91",
-            "ZC5zZWNyZXRtYW5hZ2VyLnYxLkN1c3RvbWVyTWFuYWdlZEVuY3J5cHRpb25T",
-            "dGF0dXNCA+BBA0IUChJyZXBsaWNhdGlvbl9zdGF0dXMiRAofQ3VzdG9tZXJN",
-            "YW5hZ2VkRW5jcnlwdGlvblN0YXR1cxIhChRrbXNfa2V5X3ZlcnNpb25fbmFt",
-            "ZRgBIAEoCUID4EECIl8KBVRvcGljEhEKBG5hbWUYASABKAlCA+BBAjpD6kFA",
-            "ChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXByb2plY3RzL3twcm9q",
-            "ZWN0fS90b3BpY3Mve3RvcGljfSKAAQoIUm90YXRpb24SOwoSbmV4dF9yb3Rh",
-            "dGlvbl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID",
-            "4EEBEjcKD3JvdGF0aW9uX3BlcmlvZBgCIAEoCzIZLmdvb2dsZS5wcm90b2J1",
-            "Zi5EdXJhdGlvbkID4EEEIh0KDVNlY3JldFBheWxvYWQSDAoEZGF0YRgBIAEo",
-            "DELtAQohY29tLmdvb2dsZS5jbG91ZC5zZWNyZXRtYW5hZ2VyLnYxQg5SZXNv",
-            "dXJjZXNQcm90b1ABWkpnb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29n",
-            "bGVhcGlzL2Nsb3VkL3NlY3JldG1hbmFnZXIvdjE7c2VjcmV0bWFuYWdlcvgB",
-            "AaICA0dTTaoCHUdvb2dsZS5DbG91ZC5TZWNyZXRNYW5hZ2VyLlYxygIdR29v",
-            "Z2xlXENsb3VkXFNlY3JldE1hbmFnZXJcVjHqAiBHb29nbGU6OkNsb3VkOjpT",
-            "ZWNyZXRNYW5hZ2VyOjpWMWIGcHJvdG8z"));
+            "b25TdGF0dXNCA+BBA0IUChJyZXBsaWNhdGlvbl9zdGF0dXMiRAofQ3VzdG9t",
+            "ZXJNYW5hZ2VkRW5jcnlwdGlvblN0YXR1cxIhChRrbXNfa2V5X3ZlcnNpb25f",
+            "bmFtZRgBIAEoCUID4EECIl8KBVRvcGljEhEKBG5hbWUYASABKAlCA+BBAjpD",
+            "6kFAChtwdWJzdWIuZ29vZ2xlYXBpcy5jb20vVG9waWMSIXByb2plY3RzL3tw",
+            "cm9qZWN0fS90b3BpY3Mve3RvcGljfSKAAQoIUm90YXRpb24SOwoSbmV4dF9y",
+            "b3RhdGlvbl90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFt",
+            "cEID4EEBEjcKD3JvdGF0aW9uX3BlcmlvZBgCIAEoCzIZLmdvb2dsZS5wcm90",
+            "b2J1Zi5EdXJhdGlvbkID4EEEIkwKDVNlY3JldFBheWxvYWQSDAoEZGF0YRgB",
+            "IAEoDBIdCgtkYXRhX2NyYzMyYxgCIAEoA0ID4EEBSACIAQFCDgoMX2RhdGFf",
+            "Y3JjMzJjQu0BCiFjb20uZ29vZ2xlLmNsb3VkLnNlY3JldG1hbmFnZXIudjFC",
+            "DlJlc291cmNlc1Byb3RvUAFaSmdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3Rv",
+            "L2dvb2dsZWFwaXMvY2xvdWQvc2VjcmV0bWFuYWdlci92MTtzZWNyZXRtYW5h",
+            "Z2Vy+AEBogIDR1NNqgIdR29vZ2xlLkNsb3VkLlNlY3JldE1hbmFnZXIuVjHK",
+            "Ah1Hb29nbGVcQ2xvdWRcU2VjcmV0TWFuYWdlclxWMeoCIEdvb2dsZTo6Q2xv",
+            "dWQ6OlNlY3JldE1hbmFnZXI6OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Secret), global::Google.Cloud.SecretManager.V1.Secret.Parser, new[]{ "Name", "Replication", "CreateTime", "Labels", "Topics", "ExpireTime", "Ttl", "Etag", "Rotation" }, new[]{ "Expiration" }, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus", "Etag" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretVersion), global::Google.Cloud.SecretManager.V1.SecretVersion.Parser, new[]{ "Name", "CreateTime", "DestroyTime", "State", "ReplicationStatus", "Etag", "ClientSpecifiedPayloadChecksum" }, null, new[]{ typeof(global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication), global::Google.Cloud.SecretManager.V1.Replication.Parser, new[]{ "Automatic", "UserManaged" }, new[]{ "Replication" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic), global::Google.Cloud.SecretManager.V1.Replication.Types.Automatic.Parser, new[]{ "CustomerManagedEncryption" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Parser, new[]{ "Replicas" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica), global::Google.Cloud.SecretManager.V1.Replication.Types.UserManaged.Types.Replica.Parser, new[]{ "Location", "CustomerManagedEncryption" }, null, null, null, null)})}),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption), global::Google.Cloud.SecretManager.V1.CustomerManagedEncryption.Parser, new[]{ "KmsKeyName" }, null, null, null, null),
@@ -107,7 +109,7 @@ namespace Google.Cloud.SecretManager.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus), global::Google.Cloud.SecretManager.V1.CustomerManagedEncryptionStatus.Parser, new[]{ "KmsKeyVersionName" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Topic), global::Google.Cloud.SecretManager.V1.Topic.Parser, new[]{ "Name" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.Rotation), global::Google.Cloud.SecretManager.V1.Rotation.Parser, new[]{ "NextRotationTime", "RotationPeriod" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretPayload), global::Google.Cloud.SecretManager.V1.SecretPayload.Parser, new[]{ "Data" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecretManager.V1.SecretPayload), global::Google.Cloud.SecretManager.V1.SecretPayload.Parser, new[]{ "Data", "DataCrc32C" }, new[]{ "DataCrc32C" }, null, null, null)
           }));
     }
     #endregion
@@ -755,6 +757,7 @@ namespace Google.Cloud.SecretManager.V1 {
       state_ = other.state_;
       replicationStatus_ = other.replicationStatus_ != null ? other.replicationStatus_.Clone() : null;
       etag_ = other.etag_;
+      clientSpecifiedPayloadChecksum_ = other.clientSpecifiedPayloadChecksum_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -860,6 +863,23 @@ namespace Google.Cloud.SecretManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "client_specified_payload_checksum" field.</summary>
+    public const int ClientSpecifiedPayloadChecksumFieldNumber = 7;
+    private bool clientSpecifiedPayloadChecksum_;
+    /// <summary>
+    /// Output only. True if payload checksum specified in [SecretPayload][google.cloud.secretmanager.v1.SecretPayload] object has been
+    /// received by [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService] on
+    /// [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion].
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool ClientSpecifiedPayloadChecksum {
+      get { return clientSpecifiedPayloadChecksum_; }
+      set {
+        clientSpecifiedPayloadChecksum_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -881,6 +901,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (State != other.State) return false;
       if (!object.Equals(ReplicationStatus, other.ReplicationStatus)) return false;
       if (Etag != other.Etag) return false;
+      if (ClientSpecifiedPayloadChecksum != other.ClientSpecifiedPayloadChecksum) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -894,6 +915,7 @@ namespace Google.Cloud.SecretManager.V1 {
       if (State != global::Google.Cloud.SecretManager.V1.SecretVersion.Types.State.Unspecified) hash ^= State.GetHashCode();
       if (replicationStatus_ != null) hash ^= ReplicationStatus.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
+      if (ClientSpecifiedPayloadChecksum != false) hash ^= ClientSpecifiedPayloadChecksum.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -936,6 +958,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      if (ClientSpecifiedPayloadChecksum != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(ClientSpecifiedPayloadChecksum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -970,6 +996,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(50);
         output.WriteString(Etag);
       }
+      if (ClientSpecifiedPayloadChecksum != false) {
+        output.WriteRawTag(56);
+        output.WriteBool(ClientSpecifiedPayloadChecksum);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -997,6 +1027,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (Etag.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Etag);
+      }
+      if (ClientSpecifiedPayloadChecksum != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1036,6 +1069,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
+      }
+      if (other.ClientSpecifiedPayloadChecksum != false) {
+        ClientSpecifiedPayloadChecksum = other.ClientSpecifiedPayloadChecksum;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -1085,6 +1121,10 @@ namespace Google.Cloud.SecretManager.V1 {
             Etag = input.ReadString();
             break;
           }
+          case 56: {
+            ClientSpecifiedPayloadChecksum = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -1131,6 +1171,10 @@ namespace Google.Cloud.SecretManager.V1 {
           }
           case 50: {
             Etag = input.ReadString();
+            break;
+          }
+          case 56: {
+            ClientSpecifiedPayloadChecksum = input.ReadBool();
             break;
           }
         }
@@ -3967,6 +4011,7 @@ namespace Google.Cloud.SecretManager.V1 {
   {
     private static readonly pb::MessageParser<SecretPayload> _parser = new pb::MessageParser<SecretPayload>(() => new SecretPayload());
     private pb::UnknownFieldSet _unknownFields;
+    private int _hasBits0;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pb::MessageParser<SecretPayload> Parser { get { return _parser; } }
@@ -3994,7 +4039,9 @@ namespace Google.Cloud.SecretManager.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public SecretPayload(SecretPayload other) : this() {
+      _hasBits0 = other._hasBits0;
       data_ = other.data_;
+      dataCrc32C_ = other.dataCrc32C_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -4019,6 +4066,43 @@ namespace Google.Cloud.SecretManager.V1 {
       }
     }
 
+    /// <summary>Field number for the "data_crc32c" field.</summary>
+    public const int DataCrc32CFieldNumber = 2;
+    private long dataCrc32C_;
+    /// <summary>
+    /// Optional. If specified, [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService] will verify the integrity of the
+    /// received [data][google.cloud.secretmanager.v1.SecretPayload.data] on [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion] calls using
+    /// the crc32c checksum and store it to include in future
+    /// [SecretManagerService.AccessSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AccessSecretVersion] responses. If a checksum is
+    /// not provided in the [SecretManagerService.AddSecretVersion][google.cloud.secretmanager.v1.SecretManagerService.AddSecretVersion] request, the
+    /// [SecretManagerService][google.cloud.secretmanager.v1.SecretManagerService] will generate and store one for you.
+    ///
+    /// The CRC32C value is encoded as a Int64 for compatibility, and can be
+    /// safely downconverted to uint32 in languages that support this type.
+    /// https://cloud.google.com/apis/design/design_patterns#integer_types
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public long DataCrc32C {
+      get { if ((_hasBits0 & 1) != 0) { return dataCrc32C_; } else { return 0L; } }
+      set {
+        _hasBits0 |= 1;
+        dataCrc32C_ = value;
+      }
+    }
+    /// <summary>Gets whether the "data_crc32c" field is set</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool HasDataCrc32C {
+      get { return (_hasBits0 & 1) != 0; }
+    }
+    /// <summary>Clears the value of the "data_crc32c" field</summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void ClearDataCrc32C() {
+      _hasBits0 &= ~1;
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -4035,6 +4119,7 @@ namespace Google.Cloud.SecretManager.V1 {
         return true;
       }
       if (Data != other.Data) return false;
+      if (DataCrc32C != other.DataCrc32C) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -4043,6 +4128,7 @@ namespace Google.Cloud.SecretManager.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Data.Length != 0) hash ^= Data.GetHashCode();
+      if (HasDataCrc32C) hash ^= DataCrc32C.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -4065,6 +4151,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Data);
       }
+      if (HasDataCrc32C) {
+        output.WriteRawTag(16);
+        output.WriteInt64(DataCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -4079,6 +4169,10 @@ namespace Google.Cloud.SecretManager.V1 {
         output.WriteRawTag(10);
         output.WriteBytes(Data);
       }
+      if (HasDataCrc32C) {
+        output.WriteRawTag(16);
+        output.WriteInt64(DataCrc32C);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -4091,6 +4185,9 @@ namespace Google.Cloud.SecretManager.V1 {
       int size = 0;
       if (Data.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeBytesSize(Data);
+      }
+      if (HasDataCrc32C) {
+        size += 1 + pb::CodedOutputStream.ComputeInt64Size(DataCrc32C);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -4106,6 +4203,9 @@ namespace Google.Cloud.SecretManager.V1 {
       }
       if (other.Data.Length != 0) {
         Data = other.Data;
+      }
+      if (other.HasDataCrc32C) {
+        DataCrc32C = other.DataCrc32C;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -4126,6 +4226,10 @@ namespace Google.Cloud.SecretManager.V1 {
             Data = input.ReadBytes();
             break;
           }
+          case 16: {
+            DataCrc32C = input.ReadInt64();
+            break;
+          }
         }
       }
     #endif
@@ -4143,6 +4247,10 @@ namespace Google.Cloud.SecretManager.V1 {
             break;
           case 10: {
             Data = input.ReadBytes();
+            break;
+          }
+          case 16: {
+            DataCrc32C = input.ReadInt64();
             break;
           }
         }
