@@ -25,11 +25,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Ci1nb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9mZWF0dXJlc3RvcmUucHJv",
-            "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBpL2Zp",
-            "ZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3Rv",
-            "GjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbmNyeXB0aW9uX3NwZWMu",
-            "cHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2ds",
-            "ZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8i6AUKDEZlYXR1cmVzdG9yZRIRCgRu",
+            "dG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29nbGUvYXBpL2Fu",
+            "bm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnBy",
+            "b3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGjBnb29nbGUvY2xvdWQv",
+            "YWlwbGF0Zm9ybS92MS9lbmNyeXB0aW9uX3NwZWMucHJvdG8aH2dvb2dsZS9w",
+            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8i6AUKDEZlYXR1cmVzdG9yZRIRCgRu",
             "YW1lGAEgASgJQgPgQQMSNAoLY3JlYXRlX3RpbWUYAyABKAsyGi5nb29nbGUu",
             "cHJvdG9idWYuVGltZXN0YW1wQgPgQQMSNAoLdXBkYXRlX3RpbWUYBCABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQMSEQoEZXRhZxgFIAEo",
@@ -53,7 +53,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "YXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnBy",
             "b3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore), global::Google.Cloud.AIPlatform.V1.Featurestore.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Etag", "Labels", "OnlineServingConfig", "State", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig), global::Google.Cloud.AIPlatform.V1.Featurestore.Types.OnlineServingConfig.Parser, new[]{ "FixedNodeCount" }, null, null, null, null),
             null, })
@@ -663,6 +663,8 @@ namespace Google.Cloud.AIPlatform.V1 {
         /// The number of nodes for each cluster. The number of nodes will not
         /// scale automatically but can be scaled manually by providing different
         /// values when updating.
+        /// Only one of `fixed_node_count` and `scaling` can be set. Setting one will
+        /// reset the other.
         /// </summary>
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
         [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

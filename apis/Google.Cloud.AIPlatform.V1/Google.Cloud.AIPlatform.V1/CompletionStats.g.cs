@@ -25,9 +25,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9jb21wbGV0aW9uX3N0YXRz",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xlL2Fw",
-            "aS9maWVsZF9iZWhhdmlvci5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJv",
-            "dG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8iagoPQ29tcGxldGlv",
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xlL2Fw",
+            "aS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlv",
+            "ci5wcm90bxoXZ29vZ2xlL3JwYy9zdGF0dXMucHJvdG8iagoPQ29tcGxldGlv",
             "blN0YXRzEh0KEHN1Y2Nlc3NmdWxfY291bnQYASABKANCA+BBAxIZCgxmYWls",
             "ZWRfY291bnQYAiABKANCA+BBAxIdChBpbmNvbXBsZXRlX2NvdW50GAMgASgD",
             "QgPgQQNC2AEKHmNvbS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MUIUQ29t",
@@ -37,7 +37,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "SVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFi",
             "BnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Rpc.StatusReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.CompletionStats), global::Google.Cloud.AIPlatform.V1.CompletionStats.Parser, new[]{ "SuccessfulCount", "FailedCount", "IncompleteCount" }, null, null, null, null)
           }));

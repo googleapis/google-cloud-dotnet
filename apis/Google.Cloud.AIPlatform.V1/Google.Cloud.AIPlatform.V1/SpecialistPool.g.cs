@@ -25,9 +25,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zcGVjaWFsaXN0X3Bvb2wu",
-            "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIs4CCg5TcGVjaWFs",
+            "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29nbGUvYXBp",
+            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
+            "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvIs4CCg5TcGVjaWFs",
             "aXN0UG9vbBIRCgRuYW1lGAEgASgJQgPgQQISGQoMZGlzcGxheV9uYW1lGAIg",
             "ASgJQgPgQQISJgoZc3BlY2lhbGlzdF9tYW5hZ2Vyc19jb3VudBgDIAEoBUID",
             "4EEDEiEKGXNwZWNpYWxpc3RfbWFuYWdlcl9lbWFpbHMYBCADKAkSJwoacGVu",
@@ -42,7 +42,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dWRcQUlQbGF0Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06",
             "OlYxYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.SpecialistPool), global::Google.Cloud.AIPlatform.V1.SpecialistPool.Parser, new[]{ "Name", "DisplayName", "SpecialistManagersCount", "SpecialistManagerEmails", "PendingDataLabelingJobs", "SpecialistWorkerEmails" }, null, null, null, null)
           }));

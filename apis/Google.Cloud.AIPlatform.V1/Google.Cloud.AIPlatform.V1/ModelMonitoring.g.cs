@@ -25,9 +25,9 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjFnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tb2RlbF9tb25pdG9yaW5n",
-            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRoZZ29vZ2xlL2Fw",
-            "aS9yZXNvdXJjZS5wcm90bxojZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEv",
-            "aW8ucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMucHJvdG8ipBQKHk1v",
+            "LnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xlL2Fw",
+            "aS9hbm5vdGF0aW9ucy5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90",
+            "bxojZ29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvaW8ucHJvdG8ipBQKHk1v",
             "ZGVsTW9uaXRvcmluZ09iamVjdGl2ZUNvbmZpZxJkChB0cmFpbmluZ19kYXRh",
             "c2V0GAEgASgLMkouZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuTW9kZWxN",
             "b25pdG9yaW5nT2JqZWN0aXZlQ29uZmlnLlRyYWluaW5nRGF0YXNldBKTAQop",
@@ -101,7 +101,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dWQuQUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx",
             "6gIdR29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.IoReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Parser, new[]{ "TrainingDataset", "TrainingPredictionSkewDetectionConfig", "PredictionDriftDetectionConfig", "ExplanationConfig" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingDataset), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingDataset.Parser, new[]{ "Dataset", "GcsSource", "BigquerySource", "DataFormat", "TargetField", "LoggingSamplingStrategy" }, new[]{ "DataSource" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig), global::Google.Cloud.AIPlatform.V1.ModelMonitoringObjectiveConfig.Types.TrainingPredictionSkewDetectionConfig.Parser, new[]{ "SkewThresholds", "AttributionScoreSkewThresholds" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),

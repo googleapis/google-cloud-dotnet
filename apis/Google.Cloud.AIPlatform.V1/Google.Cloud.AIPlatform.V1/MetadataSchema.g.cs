@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tZXRhZGF0YV9zY2hlbWEu",
-            "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUv",
-            "YXBpL2Fubm90YXRpb25zLnByb3RvIoAECg5NZXRhZGF0YVNjaGVtYRIRCgRu",
+            "cHJvdG8SGmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxGhxnb29nbGUvYXBp",
+            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
+            "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJv",
+            "dG9idWYvdGltZXN0YW1wLnByb3RvIoAECg5NZXRhZGF0YVNjaGVtYRIRCgRu",
             "YW1lGAEgASgJQgPgQQMSFgoOc2NoZW1hX3ZlcnNpb24YAiABKAkSEwoGc2No",
             "ZW1hGAMgASgJQgPgQQISUgoLc2NoZW1hX3R5cGUYBCABKA4yPS5nb29nbGUu",
             "Y2xvdWQuYWlwbGF0Zm9ybS52MS5NZXRhZGF0YVNjaGVtYS5NZXRhZGF0YVNj",
@@ -46,7 +46,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "bG91ZC5BSVBsYXRmb3JtLlYxygIaR29vZ2xlXENsb3VkXEFJUGxhdGZvcm1c",
             "VjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MetadataSchema), global::Google.Cloud.AIPlatform.V1.MetadataSchema.Parser, new[]{ "Name", "SchemaVersion", "Schema", "SchemaType", "CreateTime", "Description" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.MetadataSchema.Types.MetadataSchemaType) }, null, null)
           }));

@@ -25,11 +25,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cilnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9hcnRpZmFjdC5wcm90bxIa",
-            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRf",
-            "YmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJmdv",
-            "b2dsZS9jbG91ZC9haXBsYXRmb3JtL3YxL3ZhbHVlLnByb3RvGhxnb29nbGUv",
-            "cHJvdG9idWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIpQFCghB",
+            "Z29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9hcGkvYW5ub3Rh",
+            "dGlvbnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8a",
+            "GWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aJmdvb2dsZS9jbG91ZC9haXBs",
+            "YXRmb3JtL3YxL3ZhbHVlLnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0",
+            "LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvIpQFCghB",
             "cnRpZmFjdBIRCgRuYW1lGAEgASgJQgPgQQMSFAoMZGlzcGxheV9uYW1lGAIg",
             "ASgJEgsKA3VyaRgGIAEoCRIMCgRldGFnGAkgASgJEkAKBmxhYmVscxgKIAMo",
             "CzIwLmdvb2dsZS5jbG91ZC5haXBsYXRmb3JtLnYxLkFydGlmYWN0LkxhYmVs",
@@ -51,7 +51,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Gkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gIdR29vZ2xlOjpDbG91ZDo6",
             "QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ValueReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ValueReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Artifact), global::Google.Cloud.AIPlatform.V1.Artifact.Parser, new[]{ "Name", "DisplayName", "Uri", "Etag", "Labels", "CreateTime", "UpdateTime", "State", "SchemaTitle", "SchemaVersion", "Metadata", "Description" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Artifact.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));

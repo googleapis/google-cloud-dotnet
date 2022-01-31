@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjRnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9taWdyYXRhYmxlX3Jlc291",
-            "cmNlLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRofZ29vZ2xl",
-            "L2FwaS9maWVsZF9iZWhhdmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJj",
-            "ZS5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxocZ29v",
-            "Z2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byLrCQoSTWlncmF0YWJsZVJlc291",
+            "cmNlLnByb3RvEhpnb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MRocZ29vZ2xl",
+            "L2FwaS9hbm5vdGF0aW9ucy5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhh",
+            "dmlvci5wcm90bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byLrCQoSTWlncmF0YWJsZVJlc291",
             "cmNlEmsKF21sX2VuZ2luZV9tb2RlbF92ZXJzaW9uGAEgASgLMkMuZ29vZ2xl",
             "LmNsb3VkLmFpcGxhdGZvcm0udjEuTWlncmF0YWJsZVJlc291cmNlLk1sRW5n",
             "aW5lTW9kZWxWZXJzaW9uQgPgQQNIABJXCgxhdXRvbWxfbW9kZWwYAiABKAsy",
@@ -74,7 +74,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "dHMve3Byb2plY3R9L2RhdGFzZXRzL3tkYXRhc2V0fS9hbm5vdGF0ZWREYXRh",
             "c2V0cy97YW5ub3RhdGVkX2RhdGFzZXR9YgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MigratableResource), global::Google.Cloud.AIPlatform.V1.MigratableResource.Parser, new[]{ "MlEngineModelVersion", "AutomlModel", "AutomlDataset", "DataLabelingDataset", "LastMigrateTime", "LastUpdateTime" }, new[]{ "Resource" }, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.MlEngineModelVersion), global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.MlEngineModelVersion.Parser, new[]{ "Endpoint", "Version" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.AutomlModel), global::Google.Cloud.AIPlatform.V1.MigratableResource.Types.AutomlModel.Parser, new[]{ "Model", "ModelDisplayName" }, null, null, null, null),

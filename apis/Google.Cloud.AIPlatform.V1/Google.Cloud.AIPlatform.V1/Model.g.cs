@@ -25,15 +25,15 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9tb2RlbC5wcm90bxIaZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
-            "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKGdvb2ds",
-            "ZS9jbG91ZC9haXBsYXRmb3JtL3YxL2RhdGFzZXQucHJvdG8aM2dvb2dsZS9j",
-            "bG91ZC9haXBsYXRmb3JtL3YxL2RlcGxveWVkX21vZGVsX3JlZi5wcm90bxow",
-            "Z29vZ2xlL2Nsb3VkL2FpcGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnBy",
-            "b3RvGihnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnByb3Rv",
-            "Gixnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9leHBsYW5hdGlvbi5wcm90",
-            "bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3Rv",
-            "YnVmL3RpbWVzdGFtcC5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5w",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
+            "bnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
+            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aKGdvb2dsZS9jbG91ZC9haXBsYXRm",
+            "b3JtL3YxL2RhdGFzZXQucHJvdG8aM2dvb2dsZS9jbG91ZC9haXBsYXRmb3Jt",
+            "L3YxL2RlcGxveWVkX21vZGVsX3JlZi5wcm90bxowZ29vZ2xlL2Nsb3VkL2Fp",
+            "cGxhdGZvcm0vdjEvZW5jcnlwdGlvbl9zcGVjLnByb3RvGihnb29nbGUvY2xv",
+            "dWQvYWlwbGF0Zm9ybS92MS9lbnZfdmFyLnByb3RvGixnb29nbGUvY2xvdWQv",
+            "YWlwbGF0Zm9ybS92MS9leHBsYW5hdGlvbi5wcm90bxocZ29vZ2xlL3Byb3Rv",
+            "YnVmL3N0cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5w",
             "cm90byKkDAoFTW9kZWwSDAoEbmFtZRgBIAEoCRIZCgxkaXNwbGF5X25hbWUY",
             "AiABKAlCA+BBAhITCgtkZXNjcmlwdGlvbhgDIAEoCRJFChBwcmVkaWN0X3Nj",
             "aGVtYXRhGAQgASgLMisuZ29vZ2xlLmNsb3VkLmFpcGxhdGZvcm0udjEuUHJl",
@@ -85,7 +85,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "Zm9ybVxWMeoCHUdvb2dsZTo6Q2xvdWQ6OkFJUGxhdGZvcm06OlYxYgZwcm90",
             "bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DatasetReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DatasetReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.DeployedModelRefReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EncryptionSpecReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.EnvVarReflection.Descriptor, global::Google.Cloud.AIPlatform.V1.ExplanationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model), global::Google.Cloud.AIPlatform.V1.Model.Parser, new[]{ "Name", "DisplayName", "Description", "PredictSchemata", "MetadataSchemaUri", "Metadata", "SupportedExportFormats", "TrainingPipeline", "ContainerSpec", "ArtifactUri", "SupportedDeploymentResourcesTypes", "SupportedInputStorageFormats", "SupportedOutputStorageFormats", "CreateTime", "UpdateTime", "DeployedModels", "ExplanationSpec", "Etag", "Labels", "EncryptionSpec" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.DeploymentResourcesType) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat), global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Parser, new[]{ "Id", "ExportableContents" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Model.Types.ExportFormat.Types.ExportableContent) }, null, null),
             null, }),
@@ -1794,7 +1794,7 @@ namespace Google.Cloud.AIPlatform.V1 {
   /// <summary>
   /// Specification of a container for serving predictions. Some fields in this
   /// message correspond to fields in the [Kubernetes Container v1 core
-  /// specification](https://v1-18.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).
+  /// specification](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
   /// </summary>
   public sealed partial class ModelContainerSpec : pb::IMessage<ModelContainerSpec>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1917,7 +1917,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// &lt;code>$$(&lt;var>VARIABLE_NAME&lt;/var>)&lt;/code>
     /// This field corresponds to the `command` field of the Kubernetes Containers
     /// [v1 core
-    /// API](https://v1-18.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).
+    /// API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1966,7 +1966,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// &lt;code>$$(&lt;var>VARIABLE_NAME&lt;/var>)&lt;/code>
     /// This field corresponds to the `args` field of the Kubernetes Containers
     /// [v1 core
-    /// API](https://v1-18.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).
+    /// API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2007,7 +2007,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     ///
     /// This field corresponds to the `env` field of the Kubernetes Containers
     /// [v1 core
-    /// API](https://v1-18.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).
+    /// API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2041,7 +2041,7 @@ namespace Google.Cloud.AIPlatform.V1 {
     /// Vertex AI does not use ports other than the first one listed. This field
     /// corresponds to the `ports` field of the Kubernetes Containers
     /// [v1 core
-    /// API](https://v1-18.docs.kubernetes.io/docs/reference/generated/kubernetes-api/v1.18/#container-v1-core).
+    /// API](https://kubernetes.io/docs/reference/generated/kubernetes-api/v1.23/#container-v1-core).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

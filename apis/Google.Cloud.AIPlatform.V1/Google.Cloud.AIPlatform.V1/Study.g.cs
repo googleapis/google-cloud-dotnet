@@ -25,11 +25,11 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9zdHVkeS5wcm90bxIaZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
-            "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2ds",
-            "ZS9wcm90b2J1Zi9kdXJhdGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0",
-            "cnVjdC5wcm90bxofZ29vZ2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90bxoc",
-            "Z29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90byKuAwoFU3R1ZHkSEQoEbmFt",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
+            "bnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
+            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJh",
+            "dGlvbi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29v",
+            "Z2xlL3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKuAwoFU3R1ZHkSEQoEbmFt",
             "ZRgBIAEoCUID4EEDEhkKDGRpc3BsYXlfbmFtZRgCIAEoCUID4EECEj4KCnN0",
             "dWR5X3NwZWMYAyABKAsyJS5nb29nbGUuY2xvdWQuYWlwbGF0Zm9ybS52MS5T",
             "dHVkeVNwZWNCA+BBAhI7CgVzdGF0ZRgEIAEoDjInLmdvb2dsZS5jbG91ZC5h",
@@ -141,7 +141,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "QUlQbGF0Zm9ybS5WMcoCGkdvb2dsZVxDbG91ZFxBSVBsYXRmb3JtXFYx6gId",
             "R29vZ2xlOjpDbG91ZDo6QUlQbGF0Zm9ybTo6VjFiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Study), global::Google.Cloud.AIPlatform.V1.Study.Parser, new[]{ "Name", "DisplayName", "StudySpec", "State", "CreateTime", "InactiveReason" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Study.Types.State) }, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial), global::Google.Cloud.AIPlatform.V1.Trial.Parser, new[]{ "Name", "Id", "State", "Parameters", "FinalMeasurement", "Measurements", "StartTime", "EndTime", "ClientId", "InfeasibleReason", "CustomJob", "WebAccessUris" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.State) }, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter), global::Google.Cloud.AIPlatform.V1.Trial.Types.Parameter.Parser, new[]{ "ParameterId", "Value" }, null, null, null, null),
@@ -164,7 +164,6 @@ namespace Google.Cloud.AIPlatform.V1 {
   }
   #region Messages
   /// <summary>
-  /// LINT.IfChange
   /// A message representing a Study.
   /// </summary>
   public sealed partial class Study : pb::IMessage<Study>

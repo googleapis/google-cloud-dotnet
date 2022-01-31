@@ -25,10 +25,10 @@ namespace Google.Cloud.AIPlatform.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CiZnb29nbGUvY2xvdWQvYWlwbGF0Zm9ybS92MS9ldmVudC5wcm90bxIaZ29v",
-            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaH2dvb2dsZS9hcGkvZmllbGRfYmVo",
-            "YXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aHGdvb2dsZS9hcGkvYW5ub3Rh",
-            "dGlvbnMucHJvdG8imAMKBUV2ZW50EjwKCGFydGlmYWN0GAEgASgJQirgQQL6",
+            "Z2xlLmNsb3VkLmFpcGxhdGZvcm0udjEaHGdvb2dsZS9hcGkvYW5ub3RhdGlv",
+            "bnMucHJvdG8aH2dvb2dsZS9hcGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdv",
+            "b2dsZS9hcGkvcmVzb3VyY2UucHJvdG8aH2dvb2dsZS9wcm90b2J1Zi90aW1l",
+            "c3RhbXAucHJvdG8imAMKBUV2ZW50EjwKCGFydGlmYWN0GAEgASgJQirgQQL6",
             "QSQKImFpcGxhdGZvcm0uZ29vZ2xlYXBpcy5jb20vQXJ0aWZhY3QSPgoJZXhl",
             "Y3V0aW9uGAIgASgJQivgQQP6QSUKI2FpcGxhdGZvcm0uZ29vZ2xlYXBpcy5j",
             "b20vRXhlY3V0aW9uEjMKCmV2ZW50X3RpbWUYAyABKAsyGi5nb29nbGUucHJv",
@@ -44,7 +44,7 @@ namespace Google.Cloud.AIPlatform.V1 {
             "XEFJUGxhdGZvcm1cVjHqAh1Hb29nbGU6OkNsb3VkOjpBSVBsYXRmb3JtOjpW",
             "MWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.AIPlatform.V1.Event), global::Google.Cloud.AIPlatform.V1.Event.Parser, new[]{ "Artifact", "Execution", "EventTime", "Type", "Labels" }, null, new[]{ typeof(global::Google.Cloud.AIPlatform.V1.Event.Types.Type) }, null, new pbr::GeneratedClrTypeInfo[] { null, })
           }));
