@@ -96,7 +96,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         Geography,
         /// <summary>
-        /// A fixed-point number which has 76 digits of precision (plus a left most partial digit),
+        /// A fixed-point number which has 76 digits of precision (plus a leftmost partial digit),
         /// and always 38 decimal places.
         /// </summary>
         BigNumeric,

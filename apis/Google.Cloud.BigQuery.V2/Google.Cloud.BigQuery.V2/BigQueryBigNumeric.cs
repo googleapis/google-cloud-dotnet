@@ -14,35 +14,26 @@
 
 using Google.Api.Gax;
 using System;
-using System.Globalization;
-using System.Linq;
 using System.Numerics;
-using System.Text.RegularExpressions;
 
 namespace Google.Cloud.BigQuery.V2
 {
     // TODO: Implement IFormattable?
 
     /// <summary>
-    /// Representation of the BigQuery BIGNUMERIC type, which has 76 digits of precision (plus a left most partial digit),
+    /// Representation of the BigQuery BIGNUMERIC type, which has 76 digits of precision (plus a leftmost partial digit),
     /// and a fixed scale of 38 decimal places to the right of the decimal point. This is the same as to say that the type
     /// supports 38 full digits and a partial 39th digit before the decimal point and 38 digits after the decimal point.
     /// The supported value range is exactly -2^255e-38 to (2^255 - 1)e-38.
     /// </summary>
     public struct BigQueryBigNumeric : IEquatable<BigQueryBigNumeric>, IComparable<BigQueryBigNumeric>, IComparable
     {
-        private static readonly BigInteger s_maxValue = BigInteger.Pow(2, 255) - 1;
-        private static readonly BigInteger s_minValue = BigInteger.Pow(-2, 255);
+        private static readonly NumericType s_numericType = NumericType.NumericTypeFor(-BigInteger.Pow(2, 255), BigInteger.Pow(2, 255) - 1, 38);
 
-        private static readonly BigInteger[] s_powersOf10 = Enumerable.Range(0, 39).Select(p => BigInteger.Pow(10, p)).ToArray();
+        // Note: the following properties must be declared *after* s_Type. Initialization order matters.
 
-        private static readonly BigInteger s_integerScalingFactor = BigInteger.Pow(10, 38);
-        // TODO: Don't require a 0 before the decimal point.
-        // TODO: Replace with manual validation if we find this is a performance bottleneck (as it was with field name validation).
-        private static readonly Regex s_validation = new Regex(@"^-?[0-9]+\.?[0-9]*$");
-
-        // Note: the following properties must be declared *after* s_maxValue and s_minValue. Initialization order matters.
-
+        // Note that we could also return here new BigQueryNumeric(s_numericType.Zero), but
+        // that wouldn't make a difference.
         /// <summary>
         /// Zero represented as a <see cref="BigQueryBigNumeric"/>. This is the default value for the type.
         /// </summary>
@@ -51,32 +42,31 @@ namespace Google.Cloud.BigQuery.V2
         /// <summary>
         /// The maximum valid value for <see cref="BigQueryBigNumeric"/>, equal to (2^255 - 1)e-38.
         /// </summary>
-        public static BigQueryBigNumeric MaxValue { get; } = new BigQueryBigNumeric(s_maxValue);
+        public static BigQueryBigNumeric MaxValue { get; } = new BigQueryBigNumeric(s_numericType.MaxValue);
 
         /// <summary>
         /// The minimum valid value for <see cref="BigQueryBigNumeric"/>, equal to -2^255e-38.
         /// </summary>
-        public static BigQueryBigNumeric MinValue { get; } = new BigQueryBigNumeric(s_minValue);
+        public static BigQueryBigNumeric MinValue { get; } = new BigQueryBigNumeric(s_numericType.MinValue);
 
         /// <summary>
         /// The smallest positive value for <see cref="BigQueryBigNumeric"/>, equal to 1e-38.
         /// </summary>
-        public static BigQueryBigNumeric Epsilon { get; } = new BigQueryBigNumeric(1);
+        public static BigQueryBigNumeric Epsilon { get; } = new BigQueryBigNumeric(s_numericType.Epsilon);
 
-        // Integer representation, always scaled by 38 decimal places - so a value of 1 here represents
-        // a numeric value of 1e-38 for example.
-        private readonly BigInteger _integer;
+        // General purpose numeric representation. Should always be of type s_numericType unless
+        // this is default(BigQueryBigNumeric), in which case _numericValue will be default(BigQueryNumeric)
+        // whis has 0 as a value and null as type.
+        private readonly NumericValue _numericValue;
 
-        private BigQueryBigNumeric(BigInteger integer)
+        private BigQueryBigNumeric(NumericValue value)
         {
-            if (!IsRawValueInRange(integer))
-            {
-                throw new OverflowException("BigNumeric value out of range");
-            }
-            _integer = integer;
+            // This should never throw, it means there's an error on our code.
+            // At some point we maint want to accept NumericValues with a different NumericType
+            // as long as they are in range. But there's no need for that right now.
+            GaxPreconditions.CheckState(value == default || value.Type.Equals(s_numericType), "Incorrect NumericType used to build a BigQueryBigNumeric.");
+            _numericValue = value;
         }
-
-        private static bool IsRawValueInRange(BigInteger integer) => integer >= s_minValue && integer <= s_maxValue;
 
         /// <summary>
         /// Compares this value with <paramref name="other"/>.
@@ -84,7 +74,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="other">The value to compare with this one</param>
         /// <returns>A negative integer if this value is less than <paramref name="other"/>; a positive integer
         /// if it's greater than <paramref name="other"/>; zero if they're equal.</returns>
-        public int CompareTo(BigQueryBigNumeric other) => _integer.CompareTo(other._integer);
+        public int CompareTo(BigQueryBigNumeric other) => _numericValue.CompareTo(other._numericValue);
 
         /// <summary>
         /// Implementation of <see cref="IComparable.CompareTo"/> to compare two <see cref="BigQueryBigNumeric"/> values.
@@ -104,7 +94,7 @@ namespace Google.Cloud.BigQuery.V2
             }
             return obj is BigQueryBigNumeric bigNumeric
                 ? CompareTo(bigNumeric)
-                : throw new ArgumentException($"Object must be of type {nameof(BigQueryBigNumeric)}", nameof(obj));
+                : throw new ArgumentException("Object must be of type BigQueryBigNumeric.", nameof(obj));
         }
 
         /// <summary>
@@ -112,7 +102,7 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="other">The value to compare with this one.</param>
         /// <returns><c>true</c> if <paramref name="other"/> is an equal <see cref="BigQueryBigNumeric"/> value; <c>false</c> otherwise.</returns>
-        public bool Equals(BigQueryBigNumeric other) => _integer == other._integer;
+        public bool Equals(BigQueryBigNumeric other) => _numericValue == other._numericValue;
 
         /// <summary>
         /// Compares this value with <paramref name="obj"/> for equality.
@@ -125,12 +115,7 @@ namespace Google.Cloud.BigQuery.V2
         /// Returns a hash code for this value.
         /// </summary>
         /// <returns>A hash code for this value.</returns>
-        public override int GetHashCode() => _integer.GetHashCode();
-
-        // TODO:
-        // - Allow leading +?
-        // - Allow .5 as well as 0.5?
-        // - Allow 5. as well as 5.0 and 5?
+        public override int GetHashCode() => _numericValue.GetHashCode();
 
         /// <summary>
         /// Parses a textual representation as a <see cref="BigQueryBigNumeric"/>.
@@ -145,11 +130,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="text">The text to parse. Must not be null.</param>
         /// <returns>The parsed value.</returns>
         /// <exception cref="FormatException">The value could not be parsed as a <see cref="BigQueryBigNumeric"/>.</exception>
-        public static BigQueryBigNumeric Parse(string text)
-        {
-            string message = TryParseImpl(text, out var value);
-            return message == null ? value : throw new FormatException(message);
-        }
+        public static BigQueryBigNumeric Parse(string text) => new BigQueryBigNumeric(s_numericType.ParseNumericValue(text));
 
         /// <summary>
         /// Attempts to parse a textual representation of a <see cref="BigQueryBigNumeric"/> value.
@@ -163,54 +144,13 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns><c>true</c> if <paramref name="text"/> was parsed successfully; <c>false</c> otherwise.</returns>
         public static bool TryParse(string text, out BigQueryBigNumeric value)
         {
-            string message = TryParseImpl(text, out value);
-            return message == null;
-        }
-
-        /// <summary>
-        /// Returns the error message for a FormatException if parsing fails, or null for success.
-        /// </summary>
-        private static string TryParseImpl(string text, out BigQueryBigNumeric value)
-        {
-            GaxPreconditions.CheckNotNull(text, nameof(text));
-            if (!s_validation.IsMatch(text))
+            if (s_numericType.TryParseNumericValue(text, out NumericValue numericValue))
             {
-                value = default;
-                return "Text representation must be digits, containing an optional decimal point, and an optional leading '-' sign.";
+                value = new BigQueryBigNumeric(numericValue);
+                return true;
             }
-            int pointIndex = text.IndexOf('.');
-
-            // The raw value which will end up in the result, on success.
-            BigInteger rawValue;
-            if (pointIndex != -1)
-            {
-                int decimalPlaces = text.Length - pointIndex - 1;
-                text = text.Remove(pointIndex, 1);
-                if (decimalPlaces > 38)
-                {
-                    text = text.Substring(0, text.Length - (decimalPlaces - 38));
-                    decimalPlaces = 38;
-                }
-                BigInteger integer = BigInteger.Parse(text, CultureInfo.InvariantCulture);
-
-                if (decimalPlaces < 38)
-                {
-                    integer = integer * s_powersOf10[38 - decimalPlaces];
-                }
-                rawValue = integer;
-            }
-            else
-            {
-                BigInteger integer = BigInteger.Parse(text, CultureInfo.InvariantCulture);
-                rawValue = integer * s_integerScalingFactor;
-            }
-            if (!IsRawValueInRange(rawValue))
-            {
-                value = default;
-                return "Parsed value would overflow the range of the type.";
-            }
-            value = new BigQueryBigNumeric(rawValue);
-            return null;
+            value = default;
+            return false;
         }
 
         /// <summary>
@@ -219,101 +159,19 @@ namespace Google.Cloud.BigQuery.V2
         /// the value is between -1 and 1 exclusive, a "0" character is included before the decimal point.
         /// </summary>
         /// <returns>A canonical string representation of this value.</returns>
-        public override string ToString()
-        {
-            int sign = _integer.Sign;
-            if (sign == 0)
-            {
-                return "0";
-            }
-            var integerText = _integer.ToString(CultureInfo.InvariantCulture);
-
-            int decimalPlaces = 38;
-            for (int place = integerText.Length - 1; place > 0 && decimalPlaces > 0; place--)
-            {
-                if (integerText[place] != '0')
-                {
-                    break;
-                }
-                decimalPlaces--;
-            }
-
-            int signLength = sign > 0 ? 0 : 1;
-
-            // Always have something before the period, even if it's just a 0
-            int originalIntegerPlaces = Math.Max(integerText.Length - signLength - 38, 0);
-            int resultIntegerPlaces = Math.Max(originalIntegerPlaces, 1);
-
-            // Sign, then integer part, then period (maybe), then significant decimals
-            int resultLength = signLength + resultIntegerPlaces + (decimalPlaces > 0 ? 1 : 0) + decimalPlaces;
-            var chars = new char[resultLength];
-            int position = 0;
-
-            // Copy some text from the original string representation, including the leading '-' if necessary
-            int leadCharactersToCopy = originalIntegerPlaces + signLength;
-            for (int i = 0; i < leadCharactersToCopy; i++)
-            {
-                chars[position] = integerText[position];
-                position++;
-            }
-
-            if (originalIntegerPlaces == 0)
-            {
-                chars[position++] = '0';
-            }
-            if (decimalPlaces > 0)
-            {
-                chars[position++] = '.';
-                int decimalsToCopy = decimalPlaces;
-                
-                // Fill zeroes if necessary
-                if (originalIntegerPlaces == 0)
-                {
-                    int decimalsToFill = 38 - (integerText.Length - signLength);
-                    for (int i = 0; i < decimalsToFill; i++)
-                    {
-                        chars[position++] = '0';
-                    }
-                    decimalsToCopy -= decimalsToFill;
-                }
-
-                // Now the significant digits in the remaining text
-                int sourcePosition = leadCharactersToCopy;
-                for (int i = 0; i < decimalsToCopy; i++)
-                {
-                    chars[position++] = integerText[sourcePosition++];
-                }
-            }
-            return new string(chars);
-        }
+        public override string ToString() => _numericValue.ToString();
 
         // Conversions from CLR types to BigQueryBigNumeric
 
         /// <summary>
         /// Explicit conversion from <see cref="decimal"/> to <see cref="BigQueryBigNumeric"/>.
-        /// This conversion never looses precission.
+        /// This conversion never loses precision.
         /// </summary>
         /// <param name="value">The decimal value to convert.</param>
         /// <returns>The result of the conversion.</returns>
-        public static explicit operator BigQueryBigNumeric(decimal value)
-        {
-            int[] bits = decimal.GetBits(value);
-
-            BigInteger lowBits = new BigInteger((uint)bits[0]);
-            BigInteger mediumBits = new BigInteger((uint)bits[1]) << 32;
-            BigInteger highBits = new BigInteger((uint)bits[2]) << 64;
-            BigInteger rawInteger = lowBits | mediumBits | highBits;
-
-            int exponent = (bits[3] & 0x1f0000) >> 16;
-            if (bits[3] < 0)
-            {
-                rawInteger = -rawInteger;
-            }
-
-            // No possibility of loss of precision.
-            int scale = 38 - exponent;
-            return new BigQueryBigNumeric(rawInteger * s_powersOf10[scale]);
-        }
+        public static implicit operator BigQueryBigNumeric(decimal value) =>
+            // We can always use truncate here because BigQueryBigNumeric is bigger than decimal.
+            new BigQueryBigNumeric(s_numericType.ValueFromDecimal(value, LossOfPrecisionHandling.Truncate));
 
         /// <summary>
         /// Implicit conversion from <see cref="int"/> to <see cref="BigQueryBigNumeric"/>.
@@ -331,7 +189,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="value">The integer value to convert.</param>
         /// <returns>The result of the conversion.</returns>
         public static implicit operator BigQueryBigNumeric(long value) =>
-            new BigQueryBigNumeric(s_integerScalingFactor * value);
+            new BigQueryBigNumeric(s_numericType.ValueFromInt64(value));
 
         /// <summary>
         /// Implicit conversion from <see cref="ulong"/> to <see cref="BigQueryBigNumeric"/>.
@@ -339,7 +197,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="value">The integer value to convert.</param>
         /// <returns>The result of the conversion.</returns>
         public static implicit operator BigQueryBigNumeric(ulong value) =>
-            new BigQueryBigNumeric(s_integerScalingFactor * value);
+            new BigQueryBigNumeric(s_numericType.ValueFromUInt64(value));
 
         // Conversions from BigQueryBigNumeric to CLR types.
 
@@ -353,19 +211,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="lossOfPrecisionHandling">How to handle values with signficant digits that would be lost by the conversion.</param>
         /// <exception cref="OverflowException">This value is outside the range of <see cref="decimal"/>.</exception>
         /// <returns>The converted value.</returns>
-        public decimal ToDecimal(LossOfPrecisionHandling lossOfPrecisionHandling)
-        {
-            // FIXME: Awful performance!
-            string text = ToString();
-            // Handles overflow
-            decimal dec = decimal.Parse(text, CultureInfo.InvariantCulture);
-            if (lossOfPrecisionHandling == LossOfPrecisionHandling.Throw && this != (BigQueryBigNumeric) dec)
-            {
-                // TODO: Is this the right exception to use?
-                throw new InvalidOperationException("Conversion would lose information");
-            }
-            return dec;
-        }
+        public decimal ToDecimal(LossOfPrecisionHandling lossOfPrecisionHandling) => _numericValue.ToDecimal(lossOfPrecisionHandling);
 
         /// <summary>
         /// Explicit conversion from <see cref="BigQueryBigNumeric"/> to <see cref="decimal"/>.
@@ -404,7 +250,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="rhs">The second value to add.</param>
         /// <returns>The result of adding the two values.</returns>
         public static BigQueryBigNumeric operator +(BigQueryBigNumeric lhs, BigQueryBigNumeric rhs) =>
-            new BigQueryBigNumeric(lhs._integer + rhs._integer);
+            new BigQueryBigNumeric(lhs._numericValue + rhs._numericValue);
 
         /// <summary>
         /// Returns the result of subtracting one <see cref="BigQueryBigNumeric"/> value from another.
@@ -413,7 +259,7 @@ namespace Google.Cloud.BigQuery.V2
         /// <param name="rhs">The value to subtract.</param>
         /// <returns>The result of subtracting <paramref name="rhs"/> from <paramref name="lhs"/>.</returns>
         public static BigQueryBigNumeric operator -(BigQueryBigNumeric lhs, BigQueryBigNumeric rhs) =>
-            new BigQueryBigNumeric(lhs._integer - rhs._integer);
+            new BigQueryBigNumeric(lhs._numericValue - rhs._numericValue);
 
         /// <summary>
         /// The unary plus operator, provided mainly for consistency.
@@ -427,6 +273,6 @@ namespace Google.Cloud.BigQuery.V2
         /// </summary>
         /// <param name="value">The value to negate.</param>
         /// <returns>The negation of <paramref name="value"/>.</returns>
-        public static BigQueryBigNumeric operator -(BigQueryBigNumeric value) => new BigQueryBigNumeric(-value._integer);
+        public static BigQueryBigNumeric operator -(BigQueryBigNumeric value) => new BigQueryBigNumeric(-value._numericValue);
     }
 }
