@@ -56,9 +56,10 @@ case $1 in
     declare -a PROJECTS=(
       'Src/Support/Google.Apis'
       'Src/Support/Google.Apis.Auth'
+      'Src/Support/Google.Apis.Auth.AspNetCore3'
       'Src/Support/Google.Apis.Core'
     )
-    declare -r TARGET_FRAMEWORK=netstandard2.0
+    declare -r TARGET_FRAMEWORK=netcoreapp3.1
     declare -a XREFS=(
     )
     ;;
