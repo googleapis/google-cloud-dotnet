@@ -26,8 +26,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           string.Concat(
             "CiZnb29nbGUvZGF0YWZsb3cvdjFiZXRhMy9tZXNzYWdlcy5wcm90bxIXZ29v",
             "Z2xlLmRhdGFmbG93LnYxYmV0YTMaHGdvb2dsZS9hcGkvYW5ub3RhdGlvbnMu",
-            "cHJvdG8aHGdvb2dsZS9wcm90b2J1Zi9zdHJ1Y3QucHJvdG8aH2dvb2dsZS9w",
-            "cm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnBy",
+            "cHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50LnByb3RvGhxnb29nbGUvcHJvdG9i",
+            "dWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
             "b3RvIqMBCgpKb2JNZXNzYWdlEgoKAmlkGAEgASgJEigKBHRpbWUYAiABKAsy",
             "Gi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wEhQKDG1lc3NhZ2VfdGV4dBgD",
             "IAEoCRJJChJtZXNzYWdlX2ltcG9ydGFuY2UYBCABKA4yLS5nb29nbGUuZGF0",
@@ -60,10 +60,13 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             "ZRIiCh5KT0JfTUVTU0FHRV9JTVBPUlRBTkNFX1VOS05PV04QABIVChFKT0Jf",
             "TUVTU0FHRV9ERUJVRxABEhgKFEpPQl9NRVNTQUdFX0RFVEFJTEVEEAISFQoR",
             "Sk9CX01FU1NBR0VfQkFTSUMQBRIXChNKT0JfTUVTU0FHRV9XQVJOSU5HEAMS",
-            "FQoRSk9CX01FU1NBR0VfRVJST1IQBDLgAgoPTWVzc2FnZXNWMUJldGEzEnYK",
-            "D0xpc3RKb2JNZXNzYWdlcxIvLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxp",
-            "c3RKb2JNZXNzYWdlc1JlcXVlc3QaMC5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
-            "My5MaXN0Sm9iTWVzc2FnZXNSZXNwb25zZSIAGtQBykEXZGF0YWZsb3cuZ29v",
+            "FQoRSk9CX01FU1NBR0VfRVJST1IQBDLnAwoPTWVzc2FnZXNWMUJldGEzEvwB",
+            "Cg9MaXN0Sm9iTWVzc2FnZXMSLy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5M",
+            "aXN0Sm9iTWVzc2FnZXNSZXF1ZXN0GjAuZ29vZ2xlLmRhdGFmbG93LnYxYmV0",
+            "YTMuTGlzdEpvYk1lc3NhZ2VzUmVzcG9uc2UihQGC0+STAn8SMi92MWIzL3By",
+            "b2plY3RzL3twcm9qZWN0X2lkfS9qb2JzL3tqb2JfaWR9L21lc3NhZ2VzWkkS",
+            "Ry92MWIzL3Byb2plY3RzL3twcm9qZWN0X2lkfS9sb2NhdGlvbnMve2xvY2F0",
+            "aW9ufS9qb2JzL3tqb2JfaWR9L21lc3NhZ2VzGtQBykEXZGF0YWZsb3cuZ29v",
             "Z2xlYXBpcy5jb23SQbYBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0",
             "aC9jbG91ZC1wbGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9h",
             "dXRoL2NvbXB1dGUsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9j",
@@ -75,7 +78,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             "YXRhZmxvd1xWMWJldGEz6gIgR29vZ2xlOjpDbG91ZDo6RGF0YWZsb3c6OlYx",
             "YmV0YTNiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataflow.V1Beta3.JobMessageImportance), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.JobMessage), global::Google.Cloud.Dataflow.V1Beta3.JobMessage.Parser, new[]{ "Id", "Time", "MessageText", "MessageImportance" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StructuredMessage), global::Google.Cloud.Dataflow.V1Beta3.StructuredMessage.Parser, new[]{ "MessageText", "MessageKey", "Parameters" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.StructuredMessage.Types.Parameter), global::Google.Cloud.Dataflow.V1Beta3.StructuredMessage.Types.Parameter.Parser, new[]{ "Key", "Value" }, null, null, null, null)}),
@@ -1117,8 +1120,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
     public const int WorkerPoolFieldNumber = 7;
     private string workerPool_ = "";
     /// <summary>
-    /// A short and friendly name for the worker pool this event refers to,
-    /// populated from the value of PoolStageRelation::user_pool_name.
+    /// A short and friendly name for the worker pool this event refers to.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]

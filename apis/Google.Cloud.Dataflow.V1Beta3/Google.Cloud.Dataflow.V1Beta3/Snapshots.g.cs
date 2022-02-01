@@ -26,8 +26,8 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           string.Concat(
             "Cidnb29nbGUvZGF0YWZsb3cvdjFiZXRhMy9zbmFwc2hvdHMucHJvdG8SF2dv",
             "b2dsZS5kYXRhZmxvdy52MWJldGEzGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
-            "LnByb3RvGh5nb29nbGUvcHJvdG9idWYvZHVyYXRpb24ucHJvdG8aH2dvb2ds",
-            "ZS9wcm90b2J1Zi90aW1lc3RhbXAucHJvdG8aF2dvb2dsZS9hcGkvY2xpZW50",
+            "LnByb3RvGhdnb29nbGUvYXBpL2NsaWVudC5wcm90bxoeZ29vZ2xlL3Byb3Rv",
+            "YnVmL2R1cmF0aW9uLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1w",
             "LnByb3RvInQKFlB1YnN1YlNuYXBzaG90TWV0YWRhdGESEgoKdG9waWNfbmFt",
             "ZRgBIAEoCRIVCg1zbmFwc2hvdF9uYW1lGAIgASgJEi8KC2V4cGlyZV90aW1l",
             "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcCLbAgoIU25hcHNo",
@@ -48,27 +48,37 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             "bnNlEjQKCXNuYXBzaG90cxgBIAMoCzIhLmdvb2dsZS5kYXRhZmxvdy52MWJl",
             "dGEzLlNuYXBzaG90KmkKDVNuYXBzaG90U3RhdGUSGgoWVU5LTk9XTl9TTkFQ",
             "U0hPVF9TVEFURRAAEgsKB1BFTkRJTkcQARILCgdSVU5OSU5HEAISCQoFUkVB",
-            "RFkQAxIKCgZGQUlMRUQQBBILCgdERUxFVEVEEAUysQQKEFNuYXBzaG90c1Yx",
-            "QmV0YTMSXwoLR2V0U25hcHNob3QSKy5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
-            "My5HZXRTbmFwc2hvdFJlcXVlc3QaIS5nb29nbGUuZGF0YWZsb3cudjFiZXRh",
-            "My5TbmFwc2hvdCIAEnMKDkRlbGV0ZVNuYXBzaG90Ei4uZ29vZ2xlLmRhdGFm",
-            "bG93LnYxYmV0YTMuRGVsZXRlU25hcHNob3RSZXF1ZXN0Gi8uZ29vZ2xlLmRh",
-            "dGFmbG93LnYxYmV0YTMuRGVsZXRlU25hcHNob3RSZXNwb25zZSIAEnAKDUxp",
-            "c3RTbmFwc2hvdHMSLS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MaXN0U25h",
-            "cHNob3RzUmVxdWVzdBouLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxpc3RT",
-            "bmFwc2hvdHNSZXNwb25zZSIAGtQBykEXZGF0YWZsb3cuZ29vZ2xlYXBpcy5j",
-            "b23SQbYBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1w",
-            "bGF0Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1",
-            "dGUsaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlLnJl",
-            "YWRvbmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXNlcmlu",
-            "Zm8uZW1haWxC0wEKG2NvbS5nb29nbGUuZGF0YWZsb3cudjFiZXRhM0IOU25h",
-            "cHNob3RzUHJvdG9QAVo/Z29vZ2xlLmdvbGFuZy5vcmcvZ2VucHJvdG8vZ29v",
-            "Z2xlYXBpcy9kYXRhZmxvdy92MWJldGEzO2RhdGFmbG93qgIdR29vZ2xlLkNs",
-            "b3VkLkRhdGFmbG93LlYxQmV0YTPKAh1Hb29nbGVcQ2xvdWRcRGF0YWZsb3dc",
-            "VjFiZXRhM+oCIEdvb2dsZTo6Q2xvdWQ6OkRhdGFmbG93OjpWMWJldGEzYgZw",
-            "cm90bzM="));
+            "RFkQAxIKCgZGQUlMRUQQBBILCgdERUxFVEVEEAUy7wcKEFNuYXBzaG90c1Yx",
+            "QmV0YTMS6AEKC0dldFNuYXBzaG90EisuZ29vZ2xlLmRhdGFmbG93LnYxYmV0",
+            "YTMuR2V0U25hcHNob3RSZXF1ZXN0GiEuZ29vZ2xlLmRhdGFmbG93LnYxYmV0",
+            "YTMuU25hcHNob3QiiAGC0+STAoEBEjMvdjFiMy9wcm9qZWN0cy97cHJvamVj",
+            "dF9pZH0vc25hcHNob3RzL3tzbmFwc2hvdF9pZH1aShJIL3YxYjMvcHJvamVj",
+            "dHMve3Byb2plY3RfaWR9L2xvY2F0aW9ucy97bG9jYXRpb259L3NuYXBzaG90",
+            "cy97c25hcHNob3RfaWR9EuwBCg5EZWxldGVTbmFwc2hvdBIuLmdvb2dsZS5k",
+            "YXRhZmxvdy52MWJldGEzLkRlbGV0ZVNuYXBzaG90UmVxdWVzdBovLmdvb2ds",
+            "ZS5kYXRhZmxvdy52MWJldGEzLkRlbGV0ZVNuYXBzaG90UmVzcG9uc2UieYLT",
+            "5JMCcyolL3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9L3NuYXBzaG90c1pK",
+            "KkgvdjFiMy9wcm9qZWN0cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2Nh",
+            "dGlvbn0vc25hcHNob3RzL3tzbmFwc2hvdF9pZH0SqQIKDUxpc3RTbmFwc2hv",
+            "dHMSLS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MaXN0U25hcHNob3RzUmVx",
+            "dWVzdBouLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxpc3RTbmFwc2hvdHNS",
+            "ZXNwb25zZSK4AYLT5JMCsQESJS92MWIzL3Byb2plY3RzL3twcm9qZWN0X2lk",
+            "fS9zbmFwc2hvdHNaPBI6L3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9L2xv",
+            "Y2F0aW9ucy97bG9jYXRpb259L3NuYXBzaG90c1pKEkgvdjFiMy9wcm9qZWN0",
+            "cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vam9icy97am9i",
+            "X2lkfS9zbmFwc2hvdHMa1AHKQRdkYXRhZmxvdy5nb29nbGVhcGlzLmNvbdJB",
+            "tgFodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2Nsb3VkLXBsYXRm",
+            "b3JtLGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvY29tcHV0ZSxo",
+            "dHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGUucmVhZG9u",
+            "bHksaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC91c2VyaW5mby5l",
+            "bWFpbELTAQobY29tLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzQg5TbmFwc2hv",
+            "dHNQcm90b1ABWj9nb29nbGUuZ29sYW5nLm9yZy9nZW5wcm90by9nb29nbGVh",
+            "cGlzL2RhdGFmbG93L3YxYmV0YTM7ZGF0YWZsb3eqAh1Hb29nbGUuQ2xvdWQu",
+            "RGF0YWZsb3cuVjFCZXRhM8oCHUdvb2dsZVxDbG91ZFxEYXRhZmxvd1xWMWJl",
+            "dGEz6gIgR29vZ2xlOjpDbG91ZDo6RGF0YWZsb3c6OlYxYmV0YTNiBnByb3Rv",
+            "Mw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataflow.V1Beta3.SnapshotState), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.PubsubSnapshotMetadata), global::Google.Cloud.Dataflow.V1Beta3.PubsubSnapshotMetadata.Parser, new[]{ "TopicName", "SnapshotName", "ExpireTime" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Snapshot), global::Google.Cloud.Dataflow.V1Beta3.Snapshot.Parser, new[]{ "Id", "ProjectId", "SourceJobId", "CreationTime", "Ttl", "State", "PubsubMetadata", "Description", "DiskSizeBytes", "Region" }, null, null, null, null),
@@ -553,7 +563,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         = pb::FieldCodec.ForMessage(58, global::Google.Cloud.Dataflow.V1Beta3.PubsubSnapshotMetadata.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.PubsubSnapshotMetadata> pubsubMetadata_ = new pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.PubsubSnapshotMetadata>();
     /// <summary>
-    /// PubSub snapshot metadata.
+    /// Pub/Sub snapshot metadata.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
