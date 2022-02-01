@@ -3381,24 +3381,6 @@
       "serviceConfigFile": "transcoder_v1.yaml"
     },
     {
-      "id": "Google.Cloud.Video.Transcoder.V1Beta1",
-      "version": "1.0.0-beta04",
-      "type": "grpc",
-      "productName": "Transcoder",
-      "productUrl": "https://cloud.google.com/transcoder/docs",
-      "description": "Recommended Google client library to access the Transcoder API version v1beta1, which converts video files into formats suitable for consumer distribution.",
-      "tags": [
-        "video",
-        "transcoder",
-        "transcoding"
-      ],
-      "dependencies": {},
-      "generator": "micro",
-      "protoPath": "google/cloud/video/transcoder/v1beta1",
-      "shortName": "transcoder",
-      "serviceConfigFile": "transcoder_v1beta1.yaml"
-    },
-    {
       "id": "Google.Cloud.VideoIntelligence.V1",
       "generator": "micro",
       "protoPath": "google/cloud/videointelligence/v1",
