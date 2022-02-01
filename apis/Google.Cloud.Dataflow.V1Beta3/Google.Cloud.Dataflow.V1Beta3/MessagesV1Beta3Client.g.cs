@@ -280,7 +280,7 @@ namespace Google.Cloud.Dataflow.V1Beta3
             GrpcClient = grpcClient;
             MessagesV1Beta3Settings effectiveSettings = settings ?? MessagesV1Beta3Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callListJobMessages = clientHelper.BuildApiCall<ListJobMessagesRequest, ListJobMessagesResponse>(grpcClient.ListJobMessagesAsync, grpcClient.ListJobMessages, effectiveSettings.ListJobMessagesSettings);
+            _callListJobMessages = clientHelper.BuildApiCall<ListJobMessagesRequest, ListJobMessagesResponse>(grpcClient.ListJobMessagesAsync, grpcClient.ListJobMessages, effectiveSettings.ListJobMessagesSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("job_id", request => request.JobId);
             Modify_ApiCall(ref _callListJobMessages);
             Modify_ListJobMessagesApiCall(ref _callListJobMessages);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

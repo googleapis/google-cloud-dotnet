@@ -358,13 +358,13 @@ namespace Google.Cloud.Dataflow.V1Beta3
             GrpcClient = grpcClient;
             SnapshotsV1Beta3Settings effectiveSettings = settings ?? SnapshotsV1Beta3Settings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
-            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>(grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings);
+            _callGetSnapshot = clientHelper.BuildApiCall<GetSnapshotRequest, Snapshot>(grpcClient.GetSnapshotAsync, grpcClient.GetSnapshot, effectiveSettings.GetSnapshotSettings).WithGoogleRequestParam("project_id", request => request.ProjectId).WithGoogleRequestParam("snapshot_id", request => request.SnapshotId);
             Modify_ApiCall(ref _callGetSnapshot);
             Modify_GetSnapshotApiCall(ref _callGetSnapshot);
-            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, DeleteSnapshotResponse>(grpcClient.DeleteSnapshotAsync, grpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings);
+            _callDeleteSnapshot = clientHelper.BuildApiCall<DeleteSnapshotRequest, DeleteSnapshotResponse>(grpcClient.DeleteSnapshotAsync, grpcClient.DeleteSnapshot, effectiveSettings.DeleteSnapshotSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callDeleteSnapshot);
             Modify_DeleteSnapshotApiCall(ref _callDeleteSnapshot);
-            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings);
+            _callListSnapshots = clientHelper.BuildApiCall<ListSnapshotsRequest, ListSnapshotsResponse>(grpcClient.ListSnapshotsAsync, grpcClient.ListSnapshots, effectiveSettings.ListSnapshotsSettings).WithGoogleRequestParam("project_id", request => request.ProjectId);
             Modify_ApiCall(ref _callListSnapshots);
             Modify_ListSnapshotsApiCall(ref _callListSnapshots);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);

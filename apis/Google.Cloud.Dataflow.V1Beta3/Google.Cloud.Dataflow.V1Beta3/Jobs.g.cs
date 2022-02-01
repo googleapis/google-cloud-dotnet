@@ -26,11 +26,11 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
           string.Concat(
             "CiJnb29nbGUvZGF0YWZsb3cvdjFiZXRhMy9qb2JzLnByb3RvEhdnb29nbGUu",
             "ZGF0YWZsb3cudjFiZXRhMxocZ29vZ2xlL2FwaS9hbm5vdGF0aW9ucy5wcm90",
-            "bxopZ29vZ2xlL2RhdGFmbG93L3YxYmV0YTMvZW52aXJvbm1lbnQucHJvdG8a",
-            "J2dvb2dsZS9kYXRhZmxvdy92MWJldGEzL3NuYXBzaG90cy5wcm90bxoeZ29v",
-            "Z2xlL3Byb3RvYnVmL2R1cmF0aW9uLnByb3RvGhxnb29nbGUvcHJvdG9idWYv",
-            "c3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3Rv",
-            "Ghdnb29nbGUvYXBpL2NsaWVudC5wcm90byKuCQoDSm9iEgoKAmlkGAEgASgJ",
+            "bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aKWdvb2dsZS9kYXRhZmxvdy92",
+            "MWJldGEzL2Vudmlyb25tZW50LnByb3RvGidnb29nbGUvZGF0YWZsb3cvdjFi",
+            "ZXRhMy9zbmFwc2hvdHMucHJvdG8aHmdvb2dsZS9wcm90b2J1Zi9kdXJhdGlv",
+            "bi5wcm90bxocZ29vZ2xlL3Byb3RvYnVmL3N0cnVjdC5wcm90bxofZ29vZ2xl",
+            "L3Byb3RvYnVmL3RpbWVzdGFtcC5wcm90byKuCQoDSm9iEgoKAmlkGAEgASgJ",
             "EhIKCnByb2plY3RfaWQYAiABKAkSDAoEbmFtZRgDIAEoCRIuCgR0eXBlGAQg",
             "ASgOMiAuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuSm9iVHlwZRI5CgtlbnZp",
             "cm9ubWVudBgFIAEoCzIkLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkVudmly",
@@ -166,34 +166,48 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
             "EAoSFAoQSk9CX1NUQVRFX1FVRVVFRBALEiIKHkpPQl9TVEFURV9SRVNPVVJD",
             "RV9DTEVBTklOR19VUBAMKmEKB0pvYlZpZXcSFAoQSk9CX1ZJRVdfVU5LTk9X",
             "ThAAEhQKEEpPQl9WSUVXX1NVTU1BUlkQARIQCgxKT0JfVklFV19BTEwQAhIY",
-            "ChRKT0JfVklFV19ERVNDUklQVElPThADMo8HCgtKb2JzVjFCZXRhMxJWCglD",
-            "cmVhdGVKb2ISKS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5DcmVhdGVKb2JS",
-            "ZXF1ZXN0GhwuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuSm9iIgASUAoGR2V0",
-            "Sm9iEiYuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuR2V0Sm9iUmVxdWVzdBoc",
-            "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkpvYiIAElYKCVVwZGF0ZUpvYhIp",
+            "ChRKT0JfVklFV19ERVNDUklQVElPThADMpEMCgtKb2JzVjFCZXRhMxLBAQoJ",
+            "Q3JlYXRlSm9iEikuZ29vZ2xlLmRhdGFmbG93LnYxYmV0YTMuQ3JlYXRlSm9i",
+            "UmVxdWVzdBocLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkpvYiJrgtPkkwJl",
+            "IiAvdjFiMy9wcm9qZWN0cy97cHJvamVjdF9pZH0vam9iczoDam9iWjwiNS92",
+            "MWIzL3Byb2plY3RzL3twcm9qZWN0X2lkfS9sb2NhdGlvbnMve2xvY2F0aW9u",
+            "fS9qb2JzOgNqb2ISwwEKBkdldEpvYhImLmdvb2dsZS5kYXRhZmxvdy52MWJl",
+            "dGEzLkdldEpvYlJlcXVlc3QaHC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5K",
+            "b2Iic4LT5JMCbRIpL3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9L2pvYnMv",
+            "e2pvYl9pZH1aQBI+L3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9L2xvY2F0",
+            "aW9ucy97bG9jYXRpb259L2pvYnMve2pvYl9pZH0S0wEKCVVwZGF0ZUpvYhIp",
             "Lmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLlVwZGF0ZUpvYlJlcXVlc3QaHC5n",
-            "b29nbGUuZGF0YWZsb3cudjFiZXRhMy5Kb2IiABJhCghMaXN0Sm9icxIoLmdv",
-            "b2dsZS5kYXRhZmxvdy52MWJldGEzLkxpc3RKb2JzUmVxdWVzdBopLmdvb2ds",
-            "ZS5kYXRhZmxvdy52MWJldGEzLkxpc3RKb2JzUmVzcG9uc2UiABJrChJBZ2dy",
-            "ZWdhdGVkTGlzdEpvYnMSKC5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MaXN0",
-            "Sm9ic1JlcXVlc3QaKS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5MaXN0Sm9i",
-            "c1Jlc3BvbnNlIgASdgoPQ2hlY2tBY3RpdmVKb2JzEi8uZ29vZ2xlLmRhdGFm",
-            "bG93LnYxYmV0YTMuQ2hlY2tBY3RpdmVKb2JzUmVxdWVzdBowLmdvb2dsZS5k",
-            "YXRhZmxvdy52MWJldGEzLkNoZWNrQWN0aXZlSm9ic1Jlc3BvbnNlIgASXwoL",
-            "U25hcHNob3RKb2ISKy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TbmFwc2hv",
-            "dEpvYlJlcXVlc3QaIS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5TbmFwc2hv",
-            "dCIAGtQBykEXZGF0YWZsb3cuZ29vZ2xlYXBpcy5jb23SQbYBaHR0cHM6Ly93",
-            "d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0Zm9ybSxodHRwczov",
-            "L3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGUsaHR0cHM6Ly93d3cu",
-            "Z29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlLnJlYWRvbmx5LGh0dHBzOi8v",
-            "d3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXNlcmluZm8uZW1haWxCzgEKG2Nv",
-            "bS5nb29nbGUuZGF0YWZsb3cudjFiZXRhM0IJSm9ic1Byb3RvUAFaP2dvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvZGF0YWZsb3cvdjFi",
-            "ZXRhMztkYXRhZmxvd6oCHUdvb2dsZS5DbG91ZC5EYXRhZmxvdy5WMUJldGEz",
-            "ygIdR29vZ2xlXENsb3VkXERhdGFmbG93XFYxYmV0YTPqAiBHb29nbGU6OkNs",
-            "b3VkOjpEYXRhZmxvdzo6VjFiZXRhM2IGcHJvdG8z"));
+            "b29nbGUuZGF0YWZsb3cudjFiZXRhMy5Kb2IifYLT5JMCdxopL3YxYjMvcHJv",
+            "amVjdHMve3Byb2plY3RfaWR9L2pvYnMve2pvYl9pZH06A2pvYlpFGj4vdjFi",
+            "My9wcm9qZWN0cy97cHJvamVjdF9pZH0vbG9jYXRpb25zL3tsb2NhdGlvbn0v",
+            "am9icy97am9iX2lkfToDam9iEsIBCghMaXN0Sm9icxIoLmdvb2dsZS5kYXRh",
+            "Zmxvdy52MWJldGEzLkxpc3RKb2JzUmVxdWVzdBopLmdvb2dsZS5kYXRhZmxv",
+            "dy52MWJldGEzLkxpc3RKb2JzUmVzcG9uc2UiYYLT5JMCWxIgL3YxYjMvcHJv",
+            "amVjdHMve3Byb2plY3RfaWR9L2pvYnNaNxI1L3YxYjMvcHJvamVjdHMve3By",
+            "b2plY3RfaWR9L2xvY2F0aW9ucy97bG9jYXRpb259L2pvYnMSngEKEkFnZ3Jl",
+            "Z2F0ZWRMaXN0Sm9icxIoLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxpc3RK",
+            "b2JzUmVxdWVzdBopLmdvb2dsZS5kYXRhZmxvdy52MWJldGEzLkxpc3RKb2Jz",
+            "UmVzcG9uc2UiM4LT5JMCLRIrL3YxYjMvcHJvamVjdHMve3Byb2plY3RfaWR9",
+            "L2pvYnM6YWdncmVnYXRlZBJ2Cg9DaGVja0FjdGl2ZUpvYnMSLy5nb29nbGUu",
+            "ZGF0YWZsb3cudjFiZXRhMy5DaGVja0FjdGl2ZUpvYnNSZXF1ZXN0GjAuZ29v",
+            "Z2xlLmRhdGFmbG93LnYxYmV0YTMuQ2hlY2tBY3RpdmVKb2JzUmVzcG9uc2Ui",
+            "ABLsAQoLU25hcHNob3RKb2ISKy5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5T",
+            "bmFwc2hvdEpvYlJlcXVlc3QaIS5nb29nbGUuZGF0YWZsb3cudjFiZXRhMy5T",
+            "bmFwc2hvdCKMAYLT5JMChQEiMi92MWIzL3Byb2plY3RzL3twcm9qZWN0X2lk",
+            "fS9qb2JzL3tqb2JfaWR9OnNuYXBzaG90OgEqWkwiRy92MWIzL3Byb2plY3Rz",
+            "L3twcm9qZWN0X2lkfS9sb2NhdGlvbnMve2xvY2F0aW9ufS9qb2JzL3tqb2Jf",
+            "aWR9OnNuYXBzaG90OgEqGtQBykEXZGF0YWZsb3cuZ29vZ2xlYXBpcy5jb23S",
+            "QbYBaHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jbG91ZC1wbGF0",
+            "Zm9ybSxodHRwczovL3d3dy5nb29nbGVhcGlzLmNvbS9hdXRoL2NvbXB1dGUs",
+            "aHR0cHM6Ly93d3cuZ29vZ2xlYXBpcy5jb20vYXV0aC9jb21wdXRlLnJlYWRv",
+            "bmx5LGh0dHBzOi8vd3d3Lmdvb2dsZWFwaXMuY29tL2F1dGgvdXNlcmluZm8u",
+            "ZW1haWxCzgEKG2NvbS5nb29nbGUuZGF0YWZsb3cudjFiZXRhM0IJSm9ic1By",
+            "b3RvUAFaP2dvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMv",
+            "ZGF0YWZsb3cvdjFiZXRhMztkYXRhZmxvd6oCHUdvb2dsZS5DbG91ZC5EYXRh",
+            "Zmxvdy5WMUJldGEzygIdR29vZ2xlXENsb3VkXERhdGFmbG93XFYxYmV0YTPq",
+            "AiBHb29nbGU6OkNsb3VkOjpEYXRhZmxvdzo6VjFiZXRhM2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.EnvironmentReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.SnapshotsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.EnvironmentReflection.Descriptor, global::Google.Cloud.Dataflow.V1Beta3.SnapshotsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.Dataflow.V1Beta3.KindType), typeof(global::Google.Cloud.Dataflow.V1Beta3.JobState), typeof(global::Google.Cloud.Dataflow.V1Beta3.JobView), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.Job), global::Google.Cloud.Dataflow.V1Beta3.Job.Parser, new[]{ "Id", "ProjectId", "Name", "Type", "Environment", "Steps", "StepsLocation", "CurrentState", "CurrentStateTime", "RequestedState", "ExecutionInfo", "CreateTime", "ReplaceJobId", "TransformNameMapping", "ClientRequestId", "ReplacedByJobId", "TempFiles", "Labels", "Location", "PipelineDescription", "StageStates", "JobMetadata", "StartTime", "CreatedFromSnapshotId", "SatisfiesPzs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Dataflow.V1Beta3.DatastoreIODetails), global::Google.Cloud.Dataflow.V1Beta3.DatastoreIODetails.Parser, new[]{ "Namespace", "ProjectId" }, null, null, null, null),
@@ -2299,7 +2313,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
   }
 
   /// <summary>
-  /// Metadata for a Cloud BigTable connector used by the job.
+  /// Metadata for a Cloud Bigtable connector used by the job.
   /// </summary>
   public sealed partial class BigTableIODetails : pb::IMessage<BigTableIODetails>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3576,7 +3590,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         = pb::FieldCodec.ForMessage(34, global::Google.Cloud.Dataflow.V1Beta3.BigTableIODetails.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.BigTableIODetails> bigTableDetails_ = new pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.BigTableIODetails>();
     /// <summary>
-    /// Identification of a Cloud BigTable source used in the Dataflow job.
+    /// Identification of a Cloud Bigtable source used in the Dataflow job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3590,7 +3604,7 @@ namespace Google.Cloud.Dataflow.V1Beta3 {
         = pb::FieldCodec.ForMessage(42, global::Google.Cloud.Dataflow.V1Beta3.PubSubIODetails.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.PubSubIODetails> pubsubDetails_ = new pbc::RepeatedField<global::Google.Cloud.Dataflow.V1Beta3.PubSubIODetails>();
     /// <summary>
-    /// Identification of a PubSub source used in the Dataflow job.
+    /// Identification of a Pub/Sub source used in the Dataflow job.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
