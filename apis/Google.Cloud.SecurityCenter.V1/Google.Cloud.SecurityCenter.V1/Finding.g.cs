@@ -25,15 +25,16 @@ namespace Google.Cloud.SecurityCenter.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "Cixnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZmluZGluZy5wcm90",
-            "bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxGh9nb29nbGUvYXBp",
-            "L2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnBy",
-            "b3RvGjRnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZXh0ZXJuYWxf",
-            "c3lzdGVtLnByb3RvGi5nb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEv",
-            "aW5kaWNhdG9yLnByb3RvGjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIv",
-            "djEvc2VjdXJpdHlfbWFya3MucHJvdG8aMmdvb2dsZS9jbG91ZC9zZWN1cml0",
-            "eWNlbnRlci92MS92dWxuZXJhYmlsaXR5LnByb3RvGhxnb29nbGUvcHJvdG9i",
-            "dWYvc3RydWN0LnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
-            "b3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvIqINCgdGaW5kaW5n",
+            "bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxGhxnb29nbGUvYXBp",
+            "L2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9y",
+            "LnByb3RvGhlnb29nbGUvYXBpL3Jlc291cmNlLnByb3RvGitnb29nbGUvY2xv",
+            "dWQvc2VjdXJpdHljZW50ZXIvdjEvYWNjZXNzLnByb3RvGjRnb29nbGUvY2xv",
+            "dWQvc2VjdXJpdHljZW50ZXIvdjEvZXh0ZXJuYWxfc3lzdGVtLnByb3RvGi5n",
+            "b29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvaW5kaWNhdG9yLnByb3Rv",
+            "GjNnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvc2VjdXJpdHlfbWFy",
+            "a3MucHJvdG8aMmdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS92dWxu",
+            "ZXJhYmlsaXR5LnByb3RvGhxnb29nbGUvcHJvdG9idWYvc3RydWN0LnByb3Rv",
+            "Gh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnByb3RvItoNCgdGaW5kaW5n",
             "EgwKBG5hbWUYASABKAkSDgoGcGFyZW50GAIgASgJEhUKDXJlc291cmNlX25h",
             "bWUYAyABKAkSPAoFc3RhdGUYBCABKA4yLS5nb29nbGUuY2xvdWQuc2VjdXJp",
             "dHljZW50ZXIudjEuRmluZGluZy5TdGF0ZRIQCghjYXRlZ29yeRgFIAEoCRIU",
@@ -54,33 +55,34 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "LlZ1bG5lcmFiaWxpdHkSOQoQbXV0ZV91cGRhdGVfdGltZRgVIAEoCzIaLmdv",
             "b2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJbChBleHRlcm5hbF9zeXN0",
             "ZW1zGBYgAygLMjwuZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVyLnYxLkZp",
-            "bmRpbmcuRXh0ZXJuYWxTeXN0ZW1zRW50cnlCA+BBAxIWCg5tdXRlX2luaXRp",
-            "YXRvchgcIAEoCRpPChVTb3VyY2VQcm9wZXJ0aWVzRW50cnkSCwoDa2V5GAEg",
-            "ASgJEiUKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlOgI4",
-            "ARpmChRFeHRlcm5hbFN5c3RlbXNFbnRyeRILCgNrZXkYASABKAkSPQoFdmFs",
-            "dWUYAiABKAsyLi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuRXh0",
-            "ZXJuYWxTeXN0ZW06AjgBIjgKBVN0YXRlEhUKEVNUQVRFX1VOU1BFQ0lGSUVE",
-            "EAASCgoGQUNUSVZFEAESDAoISU5BQ1RJVkUQAiJRCghTZXZlcml0eRIYChRT",
-            "RVZFUklUWV9VTlNQRUNJRklFRBAAEgwKCENSSVRJQ0FMEAESCAoESElHSBAC",
-            "EgoKBk1FRElVTRADEgcKA0xPVxAEIkMKBE11dGUSFAoQTVVURV9VTlNQRUNJ",
-            "RklFRBAAEgkKBU1VVEVEEAESCwoHVU5NVVRFRBACEg0KCVVOREVGSU5FRBAE",
-            "InMKDEZpbmRpbmdDbGFzcxIdChlGSU5ESU5HX0NMQVNTX1VOU1BFQ0lGSUVE",
-            "EAASCgoGVEhSRUFUEAESEQoNVlVMTkVSQUJJTElUWRACEhQKEE1JU0NPTkZJ",
-            "R1VSQVRJT04QAxIPCgtPQlNFUlZBVElPThAEOtsB6kHXAQolc2VjdXJpdHlj",
-            "ZW50ZXIuZ29vZ2xlYXBpcy5jb20vRmluZGluZxJAb3JnYW5pemF0aW9ucy97",
-            "b3JnYW5pemF0aW9ufS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRpbmdzL3tmaW5k",
-            "aW5nfRI0Zm9sZGVycy97Zm9sZGVyfS9zb3VyY2VzL3tzb3VyY2V9L2ZpbmRp",
-            "bmdzL3tmaW5kaW5nfRI2cHJvamVjdHMve3Byb2plY3R9L3NvdXJjZXMve3Nv",
-            "dXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9QtoBCiJjb20uZ29vZ2xlLmNsb3Vk",
-            "LnNlY3VyaXR5Y2VudGVyLnYxUAFaTGdvb2dsZS5nb2xhbmcub3JnL2dlbnBy",
-            "b3RvL2dvb2dsZWFwaXMvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2VjdXJp",
-            "dHljZW50ZXKqAh5Hb29nbGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5H",
-            "b29nbGVcQ2xvdWRcU2VjdXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3Vk",
-            "OjpTZWN1cml0eUNlbnRlcjo6VjFiBnByb3RvMw=="));
+            "bmRpbmcuRXh0ZXJuYWxTeXN0ZW1zRW50cnlCA+BBAxI2CgZhY2Nlc3MYGiAB",
+            "KAsyJi5nb29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjEuQWNjZXNzEhYK",
+            "Dm11dGVfaW5pdGlhdG9yGBwgASgJGk8KFVNvdXJjZVByb3BlcnRpZXNFbnRy",
+            "eRILCgNrZXkYASABKAkSJQoFdmFsdWUYAiABKAsyFi5nb29nbGUucHJvdG9i",
+            "dWYuVmFsdWU6AjgBGmYKFEV4dGVybmFsU3lzdGVtc0VudHJ5EgsKA2tleRgB",
+            "IAEoCRI9CgV2YWx1ZRgCIAEoCzIuLmdvb2dsZS5jbG91ZC5zZWN1cml0eWNl",
+            "bnRlci52MS5FeHRlcm5hbFN5c3RlbToCOAEiOAoFU3RhdGUSFQoRU1RBVEVf",
+            "VU5TUEVDSUZJRUQQABIKCgZBQ1RJVkUQARIMCghJTkFDVElWRRACIlEKCFNl",
+            "dmVyaXR5EhgKFFNFVkVSSVRZX1VOU1BFQ0lGSUVEEAASDAoIQ1JJVElDQUwQ",
+            "ARIICgRISUdIEAISCgoGTUVESVVNEAMSBwoDTE9XEAQiQwoETXV0ZRIUChBN",
+            "VVRFX1VOU1BFQ0lGSUVEEAASCQoFTVVURUQQARILCgdVTk1VVEVEEAISDQoJ",
+            "VU5ERUZJTkVEEAQicwoMRmluZGluZ0NsYXNzEh0KGUZJTkRJTkdfQ0xBU1Nf",
+            "VU5TUEVDSUZJRUQQABIKCgZUSFJFQVQQARIRCg1WVUxORVJBQklMSVRZEAIS",
+            "FAoQTUlTQ09ORklHVVJBVElPThADEg8KC09CU0VSVkFUSU9OEAQ62wHqQdcB",
+            "CiVzZWN1cml0eWNlbnRlci5nb29nbGVhcGlzLmNvbS9GaW5kaW5nEkBvcmdh",
+            "bml6YXRpb25zL3tvcmdhbml6YXRpb259L3NvdXJjZXMve3NvdXJjZX0vZmlu",
+            "ZGluZ3Mve2ZpbmRpbmd9EjRmb2xkZXJzL3tmb2xkZXJ9L3NvdXJjZXMve3Nv",
+            "dXJjZX0vZmluZGluZ3Mve2ZpbmRpbmd9EjZwcm9qZWN0cy97cHJvamVjdH0v",
+            "c291cmNlcy97c291cmNlfS9maW5kaW5ncy97ZmluZGluZ31C2gEKImNvbS5n",
+            "b29nbGUuY2xvdWQuc2VjdXJpdHljZW50ZXIudjFQAVpMZ29vZ2xlLmdvbGFu",
+            "Zy5vcmcvZ2VucHJvdG8vZ29vZ2xlYXBpcy9jbG91ZC9zZWN1cml0eWNlbnRl",
+            "ci92MTtzZWN1cml0eWNlbnRlcqoCHkdvb2dsZS5DbG91ZC5TZWN1cml0eUNl",
+            "bnRlci5WMcoCHkdvb2dsZVxDbG91ZFxTZWN1cml0eUNlbnRlclxWMeoCIUdv",
+            "b2dsZTo6Q2xvdWQ6OlNlY3VyaXR5Q2VudGVyOjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.VulnerabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AccessReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.IndicatorReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.VulnerabilityReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "MuteInitiator" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.Finding), global::Google.Cloud.SecurityCenter.V1.Finding.Parser, new[]{ "Name", "Parent", "ResourceName", "State", "Category", "ExternalUri", "SourceProperties", "SecurityMarks", "EventTime", "CreateTime", "Severity", "CanonicalName", "Mute", "FindingClass", "Indicator", "Vulnerability", "MuteUpdateTime", "ExternalSystems", "Access", "MuteInitiator" }, null, new[]{ typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.State), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Severity), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.Mute), typeof(global::Google.Cloud.SecurityCenter.V1.Finding.Types.FindingClass) }, null, new pbr::GeneratedClrTypeInfo[] { null, null, })
           }));
     }
     #endregion
@@ -148,6 +150,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       vulnerability_ = other.vulnerability_ != null ? other.vulnerability_.Clone() : null;
       muteUpdateTime_ = other.muteUpdateTime_ != null ? other.muteUpdateTime_.Clone() : null;
       externalSystems_ = other.externalSystems_.Clone();
+      access_ = other.access_ != null ? other.access_.Clone() : null;
       muteInitiator_ = other.muteInitiator_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -302,11 +305,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
     public const int EventTimeFieldNumber = 9;
     private global::Google.Protobuf.WellKnownTypes.Timestamp eventTime_;
     /// <summary>
-    /// The time at which the event took place, or when an update to the finding
-    /// occurred. For example, if the finding represents an open firewall it would
-    /// capture the time the detector believes the firewall became open. The
-    /// accuracy is determined by the detector. If the finding were to be resolved
-    /// afterward, this time would reflect when the finding was resolved. Must not
+    /// The time the finding was first detected. If an existing finding is updated,
+    /// then this is the time the update occurred.
+    /// For example, if the finding represents an open firewall, this property
+    /// captures the time the detector believes the firewall became open. The
+    /// accuracy is determined by the detector. If the finding is later resolved,
+    /// then this time reflects when the finding was resolved. This must not
     /// be set to a value greater than the current timestamp.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -466,6 +470,22 @@ namespace Google.Cloud.SecurityCenter.V1 {
       get { return externalSystems_; }
     }
 
+    /// <summary>Field number for the "access" field.</summary>
+    public const int AccessFieldNumber = 26;
+    private global::Google.Cloud.SecurityCenter.V1.Access access_;
+    /// <summary>
+    /// Access details associated to the Finding, such as more information on the
+    /// caller, which method was accessed, from where, etc.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.SecurityCenter.V1.Access Access {
+      get { return access_; }
+      set {
+        access_ = value;
+      }
+    }
+
     /// <summary>Field number for the "mute_initiator" field.</summary>
     public const int MuteInitiatorFieldNumber = 28;
     private string muteInitiator_ = "";
@@ -516,6 +536,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (!object.Equals(Vulnerability, other.Vulnerability)) return false;
       if (!object.Equals(MuteUpdateTime, other.MuteUpdateTime)) return false;
       if (!ExternalSystems.Equals(other.ExternalSystems)) return false;
+      if (!object.Equals(Access, other.Access)) return false;
       if (MuteInitiator != other.MuteInitiator) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -542,6 +563,7 @@ namespace Google.Cloud.SecurityCenter.V1 {
       if (vulnerability_ != null) hash ^= Vulnerability.GetHashCode();
       if (muteUpdateTime_ != null) hash ^= MuteUpdateTime.GetHashCode();
       hash ^= ExternalSystems.GetHashCode();
+      if (access_ != null) hash ^= Access.GetHashCode();
       if (MuteInitiator.Length != 0) hash ^= MuteInitiator.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -627,6 +649,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteMessage(MuteUpdateTime);
       }
       externalSystems_.WriteTo(output, _map_externalSystems_codec);
+      if (access_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(Access);
+      }
       if (MuteInitiator.Length != 0) {
         output.WriteRawTag(226, 1);
         output.WriteString(MuteInitiator);
@@ -707,6 +733,10 @@ namespace Google.Cloud.SecurityCenter.V1 {
         output.WriteMessage(MuteUpdateTime);
       }
       externalSystems_.WriteTo(ref output, _map_externalSystems_codec);
+      if (access_ != null) {
+        output.WriteRawTag(210, 1);
+        output.WriteMessage(Access);
+      }
       if (MuteInitiator.Length != 0) {
         output.WriteRawTag(226, 1);
         output.WriteString(MuteInitiator);
@@ -771,6 +801,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
         size += 2 + pb::CodedOutputStream.ComputeMessageSize(MuteUpdateTime);
       }
       size += externalSystems_.CalculateSize(_map_externalSystems_codec);
+      if (access_ != null) {
+        size += 2 + pb::CodedOutputStream.ComputeMessageSize(Access);
+      }
       if (MuteInitiator.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(MuteInitiator);
       }
@@ -854,6 +887,12 @@ namespace Google.Cloud.SecurityCenter.V1 {
         MuteUpdateTime.MergeFrom(other.MuteUpdateTime);
       }
       externalSystems_.Add(other.externalSystems_);
+      if (other.access_ != null) {
+        if (access_ == null) {
+          Access = new global::Google.Cloud.SecurityCenter.V1.Access();
+        }
+        Access.MergeFrom(other.Access);
+      }
       if (other.MuteInitiator.Length != 0) {
         MuteInitiator = other.MuteInitiator;
       }
@@ -960,6 +999,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 178: {
             externalSystems_.AddEntriesFrom(input, _map_externalSystems_codec);
+            break;
+          }
+          case 210: {
+            if (access_ == null) {
+              Access = new global::Google.Cloud.SecurityCenter.V1.Access();
+            }
+            input.ReadMessage(Access);
             break;
           }
           case 226: {
@@ -1069,6 +1115,13 @@ namespace Google.Cloud.SecurityCenter.V1 {
           }
           case 178: {
             externalSystems_.AddEntriesFrom(ref input, _map_externalSystems_codec);
+            break;
+          }
+          case 210: {
+            if (access_ == null) {
+              Access = new global::Google.Cloud.SecurityCenter.V1.Access();
+            }
+            input.ReadMessage(Access);
             break;
           }
           case 226: {
