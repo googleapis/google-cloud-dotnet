@@ -26,18 +26,18 @@ namespace Google.Cloud.SecurityCenter.V1 {
           string.Concat(
             "Cjtnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvc2VjdXJpdHljZW50",
             "ZXJfc2VydmljZS5wcm90bxIeZ29vZ2xlLmNsb3VkLnNlY3VyaXR5Y2VudGVy",
-            "LnYxGkFnb29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvcnVuX2Fzc2V0",
-            "X2Rpc2NvdmVyeV9yZXNwb25zZS5wcm90bxocZ29vZ2xlL2FwaS9hbm5vdGF0",
-            "aW9ucy5wcm90bxoXZ29vZ2xlL2FwaS9jbGllbnQucHJvdG8aH2dvb2dsZS9h",
-            "cGkvZmllbGRfYmVoYXZpb3IucHJvdG8aGWdvb2dsZS9hcGkvcmVzb3VyY2Uu",
-            "cHJvdG8aKmdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS9hc3NldC5w",
-            "cm90bxo0Z29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL2V4dGVybmFs",
-            "X3N5c3RlbS5wcm90bxosZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3Yx",
-            "L2ZpbmRpbmcucHJvdG8aK2dvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92",
-            "MS9mb2xkZXIucHJvdG8aMGdvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92",
-            "MS9tdXRlX2NvbmZpZy5wcm90bxo4Z29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2Vu",
-            "dGVyL3YxL25vdGlmaWNhdGlvbl9jb25maWcucHJvdG8aOmdvb2dsZS9jbG91",
-            "ZC9zZWN1cml0eWNlbnRlci92MS9vcmdhbml6YXRpb25fc2V0dGluZ3MucHJv",
+            "LnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGhdnb29nbGUvYXBp",
+            "L2NsaWVudC5wcm90bxofZ29vZ2xlL2FwaS9maWVsZF9iZWhhdmlvci5wcm90",
+            "bxoZZ29vZ2xlL2FwaS9yZXNvdXJjZS5wcm90bxoqZ29vZ2xlL2Nsb3VkL3Nl",
+            "Y3VyaXR5Y2VudGVyL3YxL2Fzc2V0LnByb3RvGjRnb29nbGUvY2xvdWQvc2Vj",
+            "dXJpdHljZW50ZXIvdjEvZXh0ZXJuYWxfc3lzdGVtLnByb3RvGixnb29nbGUv",
+            "Y2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvZmluZGluZy5wcm90bxorZ29vZ2xl",
+            "L2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL2ZvbGRlci5wcm90bxowZ29vZ2xl",
+            "L2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL211dGVfY29uZmlnLnByb3RvGjhn",
+            "b29nbGUvY2xvdWQvc2VjdXJpdHljZW50ZXIvdjEvbm90aWZpY2F0aW9uX2Nv",
+            "bmZpZy5wcm90bxo6Z29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL29y",
+            "Z2FuaXphdGlvbl9zZXR0aW5ncy5wcm90bxpBZ29vZ2xlL2Nsb3VkL3NlY3Vy",
+            "aXR5Y2VudGVyL3YxL3J1bl9hc3NldF9kaXNjb3ZlcnlfcmVzcG9uc2UucHJv",
             "dG8aM2dvb2dsZS9jbG91ZC9zZWN1cml0eWNlbnRlci92MS9zZWN1cml0eV9t",
             "YXJrcy5wcm90bxorZ29vZ2xlL2Nsb3VkL3NlY3VyaXR5Y2VudGVyL3YxL3Nv",
             "dXJjZS5wcm90bxoeZ29vZ2xlL2lhbS92MS9pYW1fcG9saWN5LnByb3RvGhpn",
@@ -391,9 +391,9 @@ namespace Google.Cloud.SecurityCenter.V1 {
             "Y2xvdWQvc2VjdXJpdHljZW50ZXIvdjE7c2VjdXJpdHljZW50ZXKqAh5Hb29n",
             "bGUuQ2xvdWQuU2VjdXJpdHlDZW50ZXIuVjHKAh5Hb29nbGVcQ2xvdWRcU2Vj",
             "dXJpdHlDZW50ZXJcVjHqAiFHb29nbGU6OkNsb3VkOjpTZWN1cml0eUNlbnRl",
-            "cjo6VjFQAGIGcHJvdG8z"));
+            "cjo6VjFQC2IGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponseReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AssetReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FolderReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.MuteConfigReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.NotificationConfigReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.OrganizationSettingsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.AssetReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.ExternalSystemReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FindingReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.FolderReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.MuteConfigReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.NotificationConfigReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.OrganizationSettingsReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.RunAssetDiscoveryResponseReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SecurityMarksReflection.Descriptor, global::Google.Cloud.SecurityCenter.V1.SourceReflection.Descriptor, global::Google.Cloud.Iam.V1.IamPolicyReflection.Descriptor, global::Google.Cloud.Iam.V1.PolicyReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.EmptyReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.StructReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest), global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsRequest.Parser, new[]{ "Parent", "Filter", "MuteAnnotation" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsResponse), global::Google.Cloud.SecurityCenter.V1.BulkMuteFindingsResponse.Parser, null, null, null, null, null),
@@ -12011,7 +12011,8 @@ namespace Google.Cloud.SecurityCenter.V1 {
     /// <summary>
     /// The time at which the updated SecurityMarks take effect.
     /// If not set uses current server time.  Updates will be applied to the
-    /// SecurityMarks that are active immediately preceding this time.
+    /// SecurityMarks that are active immediately preceding this time. Must be
+    /// smaller or equal to the server time.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
