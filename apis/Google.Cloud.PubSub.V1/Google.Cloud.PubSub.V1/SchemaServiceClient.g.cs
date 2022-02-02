@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -52,6 +53,7 @@ namespace Google.Cloud.PubSub.V1
             DeleteSchemaSettings = existing.DeleteSchemaSettings;
             ValidateSchemaSettings = existing.ValidateSchemaSettings;
             ValidateMessageSettings = existing.ValidateMessageSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -128,6 +130,11 @@ namespace Google.Cloud.PubSub.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings ValidateMessageSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SchemaServiceSettings"/> object.</returns>
@@ -291,6 +298,9 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>The underlying gRPC SchemaService client</summary>
         public virtual SchemaService.SchemaServiceClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a schema.
@@ -1024,6 +1034,7 @@ namespace Google.Cloud.PubSub.V1
             GrpcClient = grpcClient;
             SchemaServiceSettings effectiveSettings = settings ?? SchemaServiceSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
             _callCreateSchema = clientHelper.BuildApiCall<CreateSchemaRequest, Schema>(grpcClient.CreateSchemaAsync, grpcClient.CreateSchema, effectiveSettings.CreateSchemaSettings).WithGoogleRequestParam("parent", request => request.Parent);
             Modify_ApiCall(ref _callCreateSchema);
             Modify_CreateSchemaApiCall(ref _callCreateSchema);
@@ -1063,6 +1074,9 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>The underlying gRPC SchemaService client</summary>
         public override SchemaService.SchemaServiceClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_CreateSchemaRequest(ref CreateSchemaRequest request, ref gaxgrpc::CallSettings settings);
 
@@ -1231,5 +1245,21 @@ namespace Google.Cloud.PubSub.V1
         public scg::IEnumerator<Schema> GetEnumerator() => Schemas.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class SchemaService
+    {
+        public partial class SchemaServiceClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
     }
 }

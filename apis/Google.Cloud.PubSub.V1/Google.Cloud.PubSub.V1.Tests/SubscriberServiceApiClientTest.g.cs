@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -31,6 +32,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSubscriptionRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -90,6 +92,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSubscriptionRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -151,6 +154,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSubscription()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -193,6 +197,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSubscriptionAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -237,6 +242,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSubscriptionResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -279,6 +285,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSubscriptionResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Subscription request = new Subscription
             {
                 SubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -323,6 +330,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSubscriptionRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -362,6 +370,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSubscriptionRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -403,6 +412,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSubscription()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -442,6 +452,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSubscriptionAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -483,6 +494,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSubscriptionResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -522,6 +534,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSubscriptionResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSubscriptionRequest request = new GetSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -563,6 +576,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void UpdateSubscriptionRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
                 Subscription = new Subscription(),
@@ -603,6 +617,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task UpdateSubscriptionRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateSubscriptionRequest request = new UpdateSubscriptionRequest
             {
                 Subscription = new Subscription(),
@@ -645,6 +660,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSubscriptionRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -660,6 +676,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSubscriptionRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -676,6 +693,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSubscription()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -691,6 +709,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSubscriptionAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -707,6 +726,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSubscriptionResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -722,6 +742,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSubscriptionResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSubscriptionRequest request = new DeleteSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -738,6 +759,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ModifyAckDeadlineRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -755,6 +777,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ModifyAckDeadlineRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -773,6 +796,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ModifyAckDeadline()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -790,6 +814,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ModifyAckDeadlineAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -808,6 +833,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ModifyAckDeadlineResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -825,6 +851,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ModifyAckDeadlineResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyAckDeadlineRequest request = new ModifyAckDeadlineRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -843,6 +870,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void AcknowledgeRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -859,6 +887,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task AcknowledgeRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -876,6 +905,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void Acknowledge()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -892,6 +922,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task AcknowledgeAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -909,6 +940,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void AcknowledgeResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -925,6 +957,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task AcknowledgeResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             AcknowledgeRequest request = new AcknowledgeRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -942,6 +975,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void PullRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -968,6 +1002,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task PullRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -996,6 +1031,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void Pull1()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1024,6 +1060,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task Pull1Async()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1056,6 +1093,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void Pull1ResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1084,6 +1122,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task Pull1ResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1116,6 +1155,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void Pull2()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1139,6 +1179,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task Pull2Async()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1164,6 +1205,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void Pull2ResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1187,6 +1229,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task Pull2ResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PullRequest request = new PullRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1212,6 +1255,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ModifyPushConfigRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1228,6 +1272,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ModifyPushConfigRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1245,6 +1290,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ModifyPushConfig()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1261,6 +1307,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ModifyPushConfigAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1278,6 +1325,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ModifyPushConfigResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1294,6 +1342,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ModifyPushConfigResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ModifyPushConfigRequest request = new ModifyPushConfigRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1311,6 +1360,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSnapshotRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1339,6 +1389,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSnapshotRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1369,6 +1420,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSnapshot()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1397,6 +1449,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSnapshotAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1427,6 +1480,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSnapshotResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1455,6 +1509,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSnapshotResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSnapshotRequest request = new GetSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1485,6 +1540,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSnapshotRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1521,6 +1577,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSnapshotRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1559,6 +1616,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSnapshot()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1588,6 +1646,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSnapshotAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1619,6 +1678,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSnapshotResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1648,6 +1708,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSnapshotResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSnapshotRequest request = new CreateSnapshotRequest
             {
                 SnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1679,6 +1740,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void UpdateSnapshotRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
                 Snapshot = new Snapshot(),
@@ -1708,6 +1770,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task UpdateSnapshotRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateSnapshotRequest request = new UpdateSnapshotRequest
             {
                 Snapshot = new Snapshot(),
@@ -1739,6 +1802,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSnapshotRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1754,6 +1818,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSnapshotRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1770,6 +1835,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSnapshot()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1785,6 +1851,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSnapshotAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1801,6 +1868,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSnapshotResourceNames()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1816,6 +1884,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSnapshotResourceNamesAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSnapshotRequest request = new DeleteSnapshotRequest
             {
                 SnapshotAsSnapshotName = SnapshotName.FromProjectSnapshot("[PROJECT]", "[SNAPSHOT]"),
@@ -1832,6 +1901,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void SeekRequestObject()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             SeekRequest request = new SeekRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -1850,6 +1920,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task SeekRequestObjectAsync()
         {
             moq::Mock<Subscriber.SubscriberClient> mockGrpcClient = new moq::Mock<Subscriber.SubscriberClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             SeekRequest request = new SeekRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),

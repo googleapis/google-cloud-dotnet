@@ -23,16 +23,8 @@ using scg = System.Collections.Generic;
 namespace Google.Cloud.PubSub.V1
 {
     // Partial classes to implement the IAM interface via a client on the same channel.
-    // KMS implements IAM in a different way to most other clients; the methods were generated via reroute_to_grpc_interface
+    // PubSub implements IAM in a different way to most other clients; the methods were generated via reroute_to_grpc_interface
     // in the monolithic generator, but that functionality is not part of the microgenerator.
-
-    public static partial class Publisher
-    {
-        public partial class PublisherClient
-        {
-            internal iam::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() => new iam::IAMPolicy.IAMPolicyClient(CallInvoker);
-        }
-    }
 
     public partial class PublisherServiceApiSettings
     {

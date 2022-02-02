@@ -15,6 +15,7 @@
 // Generated code. DO NOT EDIT!
 
 using gaxgrpc = Google.Api.Gax.Grpc;
+using gciv = Google.Cloud.Iam.V1;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
 using moq = Moq;
@@ -31,6 +32,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateTopicRequestObject()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -74,6 +76,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateTopicRequestObjectAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -119,6 +122,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateTopic()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -150,6 +154,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateTopicAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -183,6 +188,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateTopicResourceNames()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -214,6 +220,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateTopicResourceNamesAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             Topic request = new Topic
             {
                 TopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -247,6 +254,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void UpdateTopicRequestObject()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTopicRequest request = new UpdateTopicRequest
             {
                 Topic = new Topic(),
@@ -279,6 +287,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task UpdateTopicRequestObjectAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             UpdateTopicRequest request = new UpdateTopicRequest
             {
                 Topic = new Topic(),
@@ -313,6 +322,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void PublishRequestObject()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -339,6 +349,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task PublishRequestObjectAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -367,6 +378,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void Publish()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -393,6 +405,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task PublishAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -421,6 +434,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void PublishResourceNames()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -447,6 +461,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task PublishResourceNamesAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             PublishRequest request = new PublishRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -475,6 +490,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetTopicRequestObject()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -506,6 +522,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetTopicRequestObjectAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -539,6 +556,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetTopic()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -570,6 +588,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetTopicAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -603,6 +622,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetTopicResourceNames()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -634,6 +654,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetTopicResourceNamesAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetTopicRequest request = new GetTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -667,6 +688,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteTopicRequestObject()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -682,6 +704,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteTopicRequestObjectAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -698,6 +721,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteTopic()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -713,6 +737,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteTopicAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -729,6 +754,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteTopicResourceNames()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -744,6 +770,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteTopicResourceNamesAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteTopicRequest request = new DeleteTopicRequest
             {
                 TopicAsTopicName = TopicName.FromProjectTopic("[PROJECT]", "[TOPIC]"),
@@ -760,6 +787,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DetachSubscriptionRequestObject()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DetachSubscriptionRequest request = new DetachSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),
@@ -776,6 +804,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DetachSubscriptionRequestObjectAsync()
         {
             moq::Mock<Publisher.PublisherClient> mockGrpcClient = new moq::Mock<Publisher.PublisherClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DetachSubscriptionRequest request = new DetachSubscriptionRequest
             {
                 SubscriptionAsSubscriptionName = SubscriptionName.FromProjectSubscription("[PROJECT]", "[SUBSCRIPTION]"),

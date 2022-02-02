@@ -18,6 +18,7 @@ using gax = Google.Api.Gax;
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gaxgrpccore = Google.Api.Gax.Grpc.GrpcCore;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -63,6 +64,7 @@ namespace Google.Cloud.PubSub.V1
             UpdateSnapshotSettings = existing.UpdateSnapshotSettings;
             DeleteSnapshotSettings = existing.DeleteSnapshotSettings;
             SeekSettings = existing.SeekSettings;
+            IAMPolicySettings = existing.IAMPolicySettings;
             OnCopy(existing);
         }
 
@@ -380,6 +382,11 @@ namespace Google.Cloud.PubSub.V1
         /// </remarks>
         public gaxgrpc::CallSettings SeekSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(100), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unknown, grpccore::StatusCode.Aborted, grpccore::StatusCode.Unavailable)));
 
+        /// <summary>
+        /// The settings to use for the <see cref="gciv::IAMPolicyClient"/> associated with the client.
+        /// </summary>
+        public gciv::IAMPolicySettings IAMPolicySettings { get; set; } = gciv::IAMPolicySettings.GetDefault();
+
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="SubscriberServiceApiSettings"/> object.</returns>
         public SubscriberServiceApiSettings Clone() => new SubscriberServiceApiSettings(this);
@@ -547,6 +554,9 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>The underlying gRPC SubscriberServiceApi client</summary>
         public virtual Subscriber.SubscriberClient GrpcClient => throw new sys::NotImplementedException();
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public virtual gciv::IAMPolicyClient IAMPolicyClient => throw new sys::NotImplementedException();
 
         /// <summary>
         /// Creates a subscription to a given topic. See the [resource name rules]
@@ -3378,6 +3388,7 @@ namespace Google.Cloud.PubSub.V1
             GrpcClient = grpcClient;
             SubscriberServiceApiSettings effectiveSettings = settings ?? SubscriberServiceApiSettings.GetDefault();
             gaxgrpc::ClientHelper clientHelper = new gaxgrpc::ClientHelper(effectiveSettings);
+            IAMPolicyClient = new gciv::IAMPolicyClientImpl(grpcClient.CreateIAMPolicyClient(), effectiveSettings.IAMPolicySettings);
             _callCreateSubscription = clientHelper.BuildApiCall<Subscription, Subscription>(grpcClient.CreateSubscriptionAsync, grpcClient.CreateSubscription, effectiveSettings.CreateSubscriptionSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callCreateSubscription);
             Modify_CreateSubscriptionApiCall(ref _callCreateSubscription);
@@ -3469,6 +3480,9 @@ namespace Google.Cloud.PubSub.V1
 
         /// <summary>The underlying gRPC SubscriberServiceApi client</summary>
         public override Subscriber.SubscriberClient GrpcClient { get; }
+
+        /// <summary>The <see cref="gciv::IAMPolicyClient"/> associated with this client.</summary>
+        public override gciv::IAMPolicyClient IAMPolicyClient { get; }
 
         partial void Modify_Subscription(ref Subscription request, ref gaxgrpc::CallSettings settings);
 
@@ -4101,5 +4115,21 @@ namespace Google.Cloud.PubSub.V1
         public scg::IEnumerator<Snapshot> GetEnumerator() => Snapshots.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public static partial class Subscriber
+    {
+       public partial class SubscriberClient
+        {
+            /// <summary>
+            /// Creates a new instance of <see cref="gciv::IAMPolicy.IAMPolicyClient"/> using the same call invoker as
+            /// this client.
+            /// </summary>
+            /// <returns>
+            /// A new <see cref="gciv::IAMPolicy.IAMPolicyClient"/> for the same target as this client.
+            /// </returns>
+            public virtual gciv::IAMPolicy.IAMPolicyClient CreateIAMPolicyClient() =>
+                new gciv::IAMPolicy.IAMPolicyClient(CallInvoker);
+        }
     }
 }

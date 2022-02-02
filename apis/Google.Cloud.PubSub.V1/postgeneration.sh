@@ -18,3 +18,10 @@ sed -i s/SubscriberServiceApi.SubscriberServiceApiClient/Subscriber.SubscriberCl
 # Fix up the metadata
 sed -i 's/"PublisherServiceApi": {/"Publisher": {/g' gapic_metadata.json
 sed -i 's/"SubscriberServiceApi": {/"Subscriber": {/g' gapic_metadata.json
+
+# Fix up generated partial classes for the gRPC clients.
+# (The matching is slightly fiddly as we generate other, similarly named, partial classes.)
+sed -i 's/static partial class PublisherServiceApi/static partial class Publisher/g' Google.Cloud.PubSub.V1/PublisherServiceApiClient.g.cs
+sed -i 's/        public partial class PublisherServiceApiClient/        public partial class PublisherClient/g' Google.Cloud.PubSub.V1/PublisherServiceApiClient.g.cs
+sed -i 's/static partial class SubscriberServiceApi/static partial class Subscriber/g' Google.Cloud.PubSub.V1/SubscriberServiceApiClient.g.cs
+sed -i 's/        public partial class SubscriberServiceApiClient/       public partial class SubscriberClient/g' Google.Cloud.PubSub.V1/SubscriberServiceApiClient.g.cs
