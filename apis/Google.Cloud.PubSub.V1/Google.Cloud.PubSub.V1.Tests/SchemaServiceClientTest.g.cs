@@ -16,6 +16,7 @@
 
 using gaxgrpc = Google.Api.Gax.Grpc;
 using gagr = Google.Api.Gax.ResourceNames;
+using gciv = Google.Cloud.Iam.V1;
 using proto = Google.Protobuf;
 using wkt = Google.Protobuf.WellKnownTypes;
 using grpccore = Grpc.Core;
@@ -33,6 +34,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSchemaRequestObject()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -56,6 +58,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSchemaRequestObjectAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -81,6 +84,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSchema()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -104,6 +108,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSchemaAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -129,6 +134,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void CreateSchemaResourceNames()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -152,6 +158,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task CreateSchemaResourceNamesAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             CreateSchemaRequest request = new CreateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -177,6 +184,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSchemaRequestObject()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSchemaRequest request = new GetSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -199,6 +207,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSchemaRequestObjectAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSchemaRequest request = new GetSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -223,6 +232,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSchema()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSchemaRequest request = new GetSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -244,6 +254,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSchemaAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSchemaRequest request = new GetSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -267,6 +278,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void GetSchemaResourceNames()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSchemaRequest request = new GetSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -288,6 +300,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task GetSchemaResourceNamesAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             GetSchemaRequest request = new GetSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -311,6 +324,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSchemaRequestObject()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSchemaRequest request = new DeleteSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -326,6 +340,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSchemaRequestObjectAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSchemaRequest request = new DeleteSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -342,6 +357,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSchema()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSchemaRequest request = new DeleteSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -357,6 +373,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSchemaAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSchemaRequest request = new DeleteSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -373,6 +390,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void DeleteSchemaResourceNames()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSchemaRequest request = new DeleteSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -388,6 +406,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task DeleteSchemaResourceNamesAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             DeleteSchemaRequest request = new DeleteSchemaRequest
             {
                 SchemaName = SchemaName.FromProjectSchema("[PROJECT]", "[SCHEMA]"),
@@ -404,6 +423,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ValidateSchemaRequestObject()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -421,6 +441,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ValidateSchemaRequestObjectAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -440,6 +461,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ValidateSchema()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -457,6 +479,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ValidateSchemaAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -476,6 +499,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ValidateSchemaResourceNames()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -493,6 +517,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ValidateSchemaResourceNamesAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateSchemaRequest request = new ValidateSchemaRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -512,6 +537,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public void ValidateMessageRequestObject()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateMessageRequest request = new ValidateMessageRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
@@ -532,6 +558,7 @@ namespace Google.Cloud.PubSub.V1.Tests
         public async stt::Task ValidateMessageRequestObjectAsync()
         {
             moq::Mock<SchemaService.SchemaServiceClient> mockGrpcClient = new moq::Mock<SchemaService.SchemaServiceClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateIAMPolicyClient()).Returns(new moq::Mock<gciv::IAMPolicy.IAMPolicyClient>().Object);
             ValidateMessageRequest request = new ValidateMessageRequest
             {
                 ParentAsProjectName = gagr::ProjectName.FromProject("[PROJECT]"),
