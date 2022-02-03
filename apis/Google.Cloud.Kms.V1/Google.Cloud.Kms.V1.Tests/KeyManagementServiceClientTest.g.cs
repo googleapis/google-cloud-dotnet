@@ -182,6 +182,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -216,6 +217,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -252,6 +254,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -286,6 +289,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -322,6 +326,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -356,6 +361,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.GetCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -381,7 +387,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -413,7 +419,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -447,7 +453,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -479,7 +485,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -513,7 +519,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -545,7 +551,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -578,7 +584,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 PemCrc32C = 7888183666447720391L,
                 PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -601,7 +607,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 PemCrc32C = 7888183666447720391L,
                 PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -626,7 +632,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 PemCrc32C = 7888183666447720391L,
                 PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -649,7 +655,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 PemCrc32C = 7888183666447720391L,
                 PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -674,7 +680,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 PemCrc32C = 7888183666447720391L,
                 PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -697,7 +703,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 PemCrc32C = 7888183666447720391L,
                 PublicKeyName = PublicKeyName.FromProjectLocationKeyRingCryptoKeyCryptoKeyVersion("[PROJECT]", "[LOCATION]", "[KEY_RING]", "[CRYPTO_KEY]", "[CRYPTO_KEY_VERSION]"),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.GetPublicKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PublicKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -726,7 +732,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -754,7 +760,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -784,7 +790,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -812,7 +818,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -842,7 +848,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -870,7 +876,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.GetImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1049,6 +1055,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1086,6 +1093,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1124,6 +1132,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1160,6 +1169,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1198,6 +1208,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1234,6 +1245,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.CreateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1260,7 +1272,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1293,7 +1305,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1328,7 +1340,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1361,7 +1373,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1396,7 +1408,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1429,7 +1441,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1467,7 +1479,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1503,7 +1515,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1542,7 +1554,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1572,7 +1584,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1604,7 +1616,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1634,7 +1646,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1666,7 +1678,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJob(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -1696,7 +1708,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 State = ImportJob.Types.ImportJobState.Active,
                 PublicKey = new ImportJob.Types.WrappingPublicKey(),
                 Attestation = new KeyOperationAttestation(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 ExpireEventTime = new wkt::Timestamp(),
             };
             mockGrpcClient.Setup(x => x.CreateImportJobAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ImportJob>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -1735,6 +1747,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1770,6 +1783,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1807,6 +1821,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKey(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1842,6 +1857,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -1868,7 +1884,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1901,7 +1917,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1936,7 +1952,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -1969,7 +1985,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2015,6 +2031,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2050,6 +2067,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2087,6 +2105,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2122,6 +2141,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2159,6 +2179,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersion(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2194,6 +2215,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VersionTemplate = new CryptoKeyVersionTemplate(),
                 ImportOnly = false,
                 DestroyScheduledDuration = new wkt::Duration(),
+                CryptoKeyBackendAsResourceName = new gax::UnparsedResourceName("a/wildcard/resource"),
             };
             mockGrpcClient.Setup(x => x.UpdateCryptoKeyPrimaryVersionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<CryptoKey>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2219,7 +2241,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2251,7 +2273,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2285,7 +2307,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2317,7 +2339,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2351,7 +2373,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2383,7 +2405,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2417,7 +2439,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2449,7 +2471,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2483,7 +2505,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2515,7 +2537,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2549,7 +2571,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2581,7 +2603,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CreateTime = new wkt::Timestamp(),
                 DestroyTime = new wkt::Timestamp(),
                 DestroyEventTime = new wkt::Timestamp(),
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
                 Attestation = new KeyOperationAttestation(),
                 Algorithm = CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.RsaDecryptOaep4096Sha512,
                 GenerateTime = new wkt::Timestamp(),
@@ -2619,7 +2641,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CiphertextCrc32C = 5835079685918568182L,
                 VerifiedPlaintextCrc32C = false,
                 VerifiedAdditionalAuthenticatedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2647,7 +2669,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CiphertextCrc32C = 5835079685918568182L,
                 VerifiedPlaintextCrc32C = false,
                 VerifiedAdditionalAuthenticatedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2674,7 +2696,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CiphertextCrc32C = 5835079685918568182L,
                 VerifiedPlaintextCrc32C = false,
                 VerifiedAdditionalAuthenticatedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2699,7 +2721,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CiphertextCrc32C = 5835079685918568182L,
                 VerifiedPlaintextCrc32C = false,
                 VerifiedAdditionalAuthenticatedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2726,7 +2748,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CiphertextCrc32C = 5835079685918568182L,
                 VerifiedPlaintextCrc32C = false,
                 VerifiedAdditionalAuthenticatedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Encrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2751,7 +2773,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 CiphertextCrc32C = 5835079685918568182L,
                 VerifiedPlaintextCrc32C = false,
                 VerifiedAdditionalAuthenticatedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.EncryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EncryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2779,7 +2801,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 UsedPrimary = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2805,7 +2827,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 UsedPrimary = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2830,7 +2852,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 UsedPrimary = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2853,7 +2875,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 UsedPrimary = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2878,7 +2900,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 UsedPrimary = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.Decrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2901,7 +2923,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 UsedPrimary = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.DecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<DecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2931,7 +2953,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDigestCrc32C = true,
                 Name = "name1c9368b0",
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2959,7 +2981,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDigestCrc32C = true,
                 Name = "name1c9368b0",
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -2986,7 +3008,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDigestCrc32C = true,
                 Name = "name1c9368b0",
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3011,7 +3033,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDigestCrc32C = true,
                 Name = "name1c9368b0",
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3038,7 +3060,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDigestCrc32C = true,
                 Name = "name1c9368b0",
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3063,7 +3085,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDigestCrc32C = true,
                 Name = "name1c9368b0",
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3089,7 +3111,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 VerifiedCiphertextCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3113,7 +3135,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 VerifiedCiphertextCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3138,7 +3160,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 VerifiedCiphertextCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3161,7 +3183,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 VerifiedCiphertextCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3186,7 +3208,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 VerifiedCiphertextCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecrypt(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3209,7 +3231,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Plaintext = proto::ByteString.CopyFromUtf8("plaintext1d5bbcf2"),
                 PlaintextCrc32C = -5108784857370523788L,
                 VerifiedCiphertextCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.AsymmetricDecryptAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<AsymmetricDecryptResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3236,7 +3258,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Mac = proto::ByteString.CopyFromUtf8("mac121f0c14"),
                 MacCrc32C = 8296593316352450800L,
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3261,7 +3283,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Mac = proto::ByteString.CopyFromUtf8("mac121f0c14"),
                 MacCrc32C = 8296593316352450800L,
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3287,7 +3309,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Mac = proto::ByteString.CopyFromUtf8("mac121f0c14"),
                 MacCrc32C = 8296593316352450800L,
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3311,7 +3333,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Mac = proto::ByteString.CopyFromUtf8("mac121f0c14"),
                 MacCrc32C = 8296593316352450800L,
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3337,7 +3359,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Mac = proto::ByteString.CopyFromUtf8("mac121f0c14"),
                 MacCrc32C = 8296593316352450800L,
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSign(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3361,7 +3383,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 Mac = proto::ByteString.CopyFromUtf8("mac121f0c14"),
                 MacCrc32C = 8296593316352450800L,
                 VerifiedDataCrc32C = true,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacSignAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacSignResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3391,7 +3413,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDataCrc32C = true,
                 VerifiedMacCrc32C = false,
                 VerifiedSuccessIntegrity = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerify(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3419,7 +3441,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDataCrc32C = true,
                 VerifiedMacCrc32C = false,
                 VerifiedSuccessIntegrity = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerifyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacVerifyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3447,7 +3469,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDataCrc32C = true,
                 VerifiedMacCrc32C = false,
                 VerifiedSuccessIntegrity = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerify(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3473,7 +3495,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDataCrc32C = true,
                 VerifiedMacCrc32C = false,
                 VerifiedSuccessIntegrity = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerifyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacVerifyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3501,7 +3523,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDataCrc32C = true,
                 VerifiedMacCrc32C = false,
                 VerifiedSuccessIntegrity = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerify(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3527,7 +3549,7 @@ namespace Google.Cloud.Kms.V1.Tests
                 VerifiedDataCrc32C = true,
                 VerifiedMacCrc32C = false,
                 VerifiedSuccessIntegrity = false,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             mockGrpcClient.Setup(x => x.MacVerifyAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<MacVerifyResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             KeyManagementServiceClient client = new KeyManagementServiceClientImpl(mockGrpcClient.Object, null);
@@ -3546,7 +3568,7 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Location = "locatione09d18d5",
                 LengthBytes = 1939961421,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             GenerateRandomBytesResponse expectedResponse = new GenerateRandomBytesResponse
             {
@@ -3568,7 +3590,7 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Location = "locatione09d18d5",
                 LengthBytes = 1939961421,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             GenerateRandomBytesResponse expectedResponse = new GenerateRandomBytesResponse
             {
@@ -3592,7 +3614,7 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Location = "locatione09d18d5",
                 LengthBytes = 1939961421,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             GenerateRandomBytesResponse expectedResponse = new GenerateRandomBytesResponse
             {
@@ -3614,7 +3636,7 @@ namespace Google.Cloud.Kms.V1.Tests
             {
                 Location = "locatione09d18d5",
                 LengthBytes = 1939961421,
-                ProtectionLevel = ProtectionLevel.Hsm,
+                ProtectionLevel = ProtectionLevel.ExternalVpc,
             };
             GenerateRandomBytesResponse expectedResponse = new GenerateRandomBytesResponse
             {
