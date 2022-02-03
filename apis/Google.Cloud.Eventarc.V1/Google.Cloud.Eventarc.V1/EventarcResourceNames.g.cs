@@ -66,4 +66,100 @@ namespace Google.Cloud.Eventarc.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class GetChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::ChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::ChannelName ChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::ChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListChannelsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteChannelRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::ChannelName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::ChannelName ChannelName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::ChannelName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class GetChannelConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::ChannelConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::ChannelConnectionName ChannelConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::ChannelConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ListChannelConnectionsRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class CreateChannelConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gagr::LocationName"/>-typed view over the <see cref="Parent"/> resource name property.
+        /// </summary>
+        public gagr::LocationName ParentAsLocationName
+        {
+            get => string.IsNullOrEmpty(Parent) ? null : gagr::LocationName.Parse(Parent, allowUnparsed: true);
+            set => Parent = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class DeleteChannelConnectionRequest
+    {
+        /// <summary>
+        /// <see cref="gcev::ChannelConnectionName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcev::ChannelConnectionName ChannelConnectionName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcev::ChannelConnectionName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

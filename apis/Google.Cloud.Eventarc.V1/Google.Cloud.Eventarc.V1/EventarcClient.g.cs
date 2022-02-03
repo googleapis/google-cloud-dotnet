@@ -55,6 +55,20 @@ namespace Google.Cloud.Eventarc.V1
             UpdateTriggerOperationsSettings = existing.UpdateTriggerOperationsSettings.Clone();
             DeleteTriggerSettings = existing.DeleteTriggerSettings;
             DeleteTriggerOperationsSettings = existing.DeleteTriggerOperationsSettings.Clone();
+            GetChannelSettings = existing.GetChannelSettings;
+            ListChannelsSettings = existing.ListChannelsSettings;
+            CreateChannelSettings = existing.CreateChannelSettings;
+            CreateChannelOperationsSettings = existing.CreateChannelOperationsSettings.Clone();
+            UpdateChannelSettings = existing.UpdateChannelSettings;
+            UpdateChannelOperationsSettings = existing.UpdateChannelOperationsSettings.Clone();
+            DeleteChannelSettings = existing.DeleteChannelSettings;
+            DeleteChannelOperationsSettings = existing.DeleteChannelOperationsSettings.Clone();
+            GetChannelConnectionSettings = existing.GetChannelConnectionSettings;
+            ListChannelConnectionsSettings = existing.ListChannelConnectionsSettings;
+            CreateChannelConnectionSettings = existing.CreateChannelConnectionSettings;
+            CreateChannelConnectionOperationsSettings = existing.CreateChannelConnectionOperationsSettings.Clone();
+            DeleteChannelConnectionSettings = existing.DeleteChannelConnectionSettings;
+            DeleteChannelConnectionOperationsSettings = existing.DeleteChannelConnectionOperationsSettings.Clone();
             OnCopy(existing);
         }
 
@@ -170,6 +184,204 @@ namespace Google.Cloud.Eventarc.V1
         /// </list>
         /// </remarks>
         public lro::OperationsSettings DeleteTriggerOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>EventarcClient.GetChannel</c>
+        ///  and <c>EventarcClient.GetChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to <c>EventarcClient.ListChannels</c>
+        ///  and <c>EventarcClient.ListChannelsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListChannelsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.CreateChannel</c> and <c>EventarcClient.CreateChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.CreateChannel</c> and
+        /// <c>EventarcClient.CreateChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.UpdateChannel</c> and <c>EventarcClient.UpdateChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdateChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.UpdateChannel</c> and
+        /// <c>EventarcClient.UpdateChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings UpdateChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.DeleteChannel</c> and <c>EventarcClient.DeleteChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteChannelSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.DeleteChannel</c> and
+        /// <c>EventarcClient.DeleteChannelAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteChannelOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.GetChannelConnection</c> and <c>EventarcClient.GetChannelConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings GetChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.ListChannelConnections</c> and <c>EventarcClient.ListChannelConnectionsAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ListChannelConnectionsSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.CreateChannelConnection</c> and <c>EventarcClient.CreateChannelConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings CreateChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.CreateChannelConnection</c> and
+        /// <c>EventarcClient.CreateChannelConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings CreateChannelConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
+        {
+            DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
+        };
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>EventarcClient.DeleteChannelConnection</c> and <c>EventarcClient.DeleteChannelConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>This call will not be retried.</description></item>
+        /// <item><description>No timeout is applied.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings DeleteChannelConnectionSettings { get; set; } = gaxgrpc::CallSettings.FromExpiration(gax::Expiration.None);
+
+        /// <summary>
+        /// Long Running Operation settings for calls to <c>EventarcClient.DeleteChannelConnection</c> and
+        /// <c>EventarcClient.DeleteChannelConnectionAsync</c>.
+        /// </summary>
+        /// <remarks>
+        /// Uses default <see cref="gax::PollSettings"/> of:
+        /// <list type="bullet">
+        /// <item><description>Initial delay: 20 seconds.</description></item>
+        /// <item><description>Delay multiplier: 1.5</description></item>
+        /// <item><description>Maximum delay: 45 seconds.</description></item>
+        /// <item><description>Total timeout: 24 hours.</description></item>
+        /// </list>
+        /// </remarks>
+        public lro::OperationsSettings DeleteChannelConnectionOperationsSettings { get; set; } = new lro::OperationsSettings
         {
             DefaultPollSettings = new gax::PollSettings(gax::Expiration.FromTimeout(sys::TimeSpan.FromHours(24)), sys::TimeSpan.FromSeconds(20), 1.5, sys::TimeSpan.FromSeconds(45)),
         };
@@ -789,8 +1001,8 @@ namespace Google.Cloud.Eventarc.V1
         /// The trigger to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to be updated; only fields explicitly provided will be updated.
-        /// If no field mask is provided, all provided fields in the request will be
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
         /// updated. To update all fields, provide a field mask of "*".
         /// </param>
         /// <param name="allowMissing">
@@ -814,8 +1026,8 @@ namespace Google.Cloud.Eventarc.V1
         /// The trigger to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to be updated; only fields explicitly provided will be updated.
-        /// If no field mask is provided, all provided fields in the request will be
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
         /// updated. To update all fields, provide a field mask of "*".
         /// </param>
         /// <param name="allowMissing">
@@ -839,8 +1051,8 @@ namespace Google.Cloud.Eventarc.V1
         /// The trigger to be updated.
         /// </param>
         /// <param name="updateMask">
-        /// The fields to be updated; only fields explicitly provided will be updated.
-        /// If no field mask is provided, all provided fields in the request will be
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
         /// updated. To update all fields, provide a field mask of "*".
         /// </param>
         /// <param name="allowMissing">
@@ -1010,6 +1222,1167 @@ namespace Google.Cloud.Eventarc.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task<lro::Operation<Trigger, OperationMetadata>> DeleteTriggerAsync(TriggerName name, bool allowMissing, st::CancellationToken cancellationToken) =>
             DeleteTriggerAsync(name, allowMissing, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Channel GetChannel(GetChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Channel> GetChannelAsync(GetChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Channel> GetChannelAsync(GetChannelRequest request, st::CancellationToken cancellationToken) =>
+            GetChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Channel GetChannel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannel(new GetChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Channel> GetChannelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelAsync(new GetChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Channel> GetChannelAsync(string name, st::CancellationToken cancellationToken) =>
+            GetChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual Channel GetChannel(ChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannel(new GetChannelRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Channel> GetChannelAsync(ChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelAsync(new GetChannelRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<Channel> GetChannelAsync(ChannelName name, st::CancellationToken cancellationToken) =>
+            GetChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(ListChannelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(ListChannelsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list channels on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannels(new ListChannelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list channels on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelsAsync(new ListChannelsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list channels on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannels(new ListChannelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection to list channels on.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelsAsync(new ListChannelsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> CreateChannel(CreateChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> CreateChannelAsync(CreateChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> CreateChannelAsync(CreateChannelRequest request, st::CancellationToken cancellationToken) =>
+            CreateChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateChannel</c>.</summary>
+        public virtual lro::OperationsClient CreateChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>CreateChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> PollOnceCreateChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Channel, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> PollOnceCreateChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Channel, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel.
+        /// </param>
+        /// <param name="channel">
+        /// Required. The channel to create.
+        /// </param>
+        /// <param name="channelId">
+        /// Required. The user-provided ID to be assigned to the channel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> CreateChannel(string parent, Channel channel, string channelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannel(new CreateChannelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Channel = gax::GaxPreconditions.CheckNotNull(channel, nameof(channel)),
+                ChannelId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelId, nameof(channelId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel.
+        /// </param>
+        /// <param name="channel">
+        /// Required. The channel to create.
+        /// </param>
+        /// <param name="channelId">
+        /// Required. The user-provided ID to be assigned to the channel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> CreateChannelAsync(string parent, Channel channel, string channelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelAsync(new CreateChannelRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                Channel = gax::GaxPreconditions.CheckNotNull(channel, nameof(channel)),
+                ChannelId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelId, nameof(channelId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel.
+        /// </param>
+        /// <param name="channel">
+        /// Required. The channel to create.
+        /// </param>
+        /// <param name="channelId">
+        /// Required. The user-provided ID to be assigned to the channel.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> CreateChannelAsync(string parent, Channel channel, string channelId, st::CancellationToken cancellationToken) =>
+            CreateChannelAsync(parent, channel, channelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel.
+        /// </param>
+        /// <param name="channel">
+        /// Required. The channel to create.
+        /// </param>
+        /// <param name="channelId">
+        /// Required. The user-provided ID to be assigned to the channel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> CreateChannel(gagr::LocationName parent, Channel channel, string channelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannel(new CreateChannelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Channel = gax::GaxPreconditions.CheckNotNull(channel, nameof(channel)),
+                ChannelId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelId, nameof(channelId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel.
+        /// </param>
+        /// <param name="channel">
+        /// Required. The channel to create.
+        /// </param>
+        /// <param name="channelId">
+        /// Required. The user-provided ID to be assigned to the channel.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> CreateChannelAsync(gagr::LocationName parent, Channel channel, string channelId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelAsync(new CreateChannelRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                Channel = gax::GaxPreconditions.CheckNotNull(channel, nameof(channel)),
+                ChannelId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelId, nameof(channelId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel.
+        /// </param>
+        /// <param name="channel">
+        /// Required. The channel to create.
+        /// </param>
+        /// <param name="channelId">
+        /// Required. The user-provided ID to be assigned to the channel.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> CreateChannelAsync(gagr::LocationName parent, Channel channel, string channelId, st::CancellationToken cancellationToken) =>
+            CreateChannelAsync(parent, channel, channelId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> UpdateChannel(UpdateChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> UpdateChannelAsync(UpdateChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> UpdateChannelAsync(UpdateChannelRequest request, st::CancellationToken cancellationToken) =>
+            UpdateChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>UpdateChannel</c>.</summary>
+        public virtual lro::OperationsClient UpdateChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>UpdateChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> PollOnceUpdateChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Channel, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>UpdateChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> PollOnceUpdateChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Channel, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), UpdateChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="channel">
+        /// The channel to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
+        /// updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> UpdateChannel(Channel channel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChannel(new UpdateChannelRequest
+            {
+                Channel = channel,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="channel">
+        /// The channel to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
+        /// updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> UpdateChannelAsync(Channel channel, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdateChannelAsync(new UpdateChannelRequest
+            {
+                Channel = channel,
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="channel">
+        /// The channel to be updated.
+        /// </param>
+        /// <param name="updateMask">
+        /// The fields to be updated; only fields explicitly provided are updated.
+        /// If no field mask is provided, all provided fields in the request are
+        /// updated. To update all fields, provide a field mask of "*".
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> UpdateChannelAsync(Channel channel, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdateChannelAsync(channel, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> DeleteChannel(DeleteChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> DeleteChannelAsync(DeleteChannelRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> DeleteChannelAsync(DeleteChannelRequest request, st::CancellationToken cancellationToken) =>
+            DeleteChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteChannel</c>.</summary>
+        public virtual lro::OperationsClient DeleteChannelOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of <c>DeleteChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> PollOnceDeleteChannel(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Channel, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteChannel</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> PollOnceDeleteChannelAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<Channel, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteChannelOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> DeleteChannel(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannel(new DeleteChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> DeleteChannelAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelAsync(new DeleteChannelRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to be deleted.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> DeleteChannelAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<Channel, OperationMetadata> DeleteChannel(ChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannel(new DeleteChannelRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to be deleted.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> DeleteChannelAsync(ChannelName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelAsync(new DeleteChannelRequest
+            {
+                ChannelName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel to be deleted.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<Channel, OperationMetadata>> DeleteChannelAsync(ChannelName name, st::CancellationToken cancellationToken) =>
+            DeleteChannelAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelConnection GetChannelConnection(GetChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelConnection> GetChannelConnectionAsync(GetChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelConnection> GetChannelConnectionAsync(GetChannelConnectionRequest request, st::CancellationToken cancellationToken) =>
+            GetChannelConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelConnection GetChannelConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelConnection(new GetChannelConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelConnection> GetChannelConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelConnectionAsync(new GetChannelConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelConnection> GetChannelConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            GetChannelConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual ChannelConnection GetChannelConnection(ChannelConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelConnection(new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to get.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelConnection> GetChannelConnectionAsync(ChannelConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            GetChannelConnectionAsync(new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to get.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<ChannelConnection> GetChannelConnectionAsync(ChannelConnectionName name, st::CancellationToken cancellationToken) =>
+            GetChannelConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(ListChannelConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(ListChannelConnectionsRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection from which to list channel connections.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelConnections(new ListChannelConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection from which to list channel connections.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(string parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelConnectionsAsync(new ListChannelConnectionsRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection from which to list channel connections.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public virtual gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelConnections(new ListChannelConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection from which to list channel connections.
+        /// </param>
+        /// <param name="pageToken">
+        /// The token returned from the previous request. A value of <c>null</c> or an empty string retrieves the first
+        /// page.
+        /// </param>
+        /// <param name="pageSize">
+        /// The size of page to request. The response will not be larger than this, but may be smaller. A value of
+        /// <c>null</c> or <c>0</c> uses a server-defined page size.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public virtual gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(gagr::LocationName parent, string pageToken = null, int? pageSize = null, gaxgrpc::CallSettings callSettings = null) =>
+            ListChannelConnectionsAsync(new ListChannelConnectionsRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                PageToken = pageToken ?? "",
+                PageSize = pageSize ?? 0,
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> CreateChannelConnection(CreateChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> CreateChannelConnectionAsync(CreateChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> CreateChannelConnectionAsync(CreateChannelConnectionRequest request, st::CancellationToken cancellationToken) =>
+            CreateChannelConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>CreateChannelConnection</c>.</summary>
+        public virtual lro::OperationsClient CreateChannelConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateChannelConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> PollOnceCreateChannelConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateChannelConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>CreateChannelConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> PollOnceCreateChannelConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), CreateChannelConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel connection.
+        /// </param>
+        /// <param name="channelConnection">
+        /// Required. Channel connection to create.
+        /// </param>
+        /// <param name="channelConnectionId">
+        /// Required. The user-provided ID to be assigned to the channel connection.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> CreateChannelConnection(string parent, ChannelConnection channelConnection, string channelConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelConnection(new CreateChannelConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChannelConnection = gax::GaxPreconditions.CheckNotNull(channelConnection, nameof(channelConnection)),
+                ChannelConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelConnectionId, nameof(channelConnectionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel connection.
+        /// </param>
+        /// <param name="channelConnection">
+        /// Required. Channel connection to create.
+        /// </param>
+        /// <param name="channelConnectionId">
+        /// Required. The user-provided ID to be assigned to the channel connection.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> CreateChannelConnectionAsync(string parent, ChannelConnection channelConnection, string channelConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelConnectionAsync(new CreateChannelConnectionRequest
+            {
+                Parent = gax::GaxPreconditions.CheckNotNullOrEmpty(parent, nameof(parent)),
+                ChannelConnection = gax::GaxPreconditions.CheckNotNull(channelConnection, nameof(channelConnection)),
+                ChannelConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelConnectionId, nameof(channelConnectionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel connection.
+        /// </param>
+        /// <param name="channelConnection">
+        /// Required. Channel connection to create.
+        /// </param>
+        /// <param name="channelConnectionId">
+        /// Required. The user-provided ID to be assigned to the channel connection.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> CreateChannelConnectionAsync(string parent, ChannelConnection channelConnection, string channelConnectionId, st::CancellationToken cancellationToken) =>
+            CreateChannelConnectionAsync(parent, channelConnection, channelConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel connection.
+        /// </param>
+        /// <param name="channelConnection">
+        /// Required. Channel connection to create.
+        /// </param>
+        /// <param name="channelConnectionId">
+        /// Required. The user-provided ID to be assigned to the channel connection.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> CreateChannelConnection(gagr::LocationName parent, ChannelConnection channelConnection, string channelConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelConnection(new CreateChannelConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChannelConnection = gax::GaxPreconditions.CheckNotNull(channelConnection, nameof(channelConnection)),
+                ChannelConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelConnectionId, nameof(channelConnectionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel connection.
+        /// </param>
+        /// <param name="channelConnection">
+        /// Required. Channel connection to create.
+        /// </param>
+        /// <param name="channelConnectionId">
+        /// Required. The user-provided ID to be assigned to the channel connection.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> CreateChannelConnectionAsync(gagr::LocationName parent, ChannelConnection channelConnection, string channelConnectionId, gaxgrpc::CallSettings callSettings = null) =>
+            CreateChannelConnectionAsync(new CreateChannelConnectionRequest
+            {
+                ParentAsLocationName = gax::GaxPreconditions.CheckNotNull(parent, nameof(parent)),
+                ChannelConnection = gax::GaxPreconditions.CheckNotNull(channelConnection, nameof(channelConnection)),
+                ChannelConnectionId = gax::GaxPreconditions.CheckNotNullOrEmpty(channelConnectionId, nameof(channelConnectionId)),
+            }, callSettings);
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="parent">
+        /// Required. The parent collection in which to add this channel connection.
+        /// </param>
+        /// <param name="channelConnection">
+        /// Required. Channel connection to create.
+        /// </param>
+        /// <param name="channelConnectionId">
+        /// Required. The user-provided ID to be assigned to the channel connection.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> CreateChannelConnectionAsync(gagr::LocationName parent, ChannelConnection channelConnection, string channelConnectionId, st::CancellationToken cancellationToken) =>
+            CreateChannelConnectionAsync(parent, channelConnection, channelConnectionId, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> DeleteChannelConnection(DeleteChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(DeleteChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(DeleteChannelConnectionRequest request, st::CancellationToken cancellationToken) =>
+            DeleteChannelConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>The long-running operations client for <c>DeleteChannelConnection</c>.</summary>
+        public virtual lro::OperationsClient DeleteChannelConnectionOperationsClient => throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteChannelConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The result of polling the operation.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> PollOnceDeleteChannelConnection(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelConnection, OperationMetadata>.PollOnceFromName(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteChannelConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Asynchronously poll an operation once, using an <c>operationName</c> from a previous invocation of
+        /// <c>DeleteChannelConnection</c>.
+        /// </summary>
+        /// <param name="operationName">
+        /// The name of a previously invoked operation. Must not be <c>null</c> or empty.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A task representing the result of polling the operation.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> PollOnceDeleteChannelConnectionAsync(string operationName, gaxgrpc::CallSettings callSettings = null) =>
+            lro::Operation<ChannelConnection, OperationMetadata>.PollOnceFromNameAsync(gax::GaxPreconditions.CheckNotNullOrEmpty(operationName, nameof(operationName)), DeleteChannelConnectionOperationsClient, callSettings);
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> DeleteChannelConnection(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelConnection(new DeleteChannelConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelConnectionAsync(new DeleteChannelConnectionRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(string name, st::CancellationToken cancellationToken) =>
+            DeleteChannelConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual lro::Operation<ChannelConnection, OperationMetadata> DeleteChannelConnection(ChannelConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelConnection(new DeleteChannelConnectionRequest
+            {
+                ChannelConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to delete.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(ChannelConnectionName name, gaxgrpc::CallSettings callSettings = null) =>
+            DeleteChannelConnectionAsync(new DeleteChannelConnectionRequest
+            {
+                ChannelConnectionName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The name of the channel connection to delete.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(ChannelConnectionName name, st::CancellationToken cancellationToken) =>
+            DeleteChannelConnectionAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>Eventarc client wrapper implementation, for convenient use.</summary>
@@ -1029,6 +2402,24 @@ namespace Google.Cloud.Eventarc.V1
 
         private readonly gaxgrpc::ApiCall<DeleteTriggerRequest, lro::Operation> _callDeleteTrigger;
 
+        private readonly gaxgrpc::ApiCall<GetChannelRequest, Channel> _callGetChannel;
+
+        private readonly gaxgrpc::ApiCall<ListChannelsRequest, ListChannelsResponse> _callListChannels;
+
+        private readonly gaxgrpc::ApiCall<CreateChannelRequest, lro::Operation> _callCreateChannel;
+
+        private readonly gaxgrpc::ApiCall<UpdateChannelRequest, lro::Operation> _callUpdateChannel;
+
+        private readonly gaxgrpc::ApiCall<DeleteChannelRequest, lro::Operation> _callDeleteChannel;
+
+        private readonly gaxgrpc::ApiCall<GetChannelConnectionRequest, ChannelConnection> _callGetChannelConnection;
+
+        private readonly gaxgrpc::ApiCall<ListChannelConnectionsRequest, ListChannelConnectionsResponse> _callListChannelConnections;
+
+        private readonly gaxgrpc::ApiCall<CreateChannelConnectionRequest, lro::Operation> _callCreateChannelConnection;
+
+        private readonly gaxgrpc::ApiCall<DeleteChannelConnectionRequest, lro::Operation> _callDeleteChannelConnection;
+
         /// <summary>
         /// Constructs a client wrapper for the Eventarc service, with the specified gRPC client and settings.
         /// </summary>
@@ -1042,6 +2433,11 @@ namespace Google.Cloud.Eventarc.V1
             CreateTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateTriggerOperationsSettings);
             UpdateTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateTriggerOperationsSettings);
             DeleteTriggerOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteTriggerOperationsSettings);
+            CreateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelOperationsSettings);
+            UpdateChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.UpdateChannelOperationsSettings);
+            DeleteChannelOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelOperationsSettings);
+            CreateChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.CreateChannelConnectionOperationsSettings);
+            DeleteChannelConnectionOperationsClient = new lro::OperationsClientImpl(grpcClient.CreateOperationsClient(), effectiveSettings.DeleteChannelConnectionOperationsSettings);
             _callGetTrigger = clientHelper.BuildApiCall<GetTriggerRequest, Trigger>(grpcClient.GetTriggerAsync, grpcClient.GetTrigger, effectiveSettings.GetTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callGetTrigger);
             Modify_GetTriggerApiCall(ref _callGetTrigger);
@@ -1057,6 +2453,33 @@ namespace Google.Cloud.Eventarc.V1
             _callDeleteTrigger = clientHelper.BuildApiCall<DeleteTriggerRequest, lro::Operation>(grpcClient.DeleteTriggerAsync, grpcClient.DeleteTrigger, effectiveSettings.DeleteTriggerSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeleteTrigger);
             Modify_DeleteTriggerApiCall(ref _callDeleteTrigger);
+            _callGetChannel = clientHelper.BuildApiCall<GetChannelRequest, Channel>(grpcClient.GetChannelAsync, grpcClient.GetChannel, effectiveSettings.GetChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetChannel);
+            Modify_GetChannelApiCall(ref _callGetChannel);
+            _callListChannels = clientHelper.BuildApiCall<ListChannelsRequest, ListChannelsResponse>(grpcClient.ListChannelsAsync, grpcClient.ListChannels, effectiveSettings.ListChannelsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListChannels);
+            Modify_ListChannelsApiCall(ref _callListChannels);
+            _callCreateChannel = clientHelper.BuildApiCall<CreateChannelRequest, lro::Operation>(grpcClient.CreateChannelAsync, grpcClient.CreateChannel, effectiveSettings.CreateChannelSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateChannel);
+            Modify_CreateChannelApiCall(ref _callCreateChannel);
+            _callUpdateChannel = clientHelper.BuildApiCall<UpdateChannelRequest, lro::Operation>(grpcClient.UpdateChannelAsync, grpcClient.UpdateChannel, effectiveSettings.UpdateChannelSettings).WithGoogleRequestParam("channel.name", request => request.Channel?.Name);
+            Modify_ApiCall(ref _callUpdateChannel);
+            Modify_UpdateChannelApiCall(ref _callUpdateChannel);
+            _callDeleteChannel = clientHelper.BuildApiCall<DeleteChannelRequest, lro::Operation>(grpcClient.DeleteChannelAsync, grpcClient.DeleteChannel, effectiveSettings.DeleteChannelSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteChannel);
+            Modify_DeleteChannelApiCall(ref _callDeleteChannel);
+            _callGetChannelConnection = clientHelper.BuildApiCall<GetChannelConnectionRequest, ChannelConnection>(grpcClient.GetChannelConnectionAsync, grpcClient.GetChannelConnection, effectiveSettings.GetChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callGetChannelConnection);
+            Modify_GetChannelConnectionApiCall(ref _callGetChannelConnection);
+            _callListChannelConnections = clientHelper.BuildApiCall<ListChannelConnectionsRequest, ListChannelConnectionsResponse>(grpcClient.ListChannelConnectionsAsync, grpcClient.ListChannelConnections, effectiveSettings.ListChannelConnectionsSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callListChannelConnections);
+            Modify_ListChannelConnectionsApiCall(ref _callListChannelConnections);
+            _callCreateChannelConnection = clientHelper.BuildApiCall<CreateChannelConnectionRequest, lro::Operation>(grpcClient.CreateChannelConnectionAsync, grpcClient.CreateChannelConnection, effectiveSettings.CreateChannelConnectionSettings).WithGoogleRequestParam("parent", request => request.Parent);
+            Modify_ApiCall(ref _callCreateChannelConnection);
+            Modify_CreateChannelConnectionApiCall(ref _callCreateChannelConnection);
+            _callDeleteChannelConnection = clientHelper.BuildApiCall<DeleteChannelConnectionRequest, lro::Operation>(grpcClient.DeleteChannelConnectionAsync, grpcClient.DeleteChannelConnection, effectiveSettings.DeleteChannelConnectionSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callDeleteChannelConnection);
+            Modify_DeleteChannelConnectionApiCall(ref _callDeleteChannelConnection);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1072,6 +2495,24 @@ namespace Google.Cloud.Eventarc.V1
 
         partial void Modify_DeleteTriggerApiCall(ref gaxgrpc::ApiCall<DeleteTriggerRequest, lro::Operation> call);
 
+        partial void Modify_GetChannelApiCall(ref gaxgrpc::ApiCall<GetChannelRequest, Channel> call);
+
+        partial void Modify_ListChannelsApiCall(ref gaxgrpc::ApiCall<ListChannelsRequest, ListChannelsResponse> call);
+
+        partial void Modify_CreateChannelApiCall(ref gaxgrpc::ApiCall<CreateChannelRequest, lro::Operation> call);
+
+        partial void Modify_UpdateChannelApiCall(ref gaxgrpc::ApiCall<UpdateChannelRequest, lro::Operation> call);
+
+        partial void Modify_DeleteChannelApiCall(ref gaxgrpc::ApiCall<DeleteChannelRequest, lro::Operation> call);
+
+        partial void Modify_GetChannelConnectionApiCall(ref gaxgrpc::ApiCall<GetChannelConnectionRequest, ChannelConnection> call);
+
+        partial void Modify_ListChannelConnectionsApiCall(ref gaxgrpc::ApiCall<ListChannelConnectionsRequest, ListChannelConnectionsResponse> call);
+
+        partial void Modify_CreateChannelConnectionApiCall(ref gaxgrpc::ApiCall<CreateChannelConnectionRequest, lro::Operation> call);
+
+        partial void Modify_DeleteChannelConnectionApiCall(ref gaxgrpc::ApiCall<DeleteChannelConnectionRequest, lro::Operation> call);
+
         partial void OnConstruction(Eventarc.EventarcClient grpcClient, EventarcSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC Eventarc client</summary>
@@ -1086,6 +2527,24 @@ namespace Google.Cloud.Eventarc.V1
         partial void Modify_UpdateTriggerRequest(ref UpdateTriggerRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeleteTriggerRequest(ref DeleteTriggerRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetChannelRequest(ref GetChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListChannelsRequest(ref ListChannelsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateChannelRequest(ref CreateChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdateChannelRequest(ref UpdateChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteChannelRequest(ref DeleteChannelRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_GetChannelConnectionRequest(ref GetChannelConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ListChannelConnectionsRequest(ref ListChannelConnectionsRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_CreateChannelConnectionRequest(ref CreateChannelConnectionRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_DeleteChannelConnectionRequest(ref DeleteChannelConnectionRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Get a single trigger.
@@ -1215,9 +2674,248 @@ namespace Google.Cloud.Eventarc.V1
             Modify_DeleteTriggerRequest(ref request, ref callSettings);
             return new lro::Operation<Trigger, OperationMetadata>(await _callDeleteTrigger.Async(request, callSettings).ConfigureAwait(false), DeleteTriggerOperationsClient);
         }
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override Channel GetChannel(GetChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelRequest(ref request, ref callSettings);
+            return _callGetChannel.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single Channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<Channel> GetChannelAsync(GetChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelRequest(ref request, ref callSettings);
+            return _callGetChannel.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="Channel"/> resources.</returns>
+        public override gax::PagedEnumerable<ListChannelsResponse, Channel> ListChannels(ListChannelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListChannelsRequest, ListChannelsResponse, Channel>(_callListChannels, request, callSettings);
+        }
+
+        /// <summary>
+        /// List channels.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="Channel"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListChannelsResponse, Channel> ListChannelsAsync(ListChannelsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListChannelsRequest, ListChannelsResponse, Channel>(_callListChannels, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateChannel</c>.</summary>
+        public override lro::OperationsClient CreateChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Channel, OperationMetadata> CreateChannel(CreateChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<Channel, OperationMetadata>(_callCreateChannel.Sync(request, callSettings), CreateChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a new channel in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Channel, OperationMetadata>> CreateChannelAsync(CreateChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<Channel, OperationMetadata>(await _callCreateChannel.Async(request, callSettings).ConfigureAwait(false), CreateChannelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>UpdateChannel</c>.</summary>
+        public override lro::OperationsClient UpdateChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Channel, OperationMetadata> UpdateChannel(UpdateChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<Channel, OperationMetadata>(_callUpdateChannel.Sync(request, callSettings), UpdateChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Update a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Channel, OperationMetadata>> UpdateChannelAsync(UpdateChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdateChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<Channel, OperationMetadata>(await _callUpdateChannel.Async(request, callSettings).ConfigureAwait(false), UpdateChannelOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteChannel</c>.</summary>
+        public override lro::OperationsClient DeleteChannelOperationsClient { get; }
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<Channel, OperationMetadata> DeleteChannel(DeleteChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<Channel, OperationMetadata>(_callDeleteChannel.Sync(request, callSettings), DeleteChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete a single channel.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<Channel, OperationMetadata>> DeleteChannelAsync(DeleteChannelRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelRequest(ref request, ref callSettings);
+            return new lro::Operation<Channel, OperationMetadata>(await _callDeleteChannel.Async(request, callSettings).ConfigureAwait(false), DeleteChannelOperationsClient);
+        }
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override ChannelConnection GetChannelConnection(GetChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelConnectionRequest(ref request, ref callSettings);
+            return _callGetChannelConnection.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Get a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<ChannelConnection> GetChannelConnectionAsync(GetChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_GetChannelConnectionRequest(ref request, ref callSettings);
+            return _callGetChannelConnection.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public override gax::PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnections(ListChannelConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedEnumerable<ListChannelConnectionsRequest, ListChannelConnectionsResponse, ChannelConnection>(_callListChannelConnections, request, callSettings);
+        }
+
+        /// <summary>
+        /// List channel connections.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A pageable asynchronous sequence of <see cref="ChannelConnection"/> resources.</returns>
+        public override gax::PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> ListChannelConnectionsAsync(ListChannelConnectionsRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ListChannelConnectionsRequest(ref request, ref callSettings);
+            return new gaxgrpc::GrpcPagedAsyncEnumerable<ListChannelConnectionsRequest, ListChannelConnectionsResponse, ChannelConnection>(_callListChannelConnections, request, callSettings);
+        }
+
+        /// <summary>The long-running operations client for <c>CreateChannelConnection</c>.</summary>
+        public override lro::OperationsClient CreateChannelConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ChannelConnection, OperationMetadata> CreateChannelConnection(CreateChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelConnection, OperationMetadata>(_callCreateChannelConnection.Sync(request, callSettings), CreateChannelConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Create a new ChannelConnection in a particular project and location.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> CreateChannelConnectionAsync(CreateChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_CreateChannelConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelConnection, OperationMetadata>(await _callCreateChannelConnection.Async(request, callSettings).ConfigureAwait(false), CreateChannelConnectionOperationsClient);
+        }
+
+        /// <summary>The long-running operations client for <c>DeleteChannelConnection</c>.</summary>
+        public override lro::OperationsClient DeleteChannelConnectionOperationsClient { get; }
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override lro::Operation<ChannelConnection, OperationMetadata> DeleteChannelConnection(DeleteChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelConnection, OperationMetadata>(_callDeleteChannelConnection.Sync(request, callSettings), DeleteChannelConnectionOperationsClient);
+        }
+
+        /// <summary>
+        /// Delete a single ChannelConnection.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override async stt::Task<lro::Operation<ChannelConnection, OperationMetadata>> DeleteChannelConnectionAsync(DeleteChannelConnectionRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_DeleteChannelConnectionRequest(ref request, ref callSettings);
+            return new lro::Operation<ChannelConnection, OperationMetadata>(await _callDeleteChannelConnection.Async(request, callSettings).ConfigureAwait(false), DeleteChannelConnectionOperationsClient);
+        }
     }
 
     public partial class ListTriggersRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListChannelsRequest : gaxgrpc::IPageRequest
+    {
+    }
+
+    public partial class ListChannelConnectionsRequest : gaxgrpc::IPageRequest
     {
     }
 
@@ -1225,6 +2923,22 @@ namespace Google.Cloud.Eventarc.V1
     {
         /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
         public scg::IEnumerator<Trigger> GetEnumerator() => Triggers.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListChannelsResponse : gaxgrpc::IPageResponse<Channel>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<Channel> GetEnumerator() => Channels.GetEnumerator();
+
+        sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
+    }
+
+    public partial class ListChannelConnectionsResponse : gaxgrpc::IPageResponse<ChannelConnection>
+    {
+        /// <summary>Returns an enumerator that iterates through the resources in this response.</summary>
+        public scg::IEnumerator<ChannelConnection> GetEnumerator() => ChannelConnections.GetEnumerator();
 
         sc::IEnumerator sc::IEnumerable.GetEnumerator() => GetEnumerator();
     }

@@ -28,7 +28,7 @@ namespace Google.Cloud.Eventarc.V1 {
             "Z2xlLmNsb3VkLmV2ZW50YXJjLnYxGhxnb29nbGUvYXBpL2Fubm90YXRpb25z",
             "LnByb3RvGh9nb29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGhlnb29n",
             "bGUvYXBpL3Jlc291cmNlLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0",
-            "YW1wLnByb3RvIp0FCgdUcmlnZ2VyEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1",
+            "YW1wLnByb3RvIrMFCgdUcmlnZ2VyEhEKBG5hbWUYASABKAlCA+BBAhIQCgN1",
             "aWQYAiABKAlCA+BBAxI0CgtjcmVhdGVfdGltZRgFIAEoCzIaLmdvb2dsZS5w",
             "cm90b2J1Zi5UaW1lc3RhbXBCA+BBAxI0Cgt1cGRhdGVfdGltZRgGIAEoCzIa",
             "Lmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxJECg1ldmVudF9maWx0",
@@ -39,35 +39,43 @@ namespace Google.Cloud.Eventarc.V1 {
             "dGlvbkID4EECEjsKCXRyYW5zcG9ydBgLIAEoCzIjLmdvb2dsZS5jbG91ZC5l",
             "dmVudGFyYy52MS5UcmFuc3BvcnRCA+BBARJCCgZsYWJlbHMYDCADKAsyLS5n",
             "b29nbGUuY2xvdWQuZXZlbnRhcmMudjEuVHJpZ2dlci5MYWJlbHNFbnRyeUID",
-            "4EEBEhEKBGV0YWcYYyABKAlCA+BBAxotCgtMYWJlbHNFbnRyeRILCgNrZXkY",
-            "ASABKAkSDQoFdmFsdWUYAiABKAk6AjgBOnPqQXAKH2V2ZW50YXJjLmdvb2ds",
-            "ZWFwaXMuY29tL1RyaWdnZXISOnByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS90cmlnZ2Vycy97dHJpZ2dlcn0qCHRyaWdnZXJzMgd0",
-            "cmlnZ2VyIjkKC0V2ZW50RmlsdGVyEhYKCWF0dHJpYnV0ZRgBIAEoCUID4EEC",
-            "EhIKBXZhbHVlGAIgASgJQgPgQQIiVAoLRGVzdGluYXRpb24SNwoJY2xvdWRf",
-            "cnVuGAEgASgLMiIuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYxLkNsb3VkUnVu",
-            "SABCDAoKZGVzY3JpcHRvciJPCglUcmFuc3BvcnQSMgoGcHVic3ViGAEgASgL",
-            "MiAuZ29vZ2xlLmNsb3VkLmV2ZW50YXJjLnYxLlB1YnN1YkgAQg4KDGludGVy",
-            "bWVkaWFyeSJnCghDbG91ZFJ1bhIzCgdzZXJ2aWNlGAEgASgJQiLgQQL6QRwK",
-            "GnJ1bi5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlEhEKBHBhdGgYAiABKAlCA+BB",
-            "ARITCgZyZWdpb24YAyABKAlCA+BBAiI3CgZQdWJzdWISEgoFdG9waWMYASAB",
-            "KAlCA+BBARIZCgxzdWJzY3JpcHRpb24YAiABKAlCA+BBA0LcAgocY29tLmdv",
-            "b2dsZS5jbG91ZC5ldmVudGFyYy52MUIMVHJpZ2dlclByb3RvUAFaQGdvb2ds",
-            "ZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFwaXMvY2xvdWQvZXZlbnRh",
-            "cmMvdjE7ZXZlbnRhcmPqQWsKK2Nsb3VkZnVuY3Rpb25zLmdvb2dsZWFwaXMu",
-            "Y29tL0Nsb3VkRnVuY3Rpb24SPHByb2plY3RzL3twcm9qZWN0fS9sb2NhdGlv",
-            "bnMve2xvY2F0aW9ufS9mdW5jdGlvbnMve2Z1bmN0aW9ufepBWQohaWFtLmdv",
-            "b2dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50EjRwcm9qZWN0cy97cHJvamVj",
-            "dH0vc2VydmljZUFjY291bnRzL3tzZXJ2aWNlX2FjY291bnR96kEfChpydW4u",
-            "Z29vZ2xlYXBpcy5jb20vU2VydmljZRIBKmIGcHJvdG8z"));
+            "4EEBEhQKB2NoYW5uZWwYDSABKAlCA+BBARIRCgRldGFnGGMgASgJQgPgQQMa",
+            "LQoLTGFiZWxzRW50cnkSCwoDa2V5GAEgASgJEg0KBXZhbHVlGAIgASgJOgI4",
+            "ATpz6kFwCh9ldmVudGFyYy5nb29nbGVhcGlzLmNvbS9UcmlnZ2VyEjpwcm9q",
+            "ZWN0cy97cHJvamVjdH0vbG9jYXRpb25zL3tsb2NhdGlvbn0vdHJpZ2dlcnMv",
+            "e3RyaWdnZXJ9Kgh0cmlnZ2VyczIHdHJpZ2dlciJQCgtFdmVudEZpbHRlchIW",
+            "CglhdHRyaWJ1dGUYASABKAlCA+BBAhISCgV2YWx1ZRgCIAEoCUID4EECEhUK",
+            "CG9wZXJhdG9yGAMgASgJQgPgQQEizgEKC0Rlc3RpbmF0aW9uEjcKCWNsb3Vk",
+            "X3J1bhgBIAEoCzIiLmdvb2dsZS5jbG91ZC5ldmVudGFyYy52MS5DbG91ZFJ1",
+            "bkgAEkoKDmNsb3VkX2Z1bmN0aW9uGAIgASgJQjD6QS0KK2Nsb3VkZnVuY3Rp",
+            "b25zLmdvb2dsZWFwaXMuY29tL0Nsb3VkRnVuY3Rpb25IABIsCgNna2UYAyAB",
+            "KAsyHS5nb29nbGUuY2xvdWQuZXZlbnRhcmMudjEuR0tFSABCDAoKZGVzY3Jp",
+            "cHRvciJPCglUcmFuc3BvcnQSMgoGcHVic3ViGAEgASgLMiAuZ29vZ2xlLmNs",
+            "b3VkLmV2ZW50YXJjLnYxLlB1YnN1YkgAQg4KDGludGVybWVkaWFyeSJnCghD",
+            "bG91ZFJ1bhIzCgdzZXJ2aWNlGAEgASgJQiLgQQL6QRwKGnJ1bi5nb29nbGVh",
+            "cGlzLmNvbS9TZXJ2aWNlEhEKBHBhdGgYAiABKAlCA+BBARITCgZyZWdpb24Y",
+            "AyABKAlCA+BBAiJzCgNHS0USFAoHY2x1c3RlchgBIAEoCUID4EECEhUKCGxv",
+            "Y2F0aW9uGAIgASgJQgPgQQISFgoJbmFtZXNwYWNlGAMgASgJQgPgQQISFAoH",
+            "c2VydmljZRgEIAEoCUID4EECEhEKBHBhdGgYBSABKAlCA+BBASI3CgZQdWJz",
+            "dWISEgoFdG9waWMYASABKAlCA+BBARIZCgxzdWJzY3JpcHRpb24YAiABKAlC",
+            "A+BBA0LcAgocY29tLmdvb2dsZS5jbG91ZC5ldmVudGFyYy52MUIMVHJpZ2dl",
+            "clByb3RvUAFaQGdvb2dsZS5nb2xhbmcub3JnL2dlbnByb3RvL2dvb2dsZWFw",
+            "aXMvY2xvdWQvZXZlbnRhcmMvdjE7ZXZlbnRhcmPqQWsKK2Nsb3VkZnVuY3Rp",
+            "b25zLmdvb2dsZWFwaXMuY29tL0Nsb3VkRnVuY3Rpb24SPHByb2plY3RzL3tw",
+            "cm9qZWN0fS9sb2NhdGlvbnMve2xvY2F0aW9ufS9mdW5jdGlvbnMve2Z1bmN0",
+            "aW9ufepBWQohaWFtLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50EjRw",
+            "cm9qZWN0cy97cHJvamVjdH0vc2VydmljZUFjY291bnRzL3tzZXJ2aWNlX2Fj",
+            "Y291bnR96kEfChpydW4uZ29vZ2xlYXBpcy5jb20vU2VydmljZRIBKmIGcHJv",
+            "dG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Trigger), global::Google.Cloud.Eventarc.V1.Trigger.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "EventFilters", "ServiceAccount", "Destination", "Transport", "Labels", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.EventFilter), global::Google.Cloud.Eventarc.V1.EventFilter.Parser, new[]{ "Attribute", "Value" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Destination), global::Google.Cloud.Eventarc.V1.Destination.Parser, new[]{ "CloudRun" }, new[]{ "Descriptor" }, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Trigger), global::Google.Cloud.Eventarc.V1.Trigger.Parser, new[]{ "Name", "Uid", "CreateTime", "UpdateTime", "EventFilters", "ServiceAccount", "Destination", "Transport", "Labels", "Channel", "Etag" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.EventFilter), global::Google.Cloud.Eventarc.V1.EventFilter.Parser, new[]{ "Attribute", "Value", "Operator" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Destination), global::Google.Cloud.Eventarc.V1.Destination.Parser, new[]{ "CloudRun", "CloudFunction", "Gke" }, new[]{ "Descriptor" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Transport), global::Google.Cloud.Eventarc.V1.Transport.Parser, new[]{ "Pubsub" }, new[]{ "Intermediary" }, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.CloudRun), global::Google.Cloud.Eventarc.V1.CloudRun.Parser, new[]{ "Service", "Path", "Region" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.GKE), global::Google.Cloud.Eventarc.V1.GKE.Parser, new[]{ "Cluster", "Location", "Namespace", "Service", "Path" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.Eventarc.V1.Pubsub), global::Google.Cloud.Eventarc.V1.Pubsub.Parser, new[]{ "Topic", "Subscription" }, null, null, null, null)
           }));
     }
@@ -121,6 +129,7 @@ namespace Google.Cloud.Eventarc.V1 {
       destination_ = other.destination_ != null ? other.destination_.Clone() : null;
       transport_ = other.transport_ != null ? other.transport_.Clone() : null;
       labels_ = other.labels_.Clone();
+      channel_ = other.channel_;
       etag_ = other.etag_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
@@ -135,8 +144,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the trigger. Must be unique within the
-    /// location on the project and must be in
+    /// Required. The resource name of the trigger. Must be unique within the location of the
+    /// project and must be in
     /// `projects/{project}/locations/{location}/triggers/{trigger}` format.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -152,9 +161,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int UidFieldNumber = 2;
     private string uid_ = "";
     /// <summary>
-    /// Output only. Server assigned unique identifier for the trigger. The value
-    /// is a UUID4 string and guaranteed to remain unchanged until the resource is
-    /// deleted.
+    /// Output only. Server-assigned unique identifier for the trigger. The value is a UUID4
+    /// string and guaranteed to remain unchanged until the resource is deleted.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -201,8 +209,8 @@ namespace Google.Cloud.Eventarc.V1 {
         = pb::FieldCodec.ForMessage(66, global::Google.Cloud.Eventarc.V1.EventFilter.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.Eventarc.V1.EventFilter> eventFilters_ = new pbc::RepeatedField<global::Google.Cloud.Eventarc.V1.EventFilter>();
     /// <summary>
-    /// Required. null The list of filters that applies to event attributes. Only
-    /// events that match all the provided filters will be sent to the destination.
+    /// Required. null The list of filters that applies to event attributes. Only events that
+    /// match all the provided filters are sent to the destination.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -217,7 +225,7 @@ namespace Google.Cloud.Eventarc.V1 {
     /// Optional. The IAM service account email associated with the trigger. The
     /// service account represents the identity of the trigger.
     ///
-    /// The principal who calls this API must have `iam.serviceAccounts.actAs`
+    /// The principal who calls this API must have the `iam.serviceAccounts.actAs`
     /// permission in the service account. See
     /// https://cloud.google.com/iam/docs/understanding-service-accounts?hl=en#sa_common
     /// for more information.
@@ -226,8 +234,8 @@ namespace Google.Cloud.Eventarc.V1 {
     /// identity tokens when invoking the service. See
     /// https://cloud.google.com/run/docs/triggering/pubsub-push#create-service-account
     /// for information on how to invoke authenticated Cloud Run services.
-    /// In order to create Audit Log triggers, the service account should also
-    /// have `roles/eventarc.eventReceiver` IAM role.
+    /// To create Audit Log triggers, the service account should also
+    /// have the `roles/eventarc.eventReceiver` IAM role.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -257,9 +265,9 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int TransportFieldNumber = 11;
     private global::Google.Cloud.Eventarc.V1.Transport transport_;
     /// <summary>
-    /// Optional. In order to deliver messages, Eventarc may use other GCP
-    /// products as transport intermediary. This field contains a reference to that
-    /// transport intermediary. This information can be used for debugging
+    /// Optional. To deliver messages, Eventarc might use other GCP
+    /// products as a transport intermediary. This field contains a reference to
+    /// that transport intermediary. This information can be used for debugging
     /// purposes.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -277,8 +285,7 @@ namespace Google.Cloud.Eventarc.V1 {
         = new pbc::MapField<string, string>.Codec(pb::FieldCodec.ForString(10, ""), pb::FieldCodec.ForString(18, ""), 98);
     private readonly pbc::MapField<string, string> labels_ = new pbc::MapField<string, string>();
     /// <summary>
-    /// Optional. User labels attached to the triggers that can be used to group
-    /// resources.
+    /// Optional. User labels attached to the triggers that can be used to group resources.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -286,13 +293,30 @@ namespace Google.Cloud.Eventarc.V1 {
       get { return labels_; }
     }
 
+    /// <summary>Field number for the "channel" field.</summary>
+    public const int ChannelFieldNumber = 13;
+    private string channel_ = "";
+    /// <summary>
+    /// Optional. The name of the channel associated with the trigger in
+    /// `projects/{project}/locations/{location}/channels/{channel}` format.
+    /// You must provide a channel to receive events from Eventarc SaaS partners.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Channel {
+      get { return channel_; }
+      set {
+        channel_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     /// <summary>Field number for the "etag" field.</summary>
     public const int EtagFieldNumber = 99;
     private string etag_ = "";
     /// <summary>
-    /// Output only. This checksum is computed by the server based on the value of
-    /// other fields, and may be sent only on create requests to ensure the client
-    /// has an up-to-date value before proceeding.
+    /// Output only. This checksum is computed by the server based on the value of other
+    /// fields, and might be sent only on create requests to ensure that the
+    /// client has an up-to-date value before proceeding.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -327,6 +351,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (!object.Equals(Destination, other.Destination)) return false;
       if (!object.Equals(Transport, other.Transport)) return false;
       if (!Labels.Equals(other.Labels)) return false;
+      if (Channel != other.Channel) return false;
       if (Etag != other.Etag) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -344,6 +369,7 @@ namespace Google.Cloud.Eventarc.V1 {
       if (destination_ != null) hash ^= Destination.GetHashCode();
       if (transport_ != null) hash ^= Transport.GetHashCode();
       hash ^= Labels.GetHashCode();
+      if (Channel.Length != 0) hash ^= Channel.GetHashCode();
       if (Etag.Length != 0) hash ^= Etag.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -393,6 +419,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteMessage(Transport);
       }
       labels_.WriteTo(output, _map_labels_codec);
+      if (Channel.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Channel);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -437,6 +467,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteMessage(Transport);
       }
       labels_.WriteTo(ref output, _map_labels_codec);
+      if (Channel.Length != 0) {
+        output.WriteRawTag(106);
+        output.WriteString(Channel);
+      }
       if (Etag.Length != 0) {
         output.WriteRawTag(154, 6);
         output.WriteString(Etag);
@@ -474,6 +508,9 @@ namespace Google.Cloud.Eventarc.V1 {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(Transport);
       }
       size += labels_.CalculateSize(_map_labels_codec);
+      if (Channel.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Channel);
+      }
       if (Etag.Length != 0) {
         size += 2 + pb::CodedOutputStream.ComputeStringSize(Etag);
       }
@@ -524,6 +561,9 @@ namespace Google.Cloud.Eventarc.V1 {
         Transport.MergeFrom(other.Transport);
       }
       labels_.Add(other.labels_);
+      if (other.Channel.Length != 0) {
+        Channel = other.Channel;
+      }
       if (other.Etag.Length != 0) {
         Etag = other.Etag;
       }
@@ -588,6 +628,10 @@ namespace Google.Cloud.Eventarc.V1 {
           }
           case 98: {
             labels_.AddEntriesFrom(input, _map_labels_codec);
+            break;
+          }
+          case 106: {
+            Channel = input.ReadString();
             break;
           }
           case 794: {
@@ -657,6 +701,10 @@ namespace Google.Cloud.Eventarc.V1 {
             labels_.AddEntriesFrom(ref input, _map_labels_codec);
             break;
           }
+          case 106: {
+            Channel = input.ReadString();
+            break;
+          }
           case 794: {
             Etag = input.ReadString();
             break;
@@ -707,6 +755,7 @@ namespace Google.Cloud.Eventarc.V1 {
     public EventFilter(EventFilter other) : this() {
       attribute_ = other.attribute_;
       value_ = other.value_;
+      operator_ = other.operator_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -720,8 +769,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int AttributeFieldNumber = 1;
     private string attribute_ = "";
     /// <summary>
-    /// Required. The name of a CloudEvents attribute. Currently, only a subset of
-    /// attributes are supported for filtering.
+    /// Required. The name of a CloudEvents attribute. Currently, only a subset of attributes
+    /// are supported for filtering.
     ///
     /// All triggers MUST provide a filter for the 'type' attribute.
     /// </summary>
@@ -749,6 +798,24 @@ namespace Google.Cloud.Eventarc.V1 {
       }
     }
 
+    /// <summary>Field number for the "operator" field.</summary>
+    public const int OperatorFieldNumber = 3;
+    private string operator_ = "";
+    /// <summary>
+    /// Optional. The operator used for matching the events with the value of the
+    /// filter. If not specified, only events that have an exact key-value pair
+    /// specified in the filter are matched. The only allowed value is
+    /// `match-path-pattern`.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Operator {
+      get { return operator_; }
+      set {
+        operator_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -766,6 +833,7 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (Attribute != other.Attribute) return false;
       if (Value != other.Value) return false;
+      if (Operator != other.Operator) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -775,6 +843,7 @@ namespace Google.Cloud.Eventarc.V1 {
       int hash = 1;
       if (Attribute.Length != 0) hash ^= Attribute.GetHashCode();
       if (Value.Length != 0) hash ^= Value.GetHashCode();
+      if (Operator.Length != 0) hash ^= Operator.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -801,6 +870,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(18);
         output.WriteString(Value);
       }
+      if (Operator.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Operator);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -819,6 +892,10 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(18);
         output.WriteString(Value);
       }
+      if (Operator.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Operator);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -834,6 +911,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (Value.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Value);
+      }
+      if (Operator.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Operator);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -852,6 +932,9 @@ namespace Google.Cloud.Eventarc.V1 {
       }
       if (other.Value.Length != 0) {
         Value = other.Value;
+      }
+      if (other.Operator.Length != 0) {
+        Operator = other.Operator;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -876,6 +959,10 @@ namespace Google.Cloud.Eventarc.V1 {
             Value = input.ReadString();
             break;
           }
+          case 26: {
+            Operator = input.ReadString();
+            break;
+          }
         }
       }
     #endif
@@ -897,6 +984,10 @@ namespace Google.Cloud.Eventarc.V1 {
           }
           case 18: {
             Value = input.ReadString();
+            break;
+          }
+          case 26: {
+            Operator = input.ReadString();
             break;
           }
         }
@@ -947,6 +1038,12 @@ namespace Google.Cloud.Eventarc.V1 {
         case DescriptorOneofCase.CloudRun:
           CloudRun = other.CloudRun.Clone();
           break;
+        case DescriptorOneofCase.CloudFunction:
+          CloudFunction = other.CloudFunction;
+          break;
+        case DescriptorOneofCase.Gke:
+          Gke = other.Gke.Clone();
+          break;
       }
 
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
@@ -961,8 +1058,8 @@ namespace Google.Cloud.Eventarc.V1 {
     /// <summary>Field number for the "cloud_run" field.</summary>
     public const int CloudRunFieldNumber = 1;
     /// <summary>
-    /// Cloud Run fully-managed service that receives the events. The service
-    /// should be running in the same project of the trigger.
+    /// Cloud Run fully-managed resource that receives the events. The resource
+    /// should be in the same project as the trigger.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -974,11 +1071,45 @@ namespace Google.Cloud.Eventarc.V1 {
       }
     }
 
+    /// <summary>Field number for the "cloud_function" field.</summary>
+    public const int CloudFunctionFieldNumber = 2;
+    /// <summary>
+    /// The Cloud Function resource name. Only Cloud Functions V2 is supported.
+    /// Format: `projects/{project}/locations/{location}/functions/{function}`
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string CloudFunction {
+      get { return descriptorCase_ == DescriptorOneofCase.CloudFunction ? (string) descriptor_ : ""; }
+      set {
+        descriptor_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+        descriptorCase_ = DescriptorOneofCase.CloudFunction;
+      }
+    }
+
+    /// <summary>Field number for the "gke" field.</summary>
+    public const int GkeFieldNumber = 3;
+    /// <summary>
+    /// A GKE service capable of receiving events. The service should be running
+    /// in the same project as the trigger.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public global::Google.Cloud.Eventarc.V1.GKE Gke {
+      get { return descriptorCase_ == DescriptorOneofCase.Gke ? (global::Google.Cloud.Eventarc.V1.GKE) descriptor_ : null; }
+      set {
+        descriptor_ = value;
+        descriptorCase_ = value == null ? DescriptorOneofCase.None : DescriptorOneofCase.Gke;
+      }
+    }
+
     private object descriptor_;
     /// <summary>Enum of possible cases for the "descriptor" oneof.</summary>
     public enum DescriptorOneofCase {
       None = 0,
       CloudRun = 1,
+      CloudFunction = 2,
+      Gke = 3,
     }
     private DescriptorOneofCase descriptorCase_ = DescriptorOneofCase.None;
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1010,6 +1141,8 @@ namespace Google.Cloud.Eventarc.V1 {
         return true;
       }
       if (!object.Equals(CloudRun, other.CloudRun)) return false;
+      if (CloudFunction != other.CloudFunction) return false;
+      if (!object.Equals(Gke, other.Gke)) return false;
       if (DescriptorCase != other.DescriptorCase) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
@@ -1019,6 +1152,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (descriptorCase_ == DescriptorOneofCase.CloudRun) hash ^= CloudRun.GetHashCode();
+      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) hash ^= CloudFunction.GetHashCode();
+      if (descriptorCase_ == DescriptorOneofCase.Gke) hash ^= Gke.GetHashCode();
       hash ^= (int) descriptorCase_;
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
@@ -1042,6 +1177,14 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(CloudRun);
       }
+      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) {
+        output.WriteRawTag(18);
+        output.WriteString(CloudFunction);
+      }
+      if (descriptorCase_ == DescriptorOneofCase.Gke) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gke);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -1056,6 +1199,14 @@ namespace Google.Cloud.Eventarc.V1 {
         output.WriteRawTag(10);
         output.WriteMessage(CloudRun);
       }
+      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) {
+        output.WriteRawTag(18);
+        output.WriteString(CloudFunction);
+      }
+      if (descriptorCase_ == DescriptorOneofCase.Gke) {
+        output.WriteRawTag(26);
+        output.WriteMessage(Gke);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -1068,6 +1219,12 @@ namespace Google.Cloud.Eventarc.V1 {
       int size = 0;
       if (descriptorCase_ == DescriptorOneofCase.CloudRun) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(CloudRun);
+      }
+      if (descriptorCase_ == DescriptorOneofCase.CloudFunction) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(CloudFunction);
+      }
+      if (descriptorCase_ == DescriptorOneofCase.Gke) {
+        size += 1 + pb::CodedOutputStream.ComputeMessageSize(Gke);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -1087,6 +1244,15 @@ namespace Google.Cloud.Eventarc.V1 {
             CloudRun = new global::Google.Cloud.Eventarc.V1.CloudRun();
           }
           CloudRun.MergeFrom(other.CloudRun);
+          break;
+        case DescriptorOneofCase.CloudFunction:
+          CloudFunction = other.CloudFunction;
+          break;
+        case DescriptorOneofCase.Gke:
+          if (Gke == null) {
+            Gke = new global::Google.Cloud.Eventarc.V1.GKE();
+          }
+          Gke.MergeFrom(other.Gke);
           break;
       }
 
@@ -1114,6 +1280,19 @@ namespace Google.Cloud.Eventarc.V1 {
             CloudRun = subBuilder;
             break;
           }
+          case 18: {
+            CloudFunction = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Eventarc.V1.GKE subBuilder = new global::Google.Cloud.Eventarc.V1.GKE();
+            if (descriptorCase_ == DescriptorOneofCase.Gke) {
+              subBuilder.MergeFrom(Gke);
+            }
+            input.ReadMessage(subBuilder);
+            Gke = subBuilder;
+            break;
+          }
         }
       }
     #endif
@@ -1138,6 +1317,19 @@ namespace Google.Cloud.Eventarc.V1 {
             CloudRun = subBuilder;
             break;
           }
+          case 18: {
+            CloudFunction = input.ReadString();
+            break;
+          }
+          case 26: {
+            global::Google.Cloud.Eventarc.V1.GKE subBuilder = new global::Google.Cloud.Eventarc.V1.GKE();
+            if (descriptorCase_ == DescriptorOneofCase.Gke) {
+              subBuilder.MergeFrom(Gke);
+            }
+            input.ReadMessage(subBuilder);
+            Gke = subBuilder;
+            break;
+          }
         }
       }
     }
@@ -1146,7 +1338,7 @@ namespace Google.Cloud.Eventarc.V1 {
   }
 
   /// <summary>
-  /// Represents the transport intermediaries created for the trigger in order to
+  /// Represents the transport intermediaries created for the trigger to
   /// deliver events.
   /// </summary>
   public sealed partial class Transport : pb::IMessage<Transport>
@@ -1201,7 +1393,7 @@ namespace Google.Cloud.Eventarc.V1 {
     /// <summary>Field number for the "pubsub" field.</summary>
     public const int PubsubFieldNumber = 1;
     /// <summary>
-    /// The Pub/Sub topic and subscription used by Eventarc as delivery
+    /// The Pub/Sub topic and subscription used by Eventarc as a transport
     /// intermediary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1441,7 +1633,7 @@ namespace Google.Cloud.Eventarc.V1 {
     /// Required. The name of the Cloud Run service being addressed. See
     /// https://cloud.google.com/run/docs/reference/rest/v1/namespaces.services.
     ///
-    /// Only services located in the same project of the trigger object
+    /// Only services located in the same project as the trigger object
     /// can be addressed.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1457,10 +1649,9 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int PathFieldNumber = 2;
     private string path_ = "";
     /// <summary>
-    /// Optional. The relative path on the Cloud Run service the events should be
-    /// sent to.
+    /// Optional. The relative path on the Cloud Run service the events should be sent to.
     ///
-    /// The value must conform to the definition of URI path segment (section 3.3
+    /// The value must conform to the definition of a URI path segment (section 3.3
     /// of RFC2396). Examples: "/route", "route", "route/subroute".
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1669,6 +1860,367 @@ namespace Google.Cloud.Eventarc.V1 {
   }
 
   /// <summary>
+  /// Represents a GKE destination.
+  /// </summary>
+  public sealed partial class GKE : pb::IMessage<GKE>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<GKE> _parser = new pb::MessageParser<GKE>(() => new GKE());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<GKE> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.Eventarc.V1.TriggerReflection.Descriptor.MessageTypes[5]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GKE() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GKE(GKE other) : this() {
+      cluster_ = other.cluster_;
+      location_ = other.location_;
+      namespace_ = other.namespace_;
+      service_ = other.service_;
+      path_ = other.path_;
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public GKE Clone() {
+      return new GKE(this);
+    }
+
+    /// <summary>Field number for the "cluster" field.</summary>
+    public const int ClusterFieldNumber = 1;
+    private string cluster_ = "";
+    /// <summary>
+    /// Required. The name of the cluster the GKE service is running in. The cluster must be
+    /// running in the same project as the trigger being created.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Cluster {
+      get { return cluster_; }
+      set {
+        cluster_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "location" field.</summary>
+    public const int LocationFieldNumber = 2;
+    private string location_ = "";
+    /// <summary>
+    /// Required. The name of the Google Compute Engine in which the cluster resides, which
+    /// can either be compute zone (for example, us-central1-a) for the zonal
+    /// clusters or region (for example, us-central1) for regional clusters.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Location {
+      get { return location_; }
+      set {
+        location_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "namespace" field.</summary>
+    public const int NamespaceFieldNumber = 3;
+    private string namespace_ = "";
+    /// <summary>
+    /// Required. The namespace the GKE service is running in.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Namespace {
+      get { return namespace_; }
+      set {
+        namespace_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "service" field.</summary>
+    public const int ServiceFieldNumber = 4;
+    private string service_ = "";
+    /// <summary>
+    /// Required. Name of the GKE service.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Service {
+      get { return service_; }
+      set {
+        service_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    /// <summary>Field number for the "path" field.</summary>
+    public const int PathFieldNumber = 5;
+    private string path_ = "";
+    /// <summary>
+    /// Optional. The relative path on the GKE service the events should be sent to.
+    ///
+    /// The value must conform to the definition of a URI path segment (section 3.3
+    /// of RFC2396). Examples: "/route", "route", "route/subroute".
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public string Path {
+      get { return path_; }
+      set {
+        path_ = pb::ProtoPreconditions.CheckNotNull(value, "value");
+      }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as GKE);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(GKE other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if (Cluster != other.Cluster) return false;
+      if (Location != other.Location) return false;
+      if (Namespace != other.Namespace) return false;
+      if (Service != other.Service) return false;
+      if (Path != other.Path) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      if (Cluster.Length != 0) hash ^= Cluster.GetHashCode();
+      if (Location.Length != 0) hash ^= Location.GetHashCode();
+      if (Namespace.Length != 0) hash ^= Namespace.GetHashCode();
+      if (Service.Length != 0) hash ^= Service.GetHashCode();
+      if (Path.Length != 0) hash ^= Path.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Cluster);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Location);
+      }
+      if (Namespace.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Namespace);
+      }
+      if (Service.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Service);
+      }
+      if (Path.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      if (Cluster.Length != 0) {
+        output.WriteRawTag(10);
+        output.WriteString(Cluster);
+      }
+      if (Location.Length != 0) {
+        output.WriteRawTag(18);
+        output.WriteString(Location);
+      }
+      if (Namespace.Length != 0) {
+        output.WriteRawTag(26);
+        output.WriteString(Namespace);
+      }
+      if (Service.Length != 0) {
+        output.WriteRawTag(34);
+        output.WriteString(Service);
+      }
+      if (Path.Length != 0) {
+        output.WriteRawTag(42);
+        output.WriteString(Path);
+      }
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      if (Cluster.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Cluster);
+      }
+      if (Location.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Location);
+      }
+      if (Namespace.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Namespace);
+      }
+      if (Service.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Service);
+      }
+      if (Path.Length != 0) {
+        size += 1 + pb::CodedOutputStream.ComputeStringSize(Path);
+      }
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(GKE other) {
+      if (other == null) {
+        return;
+      }
+      if (other.Cluster.Length != 0) {
+        Cluster = other.Cluster;
+      }
+      if (other.Location.Length != 0) {
+        Location = other.Location;
+      }
+      if (other.Namespace.Length != 0) {
+        Namespace = other.Namespace;
+      }
+      if (other.Service.Length != 0) {
+        Service = other.Service;
+      }
+      if (other.Path.Length != 0) {
+        Path = other.Path;
+      }
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 18: {
+            Location = input.ReadString();
+            break;
+          }
+          case 26: {
+            Namespace = input.ReadString();
+            break;
+          }
+          case 34: {
+            Service = input.ReadString();
+            break;
+          }
+          case 42: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10: {
+            Cluster = input.ReadString();
+            break;
+          }
+          case 18: {
+            Location = input.ReadString();
+            break;
+          }
+          case 26: {
+            Namespace = input.ReadString();
+            break;
+          }
+          case 34: {
+            Service = input.ReadString();
+            break;
+          }
+          case 42: {
+            Path = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
   /// Represents a Pub/Sub transport.
   /// </summary>
   public sealed partial class Pubsub : pb::IMessage<Pubsub>
@@ -1685,7 +2237,7 @@ namespace Google.Cloud.Eventarc.V1 {
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public static pbr::MessageDescriptor Descriptor {
-      get { return global::Google.Cloud.Eventarc.V1.TriggerReflection.Descriptor.MessageTypes[5]; }
+      get { return global::Google.Cloud.Eventarc.V1.TriggerReflection.Descriptor.MessageTypes[6]; }
     }
 
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1720,13 +2272,13 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int TopicFieldNumber = 1;
     private string topic_ = "";
     /// <summary>
-    /// Optional. The name of the Pub/Sub topic created and managed by Eventarc
-    /// system as a transport for the event delivery. Format:
+    /// Optional. The name of the Pub/Sub topic created and managed by Eventarc as
+    /// a transport for the event delivery. Format:
     /// `projects/{PROJECT_ID}/topics/{TOPIC_NAME}`.
     ///
-    /// You may set an existing topic for triggers of the type
-    /// `google.cloud.pubsub.topic.v1.messagePublished` only. The topic you provide
-    /// here will not be deleted by Eventarc at trigger deletion.
+    /// You can set an existing topic for triggers of the type
+    /// `google.cloud.pubsub.topic.v1.messagePublished`. The topic you provide
+    /// here is not deleted by Eventarc at trigger deletion.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1741,8 +2293,8 @@ namespace Google.Cloud.Eventarc.V1 {
     public const int SubscriptionFieldNumber = 2;
     private string subscription_ = "";
     /// <summary>
-    /// Output only. The name of the Pub/Sub subscription created and managed by
-    /// Eventarc system as a transport for the event delivery. Format:
+    /// Output only. The name of the Pub/Sub subscription created and managed by Eventarc
+    /// as a transport for the event delivery. Format:
     /// `projects/{PROJECT_ID}/subscriptions/{SUBSCRIPTION_NAME}`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
