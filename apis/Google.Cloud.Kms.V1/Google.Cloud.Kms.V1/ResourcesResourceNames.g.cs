@@ -1358,6 +1358,15 @@ namespace Google.Cloud.Kms.V1
             get => string.IsNullOrEmpty(Name) ? null : gckv::CryptoKeyName.Parse(Name, allowUnparsed: true);
             set => Name = value?.ToString() ?? "";
         }
+
+        /// <summary>
+        /// <see cref="gax::IResourceName"/>-typed view over the <see cref="CryptoKeyBackend"/> resource name property.
+        /// </summary>
+        public gax::IResourceName CryptoKeyBackendAsResourceName
+        {
+            get => string.IsNullOrEmpty(CryptoKeyBackend) ? null : gax::UnparsedResourceName.Parse(CryptoKeyBackend);
+            set => CryptoKeyBackend = value?.ToString() ?? "";
+        }
     }
 
     public partial class CryptoKeyVersion

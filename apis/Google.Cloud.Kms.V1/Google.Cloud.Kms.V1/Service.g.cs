@@ -350,7 +350,8 @@ namespace Google.Cloud.Kms.V1 {
   }
   #region Messages
   /// <summary>
-  /// Request message for [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
+  /// Request message for
+  /// [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
   /// </summary>
   public sealed partial class ListKeyRingsRequest : pb::IMessage<ListKeyRingsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -405,7 +406,8 @@ namespace Google.Cloud.Kms.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format `projects/*/locations/*`.
+    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -420,10 +422,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Optional limit on the number of [KeyRings][google.cloud.kms.v1.KeyRing] to include in the
-    /// response.  Further [KeyRings][google.cloud.kms.v1.KeyRing] can subsequently be obtained by
-    /// including the [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token] in a subsequent
-    /// request.  If unspecified, the server will pick an appropriate default.
+    /// Optional. Optional limit on the number of
+    /// [KeyRings][google.cloud.kms.v1.KeyRing] to include in the response. Further
+    /// [KeyRings][google.cloud.kms.v1.KeyRing] can subsequently be obtained by
+    /// including the
+    /// [ListKeyRingsResponse.next_page_token][google.cloud.kms.v1.ListKeyRingsResponse.next_page_token]
+    /// in a subsequent request.  If unspecified, the server will pick an
+    /// appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -716,7 +721,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
+  /// Request message for
+  /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
   /// </summary>
   public sealed partial class ListCryptoKeysRequest : pb::IMessage<ListCryptoKeysRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -771,8 +777,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing] to list, in the format
-    /// `projects/*/locations/*/keyRings/*`.
+    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing]
+    /// to list, in the format `projects/*/locations/*/keyRings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -787,10 +793,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Optional limit on the number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] to include in the
-    /// response.  Further [CryptoKeys][google.cloud.kms.v1.CryptoKey] can subsequently be obtained by
-    /// including the [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token] in a subsequent
-    /// request.  If unspecified, the server will pick an appropriate default.
+    /// Optional. Optional limit on the number of
+    /// [CryptoKeys][google.cloud.kms.v1.CryptoKey] to include in the response.
+    /// Further [CryptoKeys][google.cloud.kms.v1.CryptoKey] can subsequently be
+    /// obtained by including the
+    /// [ListCryptoKeysResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeysResponse.next_page_token]
+    /// in a subsequent request.  If unspecified, the server will pick an
+    /// appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1122,7 +1131,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
+  /// Request message for
+  /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
   /// </summary>
   public sealed partial class ListCryptoKeyVersionsRequest : pb::IMessage<ListCryptoKeyVersionsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1177,7 +1187,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to list, in the format
+    /// Required. The resource name of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to list, in the format
     /// `projects/*/locations/*/keyRings/*/cryptoKeys/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -1193,11 +1204,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Optional limit on the number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to
-    /// include in the response. Further [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] can
-    /// subsequently be obtained by including the
-    /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token] in a subsequent request.
-    /// If unspecified, the server will pick an appropriate default.
+    /// Optional. Optional limit on the number of
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] to include in the
+    /// response. Further [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion]
+    /// can subsequently be obtained by including the
+    /// [ListCryptoKeyVersionsResponse.next_page_token][google.cloud.kms.v1.ListCryptoKeyVersionsResponse.next_page_token]
+    /// in a subsequent request. If unspecified, the server will pick an
+    /// appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1529,7 +1542,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.ListImportJobs][google.cloud.kms.v1.KeyManagementService.ListImportJobs].
+  /// Request message for
+  /// [KeyManagementService.ListImportJobs][google.cloud.kms.v1.KeyManagementService.ListImportJobs].
   /// </summary>
   public sealed partial class ListImportJobsRequest : pb::IMessage<ListImportJobsRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1583,8 +1597,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing] to list, in the format
-    /// `projects/*/locations/*/keyRings/*`.
+    /// Required. The resource name of the [KeyRing][google.cloud.kms.v1.KeyRing]
+    /// to list, in the format `projects/*/locations/*/keyRings/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1599,10 +1613,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int PageSizeFieldNumber = 2;
     private int pageSize_;
     /// <summary>
-    /// Optional. Optional limit on the number of [ImportJobs][google.cloud.kms.v1.ImportJob] to include in the
-    /// response. Further [ImportJobs][google.cloud.kms.v1.ImportJob] can subsequently be obtained by
-    /// including the [ListImportJobsResponse.next_page_token][google.cloud.kms.v1.ListImportJobsResponse.next_page_token] in a subsequent
-    /// request. If unspecified, the server will pick an appropriate default.
+    /// Optional. Optional limit on the number of
+    /// [ImportJobs][google.cloud.kms.v1.ImportJob] to include in the response.
+    /// Further [ImportJobs][google.cloud.kms.v1.ImportJob] can subsequently be
+    /// obtained by including the
+    /// [ListImportJobsResponse.next_page_token][google.cloud.kms.v1.ListImportJobsResponse.next_page_token]
+    /// in a subsequent request. If unspecified, the server will pick an
+    /// appropriate default.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1895,7 +1912,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
+  /// Response message for
+  /// [KeyManagementService.ListKeyRings][google.cloud.kms.v1.KeyManagementService.ListKeyRings].
   /// </summary>
   public sealed partial class ListKeyRingsResponse : pb::IMessage<ListKeyRingsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -1962,7 +1980,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListKeyRingsRequest.page_token][google.cloud.kms.v1.ListKeyRingsRequest.page_token] to retrieve the next page of results.
+    /// [ListKeyRingsRequest.page_token][google.cloud.kms.v1.ListKeyRingsRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -1977,7 +1996,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [KeyRings][google.cloud.kms.v1.KeyRing] that matched the query.
+    /// The total number of [KeyRings][google.cloud.kms.v1.KeyRing] that matched
+    /// the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2160,7 +2180,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
+  /// Response message for
+  /// [KeyManagementService.ListCryptoKeys][google.cloud.kms.v1.KeyManagementService.ListCryptoKeys].
   /// </summary>
   public sealed partial class ListCryptoKeysResponse : pb::IMessage<ListCryptoKeysResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2227,7 +2248,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListCryptoKeysRequest.page_token][google.cloud.kms.v1.ListCryptoKeysRequest.page_token] to retrieve the next page of results.
+    /// [ListCryptoKeysRequest.page_token][google.cloud.kms.v1.ListCryptoKeysRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2242,7 +2264,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] that matched the query.
+    /// The total number of [CryptoKeys][google.cloud.kms.v1.CryptoKey] that
+    /// matched the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2425,7 +2448,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
+  /// Response message for
+  /// [KeyManagementService.ListCryptoKeyVersions][google.cloud.kms.v1.KeyManagementService.ListCryptoKeyVersions].
   /// </summary>
   public sealed partial class ListCryptoKeyVersionsResponse : pb::IMessage<ListCryptoKeyVersionsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2492,8 +2516,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListCryptoKeyVersionsRequest.page_token][google.cloud.kms.v1.ListCryptoKeyVersionsRequest.page_token] to retrieve the next page of
-    /// results.
+    /// [ListCryptoKeyVersionsRequest.page_token][google.cloud.kms.v1.ListCryptoKeyVersionsRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2508,7 +2532,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] that matched the
+    /// The total number of
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion] that matched the
     /// query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -2692,7 +2717,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.ListImportJobs][google.cloud.kms.v1.KeyManagementService.ListImportJobs].
+  /// Response message for
+  /// [KeyManagementService.ListImportJobs][google.cloud.kms.v1.KeyManagementService.ListImportJobs].
   /// </summary>
   public sealed partial class ListImportJobsResponse : pb::IMessage<ListImportJobsResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -2759,7 +2785,8 @@ namespace Google.Cloud.Kms.V1 {
     private string nextPageToken_ = "";
     /// <summary>
     /// A token to retrieve next page of results. Pass this value in
-    /// [ListImportJobsRequest.page_token][google.cloud.kms.v1.ListImportJobsRequest.page_token] to retrieve the next page of results.
+    /// [ListImportJobsRequest.page_token][google.cloud.kms.v1.ListImportJobsRequest.page_token]
+    /// to retrieve the next page of results.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2774,7 +2801,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int TotalSizeFieldNumber = 3;
     private int totalSize_;
     /// <summary>
-    /// The total number of [ImportJobs][google.cloud.kms.v1.ImportJob] that matched the query.
+    /// The total number of [ImportJobs][google.cloud.kms.v1.ImportJob] that
+    /// matched the query.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -2957,7 +2985,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetKeyRing][google.cloud.kms.v1.KeyManagementService.GetKeyRing].
+  /// Request message for
+  /// [KeyManagementService.GetKeyRing][google.cloud.kms.v1.KeyManagementService.GetKeyRing].
   /// </summary>
   public sealed partial class GetKeyRingRequest : pb::IMessage<GetKeyRingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3007,7 +3036,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the [KeyRing][google.cloud.kms.v1.KeyRing] to get.
+    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the
+    /// [KeyRing][google.cloud.kms.v1.KeyRing] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3152,7 +3182,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetCryptoKey][google.cloud.kms.v1.KeyManagementService.GetCryptoKey].
+  /// Request message for
+  /// [KeyManagementService.GetCryptoKey][google.cloud.kms.v1.KeyManagementService.GetCryptoKey].
   /// </summary>
   public sealed partial class GetCryptoKeyRequest : pb::IMessage<GetCryptoKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3202,7 +3233,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
+    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3347,7 +3379,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.GetCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.GetCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.GetCryptoKeyVersion].
   /// </summary>
   public sealed partial class GetCryptoKeyVersionRequest : pb::IMessage<GetCryptoKeyVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3397,7 +3430,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
+    /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3542,7 +3576,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
+  /// Request message for
+  /// [KeyManagementService.GetPublicKey][google.cloud.kms.v1.KeyManagementService.GetPublicKey].
   /// </summary>
   public sealed partial class GetPublicKeyRequest : pb::IMessage<GetPublicKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3592,8 +3627,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to
-    /// get.
+    /// Required. The [name][google.cloud.kms.v1.CryptoKeyVersion.name] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] public key to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3738,7 +3773,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GetImportJob][google.cloud.kms.v1.KeyManagementService.GetImportJob].
+  /// Request message for
+  /// [KeyManagementService.GetImportJob][google.cloud.kms.v1.KeyManagementService.GetImportJob].
   /// </summary>
   public sealed partial class GetImportJobRequest : pb::IMessage<GetImportJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3788,7 +3824,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] to get.
+    /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the
+    /// [ImportJob][google.cloud.kms.v1.ImportJob] to get.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -3933,7 +3970,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateKeyRing][google.cloud.kms.v1.KeyManagementService.CreateKeyRing].
+  /// Request message for
+  /// [KeyManagementService.CreateKeyRing][google.cloud.kms.v1.KeyManagementService.CreateKeyRing].
   /// </summary>
   public sealed partial class CreateKeyRingRequest : pb::IMessage<CreateKeyRingRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -3986,7 +4024,8 @@ namespace Google.Cloud.Kms.V1 {
     private string parent_ = "";
     /// <summary>
     /// Required. The resource name of the location associated with the
-    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format `projects/*/locations/*`.
+    /// [KeyRings][google.cloud.kms.v1.KeyRing], in the format
+    /// `projects/*/locations/*`.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4017,7 +4056,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int KeyRingFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.KeyRing keyRing_;
     /// <summary>
-    /// Required. A [KeyRing][google.cloud.kms.v1.KeyRing] with initial field values.
+    /// Required. A [KeyRing][google.cloud.kms.v1.KeyRing] with initial field
+    /// values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4219,7 +4259,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateCryptoKey][google.cloud.kms.v1.KeyManagementService.CreateCryptoKey].
+  /// Request message for
+  /// [KeyManagementService.CreateCryptoKey][google.cloud.kms.v1.KeyManagementService.CreateCryptoKey].
   /// </summary>
   public sealed partial class CreateCryptoKeyRequest : pb::IMessage<CreateCryptoKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4272,8 +4313,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing associated with the
-    /// [CryptoKeys][google.cloud.kms.v1.CryptoKey].
+    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the KeyRing
+    /// associated with the [CryptoKeys][google.cloud.kms.v1.CryptoKey].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4304,7 +4345,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.CryptoKey cryptoKey_;
     /// <summary>
-    /// Required. A [CryptoKey][google.cloud.kms.v1.CryptoKey] with initial field values.
+    /// Required. A [CryptoKey][google.cloud.kms.v1.CryptoKey] with initial field
+    /// values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4319,9 +4361,12 @@ namespace Google.Cloud.Kms.V1 {
     public const int SkipInitialVersionCreationFieldNumber = 5;
     private bool skipInitialVersionCreation_;
     /// <summary>
-    /// If set to true, the request will create a [CryptoKey][google.cloud.kms.v1.CryptoKey] without any
-    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion]. You must manually call
-    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion] or
+    /// If set to true, the request will create a
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] without any
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion]. You must
+    /// manually call
+    /// [CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion]
+    /// or
     /// [ImportCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.ImportCryptoKeyVersion]
     /// before you can use this [CryptoKey][google.cloud.kms.v1.CryptoKey].
     /// </summary>
@@ -4549,7 +4594,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.CreateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.CreateCryptoKeyVersion].
   /// </summary>
   public sealed partial class CreateCryptoKeyVersionRequest : pb::IMessage<CreateCryptoKeyVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4600,8 +4646,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with
-    /// the [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
+    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] associated with the
+    /// [CryptoKeyVersions][google.cloud.kms.v1.CryptoKeyVersion].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4616,7 +4663,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 2;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// Required. A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with initial field values.
+    /// Required. A [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+    /// initial field values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4794,7 +4842,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.ImportCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.ImportCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.ImportCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.ImportCryptoKeyVersion].
   /// </summary>
   public sealed partial class ImportCryptoKeyVersionRequest : pb::IMessage<ImportCryptoKeyVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -4853,7 +4902,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to be imported into.
+    /// Required. The [name][google.cloud.kms.v1.CryptoKey.name] of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to be imported into.
     ///
     /// The create permission is only required on this key when creating a new
     /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion].
@@ -4871,20 +4921,25 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 6;
     private string cryptoKeyVersion_ = "";
     /// <summary>
-    /// Optional. The optional [name][google.cloud.kms.v1.CryptoKeyVersion.name] of an existing
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to target for an import operation.
-    /// If this field is not present, a new [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] containing the
+    /// Optional. The optional [name][google.cloud.kms.v1.CryptoKeyVersion.name] of
+    /// an existing [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to
+    /// target for an import operation. If this field is not present, a new
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] containing the
     /// supplied key material is created.
     ///
     /// If this field is present, the supplied key material is imported into
-    /// the existing [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. To import into an existing
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must be a child of
-    /// [ImportCryptoKeyVersionRequest.parent][google.cloud.kms.v1.ImportCryptoKeyVersionRequest.parent], have been previously created via
-    /// [ImportCryptoKeyVersion][], and be in
-    /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED] or
+    /// the existing [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]. To
+    /// import into an existing
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion], the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] must be a child of
+    /// [ImportCryptoKeyVersionRequest.parent][google.cloud.kms.v1.ImportCryptoKeyVersionRequest.parent],
+    /// have been previously created via [ImportCryptoKeyVersion][], and be in
+    /// [DESTROYED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.DESTROYED]
+    /// or
     /// [IMPORT_FAILED][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionState.IMPORT_FAILED]
     /// state. The key material and algorithm must match the previous
-    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] exactly if the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] has ever contained
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] exactly if the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] has ever contained
     /// key material.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -4900,10 +4955,11 @@ namespace Google.Cloud.Kms.V1 {
     public const int AlgorithmFieldNumber = 2;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm algorithm_ = global::Google.Cloud.Kms.V1.CryptoKeyVersion.Types.CryptoKeyVersionAlgorithm.Unspecified;
     /// <summary>
-    /// Required. The [algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm] of
-    /// the key being imported. This does not need to match the
-    /// [version_template][google.cloud.kms.v1.CryptoKey.version_template] of the [CryptoKey][google.cloud.kms.v1.CryptoKey] this
-    /// version imports into.
+    /// Required. The
+    /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.CryptoKeyVersionAlgorithm]
+    /// of the key being imported. This does not need to match the
+    /// [version_template][google.cloud.kms.v1.CryptoKey.version_template] of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] this version imports into.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4918,8 +4974,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ImportJobFieldNumber = 4;
     private string importJob_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the [ImportJob][google.cloud.kms.v1.ImportJob] that was used to
-    /// wrap this key material.
+    /// Required. The [name][google.cloud.kms.v1.ImportJob.name] of the
+    /// [ImportJob][google.cloud.kms.v1.ImportJob] that was used to wrap this key
+    /// material.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -4941,8 +4998,9 @@ namespace Google.Cloud.Kms.V1 {
     /// This field contains the concatenation of two wrapped keys:
     /// &lt;ol>
     ///   &lt;li>An ephemeral AES-256 wrapping key wrapped with the
-    ///       [public_key][google.cloud.kms.v1.ImportJob.public_key] using RSAES-OAEP with SHA-1,
-    ///       MGF1 with SHA-1, and an empty label.
+    ///       [public_key][google.cloud.kms.v1.ImportJob.public_key] using
+    ///       RSAES-OAEP with SHA-1/SHA-256, MGF1 with SHA-1/SHA-256, and an
+    ///       empty label.
     ///   &lt;/li>
     ///   &lt;li>The key to be imported, wrapped with the ephemeral AES-256 key
     ///       using AES-KWP (RFC 5649).
@@ -5222,7 +5280,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.CreateImportJob][google.cloud.kms.v1.KeyManagementService.CreateImportJob].
+  /// Request message for
+  /// [KeyManagementService.CreateImportJob][google.cloud.kms.v1.KeyManagementService.CreateImportJob].
   /// </summary>
   public sealed partial class CreateImportJobRequest : pb::IMessage<CreateImportJobRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5274,7 +5333,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ParentFieldNumber = 1;
     private string parent_ = "";
     /// <summary>
-    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the [KeyRing][google.cloud.kms.v1.KeyRing] associated with the
+    /// Required. The [name][google.cloud.kms.v1.KeyRing.name] of the
+    /// [KeyRing][google.cloud.kms.v1.KeyRing] associated with the
     /// [ImportJobs][google.cloud.kms.v1.ImportJob].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -5306,7 +5366,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ImportJobFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.ImportJob importJob_;
     /// <summary>
-    /// Required. An [ImportJob][google.cloud.kms.v1.ImportJob] with initial field values.
+    /// Required. An [ImportJob][google.cloud.kms.v1.ImportJob] with initial field
+    /// values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5508,7 +5569,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.UpdateCryptoKey][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKey].
+  /// Request message for
+  /// [KeyManagementService.UpdateCryptoKey][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKey].
   /// </summary>
   public sealed partial class UpdateCryptoKeyRequest : pb::IMessage<UpdateCryptoKeyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5761,7 +5823,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.UpdateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.UpdateCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyVersion].
   /// </summary>
   public sealed partial class UpdateCryptoKeyVersionRequest : pb::IMessage<UpdateCryptoKeyVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5812,7 +5875,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionFieldNumber = 1;
     private global::Google.Cloud.Kms.V1.CryptoKeyVersion cryptoKeyVersion_;
     /// <summary>
-    /// Required. [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with updated values.
+    /// Required. [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] with
+    /// updated values.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6014,7 +6078,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
+  /// Request message for
+  /// [KeyManagementService.UpdateCryptoKeyPrimaryVersion][google.cloud.kms.v1.KeyManagementService.UpdateCryptoKeyPrimaryVersion].
   /// </summary>
   public sealed partial class UpdateCryptoKeyPrimaryVersionRequest : pb::IMessage<UpdateCryptoKeyPrimaryVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6065,7 +6130,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
+    /// Required. The resource name of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to update.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6080,7 +6146,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int CryptoKeyVersionIdFieldNumber = 2;
     private string cryptoKeyVersionId_ = "";
     /// <summary>
-    /// Required. The id of the child [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
+    /// Required. The id of the child
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use as primary.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6249,7 +6316,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.DestroyCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DestroyCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.DestroyCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.DestroyCryptoKeyVersion].
   /// </summary>
   public sealed partial class DestroyCryptoKeyVersionRequest : pb::IMessage<DestroyCryptoKeyVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6299,7 +6367,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to destroy.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6444,7 +6513,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion].
+  /// Request message for
+  /// [KeyManagementService.RestoreCryptoKeyVersion][google.cloud.kms.v1.KeyManagementService.RestoreCryptoKeyVersion].
   /// </summary>
   public sealed partial class RestoreCryptoKeyVersionRequest : pb::IMessage<RestoreCryptoKeyVersionRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6494,7 +6564,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to restore.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6639,7 +6710,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+  /// Request message for
+  /// [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
   /// </summary>
   public sealed partial class EncryptRequest : pb::IMessage<EncryptRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -6693,11 +6765,13 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] or [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]
-    /// to use for encryption.
+    /// Required. The resource name of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] or
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// encryption.
     ///
-    /// If a [CryptoKey][google.cloud.kms.v1.CryptoKey] is specified, the server will use its
-    /// [primary version][google.cloud.kms.v1.CryptoKey.primary].
+    /// If a [CryptoKey][google.cloud.kms.v1.CryptoKey] is specified, the server
+    /// will use its [primary version][google.cloud.kms.v1.CryptoKey.primary].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6715,11 +6789,12 @@ namespace Google.Cloud.Kms.V1 {
     /// Required. The data to encrypt. Must be no larger than 64KiB.
     ///
     /// The maximum size depends on the key version's
-    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
-    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the plaintext must be no larger
-    /// than 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
-    /// plaintext and additional_authenticated_data fields must be no larger than
-    /// 8KiB.
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
+    /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the
+    /// plaintext must be no larger than 64KiB. For
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
+    /// the plaintext and additional_authenticated_data fields must be no larger
+    /// than 8KiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6734,15 +6809,17 @@ namespace Google.Cloud.Kms.V1 {
     public const int AdditionalAuthenticatedDataFieldNumber = 3;
     private pb::ByteString additionalAuthenticatedData_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional. Optional data that, if specified, must also be provided during decryption
-    /// through [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
+    /// Optional. Optional data that, if specified, must also be provided during
+    /// decryption through
+    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
     ///
     /// The maximum size depends on the key version's
-    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]. For
-    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the AAD must be no larger than
-    /// 64KiB. For [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of the
-    /// plaintext and additional_authenticated_data fields must be no larger than
-    /// 8KiB.
+    /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level].
+    /// For [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE] keys, the AAD
+    /// must be no larger than 64KiB. For
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] keys, the combined length of
+    /// the plaintext and additional_authenticated_data fields must be no larger
+    /// than 8KiB.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6758,19 +6835,25 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_plaintextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(58);
     private long? plaintextCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]. If
-    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]) is equal to
-    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c], and if so, perform a limited number of
-    /// retries. A persistent mismatch may indicate an issue in your computation of
-    /// the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// Optional. An optional CRC32C checksum of the
+    /// [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext].
+    /// If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// verify the integrity of the received
+    /// [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]
+    /// using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext])
+    /// is equal to
+    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -6788,19 +6871,24 @@ namespace Google.Cloud.Kms.V1 {
     private long? additionalAuthenticatedDataCrc32C_;
     /// <summary>
     /// Optional. An optional CRC32C checksum of the
-    /// [EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]. If specified,
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the received
-    /// [EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]) is equal to
-    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c], and if so, perform
-    /// a limited number of retries. A persistent mismatch may indicate an issue in
-    /// your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data].
+    /// If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// verify the integrity of the received
+    /// [EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]
+    /// using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([EncryptRequest.additional_authenticated_data][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data])
+    /// is equal to
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7054,7 +7142,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+  /// Request message for
+  /// [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
   /// </summary>
   public sealed partial class DecryptRequest : pb::IMessage<DecryptRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7108,8 +7197,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption.
-    /// The server will choose the appropriate version.
+    /// Required. The resource name of the
+    /// [CryptoKey][google.cloud.kms.v1.CryptoKey] to use for decryption. The
+    /// server will choose the appropriate version.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7157,19 +7247,25 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_ciphertextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(42);
     private long? ciphertextCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext]. If
-    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext]) is equal to
-    /// [DecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.DecryptRequest.ciphertext_crc32c], and if so, perform a limited number
-    /// of retries. A persistent mismatch may indicate an issue in your computation
-    /// of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// Optional. An optional CRC32C checksum of the
+    /// [DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext].
+    /// If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// verify the integrity of the received
+    /// [DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext]
+    /// using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([DecryptRequest.ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext])
+    /// is equal to
+    /// [DecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.DecryptRequest.ciphertext_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7187,19 +7283,24 @@ namespace Google.Cloud.Kms.V1 {
     private long? additionalAuthenticatedDataCrc32C_;
     /// <summary>
     /// Optional. An optional CRC32C checksum of the
-    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data]. If specified,
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the received
-    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data]) is equal to
-    /// [DecryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data_crc32c], and if so, perform
-    /// a limited number of retries. A persistent mismatch may indicate an issue in
-    /// your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data].
+    /// If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// verify the integrity of the received
+    /// [DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data]
+    /// using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([DecryptRequest.additional_authenticated_data][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data])
+    /// is equal to
+    /// [DecryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.DecryptRequest.additional_authenticated_data_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7453,7 +7554,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
+  /// Request message for
+  /// [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
   /// </summary>
   public sealed partial class AsymmetricSignRequest : pb::IMessage<AsymmetricSignRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7507,7 +7609,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7525,6 +7629,10 @@ namespace Google.Cloud.Kms.V1 {
     /// Optional. The digest of the data to sign. The digest must be produced with
     /// the same digest algorithm as specified by the key version's
     /// [algorithm][google.cloud.kms.v1.CryptoKeyVersion.algorithm].
+    ///
+    /// This field may not be supplied if
+    /// [AsymmetricSignRequest.data][google.cloud.kms.v1.AsymmetricSignRequest.data]
+    /// is supplied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7540,19 +7648,25 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_digestCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(34);
     private long? digestCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]. If
-    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]) is equal to
-    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c], and if so, perform a limited
-    /// number of retries. A persistent mismatch may indicate an issue in your
-    /// computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// Optional. An optional CRC32C checksum of the
+    /// [AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest].
+    /// If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// verify the integrity of the received
+    /// [AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]
+    /// using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest])
+    /// is equal to
+    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7568,9 +7682,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int DataFieldNumber = 6;
     private pb::ByteString data_ = pb::ByteString.Empty;
     /// <summary>
-    /// Optional. This field will only be honored for RAW_PKCS1 keys.
-    /// The data to sign. A digest is computed over the data that will be signed,
-    /// PKCS #1 padding is applied to the digest directly and then encrypted.
+    /// Optional. The data to sign.
+    /// It can't be supplied if
+    /// [AsymmetricSignRequest.digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]
+    /// is supplied.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7586,19 +7701,25 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_dataCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(58);
     private long? dataCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [AsymmetricSignRequest.data][google.cloud.kms.v1.AsymmetricSignRequest.data]. If
-    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [AsymmetricSignRequest.data][google.cloud.kms.v1.AsymmetricSignRequest.data] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([AsymmetricSignRequest.data][google.cloud.kms.v1.AsymmetricSignRequest.data]) is equal to
-    /// [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c], and if so, perform a limited
-    /// number of retries. A persistent mismatch may indicate an issue in your
-    /// computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// Optional. An optional CRC32C checksum of the
+    /// [AsymmetricSignRequest.data][google.cloud.kms.v1.AsymmetricSignRequest.data].
+    /// If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// verify the integrity of the received
+    /// [AsymmetricSignRequest.data][google.cloud.kms.v1.AsymmetricSignRequest.data]
+    /// using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([AsymmetricSignRequest.data][google.cloud.kms.v1.AsymmetricSignRequest.data])
+    /// is equal to
+    /// [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7861,7 +7982,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
+  /// Request message for
+  /// [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
   /// </summary>
   public sealed partial class AsymmetricDecryptRequest : pb::IMessage<AsymmetricDecryptRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -7913,7 +8035,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
     /// decryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
@@ -7929,8 +8052,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int CiphertextFieldNumber = 3;
     private pb::ByteString ciphertext_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The data encrypted with the named [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public
-    /// key using OAEP.
+    /// Required. The data encrypted with the named
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion]'s public key using
+    /// OAEP.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -7946,19 +8070,25 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_ciphertextCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(34);
     private long? ciphertextCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext].
-    /// If specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext]) is equal to
-    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c], and if so, perform a
-    /// limited number of retries. A persistent mismatch may indicate an issue in
-    /// your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// Optional. An optional CRC32C checksum of the
+    /// [AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext].
+    /// If specified,
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// verify the integrity of the received
+    /// [AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext]
+    /// using this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([AsymmetricDecryptRequest.ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext])
+    /// is equal to
+    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8158,7 +8288,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.MacSign][google.cloud.kms.v1.KeyManagementService.MacSign].
+  /// Request message for
+  /// [KeyManagementService.MacSign][google.cloud.kms.v1.KeyManagementService.MacSign].
   /// </summary>
   public sealed partial class MacSignRequest : pb::IMessage<MacSignRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8210,7 +8341,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for signing.
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8225,8 +8358,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int DataFieldNumber = 2;
     private pb::ByteString data_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The data to sign. The MAC tag is computed over this data field based on
-    /// the specific algorithm.
+    /// Required. The data to sign. The MAC tag is computed over this data field
+    /// based on the specific algorithm.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8242,19 +8375,23 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_dataCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(26);
     private long? dataCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data]. If
-    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data]) is equal to
-    /// [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c], and if so, perform a limited
-    /// number of retries. A persistent mismatch may indicate an issue in your
-    /// computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// Optional. An optional CRC32C checksum of the
+    /// [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data]. If
+    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService]
+    /// will verify the integrity of the received
+    /// [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] using this
+    /// checksum. [KeyManagementService][google.cloud.kms.v1.KeyManagementService]
+    /// will report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data]) is
+    /// equal to
+    /// [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8454,7 +8591,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.MacVerify][google.cloud.kms.v1.KeyManagementService.MacVerify].
+  /// Request message for
+  /// [KeyManagementService.MacVerify][google.cloud.kms.v1.KeyManagementService.MacVerify].
   /// </summary>
   public sealed partial class MacVerifyRequest : pb::IMessage<MacVerifyRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8508,7 +8646,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// Required. The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for verification.
+    /// Required. The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] to use for
+    /// verification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8523,8 +8663,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int DataFieldNumber = 2;
     private pb::ByteString data_ = pb::ByteString.Empty;
     /// <summary>
-    /// Required. The data used previously as a [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate the MAC
-    /// tag.
+    /// Required. The data used previously as a
+    /// [MacSignRequest.data][google.cloud.kms.v1.MacSignRequest.data] to generate
+    /// the MAC tag.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8540,19 +8681,24 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_dataCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(26);
     private long? dataCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data]. If
-    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
-    /// CRC32C([MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data]) is equal to
-    /// [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c], and if so, perform a limited
-    /// number of retries. A persistent mismatch may indicate an issue in your
-    /// computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// Optional. An optional CRC32C checksum of the
+    /// [MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data]. If
+    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService]
+    /// will verify the integrity of the received
+    /// [MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data] using
+    /// this checksum.
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will
+    /// report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
+    /// CRC32C([MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data])
+    /// is equal to
+    /// [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8584,19 +8730,22 @@ namespace Google.Cloud.Kms.V1 {
     private static readonly pb::FieldCodec<long?> _single_macCrc32C_codec = pb::FieldCodec.ForStructWrapper<long>(42);
     private long? macCrc32C_;
     /// <summary>
-    /// Optional. An optional CRC32C checksum of the [MacVerifyRequest.mac][google.cloud.kms.v1.MacVerifyRequest.mac]. If
-    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will verify the integrity of the
-    /// received [MacVerifyRequest.mac][google.cloud.kms.v1.MacVerifyRequest.mac] using this checksum.
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] will report an error if the checksum verification
-    /// fails. If you receive a checksum error, your client should verify that
+    /// Optional. An optional CRC32C checksum of the
+    /// [MacVerifyRequest.mac][google.cloud.kms.v1.MacVerifyRequest.mac]. If
+    /// specified, [KeyManagementService][google.cloud.kms.v1.KeyManagementService]
+    /// will verify the integrity of the received
+    /// [MacVerifyRequest.mac][google.cloud.kms.v1.MacVerifyRequest.mac] using this
+    /// checksum. [KeyManagementService][google.cloud.kms.v1.KeyManagementService]
+    /// will report an error if the checksum verification fails. If you receive a
+    /// checksum error, your client should verify that
     /// CRC32C([MacVerifyRequest.tag][]) is equal to
-    /// [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c], and if so, perform a limited
-    /// number of retries. A persistent mismatch may indicate an issue in your
-    /// computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c],
+    /// and if so, perform a limited number of retries. A persistent mismatch may
+    /// indicate an issue in your computation of the CRC32C checksum. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -8850,7 +8999,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Request message for [KeyManagementService.GenerateRandomBytes][google.cloud.kms.v1.KeyManagementService.GenerateRandomBytes].
+  /// Request message for
+  /// [KeyManagementService.GenerateRandomBytes][google.cloud.kms.v1.KeyManagementService.GenerateRandomBytes].
   /// </summary>
   public sealed partial class GenerateRandomBytesRequest : pb::IMessage<GenerateRandomBytesRequest>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -8934,8 +9084,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 3;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
     /// <summary>
-    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when generating the random data. Defaults to
-    /// [SOFTWARE][google.cloud.kms.v1.ProtectionLevel.SOFTWARE].
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] to use when
+    /// generating the random data. Currently, only
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] protection level is
+    /// supported.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9128,7 +9280,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
+  /// Response message for
+  /// [KeyManagementService.Encrypt][google.cloud.kms.v1.KeyManagementService.Encrypt].
   /// </summary>
   public sealed partial class EncryptResponse : pb::IMessage<EncryptResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9183,8 +9336,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in encryption. Check
-    /// this field to verify that the intended resource was used for encryption.
+    /// The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in
+    /// encryption. Check this field to verify that the intended resource was used
+    /// for encryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9216,16 +9371,18 @@ namespace Google.Cloud.Kms.V1 {
     private long? ciphertextCrc32C_;
     /// <summary>
     /// Integrity verification field. A CRC32C checksum of the returned
-    /// [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext]. An integrity check of
-    /// [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext] can be performed by computing the CRC32C
-    /// checksum of [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext] and comparing your results to
-    /// this field. Discard the response in case of non-matching checksum values,
-    /// and perform a limited number of retries. A persistent mismatch may indicate
-    /// an issue in your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext].
+    /// An integrity check of
+    /// [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext]
+    /// can be performed by computing the CRC32C checksum of
+    /// [EncryptResponse.ciphertext][google.cloud.kms.v1.EncryptResponse.ciphertext]
+    /// and comparing your results to this field. Discard the response in case of
+    /// non-matching checksum values, and perform a limited number of retries. A
+    /// persistent mismatch may indicate an issue in your computation of the CRC32C
+    /// checksum. Note: This field is defined as int64 for reasons of compatibility
+    /// across different languages. However, it is a non-negative integer, which
+    /// will never exceed 2^32-1, and can be safely downconverted to uint32 in
+    /// languages that support this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9242,13 +9399,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedPlaintextCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]. A false value of this field
-    /// indicates either that [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c] was left unset or
-    /// that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've set
-    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c] but this field is still false, discard
-    /// the response and perform a limited number of retries.
+    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [plaintext][google.cloud.kms.v1.EncryptRequest.plaintext]. A false value of
+    /// this field indicates either that
+    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [EncryptRequest.plaintext_crc32c][google.cloud.kms.v1.EncryptRequest.plaintext_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9264,14 +9427,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedAdditionalAuthenticatedDataCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [AAD][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]. A false value of this
-    /// field indicates either that
-    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c] was left unset or
-    /// that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've set
-    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c] but this field is
-    /// still false, discard the response and perform a limited number of retries.
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [AAD][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data]. A
+    /// false value of this field indicates either that
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [EncryptRequest.additional_authenticated_data_crc32c][google.cloud.kms.v1.EncryptRequest.additional_authenticated_data_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9286,7 +9454,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 7;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
     /// <summary>
-    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in encryption.
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in
+    /// encryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9557,7 +9727,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
+  /// Response message for
+  /// [KeyManagementService.Decrypt][google.cloud.kms.v1.KeyManagementService.Decrypt].
   /// </summary>
   public sealed partial class DecryptResponse : pb::IMessage<DecryptResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9610,7 +9781,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int PlaintextFieldNumber = 1;
     private pb::ByteString plaintext_ = pb::ByteString.Empty;
     /// <summary>
-    /// The decrypted data originally supplied in [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext].
+    /// The decrypted data originally supplied in
+    /// [EncryptRequest.plaintext][google.cloud.kms.v1.EncryptRequest.plaintext].
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9627,18 +9799,22 @@ namespace Google.Cloud.Kms.V1 {
     private long? plaintextCrc32C_;
     /// <summary>
     /// Integrity verification field. A CRC32C checksum of the returned
-    /// [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext]. An integrity check of
-    /// [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext] can be performed by computing the CRC32C
-    /// checksum of [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext] and comparing your results to
-    /// this field. Discard the response in case of non-matching checksum values,
-    /// and perform a limited number of retries. A persistent mismatch may indicate
-    /// an issue in your computation of the CRC32C checksum. Note: receiving this
-    /// response message indicates that [KeyManagementService][google.cloud.kms.v1.KeyManagementService] is able to
-    /// successfully decrypt the [ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext].
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext].
+    /// An integrity check of
+    /// [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext]
+    /// can be performed by computing the CRC32C checksum of
+    /// [DecryptResponse.plaintext][google.cloud.kms.v1.DecryptResponse.plaintext]
+    /// and comparing your results to this field. Discard the response in case of
+    /// non-matching checksum values, and perform a limited number of retries. A
+    /// persistent mismatch may indicate an issue in your computation of the CRC32C
+    /// checksum. Note: receiving this response message indicates that
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] is able to
+    /// successfully decrypt the
+    /// [ciphertext][google.cloud.kms.v1.DecryptRequest.ciphertext]. Note: This
+    /// field is defined as int64 for reasons of compatibility across different
+    /// languages. However, it is a non-negative integer, which will never exceed
+    /// 2^32-1, and can be safely downconverted to uint32 in languages that support
+    /// this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9669,7 +9845,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 4;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
     /// <summary>
-    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in decryption.
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in
+    /// decryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9892,7 +10070,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
+  /// Response message for
+  /// [KeyManagementService.AsymmetricSign][google.cloud.kms.v1.KeyManagementService.AsymmetricSign].
   /// </summary>
   public sealed partial class AsymmetricSignResponse : pb::IMessage<AsymmetricSignResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -9964,16 +10143,18 @@ namespace Google.Cloud.Kms.V1 {
     private long? signatureCrc32C_;
     /// <summary>
     /// Integrity verification field. A CRC32C checksum of the returned
-    /// [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature]. An integrity check of
-    /// [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature] can be performed by computing the
-    /// CRC32C checksum of [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature] and comparing your
-    /// results to this field. Discard the response in case of non-matching
-    /// checksum values, and perform a limited number of retries. A persistent
-    /// mismatch may indicate an issue in your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature].
+    /// An integrity check of
+    /// [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature]
+    /// can be performed by computing the CRC32C checksum of
+    /// [AsymmetricSignResponse.signature][google.cloud.kms.v1.AsymmetricSignResponse.signature]
+    /// and comparing your results to this field. Discard the response in case of
+    /// non-matching checksum values, and perform a limited number of retries. A
+    /// persistent mismatch may indicate an issue in your computation of the CRC32C
+    /// checksum. Note: This field is defined as int64 for reasons of compatibility
+    /// across different languages. However, it is a non-negative integer, which
+    /// will never exceed 2^32-1, and can be safely downconverted to uint32 in
+    /// languages that support this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -9990,13 +10171,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedDigestCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]. A false value of this field
-    /// indicates either that [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c] was left
-    /// unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
-    /// set [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c] but this field is still false,
-    /// discard the response and perform a limited number of retries.
+    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [digest][google.cloud.kms.v1.AsymmetricSignRequest.digest]. A false value
+    /// of this field indicates either that
+    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [AsymmetricSignRequest.digest_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.digest_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10011,8 +10198,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 4;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing. Check
-    /// this field to verify that the intended resource was used for signing.
+    /// The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing.
+    /// Check this field to verify that the intended resource was used for signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10028,13 +10216,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedDataCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [data][google.cloud.kms.v1.AsymmetricSignRequest.data]. A false value of this field
-    /// indicates either that [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c] was left
-    /// unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
-    /// set [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c] but this field is still false,
-    /// discard the response and perform a limited number of retries.
+    /// [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [data][google.cloud.kms.v1.AsymmetricSignRequest.data]. A false value of
+    /// this field indicates either that
+    /// [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [AsymmetricSignRequest.data_crc32c][google.cloud.kms.v1.AsymmetricSignRequest.data_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10049,7 +10243,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 6;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
     /// <summary>
-    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing.
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10320,7 +10515,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
+  /// Response message for
+  /// [KeyManagementService.AsymmetricDecrypt][google.cloud.kms.v1.KeyManagementService.AsymmetricDecrypt].
   /// </summary>
   public sealed partial class AsymmetricDecryptResponse : pb::IMessage<AsymmetricDecryptResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10390,16 +10586,18 @@ namespace Google.Cloud.Kms.V1 {
     private long? plaintextCrc32C_;
     /// <summary>
     /// Integrity verification field. A CRC32C checksum of the returned
-    /// [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext]. An integrity check of
-    /// [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext] can be performed by computing the
-    /// CRC32C checksum of [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext] and comparing
-    /// your results to this field. Discard the response in case of non-matching
-    /// checksum values, and perform a limited number of retries. A persistent
-    /// mismatch may indicate an issue in your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext].
+    /// An integrity check of
+    /// [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext]
+    /// can be performed by computing the CRC32C checksum of
+    /// [AsymmetricDecryptResponse.plaintext][google.cloud.kms.v1.AsymmetricDecryptResponse.plaintext]
+    /// and comparing your results to this field. Discard the response in case of
+    /// non-matching checksum values, and perform a limited number of retries. A
+    /// persistent mismatch may indicate an issue in your computation of the CRC32C
+    /// checksum. Note: This field is defined as int64 for reasons of compatibility
+    /// across different languages. However, it is a non-negative integer, which
+    /// will never exceed 2^32-1, and can be safely downconverted to uint32 in
+    /// languages that support this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10416,13 +10614,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedCiphertextCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext]. A false value of this
-    /// field indicates either that [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c]
-    /// was left unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If
-    /// you've set [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c] but this field is
-    /// still false, discard the response and perform a limited number of retries.
+    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [ciphertext][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext]. A
+    /// false value of this field indicates either that
+    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [AsymmetricDecryptRequest.ciphertext_crc32c][google.cloud.kms.v1.AsymmetricDecryptRequest.ciphertext_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10437,7 +10641,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 4;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
     /// <summary>
-    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in decryption.
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used in
+    /// decryption.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10660,7 +10866,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.MacSign][google.cloud.kms.v1.KeyManagementService.MacSign].
+  /// Response message for
+  /// [KeyManagementService.MacSign][google.cloud.kms.v1.KeyManagementService.MacSign].
   /// </summary>
   public sealed partial class MacSignResponse : pb::IMessage<MacSignResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -10714,8 +10921,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing. Check
-    /// this field to verify that the intended resource was used for signing.
+    /// The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing.
+    /// Check this field to verify that the intended resource was used for signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10747,16 +10955,18 @@ namespace Google.Cloud.Kms.V1 {
     private long? macCrc32C_;
     /// <summary>
     /// Integrity verification field. A CRC32C checksum of the returned
-    /// [MacSignResponse.mac][google.cloud.kms.v1.MacSignResponse.mac]. An integrity check of
-    /// [MacSignResponse.mac][google.cloud.kms.v1.MacSignResponse.mac] can be performed by computing the
-    /// CRC32C checksum of [MacSignResponse.mac][google.cloud.kms.v1.MacSignResponse.mac] and comparing your
-    /// results to this field. Discard the response in case of non-matching
-    /// checksum values, and perform a limited number of retries. A persistent
-    /// mismatch may indicate an issue in your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [MacSignResponse.mac][google.cloud.kms.v1.MacSignResponse.mac]. An
+    /// integrity check of
+    /// [MacSignResponse.mac][google.cloud.kms.v1.MacSignResponse.mac] can be
+    /// performed by computing the CRC32C checksum of
+    /// [MacSignResponse.mac][google.cloud.kms.v1.MacSignResponse.mac] and
+    /// comparing your results to this field. Discard the response in case of
+    /// non-matching checksum values, and perform a limited number of retries. A
+    /// persistent mismatch may indicate an issue in your computation of the CRC32C
+    /// checksum. Note: This field is defined as int64 for reasons of compatibility
+    /// across different languages. However, it is a non-negative integer, which
+    /// will never exceed 2^32-1, and can be safely downconverted to uint32 in
+    /// languages that support this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10773,13 +10983,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedDataCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [data][google.cloud.kms.v1.MacSignRequest.data]. A false value of this field
-    /// indicates either that [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c] was left
-    /// unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
-    /// set [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c] but this field is still false,
-    /// discard the response and perform a limited number of retries.
+    /// [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [data][google.cloud.kms.v1.MacSignRequest.data]. A false value of this
+    /// field indicates either that
+    /// [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [MacSignRequest.data_crc32c][google.cloud.kms.v1.MacSignRequest.data_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -10794,7 +11010,8 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 5;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
     /// <summary>
-    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing.
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for signing.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11041,7 +11258,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.MacVerify][google.cloud.kms.v1.KeyManagementService.MacVerify].
+  /// Response message for
+  /// [KeyManagementService.MacVerify][google.cloud.kms.v1.KeyManagementService.MacVerify].
   /// </summary>
   public sealed partial class MacVerifyResponse : pb::IMessage<MacVerifyResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11096,9 +11314,10 @@ namespace Google.Cloud.Kms.V1 {
     public const int NameFieldNumber = 1;
     private string name_ = "";
     /// <summary>
-    /// The resource name of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for verification.
-    /// Check this field to verify that the intended resource was used for
-    /// verification.
+    /// The resource name of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for
+    /// verification. Check this field to verify that the intended resource was
+    /// used for verification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11114,7 +11333,9 @@ namespace Google.Cloud.Kms.V1 {
     private bool success_;
     /// <summary>
     /// This field indicates whether or not the verification operation for
-    /// [MacVerifyRequest.mac][google.cloud.kms.v1.MacVerifyRequest.mac] over [MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data] was successful.
+    /// [MacVerifyRequest.mac][google.cloud.kms.v1.MacVerifyRequest.mac] over
+    /// [MacVerifyRequest.data][google.cloud.kms.v1.MacVerifyRequest.data] was
+    /// successful.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11130,13 +11351,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedDataCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [data][google.cloud.kms.v1.MacVerifyRequest.data]. A false value of this field
-    /// indicates either that [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c] was left
-    /// unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
-    /// set [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c] but this field is still false,
-    /// discard the response and perform a limited number of retries.
+    /// [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [data][google.cloud.kms.v1.MacVerifyRequest.data]. A false value of this
+    /// field indicates either that
+    /// [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [MacVerifyRequest.data_crc32c][google.cloud.kms.v1.MacVerifyRequest.data_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11152,13 +11379,19 @@ namespace Google.Cloud.Kms.V1 {
     private bool verifiedMacCrc32C_;
     /// <summary>
     /// Integrity verification field. A flag indicating whether
-    /// [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c] was received by
-    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used for the integrity verification of the
-    /// [data][google.cloud.kms.v1.MacVerifyRequest.mac]. A false value of this field
-    /// indicates either that [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c] was left
-    /// unset or that it was not delivered to [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
-    /// set [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c] but this field is still false,
-    /// discard the response and perform a limited number of retries.
+    /// [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c]
+    /// was received by
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService] and used
+    /// for the integrity verification of the
+    /// [data][google.cloud.kms.v1.MacVerifyRequest.mac]. A false value of this
+    /// field indicates either that
+    /// [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c]
+    /// was left unset or that it was not delivered to
+    /// [KeyManagementService][google.cloud.kms.v1.KeyManagementService]. If you've
+    /// set
+    /// [MacVerifyRequest.mac_crc32c][google.cloud.kms.v1.MacVerifyRequest.mac_crc32c]
+    /// but this field is still false, discard the response and perform a limited
+    /// number of retries.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11191,7 +11424,9 @@ namespace Google.Cloud.Kms.V1 {
     public const int ProtectionLevelFieldNumber = 6;
     private global::Google.Cloud.Kms.V1.ProtectionLevel protectionLevel_ = global::Google.Cloud.Kms.V1.ProtectionLevel.Unspecified;
     /// <summary>
-    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for verification.
+    /// The [ProtectionLevel][google.cloud.kms.v1.ProtectionLevel] of the
+    /// [CryptoKeyVersion][google.cloud.kms.v1.CryptoKeyVersion] used for
+    /// verification.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -11456,7 +11691,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Response message for [KeyManagementService.GenerateRandomBytes][google.cloud.kms.v1.KeyManagementService.GenerateRandomBytes].
+  /// Response message for
+  /// [KeyManagementService.GenerateRandomBytes][google.cloud.kms.v1.KeyManagementService.GenerateRandomBytes].
   /// </summary>
   public sealed partial class GenerateRandomBytesResponse : pb::IMessage<GenerateRandomBytesResponse>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -11524,16 +11760,18 @@ namespace Google.Cloud.Kms.V1 {
     private long? dataCrc32C_;
     /// <summary>
     /// Integrity verification field. A CRC32C checksum of the returned
-    /// [GenerateRandomBytesResponse.data][google.cloud.kms.v1.GenerateRandomBytesResponse.data]. An integrity check of
-    /// [GenerateRandomBytesResponse.data][google.cloud.kms.v1.GenerateRandomBytesResponse.data] can be performed by computing the
-    /// CRC32C checksum of [GenerateRandomBytesResponse.data][google.cloud.kms.v1.GenerateRandomBytesResponse.data] and comparing your
-    /// results to this field. Discard the response in case of non-matching
-    /// checksum values, and perform a limited number of retries. A persistent
-    /// mismatch may indicate an issue in your computation of the CRC32C checksum.
-    /// Note: This field is defined as int64 for reasons of compatibility across
-    /// different languages. However, it is a non-negative integer, which will
-    /// never exceed 2^32-1, and can be safely downconverted to uint32 in languages
-    /// that support this type.
+    /// [GenerateRandomBytesResponse.data][google.cloud.kms.v1.GenerateRandomBytesResponse.data].
+    /// An integrity check of
+    /// [GenerateRandomBytesResponse.data][google.cloud.kms.v1.GenerateRandomBytesResponse.data]
+    /// can be performed by computing the CRC32C checksum of
+    /// [GenerateRandomBytesResponse.data][google.cloud.kms.v1.GenerateRandomBytesResponse.data]
+    /// and comparing your results to this field. Discard the response in case of
+    /// non-matching checksum values, and perform a limited number of retries. A
+    /// persistent mismatch may indicate an issue in your computation of the CRC32C
+    /// checksum. Note: This field is defined as int64 for reasons of compatibility
+    /// across different languages. However, it is a non-negative integer, which
+    /// will never exceed 2^32-1, and can be safely downconverted to uint32 in
+    /// languages that support this type.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12020,7 +12258,8 @@ namespace Google.Cloud.Kms.V1 {
   }
 
   /// <summary>
-  /// Cloud KMS metadata for the given [google.cloud.location.Location][google.cloud.location.Location].
+  /// Cloud KMS metadata for the given
+  /// [google.cloud.location.Location][google.cloud.location.Location].
   /// </summary>
   public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -12073,7 +12312,8 @@ namespace Google.Cloud.Kms.V1 {
     /// <summary>
     /// Indicates whether [CryptoKeys][google.cloud.kms.v1.CryptoKey] with
     /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]
-    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] can be created in this location.
+    /// [HSM][google.cloud.kms.v1.ProtectionLevel.HSM] can be created in this
+    /// location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -12090,7 +12330,8 @@ namespace Google.Cloud.Kms.V1 {
     /// <summary>
     /// Indicates whether [CryptoKeys][google.cloud.kms.v1.CryptoKey] with
     /// [protection_level][google.cloud.kms.v1.CryptoKeyVersionTemplate.protection_level]
-    /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL] can be created in this location.
+    /// [EXTERNAL][google.cloud.kms.v1.ProtectionLevel.EXTERNAL] can be created in
+    /// this location.
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
