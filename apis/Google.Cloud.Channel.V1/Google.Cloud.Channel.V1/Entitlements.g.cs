@@ -1381,7 +1381,8 @@ namespace Google.Cloud.Channel.V1 {
     private string provisioningId_ = "";
     /// <summary>
     /// Output only. Provisioning ID of the entitlement. For Google Workspace, this would be the
-    /// underlying Subscription ID.
+    /// underlying Subscription ID. For Google Cloud Platform, this would be the
+    /// Billing Account ID of the billing subaccount."
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
