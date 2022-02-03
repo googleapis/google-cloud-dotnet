@@ -915,5 +915,1623 @@ namespace Google.Cloud.Eventarc.V1.Snippets
             }
             // End snippet
         }
+
+        /// <summary>Snippet for GetChannel</summary>
+        public void GetChannelRequestObject()
+        {
+            // Snippet: GetChannel(GetChannelRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            // Make the request
+            Channel response = eventarcClient.GetChannel(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelAsync</summary>
+        public async Task GetChannelRequestObjectAsync()
+        {
+            // Snippet: GetChannelAsync(GetChannelRequest, CallSettings)
+            // Additional: GetChannelAsync(GetChannelRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            // Make the request
+            Channel response = await eventarcClient.GetChannelAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannel</summary>
+        public void GetChannel()
+        {
+            // Snippet: GetChannel(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            Channel response = eventarcClient.GetChannel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelAsync</summary>
+        public async Task GetChannelAsync()
+        {
+            // Snippet: GetChannelAsync(string, CallSettings)
+            // Additional: GetChannelAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            Channel response = await eventarcClient.GetChannelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannel</summary>
+        public void GetChannelResourceNames()
+        {
+            // Snippet: GetChannel(ChannelName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            Channel response = eventarcClient.GetChannel(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelAsync</summary>
+        public async Task GetChannelResourceNamesAsync()
+        {
+            // Snippet: GetChannelAsync(ChannelName, CallSettings)
+            // Additional: GetChannelAsync(ChannelName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            Channel response = await eventarcClient.GetChannelAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannels</summary>
+        public void ListChannelsRequestObject()
+        {
+            // Snippet: ListChannels(ListChannelsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListChannelsRequest request = new ListChannelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+            };
+            // Make the request
+            PagedEnumerable<ListChannelsResponse, Channel> response = eventarcClient.ListChannels(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Channel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Channel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Channel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Channel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelsAsync</summary>
+        public async Task ListChannelsRequestObjectAsync()
+        {
+            // Snippet: ListChannelsAsync(ListChannelsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListChannelsRequest request = new ListChannelsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                OrderBy = "",
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListChannelsResponse, Channel> response = eventarcClient.ListChannelsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Channel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Channel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Channel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Channel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannels</summary>
+        public void ListChannels()
+        {
+            // Snippet: ListChannels(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListChannelsResponse, Channel> response = eventarcClient.ListChannels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Channel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Channel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Channel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Channel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelsAsync</summary>
+        public async Task ListChannelsAsync()
+        {
+            // Snippet: ListChannelsAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListChannelsResponse, Channel> response = eventarcClient.ListChannelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Channel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Channel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Channel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Channel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannels</summary>
+        public void ListChannelsResourceNames()
+        {
+            // Snippet: ListChannels(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListChannelsResponse, Channel> response = eventarcClient.ListChannels(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (Channel item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Channel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Channel> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Channel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelsAsync</summary>
+        public async Task ListChannelsResourceNamesAsync()
+        {
+            // Snippet: ListChannelsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListChannelsResponse, Channel> response = eventarcClient.ListChannelsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((Channel item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (Channel item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<Channel> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (Channel item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannel</summary>
+        public void CreateChannelRequestObject()
+        {
+            // Snippet: CreateChannel(CreateChannelRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            CreateChannelRequest request = new CreateChannelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Channel = new Channel(),
+                ChannelId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.CreateChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelAsync</summary>
+        public async Task CreateChannelRequestObjectAsync()
+        {
+            // Snippet: CreateChannelAsync(CreateChannelRequest, CallSettings)
+            // Additional: CreateChannelAsync(CreateChannelRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateChannelRequest request = new CreateChannelRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                Channel = new Channel(),
+                ChannelId = "",
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.CreateChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannel</summary>
+        public void CreateChannel()
+        {
+            // Snippet: CreateChannel(string, Channel, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Channel channel = new Channel();
+            string channelId = "";
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.CreateChannel(parent, channel, channelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelAsync</summary>
+        public async Task CreateChannelAsync()
+        {
+            // Snippet: CreateChannelAsync(string, Channel, string, CallSettings)
+            // Additional: CreateChannelAsync(string, Channel, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            Channel channel = new Channel();
+            string channelId = "";
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.CreateChannelAsync(parent, channel, channelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannel</summary>
+        public void CreateChannelResourceNames()
+        {
+            // Snippet: CreateChannel(LocationName, Channel, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Channel channel = new Channel();
+            string channelId = "";
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.CreateChannel(parent, channel, channelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelAsync</summary>
+        public async Task CreateChannelResourceNamesAsync()
+        {
+            // Snippet: CreateChannelAsync(LocationName, Channel, string, CallSettings)
+            // Additional: CreateChannelAsync(LocationName, Channel, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            Channel channel = new Channel();
+            string channelId = "";
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.CreateChannelAsync(parent, channel, channelId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannel</summary>
+        public void UpdateChannelRequestObject()
+        {
+            // Snippet: UpdateChannel(UpdateChannelRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            UpdateChannelRequest request = new UpdateChannelRequest
+            {
+                Channel = new Channel(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.UpdateChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelAsync</summary>
+        public async Task UpdateChannelRequestObjectAsync()
+        {
+            // Snippet: UpdateChannelAsync(UpdateChannelRequest, CallSettings)
+            // Additional: UpdateChannelAsync(UpdateChannelRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdateChannelRequest request = new UpdateChannelRequest
+            {
+                Channel = new Channel(),
+                UpdateMask = new FieldMask(),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.UpdateChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannel</summary>
+        public void UpdateChannel()
+        {
+            // Snippet: UpdateChannel(Channel, FieldMask, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            Channel channel = new Channel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.UpdateChannel(channel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceUpdateChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdateChannelAsync</summary>
+        public async Task UpdateChannelAsync()
+        {
+            // Snippet: UpdateChannelAsync(Channel, FieldMask, CallSettings)
+            // Additional: UpdateChannelAsync(Channel, FieldMask, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            Channel channel = new Channel();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.UpdateChannelAsync(channel, updateMask);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceUpdateChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannel</summary>
+        public void DeleteChannelRequestObject()
+        {
+            // Snippet: DeleteChannel(DeleteChannelRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            DeleteChannelRequest request = new DeleteChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.DeleteChannel(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelAsync</summary>
+        public async Task DeleteChannelRequestObjectAsync()
+        {
+            // Snippet: DeleteChannelAsync(DeleteChannelRequest, CallSettings)
+            // Additional: DeleteChannelAsync(DeleteChannelRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteChannelRequest request = new DeleteChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                ValidateOnly = false,
+            };
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.DeleteChannelAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannel</summary>
+        public void DeleteChannel()
+        {
+            // Snippet: DeleteChannel(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.DeleteChannel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelAsync</summary>
+        public async Task DeleteChannelAsync()
+        {
+            // Snippet: DeleteChannelAsync(string, CallSettings)
+            // Additional: DeleteChannelAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channels/[CHANNEL]";
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.DeleteChannelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannel</summary>
+        public void DeleteChannelResourceNames()
+        {
+            // Snippet: DeleteChannel(ChannelName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            Operation<Channel, OperationMetadata> response = eventarcClient.DeleteChannel(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteChannel(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelAsync</summary>
+        public async Task DeleteChannelResourceNamesAsync()
+        {
+            // Snippet: DeleteChannelAsync(ChannelName, CallSettings)
+            // Additional: DeleteChannelAsync(ChannelName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelName name = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]");
+            // Make the request
+            Operation<Channel, OperationMetadata> response = await eventarcClient.DeleteChannelAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<Channel, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            Channel result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<Channel, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteChannelAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                Channel retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelConnection</summary>
+        public void GetChannelConnectionRequestObject()
+        {
+            // Snippet: GetChannelConnection(GetChannelConnectionRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            // Make the request
+            ChannelConnection response = eventarcClient.GetChannelConnection(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelConnectionAsync</summary>
+        public async Task GetChannelConnectionRequestObjectAsync()
+        {
+            // Snippet: GetChannelConnectionAsync(GetChannelConnectionRequest, CallSettings)
+            // Additional: GetChannelConnectionAsync(GetChannelConnectionRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            // Make the request
+            ChannelConnection response = await eventarcClient.GetChannelConnectionAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelConnection</summary>
+        public void GetChannelConnection()
+        {
+            // Snippet: GetChannelConnection(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channelConnections/[CHANNEL_CONNECTION]";
+            // Make the request
+            ChannelConnection response = eventarcClient.GetChannelConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelConnectionAsync</summary>
+        public async Task GetChannelConnectionAsync()
+        {
+            // Snippet: GetChannelConnectionAsync(string, CallSettings)
+            // Additional: GetChannelConnectionAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channelConnections/[CHANNEL_CONNECTION]";
+            // Make the request
+            ChannelConnection response = await eventarcClient.GetChannelConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelConnection</summary>
+        public void GetChannelConnectionResourceNames()
+        {
+            // Snippet: GetChannelConnection(ChannelConnectionName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ChannelConnectionName name = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]");
+            // Make the request
+            ChannelConnection response = eventarcClient.GetChannelConnection(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for GetChannelConnectionAsync</summary>
+        public async Task GetChannelConnectionResourceNamesAsync()
+        {
+            // Snippet: GetChannelConnectionAsync(ChannelConnectionName, CallSettings)
+            // Additional: GetChannelConnectionAsync(ChannelConnectionName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelConnectionName name = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]");
+            // Make the request
+            ChannelConnection response = await eventarcClient.GetChannelConnectionAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelConnections</summary>
+        public void ListChannelConnectionsRequestObject()
+        {
+            // Snippet: ListChannelConnections(ListChannelConnectionsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ListChannelConnectionsRequest request = new ListChannelConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> response = eventarcClient.ListChannelConnections(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelConnectionsAsync</summary>
+        public async Task ListChannelConnectionsRequestObjectAsync()
+        {
+            // Snippet: ListChannelConnectionsAsync(ListChannelConnectionsRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ListChannelConnectionsRequest request = new ListChannelConnectionsRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+            };
+            // Make the request
+            PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> response = eventarcClient.ListChannelConnectionsAsync(request);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelConnections</summary>
+        public void ListChannelConnections()
+        {
+            // Snippet: ListChannelConnections(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> response = eventarcClient.ListChannelConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelConnectionsAsync</summary>
+        public async Task ListChannelConnectionsAsync()
+        {
+            // Snippet: ListChannelConnectionsAsync(string, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            // Make the request
+            PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> response = eventarcClient.ListChannelConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelConnections</summary>
+        public void ListChannelConnectionsResourceNames()
+        {
+            // Snippet: ListChannelConnections(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedEnumerable<ListChannelConnectionsResponse, ChannelConnection> response = eventarcClient.ListChannelConnections(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            foreach (ChannelConnection item in response)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            foreach (ListChannelConnectionsResponse page in response.AsRawResponses())
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            }
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelConnection> singlePage = response.ReadPage(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for ListChannelConnectionsAsync</summary>
+        public async Task ListChannelConnectionsResourceNamesAsync()
+        {
+            // Snippet: ListChannelConnectionsAsync(LocationName, string, int?, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            // Make the request
+            PagedAsyncEnumerable<ListChannelConnectionsResponse, ChannelConnection> response = eventarcClient.ListChannelConnectionsAsync(parent);
+
+            // Iterate over all response items, lazily performing RPCs as required
+            await response.ForEachAsync((ChannelConnection item) =>
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            });
+
+            // Or iterate over pages (of server-defined size), performing one RPC per page
+            await response.AsRawResponses().ForEachAsync((ListChannelConnectionsResponse page) =>
+            {
+                // Do something with each page of items
+                Console.WriteLine("A page of results:");
+                foreach (ChannelConnection item in page)
+                {
+                    // Do something with each item
+                    Console.WriteLine(item);
+                }
+            });
+
+            // Or retrieve a single page of known size (unless it's the final page), performing as many RPCs as required
+            int pageSize = 10;
+            Page<ChannelConnection> singlePage = await response.ReadPageAsync(pageSize);
+            // Do something with the page of items
+            Console.WriteLine($"A page of {pageSize} results (unless it's the final page):");
+            foreach (ChannelConnection item in singlePage)
+            {
+                // Do something with each item
+                Console.WriteLine(item);
+            }
+            // Store the pageToken, for when the next page is required.
+            string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelConnection</summary>
+        public void CreateChannelConnectionRequestObject()
+        {
+            // Snippet: CreateChannelConnection(CreateChannelConnectionRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            CreateChannelConnectionRequest request = new CreateChannelConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ChannelConnection = new ChannelConnection(),
+                ChannelConnectionId = "",
+            };
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = eventarcClient.CreateChannelConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateChannelConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelConnectionAsync</summary>
+        public async Task CreateChannelConnectionRequestObjectAsync()
+        {
+            // Snippet: CreateChannelConnectionAsync(CreateChannelConnectionRequest, CallSettings)
+            // Additional: CreateChannelConnectionAsync(CreateChannelConnectionRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            CreateChannelConnectionRequest request = new CreateChannelConnectionRequest
+            {
+                ParentAsLocationName = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]"),
+                ChannelConnection = new ChannelConnection(),
+                ChannelConnectionId = "",
+            };
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = await eventarcClient.CreateChannelConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateChannelConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelConnection</summary>
+        public void CreateChannelConnection()
+        {
+            // Snippet: CreateChannelConnection(string, ChannelConnection, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ChannelConnection channelConnection = new ChannelConnection();
+            string channelConnectionId = "";
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = eventarcClient.CreateChannelConnection(parent, channelConnection, channelConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateChannelConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelConnectionAsync</summary>
+        public async Task CreateChannelConnectionAsync()
+        {
+            // Snippet: CreateChannelConnectionAsync(string, ChannelConnection, string, CallSettings)
+            // Additional: CreateChannelConnectionAsync(string, ChannelConnection, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string parent = "projects/[PROJECT]/locations/[LOCATION]";
+            ChannelConnection channelConnection = new ChannelConnection();
+            string channelConnectionId = "";
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = await eventarcClient.CreateChannelConnectionAsync(parent, channelConnection, channelConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateChannelConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelConnection</summary>
+        public void CreateChannelConnectionResourceNames()
+        {
+            // Snippet: CreateChannelConnection(LocationName, ChannelConnection, string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ChannelConnection channelConnection = new ChannelConnection();
+            string channelConnectionId = "";
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = eventarcClient.CreateChannelConnection(parent, channelConnection, channelConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = eventarcClient.PollOnceCreateChannelConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for CreateChannelConnectionAsync</summary>
+        public async Task CreateChannelConnectionResourceNamesAsync()
+        {
+            // Snippet: CreateChannelConnectionAsync(LocationName, ChannelConnection, string, CallSettings)
+            // Additional: CreateChannelConnectionAsync(LocationName, ChannelConnection, string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            LocationName parent = LocationName.FromProjectLocation("[PROJECT]", "[LOCATION]");
+            ChannelConnection channelConnection = new ChannelConnection();
+            string channelConnectionId = "";
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = await eventarcClient.CreateChannelConnectionAsync(parent, channelConnection, channelConnectionId);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceCreateChannelConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelConnection</summary>
+        public void DeleteChannelConnectionRequestObject()
+        {
+            // Snippet: DeleteChannelConnection(DeleteChannelConnectionRequest, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            DeleteChannelConnectionRequest request = new DeleteChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = eventarcClient.DeleteChannelConnection(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteChannelConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelConnectionAsync</summary>
+        public async Task DeleteChannelConnectionRequestObjectAsync()
+        {
+            // Snippet: DeleteChannelConnectionAsync(DeleteChannelConnectionRequest, CallSettings)
+            // Additional: DeleteChannelConnectionAsync(DeleteChannelConnectionRequest, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            DeleteChannelConnectionRequest request = new DeleteChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = await eventarcClient.DeleteChannelConnectionAsync(request);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteChannelConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelConnection</summary>
+        public void DeleteChannelConnection()
+        {
+            // Snippet: DeleteChannelConnection(string, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channelConnections/[CHANNEL_CONNECTION]";
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = eventarcClient.DeleteChannelConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteChannelConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelConnectionAsync</summary>
+        public async Task DeleteChannelConnectionAsync()
+        {
+            // Snippet: DeleteChannelConnectionAsync(string, CallSettings)
+            // Additional: DeleteChannelConnectionAsync(string, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/channelConnections/[CHANNEL_CONNECTION]";
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = await eventarcClient.DeleteChannelConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteChannelConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelConnection</summary>
+        public void DeleteChannelConnectionResourceNames()
+        {
+            // Snippet: DeleteChannelConnection(ChannelConnectionName, CallSettings)
+            // Create client
+            EventarcClient eventarcClient = EventarcClient.Create();
+            // Initialize request argument(s)
+            ChannelConnectionName name = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]");
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = eventarcClient.DeleteChannelConnection(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = response.PollUntilCompleted();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = eventarcClient.PollOnceDeleteChannelConnection(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
+
+        /// <summary>Snippet for DeleteChannelConnectionAsync</summary>
+        public async Task DeleteChannelConnectionResourceNamesAsync()
+        {
+            // Snippet: DeleteChannelConnectionAsync(ChannelConnectionName, CallSettings)
+            // Additional: DeleteChannelConnectionAsync(ChannelConnectionName, CancellationToken)
+            // Create client
+            EventarcClient eventarcClient = await EventarcClient.CreateAsync();
+            // Initialize request argument(s)
+            ChannelConnectionName name = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]");
+            // Make the request
+            Operation<ChannelConnection, OperationMetadata> response = await eventarcClient.DeleteChannelConnectionAsync(name);
+
+            // Poll until the returned long-running operation is complete
+            Operation<ChannelConnection, OperationMetadata> completedResponse = await response.PollUntilCompletedAsync();
+            // Retrieve the operation result
+            ChannelConnection result = completedResponse.Result;
+
+            // Or get the name of the operation
+            string operationName = response.Name;
+            // This name can be stored, then the long-running operation retrieved later by name
+            Operation<ChannelConnection, OperationMetadata> retrievedResponse = await eventarcClient.PollOnceDeleteChannelConnectionAsync(operationName);
+            // Check if the retrieved long-running operation has completed
+            if (retrievedResponse.IsCompleted)
+            {
+                // If it has completed, then access the result
+                ChannelConnection retrievedResult = retrievedResponse.Result;
+            }
+            // End snippet
+        }
     }
 }

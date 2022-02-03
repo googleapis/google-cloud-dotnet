@@ -10,10 +10,34 @@
         "grpc": {
           "libraryClient": "EventarcClient",
           "rpcs": {
+            "CreateChannel": {
+              "methods": [
+                "CreateChannel",
+                "CreateChannelAsync"
+              ]
+            },
+            "CreateChannelConnection": {
+              "methods": [
+                "CreateChannelConnection",
+                "CreateChannelConnectionAsync"
+              ]
+            },
             "CreateTrigger": {
               "methods": [
                 "CreateTrigger",
                 "CreateTriggerAsync"
+              ]
+            },
+            "DeleteChannel": {
+              "methods": [
+                "DeleteChannel",
+                "DeleteChannelAsync"
+              ]
+            },
+            "DeleteChannelConnection": {
+              "methods": [
+                "DeleteChannelConnection",
+                "DeleteChannelConnectionAsync"
               ]
             },
             "DeleteTrigger": {
@@ -22,16 +46,46 @@
                 "DeleteTriggerAsync"
               ]
             },
+            "GetChannel": {
+              "methods": [
+                "GetChannel",
+                "GetChannelAsync"
+              ]
+            },
+            "GetChannelConnection": {
+              "methods": [
+                "GetChannelConnection",
+                "GetChannelConnectionAsync"
+              ]
+            },
             "GetTrigger": {
               "methods": [
                 "GetTrigger",
                 "GetTriggerAsync"
               ]
             },
+            "ListChannelConnections": {
+              "methods": [
+                "ListChannelConnections",
+                "ListChannelConnectionsAsync"
+              ]
+            },
+            "ListChannels": {
+              "methods": [
+                "ListChannels",
+                "ListChannelsAsync"
+              ]
+            },
             "ListTriggers": {
               "methods": [
                 "ListTriggers",
                 "ListTriggersAsync"
+              ]
+            },
+            "UpdateChannel": {
+              "methods": [
+                "UpdateChannel",
+                "UpdateChannelAsync"
               ]
             },
             "UpdateTrigger": {

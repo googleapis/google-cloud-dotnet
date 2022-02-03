@@ -54,6 +54,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                         "value60c16320"
                     },
                 },
+                Channel = "channeledd285c4",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -89,6 +90,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                         "value60c16320"
                     },
                 },
+                Channel = "channeledd285c4",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -126,6 +128,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                         "value60c16320"
                     },
                 },
+                Channel = "channeledd285c4",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -161,6 +164,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                         "value60c16320"
                     },
                 },
+                Channel = "channeledd285c4",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -198,6 +202,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                         "value60c16320"
                     },
                 },
+                Channel = "channeledd285c4",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTrigger(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
@@ -233,6 +238,7 @@ namespace Google.Cloud.Eventarc.V1.Tests
                         "value60c16320"
                     },
                 },
+                Channel = "channeledd285c4",
                 Etag = "etage8ad7218",
             };
             mockGrpcClient.Setup(x => x.GetTriggerAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Trigger>(stt::Task.FromResult(expectedResponse), null, null, null, null));
@@ -240,6 +246,330 @@ namespace Google.Cloud.Eventarc.V1.Tests
             Trigger responseCallSettings = await client.GetTriggerAsync(request.TriggerName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Trigger responseCancellationToken = await client.GetTriggerAsync(request.TriggerName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetChannelRequestObject()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            Channel expectedResponse = new Channel
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Provider = "provider703d9f9e",
+                PubsubTopic = "pubsub_topic8ad2d986",
+                State = Channel.Types.State.Active,
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Channel response = client.GetChannel(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetChannelRequestObjectAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            Channel expectedResponse = new Channel
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Provider = "provider703d9f9e",
+                PubsubTopic = "pubsub_topic8ad2d986",
+                State = Channel.Types.State.Active,
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Channel responseCallSettings = await client.GetChannelAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Channel responseCancellationToken = await client.GetChannelAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetChannel()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            Channel expectedResponse = new Channel
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Provider = "provider703d9f9e",
+                PubsubTopic = "pubsub_topic8ad2d986",
+                State = Channel.Types.State.Active,
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Channel response = client.GetChannel(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetChannelAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            Channel expectedResponse = new Channel
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Provider = "provider703d9f9e",
+                PubsubTopic = "pubsub_topic8ad2d986",
+                State = Channel.Types.State.Active,
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Channel responseCallSettings = await client.GetChannelAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Channel responseCancellationToken = await client.GetChannelAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetChannelResourceNames()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            Channel expectedResponse = new Channel
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Provider = "provider703d9f9e",
+                PubsubTopic = "pubsub_topic8ad2d986",
+                State = Channel.Types.State.Active,
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannel(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Channel response = client.GetChannel(request.ChannelName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetChannelResourceNamesAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelRequest request = new GetChannelRequest
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+            };
+            Channel expectedResponse = new Channel
+            {
+                ChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                Uid = "uida2d37198",
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                Provider = "provider703d9f9e",
+                PubsubTopic = "pubsub_topic8ad2d986",
+                State = Channel.Types.State.Active,
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Channel>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            Channel responseCallSettings = await client.GetChannelAsync(request.ChannelName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Channel responseCancellationToken = await client.GetChannelAsync(request.ChannelName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetChannelConnectionRequestObject()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            ChannelConnection expectedResponse = new ChannelConnection
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+                Uid = "uida2d37198",
+                ChannelAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            ChannelConnection response = client.GetChannelConnection(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetChannelConnectionRequestObjectAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            ChannelConnection expectedResponse = new ChannelConnection
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+                Uid = "uida2d37198",
+                ChannelAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            ChannelConnection responseCallSettings = await client.GetChannelConnectionAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ChannelConnection responseCancellationToken = await client.GetChannelConnectionAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetChannelConnection()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            ChannelConnection expectedResponse = new ChannelConnection
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+                Uid = "uida2d37198",
+                ChannelAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            ChannelConnection response = client.GetChannelConnection(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetChannelConnectionAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            ChannelConnection expectedResponse = new ChannelConnection
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+                Uid = "uida2d37198",
+                ChannelAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            ChannelConnection responseCallSettings = await client.GetChannelConnectionAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ChannelConnection responseCancellationToken = await client.GetChannelConnectionAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void GetChannelConnectionResourceNames()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            ChannelConnection expectedResponse = new ChannelConnection
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+                Uid = "uida2d37198",
+                ChannelAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelConnection(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            ChannelConnection response = client.GetChannelConnection(request.ChannelConnectionName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task GetChannelConnectionResourceNamesAsync()
+        {
+            moq::Mock<Eventarc.EventarcClient> mockGrpcClient = new moq::Mock<Eventarc.EventarcClient>(moq::MockBehavior.Strict);
+            mockGrpcClient.Setup(x => x.CreateOperationsClient()).Returns(new moq::Mock<lro::Operations.OperationsClient>().Object);
+            GetChannelConnectionRequest request = new GetChannelConnectionRequest
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+            };
+            ChannelConnection expectedResponse = new ChannelConnection
+            {
+                ChannelConnectionName = ChannelConnectionName.FromProjectLocationChannelConnection("[PROJECT]", "[LOCATION]", "[CHANNEL_CONNECTION]"),
+                Uid = "uida2d37198",
+                ChannelAsChannelName = ChannelName.FromProjectLocationChannel("[PROJECT]", "[LOCATION]", "[CHANNEL]"),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                ActivationToken = "activation_token8b38ce39",
+            };
+            mockGrpcClient.Setup(x => x.GetChannelConnectionAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<ChannelConnection>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            EventarcClient client = new EventarcClientImpl(mockGrpcClient.Object, null);
+            ChannelConnection responseCallSettings = await client.GetChannelConnectionAsync(request.ChannelConnectionName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            ChannelConnection responseCancellationToken = await client.GetChannelConnectionAsync(request.ChannelConnectionName, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }

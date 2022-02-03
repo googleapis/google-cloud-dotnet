@@ -727,6 +727,18 @@ namespace Google.Cloud.Eventarc.V1
         }
     }
 
+    public partial class Destination
+    {
+        /// <summary>
+        /// <see cref="CloudFunctionName"/>-typed view over the <see cref="CloudFunction"/> resource name property.
+        /// </summary>
+        public CloudFunctionName CloudFunctionAsCloudFunctionName
+        {
+            get => string.IsNullOrEmpty(CloudFunction) ? null : CloudFunctionName.Parse(CloudFunction, allowUnparsed: true);
+            set => CloudFunction = value?.ToString() ?? "";
+        }
+    }
+
     public partial class CloudRun
     {
         /// <summary>
