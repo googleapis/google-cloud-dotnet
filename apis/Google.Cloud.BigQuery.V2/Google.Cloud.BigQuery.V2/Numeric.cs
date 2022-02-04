@@ -450,16 +450,59 @@ namespace Google.Cloud.BigQuery.V2
                 return 0;
             } // We now know that Type is not null.
 
-            // FIXME: Awful performance!
-            string text = ToString();
-            // Handles overflow
-            decimal dec = decimal.Parse(text, CultureInfo.InvariantCulture);
-            if (lossOfPrecisionHandling == LossOfPrecisionHandling.Throw && this != Type.ValueFromDecimal(dec, LossOfPrecisionHandling.Truncate))
+            // Let's find the actual scale the number is in, i.e. lets remove all the trailing 0s that were
+            // added to complete the scale.
+            int scaleFillers = 0;
+            BigInteger absValueInActualScale = BigInteger.Abs(_scaledValue);
+            do
+            {
+                BigInteger divResult = BigInteger.DivRem(absValueInActualScale, 10, out BigInteger remainder);
+                if (remainder == BigInteger.Zero)
+                {
+                    scaleFillers++;
+                    absValueInActualScale = divResult;
+                }
+                else
+                {
+                    break;
+                }
+            } while (true);
+            int actualScale = Type.Scale - scaleFillers;
+
+            // We need to throw here if actualScale is greater than 28, as decimal cannot handle
+            // more than that, or if there's a fractional part and the whole scaled representation
+            // is bigger than 96 bits.
+            // If there's no fractional part, but the number is bigger than 96 bits, that's an overflow,
+            // not a loss of precission.
+            if (lossOfPrecisionHandling == LossOfPrecisionHandling.Throw
+                && (actualScale > 28
+                    || (actualScale > 0 && absValueInActualScale >> 96 > 0)))
             {
                 // TODO: Is this the right exception to use?
                 throw new InvalidOperationException("Conversion would lose information");
             }
-            return dec;
+
+            // If we are here, we know that either we are OK precision wise or that we can afford to loose some. 
+            // Still we need to check for overflow, i.e. that the integer part of the value fits in 96 bits
+            BigInteger integralPart = BigInteger.DivRem(absValueInActualScale, NumericType.PowersOf10[actualScale], out BigInteger fractionalPart);
+            if (integralPart >> 96 > 0)
+            {
+                throw new OverflowException("This value is outside the range of decimal");
+            }
+
+            // We can truncate the decimalPart to 28 digits, as decimal won't take more than that.
+            if (actualScale - 28 is int extraPrecision && extraPrecision > 0)
+            {
+                // Let's truncate to 28 decimal di
+                fractionalPart = fractionalPart / NumericType.PowersOf10[extraPrecision];
+                actualScale = 28;
+            }
+
+
+            // Now we know that both the integral and fractional part won't overflow.
+            // We add the two, after scaling the fractional part, which can only loose precision.
+            // And the sign.
+            return _scaledValue.Sign * ((decimal)integralPart + (decimal)fractionalPart / (decimal)NumericType.PowersOf10[actualScale]);
         }
 
         /// <summary>
