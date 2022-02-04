@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.4.0, released 2022-02-04
+
+### New features
+
+- Add full Identity Access Context Manager support ([commit 0aa263c](https://github.com/googleapis/google-cloud-dotnet/commit/0aa263c45e49b3956e1cc47a7b116044e8ea7dbe))
+
 ## Version 1.3.0, released 2021-08-10
 
 - [Commit abd324d](https://github.com/googleapis/google-cloud-dotnet/commit/abd324d): chore: publish Access Context Manager API v1
