@@ -44,8 +44,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             {
                 text = "-" + text;
             }
-            decimal parsed = decimal.Parse(text, CultureInfo.InvariantCulture);
-            BigQueryBigNumeric numeric = (BigQueryBigNumeric)parsed;
+            BigQueryBigNumeric numeric = decimal.Parse(text, CultureInfo.InvariantCulture);
             Assert.Equal(text, numeric.ToString());
         }
 
@@ -132,7 +131,7 @@ namespace Google.Cloud.BigQuery.V2.Tests
             decimal actual = numeric.ToDecimal(LossOfPrecisionHandling.Truncate);
             Assert.Equal(expected, actual);
             // Conversion via the explicit conversion should do the same thing
-            decimal actual2 = (decimal)numeric;
+            decimal actual2 = (decimal) numeric;
             Assert.Equal(expected, actual2);
         }
 
@@ -292,9 +291,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             // To compare with a different instance.
             var value1 = BigQueryBigNumeric.Parse(text);
             Assert.Equal(0, value.CompareTo(value));
-            Assert.Equal(0, (IComparable)value.CompareTo(value));
+            Assert.Equal(0, (IComparable) value.CompareTo(value));
             Assert.Equal(0, value1.CompareTo(value));
-            Assert.Equal(0, (IComparable)value1.CompareTo(value));
+            Assert.Equal(0, (IComparable) value1.CompareTo(value));
         }
 
         [Fact]
@@ -304,9 +303,9 @@ namespace Google.Cloud.BigQuery.V2.Tests
             var regularZero = BigQueryBigNumeric.Zero;
             var negativeZero = BigQueryBigNumeric.Parse("-0");
             Assert.Equal(0, regularZero.CompareTo(negativeZero));
-            Assert.Equal(0, (IComparable)regularZero.CompareTo(negativeZero));
+            Assert.Equal(0, (IComparable) regularZero.CompareTo(negativeZero));
             Assert.Equal(0, negativeZero.CompareTo(regularZero));
-            Assert.Equal(0, (IComparable)negativeZero.CompareTo(regularZero));
+            Assert.Equal(0, (IComparable) negativeZero.CompareTo(regularZero));
         }
 
         [Fact]

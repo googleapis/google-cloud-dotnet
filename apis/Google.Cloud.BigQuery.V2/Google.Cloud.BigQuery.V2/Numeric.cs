@@ -506,8 +506,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>
         /// The result of adding the two values.
         /// </returns>
-        public static NumericValue operator +(NumericValue lhs, NumericValue rhs)
-            => new NumericValue(lhs._scaledValue + rhs._scaledValue, lhs.Type ?? rhs.Type);
+        public static NumericValue operator +(NumericValue lhs, NumericValue rhs) =>
+            new NumericValue(lhs._scaledValue + rhs._scaledValue, lhs.Type ?? rhs.Type);
 
         /// <summary>
         /// Returns the result of substracting two <see cref="NumericValue"/> values together.
@@ -519,8 +519,8 @@ namespace Google.Cloud.BigQuery.V2
         /// <returns>
         /// The result of substracting the two values.
         /// </returns>
-        public static NumericValue operator -(NumericValue lhs, NumericValue rhs)
-            => new NumericValue(lhs._scaledValue - rhs._scaledValue, lhs.Type ?? rhs.Type);
+        public static NumericValue operator -(NumericValue lhs, NumericValue rhs) =>
+            new NumericValue(lhs._scaledValue - rhs._scaledValue, lhs.Type ?? rhs.Type);
 
         /// <summary>
         /// The unary plus operator, provided mainly for consistency.
