@@ -67,7 +67,7 @@ namespace Google.Cloud.BigQuery.V2.IntegrationTests
             Assert.Equal(123456789012L, (long) row["single_int64"]);
             Assert.Equal(1.25, (double) row["single_float64"]);
             Assert.Equal(BigQueryNumeric.Parse("1234567890123456789012345678.123456789"), (BigQueryNumeric) row["single_numeric"]);
-            Assert.Equal(BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), (BigQueryBigNumeric)row["single_big_numeric"]);
+            Assert.Equal(BigQueryBigNumeric.Parse("123456789012345678901234567890123456789.12345678901234567890123456789012345678"), (BigQueryBigNumeric) row["single_big_numeric"]);
             Assert.Equal(BigQueryGeography.Parse("POINT(1 2)"), (BigQueryGeography) row["single_geography"]);
 
             var singleRecord = (Dictionary<string, object>) row["single_record"];

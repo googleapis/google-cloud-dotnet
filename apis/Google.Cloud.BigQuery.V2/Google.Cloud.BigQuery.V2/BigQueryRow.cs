@@ -164,7 +164,7 @@ namespace Google.Cloud.BigQuery.V2
                 case BigQueryDbType.Numeric:
                     return NumericConverter((string) rawValue);
                 case BigQueryDbType.BigNumeric:
-                    return BigNumericConverter((string)rawValue);
+                    return BigNumericConverter((string) rawValue);
                 case BigQueryDbType.Geography:
                     return GeographyConverter((string) rawValue);
                 case BigQueryDbType.Struct:
