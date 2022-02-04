@@ -50,6 +50,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                EnableExactlyOnceDelivery = false,
                 TopicMessageRetentionDuration = new Duration(),
             };
             // Make the request
@@ -80,6 +81,7 @@ namespace Google.Cloud.PubSub.V1.Snippets
                 DeadLetterPolicy = new DeadLetterPolicy(),
                 RetryPolicy = new RetryPolicy(),
                 Detached = false,
+                EnableExactlyOnceDelivery = false,
                 TopicMessageRetentionDuration = new Duration(),
             };
             // Make the request
