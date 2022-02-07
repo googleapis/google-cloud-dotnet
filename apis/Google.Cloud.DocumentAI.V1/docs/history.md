@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.3.0, released 2022-02-07
+
+### New features
+
+- Add question_id field in ReviewDocumentOperationMetadata ([commit af7ce3b](https://github.com/googleapis/google-cloud-dotnet/commit/af7ce3b83941b1b6a9e470311f0f11934368cd9b))
+
 ## Version 1.2.0, released 2021-08-19
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
