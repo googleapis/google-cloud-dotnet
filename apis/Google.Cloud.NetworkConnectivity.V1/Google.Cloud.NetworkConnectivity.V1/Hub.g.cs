@@ -42,76 +42,82 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "djEuUm91dGluZ1ZQQxotCgtMYWJlbHNFbnRyeRILCgNrZXkYASABKAkSDQoF",
             "dmFsdWUYAiABKAk6AjgBOlvqQVgKJm5ldHdvcmtjb25uZWN0aXZpdHkuZ29v",
             "Z2xlYXBpcy5jb20vSHViEi5wcm9qZWN0cy97cHJvamVjdH0vbG9jYXRpb25z",
-            "L2dsb2JhbC9odWJzL3todWJ9Ij4KClJvdXRpbmdWUEMSMAoDdXJpGAEgASgJ",
-            "QiP6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yayK+BgoFU3Bv",
-            "a2USEQoEbmFtZRgBIAEoCUID4EEFEjQKC2NyZWF0ZV90aW1lGAIgASgLMhou",
-            "Z29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEjQKC3VwZGF0ZV90aW1l",
-            "GAMgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcEID4EEDEkYKBmxh",
-            "YmVscxgEIAMoCzI2Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5",
-            "LnYxLlNwb2tlLkxhYmVsc0VudHJ5EhMKC2Rlc2NyaXB0aW9uGAUgASgJEjsK",
-            "A2h1YhgGIAEoCUIu4EEF+kEoCiZuZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2ds",
-            "ZWFwaXMuY29tL0h1YhJRChJsaW5rZWRfdnBuX3R1bm5lbHMYESABKAsyNS5n",
-            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5MaW5rZWRWcG5U",
-            "dW5uZWxzEmsKH2xpbmtlZF9pbnRlcmNvbm5lY3RfYXR0YWNobWVudHMYEiAB",
-            "KAsyQi5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5MaW5r",
-            "ZWRJbnRlcmNvbm5lY3RBdHRhY2htZW50cxJuCiFsaW5rZWRfcm91dGVyX2Fw",
-            "cGxpYW5jZV9pbnN0YW5jZXMYEyABKAsyQy5nb29nbGUuY2xvdWQubmV0d29y",
-            "a2Nvbm5lY3Rpdml0eS52MS5MaW5rZWRSb3V0ZXJBcHBsaWFuY2VJbnN0YW5j",
-            "ZXMSFgoJdW5pcXVlX2lkGAsgASgJQgPgQQMSPgoFc3RhdGUYDyABKA4yKi5n",
-            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5TdGF0ZUID4EED",
-            "Gi0KC0xhYmVsc0VudHJ5EgsKA2tleRgBIAEoCRINCgV2YWx1ZRgCIAEoCToC",
-            "OAE6ZepBYgoobmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlzLmNvbS9T",
-            "cG9rZRI2cHJvamVjdHMve3Byb2plY3R9L2xvY2F0aW9ucy97bG9jYXRpb259",
-            "L3Nwb2tlcy97c3Bva2V9IpUBCg9MaXN0SHVic1JlcXVlc3QSOQoGcGFyZW50",
-            "GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2Nh",
-            "dGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoKcGFnZV90b2tlbhgDIAEoCRIO",
-            "CgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkYBSABKAkieAoQTGlzdEh1YnNS",
-            "ZXNwb25zZRI2CgRodWJzGAEgAygLMiguZ29vZ2xlLmNsb3VkLm5ldHdvcmtj",
-            "b25uZWN0aXZpdHkudjEuSHViEhcKD25leHRfcGFnZV90b2tlbhgCIAEoCRIT",
-            "Cgt1bnJlYWNoYWJsZRgDIAMoCSJNCg1HZXRIdWJSZXF1ZXN0EjwKBG5hbWUY",
-            "ASABKAlCLuBBAvpBKAombmV0d29ya2Nvbm5lY3Rpdml0eS5nb29nbGVhcGlz",
-            "LmNvbS9IdWIitwEKEENyZWF0ZUh1YlJlcXVlc3QSOQoGcGFyZW50GAEgASgJ",
-            "QingQQL6QSMKIWxvY2F0aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIT",
-            "CgZodWJfaWQYAiABKAlCA+BBAhI6CgNodWIYAyABKAsyKC5nb29nbGUuY2xv",
+            "L2dsb2JhbC9odWJzL3todWJ9In8KClJvdXRpbmdWUEMSMAoDdXJpGAEgASgJ",
+            "QiP6QSAKHmNvbXB1dGUuZ29vZ2xlYXBpcy5jb20vTmV0d29yaxI/CjJyZXF1",
+            "aXJlZF9mb3JfbmV3X3NpdGVfdG9fc2l0ZV9kYXRhX3RyYW5zZmVyX3Nwb2tl",
+            "cxgCIAEoCEID4EEDIr4GCgVTcG9rZRIRCgRuYW1lGAEgASgJQgPgQQUSNAoL",
+            "Y3JlYXRlX3RpbWUYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1w",
+            "QgPgQQMSNAoLdXBkYXRlX3RpbWUYAyABKAsyGi5nb29nbGUucHJvdG9idWYu",
+            "VGltZXN0YW1wQgPgQQMSRgoGbGFiZWxzGAQgAygLMjYuZ29vZ2xlLmNsb3Vk",
+            "Lm5ldHdvcmtjb25uZWN0aXZpdHkudjEuU3Bva2UuTGFiZWxzRW50cnkSEwoL",
+            "ZGVzY3JpcHRpb24YBSABKAkSOwoDaHViGAYgASgJQi7gQQX6QSgKJm5ldHdv",
+            "cmtjb25uZWN0aXZpdHkuZ29vZ2xlYXBpcy5jb20vSHViElEKEmxpbmtlZF92",
+            "cG5fdHVubmVscxgRIAEoCzI1Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVj",
+            "dGl2aXR5LnYxLkxpbmtlZFZwblR1bm5lbHMSawofbGlua2VkX2ludGVyY29u",
+            "bmVjdF9hdHRhY2htZW50cxgSIAEoCzJCLmdvb2dsZS5jbG91ZC5uZXR3b3Jr",
+            "Y29ubmVjdGl2aXR5LnYxLkxpbmtlZEludGVyY29ubmVjdEF0dGFjaG1lbnRz",
+            "Em4KIWxpbmtlZF9yb3V0ZXJfYXBwbGlhbmNlX2luc3RhbmNlcxgTIAEoCzJD",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLkxpbmtlZFJv",
+            "dXRlckFwcGxpYW5jZUluc3RhbmNlcxIWCgl1bmlxdWVfaWQYCyABKAlCA+BB",
+            "AxI+CgVzdGF0ZRgPIAEoDjIqLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVj",
+            "dGl2aXR5LnYxLlN0YXRlQgPgQQMaLQoLTGFiZWxzRW50cnkSCwoDa2V5GAEg",
+            "ASgJEg0KBXZhbHVlGAIgASgJOgI4ATpl6kFiCihuZXR3b3JrY29ubmVjdGl2",
+            "aXR5Lmdvb2dsZWFwaXMuY29tL1Nwb2tlEjZwcm9qZWN0cy97cHJvamVjdH0v",
+            "bG9jYXRpb25zL3tsb2NhdGlvbn0vc3Bva2VzL3tzcG9rZX0ilQEKD0xpc3RI",
+            "dWJzUmVxdWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25z",
+            "Lmdvb2dsZWFwaXMuY29tL0xvY2F0aW9uEhEKCXBhZ2Vfc2l6ZRgCIAEoBRIS",
+            "CgpwYWdlX3Rva2VuGAMgASgJEg4KBmZpbHRlchgEIAEoCRIQCghvcmRlcl9i",
+            "eRgFIAEoCSJ4ChBMaXN0SHVic1Jlc3BvbnNlEjYKBGh1YnMYASADKAsyKC5n",
+            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5IdWISFwoPbmV4",
+            "dF9wYWdlX3Rva2VuGAIgASgJEhMKC3VucmVhY2hhYmxlGAMgAygJIk0KDUdl",
+            "dEh1YlJlcXVlc3QSPAoEbmFtZRgBIAEoCUIu4EEC+kEoCiZuZXR3b3JrY29u",
+            "bmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL0h1YiK3AQoQQ3JlYXRlSHViUmVx",
+            "dWVzdBI5CgZwYXJlbnQYASABKAlCKeBBAvpBIwohbG9jYXRpb25zLmdvb2ds",
+            "ZWFwaXMuY29tL0xvY2F0aW9uEhMKBmh1Yl9pZBgCIAEoCUID4EECEjoKA2h1",
+            "YhgDIAEoCzIoLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYx",
+            "Lkh1YkID4EECEhcKCnJlcXVlc3RfaWQYBCABKAlCA+BBASKdAQoQVXBkYXRl",
+            "SHViUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgBIAEoCzIaLmdvb2dsZS5wcm90",
+            "b2J1Zi5GaWVsZE1hc2tCA+BBARI6CgNodWIYAiABKAsyKC5nb29nbGUuY2xv",
             "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5IdWJCA+BBAhIXCgpyZXF1ZXN0",
-            "X2lkGAQgASgJQgPgQQEinQEKEFVwZGF0ZUh1YlJlcXVlc3QSNAoLdXBkYXRl",
-            "X21hc2sYASABKAsyGi5nb29nbGUucHJvdG9idWYuRmllbGRNYXNrQgPgQQES",
-            "OgoDaHViGAIgASgLMiguZ29vZ2xlLmNsb3VkLm5ldHdvcmtjb25uZWN0aXZp",
-            "dHkudjEuSHViQgPgQQISFwoKcmVxdWVzdF9pZBgDIAEoCUID4EEBImkKEERl",
-            "bGV0ZUh1YlJlcXVlc3QSPAoEbmFtZRgBIAEoCUIu4EEC+kEoCiZuZXR3b3Jr",
-            "Y29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL0h1YhIXCgpyZXF1ZXN0X2lk",
-            "GAIgASgJQgPgQQEilwEKEUxpc3RTcG9rZXNSZXF1ZXN0EjkKBnBhcmVudBgB",
-            "IAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20vTG9jYXRp",
-            "b24SEQoJcGFnZV9zaXplGAIgASgFEhIKCnBhZ2VfdG9rZW4YAyABKAkSDgoG",
-            "ZmlsdGVyGAQgASgJEhAKCG9yZGVyX2J5GAUgASgJIn4KEkxpc3RTcG9rZXNS",
-            "ZXNwb25zZRI6CgZzcG9rZXMYASADKAsyKi5nb29nbGUuY2xvdWQubmV0d29y",
-            "a2Nvbm5lY3Rpdml0eS52MS5TcG9rZRIXCg9uZXh0X3BhZ2VfdG9rZW4YAiAB",
-            "KAkSEwoLdW5yZWFjaGFibGUYAyADKAkiUQoPR2V0U3Bva2VSZXF1ZXN0Ej4K",
-            "BG5hbWUYASABKAlCMOBBAvpBKgoobmV0d29ya2Nvbm5lY3Rpdml0eS5nb29n",
-            "bGVhcGlzLmNvbS9TcG9rZSK/AQoSQ3JlYXRlU3Bva2VSZXF1ZXN0EjkKBnBh",
-            "cmVudBgBIAEoCUIp4EEC+kEjCiFsb2NhdGlvbnMuZ29vZ2xlYXBpcy5jb20v",
-            "TG9jYXRpb24SFQoIc3Bva2VfaWQYAiABKAlCA+BBAhI+CgVzcG9rZRgDIAEo",
-            "CzIqLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLlNwb2tl",
-            "QgPgQQISFwoKcmVxdWVzdF9pZBgEIAEoCUID4EEBIqMBChJVcGRhdGVTcG9r",
-            "ZVJlcXVlc3QSNAoLdXBkYXRlX21hc2sYASABKAsyGi5nb29nbGUucHJvdG9i",
-            "dWYuRmllbGRNYXNrQgPgQQESPgoFc3Bva2UYAiABKAsyKi5nb29nbGUuY2xv",
-            "dWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5TcG9rZUID4EECEhcKCnJlcXVl",
-            "c3RfaWQYAyABKAlCA+BBASJtChJEZWxldGVTcG9rZVJlcXVlc3QSPgoEbmFt",
-            "ZRgBIAEoCUIw4EEC+kEqCihuZXR3b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFw",
-            "aXMuY29tL1Nwb2tlEhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASJrChBMaW5r",
-            "ZWRWcG5UdW5uZWxzEjMKBHVyaXMYASADKAlCJfpBIgogY29tcHV0ZS5nb29n",
-            "bGVhcGlzLmNvbS9WcG5UdW5uZWwSIgoac2l0ZV90b19zaXRlX2RhdGFfdHJh",
-            "bnNmZXIYAiABKAgihQEKHUxpbmtlZEludGVyY29ubmVjdEF0dGFjaG1lbnRz",
-            "EkAKBHVyaXMYASADKAlCMvpBLwotY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9J",
-            "bnRlcmNvbm5lY3RBdHRhY2htZW50EiIKGnNpdGVfdG9fc2l0ZV9kYXRhX3Ry",
-            "YW5zZmVyGAIgASgIIpUBCh5MaW5rZWRSb3V0ZXJBcHBsaWFuY2VJbnN0YW5j",
-            "ZXMSTwoJaW5zdGFuY2VzGAEgAygLMjwuZ29vZ2xlLmNsb3VkLm5ldHdvcmtj",
-            "b25uZWN0aXZpdHkudjEuUm91dGVyQXBwbGlhbmNlSW5zdGFuY2USIgoac2l0",
-            "ZV90b19zaXRlX2RhdGFfdHJhbnNmZXIYAiABKAgibAoXUm91dGVyQXBwbGlh",
-            "bmNlSW5zdGFuY2USPQoPdmlydHVhbF9tYWNoaW5lGAEgASgJQiT6QSEKH2Nv",
-            "bXB1dGUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USEgoKaXBfYWRkcmVzcxgD",
-            "IAEoCSpGCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCENSRUFU",
-            "SU5HEAESCgoGQUNUSVZFEAISDAoIREVMRVRJTkcQAzKdEAoKSHViU2Vydmlj",
+            "X2lkGAMgASgJQgPgQQEiaQoQRGVsZXRlSHViUmVxdWVzdBI8CgRuYW1lGAEg",
+            "ASgJQi7gQQL6QSgKJm5ldHdvcmtjb25uZWN0aXZpdHkuZ29vZ2xlYXBpcy5j",
+            "b20vSHViEhcKCnJlcXVlc3RfaWQYAiABKAlCA+BBASKXAQoRTGlzdFNwb2tl",
+            "c1JlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0aW9ucy5n",
+            "b29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIRCglwYWdlX3NpemUYAiABKAUSEgoK",
+            "cGFnZV90b2tlbhgDIAEoCRIOCgZmaWx0ZXIYBCABKAkSEAoIb3JkZXJfYnkY",
+            "BSABKAkifgoSTGlzdFNwb2tlc1Jlc3BvbnNlEjoKBnNwb2tlcxgBIAMoCzIq",
+            "Lmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxLlNwb2tlEhcK",
+            "D25leHRfcGFnZV90b2tlbhgCIAEoCRITCgt1bnJlYWNoYWJsZRgDIAMoCSJR",
+            "Cg9HZXRTcG9rZVJlcXVlc3QSPgoEbmFtZRgBIAEoCUIw4EEC+kEqCihuZXR3",
+            "b3JrY29ubmVjdGl2aXR5Lmdvb2dsZWFwaXMuY29tL1Nwb2tlIr8BChJDcmVh",
+            "dGVTcG9rZVJlcXVlc3QSOQoGcGFyZW50GAEgASgJQingQQL6QSMKIWxvY2F0",
+            "aW9ucy5nb29nbGVhcGlzLmNvbS9Mb2NhdGlvbhIVCghzcG9rZV9pZBgCIAEo",
+            "CUID4EECEj4KBXNwb2tlGAMgASgLMiouZ29vZ2xlLmNsb3VkLm5ldHdvcmtj",
+            "b25uZWN0aXZpdHkudjEuU3Bva2VCA+BBAhIXCgpyZXF1ZXN0X2lkGAQgASgJ",
+            "QgPgQQEiowEKElVwZGF0ZVNwb2tlUmVxdWVzdBI0Cgt1cGRhdGVfbWFzaxgB",
+            "IAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5GaWVsZE1hc2tCA+BBARI+CgVzcG9r",
+            "ZRgCIAEoCzIqLmdvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYx",
+            "LlNwb2tlQgPgQQISFwoKcmVxdWVzdF9pZBgDIAEoCUID4EEBIm0KEkRlbGV0",
+            "ZVNwb2tlUmVxdWVzdBI+CgRuYW1lGAEgASgJQjDgQQL6QSoKKG5ldHdvcmtj",
+            "b25uZWN0aXZpdHkuZ29vZ2xlYXBpcy5jb20vU3Bva2USFwoKcmVxdWVzdF9p",
+            "ZBgCIAEoCUID4EEBImsKEExpbmtlZFZwblR1bm5lbHMSMwoEdXJpcxgBIAMo",
+            "CUIl+kEiCiBjb21wdXRlLmdvb2dsZWFwaXMuY29tL1ZwblR1bm5lbBIiChpz",
+            "aXRlX3RvX3NpdGVfZGF0YV90cmFuc2ZlchgCIAEoCCKFAQodTGlua2VkSW50",
+            "ZXJjb25uZWN0QXR0YWNobWVudHMSQAoEdXJpcxgBIAMoCUIy+kEvCi1jb21w",
+            "dXRlLmdvb2dsZWFwaXMuY29tL0ludGVyY29ubmVjdEF0dGFjaG1lbnQSIgoa",
+            "c2l0ZV90b19zaXRlX2RhdGFfdHJhbnNmZXIYAiABKAgilQEKHkxpbmtlZFJv",
+            "dXRlckFwcGxpYW5jZUluc3RhbmNlcxJPCglpbnN0YW5jZXMYASADKAsyPC5n",
+            "b29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rpdml0eS52MS5Sb3V0ZXJBcHBs",
+            "aWFuY2VJbnN0YW5jZRIiChpzaXRlX3RvX3NpdGVfZGF0YV90cmFuc2ZlchgC",
+            "IAEoCCJsChdSb3V0ZXJBcHBsaWFuY2VJbnN0YW5jZRI9Cg92aXJ0dWFsX21h",
+            "Y2hpbmUYASABKAlCJPpBIQofY29tcHV0ZS5nb29nbGVhcGlzLmNvbS9JbnN0",
+            "YW5jZRISCgppcF9hZGRyZXNzGAMgASgJImMKEExvY2F0aW9uTWV0YWRhdGES",
+            "TwoRbG9jYXRpb25fZmVhdHVyZXMYASADKA4yNC5nb29nbGUuY2xvdWQubmV0",
+            "d29ya2Nvbm5lY3Rpdml0eS52MS5Mb2NhdGlvbkZlYXR1cmUqRgoFU3RhdGUS",
+            "FQoRU1RBVEVfVU5TUEVDSUZJRUQQABIMCghDUkVBVElORxABEgoKBkFDVElW",
+            "RRACEgwKCERFTEVUSU5HEAMqZgoPTG9jYXRpb25GZWF0dXJlEiAKHExPQ0FU",
+            "SU9OX0ZFQVRVUkVfVU5TUEVDSUZJRUQQABIYChRTSVRFX1RPX0NMT1VEX1NQ",
+            "T0tFUxABEhcKE1NJVEVfVE9fU0lURV9TUE9LRVMQAjKdEAoKSHViU2Vydmlj",
             "ZRK3AQoITGlzdEh1YnMSNC5nb29nbGUuY2xvdWQubmV0d29ya2Nvbm5lY3Rp",
             "dml0eS52MS5MaXN0SHVic1JlcXVlc3QaNS5nb29nbGUuY2xvdWQubmV0d29y",
             "a2Nvbm5lY3Rpdml0eS52MS5MaXN0SHVic1Jlc3BvbnNlIj6C0+STAi8SLS92",
@@ -175,9 +181,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "YmFsL25ldHdvcmtzL3tyZXNvdXJjZV9pZH1iBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.ClientReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Api.ResourceReflection.Descriptor, global::Google.LongRunning.OperationsReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.FieldMaskReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
-          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkConnectivity.V1.State), }, null, new pbr::GeneratedClrTypeInfo[] {
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Google.Cloud.NetworkConnectivity.V1.State), typeof(global::Google.Cloud.NetworkConnectivity.V1.LocationFeature), }, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.Hub), global::Google.Cloud.NetworkConnectivity.V1.Hub.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "UniqueId", "State", "RoutingVpcs" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC), global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC.Parser, new[]{ "Uri" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC), global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC.Parser, new[]{ "Uri", "RequiredForNewSiteToSiteDataTransferSpokes" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.Spoke), global::Google.Cloud.NetworkConnectivity.V1.Spoke.Parser, new[]{ "Name", "CreateTime", "UpdateTime", "Labels", "Description", "Hub", "LinkedVpnTunnels", "LinkedInterconnectAttachments", "LinkedRouterApplianceInstances", "UniqueId", "State" }, null, null, null, new pbr::GeneratedClrTypeInfo[] { null, }),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest), global::Google.Cloud.NetworkConnectivity.V1.ListHubsRequest.Parser, new[]{ "Parent", "PageSize", "PageToken", "Filter", "OrderBy" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse), global::Google.Cloud.NetworkConnectivity.V1.ListHubsResponse.Parser, new[]{ "Hubs", "NextPageToken", "Unreachable" }, null, null, null, null),
@@ -194,7 +200,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels), global::Google.Cloud.NetworkConnectivity.V1.LinkedVpnTunnels.Parser, new[]{ "Uris", "SiteToSiteDataTransfer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments), global::Google.Cloud.NetworkConnectivity.V1.LinkedInterconnectAttachments.Parser, new[]{ "Uris", "SiteToSiteDataTransfer" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances), global::Google.Cloud.NetworkConnectivity.V1.LinkedRouterApplianceInstances.Parser, new[]{ "Instances", "SiteToSiteDataTransfer" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.RouterApplianceInstance), global::Google.Cloud.NetworkConnectivity.V1.RouterApplianceInstance.Parser, new[]{ "VirtualMachine", "IpAddress" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.RouterApplianceInstance), global::Google.Cloud.NetworkConnectivity.V1.RouterApplianceInstance.Parser, new[]{ "VirtualMachine", "IpAddress" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.LocationMetadata), global::Google.Cloud.NetworkConnectivity.V1.LocationMetadata.Parser, new[]{ "LocationFeatures" }, null, null, null, null)
           }));
     }
     #endregion
@@ -224,13 +231,33 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     [pbr::OriginalName("DELETING")] Deleting = 3,
   }
 
+  /// <summary>
+  /// Supported features for a location
+  /// </summary>
+  public enum LocationFeature {
+    /// <summary>
+    /// No publicly supported feature in this location
+    /// </summary>
+    [pbr::OriginalName("LOCATION_FEATURE_UNSPECIFIED")] Unspecified = 0,
+    /// <summary>
+    /// Site-to-cloud spokes are supported in this location
+    /// </summary>
+    [pbr::OriginalName("SITE_TO_CLOUD_SPOKES")] SiteToCloudSpokes = 1,
+    /// <summary>
+    /// Site-to-site spokes are supported in this location
+    /// </summary>
+    [pbr::OriginalName("SITE_TO_SITE_SPOKES")] SiteToSiteSpokes = 2,
+  }
+
   #endregion
 
   #region Messages
   /// <summary>
   /// A hub is a collection of spokes. A single hub can contain spokes from
-  /// multiple regions. However, all of a hub's spokes must be associated with
-  /// resources that reside in the same VPC network.
+  /// multiple regions. However, if any of a hub's spokes use the data transfer
+  /// feature, the resources associated with those spokes must all reside in the
+  /// same VPC network. Spokes that do not use data transfer can be associated
+  /// with any VPC network in your project.
   /// </summary>
   public sealed partial class Hub : pb::IMessage<Hub>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -399,9 +426,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         = pb::FieldCodec.ForMessage(82, global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC.Parser);
     private readonly pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC> routingVpcs_ = new pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.RoutingVPC>();
     /// <summary>
-    /// The VPC network associated with this hub's spokes. All of the VPN tunnels,
-    /// VLAN attachments, and router appliance instances referenced by this hub's
-    /// spokes must belong to this VPC network.
+    /// The VPC networks associated with this hub's spokes.
     ///
     /// This field is read-only. Network Connectivity Center automatically
     /// populates it based on the set of spokes attached to the hub.
@@ -712,8 +737,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// RoutingVPC contains information about the VPC network that is associated with
-  /// a hub's spokes.
+  /// RoutingVPC contains information about the VPC networks that are associated
+  /// with a hub's spokes.
   /// </summary>
   public sealed partial class RoutingVPC : pb::IMessage<RoutingVPC>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -750,6 +775,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public RoutingVPC(RoutingVPC other) : this() {
       uri_ = other.uri_;
+      requiredForNewSiteToSiteDataTransferSpokes_ = other.requiredForNewSiteToSiteDataTransferSpokes_;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -774,6 +800,25 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
     }
 
+    /// <summary>Field number for the "required_for_new_site_to_site_data_transfer_spokes" field.</summary>
+    public const int RequiredForNewSiteToSiteDataTransferSpokesFieldNumber = 2;
+    private bool requiredForNewSiteToSiteDataTransferSpokes_;
+    /// <summary>
+    /// Output only. If true, indicates that this VPC network is currently associated with
+    /// spokes that use the data transfer feature (spokes where the
+    /// site_to_site_data_transfer field is set to true). If you create new spokes
+    /// that use data transfer, they must be associated with this VPC network. At
+    /// most, one VPC network will have this field set to true.
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool RequiredForNewSiteToSiteDataTransferSpokes {
+      get { return requiredForNewSiteToSiteDataTransferSpokes_; }
+      set {
+        requiredForNewSiteToSiteDataTransferSpokes_ = value;
+      }
+    }
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
     public override bool Equals(object other) {
@@ -790,6 +835,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         return true;
       }
       if (Uri != other.Uri) return false;
+      if (RequiredForNewSiteToSiteDataTransferSpokes != other.RequiredForNewSiteToSiteDataTransferSpokes) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -798,6 +844,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     public override int GetHashCode() {
       int hash = 1;
       if (Uri.Length != 0) hash ^= Uri.GetHashCode();
+      if (RequiredForNewSiteToSiteDataTransferSpokes != false) hash ^= RequiredForNewSiteToSiteDataTransferSpokes.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -820,6 +867,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
+      if (RequiredForNewSiteToSiteDataTransferSpokes != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(RequiredForNewSiteToSiteDataTransferSpokes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -834,6 +885,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
         output.WriteRawTag(10);
         output.WriteString(Uri);
       }
+      if (RequiredForNewSiteToSiteDataTransferSpokes != false) {
+        output.WriteRawTag(16);
+        output.WriteBool(RequiredForNewSiteToSiteDataTransferSpokes);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -846,6 +901,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       int size = 0;
       if (Uri.Length != 0) {
         size += 1 + pb::CodedOutputStream.ComputeStringSize(Uri);
+      }
+      if (RequiredForNewSiteToSiteDataTransferSpokes != false) {
+        size += 1 + 1;
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -861,6 +919,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       }
       if (other.Uri.Length != 0) {
         Uri = other.Uri;
+      }
+      if (other.RequiredForNewSiteToSiteDataTransferSpokes != false) {
+        RequiredForNewSiteToSiteDataTransferSpokes = other.RequiredForNewSiteToSiteDataTransferSpokes;
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -881,6 +942,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             Uri = input.ReadString();
             break;
           }
+          case 16: {
+            RequiredForNewSiteToSiteDataTransferSpokes = input.ReadBool();
+            break;
+          }
         }
       }
     #endif
@@ -898,6 +963,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             break;
           case 10: {
             Uri = input.ReadString();
+            break;
+          }
+          case 16: {
+            RequiredForNewSiteToSiteDataTransferSpokes = input.ReadBool();
             break;
           }
         }
@@ -5018,8 +5087,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private bool siteToSiteDataTransfer_;
     /// <summary>
     /// A value that controls whether site-to-site data transfer is enabled for
-    /// these resources. This field is set to false by default, but you must set it
-    /// to true. Note that data transfer is available only in supported locations.
+    /// these resources. Data transfer is available only in [supported
+    /// locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5247,8 +5316,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private bool siteToSiteDataTransfer_;
     /// <summary>
     /// A value that controls whether site-to-site data transfer is enabled for
-    /// these resources. This field is set to false by default, but you must set it
-    /// to true. Note that data transfer is available only in supported locations.
+    /// these resources. Data transfer is available only in [supported
+    /// locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5407,9 +5476,10 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
   }
 
   /// <summary>
-  /// A collection of router appliance instances. If you have multiple router
-  /// appliance instances connected to the same site, they should all be attached
-  /// to the same spoke.
+  /// A collection of router appliance instances. If you configure multiple router
+  /// appliance instances to receive data from the same set of sites outside of
+  /// Google Cloud, we recommend that you associate those instances with the same
+  /// spoke.
   /// </summary>
   public sealed partial class LinkedRouterApplianceInstances : pb::IMessage<LinkedRouterApplianceInstances>
   #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
@@ -5475,8 +5545,8 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
     private bool siteToSiteDataTransfer_;
     /// <summary>
     /// A value that controls whether site-to-site data transfer is enabled for
-    /// these resources. This field is set to false by default, but you must set it
-    /// to true. Note that data transfer is available only in supported locations.
+    /// these resources. Data transfer is available only in [supported
+    /// locations](https://cloud.google.com/network-connectivity/docs/network-connectivity-center/concepts/locations).
     /// </summary>
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
@@ -5863,6 +5933,192 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
           }
           case 26: {
             IpAddress = input.ReadString();
+            break;
+          }
+        }
+      }
+    }
+    #endif
+
+  }
+
+  /// <summary>
+  /// Metadata about locations
+  /// </summary>
+  public sealed partial class LocationMetadata : pb::IMessage<LocationMetadata>
+  #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      , pb::IBufferMessage
+  #endif
+  {
+    private static readonly pb::MessageParser<LocationMetadata> _parser = new pb::MessageParser<LocationMetadata>(() => new LocationMetadata());
+    private pb::UnknownFieldSet _unknownFields;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pb::MessageParser<LocationMetadata> Parser { get { return _parser; } }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public static pbr::MessageDescriptor Descriptor {
+      get { return global::Google.Cloud.NetworkConnectivity.V1.HubReflection.Descriptor.MessageTypes[19]; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    pbr::MessageDescriptor pb::IMessage.Descriptor {
+      get { return Descriptor; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LocationMetadata() {
+      OnConstruction();
+    }
+
+    partial void OnConstruction();
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LocationMetadata(LocationMetadata other) : this() {
+      locationFeatures_ = other.locationFeatures_.Clone();
+      _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public LocationMetadata Clone() {
+      return new LocationMetadata(this);
+    }
+
+    /// <summary>Field number for the "location_features" field.</summary>
+    public const int LocationFeaturesFieldNumber = 1;
+    private static readonly pb::FieldCodec<global::Google.Cloud.NetworkConnectivity.V1.LocationFeature> _repeated_locationFeatures_codec
+        = pb::FieldCodec.ForEnum(10, x => (int) x, x => (global::Google.Cloud.NetworkConnectivity.V1.LocationFeature) x);
+    private readonly pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.LocationFeature> locationFeatures_ = new pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.LocationFeature>();
+    /// <summary>
+    /// List of supported features
+    /// </summary>
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public pbc::RepeatedField<global::Google.Cloud.NetworkConnectivity.V1.LocationFeature> LocationFeatures {
+      get { return locationFeatures_; }
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override bool Equals(object other) {
+      return Equals(other as LocationMetadata);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public bool Equals(LocationMetadata other) {
+      if (ReferenceEquals(other, null)) {
+        return false;
+      }
+      if (ReferenceEquals(other, this)) {
+        return true;
+      }
+      if(!locationFeatures_.Equals(other.locationFeatures_)) return false;
+      return Equals(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override int GetHashCode() {
+      int hash = 1;
+      hash ^= locationFeatures_.GetHashCode();
+      if (_unknownFields != null) {
+        hash ^= _unknownFields.GetHashCode();
+      }
+      return hash;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public override string ToString() {
+      return pb::JsonFormatter.ToDiagnosticString(this);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void WriteTo(pb::CodedOutputStream output) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      output.WriteRawMessage(this);
+    #else
+      locationFeatures_.WriteTo(output, _repeated_locationFeatures_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(output);
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalWriteTo(ref pb::WriteContext output) {
+      locationFeatures_.WriteTo(ref output, _repeated_locationFeatures_codec);
+      if (_unknownFields != null) {
+        _unknownFields.WriteTo(ref output);
+      }
+    }
+    #endif
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public int CalculateSize() {
+      int size = 0;
+      size += locationFeatures_.CalculateSize(_repeated_locationFeatures_codec);
+      if (_unknownFields != null) {
+        size += _unknownFields.CalculateSize();
+      }
+      return size;
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(LocationMetadata other) {
+      if (other == null) {
+        return;
+      }
+      locationFeatures_.Add(other.locationFeatures_);
+      _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
+    }
+
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    public void MergeFrom(pb::CodedInputStream input) {
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+      input.ReadRawMessage(this);
+    #else
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, input);
+            break;
+          case 10:
+          case 8: {
+            locationFeatures_.AddEntriesFrom(input, _repeated_locationFeatures_codec);
+            break;
+          }
+        }
+      }
+    #endif
+    }
+
+    #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    [global::System.CodeDom.Compiler.GeneratedCode("protoc", null)]
+    void pb::IBufferMessage.InternalMergeFrom(ref pb::ParseContext input) {
+      uint tag;
+      while ((tag = input.ReadTag()) != 0) {
+        switch(tag) {
+          default:
+            _unknownFields = pb::UnknownFieldSet.MergeFieldFrom(_unknownFields, ref input);
+            break;
+          case 10:
+          case 8: {
+            locationFeatures_.AddEntriesFrom(ref input, _repeated_locationFeatures_codec);
             break;
           }
         }
