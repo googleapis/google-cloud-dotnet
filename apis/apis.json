@@ -900,6 +900,25 @@
       "serviceConfigFile": "datastore_v1.yaml"
     },
     {
+      "id": "Google.Cloud.Datastream.V1",
+      "version": "1.0.0-beta00",
+      "type": "grpc",
+      "productName": "DataStream",
+      "productUrl": "https://cloud.google.com/datastream/docs",
+      "description": "Recommended Google client library to access the Google Cloud Datastream API (v1), which allows you to synchronize data across heterogeneous databases and applications reliably, and with minimal latency and downtime.",
+      "tags": [
+        "database",
+        "synchronization"
+      ],
+      "dependencies": {
+        "Google.LongRunning": "2.3.0"
+      },
+      "generator": "micro",
+      "protoPath": "google/cloud/datastream/v1",
+      "shortName": "datastream",
+      "serviceConfigFile": "datastream_v1.yaml"
+    },
+    {
       "id": "Google.Cloud.Datastream.V1Alpha1",
       "version": "1.0.0-beta02",
       "type": "grpc",
