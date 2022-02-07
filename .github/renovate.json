@@ -49,6 +49,7 @@
     "apis/Google.Cloud.Dataproc.V1/Google.Cloud.Dataproc.V1/**",
     "apis/Google.Cloud.Datastore.Admin.V1/Google.Cloud.Datastore.Admin.V1/**",
     "apis/Google.Cloud.Datastore.V1/Google.Cloud.Datastore.V1/**",
+    "apis/Google.Cloud.Datastream.V1/Google.Cloud.Datastream.V1/**",
     "apis/Google.Cloud.Datastream.V1Alpha1/Google.Cloud.Datastream.V1Alpha1/**",
     "apis/Google.Cloud.Debugger.V2/Google.Cloud.Debugger.V2/**",
     "apis/Google.Cloud.Deploy.V1/Google.Cloud.Deploy.V1/**",
