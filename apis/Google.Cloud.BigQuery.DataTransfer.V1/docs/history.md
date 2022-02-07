@@ -1,5 +1,16 @@
 # Version history
 
+## Version 3.3.0, released 2022-02-07
+
+### New features
+
+- Add owner email to TransferConfig message ([commit 5939502](https://github.com/googleapis/google-cloud-dotnet/commit/593950270001c126abccb139dd1268997996ac10))
+- Allow customer to enroll a datasource programmatically ([commit 5939502](https://github.com/googleapis/google-cloud-dotnet/commit/593950270001c126abccb139dd1268997996ac10))
+
+### Documentation improvements
+
+- Improvements to various message and field descriptions ([commit 5939502](https://github.com/googleapis/google-cloud-dotnet/commit/593950270001c126abccb139dd1268997996ac10))
+
 ## Version 3.2.0, released 2021-09-23
 
 - [Commit edaadae](https://github.com/googleapis/google-cloud-dotnet/commit/edaadae): docs: Improvements to various message and field descriptions
