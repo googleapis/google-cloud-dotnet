@@ -1179,7 +1179,7 @@
     },
     {
       "id": "Google.Cloud.DocumentAI.V1Beta3",
-      "version": "1.0.0-beta02",
+      "version": "1.0.0-beta03",
       "type": "grpc",
       "productName": "Cloud Document AI",
       "productUrl": "https://cloud.google.com/solutions/document-ai",
@@ -1193,7 +1193,7 @@
         "automl"
       ],
       "dependencies": {
-        "Google.LongRunning": "2.2.0"
+        "Google.LongRunning": "2.3.0"
       },
       "generator": "micro",
       "protoPath": "google/cloud/documentai/v1beta3",
