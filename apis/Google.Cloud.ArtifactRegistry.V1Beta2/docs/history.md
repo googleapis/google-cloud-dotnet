@@ -1,5 +1,13 @@
 # Version history
 
+## Version 1.0.0-beta05, released 2022-02-07
+
+### New features
+
+- Add APIs for importing and uploading Apt and Yum artifacts ([commit 14bc6ed](https://github.com/googleapis/google-cloud-dotnet/commit/14bc6edc0e67a2a0809486c66ce901e63b07a42f))
+- Add version policy support for Maven repositories ([commit 14bc6ed](https://github.com/googleapis/google-cloud-dotnet/commit/14bc6edc0e67a2a0809486c66ce901e63b07a42f))
+- Add order_by support for listing versions ([commit 14bc6ed](https://github.com/googleapis/google-cloud-dotnet/commit/14bc6edc0e67a2a0809486c66ce901e63b07a42f))
+
 ## Version 1.0.0-beta04, released 2022-01-17
 
 ### Bug fixes
