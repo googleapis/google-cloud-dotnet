@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.0.0-beta08, released 2022-02-07
+
+### New features
+
+- Add automated RDB (AKA persistence) ([commit 6e089e6](https://github.com/googleapis/google-cloud-dotnet/commit/6e089e6d230539017573c479183e8e710c81ac4e))
+
 ## Version 2.0.0-beta07, released 2022-01-17
 
 ### Bug fixes
