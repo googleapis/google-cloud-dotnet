@@ -1,5 +1,15 @@
 # Version history
 
+## Version 1.2.0, released 2022-02-07
+
+### New features
+
+- Add `kubernetes_resource` field ([commit d03595e](https://github.com/googleapis/google-cloud-dotnet/commit/d03595ea86e200b93c35f761a358cbf6346ebbe2))
+
+### Documentation improvements
+
+- Update API annotation ([commit d03595e](https://github.com/googleapis/google-cloud-dotnet/commit/d03595ea86e200b93c35f761a358cbf6346ebbe2))
+
 ## Version 1.1.0, released 2021-08-31
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
