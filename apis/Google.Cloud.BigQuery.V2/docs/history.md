@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.4.0-beta01, released 2022-02-07
+
+### New features
+
+- Add support for BigNumeric. ([commit 4dc2e9b](https://github.com/googleapis/google-cloud-dotnet/commit/4dc2e9bc641e629838a909c49e691bbadd1d6ab6))
+
 ## Version 2.3.0, released 2021-08-10
 
 - [Commit d51544c](https://github.com/googleapis/google-cloud-dotnet/commit/d51544c): In GetOrCreate methods, retry "get" operation if "create" fails due to conflict. Fixes [issue 6902](https://github.com/googleapis/google-cloud-dotnet/issues/6902)
