@@ -25,9 +25,9 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
             "CjBnb29nbGUvY2xvdWQvbmV0d29ya2Nvbm5lY3Rpdml0eS92MS9jb21tb24u",
-            "cHJvdG8SI2dvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxGh9n",
-            "b29nbGUvYXBpL2ZpZWxkX2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9i",
-            "dWYvdGltZXN0YW1wLnByb3RvGhxnb29nbGUvYXBpL2Fubm90YXRpb25zLnBy",
+            "cHJvdG8SI2dvb2dsZS5jbG91ZC5uZXR3b3JrY29ubmVjdGl2aXR5LnYxGhxn",
+            "b29nbGUvYXBpL2Fubm90YXRpb25zLnByb3RvGh9nb29nbGUvYXBpL2ZpZWxk",
+            "X2JlaGF2aW9yLnByb3RvGh9nb29nbGUvcHJvdG9idWYvdGltZXN0YW1wLnBy",
             "b3RvIoACChFPcGVyYXRpb25NZXRhZGF0YRI0CgtjcmVhdGVfdGltZRgBIAEo",
             "CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxIxCghlbmRfdGlt",
             "ZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBAxITCgZ0",
@@ -41,7 +41,7 @@ namespace Google.Cloud.NetworkConnectivity.V1 {
             "R29vZ2xlXENsb3VkXE5ldHdvcmtDb25uZWN0aXZpdHlcVjHqAiZHb29nbGU6",
             "OkNsb3VkOjpOZXR3b3JrQ29ubmVjdGl2aXR5OjpWMWIGcHJvdG8z"));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-          new pbr::FileDescriptor[] { global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Api.AnnotationsReflection.Descriptor, },
+          new pbr::FileDescriptor[] { global::Google.Api.AnnotationsReflection.Descriptor, global::Google.Api.FieldBehaviorReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
             new pbr::GeneratedClrTypeInfo(typeof(global::Google.Cloud.NetworkConnectivity.V1.OperationMetadata), global::Google.Cloud.NetworkConnectivity.V1.OperationMetadata.Parser, new[]{ "CreateTime", "EndTime", "Target", "Verb", "StatusMessage", "RequestedCancellation", "ApiVersion" }, null, null, null, null)
           }));
