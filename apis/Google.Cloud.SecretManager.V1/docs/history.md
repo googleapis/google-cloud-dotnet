@@ -1,5 +1,10 @@
 # Version history
 
+## Version 1.8.0, released 2022-02-07
+
+### New features
+
+- Users can now use checksums for data integrity assurance when adding and accessing SecretVersions ([commit 58ebe8d](https://github.com/googleapis/google-cloud-dotnet/commit/58ebe8d7bb4137d0983cf5319f7f1266dd42147a))
 ## Version 1.7.0, released 2021-09-01
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
