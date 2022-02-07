@@ -1,5 +1,12 @@
 # Version history
 
+## Version 2.8.0, released 2022-02-07
+
+### New features
+
+- Recommendation Priority / Insight Severity ([commit 48d865e](https://github.com/googleapis/google-cloud-dotnet/commit/48d865e3f409f641d5bc628c5b00eb83f0d4b21a))
+- Recommendation xor_group_id ([commit 48d865e](https://github.com/googleapis/google-cloud-dotnet/commit/48d865e3f409f641d5bc628c5b00eb83f0d4b21a))
+- Recommendation security projection ([commit 48d865e](https://github.com/googleapis/google-cloud-dotnet/commit/48d865e3f409f641d5bc628c5b00eb83f0d4b21a))
 ## Version 2.7.0, released 2021-12-07
 
 - [Commit 35a1949](https://github.com/googleapis/google-cloud-dotnet/commit/35a1949): docs: fix docstring formatting
