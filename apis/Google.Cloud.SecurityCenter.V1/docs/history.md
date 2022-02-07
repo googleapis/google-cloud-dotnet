@@ -1,5 +1,15 @@
 # Version history
 
+## Version 2.11.0, released 2022-02-07
+
+### New features
+
+- Release the access field in the v1 finding proto, which represents an access event tied to the finding ([commit 7013d13](https://github.com/googleapis/google-cloud-dotnet/commit/7013d136ade920bdd69f1ad05213441ca2bc3810))
+
+### Documentation improvements
+
+- Added more clarification around what event_time means on a v1 finding ([commit 7013d13](https://github.com/googleapis/google-cloud-dotnet/commit/7013d136ade920bdd69f1ad05213441ca2bc3810))
+
 ## Version 2.10.0, released 2021-12-07
 
 - [Commit 1cda659](https://github.com/googleapis/google-cloud-dotnet/commit/1cda659): feat: Added a new API method UpdateExternalSystem, which enables updating a finding w/ external system metadata. External systems are a child resource under finding, and are housed on the finding itself, and can also be filtered on in Notifications, the ListFindings and GroupFindings API
