@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.2.0, released 2022-02-07
+
+### New features
+
+- Add Channel and ChannelConnection resources ([commit 19356ba](https://github.com/googleapis/google-cloud-dotnet/commit/19356bad85fefa8e1c8d7b42c9494d60dbb77481))
+
 ## Version 1.1.0, released 2021-08-31
 
 - [Commit ac367e2](https://github.com/googleapis/google-cloud-dotnet/commit/ac367e2): feat: Regenerate all APIs to support self-signed JWTs
