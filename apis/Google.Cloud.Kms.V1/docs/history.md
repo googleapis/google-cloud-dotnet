@@ -1,5 +1,11 @@
 # Version history
 
+## Version 2.8.0, released 2022-02-07
+
+### New features
+
+- Add a new EkmService API ([commit 507277b](https://github.com/googleapis/google-cloud-dotnet/commit/507277b44a27618bd92d2318ea4280e3d09420d6))
+
 ## Version 2.7.0, released 2021-11-10
 
 - [Commit 9b6c247](https://github.com/googleapis/google-cloud-dotnet/commit/9b6c247): feat: add support for Raw PKCS\#1 signing keys
