@@ -1,5 +1,11 @@
 # Version history
 
+## Version 1.3.0, released 2022-02-07
+
+### New features
+
+- Add dedicated_resources to DeployedIndex message in aiplatform v1 index_endpoint.proto ([commit 6be632d](https://github.com/googleapis/google-cloud-dotnet/commit/6be632d58049af3165675d56db2837c7d6b78a81))
+
 ## Version 1.2.0, released 2022-01-17
 
 ### New features
