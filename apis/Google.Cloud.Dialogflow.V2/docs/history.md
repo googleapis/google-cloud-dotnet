@@ -1,5 +1,11 @@
 # Version history
 
+## Version 3.10.0, released 2022-02-07
+
+### New features
+
+- Added conversation process config, ImportDocument and SuggestSmartReplies API ([commit 7d25d83](https://github.com/googleapis/google-cloud-dotnet/commit/7d25d8374eee6a36251e1773f12664877416ccbd))
+
 ## Version 3.9.0, released 2022-01-17
 
 ### New features
