@@ -1080,4 +1080,52 @@ namespace Google.Cloud.DataCatalog.V1
             set => Parent = value?.ToString() ?? "";
         }
     }
+
+    public partial class StarEntryRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntryName EntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class UnstarEntryRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntryName EntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ModifyEntryOverviewRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntryName EntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ModifyEntryContactsRequest
+    {
+        /// <summary>
+        /// <see cref="gcdv::EntryName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcdv::EntryName EntryName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcdv::EntryName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }

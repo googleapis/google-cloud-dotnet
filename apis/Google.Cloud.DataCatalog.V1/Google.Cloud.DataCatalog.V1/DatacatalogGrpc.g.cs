@@ -3,7 +3,7 @@
 //     source: google/cloud/datacatalog/v1/datacatalog.proto
 // </auto-generated>
 // Original file comments:
-// Copyright 2021 Google LLC
+// Copyright 2022 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -101,6 +101,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListEntriesResponse> __Marshaller_google_cloud_datacatalog_v1_ListEntriesResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListEntriesResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest> __Marshaller_google_cloud_datacatalog_v1_ModifyEntryOverviewRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.EntryOverview> __Marshaller_google_cloud_datacatalog_v1_EntryOverview = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.EntryOverview.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest> __Marshaller_google_cloud_datacatalog_v1_ModifyEntryContactsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.Contacts> __Marshaller_google_cloud_datacatalog_v1_Contacts = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.Contacts.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest> __Marshaller_google_cloud_datacatalog_v1_CreateTagTemplateRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.TagTemplate> __Marshaller_google_cloud_datacatalog_v1_TagTemplate = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.TagTemplate.Parser));
@@ -134,6 +142,14 @@ namespace Google.Cloud.DataCatalog.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListTagsRequest> __Marshaller_google_cloud_datacatalog_v1_ListTagsRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListTagsRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.ListTagsResponse> __Marshaller_google_cloud_datacatalog_v1_ListTagsResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.ListTagsResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.StarEntryRequest> __Marshaller_google_cloud_datacatalog_v1_StarEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.StarEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> __Marshaller_google_cloud_datacatalog_v1_StarEntryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.StarEntryResponse.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest> __Marshaller_google_cloud_datacatalog_v1_UnstarEntryRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> __Marshaller_google_cloud_datacatalog_v1_UnstarEntryResponse = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Cloud.Iam.V1.SetIamPolicyRequest> __Marshaller_google_iam_v1_SetIamPolicyRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.Iam.V1.SetIamPolicyRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
@@ -242,6 +258,22 @@ namespace Google.Cloud.DataCatalog.V1 {
         __Marshaller_google_cloud_datacatalog_v1_ListEntriesResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest, global::Google.Cloud.DataCatalog.V1.EntryOverview> __Method_ModifyEntryOverview = new grpc::Method<global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest, global::Google.Cloud.DataCatalog.V1.EntryOverview>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ModifyEntryOverview",
+        __Marshaller_google_cloud_datacatalog_v1_ModifyEntryOverviewRequest,
+        __Marshaller_google_cloud_datacatalog_v1_EntryOverview);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest, global::Google.Cloud.DataCatalog.V1.Contacts> __Method_ModifyEntryContacts = new grpc::Method<global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest, global::Google.Cloud.DataCatalog.V1.Contacts>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ModifyEntryContacts",
+        __Marshaller_google_cloud_datacatalog_v1_ModifyEntryContactsRequest,
+        __Marshaller_google_cloud_datacatalog_v1_Contacts);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest, global::Google.Cloud.DataCatalog.V1.TagTemplate> __Method_CreateTagTemplate = new grpc::Method<global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest, global::Google.Cloud.DataCatalog.V1.TagTemplate>(
         grpc::MethodType.Unary,
         __ServiceName,
@@ -344,6 +376,22 @@ namespace Google.Cloud.DataCatalog.V1 {
         "ListTags",
         __Marshaller_google_cloud_datacatalog_v1_ListTagsRequest,
         __Marshaller_google_cloud_datacatalog_v1_ListTagsResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.StarEntryRequest, global::Google.Cloud.DataCatalog.V1.StarEntryResponse> __Method_StarEntry = new grpc::Method<global::Google.Cloud.DataCatalog.V1.StarEntryRequest, global::Google.Cloud.DataCatalog.V1.StarEntryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "StarEntry",
+        __Marshaller_google_cloud_datacatalog_v1_StarEntryRequest,
+        __Marshaller_google_cloud_datacatalog_v1_StarEntryResponse);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest, global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> __Method_UnstarEntry = new grpc::Method<global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest, global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UnstarEntry",
+        __Marshaller_google_cloud_datacatalog_v1_UnstarEntryRequest,
+        __Marshaller_google_cloud_datacatalog_v1_UnstarEntryResponse);
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy> __Method_SetIamPolicy = new grpc::Method<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(
@@ -604,6 +652,38 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
 
       /// <summary>
+      /// Modifies entry overview, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateOverview`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.EntryOverview> ModifyEntryOverview(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Modifies contacts, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateContacts`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.Contacts> ModifyEntryContacts(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
       /// Creates a tag template.
       ///
       /// You must enable the Data Catalog API in the project identified by the
@@ -799,12 +879,40 @@ namespace Google.Cloud.DataCatalog.V1 {
 
       /// <summary>
       /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+      /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+      /// lowercased.
       /// </summary>
       /// <param name="request">The request received from the client.</param>
       /// <param name="context">The context of the server-side call handler being invoked.</param>
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.ListTagsResponse> ListTags(global::Google.Cloud.DataCatalog.V1.ListTagsRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> StarEntry(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> UnstarEntry(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -1820,6 +1928,134 @@ namespace Google.Cloud.DataCatalog.V1 {
         return CallInvoker.AsyncUnaryCall(__Method_ListEntries, null, options, request);
       }
       /// <summary>
+      /// Modifies entry overview, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateOverview`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.EntryOverview ModifyEntryOverview(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyEntryOverview(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies entry overview, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateOverview`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.EntryOverview ModifyEntryOverview(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ModifyEntryOverview, null, options, request);
+      }
+      /// <summary>
+      /// Modifies entry overview, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateOverview`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryOverview> ModifyEntryOverviewAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyEntryOverviewAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies entry overview, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateOverview`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.EntryOverview> ModifyEntryOverviewAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ModifyEntryOverview, null, options, request);
+      }
+      /// <summary>
+      /// Modifies contacts, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateContacts`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.Contacts ModifyEntryContacts(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyEntryContacts(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies contacts, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateContacts`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.Contacts ModifyEntryContacts(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ModifyEntryContacts, null, options, request);
+      }
+      /// <summary>
+      /// Modifies contacts, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateContacts`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Contacts> ModifyEntryContactsAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ModifyEntryContactsAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Modifies contacts, part of the business context of an
+      /// [Entry][google.cloud.datacatalog.v1.Entry].
+      ///
+      /// To call this method, you must have the `datacatalog.entries.updateContacts`
+      /// IAM permission on the corresponding project.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.Contacts> ModifyEntryContactsAsync(global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ModifyEntryContacts, null, options, request);
+      }
+      /// <summary>
       /// Creates a tag template.
       ///
       /// You must enable the Data Catalog API in the project identified by the
@@ -2597,6 +2833,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+      /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+      /// lowercased.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2610,6 +2848,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+      /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+      /// lowercased.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2621,6 +2861,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+      /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+      /// lowercased.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
@@ -2634,6 +2876,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       }
       /// <summary>
       /// Lists tags assigned to an [Entry][google.cloud.datacatalog.v1.Entry].
+      /// The [columns][google.cloud.datacatalog.v1.Tag.column] in the response are
+      /// lowercased.
       /// </summary>
       /// <param name="request">The request to send to the server.</param>
       /// <param name="options">The options for the call.</param>
@@ -2642,6 +2886,110 @@ namespace Google.Cloud.DataCatalog.V1 {
       public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.ListTagsResponse> ListTagsAsync(global::Google.Cloud.DataCatalog.V1.ListTagsRequest request, grpc::CallOptions options)
       {
         return CallInvoker.AsyncUnaryCall(__Method_ListTags, null, options, request);
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.StarEntryResponse StarEntry(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StarEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.StarEntryResponse StarEntry(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_StarEntry, null, options, request);
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> StarEntryAsync(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return StarEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.StarEntryResponse> StarEntryAsync(global::Google.Cloud.DataCatalog.V1.StarEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_StarEntry, null, options, request);
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse UnstarEntry(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnstarEntry(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse UnstarEntry(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UnstarEntry, null, options, request);
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> UnstarEntryAsync(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UnstarEntryAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Marks an [Entry][google.cloud.datacatalog.v1.Entry] as NOT starred by
+      /// the current user. Starring information is private to each user.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse> UnstarEntryAsync(global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UnstarEntry, null, options, request);
       }
       /// <summary>
       /// Sets an access control policy for a resource. Replaces any existing
@@ -3009,6 +3357,8 @@ namespace Google.Cloud.DataCatalog.V1 {
           .AddMethod(__Method_GetEntry, serviceImpl.GetEntry)
           .AddMethod(__Method_LookupEntry, serviceImpl.LookupEntry)
           .AddMethod(__Method_ListEntries, serviceImpl.ListEntries)
+          .AddMethod(__Method_ModifyEntryOverview, serviceImpl.ModifyEntryOverview)
+          .AddMethod(__Method_ModifyEntryContacts, serviceImpl.ModifyEntryContacts)
           .AddMethod(__Method_CreateTagTemplate, serviceImpl.CreateTagTemplate)
           .AddMethod(__Method_GetTagTemplate, serviceImpl.GetTagTemplate)
           .AddMethod(__Method_UpdateTagTemplate, serviceImpl.UpdateTagTemplate)
@@ -3022,6 +3372,8 @@ namespace Google.Cloud.DataCatalog.V1 {
           .AddMethod(__Method_UpdateTag, serviceImpl.UpdateTag)
           .AddMethod(__Method_DeleteTag, serviceImpl.DeleteTag)
           .AddMethod(__Method_ListTags, serviceImpl.ListTags)
+          .AddMethod(__Method_StarEntry, serviceImpl.StarEntry)
+          .AddMethod(__Method_UnstarEntry, serviceImpl.UnstarEntry)
           .AddMethod(__Method_SetIamPolicy, serviceImpl.SetIamPolicy)
           .AddMethod(__Method_GetIamPolicy, serviceImpl.GetIamPolicy)
           .AddMethod(__Method_TestIamPermissions, serviceImpl.TestIamPermissions).Build();
@@ -3046,6 +3398,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       serviceBinder.AddMethod(__Method_GetEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.GetEntryRequest, global::Google.Cloud.DataCatalog.V1.Entry>(serviceImpl.GetEntry));
       serviceBinder.AddMethod(__Method_LookupEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.LookupEntryRequest, global::Google.Cloud.DataCatalog.V1.Entry>(serviceImpl.LookupEntry));
       serviceBinder.AddMethod(__Method_ListEntries, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ListEntriesRequest, global::Google.Cloud.DataCatalog.V1.ListEntriesResponse>(serviceImpl.ListEntries));
+      serviceBinder.AddMethod(__Method_ModifyEntryOverview, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ModifyEntryOverviewRequest, global::Google.Cloud.DataCatalog.V1.EntryOverview>(serviceImpl.ModifyEntryOverview));
+      serviceBinder.AddMethod(__Method_ModifyEntryContacts, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ModifyEntryContactsRequest, global::Google.Cloud.DataCatalog.V1.Contacts>(serviceImpl.ModifyEntryContacts));
       serviceBinder.AddMethod(__Method_CreateTagTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.CreateTagTemplateRequest, global::Google.Cloud.DataCatalog.V1.TagTemplate>(serviceImpl.CreateTagTemplate));
       serviceBinder.AddMethod(__Method_GetTagTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.GetTagTemplateRequest, global::Google.Cloud.DataCatalog.V1.TagTemplate>(serviceImpl.GetTagTemplate));
       serviceBinder.AddMethod(__Method_UpdateTagTemplate, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.UpdateTagTemplateRequest, global::Google.Cloud.DataCatalog.V1.TagTemplate>(serviceImpl.UpdateTagTemplate));
@@ -3059,6 +3413,8 @@ namespace Google.Cloud.DataCatalog.V1 {
       serviceBinder.AddMethod(__Method_UpdateTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.UpdateTagRequest, global::Google.Cloud.DataCatalog.V1.Tag>(serviceImpl.UpdateTag));
       serviceBinder.AddMethod(__Method_DeleteTag, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.DeleteTagRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeleteTag));
       serviceBinder.AddMethod(__Method_ListTags, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.ListTagsRequest, global::Google.Cloud.DataCatalog.V1.ListTagsResponse>(serviceImpl.ListTags));
+      serviceBinder.AddMethod(__Method_StarEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.StarEntryRequest, global::Google.Cloud.DataCatalog.V1.StarEntryResponse>(serviceImpl.StarEntry));
+      serviceBinder.AddMethod(__Method_UnstarEntry, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.DataCatalog.V1.UnstarEntryRequest, global::Google.Cloud.DataCatalog.V1.UnstarEntryResponse>(serviceImpl.UnstarEntry));
       serviceBinder.AddMethod(__Method_SetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.SetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.SetIamPolicy));
       serviceBinder.AddMethod(__Method_GetIamPolicy, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.GetIamPolicyRequest, global::Google.Cloud.Iam.V1.Policy>(serviceImpl.GetIamPolicy));
       serviceBinder.AddMethod(__Method_TestIamPermissions, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.Iam.V1.TestIamPermissionsRequest, global::Google.Cloud.Iam.V1.TestIamPermissionsResponse>(serviceImpl.TestIamPermissions));

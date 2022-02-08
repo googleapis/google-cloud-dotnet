@@ -1590,6 +1590,76 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             // End snippet
         }
 
+        /// <summary>Snippet for ModifyEntryOverview</summary>
+        public void ModifyEntryOverviewRequestObject()
+        {
+            // Snippet: ModifyEntryOverview(ModifyEntryOverviewRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            ModifyEntryOverviewRequest request = new ModifyEntryOverviewRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                EntryOverview = new EntryOverview(),
+            };
+            // Make the request
+            EntryOverview response = dataCatalogClient.ModifyEntryOverview(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModifyEntryOverviewAsync</summary>
+        public async Task ModifyEntryOverviewRequestObjectAsync()
+        {
+            // Snippet: ModifyEntryOverviewAsync(ModifyEntryOverviewRequest, CallSettings)
+            // Additional: ModifyEntryOverviewAsync(ModifyEntryOverviewRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            ModifyEntryOverviewRequest request = new ModifyEntryOverviewRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                EntryOverview = new EntryOverview(),
+            };
+            // Make the request
+            EntryOverview response = await dataCatalogClient.ModifyEntryOverviewAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModifyEntryContacts</summary>
+        public void ModifyEntryContactsRequestObject()
+        {
+            // Snippet: ModifyEntryContacts(ModifyEntryContactsRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            ModifyEntryContactsRequest request = new ModifyEntryContactsRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                Contacts = new Contacts(),
+            };
+            // Make the request
+            Contacts response = dataCatalogClient.ModifyEntryContacts(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ModifyEntryContactsAsync</summary>
+        public async Task ModifyEntryContactsRequestObjectAsync()
+        {
+            // Snippet: ModifyEntryContactsAsync(ModifyEntryContactsRequest, CallSettings)
+            // Additional: ModifyEntryContactsAsync(ModifyEntryContactsRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            ModifyEntryContactsRequest request = new ModifyEntryContactsRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                Contacts = new Contacts(),
+            };
+            // Make the request
+            Contacts response = await dataCatalogClient.ModifyEntryContactsAsync(request);
+            // End snippet
+        }
+
         /// <summary>Snippet for CreateTagTemplate</summary>
         public void CreateTagTemplateRequestObject()
         {
@@ -3039,6 +3109,180 @@ namespace Google.Cloud.DataCatalog.V1.Snippets
             }
             // Store the pageToken, for when the next page is required.
             string nextPageToken = singlePage.NextPageToken;
+            // End snippet
+        }
+
+        /// <summary>Snippet for StarEntry</summary>
+        public void StarEntryRequestObject()
+        {
+            // Snippet: StarEntry(StarEntryRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            // Make the request
+            StarEntryResponse response = dataCatalogClient.StarEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StarEntryAsync</summary>
+        public async Task StarEntryRequestObjectAsync()
+        {
+            // Snippet: StarEntryAsync(StarEntryRequest, CallSettings)
+            // Additional: StarEntryAsync(StarEntryRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            // Make the request
+            StarEntryResponse response = await dataCatalogClient.StarEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StarEntry</summary>
+        public void StarEntry()
+        {
+            // Snippet: StarEntry(string, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
+            // Make the request
+            StarEntryResponse response = dataCatalogClient.StarEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StarEntryAsync</summary>
+        public async Task StarEntryAsync()
+        {
+            // Snippet: StarEntryAsync(string, CallSettings)
+            // Additional: StarEntryAsync(string, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
+            // Make the request
+            StarEntryResponse response = await dataCatalogClient.StarEntryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StarEntry</summary>
+        public void StarEntryResourceNames()
+        {
+            // Snippet: StarEntry(EntryName, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
+            // Make the request
+            StarEntryResponse response = dataCatalogClient.StarEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for StarEntryAsync</summary>
+        public async Task StarEntryResourceNamesAsync()
+        {
+            // Snippet: StarEntryAsync(EntryName, CallSettings)
+            // Additional: StarEntryAsync(EntryName, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
+            // Make the request
+            StarEntryResponse response = await dataCatalogClient.StarEntryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnstarEntry</summary>
+        public void UnstarEntryRequestObject()
+        {
+            // Snippet: UnstarEntry(UnstarEntryRequest, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            // Make the request
+            UnstarEntryResponse response = dataCatalogClient.UnstarEntry(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnstarEntryAsync</summary>
+        public async Task UnstarEntryRequestObjectAsync()
+        {
+            // Snippet: UnstarEntryAsync(UnstarEntryRequest, CallSettings)
+            // Additional: UnstarEntryAsync(UnstarEntryRequest, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            // Make the request
+            UnstarEntryResponse response = await dataCatalogClient.UnstarEntryAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnstarEntry</summary>
+        public void UnstarEntry()
+        {
+            // Snippet: UnstarEntry(string, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
+            // Make the request
+            UnstarEntryResponse response = dataCatalogClient.UnstarEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnstarEntryAsync</summary>
+        public async Task UnstarEntryAsync()
+        {
+            // Snippet: UnstarEntryAsync(string, CallSettings)
+            // Additional: UnstarEntryAsync(string, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/locations/[LOCATION]/entryGroups/[ENTRY_GROUP]/entries/[ENTRY]";
+            // Make the request
+            UnstarEntryResponse response = await dataCatalogClient.UnstarEntryAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnstarEntry</summary>
+        public void UnstarEntryResourceNames()
+        {
+            // Snippet: UnstarEntry(EntryName, CallSettings)
+            // Create client
+            DataCatalogClient dataCatalogClient = DataCatalogClient.Create();
+            // Initialize request argument(s)
+            EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
+            // Make the request
+            UnstarEntryResponse response = dataCatalogClient.UnstarEntry(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UnstarEntryAsync</summary>
+        public async Task UnstarEntryResourceNamesAsync()
+        {
+            // Snippet: UnstarEntryAsync(EntryName, CallSettings)
+            // Additional: UnstarEntryAsync(EntryName, CancellationToken)
+            // Create client
+            DataCatalogClient dataCatalogClient = await DataCatalogClient.CreateAsync();
+            // Initialize request argument(s)
+            EntryName name = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]");
+            // Make the request
+            UnstarEntryResponse response = await dataCatalogClient.UnstarEntryAsync(name);
             // End snippet
         }
 

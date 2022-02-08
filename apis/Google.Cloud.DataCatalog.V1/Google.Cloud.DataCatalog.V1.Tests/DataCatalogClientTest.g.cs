@@ -689,9 +689,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.CreateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -735,9 +737,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.CreateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -783,9 +787,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.CreateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -829,9 +835,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.CreateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -877,9 +885,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.CreateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -923,9 +933,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.CreateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -970,9 +982,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1015,9 +1029,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1058,9 +1074,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1099,9 +1117,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1146,9 +1166,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1191,9 +1213,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.UpdateEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1330,9 +1354,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.GetEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1374,9 +1400,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.GetEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1420,9 +1448,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.GetEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1464,9 +1494,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.GetEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1510,9 +1542,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.GetEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1554,9 +1588,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.GetEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1602,9 +1638,11 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.LookupEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
@@ -1648,15 +1686,107 @@ namespace Google.Cloud.DataCatalog.V1.Tests
                 UserSpecifiedSystem = "user_specified_systema7f0cfeb",
                 DataSource = new DataSource(),
                 DatabaseTableSpec = new DatabaseTableSpec(),
+                PersonalDetails = new PersonalDetails(),
                 DataSourceConnectionSpec = new DataSourceConnectionSpec(),
                 RoutineSpec = new RoutineSpec(),
                 FullyQualifiedName = "fully_qualified_name75818c4f",
+                BusinessContext = new BusinessContext(),
             };
             mockGrpcClient.Setup(x => x.LookupEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Entry>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
             Entry responseCallSettings = await client.LookupEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             xunit::Assert.Same(expectedResponse, responseCallSettings);
             Entry responseCancellationToken = await client.LookupEntryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ModifyEntryOverviewRequestObject()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            ModifyEntryOverviewRequest request = new ModifyEntryOverviewRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                EntryOverview = new EntryOverview(),
+            };
+            EntryOverview expectedResponse = new EntryOverview
+            {
+                Overview = "overview7459e0bc",
+            };
+            mockGrpcClient.Setup(x => x.ModifyEntryOverview(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            EntryOverview response = client.ModifyEntryOverview(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ModifyEntryOverviewRequestObjectAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            ModifyEntryOverviewRequest request = new ModifyEntryOverviewRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                EntryOverview = new EntryOverview(),
+            };
+            EntryOverview expectedResponse = new EntryOverview
+            {
+                Overview = "overview7459e0bc",
+            };
+            mockGrpcClient.Setup(x => x.ModifyEntryOverviewAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<EntryOverview>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            EntryOverview responseCallSettings = await client.ModifyEntryOverviewAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            EntryOverview responseCancellationToken = await client.ModifyEntryOverviewAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ModifyEntryContactsRequestObject()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            ModifyEntryContactsRequest request = new ModifyEntryContactsRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                Contacts = new Contacts(),
+            };
+            Contacts expectedResponse = new Contacts
+            {
+                People =
+                {
+                    new Contacts.Types.Person(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.ModifyEntryContacts(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            Contacts response = client.ModifyEntryContacts(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ModifyEntryContactsRequestObjectAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            ModifyEntryContactsRequest request = new ModifyEntryContactsRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+                Contacts = new Contacts(),
+            };
+            Contacts expectedResponse = new Contacts
+            {
+                People =
+                {
+                    new Contacts.Types.Person(),
+                },
+            };
+            mockGrpcClient.Setup(x => x.ModifyEntryContactsAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<Contacts>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            Contacts responseCallSettings = await client.ModifyEntryContactsAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            Contacts responseCancellationToken = await client.ModifyEntryContactsAsync(request, st::CancellationToken.None);
             xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
@@ -3591,6 +3721,210 @@ namespace Google.Cloud.DataCatalog.V1.Tests
             DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
             await client.DeleteTagAsync(request.EntryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeleteTagAsync(request.EntryName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void StarEntryRequestObject()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            StarEntryResponse expectedResponse = new StarEntryResponse { };
+            mockGrpcClient.Setup(x => x.StarEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            StarEntryResponse response = client.StarEntry(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task StarEntryRequestObjectAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            StarEntryResponse expectedResponse = new StarEntryResponse { };
+            mockGrpcClient.Setup(x => x.StarEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StarEntryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            StarEntryResponse responseCallSettings = await client.StarEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            StarEntryResponse responseCancellationToken = await client.StarEntryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void StarEntry()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            StarEntryResponse expectedResponse = new StarEntryResponse { };
+            mockGrpcClient.Setup(x => x.StarEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            StarEntryResponse response = client.StarEntry(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task StarEntryAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            StarEntryResponse expectedResponse = new StarEntryResponse { };
+            mockGrpcClient.Setup(x => x.StarEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StarEntryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            StarEntryResponse responseCallSettings = await client.StarEntryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            StarEntryResponse responseCancellationToken = await client.StarEntryAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void StarEntryResourceNames()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            StarEntryResponse expectedResponse = new StarEntryResponse { };
+            mockGrpcClient.Setup(x => x.StarEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            StarEntryResponse response = client.StarEntry(request.EntryName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task StarEntryResourceNamesAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            StarEntryRequest request = new StarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            StarEntryResponse expectedResponse = new StarEntryResponse { };
+            mockGrpcClient.Setup(x => x.StarEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<StarEntryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            StarEntryResponse responseCallSettings = await client.StarEntryAsync(request.EntryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            StarEntryResponse responseCancellationToken = await client.StarEntryAsync(request.EntryName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UnstarEntryRequestObject()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            UnstarEntryResponse expectedResponse = new UnstarEntryResponse { };
+            mockGrpcClient.Setup(x => x.UnstarEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            UnstarEntryResponse response = client.UnstarEntry(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UnstarEntryRequestObjectAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            UnstarEntryResponse expectedResponse = new UnstarEntryResponse { };
+            mockGrpcClient.Setup(x => x.UnstarEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnstarEntryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            UnstarEntryResponse responseCallSettings = await client.UnstarEntryAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UnstarEntryResponse responseCancellationToken = await client.UnstarEntryAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UnstarEntry()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            UnstarEntryResponse expectedResponse = new UnstarEntryResponse { };
+            mockGrpcClient.Setup(x => x.UnstarEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            UnstarEntryResponse response = client.UnstarEntry(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UnstarEntryAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            UnstarEntryResponse expectedResponse = new UnstarEntryResponse { };
+            mockGrpcClient.Setup(x => x.UnstarEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnstarEntryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            UnstarEntryResponse responseCallSettings = await client.UnstarEntryAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UnstarEntryResponse responseCancellationToken = await client.UnstarEntryAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UnstarEntryResourceNames()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            UnstarEntryResponse expectedResponse = new UnstarEntryResponse { };
+            mockGrpcClient.Setup(x => x.UnstarEntry(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            UnstarEntryResponse response = client.UnstarEntry(request.EntryName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UnstarEntryResourceNamesAsync()
+        {
+            moq::Mock<DataCatalog.DataCatalogClient> mockGrpcClient = new moq::Mock<DataCatalog.DataCatalogClient>(moq::MockBehavior.Strict);
+            UnstarEntryRequest request = new UnstarEntryRequest
+            {
+                EntryName = EntryName.FromProjectLocationEntryGroupEntry("[PROJECT]", "[LOCATION]", "[ENTRY_GROUP]", "[ENTRY]"),
+            };
+            UnstarEntryResponse expectedResponse = new UnstarEntryResponse { };
+            mockGrpcClient.Setup(x => x.UnstarEntryAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<UnstarEntryResponse>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            DataCatalogClient client = new DataCatalogClientImpl(mockGrpcClient.Object, null);
+            UnstarEntryResponse responseCallSettings = await client.UnstarEntryAsync(request.EntryName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            UnstarEntryResponse responseCancellationToken = await client.UnstarEntryAsync(request.EntryName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
 
