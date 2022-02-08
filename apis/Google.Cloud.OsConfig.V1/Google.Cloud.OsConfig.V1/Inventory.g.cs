@@ -3878,12 +3878,9 @@ namespace Google.Cloud.OsConfig.V1 {
       }
 
       /// <summary>
-      /// Contains information about a Windows application as retrieved from the
-      /// Windows Registry. For more information about these fields, see
-      ///
-      /// [Windows Installer Properties for the Uninstall
-      /// Registry](https://docs.microsoft.com/en-us/windows/win32/msi/uninstall-registry-key){:
-      /// class="external" }
+      /// Contains information about a Windows application that is retrieved from the
+      /// Windows Registry. For more information about these fields, see:
+      /// https://docs.microsoft.com/en-us/windows/win32/msi/uninstall-registry-key
       /// </summary>
       public sealed partial class WindowsApplication : pb::IMessage<WindowsApplication>
       #if !GOOGLE_PROTOBUF_REFSTRUCT_COMPATIBILITY_MODE

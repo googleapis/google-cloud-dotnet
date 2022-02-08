@@ -405,6 +405,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -436,6 +437,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -469,6 +471,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -500,6 +503,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -533,6 +537,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -564,6 +569,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.CreatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -595,6 +601,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -624,6 +631,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -655,6 +663,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -684,6 +693,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -715,6 +725,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -744,6 +755,7 @@ namespace Google.Cloud.OsConfig.V1.Tests
                 UpdateTime = new wkt::Timestamp(),
                 LastExecuteTime = new wkt::Timestamp(),
                 Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
             };
             mockGrpcClient.Setup(x => x.GetPatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
@@ -844,6 +856,506 @@ namespace Google.Cloud.OsConfig.V1.Tests
             OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
             await client.DeletePatchDeploymentAsync(request.PatchDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
             await client.DeletePatchDeploymentAsync(request.PatchDeploymentName, st::CancellationToken.None);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdatePatchDeploymentRequestObject()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            UpdatePatchDeploymentRequest request = new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = new PatchDeployment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.UpdatePatchDeployment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdatePatchDeploymentRequestObjectAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            UpdatePatchDeploymentRequest request = new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = new PatchDeployment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.UpdatePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.UpdatePatchDeploymentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void UpdatePatchDeployment()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            UpdatePatchDeploymentRequest request = new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = new PatchDeployment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdatePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.UpdatePatchDeployment(request.PatchDeployment, request.UpdateMask);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task UpdatePatchDeploymentAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            UpdatePatchDeploymentRequest request = new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = new PatchDeployment(),
+                UpdateMask = new wkt::FieldMask(),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.UpdatePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.UpdatePatchDeploymentAsync(request.PatchDeployment, request.UpdateMask, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.UpdatePatchDeploymentAsync(request.PatchDeployment, request.UpdateMask, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PausePatchDeploymentRequestObject()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.PausePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.PausePatchDeployment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PausePatchDeploymentRequestObjectAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.PausePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.PausePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.PausePatchDeploymentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PausePatchDeployment()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.PausePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.PausePatchDeployment(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PausePatchDeploymentAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.PausePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.PausePatchDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.PausePatchDeploymentAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void PausePatchDeploymentResourceNames()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.PausePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.PausePatchDeployment(request.PatchDeploymentName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task PausePatchDeploymentResourceNamesAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.PausePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.PausePatchDeploymentAsync(request.PatchDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.PausePatchDeploymentAsync(request.PatchDeploymentName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ResumePatchDeploymentRequestObject()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.ResumePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.ResumePatchDeployment(request);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ResumePatchDeploymentRequestObjectAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.ResumePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.ResumePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.ResumePatchDeploymentAsync(request, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ResumePatchDeployment()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.ResumePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.ResumePatchDeployment(request.Name);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ResumePatchDeploymentAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.ResumePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.ResumePatchDeploymentAsync(request.Name, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.ResumePatchDeploymentAsync(request.Name, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public void ResumePatchDeploymentResourceNames()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.ResumePatchDeployment(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(expectedResponse);
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment response = client.ResumePatchDeployment(request.PatchDeploymentName);
+            xunit::Assert.Same(expectedResponse, response);
+            mockGrpcClient.VerifyAll();
+        }
+
+        [xunit::FactAttribute]
+        public async stt::Task ResumePatchDeploymentResourceNamesAsync()
+        {
+            moq::Mock<OsConfigService.OsConfigServiceClient> mockGrpcClient = new moq::Mock<OsConfigService.OsConfigServiceClient>(moq::MockBehavior.Strict);
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            PatchDeployment expectedResponse = new PatchDeployment
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+                Description = "description2cf9da67",
+                InstanceFilter = new PatchInstanceFilter(),
+                PatchConfig = new PatchConfig(),
+                Duration = new wkt::Duration(),
+                OneTimeSchedule = new OneTimeSchedule(),
+                RecurringSchedule = new RecurringSchedule(),
+                CreateTime = new wkt::Timestamp(),
+                UpdateTime = new wkt::Timestamp(),
+                LastExecuteTime = new wkt::Timestamp(),
+                Rollout = new PatchRollout(),
+                State = PatchDeployment.Types.State.Unspecified,
+            };
+            mockGrpcClient.Setup(x => x.ResumePatchDeploymentAsync(request, moq::It.IsAny<grpccore::CallOptions>())).Returns(new grpccore::AsyncUnaryCall<PatchDeployment>(stt::Task.FromResult(expectedResponse), null, null, null, null));
+            OsConfigServiceClient client = new OsConfigServiceClientImpl(mockGrpcClient.Object, null);
+            PatchDeployment responseCallSettings = await client.ResumePatchDeploymentAsync(request.PatchDeploymentName, gaxgrpc::CallSettings.FromCancellationToken(st::CancellationToken.None));
+            xunit::Assert.Same(expectedResponse, responseCallSettings);
+            PatchDeployment responseCancellationToken = await client.ResumePatchDeploymentAsync(request.PatchDeploymentName, st::CancellationToken.None);
+            xunit::Assert.Same(expectedResponse, responseCancellationToken);
             mockGrpcClient.VerifyAll();
         }
     }

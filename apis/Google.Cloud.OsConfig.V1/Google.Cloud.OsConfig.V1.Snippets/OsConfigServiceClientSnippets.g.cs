@@ -1297,5 +1297,243 @@ namespace Google.Cloud.OsConfig.V1.Snippets
             await osConfigServiceClient.DeletePatchDeploymentAsync(name);
             // End snippet
         }
+
+        /// <summary>Snippet for UpdatePatchDeployment</summary>
+        public void UpdatePatchDeploymentRequestObject()
+        {
+            // Snippet: UpdatePatchDeployment(UpdatePatchDeploymentRequest, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            UpdatePatchDeploymentRequest request = new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = new PatchDeployment(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.UpdatePatchDeployment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePatchDeploymentAsync</summary>
+        public async Task UpdatePatchDeploymentRequestObjectAsync()
+        {
+            // Snippet: UpdatePatchDeploymentAsync(UpdatePatchDeploymentRequest, CallSettings)
+            // Additional: UpdatePatchDeploymentAsync(UpdatePatchDeploymentRequest, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            UpdatePatchDeploymentRequest request = new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = new PatchDeployment(),
+                UpdateMask = new FieldMask(),
+            };
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.UpdatePatchDeploymentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePatchDeployment</summary>
+        public void UpdatePatchDeployment()
+        {
+            // Snippet: UpdatePatchDeployment(PatchDeployment, FieldMask, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            PatchDeployment patchDeployment = new PatchDeployment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.UpdatePatchDeployment(patchDeployment, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for UpdatePatchDeploymentAsync</summary>
+        public async Task UpdatePatchDeploymentAsync()
+        {
+            // Snippet: UpdatePatchDeploymentAsync(PatchDeployment, FieldMask, CallSettings)
+            // Additional: UpdatePatchDeploymentAsync(PatchDeployment, FieldMask, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchDeployment patchDeployment = new PatchDeployment();
+            FieldMask updateMask = new FieldMask();
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.UpdatePatchDeploymentAsync(patchDeployment, updateMask);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PausePatchDeployment</summary>
+        public void PausePatchDeploymentRequestObject()
+        {
+            // Snippet: PausePatchDeployment(PausePatchDeploymentRequest, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.PausePatchDeployment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PausePatchDeploymentAsync</summary>
+        public async Task PausePatchDeploymentRequestObjectAsync()
+        {
+            // Snippet: PausePatchDeploymentAsync(PausePatchDeploymentRequest, CallSettings)
+            // Additional: PausePatchDeploymentAsync(PausePatchDeploymentRequest, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PausePatchDeploymentRequest request = new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.PausePatchDeploymentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PausePatchDeployment</summary>
+        public void PausePatchDeployment()
+        {
+            // Snippet: PausePatchDeployment(string, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/patchDeployments/[PATCH_DEPLOYMENT]";
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.PausePatchDeployment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PausePatchDeploymentAsync</summary>
+        public async Task PausePatchDeploymentAsync()
+        {
+            // Snippet: PausePatchDeploymentAsync(string, CallSettings)
+            // Additional: PausePatchDeploymentAsync(string, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/patchDeployments/[PATCH_DEPLOYMENT]";
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.PausePatchDeploymentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PausePatchDeployment</summary>
+        public void PausePatchDeploymentResourceNames()
+        {
+            // Snippet: PausePatchDeployment(PatchDeploymentName, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            PatchDeploymentName name = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]");
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.PausePatchDeployment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for PausePatchDeploymentAsync</summary>
+        public async Task PausePatchDeploymentResourceNamesAsync()
+        {
+            // Snippet: PausePatchDeploymentAsync(PatchDeploymentName, CallSettings)
+            // Additional: PausePatchDeploymentAsync(PatchDeploymentName, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchDeploymentName name = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]");
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.PausePatchDeploymentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumePatchDeployment</summary>
+        public void ResumePatchDeploymentRequestObject()
+        {
+            // Snippet: ResumePatchDeployment(ResumePatchDeploymentRequest, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.ResumePatchDeployment(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumePatchDeploymentAsync</summary>
+        public async Task ResumePatchDeploymentRequestObjectAsync()
+        {
+            // Snippet: ResumePatchDeploymentAsync(ResumePatchDeploymentRequest, CallSettings)
+            // Additional: ResumePatchDeploymentAsync(ResumePatchDeploymentRequest, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            ResumePatchDeploymentRequest request = new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]"),
+            };
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.ResumePatchDeploymentAsync(request);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumePatchDeployment</summary>
+        public void ResumePatchDeployment()
+        {
+            // Snippet: ResumePatchDeployment(string, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/patchDeployments/[PATCH_DEPLOYMENT]";
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.ResumePatchDeployment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumePatchDeploymentAsync</summary>
+        public async Task ResumePatchDeploymentAsync()
+        {
+            // Snippet: ResumePatchDeploymentAsync(string, CallSettings)
+            // Additional: ResumePatchDeploymentAsync(string, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            string name = "projects/[PROJECT]/patchDeployments/[PATCH_DEPLOYMENT]";
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.ResumePatchDeploymentAsync(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumePatchDeployment</summary>
+        public void ResumePatchDeploymentResourceNames()
+        {
+            // Snippet: ResumePatchDeployment(PatchDeploymentName, CallSettings)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = OsConfigServiceClient.Create();
+            // Initialize request argument(s)
+            PatchDeploymentName name = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]");
+            // Make the request
+            PatchDeployment response = osConfigServiceClient.ResumePatchDeployment(name);
+            // End snippet
+        }
+
+        /// <summary>Snippet for ResumePatchDeploymentAsync</summary>
+        public async Task ResumePatchDeploymentResourceNamesAsync()
+        {
+            // Snippet: ResumePatchDeploymentAsync(PatchDeploymentName, CallSettings)
+            // Additional: ResumePatchDeploymentAsync(PatchDeploymentName, CancellationToken)
+            // Create client
+            OsConfigServiceClient osConfigServiceClient = await OsConfigServiceClient.CreateAsync();
+            // Initialize request argument(s)
+            PatchDeploymentName name = PatchDeploymentName.FromProjectPatchDeployment("[PROJECT]", "[PATCH_DEPLOYMENT]");
+            // Make the request
+            PatchDeployment response = await osConfigServiceClient.ResumePatchDeploymentAsync(name);
+            // End snippet
+        }
     }
 }

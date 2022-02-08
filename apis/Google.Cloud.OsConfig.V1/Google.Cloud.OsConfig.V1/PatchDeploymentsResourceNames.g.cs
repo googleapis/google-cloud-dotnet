@@ -304,4 +304,28 @@ namespace Google.Cloud.OsConfig.V1
             set => Name = value?.ToString() ?? "";
         }
     }
+
+    public partial class PausePatchDeploymentRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::PatchDeploymentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::PatchDeploymentName PatchDeploymentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::PatchDeploymentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
+
+    public partial class ResumePatchDeploymentRequest
+    {
+        /// <summary>
+        /// <see cref="gcov::PatchDeploymentName"/>-typed view over the <see cref="Name"/> resource name property.
+        /// </summary>
+        public gcov::PatchDeploymentName PatchDeploymentName
+        {
+            get => string.IsNullOrEmpty(Name) ? null : gcov::PatchDeploymentName.Parse(Name, allowUnparsed: true);
+            set => Name = value?.ToString() ?? "";
+        }
+    }
 }
