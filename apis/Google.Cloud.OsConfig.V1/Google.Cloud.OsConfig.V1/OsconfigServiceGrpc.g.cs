@@ -96,6 +96,12 @@ namespace Google.Cloud.OsConfig.V1 {
     static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_DeletePatchDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest.Parser));
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Marshaller<global::Google.Protobuf.WellKnownTypes.Empty> __Marshaller_google_protobuf_Empty = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Protobuf.WellKnownTypes.Empty.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_UpdatePatchDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_PausePatchDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest.Parser));
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Marshaller<global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest> __Marshaller_google_cloud_osconfig_v1_ResumePatchDeploymentRequest = grpc::Marshallers.Create(__Helper_SerializeMessage, context => __Helper_DeserializeMessage(context, global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest.Parser));
 
     [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
     static readonly grpc::Method<global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest, global::Google.Cloud.OsConfig.V1.PatchJob> __Method_ExecutePatchJob = new grpc::Method<global::Google.Cloud.OsConfig.V1.ExecutePatchJobRequest, global::Google.Cloud.OsConfig.V1.PatchJob>(
@@ -168,6 +174,30 @@ namespace Google.Cloud.OsConfig.V1 {
         "DeletePatchDeployment",
         __Marshaller_google_cloud_osconfig_v1_DeletePatchDeploymentRequest,
         __Marshaller_google_protobuf_Empty);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment> __Method_UpdatePatchDeployment = new grpc::Method<global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "UpdatePatchDeployment",
+        __Marshaller_google_cloud_osconfig_v1_UpdatePatchDeploymentRequest,
+        __Marshaller_google_cloud_osconfig_v1_PatchDeployment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment> __Method_PausePatchDeployment = new grpc::Method<global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "PausePatchDeployment",
+        __Marshaller_google_cloud_osconfig_v1_PausePatchDeploymentRequest,
+        __Marshaller_google_cloud_osconfig_v1_PatchDeployment);
+
+    [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+    static readonly grpc::Method<global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment> __Method_ResumePatchDeployment = new grpc::Method<global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment>(
+        grpc::MethodType.Unary,
+        __ServiceName,
+        "ResumePatchDeployment",
+        __Marshaller_google_cloud_osconfig_v1_ResumePatchDeploymentRequest,
+        __Marshaller_google_cloud_osconfig_v1_PatchDeployment);
 
     /// <summary>Service descriptor</summary>
     public static global::Google.Protobuf.Reflection.ServiceDescriptor Descriptor
@@ -285,6 +315,44 @@ namespace Google.Cloud.OsConfig.V1 {
       /// <returns>The response to send back to the client (wrapped by a task).</returns>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       public virtual global::System.Threading.Tasks.Task<global::Google.Protobuf.WellKnownTypes.Empty> DeletePatchDeployment(global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Update an OS Config patch deployment.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1.PatchDeployment> UpdatePatchDeployment(global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Change state of patch deployment to "PAUSED".
+      /// Patch deployment in paused state doesn't generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1.PatchDeployment> PausePatchDeployment(global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest request, grpc::ServerCallContext context)
+      {
+        throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
+      }
+
+      /// <summary>
+      /// Change state of patch deployment back to "ACTIVE".
+      /// Patch deployment in active state continues to generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request received from the client.</param>
+      /// <param name="context">The context of the server-side call handler being invoked.</param>
+      /// <returns>The response to send back to the client (wrapped by a task).</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::System.Threading.Tasks.Task<global::Google.Cloud.OsConfig.V1.PatchDeployment> ResumePatchDeployment(global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -758,6 +826,158 @@ namespace Google.Cloud.OsConfig.V1 {
       {
         return CallInvoker.AsyncUnaryCall(__Method_DeletePatchDeployment, null, options, request);
       }
+      /// <summary>
+      /// Update an OS Config patch deployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1.PatchDeployment UpdatePatchDeployment(global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePatchDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an OS Config patch deployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1.PatchDeployment UpdatePatchDeployment(global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_UpdatePatchDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Update an OS Config patch deployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1.PatchDeployment> UpdatePatchDeploymentAsync(global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return UpdatePatchDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Update an OS Config patch deployment.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1.PatchDeployment> UpdatePatchDeploymentAsync(global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_UpdatePatchDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Change state of patch deployment to "PAUSED".
+      /// Patch deployment in paused state doesn't generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1.PatchDeployment PausePatchDeployment(global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PausePatchDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Change state of patch deployment to "PAUSED".
+      /// Patch deployment in paused state doesn't generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1.PatchDeployment PausePatchDeployment(global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_PausePatchDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Change state of patch deployment to "PAUSED".
+      /// Patch deployment in paused state doesn't generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1.PatchDeployment> PausePatchDeploymentAsync(global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return PausePatchDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Change state of patch deployment to "PAUSED".
+      /// Patch deployment in paused state doesn't generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1.PatchDeployment> PausePatchDeploymentAsync(global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_PausePatchDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Change state of patch deployment back to "ACTIVE".
+      /// Patch deployment in active state continues to generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1.PatchDeployment ResumePatchDeployment(global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumePatchDeployment(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Change state of patch deployment back to "ACTIVE".
+      /// Patch deployment in active state continues to generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The response received from the server.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual global::Google.Cloud.OsConfig.V1.PatchDeployment ResumePatchDeployment(global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.BlockingUnaryCall(__Method_ResumePatchDeployment, null, options, request);
+      }
+      /// <summary>
+      /// Change state of patch deployment back to "ACTIVE".
+      /// Patch deployment in active state continues to generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="headers">The initial metadata to send with the call. This parameter is optional.</param>
+      /// <param name="deadline">An optional deadline for the call. The call will be cancelled if deadline is hit.</param>
+      /// <param name="cancellationToken">An optional token for canceling the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1.PatchDeployment> ResumePatchDeploymentAsync(global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest request, grpc::Metadata headers = null, global::System.DateTime? deadline = null, global::System.Threading.CancellationToken cancellationToken = default(global::System.Threading.CancellationToken))
+      {
+        return ResumePatchDeploymentAsync(request, new grpc::CallOptions(headers, deadline, cancellationToken));
+      }
+      /// <summary>
+      /// Change state of patch deployment back to "ACTIVE".
+      /// Patch deployment in active state continues to generate patch jobs.
+      /// </summary>
+      /// <param name="request">The request to send to the server.</param>
+      /// <param name="options">The options for the call.</param>
+      /// <returns>The call object.</returns>
+      [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
+      public virtual grpc::AsyncUnaryCall<global::Google.Cloud.OsConfig.V1.PatchDeployment> ResumePatchDeploymentAsync(global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest request, grpc::CallOptions options)
+      {
+        return CallInvoker.AsyncUnaryCall(__Method_ResumePatchDeployment, null, options, request);
+      }
       /// <summary>Creates a new instance of client from given <c>ClientBaseConfiguration</c>.</summary>
       [global::System.CodeDom.Compiler.GeneratedCode("grpc_csharp_plugin", null)]
       protected override OsConfigServiceClient NewInstance(ClientBaseConfiguration configuration)
@@ -780,7 +1000,10 @@ namespace Google.Cloud.OsConfig.V1 {
           .AddMethod(__Method_CreatePatchDeployment, serviceImpl.CreatePatchDeployment)
           .AddMethod(__Method_GetPatchDeployment, serviceImpl.GetPatchDeployment)
           .AddMethod(__Method_ListPatchDeployments, serviceImpl.ListPatchDeployments)
-          .AddMethod(__Method_DeletePatchDeployment, serviceImpl.DeletePatchDeployment).Build();
+          .AddMethod(__Method_DeletePatchDeployment, serviceImpl.DeletePatchDeployment)
+          .AddMethod(__Method_UpdatePatchDeployment, serviceImpl.UpdatePatchDeployment)
+          .AddMethod(__Method_PausePatchDeployment, serviceImpl.PausePatchDeployment)
+          .AddMethod(__Method_ResumePatchDeployment, serviceImpl.ResumePatchDeployment).Build();
     }
 
     /// <summary>Register service method with a service binder with or without implementation. Useful when customizing the  service binding logic.
@@ -799,6 +1022,9 @@ namespace Google.Cloud.OsConfig.V1 {
       serviceBinder.AddMethod(__Method_GetPatchDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1.GetPatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment>(serviceImpl.GetPatchDeployment));
       serviceBinder.AddMethod(__Method_ListPatchDeployments, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsRequest, global::Google.Cloud.OsConfig.V1.ListPatchDeploymentsResponse>(serviceImpl.ListPatchDeployments));
       serviceBinder.AddMethod(__Method_DeletePatchDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1.DeletePatchDeploymentRequest, global::Google.Protobuf.WellKnownTypes.Empty>(serviceImpl.DeletePatchDeployment));
+      serviceBinder.AddMethod(__Method_UpdatePatchDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1.UpdatePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment>(serviceImpl.UpdatePatchDeployment));
+      serviceBinder.AddMethod(__Method_PausePatchDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1.PausePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment>(serviceImpl.PausePatchDeployment));
+      serviceBinder.AddMethod(__Method_ResumePatchDeployment, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::Google.Cloud.OsConfig.V1.ResumePatchDeploymentRequest, global::Google.Cloud.OsConfig.V1.PatchDeployment>(serviceImpl.ResumePatchDeployment));
     }
 
   }

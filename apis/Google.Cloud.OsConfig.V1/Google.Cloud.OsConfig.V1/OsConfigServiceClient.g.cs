@@ -55,6 +55,9 @@ namespace Google.Cloud.OsConfig.V1
             GetPatchDeploymentSettings = existing.GetPatchDeploymentSettings;
             ListPatchDeploymentsSettings = existing.ListPatchDeploymentsSettings;
             DeletePatchDeploymentSettings = existing.DeletePatchDeploymentSettings;
+            UpdatePatchDeploymentSettings = existing.UpdatePatchDeploymentSettings;
+            PausePatchDeploymentSettings = existing.PausePatchDeploymentSettings;
+            ResumePatchDeploymentSettings = existing.ResumePatchDeploymentSettings;
             OnCopy(existing);
         }
 
@@ -225,6 +228,63 @@ namespace Google.Cloud.OsConfig.V1
         /// </list>
         /// </remarks>
         public gaxgrpc::CallSettings DeletePatchDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigServiceClient.UpdatePatchDeployment</c> and <c>OsConfigServiceClient.UpdatePatchDeploymentAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings UpdatePatchDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigServiceClient.PausePatchDeployment</c> and <c>OsConfigServiceClient.PausePatchDeploymentAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings PausePatchDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
+
+        /// <summary>
+        /// <see cref="gaxgrpc::CallSettings"/> for synchronous and asynchronous calls to
+        /// <c>OsConfigServiceClient.ResumePatchDeployment</c> and <c>OsConfigServiceClient.ResumePatchDeploymentAsync</c>
+        /// .
+        /// </summary>
+        /// <remarks>
+        /// <list type="bullet">
+        /// <item><description>Initial retry delay: 1000 milliseconds.</description></item>
+        /// <item><description>Retry delay multiplier: 1.3</description></item>
+        /// <item><description>Retry maximum delay: 60000 milliseconds.</description></item>
+        /// <item><description>Maximum attempts: 5</description></item>
+        /// <item>
+        /// <description>Retriable status codes: <see cref="grpccore::StatusCode.Unavailable"/>.</description>
+        /// </item>
+        /// <item><description>Timeout: 60 seconds.</description></item>
+        /// </list>
+        /// </remarks>
+        public gaxgrpc::CallSettings ResumePatchDeploymentSettings { get; set; } = gaxgrpc::CallSettingsExtensions.WithRetry(gaxgrpc::CallSettings.FromExpiration(gax::Expiration.FromTimeout(sys::TimeSpan.FromMilliseconds(60000))), gaxgrpc::RetrySettings.FromExponentialBackoff(maxAttempts: 5, initialBackoff: sys::TimeSpan.FromMilliseconds(1000), maxBackoff: sys::TimeSpan.FromMilliseconds(60000), backoffMultiplier: 1.3, retryFilter: gaxgrpc::RetrySettings.FilterForStatusCodes(grpccore::StatusCode.Unavailable)));
 
         /// <summary>Creates a deep clone of this object, with all the same property values.</summary>
         /// <returns>A deep clone of this <see cref="OsConfigServiceSettings"/> object.</returns>
@@ -1319,6 +1379,326 @@ namespace Google.Cloud.OsConfig.V1
         /// <returns>A Task containing the RPC response.</returns>
         public virtual stt::Task DeletePatchDeploymentAsync(PatchDeploymentName name, st::CancellationToken cancellationToken) =>
             DeletePatchDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment UpdatePatchDeployment(UpdatePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> UpdatePatchDeploymentAsync(UpdatePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> UpdatePatchDeploymentAsync(UpdatePatchDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            UpdatePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="patchDeployment">
+        /// Required. The patch deployment to Update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that controls which fields of the patch deployment
+        /// should be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment UpdatePatchDeployment(PatchDeployment patchDeployment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePatchDeployment(new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = gax::GaxPreconditions.CheckNotNull(patchDeployment, nameof(patchDeployment)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="patchDeployment">
+        /// Required. The patch deployment to Update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that controls which fields of the patch deployment
+        /// should be updated.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> UpdatePatchDeploymentAsync(PatchDeployment patchDeployment, wkt::FieldMask updateMask, gaxgrpc::CallSettings callSettings = null) =>
+            UpdatePatchDeploymentAsync(new UpdatePatchDeploymentRequest
+            {
+                PatchDeployment = gax::GaxPreconditions.CheckNotNull(patchDeployment, nameof(patchDeployment)),
+                UpdateMask = updateMask,
+            }, callSettings);
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="patchDeployment">
+        /// Required. The patch deployment to Update.
+        /// </param>
+        /// <param name="updateMask">
+        /// Optional. Field mask that controls which fields of the patch deployment
+        /// should be updated.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> UpdatePatchDeploymentAsync(PatchDeployment patchDeployment, wkt::FieldMask updateMask, st::CancellationToken cancellationToken) =>
+            UpdatePatchDeploymentAsync(patchDeployment, updateMask, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment PausePatchDeployment(PausePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> PausePatchDeploymentAsync(PausePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> PausePatchDeploymentAsync(PausePatchDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            PausePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment PausePatchDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PausePatchDeployment(new PausePatchDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> PausePatchDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            PausePatchDeploymentAsync(new PausePatchDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> PausePatchDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
+            PausePatchDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment PausePatchDeployment(PatchDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            PausePatchDeployment(new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> PausePatchDeploymentAsync(PatchDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            PausePatchDeploymentAsync(new PausePatchDeploymentRequest
+            {
+                PatchDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> PausePatchDeploymentAsync(PatchDeploymentName name, st::CancellationToken cancellationToken) =>
+            PausePatchDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment ResumePatchDeployment(ResumePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> ResumePatchDeploymentAsync(ResumePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null) =>
+            throw new sys::NotImplementedException();
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> ResumePatchDeploymentAsync(ResumePatchDeploymentRequest request, st::CancellationToken cancellationToken) =>
+            ResumePatchDeploymentAsync(request, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment ResumePatchDeployment(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumePatchDeployment(new ResumePatchDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> ResumePatchDeploymentAsync(string name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumePatchDeploymentAsync(new ResumePatchDeploymentRequest
+            {
+                Name = gax::GaxPreconditions.CheckNotNullOrEmpty(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> ResumePatchDeploymentAsync(string name, st::CancellationToken cancellationToken) =>
+            ResumePatchDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public virtual PatchDeployment ResumePatchDeployment(PatchDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumePatchDeployment(new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> ResumePatchDeploymentAsync(PatchDeploymentName name, gaxgrpc::CallSettings callSettings = null) =>
+            ResumePatchDeploymentAsync(new ResumePatchDeploymentRequest
+            {
+                PatchDeploymentName = gax::GaxPreconditions.CheckNotNull(name, nameof(name)),
+            }, callSettings);
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="name">
+        /// Required. The resource name of the patch deployment in the form
+        /// `projects/*/patchDeployments/*`.
+        /// </param>
+        /// <param name="cancellationToken">A <see cref="st::CancellationToken"/> to use for this RPC.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public virtual stt::Task<PatchDeployment> ResumePatchDeploymentAsync(PatchDeploymentName name, st::CancellationToken cancellationToken) =>
+            ResumePatchDeploymentAsync(name, gaxgrpc::CallSettings.FromCancellationToken(cancellationToken));
     }
 
     /// <summary>OsConfigService client wrapper implementation, for convenient use.</summary>
@@ -1347,6 +1727,12 @@ namespace Google.Cloud.OsConfig.V1
         private readonly gaxgrpc::ApiCall<ListPatchDeploymentsRequest, ListPatchDeploymentsResponse> _callListPatchDeployments;
 
         private readonly gaxgrpc::ApiCall<DeletePatchDeploymentRequest, wkt::Empty> _callDeletePatchDeployment;
+
+        private readonly gaxgrpc::ApiCall<UpdatePatchDeploymentRequest, PatchDeployment> _callUpdatePatchDeployment;
+
+        private readonly gaxgrpc::ApiCall<PausePatchDeploymentRequest, PatchDeployment> _callPausePatchDeployment;
+
+        private readonly gaxgrpc::ApiCall<ResumePatchDeploymentRequest, PatchDeployment> _callResumePatchDeployment;
 
         /// <summary>
         /// Constructs a client wrapper for the OsConfigService service, with the specified gRPC client and settings.
@@ -1385,6 +1771,15 @@ namespace Google.Cloud.OsConfig.V1
             _callDeletePatchDeployment = clientHelper.BuildApiCall<DeletePatchDeploymentRequest, wkt::Empty>(grpcClient.DeletePatchDeploymentAsync, grpcClient.DeletePatchDeployment, effectiveSettings.DeletePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
             Modify_ApiCall(ref _callDeletePatchDeployment);
             Modify_DeletePatchDeploymentApiCall(ref _callDeletePatchDeployment);
+            _callUpdatePatchDeployment = clientHelper.BuildApiCall<UpdatePatchDeploymentRequest, PatchDeployment>(grpcClient.UpdatePatchDeploymentAsync, grpcClient.UpdatePatchDeployment, effectiveSettings.UpdatePatchDeploymentSettings).WithGoogleRequestParam("patch_deployment.name", request => request.PatchDeployment?.Name);
+            Modify_ApiCall(ref _callUpdatePatchDeployment);
+            Modify_UpdatePatchDeploymentApiCall(ref _callUpdatePatchDeployment);
+            _callPausePatchDeployment = clientHelper.BuildApiCall<PausePatchDeploymentRequest, PatchDeployment>(grpcClient.PausePatchDeploymentAsync, grpcClient.PausePatchDeployment, effectiveSettings.PausePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callPausePatchDeployment);
+            Modify_PausePatchDeploymentApiCall(ref _callPausePatchDeployment);
+            _callResumePatchDeployment = clientHelper.BuildApiCall<ResumePatchDeploymentRequest, PatchDeployment>(grpcClient.ResumePatchDeploymentAsync, grpcClient.ResumePatchDeployment, effectiveSettings.ResumePatchDeploymentSettings).WithGoogleRequestParam("name", request => request.Name);
+            Modify_ApiCall(ref _callResumePatchDeployment);
+            Modify_ResumePatchDeploymentApiCall(ref _callResumePatchDeployment);
             OnConstruction(grpcClient, effectiveSettings, clientHelper);
         }
 
@@ -1408,6 +1803,12 @@ namespace Google.Cloud.OsConfig.V1
 
         partial void Modify_DeletePatchDeploymentApiCall(ref gaxgrpc::ApiCall<DeletePatchDeploymentRequest, wkt::Empty> call);
 
+        partial void Modify_UpdatePatchDeploymentApiCall(ref gaxgrpc::ApiCall<UpdatePatchDeploymentRequest, PatchDeployment> call);
+
+        partial void Modify_PausePatchDeploymentApiCall(ref gaxgrpc::ApiCall<PausePatchDeploymentRequest, PatchDeployment> call);
+
+        partial void Modify_ResumePatchDeploymentApiCall(ref gaxgrpc::ApiCall<ResumePatchDeploymentRequest, PatchDeployment> call);
+
         partial void OnConstruction(OsConfigService.OsConfigServiceClient grpcClient, OsConfigServiceSettings effectiveSettings, gaxgrpc::ClientHelper clientHelper);
 
         /// <summary>The underlying gRPC OsConfigService client</summary>
@@ -1430,6 +1831,12 @@ namespace Google.Cloud.OsConfig.V1
         partial void Modify_ListPatchDeploymentsRequest(ref ListPatchDeploymentsRequest request, ref gaxgrpc::CallSettings settings);
 
         partial void Modify_DeletePatchDeploymentRequest(ref DeletePatchDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_UpdatePatchDeploymentRequest(ref UpdatePatchDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_PausePatchDeploymentRequest(ref PausePatchDeploymentRequest request, ref gaxgrpc::CallSettings settings);
+
+        partial void Modify_ResumePatchDeploymentRequest(ref ResumePatchDeploymentRequest request, ref gaxgrpc::CallSettings settings);
 
         /// <summary>
         /// Patch VM instances by creating and running a patch job.
@@ -1649,6 +2056,82 @@ namespace Google.Cloud.OsConfig.V1
         {
             Modify_DeletePatchDeploymentRequest(ref request, ref callSettings);
             return _callDeletePatchDeployment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PatchDeployment UpdatePatchDeployment(UpdatePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePatchDeploymentRequest(ref request, ref callSettings);
+            return _callUpdatePatchDeployment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Update an OS Config patch deployment.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PatchDeployment> UpdatePatchDeploymentAsync(UpdatePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_UpdatePatchDeploymentRequest(ref request, ref callSettings);
+            return _callUpdatePatchDeployment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PatchDeployment PausePatchDeployment(PausePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PausePatchDeploymentRequest(ref request, ref callSettings);
+            return _callPausePatchDeployment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Change state of patch deployment to "PAUSED".
+        /// Patch deployment in paused state doesn't generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PatchDeployment> PausePatchDeploymentAsync(PausePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_PausePatchDeploymentRequest(ref request, ref callSettings);
+            return _callPausePatchDeployment.Async(request, callSettings);
+        }
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>The RPC response.</returns>
+        public override PatchDeployment ResumePatchDeployment(ResumePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumePatchDeploymentRequest(ref request, ref callSettings);
+            return _callResumePatchDeployment.Sync(request, callSettings);
+        }
+
+        /// <summary>
+        /// Change state of patch deployment back to "ACTIVE".
+        /// Patch deployment in active state continues to generate patch jobs.
+        /// </summary>
+        /// <param name="request">The request object containing all of the parameters for the API call.</param>
+        /// <param name="callSettings">If not null, applies overrides to this RPC call.</param>
+        /// <returns>A Task containing the RPC response.</returns>
+        public override stt::Task<PatchDeployment> ResumePatchDeploymentAsync(ResumePatchDeploymentRequest request, gaxgrpc::CallSettings callSettings = null)
+        {
+            Modify_ResumePatchDeploymentRequest(ref request, ref callSettings);
+            return _callResumePatchDeployment.Async(request, callSettings);
         }
     }
 
